@@ -85,10 +85,6 @@ plugins:
     - jekyll-feed
     - jemoji
 #     - jekyll-mentions
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
 
 # ---------------- #
 #      Comments    #
