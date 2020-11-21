@@ -2,16 +2,16 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://mazhuang.org
+url: https://zhekaili.github.io
 date_format: "ordinal"
-title: 码志
-subtitle: "公众号：闷骚的程序员"
-description: "马壮的个人博客，公众号：闷骚的程序员"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang, 闷骚的程序员
+title: Zhekai's blog
+subtitle: ""
+description: ""
+keywords: Zhekai Li
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
-repository: mzlogin/mzlogin.github.io
+repository: ZhekaiLi/ZhekaiLi.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
@@ -38,12 +38,12 @@ highlight_theme: github
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
+author: Zhekai Li
 organization: 
 organization_url: 
-github_username: mzlogin
-location: Wuhan, China
-email: chumpma@gmail.com
+github_username: ZhekaiLi
+location: Haining, China
+email: zhekai18@163.com
 
 # ---------------- #
 #    Navigation    #
@@ -51,31 +51,19 @@ email: chumpma@gmail.com
 navs:
   -
     href: /
-    label: 首页
-
+    label: Home
   -
     href: /categories/
-    label: 分类
-
-#   -
-#     href: /archives/
-#     label: 归档
-
-#   -
-#     href: /open-source/
-#     label: 开源
-
+    label: Category
   -
     href: /wiki/
     label: 维基
-
   -
     href: /links/
     label: 链接
-
   -
     href: /about/
-    label: 关于
+    label: About
 
 # ---------------- #
 #       RSS        #
