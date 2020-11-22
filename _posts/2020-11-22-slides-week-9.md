@@ -22,7 +22,7 @@ mathjax: true
 > **DO NOT** share the same Eigensapces and 四大空间
 
 **Theorem 1**: Similarity is an **equivalence relation**:
-$\small{A\sim B\to B\sim A} \\
+$\small{A\sim B\to B\sim A} \newline
 \small{A\sim B, B\sim C\to A\sim C}$
 
 **Theorem 2**: Similar matrices have the same characteristic polynomials (特征多项式)
@@ -111,8 +111,8 @@ Jordan forms. Matrix exponents. Application to dynamical systems
 
 ## 16.1 Matrix exponent in the general case
 > ##### Def 1: $e^A, \cos(A), \sin(A)$
-> $$e^A =I+\frac{A}{1!}+...+\frac{A^n}{n!} \\[5pt] 
-\cos(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m}}{(2m)!} \\[5pt] 
+> $$e^A =I+\frac{A}{1!}+...+\frac{A^n}{n!} \newline[5pt]
+\cos(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m}}{(2m)!} \newline[5pt]
 \sin(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m+1}}{(2m+1)!}
 $$
 
