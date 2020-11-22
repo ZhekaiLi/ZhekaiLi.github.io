@@ -50,13 +50,16 @@ J_1 & 0 & ... & 0 \\
 0 & J_2 & ... & 0 \\
 ... & ... & ... & ... \\
 0 & 0 & ... & J_s
-\end{bmatrix}$$, where
+\end{bmatrix}$$
+>
+>, where
 $$J_k=\begin{bmatrix}
 \lambda_k & 1 & 0  \\
 0 & \lambda_k & 1  \\
 0 & 0 & \lambda_k
 \end{bmatrix}$$
-$J_k$ 被称作 *Jordan block*，是一个以特征值为对角线、对角线元素的上一个元素等于 $1$、其他元素均为 $0$ 的矩阵，其 dimension 取决于特征值的代数重数（若重数为 $1$ 则 $J_k=\lambda_k$）
+>
+>$J_k$ 被称作 *Jordan block*，是一个以特征值为对角线、对角线元素的上一个元素等于 $1$、其他元素均为 $0$ 的矩阵，其 dimension 取决于特征值的代数重数（若重数为 $1$ 则 $J_k=\lambda_k$）
 
 **Corallary 1**: Two matrices are similar if and only if they have the same Jordan form (up to permutation of Jordan blocks)
 
@@ -69,12 +72,14 @@ then from $p(A)=\sum c_kA^k$, we can get $p(A)=\sum c_kJ^k$
 Since $p(J)$ has eigenvalues $p(\lambda_1),...,p(\lambda_n)$, same for $p(A)$
 
 **Corollary 4**: 对于特征根 $\lambda$，其几何重数等于其对应的 Jordan block 的数量
-- 例如对于 $\left[\begin{matrix}
-2 & 1 & 0 & 0 \\
-0 & 2 & 0 & 0 \\
-0 & 0 & 2 & 0 \\
-0 & 0 & 0 & 2 
-\end{matrix}\right]$，$\lambda=2$ 的几何重根等于 $1+2=3$
+- 例如对于 $\left[
+    \begin{matrix}
+        2 & 1 & 0 & 0 \\
+        0 & 2 & 0 & 0 \\
+        0 & 0 & 2 & 0 \\
+        0 & 0 & 0 & 2 
+    \end{matrix}
+\right]$，$\lambda=2$ 的几何重根等于 $1+2=3$
 
 > ##### Def 2: Spectrum 矩阵的谱
 > 矩阵的谱又叫矩阵的谱半径，定义为
@@ -105,9 +110,9 @@ from $A$, we can solve $\lambda_A=\pm i$, then $\lambda_B=\lambda_A^{10}-3\lambd
 Jordan forms. Matrix exponents. Application to dynamical systems
 
 ## 16.1 Matrix exponent in the general case
->**Def 1: $e^A, \cos(A), \sin(A)$**
-$$e^A =I+\frac{A}{1!}+...+\frac{A^n}{n!} \\[5pt] \cos(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m}}{(2m)!} \\[5pt] \sin(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m+1}}{(2m+1)!}
-$$
+> ##### Def 1: $e^A, \cos(A), \sin(A)$
+> $$e^A =I+\frac{A}{1!}+...+\frac{A^n}{n!} \\[5pt] \cos(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m}}{(2m)!} \\[5pt] \sin(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m+1}}{(2m+1)!}$$
+
 **Corollary 1:** Since $(A^n)^T=(A^T)^n$, then
 $$e^{A^T}=(e^A)^T$$
 
