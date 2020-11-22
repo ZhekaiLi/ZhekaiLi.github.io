@@ -2,23 +2,16 @@
 layout: compress
 ---
 
+<head>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    tex2jax: {
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$']],
-    },
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    }
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
   });
 </script>
 <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full">
 </script>
+</head>
 
 {% assign assets_base_url = site.url %}
 {% if site.cdn.jsdelivr.enabled %}
