@@ -19,11 +19,9 @@ Fact: $Y+Z,Y\cap Z$ are also subspaces, while $Y\cup Z$ is not
 **Theorem:** 
 $$\text{dim}(Y+Z)=\text{dim}(Y)+\text{dim}(Z)-\text{dim}(Y\cap Z)$$
 
-## 7.2 Base in $E^n$
-**Theorem 1:** If $u_1, ...., u_n$ and $v_1, ...., v_n$ are two bases in $E^n$ then there exists an invertible matrix $B \in E^{n\times n}$ such that
+## 7.2 Base in $\mathbb{E}^n$
+**Theorem 1:** If $u_1, ...., u_n$ and $v_1, ...., v_n$ are two bases in $E^n$ then there exists an invertible matrix $B \in \mathbb{E}^{n\times n}$ such that
 $$UB=V$$
-
----
 
 **Theorem 2.1:** Let $A \in E^{n\times n}$ be invertible. If $u_1, ...., u_n$ is a basis in $E^n$, then $Au_1, ...., Au_n$ is also a basis in $E_n$.
 

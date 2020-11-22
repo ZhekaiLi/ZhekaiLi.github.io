@@ -22,8 +22,8 @@ mathjax: true
 > **DO NOT** share the same Eigensapces and 四大空间
 
 **Theorem 1**: Similarity is an **equivalence relation**:
-$\small{A\sim B\to B\sim A}$
-$\small{A\sim B, B\sim C\to A\sim C}$
+$\small{A\sim B\to B\sim A} \\
+\small{A\sim B, B\sim C\to A\sim C}$
 
 **Theorem 2**: Similar matrices have the same characteristic polynomials (特征多项式)
 - **Lemma**: $A\sim B\to A-\lambda I\sim B-\lambda I$
@@ -44,7 +44,7 @@ $$\delta_A(\lambda)=...(\lambda-\lambda_k)^d...,\;\lambda=\lambda_k$$
 
 ## 15.2 Jordan form and Spectrum
 >##### Def 1: Jordan form
->any $A$ is similar to $J$, where
+>Any $A$ is similar to a specific matrix $J$
 >$$J=\begin{bmatrix}
 J_1 & 0 & ... & 0 \\
 0 & J_2 & ... & 0 \\
@@ -52,7 +52,7 @@ J_1 & 0 & ... & 0 \\
 0 & 0 & ... & J_s
 \end{bmatrix}$$
 >
->, where
+>where
 $$J_k=\begin{bmatrix}
 \lambda_k & 1 & 0  \\
 0 & \lambda_k & 1  \\
@@ -72,14 +72,14 @@ then from $p(A)=\sum c_kA^k$, we can get $p(A)=\sum c_kJ^k$
 Since $p(J)$ has eigenvalues $p(\lambda_1),...,p(\lambda_n)$, same for $p(A)$
 
 **Corollary 4**: 对于特征根 $\lambda$，其几何重数等于其对应的 Jordan block 的数量
-- 例如对于 $\left[
+- 例如对于 $$\left[
     \begin{matrix}
         2 & 1 & 0 & 0 \\
         0 & 2 & 0 & 0 \\
         0 & 0 & 2 & 0 \\
         0 & 0 & 0 & 2 
     \end{matrix}
-\right]$，$\lambda=2$ 的几何重根等于 $1+2=3$
+\right]$$ $\lambda=2$ 的几何重根等于 $1+2=3$
 
 > ##### Def 2: Spectrum 矩阵的谱
 > 矩阵的谱又叫矩阵的谱半径，定义为
@@ -99,10 +99,10 @@ Since $p(J)$ has eigenvalues $p(\lambda_1),...,p(\lambda_n)$, same for $p(A)$
 它们具有相同的谱（特征根均为 $2$），但是 $A$ 的几何重数为 $2$，$B$ 为 $1$，也意味着 $A$ 有两个特征根而 $B$ 只有一个。因此 $A,B$ 不相似
 
 
-**Ex 1**: If $$A=\left[\begin{matrix}
+**Ex 1**: If knowing $$A=\left[\begin{matrix}
 0 & -1\\
 1 & 0
-\end{matrix}\right]$$, $B=A^{10}-3A+1$, find the spectrum of $B$
+\end{matrix}\right]$$ $B=A^{10}-3A+1$, find the spectrum of $B$
 
 from $A$, we can solve $\lambda_A=\pm i$, then $\lambda_B=\lambda_A^{10}-3\lambda_A+1$, 从而易得 spectrum of $B$
 
@@ -127,8 +127,8 @@ since $e^Ae^{-A}=e^{A-A}=I$
 **Corollary 4:**
 $$e^A=Xe^{\Lambda}X^{-1}$$
 
->**Def 2: $\frac{d}{dt}e^{At}$**
-$$\frac{d}{dt}e^{At}=Ae^{At}=e^{At}A$$
+> ##### Def 2: Derivative
+> $$\frac{d}{dt}e^{At}=Ae^{At}=e^{At}A$$
 
 ## 16.2 Dynamical systems: Linear differential equations
 >**Def 1: Systems of linear scalar differential equations of first order**
