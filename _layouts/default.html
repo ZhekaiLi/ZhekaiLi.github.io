@@ -2,27 +2,27 @@
 layout: compress
 ---
 
-<script type="text/javascript">
-  window.MathJax = {
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    },
-    displayAlign: 'center', // Change this to 'center' to center equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-        },
-    AuthorInit: function () {
-      MathJax.Hub.Register.StartupHook("Begin",function () {
-        MathJax.Hub.Queue(
-          ["Typeset",MathJax.Hub]
-        )
-      });
+<script>
+    $(".MathJax").remove();
+    if ($('div.markdown_views pre.prettyprint code.hljs').length > 0) {
+        $('div.markdown_views')[0].className = 'markdown_views';
     }
-  };
 </script>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://csdnimg.cn/release/blog_mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            "HTML-CSS": {
+                    linebreaks: { automatic: true, width: "94%container" },
+                    imageFont: null
+            },
+            tex2jax: {
+                preview: "none"
+            },
+            mml2jax: {
+                preview: 'none'
+            }
+    });
+</script>
 
 
 {% assign assets_base_url = site.url %}
