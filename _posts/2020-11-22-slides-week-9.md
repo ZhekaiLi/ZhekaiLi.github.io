@@ -9,8 +9,8 @@ mathjax: true
 
 # L15
 ## 15.1 Similarity
-> **Def 1: Similarity**
-$A$ is similar to $B$ if for some invertible $Q$
+> ##### Def 1: Similarity
+> $A$ is similar to $B$ if for some invertible $Q$
 $$A=QBQ^{-1}$$
 Similar matrices share the following:
 > - Sets of eigenvalues
@@ -33,18 +33,18 @@ $\small{
 
 then it's easy to get $\vert A-\lambda I\vert=\vert B-\lambda I\vert$ 
 
-> **Def 2: Algebraic multiplicity 代数重数**
-Algebraic multiplicity of eigenvalue $\lambda$ of $A$ is $d$, where
+> ##### Def 2: Algebraic multiplicity 代数重数
+> Algebraic multiplicity of eigenvalue $\lambda$ of $A$ is $d$, where
 $$\delta_A(\lambda)=...(\lambda-\lambda_k)^d...,\;\lambda=\lambda_k$$
 
-> **Def 3: Geometric multiplicity 几何重数**
-Algebraic multiplicity of eigenvalue $\lambda$ of $A$ is $\dim(N(A-\lambda I))$
+> ##### Def 3: Geometric multiplicity 几何重数
+> Algebraic multiplicity of eigenvalue $\lambda$ of $A$ is $\dim(N(A-\lambda I))$
 
 例如，对于 $A=I_n$，$\lambda=1$ 的几何重数等于 $n$
 
 ## 15.2 Jordan form and Spectrum
->**Def 1: Jordan form**
-any $A$ is similar to $J$, where
+>##### Def 1: Jordan form
+>any $A$ is similar to $J$, where
 $$J=\begin{bmatrix}
 J_1 & 0 & ... & 0 \\
 0 & J_2 & ... & 0 \\
@@ -76,28 +76,28 @@ Since $p(J)$ has eigenvalues $p(\lambda_1),...,p(\lambda_n)$, same for $p(A)$
 0 & 0 & 0 & 2 
 \end{matrix}\right]$，$\lambda=2$ 的几何重根等于 $1+2=3$
 
-> **Def 2: Spectrum 矩阵的谱**
-矩阵的谱又叫矩阵的谱半径，定义为
+> ##### Def 2: Spectrum 矩阵的谱
+> 矩阵的谱又叫矩阵的谱半径，定义为
 $$\rho(A)=\max|\lambda_i|$$
 >
 >即特征值模的最大值
 
 **Corollary 1**: 具有相同谱的矩阵不一定相似
 
-例如对于矩阵 $A=\begin{bmatrix}
+例如对于矩阵 $A=\left[\begin{matrix}
 2 & 0 \\
 0 & 2
-\end{bmatrix},B=\begin{bmatrix}
+\end{matrix}\right],B=\left[\begin{matrix}
 2 & 1 \\
 0 & 2
-\end{bmatrix}$
+\end{matrix}\right]$
 它们具有相同的谱（特征根均为 $2$），但是 $A$ 的几何重数为 $2$，$B$ 为 $1$，也意味着 $A$ 有两个特征根而 $B$ 只有一个。因此 $A,B$ 不相似
 
 
-**Ex 1**: If $A=\begin{bmatrix}
+**Ex 1**: If $A=\left[\begin{matrix}
 0 & -1\\
 1 & 0
-\end{bmatrix}$, $B=A^{10}-3A+1$, find the spectrum of $B$
+\end{matrix}\right]$, $B=A^{10}-3A+1$, find the spectrum of $B$
 
 from $A$, we can solve $\lambda_A=\pm i$, then $\lambda_B=\lambda_A^{10}-3\lambda_A+1$, 从而易得 spectrum of $B$
 
@@ -106,7 +106,7 @@ Jordan forms. Matrix exponents. Application to dynamical systems
 
 ## 16.1 Matrix exponent in the general case
 >**Def 1: $e^A, \cos(A), \sin(A)$**
-$$e^A =I+\frac{A}{1!}+...+\frac{A^n}{n!} \newline[5pt] \cos(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m}}{(2m)!} \newline[5ptpt] \sin(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m+1}}{(2m+1)!}
+$$e^A =I+\frac{A}{1!}+...+\frac{A^n}{n!} \\[5pt] \cos(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m}}{(2m)!} \\[5pt] \sin(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m+1}}{(2m+1)!}
 $$
 **Corollary 1:** Since $(A^n)^T=(A^T)^n$, then
 $$e^{A^T}=(e^A)^T$$
@@ -128,7 +128,7 @@ $$\frac{d}{dt}e^{At}=Ae^{At}=e^{At}A$$
 ## 16.2 Dynamical systems: Linear differential equations
 >**Def 1: Systems of linear scalar differential equations of first order**
 Let $y(t)=[y_1, y_2, ..., y_n]^T$, then we can simplify
-$$y'_1(t)=a_{11}y_1+...+a_{1n}y_n+b_1(t) \newline ... \newline y'_n(t)=a_{n1}y_1+...+a_{nn}y_n+b_n(t)$$ into
+$$y'_1(t)=a_{11}y_1+...+a_{1n}y_n+b_1(t) \\ ... \\ y'_n(t)=a_{n1}y_1+...+a_{nn}y_n+b_n(t)$$ into
 $$\frac{d}{dt}y(t)=Ay(t)+B(t)$$
 
 
