@@ -8,7 +8,6 @@ layout: default
       skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
       inlineMath: [['$','$'], ['\\(','\\)']],
       displayMath: [['$$','$$']],
-      processEscapes: true
     },
     TeX: {
       equationNumbers: {
@@ -17,10 +16,9 @@ layout: default
     }
   });
 </script>
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full">
 </script>
-
 
 {% assign assets_base_url = site.url %}
 {% if site.cdn.jsdelivr.enabled %}
