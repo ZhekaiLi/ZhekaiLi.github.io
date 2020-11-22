@@ -1,3 +1,11 @@
+---
+layout: post
+title: Week-8
+categories: Math415
+description: Personal Notes
+keywords: Math415，Calculas，Matrix
+---
+
 # L13 Determinants
 
 **Facts**

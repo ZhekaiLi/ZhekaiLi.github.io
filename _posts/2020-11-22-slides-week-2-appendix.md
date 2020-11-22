@@ -1,3 +1,11 @@
+---
+layout: post
+title: Week-2 Appendix
+categories: Math415
+description: Personal Notes
+keywords: Math415，Calculas，Matrix
+---
+
 # 1 奇异矩阵和非奇异矩阵
 奇异矩阵 Singular Matrix
 非奇异矩阵 Non-singular matrix

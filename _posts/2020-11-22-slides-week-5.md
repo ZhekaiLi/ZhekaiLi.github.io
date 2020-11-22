@@ -1,3 +1,11 @@
+---
+layout: post
+title: Week-5
+categories: Math415
+description: Personal Notes
+keywords: Math415，Calculas，Matrix
+---
+
 # L7 Independence, basis, dimension
 
 ## 7.1 Dimension of a sum of subspaces

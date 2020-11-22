@@ -1,3 +1,11 @@
+---
+layout: post
+title: Midterm-1 Review
+categories: Math415
+description: Personal Notes
+keywords: Math415，Calculas，Matrix
+---
+
 # P1
 对于 $Ax=b$ 的**解的可能性** ($A_{m\times n},b_{m\times 1}$)
 

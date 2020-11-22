@@ -1,3 +1,11 @@
+---
+layout: post
+title: Discussions and Homeworks
+categories: Math415
+description: Personal Notes
+keywords: Math415，Calculas，Matrix
+---
+
 # DH1
 ## 1.1 Schwarz Inequality
 $$||\bm{w}||\geq(\bm{v}\cdot\bm{w})/||\bm{v}||$$

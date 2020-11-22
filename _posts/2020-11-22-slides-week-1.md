@@ -1,3 +1,11 @@
+---
+layout: post
+title: Week-1
+categories: Math415
+description: Personal Notes
+keywords: Math415，Calculas，Matrix
+---
+
 # L1
 1. 矩阵乘法：需满足列数 = 行数，即 $(a\times b)(b\times c)$
 2. 对于单位矩阵 $I_{n\times n}$，以及可逆矩阵 $A_{n\times n}$，满足

@@ -1,3 +1,11 @@
+---
+layout: post
+title: Week-3
+categories: Math415
+description: Personal Notes
+keywords: Math415，Calculas，Matrix
+---
+
 # L5 Vector spaces: Subspaces
 In this lecture, we consider vector spaces over the field $E$ ($E=\R\text{ or }\Complex$)
 
