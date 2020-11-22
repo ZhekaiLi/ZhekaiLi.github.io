@@ -10,7 +10,7 @@ mathjax: true
 # L15
 ## 15.1 Similarity
 > ##### Def 1: Similarity
-> $A$ is similar to $B$ if for some invertible $Q$
+> $A$ is similar to $B$ if for some invertible $Q$ <br>
 $$A=QBQ^{-1}$$
 Similar matrices share the following:
 > - Sets of eigenvalues
