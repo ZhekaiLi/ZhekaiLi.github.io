@@ -5,13 +5,28 @@ layout: default
 <head>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+<<<<<<< HEAD
     tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+=======
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+>>>>>>> parent of 6e7a455... 1
   });
 </script>
-<script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full">
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
 </script>
 </head>
+
 
 {% assign assets_base_url = site.url %}
 {% if site.cdn.jsdelivr.enabled %}
