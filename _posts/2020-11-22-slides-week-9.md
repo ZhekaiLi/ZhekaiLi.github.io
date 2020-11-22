@@ -111,7 +111,10 @@ Jordan forms. Matrix exponents. Application to dynamical systems
 
 ## 16.1 Matrix exponent in the general case
 > ##### Def 1: $e^A, \cos(A), \sin(A)$
-> $$e^A =I+\frac{A}{1!}+...+\frac{A^n}{n!} \\[5pt] \cos(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m}}{(2m)!} \\[5pt] \sin(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m+1}}{(2m+1)!}$$
+> $$e^A =I+\frac{A}{1!}+...+\frac{A^n}{n!} \\[5pt] 
+\cos(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m}}{(2m)!} \\[5pt] 
+\sin(A)=\sum_{m=0}^\infty(-1)^m\frac{A^{2m+1}}{(2m+1)!}
+$$
 
 **Corollary 1:** Since $(A^n)^T=(A^T)^n$, then
 $$e^{A^T}=(e^A)^T$$
@@ -133,7 +136,7 @@ $$e^A=Xe^{\Lambda}X^{-1}$$
 ## 16.2 Dynamical systems: Linear differential equations
 >**Def 1: Systems of linear scalar differential equations of first order**
 Let $y(t)=[y_1, y_2, ..., y_n]^T$, then we can simplify
-$$y'_1(t)=a_{11}y_1+...+a_{1n}y_n+b_1(t) \\ ... \\ y'_n(t)=a_{n1}y_1+...+a_{nn}y_n+b_n(t)$$ into
+$$y'_1(t)=a_{11}y_1+...+a_{1n}y_n+b_1(t) \newline ... \newline y'_n(t)=a_{n1}y_1+...+a_{nn}y_n+b_n(t)$$ into
 $$\frac{d}{dt}y(t)=Ay(t)+B(t)$$
 
 
