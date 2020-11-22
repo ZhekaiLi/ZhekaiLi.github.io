@@ -2,20 +2,27 @@
 layout: compress
 ---
 
-<head>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
+<script type="text/javascript">
+  window.MathJax = {
     tex2jax: {
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$']],
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [['$$','$$'], ['\\(','\\)']],
+      processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+        },
+    AuthorInit: function () {
+      MathJax.Hub.Register.StartupHook("Begin",function () {
+        MathJax.Hub.Queue(
+          ["Typeset",MathJax.Hub]
+        )
+      });
     }
-  });
+  };
 </script>
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
-</script>
-</head>
+
 
 {% assign assets_base_url = site.url %}
 {% if site.cdn.jsdelivr.enabled %}
