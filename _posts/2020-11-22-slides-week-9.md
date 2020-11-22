@@ -11,8 +11,8 @@ mathjax: true
 ## 15.1 Similarity
 > ##### Def 1: Similarity
 > $A$ is similar to $B$ if for some invertible $Q$ <br>
-$$A=QBQ^{-1}$$
-Similar matrices share the following:
+> $$A=QBQ^{-1}$$
+> Similar matrices share the following:
 > - Sets of eigenvalues
 > - Dimensions of null and column spaces
 > - ranks
@@ -45,7 +45,7 @@ $$\delta_A(\lambda)=...(\lambda-\lambda_k)^d...,\;\lambda=\lambda_k$$
 ## 15.2 Jordan form and Spectrum
 >##### Def 1: Jordan form
 >any $A$ is similar to $J$, where
-$$J=\begin{bmatrix}
+>$$J=\begin{bmatrix}
 J_1 & 0 & ... & 0 \\
 0 & J_2 & ... & 0 \\
 ... & ... & ... & ... \\
@@ -83,26 +83,26 @@ Since $p(J)$ has eigenvalues $p(\lambda_1),...,p(\lambda_n)$, same for $p(A)$
 
 > ##### Def 2: Spectrum 矩阵的谱
 > 矩阵的谱又叫矩阵的谱半径，定义为
-$$\rho(A)=\max|\lambda_i|$$
+> $$\rho(A)=\max|\lambda_i|$$
 >
 >即特征值模的最大值
 
 **Corollary 1**: 具有相同谱的矩阵不一定相似
 
-例如对于矩阵 $A=\left[\begin{matrix}
+例如对于矩阵 $$A=\left[\begin{matrix}
 2 & 0 \\
 0 & 2
 \end{matrix}\right],B=\left[\begin{matrix}
 2 & 1 \\
 0 & 2
-\end{matrix}\right]$
+\end{matrix}\right]$$
 它们具有相同的谱（特征根均为 $2$），但是 $A$ 的几何重数为 $2$，$B$ 为 $1$，也意味着 $A$ 有两个特征根而 $B$ 只有一个。因此 $A,B$ 不相似
 
 
-**Ex 1**: If $A=\left[\begin{matrix}
+**Ex 1**: If $$A=\left[\begin{matrix}
 0 & -1\\
 1 & 0
-\end{matrix}\right]$, $B=A^{10}-3A+1$, find the spectrum of $B$
+\end{matrix}\right]$$, $B=A^{10}-3A+1$, find the spectrum of $B$
 
 from $A$, we can solve $\lambda_A=\pm i$, then $\lambda_B=\lambda_A^{10}-3\lambda_A+1$, 从而易得 spectrum of $B$
 
