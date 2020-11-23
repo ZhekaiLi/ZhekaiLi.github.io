@@ -8,7 +8,7 @@ keywords: Math415，Calculas，Matrix
 
 # L11 Orthogonality
 ## 11.1 Normed vector spaces
-> ##### Def 1: Normed vector space
+> #### Def 1: Normed vector space
 > $X$ is normed if there is a function $\vert\vert\cdot\vert\vert$, such that
 $$\begin{aligned}
 \|x\| &\geq 0 \\
@@ -23,7 +23,7 @@ $$\begin{aligned}\|x\|_1&=\int_0^1 \vert x(t)\vert dt \\
 \|x\|_2&=\sqrt{\int_0^1  x^2(t) dt}\end{aligned}$$
 
 ## 11.2 Euclidean norm in $\mathbb{R}^n$
-> ###### Def 2: Euclidean norm
+> #### Def 2: Euclidean norm
 > $$\begin{aligned}
 \|x\|&=(x\cdot x)^{1/2} \\[5pt]
 \|x\|^2&=x\cdot x=x^Tx=\sum x_i^2
@@ -36,7 +36,7 @@ Vector $x\perp y$ iff
 1. $x\cdot y=0$ or
 2. $\vert\vert x\vert\vert^2+\vert\vert y\vert\vert^2=\vert\vert x+y\vert\vert^2$
 
-> ##### Def 3: Orthogonal subspaces
+> #### Def 3: Orthogonal subspaces
 > Let $S,T$ be subspaces in $\mathbb{R}^n$, $x\in \mathbb{R}^n$
 > 1. $x\perp S$ if $x$ is orthogonal to any vector from $S$
 > 2. $S\perp T$ if any from $S$ is orthogonal to any from $T$
@@ -58,7 +58,7 @@ $$N(A)^\perp=C(A^T)$$
 
 **Theorem 2:** For any $S\subset\mathbb{R}^n$, any vector $b\in\mathbb{R}^n$ can be represent as $b=p+e$, where $p\in S,e\in S^\perp$
 
-> ##### Def 4: Projection
+> #### Def 4: Projection
 > Denote $p$ in theorem above is the **projection** of $x$ onto $S$, that
 $$p=P_Sb$$
 
@@ -79,7 +79,7 @@ $$p=P_Sb$$
 **Theorem 4:** Let $S=\text{span}(a_1,...,a_n)$, then we have
 $$S=C(A)=\{Ax,x\in\mathbb{R}^n\}$$
 
-> ##### Def 5: Prjection matrix $P$
+> #### Def 5: Prjection matrix $P$
 > The projection $p$ of vector $b$ onto $S=C(A)$ is
 $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
 
@@ -101,10 +101,10 @@ where $\{a_i\}$ are paramters and $\{x_i\}$ are variables
 
 When $\{x_i,b\}$ are given, we want to estimate a set of $\{a_i\}$ to make $\sum a_ix_i$ close to $b$ as possible, that's why we need **LSA** (least squares approximation)
 
-> ##### Def 1: Fitting error $e_k$
+> #### Def 1: Fitting error $e_k$
 > $$e_k=b_k-\sum_{i=1}^na_{ki}x_i$$
 
-> ##### Def 2: Quadratic criterion
+> #### Def 2: Quadratic criterion
 > $$\text{Minimize }e_1^2+...+e_n^2\text{ over }x_1,...,x_n\in\mathbb{R}$$
 
 **Example**: Find a line $y=C+Dx$ that is closest to $(0,6),(1,0),(2,0)$
@@ -125,7 +125,7 @@ $$\text{Minimize }\|Ax-b\|\text{ over }x\in\mathbb{R}^n$$
 From **L11**, it is obvious that the optimal solution $\hat{x}$ of the problem is $\hat{x}=(A^TA)^{-1}A^Tb$, which makes $$\|A\hat{x}-b\|=\|p-b\|=\|e\|$$
 
 ## 12.3 Alternative solution
-> ##### Def 3: 矩阵求导
+> #### Def 3: 矩阵求导
 > $$\begin{aligned}
 \frac{d}{dx}(Ax)&=A^T \\
 \frac{d}{dx}(x^TA)&=A \\
@@ -144,14 +144,14 @@ $$\frac{df}{dx}=2x^TA^TA-2b^TA$$
 finally from $\frac{df}{dx}=0$, we get $x=(A^TA)^{-1}A^Tb$, as in **L12.2**
 
 ## 12.4 Orthogonal and orthonormal matrices and bases
-> ##### Def 4: Orthogonal matrix
+> #### Def 4: Orthogonal matrix
 > A matrix $Q_{n\times n}$ is orthogonal if $Q^TQ=I$ or $Q^{-1}=Q^T$
 
 **Examples:**
 1. Permutation matrix
 2. Rotation matrix
 
-> ##### Def 5: Orthonormal vectors
+> #### Def 5: Orthonormal vectors
 > 1. A system of vectors $\{q_i\}$ is **orthogonal** if $q_i^Tq_j=0$ when $i\neq j$
 > 2. A system of vectors $\{q_i\}$ is **orthonormal** if $q_i^Tq_j=0$ when $i\neq j$ and $\vert\vert q_i\vert\vert=1$
 

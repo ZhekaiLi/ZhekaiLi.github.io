@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week-8
+title: Math415 Week-8
 categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
@@ -17,20 +17,21 @@ keywords: Math415，Calculas，Matrix
 
 ## 13.1 Definition of the determinant (Big formula)
 
-> ##### Def 1: Permutation and $\text{sgn}(\pi)$
+> #### Def 1: Permutation and $\text{sgn}(\pi)$
 > 对数组 $(1, 2, ..., n)$ 进行排列组合，共可以得到 $n!$ 个不同的数组
-定义 $\text{sgn}(\pi')$ 来表示 $\pi'$ 相较于 $\pi$ 变化的程度
+我们定义 $\text{sgn}(\pi')$ 来表示 $\pi'$ 相较于 $\pi$ 变化的程度
 $$\text{sgn}(\pi)=\begin{cases}
    1 &\text{number of permutations is even} \\
    -1 &\text{number of permutations is odd} 
 \end{cases}$$
-例如，$\text{sgn}([3, 2, 1])=-1,\text{sgn}([3, 1, 2])=1$
+>
+>例如, $\text{sgn}([3, 2, 1])=-1,\text{sgn}([3, 1, 2])=1$
 
-> ##### Def 2: Determinant
+> #### Def 2: Determinant
 > $$\det(A)=\sum_{\pi}\text{sgn}(\pi)a_{1\pi(1)}a_{2\pi(2)}...a_{n\pi(n)}$$
 >
 > For $n=2$
-we have $\pi_1=[1,2],\pi_2=[2,1], \text{sgn}(\pi_1)=1,\text{sgn}(\pi_2)=0$, then
+we have $\pi_1=[1,2],\pi_2=[2,1], \text{sgn}(\pi_1)=1,\text{sgn}(\pi_2)=-1$, then
 $$\begin{aligned}
 \det(A)&=\text{sgn}(\pi_1)a_{1\pi_1(1)}a_{2\pi_1(2)}+\text{sgn}(\pi_2)a_{1\pi_2(1)}a_{2\pi_2(2)} \\
 &=1\cdot a_{11}a_{22}+(-1)\cdot a_{12}a_{21} \\
@@ -38,13 +39,17 @@ $$\begin{aligned}
 \end{aligned}$$
 
 **Fact**
-Let a permutation matrix $P$ transfers matrix $A$ consisting of **rows** $a_1, ..., a_n$ into matrix $PA$ with rows ordered as $a_{\pi(1)}, ...., a_{\pi(n)}$. Then $\det(P) = \text{sgn}(P)$.
+Let a permutation matrix $P$ transfers matrix $A$ consisting of **rows** $a_1, ..., a_n$,
+into matrix $PA$ with rows ordered as $a_{\pi(1)}, ...., a_{\pi(n)}$, then 
+$$\det(P) = \text{sgn}(P)$$
 
 ## 13.2 Laplace formula for determinant
+这里要用到在 **L14.1** 中定义的 Minor and Cofactor
+> #### Def 3: Laplace formula
 
 ## 13.3 Properties of determinants
 
-> ##### Def 3: Basic properties of determinant
+> #### Def 3: Basic properties of determinant
 > 1. 对于三角矩阵 $A_{n\times n}$, $\det(A)=a_{11}a_{22}...a_{nn}$
 > 2. $\det(AB)=\det(A)\det(B)$ 
 > 3. $\det(A^{-1})=(\det(A))^{-1}$
@@ -52,7 +57,7 @@ Let a permutation matrix $P$ transfers matrix $A$ consisting of **rows** $a_1, .
 
 (2, 3, 4 这三点从矩阵行列式的几何属性的角度非常好理解，详见 week2_appendix.md)
 
-> ##### Def 4: Properties related to matrix transformations
+
 
 ## 13.4 Pivot formula for determinant
 
@@ -75,20 +80,20 @@ $$A^{-1}=\frac{1}{|A|}C^{T},C=\{C_{ij}\}^n_{i,j=1}$$
 
 推导过程如下：
 
-> ##### Def 1: Minor 余子式
+> #### Def 1: Minor 余子式
 > 将 $A_{i,j}$ 的余子式记做 $M_{i,j}$，等于是将第 $i$ 行第 $j$ 列去掉后剩下矩阵的行列式。
 例如下图中 $M_{1,1}=5\times9-6\times8=-3$
 ![pic1](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-05_10-41-21.jpg)
 进一步可得矩阵 $M_A$
 ![pic2](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-05_10-41-52.jpg)
 
-> ##### Def 2: Cofactor
+> #### Def 2: Cofactor
 > $$C_{i,j}=(-1)^{i+j}M_{i,j}$$
 >
 >承接上边的例子，可得 $C$
 >![pic3](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-06_10-25-31.jpg)
 
-> ##### Def 3: Adjugate Matrix 伴随矩阵
+> #### Def 3: Adjugate Matrix 伴随矩阵
 >$$adj(A)=C^T \to
 A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}C^T$$
 
