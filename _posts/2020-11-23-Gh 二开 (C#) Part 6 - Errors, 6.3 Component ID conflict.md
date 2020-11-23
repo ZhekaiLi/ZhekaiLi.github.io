@@ -1,9 +1,9 @@
 ﻿---
 layout: post
 title: Gh 二开 (C#) Part 6 - Errors, 6.3 Component ID conflict
-categories: Grasshopper Development
+categories: Grasshopper-Development
 description: Personal Notes
-keywords: Grasshopper Development, Grasshopper, C#
+keywords: Grasshopper-Development, Grasshopper, C#
 ---
 
 **【说明】

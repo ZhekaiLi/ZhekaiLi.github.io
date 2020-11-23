@@ -1,9 +1,9 @@
 ﻿---
 layout: post
 title: Grasshopper 二次开发 (C#) Part 5 - Tricks, 5.1 生成 Circle 内的 Suface，即生成由圆周围城的圆面
-categories: Grasshopper Development
+categories: Grasshopper-Development
 description: Personal Notes
-keywords: Grasshopper Development, Grasshopper, C#
+keywords: Grasshopper-Development, Grasshopper, C#
 ---
 
 本博客内容正在持续更新，最后一次更新时间：2020.09.04

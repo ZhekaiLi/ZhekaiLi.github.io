@@ -1,9 +1,9 @@
 ﻿---
 layout: post
 title: Gh 二开 (C#) Part 6 - Errors, 6.2 缺少编译器要求的成员“Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo.Creat”
-categories: Grasshopper Development
+categories: Grasshopper-Development
 description: Personal Notes
-keywords: Grasshopper Development, Grasshopper, C#
+keywords: Grasshopper-Development, Grasshopper, C#
 ---
 
 本博客内容正在持续更新，最后一次更新时间：2020.08.30

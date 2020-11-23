@@ -1,9 +1,9 @@
 ﻿---
 layout: post
-title: 
-categories: Grasshopper Development
+title: Grasshopper Note 1 - Basic Components 基本组件
+categories: Grasshopper-Development
 description: Personal Notes
-keywords: Grasshopper Development, Grasshopper, C#
+keywords: Grasshopper-Development, Grasshopper, C#
 ---
 
 一些缩略词：

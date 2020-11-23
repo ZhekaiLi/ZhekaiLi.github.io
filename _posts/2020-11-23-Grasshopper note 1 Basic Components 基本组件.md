@@ -1,9 +1,9 @@
 ﻿---
 layout: post
-title: 
-categories: Grasshopper Development
+title: Grasshopper Note-2 Geometry 几何体（基本几何体、相关操作、自由曲面）
+categories: Grasshopper-Development
 description: Personal Notes
-keywords: Grasshopper Development, Grasshopper, C#
+keywords: Grasshopper-Development, Grasshopper, C#
 ---
 
 本博客内容正在持续更新，最后一次更新时间：2020.09.05
