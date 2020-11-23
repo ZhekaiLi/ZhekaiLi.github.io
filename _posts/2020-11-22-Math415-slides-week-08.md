@@ -39,7 +39,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 **Fact**
-Let a permutation matrix $P$ transfers matrix $A$ consisting of **rows** $a_1, ..., a_n$,
+- Let a permutation matrix $P$ transfers matrix $A$ consisting of **rows** $a_1, ..., a_n$,
 into matrix $PA$ with rows ordered as $a_{\pi(1)}, ...., a_{\pi(n)}$, then 
 $$\det(P) = \text{sgn}(P)$$
 
@@ -59,7 +59,7 @@ $$\det(P) = \text{sgn}(P)$$
 > 3. $\det(A^{-1})=(\det(A))^{-1}$
 > 4. $\det(A^T)=\det(A)$
 
-(2, 3, 4 这三点从矩阵行列式的几何属性的角度非常好理解，详见 week2_appendix.md)
+2, 3, 4 这三点从矩阵行列式的几何属性的角度非常好理解，详见 week2_appendix.md
 
 > #### Properties related to matrix transformations
 > 1. 对矩阵的任意一行、列乘上 $c$，那么其行列式也会变成原先的 $c$ 倍
@@ -77,6 +77,7 @@ $$\det(P) = \text{sgn}(P)$$
 
 ## 13.4 Pivot formula for determinant
 **Theorem 1:** If $A=LU$, then $\det(A)=\det(U)=u_{11}...u_{nn}$
+
 **Theorem 2:** If $PA=LU$,  then $\det(A)=\det(U)/\det(P)=\pm u_{11}...u_{nn}$
 
 ## 13.5 Other properties
@@ -100,9 +101,10 @@ $$A^{-1}=\frac{1}{|A|}C^{T},C=\{C_{ij}\}^n_{i,j=1}$$
 
 > #### Def 1: Minor 余子式
 > 将 $A_{i,j}$ 的余子式记做 $M_{i,j}$，等于是将第 $i$ 行第 $j$ 列去掉后剩下矩阵的行列式。
-例如下图中 $M_{1,1}=5\times9-6\times8=-3$
-![pic1](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-05_10-41-21.jpg)
-进一步可得矩阵 $M_A$
+>例如下图中 $M_{1,1}=5\times9-6\times8=-3$
+>![pic1](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-05_10-41-21.jpg)
+>
+>进一步可得矩阵 $M_A$
 ![pic2](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-05_10-41-52.jpg)
 
 > #### Def 2: Cofactor
@@ -115,9 +117,9 @@ $$A^{-1}=\frac{1}{|A|}C^{T},C=\{C_{ij}\}^n_{i,j=1}$$
 >$$adj(A)=C^T \to
 A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}C^T$$
 
-**Proof**
+- **Proof**
 以三阶矩阵为例
-$AC^T=\begin{bmatrix}
+$$AC^T=\begin{bmatrix}
    a_{11} & a_{12} & a_{13} \\
    a_{21} & a_{22} & a_{23} \\
    a_{31} & a_{32} & a_{33} 
@@ -125,7 +127,7 @@ $AC^T=\begin{bmatrix}
    c_{11} & c_{21} & c_{31} \\
    c_{12} & c_{22} & c_{32} \\
    c_{13} & c_{23} & c_{33} 
-\end{bmatrix}$
+\end{bmatrix}$$
 
 1. 先看对角线部分，
 $$[a_{11}, a_{12}, a_{13}]
