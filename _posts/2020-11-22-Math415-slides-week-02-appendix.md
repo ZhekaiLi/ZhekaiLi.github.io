@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week-2 Appendix
+title: Week-02 Appendix
 categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix

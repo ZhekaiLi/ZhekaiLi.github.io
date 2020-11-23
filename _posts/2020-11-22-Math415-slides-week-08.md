@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Math415 Week-8
+title: Math415 Week-08
 categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
@@ -46,20 +46,38 @@ $$\det(P) = \text{sgn}(P)$$
 ## 13.2 Laplace formula for determinant
 这里要用到在 **L14.1** 中定义的 Minor and Cofactor
 > #### Def 3: Laplace formula
+> $$\det(A)=\sum_{j=1}^n a_{ij}C_{ij}$$
+
+**Example:** When we choose $i=1$
+![pic1](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-23_18-08-40.jpg)
 
 ## 13.3 Properties of determinants
 
-> #### Def 3: Basic properties of determinant
-> 1. 对于三角矩阵 $A_{n\times n}$, $\det(A)=a_{11}a_{22}...a_{nn}$
+> #### Basic properties of determinant
+> 1. For triangular matrix $A_{n\times n}$, $\det(A)=a_{11}a_{22}...a_{nn}$
 > 2. $\det(AB)=\det(A)\det(B)$ 
 > 3. $\det(A^{-1})=(\det(A))^{-1}$
 > 4. $\det(A^T)=\det(A)$
 
 (2, 3, 4 这三点从矩阵行列式的几何属性的角度非常好理解，详见 week2_appendix.md)
 
+> #### Properties related to matrix transformations
+> 1. 对矩阵的任意一行、列乘上 $c$，那么其行列式也会变成原先的 $c$ 倍
+> 2. 每做一次行、列交换，其行列式就需要变一次号
+
+> #### $\det(A)=0\iff A$ is singular
+> 具体表现例如：
+> 1. $A$ 的任意一行、一列的所有元素均为 $0$
+> 2. $A$ 有两个一样的行或两个一样的列
+> 3. $A$ 行或列线性相关, linearly dependent
+
+至于证明当 $A$ 可逆时 $\det(A)\neq 0$，可以由 $PA=LU$ 得到 ($\det(P), \det(L), \det(U)$ 均不为 $0$) 
+
 
 
 ## 13.4 Pivot formula for determinant
+**Theorem 1:** If $A=LU$, then $\det(A)=\det(U)=u_{11}...u_{nn}$
+**Theorem 2:** If $PA=LU$,  then $\det(A)=\det(U)/\det(P)=\pm u_{11}...u_{nn}$
 
 ## 13.5 Other properties
 If we have $$A=\begin{pmatrix}
@@ -78,7 +96,7 @@ then $\det(C)=\det(A)+\det(B)$
 ## 14.1 Representation of $A^{-1}$ via cofactors
 $$A^{-1}=\frac{1}{|A|}C^{T},C=\{C_{ij}\}^n_{i,j=1}$$
 
-推导过程如下：
+具体证明在 **Def 3** 之后
 
 > #### Def 1: Minor 余子式
 > 将 $A_{i,j}$ 的余子式记做 $M_{i,j}$，等于是将第 $i$ 行第 $j$ 列去掉后剩下矩阵的行列式。
@@ -121,10 +139,13 @@ $$[a_{11}, a_{12}, a_{13}]
    c_{11} \\
    c_{12} \\
    c_{13}
-\end{bmatrix}$$ 由于这三个 $c_{1j}$ 为矩阵 $A$ 第二行和第三行的行列式，而 $a_{2j}$ 恰为原矩阵第二行，因此非对角线部分的乘积式就相当于一个两行相同的矩阵的行列式，因此等于 $0$
+\end{bmatrix}$$ 由于这三个 $c_{1j}$ 为矩阵 $A$ 第二行和第三行的行列式，而 $a_{2j}$ 恰为原矩阵第二行，因此非对角线部分的乘积式就相当于一个两行相同的矩阵的行列式，因此这个式子等于 $0$
+3. 由此可得 $AC^T=\vert A\vert$，得证
 
 ## 14.2 Cramer's rule
-Consider equation $Ax=b$ for 可逆矩阵 $A\in E^{n\times n}$
+Consider equation $Ax=b$ for invertible $A\in\mathbb{E}^{n\times n}$
 $$x=A^{-1}b=\frac{1}{|A|}\beta$$
 
 where, $\beta=C^Tb$
+
+剩下的本课件中有关矩阵特征根、特征值以及特征分解等部分，会结合书本呈现在 Chapter-6.md 中
