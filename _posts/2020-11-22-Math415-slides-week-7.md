@@ -108,7 +108,6 @@ When $\{x_i,b\}$ are given, we want to estimate a set of $\{a_i\}$ to make $\sum
 > $$\text{Minimize }e_1^2+...+e_n^2\text{ over }x_1,...,x_n\in\mathbb{R}$$
 
 **Example**: Find a line $y=C+Dx$ that is closest to $(0,6),(1,0),(2,0)$
-
 $$\begin{aligned}
 e_1&=6-(C+0) \\
 e_2&=0-(C+D) \\
@@ -156,5 +155,22 @@ finally from $\frac{df}{dx}=0$, we get $x=(A^TA)^{-1}A^Tb$, as in **L12.2**
 > 1. A system of vectors $\{q_i\}$ is **orthogonal** if $q_i^Tq_j=0$ when $i\neq j$
 > 2. A system of vectors $\{q_i\}$ is **orthonormal** if $q_i^Tq_j=0$ when $i\neq j$ and $\vert\vert q_i\vert\vert=1$
 
+**Corollary:** Let matrix $A_{m\times n}=[a_1,...,a_n]$, if $\{a_I\}$ is orthonormal, then $A$ is orthogonal ($A^TA=I$)
 
+## 12.5 Gram-Schmidt procudure
+能够由一组相互独立的向量，生成一组相互正交的向量
+**Example:** Generate orthogonal vectors $[A,B,C]$ from independent vectors $[a,b,c]$ 
+1. $A=a$
+2. $B=b-\frac{A^Tb}{A^TA}A$
+3. $C=c-\frac{A^Tc}{A^TA}A-\frac{B^Tc}{B^TB}B$
 
+## 12.6 QR-factorization and application to least squares
+
+For matrix $A_{m\times n}$, we can use GS procedure in **L12.5**, to generate a matrix $Q$, in which $\{q_i\}$ are orthonormal vectors
+
+then we get factorization $A=QR$
+
+In least squares, we have 
+$$\begin{aligned} A^TA\hat{x}=A^Tb&\to R^TQ^TQR\hat{x}=R^TQ^Tb \\
+R^TR\hat{x}=R^TQ^Tb&\to \hat{x}=R^{-1}Q^Tb
+\end{aligned}$$
