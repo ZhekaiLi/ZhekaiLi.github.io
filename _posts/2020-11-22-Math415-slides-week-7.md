@@ -9,7 +9,7 @@ keywords: Math415，Calculas，Matrix
 # L11 Orthogonality
 ## 11.1 Normed vector spaces
 > ##### Def 1: Normed vector space
-> $X$ is normed if there is a function $\text{||}\cdot\text{||}$, such that
+> $X$ is normed if there is a function $\vert\vert\cdot\vert\vert$, such that
 $$\begin{aligned}
 \|x\| &\geq 0 \\
 \|x+y\| &\leq \|x\|+\|y\|
@@ -34,7 +34,7 @@ $$\begin{aligned}\|x\|_1&=\int_0^1 \vert x(t)\vert dt \\
 ## 11.3 Orthogonality in $\mathbb{R}^n$
 Vector $x\perp y$ iff
 1. $x\cdot y=0$ or
-2. $\text{||}x\text{||}^2+\text{||}y\text{||}^2=\text{||}x+y\text{||}^2$
+2. $\vert\vert x\vert\vert^2+\vert\vert y\vert\vert^2=\vert\vert x+y\vert\vert^2$
 
 > ##### Def 3: Orthogonal subspaces
 > Let $S,T$ be subspaces in $\mathbb{R}^n$, $x\in \mathbb{R}^n$
@@ -92,7 +92,69 @@ $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
 **Corollary:** $P_S^T=P_S$
 
 # L12
-## 12.1
+## 12.1 Least squares approximation
+
+For a model 
+$$b\approx a_1x_1+a_2x_2+...+a_nx_n$$
+
+where $\{a_i\}$ are paramters and $\{x_i\}$ are variables
+
+When $\{x_i,b\}$ are given, we want to estimate a set of $\{a_i\}$ to make $\sum a_ix_i$ close to $b$ as possible, that's why we need **LSA** (least squares approximation)
+
+> ##### Def 1: Fitting error $e_k$
+> $$e_k=b_k-\sum_{i=1}^na_{ki}x_i$$
+
+> ##### Def 2: Quadratic criterion
+> $$\text{Minimize }e_1^2+...+e_n^2\text{ over }x_1,...,x_n\in\mathbb{R}$$
+
+**Example**: Find a line $y=C+Dx$ that is closest to $(0,6),(1,0),(2,0)$
+
+$$\begin{aligned}
+e_1&=6-(C+0) \\
+e_2&=0-(C+D) \\
+e_3&=0-(C+2D)
+\end{aligned}$$
+
+then we get $f(C,D)=e_1^2+e_2^2+e_3^2$
+
+After solveing $f'_C=0$ and $f'_D=0$, we get $C=5,D=-3$
+
+## 12.2 Matrix reformulation
+For $A_{m\times n}$, we can reformulate the probelm before into 
+$$\text{Minimize }\|Ax-b\|\text{ over }x\in\mathbb{R}^n$$
+
+From **L11**, it is obvious that the optimal solution $\hat{x}$ of the problem is $\hat{x}=(A^TA)^{-1}A^Tb$, which makes $$\|A\hat{x}-b\|=\|p-b\|=\|e\|$$
+
+## 12.3 Alternative solution
+> ##### Def 3: 矩阵求导
+> $$\begin{aligned}
+\frac{d}{dx}(Ax)&=A^T \\
+\frac{d}{dx}(x^TA)&=A \\
+\frac{d}{dx}(x^TAx)&=(A^T+A)x
+\end{aligned}$$
+
+Since 
+$$\min\|Ax-b\|\iff\min\|Ax-b\|^2\iff\min(Ax-b)^T(Ax-b)$$
+
+therefore 
+$$f(x)=(x^TA^T-b^T)(Ax-b)=x^TA^TAx-2x^TA^Tb+b^Tb$$
+
+then from **Def 3**, we get
+$$\frac{df}{dx}=2x^TA^TA-2b^TA$$
+
+finally from $\frac{df}{dx}=0$, we get $x=(A^TA)^{-1}A^Tb$, as in **L12.2**
+
+## 12.4 Orthogonal and orthonormal matrices and bases
+> ##### Def 4: Orthogonal matrix
+> A matrix $Q_{n\times n}$ is orthogonal if $Q^TQ=I$ or $Q^{-1}=Q^T$
+
+**Examples:**
+1. Permutation matrix
+2. Rotation matrix
+
+> ##### Def 5: Orthonormal vectors
+> 1. A system of vectors $\{q_i\}$ is **orthogonal** if $q_i^Tq_j=0$ when $i\neq j$
+> 2. A system of vectors $\{q_i\}$ is **orthonormal** if $q_i^Tq_j=0$ when $i\neq j$ and $\vert\vert q_i\vert\vert=1$
 
 
 
