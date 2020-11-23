@@ -22,7 +22,7 @@ mathjax: true
 > **DO NOT** share the same Eigensapces and 四大空间
 
 **Theorem 1**: Similarity is an **equivalence relation**:
-$\small{A\sim B\to B\sim A} \newline
+$\small{A\sim B\to B\sim A} \\
 \small{A\sim B, B\sim C\to A\sim C}$
 
 **Theorem 2**: Similar matrices have the same characteristic polynomials (特征多项式)
@@ -136,7 +136,7 @@ $$e^A=Xe^{\Lambda}X^{-1}$$
 ## 16.2 Dynamical systems: Linear differential equations
 >**Def 1: Systems of linear scalar differential equations of first order**
 Let $y(t)=[y_1, y_2, ..., y_n]^T$, then we can simplify
-$$y'_1(t)=a_{11}y_1+...+a_{1n}y_n+b_1(t) \newline ... \newline y'_n(t)=a_{n1}y_1+...+a_{nn}y_n+b_n(t)$$ into
+$$y'_1(t)=a_{11}y_1+...+a_{1n}y_n+b_1(t) \\ ... \\ y'_n(t)=a_{n1}y_1+...+a_{nn}y_n+b_n(t)$$ into
 $$\frac{d}{dt}y(t)=Ay(t)+B(t)$$
 
 
