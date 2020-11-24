@@ -140,18 +140,20 @@ since $e^Ae^{-A}=e^{A-A}=I$
 **Corollary 1.4:**
 $$e^A=Xe^{\Lambda}X^{-1}$$
 
-**Theorem 1.1:**
-$$$$ 
+It is even impossible to directly write $e^A$, while it's easy to get $e^\Lambda$ (就是将 $\Lambda$ 对角线上的 $\lambda_i$ 变成 $e^{\lambda_i}$)
 
 > #### Def 2: Derivative
 > $$\frac{d}{dt}e^{At}=Ae^{At}=e^{At}A$$
 
 ## 16.2 Dynamical systems: Linear differential equations
->**Def 1: Systems of linear scalar differential equations of first order**
-Let $y(t)=[y_1, y_2, ..., y_n]^T$, then we can simplify
+> #### Def 1: Systems of linear scalar differential equations of first order
+> Let $y(t)=[y_1, y_2, ..., y_n]^T$, then we can simplify
 $$\begin{aligned}y'_1(t)=a_{11}y_1+&...+a_{1n}y_n+b_1(t) \\ &... \\ y'_n(t)=a_{n1}y_1+&...+a_{nn}y_n+b_n(t)
 \end{aligned}$$ into
 $$\frac{d}{dt}y(t)=Ay(t)+B(t)$$
+>
+> The general solution of this ODE
+> $$y(t)=e^{At}a+\int_0^t e^{A(t-\tau)}B(\tau)d\tau,\;\;y(0)=a$$
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Midterm-1 Review
+title: Math415 Midterm-1 Review
 categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix

@@ -40,7 +40,8 @@ Since Gauss-Jordan elimination procedure means multiplication on an invertible m
 ### 7.2.2 Infinite dimensional spaces
 略，好像课件里没讲到啥内容
 
-# L8 Four fundamental subspaces defined by a matirx
+# L8 
+Four fundamental subspaces defined by a matirx
 
 按照老师课件的要求，对 $R$ 得再进行一波换列操作，使得
 $$R=\begin{pmatrix}
@@ -121,9 +122,9 @@ $$T(x)=T(\{u_j\}\times c)=\{v_k\}\times Ac=\{v_k\}\times d=y$$
 
 具体示例详见以下示例的后半部分
 
-**Ex.1:** Let $X=\text{span}\{1, t, t^2\}$, $Y=\text{span}\{1, t\}$ and the ransform $T=\frac{dx}{dt}$, find the matrix of tranform $T$
+**Ex 1:** Let $X=\text{span}\{1, t, t^2\}$, $Y=\text{span}\{1, t\}$ and the ransform $T=\frac{dx}{dt}$, find the matrix of tranform $T$
 
-$u_j$ 有三个，$v_k$ 有两个 $\to c_{3\times 1}, d_{2\times 1}\to Ac=d \to A_{2\times 3}$ 
+$$u_j \text{ 三个}, v_k \text{ 两个} \to c_{3\times 1}, d_{2\times 1}\to Ac=d \to A_{2\times 3}$$
 
 因为 $A$ 的第 $i$ 列相当于把 ${u_k}$ 转换成 $T(u_i)$ ，因此可得
 
