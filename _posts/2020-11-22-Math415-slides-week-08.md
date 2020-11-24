@@ -64,6 +64,7 @@ $$\det(P) = \text{sgn}(P)$$
 > #### Properties related to matrix transformations
 > 1. 对矩阵的任意一行、列乘上 $c$，那么其行列式也会变成原先的 $c$ 倍
 > 2. 每做一次行、列交换，其行列式就需要变一次号
+> 3. 对矩阵进行的高斯消元不改变其行列式的值
 
 > #### $\det(A)=0\iff A$ is singular
 > 具体表现例如：

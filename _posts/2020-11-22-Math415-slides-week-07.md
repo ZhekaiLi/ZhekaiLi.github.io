@@ -34,7 +34,7 @@ $$\begin{aligned}\|x\|_1&=\int_0^1 \vert x(t)\vert dt \\
 ## 11.3 Orthogonality in $\mathbb{R}^n$
 Vector $x\perp y$ iff
 1. $x\cdot y=0$ or
-2. $\vert\vert x\vert\vert^2+\vert\vert y\vert\vert^2=\vert\vert x+y\vert\vert^2$
+2. $\vert\vert x\vert\vert^2+\vert\vert y\vert\vert^2=\vert\vert x+y\vert\vert^2=\vert\vert x-y\vert\vert^2$
 
 > #### Def 3: Orthogonal subspaces
 > Let $S,T$ be subspaces in $\mathbb{R}^n$, $x\in \mathbb{R}^n$
