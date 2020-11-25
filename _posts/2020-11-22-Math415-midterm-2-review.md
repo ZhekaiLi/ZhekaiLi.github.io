@@ -8,8 +8,10 @@ keywords: Math415，Calculas，Matrix
 
 ![pic1](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-24_11-18-12.jpg)
 
-### P5 of Discussion 4 略
-### P1 of Homework 5 略
+### P5 of Discussion 4 
+略
+### P1 of Homework 5 
+略
 ### P4 of Homework 5 
 见 Math415 [Math415 Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/) 的最后两个例子
 ### P4 of Discussion 5 
@@ -33,7 +35,8 @@ $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
 ![pic6](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-25_08-56-48.jpg)
 其中红框等式之所以成立，是因为从左至右相当于做了两次行交换，从 $[1;2;3]\to[3;1;2]$
 
-### P2 of Homework 7 同上，略
+### P2 of Homework 7 
+同上，略
 ### P2 of Discussion 7
 Using matrix exponents, find solution $x(t)$ of equation
 $$\frac{dx}{dt}=Ax,\;x(0)=a$$
@@ -54,21 +57,25 @@ $$\lambda_1=1,\lambda_2=2,x_1=\begin{pmatrix}
 0
 \end{pmatrix}$$
 2. 求系数 $c_i$
-$$x(t)=c_1x^{(1)}(t)+c_2x^{(2)}(t)=c_1\begin{pmatrix}
+$$\begin{aligned}
+x(t)&=c_1x^{(1)}(t)+c_2x^{(2)}(t)=c_1\begin{pmatrix}
 -1\\
 1
 \end{pmatrix}e^t+c_2\begin{pmatrix}
 1\\
 0
-\end{pmatrix}e^{2t}$$
-$$x(0)=\begin{pmatrix}
+\end{pmatrix}e^{2t} \\
+x(0)&=\begin{pmatrix}
 -c_1+c_2\\
 c_1
 \end{pmatrix}=\begin{pmatrix}
 0\\
 1
-\end{pmatrix}$$
-3. 由上可得 $c_1=c_2=1$，因此
+\end{pmatrix}\to \begin{cases}
+   c_1 = 1 \\
+   c_2 = 1
+\end{cases}\end{aligned}$$
+3. 最后代入 $t=1/2$
 $$x(\frac{1}{2})=\begin{pmatrix}
 -1\\
 1
@@ -98,8 +105,10 @@ e^t & 0\\
 0 & e^{2t}
 \end{pmatrix}X^{-1}$$
 
-### P4, 5 of Discussion 7 略 Jordan Form
-### P7 of Homework 8 略
+### P4, 5 of Discussion 7 
+Jordan Form, 略
+### P7 of Homework 8 
+略
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Math415 Chapter-6 Eigenvalues and Eigenvectors
+title: Math415 Chapter-06 Eigenvalues and Eigenvectors
 categories: Math415
 description: Personal Notes
 keywords: [Math415，Calculas，Matrix]

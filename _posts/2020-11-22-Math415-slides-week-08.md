@@ -59,7 +59,7 @@ $$\det(P) = \text{sgn}(P)$$
 > 3. $\det(A^{-1})=(\det(A))^{-1}$
 > 4. $\det(A^T)=\det(A)$
 
-2, 3, 4 这三点从矩阵行列式的几何属性的角度非常好理解，详见 week2_appendix.md
+2, 3, 4 这三点从矩阵行列式的几何属性的角度非常好理解，详见 [Math415 Week-02 Appendix](https://zhekaili.github.io/2020/11/22/Math415-slides-week-02-appendix/)
 
 > #### Properties related to matrix transformations
 > 1. 对矩阵的任意一行、列乘上 $c$，那么其行列式也会变成原先的 $c$ 倍

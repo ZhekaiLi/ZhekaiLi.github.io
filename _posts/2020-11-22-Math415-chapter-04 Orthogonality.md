@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Math415 Chapter-4 Orthogonality
+title: Math415 Chapter-04 Orthogonality
 categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
