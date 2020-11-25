@@ -62,22 +62,25 @@ $$x_{part}+N(A)$$
 
 in $E^n$ that has dimension $n-\text{rank}(A)$ ($x_{part}$ is the particular solution)
 
-### 8.1.1 Lines and planes in $\R^3$
-**Ex.1:** For any nonzero $a\in \R^3$ and $b\in \R$, let $Y = \{x\in\R^3 : a^Tx = b\}$. Find $Y$ and $\text{dim}(Y)$
+### 8.1.1 Lines and planes in $\mathbb{R}^3$
+**Ex.1:** For any nonzero $a\in \mathbb{R}^3$ and $b\in \mathbb{R}$, let $Y = \{x\in\mathbb{R}^3 : a^Tx = b\}$. Find $Y$ and $\text{dim}(Y)$
 
 1. $A=a^T$, then we get $Y=x_{part}+N(A)$
 2. Since $m=1,n=3,\text{rank}(A)=1$, $\text{dim}(Y)=\text{dim}(N(A))\to Y$ is a plane
 
-**Ex.2:** For $A\in\R^{3\times 3}$ and $b\in\R^3$, let $Y = \{x\in\R^3 : Ax = b\}$. Find $Y$ and $\text{dim}(Y)$
+**Ex.2:** For $A\in\mathbb{R}^{3\times 3}$ and $b\in\mathbb{R}^3$, let $Y = \{x\in\mathbb{R}^3 : Ax = b\}$. Find $Y$ and $\text{dim}(Y)$
 
 1. If $\text{rank}(A)=3$, $Y=x_{part}$, $\text{dim}(Y)=0$
-1. If $\text{rank}(A)=2$, $Y=x_{part}+N(A)$, $\text{dim}(Y)=1$ ---- line
-1. If $\text{rank}(A)=1$, $Y=x_{part}+N(A)$, $\text{dim}(Y)=2$ ---- plane
+2. If $\text{rank}(A)=2$, $Y=x_{part}+N(A)$, $\text{dim}(Y)=1$, is a line
+3. If $\text{rank}(A)=1$, $Y=x_{part}+N(A)$, $\text{dim}(Y)=2$, is a plane
+
 ## 8.2 Linear Transformations
 
 **Definition:** Define mapping $T:X\to Y$ is linear iff
-$$T(\alpha x)=\alpha T(x),\;\;\;\;\;\forall \alpha\in E,x\in X \newline
-T(x+y)=T(x)+T(y),\forall x,y\in X$$
+$$\begin{aligned}
+T(\alpha x)&=\alpha T(x),\forall \alpha\in E,x\in X \\
+T(x+y)&=T(x)+T(y),\forall x,y\in X
+\end{aligned}$$
 
 将 $T$ 称之为 linear transformation/ linear mapping/ linear operator/ linear function，常常用 $Tx$ 指代 $T(x)$
 
@@ -91,10 +94,10 @@ $T(x)=MxN\;\;\;(M,N\in X)$
 3. $X=Y=\text{span}(1,t,t^2,...)$
 $T(x)=\frac{dx}{dt}$
 <br>
-4. $X=Y=\Complex$
-$T(x)=\text{Re}(\Complex)$
+4. $X=Y=\mathbb{C}$
+$T(x)=\text{Re}(\mathbb{C})$
 <br>
-5. $X=\text{span}(1,t,t^2,...),Y=\R$
+5. $X=\text{span}(1,t,t^2,...),Y=\mathbb{R}$
 $T(x)=x(0)+\int_0^{10}(2x(t)+5)dt$
 
 **Ex.2: Not linear**
@@ -127,14 +130,14 @@ $$T(x)=T(\{u_j\}\times c)=\{v_k\}\times Ac=\{v_k\}\times d=y$$
 
 **Ex 1:** Let $X=\text{span}\{1, t, t^2\}$, $Y=\text{span}\{1, t\}$ and the ransform $T=\frac{dx}{dt}$, find the matrix of tranform $T$
 
-$$u_j \text{ 三个}, v_k \text{ 两个} \to c_{3\times 1}, d_{2\times 1}\to Ac=d \to A_{2\times 3}$$
+$$\dim({u_j})=3,\dim({v_k})=2 \to c_{3\times 1}, d_{2\times 1}\to Ac=d \to A_{2\times 3}$$
 
 由于 $A$ 的第 $i$ 列相当于把 $\{v_k\}$ 转换成 $T(u_i)$ ，因此可得
 
 $$\begin{aligned} T(u_0)&=0=0\cdot v_0+0\cdot v_1 \\
 T(u_1)&=1=1\cdot v_0+0\cdot v_1 \\
 T(u_2)&=2t=0\cdot v_0+2\cdot v_1 \\
-\end{aligned}\to
+\end{aligned} \to
 A=\begin{bmatrix}
 0 & 1 & 0 \\
 0 & 0 & 2
