@@ -106,6 +106,7 @@ $T(x)=x+1$, not linear since $T(0\cdot x)\neq0\cdot T(x)=0$
 <br>
 2. $X=Y=\mathbb{R}$
 $T(x)=|x|$
+
 ### 8.2.1 The case of $X=\mathbb{E}^n,Y=\mathbb{E}^m$
 
 ### 8.2.2 Matrices of linear transformations: general case
@@ -130,24 +131,22 @@ $$T(x)=T(\{u_j\}\times c)=\{v_k\}\times Ac=\{v_k\}\times d=y$$
 
 **Ex 1:** Let $X=\text{span}\{1, t, t^2\}$, $Y=\text{span}\{1, t\}$ and the ransform $T=\frac{dx}{dt}$, find the matrix of tranform $T$
 
-$$\dim({u_j})=3,\dim({v_k})=2 \to c_{3\times 1}, d_{2\times 1}\to Ac=d \to A_{2\times 3}$$
+\[\dim({u_j})=3,\dim({v_k})=2 \to c_{3\times 1}, d_{2\times 1}\to Ac=d \to A_{2\times 3}\]
 
 由于 $A$ 的第 $i$ 列相当于把 $\{v_k\}$ 转换成 $T(u_i)$ ，因此可得
 
-$$\begin{aligned} T(u_0)&=0=0\cdot v_0+0\cdot v_1 \\
+\[\begin{aligned} T(u_0)&=0=0\cdot v_0+0\cdot v_1 \\
 T(u_1)&=1=1\cdot v_0+0\cdot v_1 \\
 T(u_2)&=2t=0\cdot v_0+2\cdot v_1 \\
-\end{aligned} \to
-A=\begin{bmatrix}
+\end{aligned} \to A=\begin{bmatrix}
 0 & 1 & 0 \\
 0 & 0 & 2
-\end{bmatrix}$$
+\end{bmatrix}\]
 
 **Ex 2:** Let $X=\text{span}\{(2,3,1)^T,(1,0,0)^T\}$, $Y=\mathbb{R}$ and the ransform $T(x)=x_1+x_3,x=(x_1,x_2,x_3)^T$, find $A$
 
-$$\begin{aligned} T(u_0)&=3=3\cdot 1 \\
+\[\begin{aligned} T(u_0)&=3=3\cdot 1 \\
 T(u_1)&=1=1\cdot 1
-\end{aligned}\to
-A=\begin{bmatrix}
+\end{aligned}\to A=\begin{bmatrix}
 3 & 1
-\end{bmatrix}$$
+\end{bmatrix}\]

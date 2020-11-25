@@ -89,13 +89,13 @@ e^{1/2}
 
 **Method 2:** 用 $e^{At}=Xe^{\Lambda t}X^{-1}$
 1. 同 Method 1，求出特征根和特征向量后可得
-$$X=\begin{pmatrix}
+\[X=\begin{pmatrix}
 -1 & 1\\
 1 & 0
 \end{pmatrix},\;\Lambda=\begin{pmatrix}
 1 & 0\\
 0 & 2
-\end{pmatrix}$$
+\end{pmatrix}\]
 2. 由题目中的条件 $\frac{dx}{dt}=Ax,x(0)=a$ 可得
 $$x(t)=ae^{At}=\begin{pmatrix}
 0\\
