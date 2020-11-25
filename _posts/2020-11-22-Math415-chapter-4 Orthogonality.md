@@ -182,34 +182,3 @@ $$p=b,P=I$$
 then from $A^TA\hat{x}=A^Tb$, we get
 
 ![pic20](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-24_20-47-13.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
