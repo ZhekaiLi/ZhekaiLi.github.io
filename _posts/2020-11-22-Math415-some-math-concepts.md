@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Some Math Concepts
+title: Math415 Some Math Concepts
 categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix

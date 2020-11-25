@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Math415 Week-08
+title: Math415 Math415 Week-08
 categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
@@ -10,10 +10,10 @@ keywords: Math415，Calculas，Matrix
 
 **Facts**
 1. 不可逆矩阵的行列式等于 $0$
-2. For a $2\times 2$ matrix $A$, $\det(A)=|A|=\begin{vmatrix}
+2. For a $2\times 2$ matrix $A$ $$\det(A)=|A|=\begin{vmatrix}
    a & b \\
    c & d
-\end{vmatrix}=ad-bc$
+\end{vmatrix}=ad-bc$$
 
 ## 13.1 Definition of the determinant (Big formula)
 
@@ -65,6 +65,16 @@ $$\det(P) = \text{sgn}(P)$$
 > 1. 对矩阵的任意一行、列乘上 $c$，那么其行列式也会变成原先的 $c$ 倍
 > 2. 每做一次行、列交换，其行列式就需要变一次号
 > 3. 对矩阵进行的高斯消元不改变其行列式的值
+> 4. 对任意一行的操作可以这样分开 $$\begin{vmatrix}
+a + a' & b + b' \\
+c & d 
+\end{vmatrix}=\begin{vmatrix}
+a & b \\
+c & d 
+\end{vmatrix}+\begin{vmatrix}
+a & b \\
+c & d 
+\end{vmatrix}$$
 
 > #### $\det(A)=0\iff A$ is singular
 > 具体表现例如：

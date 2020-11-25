@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week-10
+title: Math415 Week-10
 categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix

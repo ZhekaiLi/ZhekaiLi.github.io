@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Discussions and Homeworks
+title: Math415 Discussions and Homeworks
 categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
