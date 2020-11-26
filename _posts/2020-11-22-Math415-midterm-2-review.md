@@ -14,11 +14,11 @@ keywords: Math415，Calculas，Matrix
 ### P5 of Discussion 4 
 略
 ### P1 of Homework 5 
-略。详见 [Math415 Chapter-10](https://zhekaili.github.io/2020/11/22/Math415-chapter-10/#101-graphs-and-networks)
+见 [Math415 Chapter-10](https://zhekaili.github.io/2020/11/22/Math415-chapter-10/#101-graphs-and-networks)
 ### P4 of Homework 5 
-见 Math415 [Math415 Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/#821-matrices-of-linear-transformations-general-case) 的最后两个例子
+见 [Math415 Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/#821-matrices-of-linear-transformations-general-case) 的最后两个例子
 ### P4 of Discussion 5 
-见 Math415 [Math415 Week-07](https://zhekaili.github.io/2020/11/22/Math415-slides-week-07/)
+见 [Math415 Week-07](https://zhekaili.github.io/2020/11/22/Math415-slides-week-07/#113-projection-of-a-vector-onto-a-subspace-in-mathbbrn)
 > #### Def 5: Prjection matrix $P$
 > The projection $p$ of vector $b$ onto $S=C(A)$ is
 $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
