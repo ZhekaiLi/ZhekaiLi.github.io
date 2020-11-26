@@ -38,8 +38,6 @@ $$x\cdot A^Ty=x^T(A^Ty)=(Ax)^Ty=0^Ty=0$$
 
 这里的 $x$ 之所以能被写成 $x_r+x_n$，是因为 $C(A^T),N(A)$ 在 $\mathbb{R}$ 中互为正交补
 
-![pic4](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-10-29_11-10-05.png)
-
 ### 4.1.2 Combining Bases from Subspaces
 
 令子空间 $A,B\subset S$，若 $A,B$ 正交，那么可以说子空间 $A, B$ 构成了整个空间 $S$，例如
@@ -49,10 +47,12 @@ $$x\cdot A^Ty=x^T(A^Ty)=(Ax)^Ty=0^Ty=0$$
 
 ## 4.2 Projections
 
-Define
-1. initial vector $b$
-2. projection $p$
-3. projection matrix $P$
+> #### Define
+>1. initial vector $b$
+>2. projection $p$
+>3. projection matrix $P$
+>
+> 通过计算 $A^2$ 是否等于 $A$ 来判断该矩阵是否可以是 projection matrix 
 
 ![pic5](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-01_14-21-17.jpg)
 
@@ -61,10 +61,10 @@ Define
 2. $P_1+P_2=I$
 ### 4.2.1 Projection Onto a Line
 
-Define
-1. Let $a$ denote a line, $A$ denote a plane
-2. error $e=b-p$
-3. coefficient $\hat{x}$ that satisfies $p=\hat{x}a$ or $p=A\hat{x}$
+>#### Define
+>1. Let $a$ denote a line, $A$ denote a plane
+>2. error $e=b-p$
+>3. coefficient $\hat{x}$ that satisfies $p=\hat{x}a$ or $p=A\hat{x}$
 
 计算 $\hat{x}$ 
 
@@ -92,11 +92,9 @@ When $P$ projects onto one subspace, $I - P$ projects onto the perpendicular sub
 **Fact**
 ![pic8](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-01_15-16-56.jpg)
 
-**Proof** 
-
-$A^TAx=0\to x^TA^TAx=0\to(Ax)^T(Ax)=0\to Ax=0$ (反推也成立)
-
-因此 $A^TAx=0\iff Ax=0$，即如果 $N(A)=0$ 那么 $N(A^TA)=0$，又因为 $A^TA$ 为方阵，因此行列均满秩，因此可逆 (同时 $A^TA$ 也是一个对称矩阵)
+- **Proof** 
+$$A^TAx=0\to x^TA^TAx=0\to(Ax)^T(Ax)=0\to Ax=0$$ 
+(反推也成立) 因此 $A^TAx=0\iff Ax=0$，即如果 $N(A)=0$ 那么 $N(A^TA)=0$，又因为 $A^TA$ 为方阵，因此行列均满秩，因此可逆 (同时 $A^TA$ 也是一个对称矩阵)
 
 ## 4.3 Least Squares Approximations
 

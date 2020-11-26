@@ -28,4 +28,10 @@ $$A^nx=\lambda^nx$$
 
 
 ## 6.2 Diagonalizing a Matrix
+> #### Def 1: Diagonalizable matrix 可对角化矩阵
+> 判断一个矩阵是否为可对角化矩阵主要有以下几个途径
+> 1. $n$ 个线性无关的特征向量
+> 2. 代数重数 = 几何重数
+> 3. $n$ 个不同的特征值
+> 4. 实对称矩阵
 

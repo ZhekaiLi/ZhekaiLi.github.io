@@ -89,7 +89,6 @@ e^{1/2}
 
 **Method 2:** 用 $e^{At}=Xe^{\Lambda t}X^{-1}$
 1. 同 Method 1，求出特征根和特征向量后可得
-
 $$X=\begin{pmatrix}
 -1 & 1\\
 1 & 0
