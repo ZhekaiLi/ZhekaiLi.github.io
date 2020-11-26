@@ -14,9 +14,9 @@ keywords: Math415，Calculas，Matrix
 ### P5 of Discussion 4 
 略
 ### P1 of Homework 5 
-略
+略。详见 [Math415 Chapter-10](https://zhekaili.github.io/2020/11/22/Math415-chapter-10/#101-graphs-and-networks)
 ### P4 of Homework 5 
-见 Math415 [Math415 Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/) 的最后两个例子
+见 Math415 [Math415 Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/#821-matrices-of-linear-transformations-general-case) 的最后两个例子
 ### P4 of Discussion 5 
 见 Math415 [Math415 Week-07](https://zhekaili.github.io/2020/11/22/Math415-slides-week-07/)
 > #### Def 5: Prjection matrix $P$
@@ -31,7 +31,7 @@ $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
 如果 $A$ 的形式比较简单，可以直接用 $\hat{x}=(A^TA)^{-1}A^Tb$
 
 ### P1, 2 of Discussion 6
-[Math415 Week-08](https://zhekaili.github.io/2020/11/22/Math415-slides-week-08/) **L13.3** 中列举的行列式的部分性质，可以在求矩阵行列式时提供一定的帮助，例如
+[Math415 Week-08 L13.3](https://zhekaili.github.io/2020/11/22/Math415-slides-week-08/#133-properties-of-determinants) 中列举的行列式的部分性质，可以在求矩阵行列式时提供一定的帮助，例如
 ![pic5](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-24_22-40-58.jpg)
 
 再例如
