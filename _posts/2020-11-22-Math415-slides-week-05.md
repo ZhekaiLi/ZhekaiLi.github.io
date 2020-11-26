@@ -140,7 +140,7 @@ T(u_2)&=2t=0\cdot v_0+2\cdot v_1 \\
 0 & 0 & 2
 \end{bmatrix}$$
 
-**Ex 2:** Let $X=\text{span}\{(2,3,1)^T,(1,0,0)^T\}$, $Y=\mathbb{R}$ and the ransform $T(x)=x_1+x_3,x=(x_1,x_2,x_3)^T$, find $A$
+**Ex 2:** Let $X=\text{span}\lbrace(2,3,1)^T,(1,0,0)^T\rbrace$, $Y=\mathbb{R}$ and the ransform $T(x)=x_1+x_3,x=(x_1,x_2,x_3)^T$, find $A$
 $$\begin{aligned} T(u_0)&=3=3\cdot 1 \\
 T(u_1)&=1=1\cdot 1
 \end{aligned}\to A=\begin{bmatrix}
