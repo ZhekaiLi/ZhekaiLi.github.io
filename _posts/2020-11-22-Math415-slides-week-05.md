@@ -111,7 +111,6 @@ $T(x)=|x|$
 ### 8.2.1 Matrices of linear transformations: general case
 
 **Theoerm:** Let $T:X\to Y$ is a linear transformation from vector spaces $X$ and $Y$ with bases $\{u_j\}$ and $\{v_k\}$ respectively. Let $\{a_{ij}\}$ be the set of coordinates for $T(u_j)$ in the basis $\{v_k\}$, and let matrix $A$ be formed as $A = \{a_{ij}\}$. Then
-
 $$T(x)=y\text{ iff } Ac=d$$
 
 where $c$ is the vector column of x in the basis $\{u_j\}$, $d$ is the vector column of y in the basis $\{v_k\}$

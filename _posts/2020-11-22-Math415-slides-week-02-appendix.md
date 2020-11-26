@@ -15,10 +15,10 @@ keywords: Math415，Calculas，Matrix
 
 **从几何的角度理解**
 1. 对于 $(1\times 1)$ 的矩阵，只有 $(0)$ 是奇异的
-2. 对于 $(2\times 2)$ 的矩阵，可以将矩阵的两列理解为平面中的两条线段，只有在它们共线的时候矩阵才是奇异的，例如 $\begin{pmatrix}
+2. 对于 $(2\times 2)$ 的矩阵，可以将矩阵的两列理解为平面中的两条线段，只有在它们共线的时候矩阵才是奇异的，例如 $$\begin{pmatrix}
    1 & 2 \\
    3 & 6
-\end{pmatrix}$
+\end{pmatrix}$$
 3. 对于 $(n\times n)$ 的矩阵，同理
 
 **从概念的角度来看**
@@ -44,10 +44,10 @@ keywords: Math415，Calculas，Matrix
 
 对 $A$ 进行一个旋转变换，即 $A_{new}=T_rA$。其中，线性变换矩阵 $T_r=[i',j']$ 将 $A$ 的基向量变换成 $A_new$ 的基向量，即将 $i,j$ 转变为 $i',j'$
 
-例如对于 $T_r=\begin{bmatrix}
+例如对于 $$T_r=\begin{bmatrix}
    \cos(\theta) & -\sin(\theta) \\
    \sin(\theta) & \cos(\theta)
-\end{bmatrix}$，下图显示了变换后的 $A_{new}$ 及其基向量
+\end{bmatrix}$$，下图显示了变换后的 $A_{new}$ 及其基向量
 
 
 <img src="https://raw.githubusercontent.com/ZhekaiLi/PICTURE-for-markdown/master/202009211356.png" width="60%" alt="">
@@ -71,13 +71,13 @@ $$|T_r|=\cos(\theta)^2+\sin(\theta)^2=1$$
 当行列式处于 0 到 1 之间，显然对于原图形起到缩小作用
 4. **$\det(T) = 0$**
 **行列式为 0 的矩阵也被称为奇异矩阵（Singular Matrix），其重要性质是不存在对应的逆矩阵**，这一性质可以从线性变换的角度来理解：
-当行列式等于 0，原图形将会被压缩成一个点或者一条直线，例如 $T=\begin{bmatrix}
+当行列式等于 0，原图形将会被压缩成一个点或者一条直线，例如 $$T=\begin{bmatrix}
    0 & 0 \\
    0 & 0
-\end{bmatrix}$ 或 $T=\begin{bmatrix}
+\end{bmatrix}\text{ or }T=\begin{bmatrix}
    0 & 0 \\
    0 & 5
-\end{bmatrix}$
+\end{bmatrix}$$
 此时，可以理解为**线性变换矩阵 $T$ 已经将原图形完全破坏（降维打击），从而使之无法复原（不可能通过线性变换将直线或者点变换成面）**，因此奇异矩阵是不可逆的
 5. **$\det(T)<0$**
 当行列式小于 0，改变基向量的方向，如下图

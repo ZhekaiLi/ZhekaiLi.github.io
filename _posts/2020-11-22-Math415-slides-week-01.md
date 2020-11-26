@@ -12,72 +12,71 @@ keywords: Math415，Calculas，Matrix
 $A=IA=AI$
 $A^{-1}A=AA^{-1}=I$
 3. 点乘 Dot Product
-$x,y\in\R^n$
+$x,y\in\mathbb{R}^n$
 $x\cdot y=x^T y=\sum_{i=1}^n x_i y_i$
 $x\cdot y=y\cdot x$
-但是对于 $x,y\in \Complex^n$，点乘的定义不同
+但是对于 $x,y\in \mathbb{C}^n$，点乘的定义不同
 4. 范式
 $||x||=(\sum_{i=1}^n|x_i|^2)^{1/2}=(x\cdot x)^{1/2}$
 
 # L2
-## 2.1 Lines on $\R^2$
+## 2.1 Lines on $\mathbb{R}^2$
 $L$ is a line if stasify
 $$L=\{(x,y):ax+by=c\}$$
 where,
-1. $a,b,c,x,y\in \R$
-2. $|a|+|b|\neq 0$
+1. $a,b,c,x,y\in \mathbb{R}$
+2. $\vert a\vert+\vert b\vert\neq 0$
 
 **EX**
-1. $x=1,\;L=\{(1,y),y\in\R\}$
-2. $y=x+1,\;L=\{(x,x+1),x\in\R\}$
+1. $x=1,\;L=\{(1,y),y\in\mathbb{R}\}$
+2. $y=x+1,\;L=\{(x,x+1),x\in\mathbb{R}\}$
 
-## 2.2 Lines and planes on $\R^3$
-$$P=\{(x,y,z)\in\R^3:ax+by+cz=d\}$$
-
+## 2.2 Lines and planes on $\mathbb{R}^3$
+$$P=\{(x,y,z)\in\mathbb{R}^3:ax+by+cz=d\}$$
 $$L=P_1\cap P_2\to\begin{cases}
    \text{plane} &\text{if } P_1=P_2\\
    \text{line}  &\text{if } P_1,P_2 \text{ are not paralled}\\
-   \text{\O}    &\text{if } P_1 || P_2 \text{ and } P_1 \neq P_2
+   \empty  &\text{if } P_1 || P_2 \text{ and } P_1 \neq P_2
 \end{cases}$$
-
 $$P_1\cap P_2=\{(x,y,z):eq_1,eq_2\}$$
+
 where,
 1. $eq_1=a_1x+b_1y+c_1z=d_1$
 2. $eq_2=a_2x+b_2y+c_2z=d_2$
 
 ## 2.3 Hyperplain
 Consider the dimensions
-1. $\R^3\to \text{dimension } 3\to 3D$
-2. $\text{plains in }\R^3\to 2D$
-3. $\text{lines in }\R^2\text{ and }\R^3\to 1D$
+1. $\mathbb{R}^3\to \text{dimension } 3\to 3D$
+2. $\text{plains in }\mathbb{R}^3\to 2D$
+3. $\text{lines in }\mathbb{R}^2\text{ and }\mathbb{R}^3\to 1D$
 
 Then we define huperplain
-$$P=\{\bm{x}\in\R^n:\bm{a}\cdot\bm{x}=b\}$$
+$$P=\{\mathbf{x}\in\mathbb{R}^n:\textbf{a}\cdot\textbf{x}=b\}$$
 where,
 1. $P$ has dimension $n-1$
-2. $\bm{a}\in\R^n,\;b\in \R$
+2. $\textbf{a}\in\mathbb{R}^n,\;b\in \mathbb{R}$
 
 ## 2.4 Multidemensional system
-$$\bm{A}\bm{x}=\bm{b}\to\begin{cases}
+$$\textbf{A}\textbf{x}=\textbf{b}\to\begin{cases}
    & a_{11}x_1+...+a_{1n}x_n=b_1\\
    & ......\\
    & a_{m1}x_1+...+a_{mn}x_n=b_m
 \end{cases}$$
 where,
-1. $\bm{A}=\begin{bmatrix}
+1. $\textbf{A}=\begin{bmatrix}
    a_{11} & a_{12} & ... & a_{1n} \\
    a_{21} & a_{22} & ... & a_{2n} \\
    ...    & ...    & ... & ...    \\
    a_{m1} & a_{m2} & ... & a_{mn}
 \end{bmatrix}$
-2. $\bm{b}=(b_1,...,b_m)^T,\;\bm{x}=(x_1,...,x_n)^T$
+2. $\textbf{b}=(b_1,...,b_m)^T,\;\textbf{x}=(x_1,...,x_n)^T$
 
-令 $\tilde{a}_k=(a_{k1},...a_{km})\in\R^n$
+令 $\tilde{a}_k=(a_{k1},...a_{km})\in\mathbb{R}^n$
 由此可得 $m$ 个超平面 $H_k$
-$$H_k=\{x\in\R^n:\tilde{a}_k \bm{x}=b_k\}\to\begin{cases}
-   & H_1:\tilde{a}_1 \bm{x}=b_1\\
+$$H_k=\{x\in\mathbb{R}^n:\tilde{a}_k \textbf{x}=b_k\}\to\begin{cases}
+   & H_1:\tilde{a}_1 \textbf{x}=b_1\\
    & ......\\
-   & H_m:\tilde{a}_m \bm{x}=b_m
+   & H_m:\tilde{a}_m \textbf{x}=b_m
 \end{cases}$$
 
 **dimension** of $H_k=n-1$
@@ -131,5 +130,4 @@ $$\begin{pmatrix}
 \end{pmatrix}$$
 
 随后第二次、第三次......直至最后一次高斯消元，各需要进行 $(n-1)(n-2),(n-2)(n-3)$...步的操作，由此
-
 $$\text{Total Operations} =\sum_{k=2}^n k(k-1)=\frac{n^3-n}{3}\approx n^3$$
