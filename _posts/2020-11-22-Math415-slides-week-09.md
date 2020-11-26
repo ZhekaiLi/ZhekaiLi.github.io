@@ -6,6 +6,7 @@ description: Personal Notes
 keywords: Math415，Calculas，Matrix
 mathjax: true
 ---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
 # L15 
 Similar matrices and Jordan forms

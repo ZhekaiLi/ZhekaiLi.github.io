@@ -5,6 +5,7 @@ categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
 ---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
 # 1 奇异矩阵和非奇异矩阵
 奇异矩阵 Singular Matrix

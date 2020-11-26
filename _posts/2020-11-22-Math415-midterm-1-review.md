@@ -5,6 +5,7 @@ categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
 ---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
 # P1
 对于 $Ax=b$ 的**解的可能性** ($A_{m\times n},b_{m\times 1}$)

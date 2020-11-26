@@ -5,6 +5,7 @@ categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
 ---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
 # L1
 1. 矩阵乘法：需满足列数 = 行数，即 $(a\times b)(b\times c)$

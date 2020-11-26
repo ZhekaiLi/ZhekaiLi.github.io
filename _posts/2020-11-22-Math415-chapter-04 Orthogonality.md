@@ -5,8 +5,8 @@ categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
 ---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
-# Chapter 4 Orthogonality
 ## 4.1 Orthogonality of the Four Subspaces
 
 > #### Def 1: Orthogonal subspaces
@@ -66,11 +66,11 @@ $$x\cdot A^Ty=x^T(A^Ty)=(Ax)^Ty=0^Ty=0$$
 >2. error $e=b-p$
 >3. coefficient $\hat{x}$ that satisfies $p=\hat{x}a$ or $p=A\hat{x}$
 
-计算 $\hat{x}$ 
+计算 $\hat{x}$
 
 ![pic6](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-01_14-34-12.jpg)
 
-式 $p=\hat{x}a=a\hat{x}$ 这里的顺序没有讲究，因为当映射空间的维度为一时 $\hat{x}$ 为标量。再由 $p=Pb$ 可得（下面两式其实是一样的）
+这里的 $\hat{x}$ 为系数，类似于 [Math415 Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/) 中 L8.2.1 的 $c,d$, 因此当映射空间的维度为 $1$ 时, $p=\hat{x}a=a\hat{x}$。再由 $p=Pb$ 可得（下面两式其实是一样的）
 $$P_{line}=\frac{aa^T}{a^Ta}, P_{plane}=A(A^TA)^{-1}A^T$$
 
 **Fact 1**
@@ -148,10 +148,10 @@ A matrix with orthonormal columns is assigned the special letter $\bm{Q}$.
 
 ![pic16](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-02_10-48-39.jpg)
 
-由于 $Q^{-1}Q=I$，因 $Q^{-1}=Q^T$
+由于 $Q^{-1}Q=I$，因 $Q^{-1}=Q^T$ (这些是当 $Q$ 为**方阵**的时候才满足的性质，再比如 $QQ^T=Q^TQ=I$)
 
 > #### Def 2: Orthogonal matrix 正交矩阵
-> 满足 transpose = inverse 的矩阵，即 $Q^{-1}=Q^T$，称作正交矩阵
+> 满足 transpose = inverse 的矩阵，即 $Q^{-1}=Q^T$，称作正交矩阵 (正交矩阵一定是方阵)
 
 例如，Rotation matrix: $\begin{bmatrix}
    \cos(\theta) & -\sin(\theta) \\

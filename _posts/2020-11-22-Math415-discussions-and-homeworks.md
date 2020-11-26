@@ -5,6 +5,7 @@ categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
 ---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
 # DH1
 ## 1.1 Schwarz Inequality

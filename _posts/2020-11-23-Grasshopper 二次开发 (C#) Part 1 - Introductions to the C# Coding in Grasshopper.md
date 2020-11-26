@@ -5,15 +5,15 @@ categories: Grasshopper-Development
 description: Personal Notes
 keywords: Grasshopper-Development, Grasshopper, C#
 ---
-
-本博客内容正在持续更新，最后一次更新时间：2020.09.04
-**【本文重点】**
-1.查文档：(1) [RhinoCommon SDK](https://developer.rhino3d.com/5/api/RhinoCommon/html/N_Rhino.htm#!) (2) [Grasshopper API](https://developer.rhino3d.com/api/grasshopper/html/T_Grasshopper_DataTree_1.htm#!)
-2.专栏地址：[专栏：Rhino (Grasshopper) 二次开发 (C#)](https://blog.csdn.net/weixin_43728138/category_10266504.html)
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
 **【推荐阅读】**
-1.Grasshopper：有关 Grasshopper 部分知识点和操作欢迎参考  [Grasshopper 学习笔记](https://blog.csdn.net/weixin_43728138/article/details/107815978)
-2.视频教程：本文部分内容来自油管教程 [C# Scripting and Plugin Development for Grasshopper](https://www.youtube.com/watch?v=urWRRpy1fCw&t=5224s)
+1. 查文档：(1) [RhinoCommon SDK](https://developer.rhino3d.com/5/api/RhinoCommon/html/N_Rhino.htm#!) (2) [Grasshopper API](https://developer.rhino3d.com/api/grasshopper/html/T_Grasshopper_DataTree_1.htm#!)
+2. 专栏地址：[专栏：Rhino (Grasshopper) 二次开发 (C#)](https://blog.csdn.net/weixin_43728138/category_10266504.html)
+
+**【参考资料】**
+1. Youtube: [C# Scripting and Plugin Development for Grasshopper](https://www.youtube.com/watch?v=urWRRpy1fCw&t=5224s)
+
 # 1 Introduction
 ### 1.1 C# 电池
 下两图展示了 C# 电池 & 双击组件后打卡的窗口

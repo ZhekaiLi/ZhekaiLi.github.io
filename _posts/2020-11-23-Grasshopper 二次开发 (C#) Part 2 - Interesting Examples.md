@@ -5,16 +5,15 @@ categories: Grasshopper-Development
 description: Personal Notes
 keywords: Grasshopper-Development, Grasshopper, C#
 ---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
-本博客内容正在持续更新，最后一次更新时间：2020.08.09
-**【本文重点】
-1.查文档：(1) [RhinoCommon SDK](https://developer.rhino3d.com/5/api/RhinoCommon/html/N_Rhino.htm#!) (2) [Grasshopper API](https://developer.rhino3d.com/api/grasshopper/html/T_Grasshopper_DataTree_1.htm#!)
-2.专栏地址：[专栏：Rhino (Grasshopper) 二次开发 (C#)](https://blog.csdn.net/weixin_43728138/category_10266504.html)**
+**【本文重点】**
+1. 查文档：(1) [RhinoCommon SDK](https://developer.rhino3d.com/5/api/RhinoCommon/html/N_Rhino.htm#!) (2) [Grasshopper API](https://developer.rhino3d.com/api/grasshopper/html/T_Grasshopper_DataTree_1.htm#!)
+2. 专栏地址：[专栏：Rhino (Grasshopper) 二次开发 (C#)](https://blog.csdn.net/weixin_43728138/category_10266504.html)
 
-推荐阅读：
-【C#】：本文以介绍 Rhino, Grasshopper 的二次开发为主，具体有关 C# 语法的知识点欢迎参考 [专栏：C#](https://blog.csdn.net/weixin_43728138/category_10266823.html)
-【Grasshopper】：有关 Grasshopper 部分知识点和操作欢迎参考 [专栏：Rhino (Grasshopper) 二次开发 (C#)](https://blog.csdn.net/weixin_43728138/category_10266504.html) 内的 [Grasshopper 学习笔记](https://blog.csdn.net/weixin_43728138/article/details/107815978)
-【视频教程】：本文部分内容来自油管教程 [C# Scripting and Plugin Development for Grasshopper](https://www.youtube.com/watch?v=urWRRpy1fCw&t=5224s)
+**【参考资料】**
+1. Youtube: [C# Scripting and Plugin Development for Grasshopper](https://www.youtube.com/watch?v=urWRRpy1fCw&t=5224s)
+
 # 1 画一条随机游动的小蛇
 效果如图
 <img src="https://img-blog.csdnimg.cn/2020080523253616.gif" width="30%" alt="">

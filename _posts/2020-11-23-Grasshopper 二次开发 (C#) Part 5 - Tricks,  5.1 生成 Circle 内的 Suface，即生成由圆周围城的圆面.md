@@ -5,19 +5,18 @@ categories: Grasshopper-Development
 description: Personal Notes
 keywords: Grasshopper-Development, Grasshopper, C#
 ---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
-本博客内容正在持续更新，最后一次更新时间：2020.09.04
-**【说明】
-1.本专栏的 Part 5 主要介绍作者在学习和实践中所遇到的一些问题的解决方案，如有差错或更优解，欢迎指正
-2.您如果碰到有关 GH 二开的任何问题，欢迎在本专栏的任意一篇博文下留言交流**
-
-**【本文重点】**
-1.查文档：(1) [RhinoCommon SDK](https://developer.rhino3d.com/5/api/RhinoCommon/html/N_Rhino.htm#!) (2) [Grasshopper API](https://developer.rhino3d.com/api/grasshopper/html/T_Grasshopper_DataTree_1.htm#!)
-2.专栏地址：[专栏：Rhino (Grasshopper) 二次开发 (C#)](https://blog.csdn.net/weixin_43728138/category_10266504.html)
+**【说明】**
+1. 本专栏的 Part 5 主要介绍作者在学习和实践中所遇到的一些问题的解决方案，如有差错或更优解，欢迎指正
+2. 您如果碰到有关 GH 二开的任何问题，欢迎在本专栏的任意一篇博文下留言交流
 
 **【推荐阅读】**
-1.有关 Grasshopper 部分知识点和操作欢迎参考 [Grasshopper 学习笔记](https://blog.csdn.net/weixin_43728138/article/details/107815978)
-2.视频教程：本文部分内容来自油管教程 [C# Scripting and Plugin Development for Grasshopper](https://www.youtube.com/watch?v=urWRRpy1fCw&t=5224s)
+1. 查文档：(1) [RhinoCommon SDK](https://developer.rhino3d.com/5/api/RhinoCommon/html/N_Rhino.htm#!) (2) [Grasshopper API](https://developer.rhino3d.com/api/grasshopper/html/T_Grasshopper_DataTree_1.htm#!)
+2. CSDN专栏地址：[专栏：Rhino (Grasshopper) 二次开发 (C#)](https://blog.csdn.net/weixin_43728138/category_10266504.html)
+
+**【参考资料】**
+1. Youtube: [C# Scripting and Plugin Development for Grasshopper](https://www.youtube.com/watch?v=urWRRpy1fCw&t=5224s)
 
 # Problem
 为了创建一个圆面，作者希望能够通过某种方法，凭借 new Circle(plane, center, radius) 所创建的圆周曲线，直接生成圆面。

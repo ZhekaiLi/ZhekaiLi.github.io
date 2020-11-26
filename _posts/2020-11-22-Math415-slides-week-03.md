@@ -5,6 +5,7 @@ categories: Math415
 description: Personal Notes
 keywords: Math415，Calculas，Matrix
 ---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
 # L5 Vector spaces: Subspaces
 In this lecture, we consider vector spaces over the field $E$ ($E=\R\text{ or }\Complex$)
