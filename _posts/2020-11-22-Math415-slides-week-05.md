@@ -86,27 +86,20 @@ T(x+y)&=T(x)+T(y),\forall x,y\in X
 将 $T$ 称之为 linear transformation/ linear mapping/ linear operator/ linear function，常常用 $Tx$ 指代 $T(x)$
 
 **Ex.1: Linear transformations**
-1. $X=\mathbb{E}^n,Y=\mathbb{E}^m$
-$T(x)=Ax\;\;\;(A\in \mathbb{E}^{m\times n})$ 
+1. $X=\mathbb{E}^n,Y=\mathbb{E}^m\to T(x)=Ax\;\;\;(A\in \mathbb{E}^{m\times n})$ 
 <br>
-2. $X=\mathbb{E}^{n\times n},Y=\mathbb{E}^{n\times n}$
-$T(x)=MxN\;\;\;(M,N\in X)$
+2. $X=\mathbb{E}^{n\times n},Y=\mathbb{E}^{n\times n}\to T(x)=MxN\;\;\;(M,N\in X)$
 <br>
-3. $X=Y=\text{span}(1,t,t^2,...)$
-$T(x)=\frac{dx}{dt}$
+3. $X=Y=\text{span}(1,t,t^2,...)\to T(x)=\frac{dx}{dt}$
 <br>
-4. $X=Y=\mathbb{C}$
-$T(x)=\text{Re}(\mathbb{C})$
+4. $X=Y=\mathbb{C}\to T(x)=\text{Re}(\mathbb{C})$
 <br>
-5. $X=\text{span}(1,t,t^2,...),Y=\mathbb{R}$
-$T(x)=x(0)+\int_0^{10}(2x(t)+5)dt$
+5. $X=\text{span}(1,t,t^2,...),Y=\mathbb{R}\to T(x)=x(0)+\int_0^{10}(2x(t)+5)dt$
 
 **Ex.2: Not linear**
-1. $X=Y=\mathbb{R}$
-$T(x)=x+1$, not linear since $T(0\cdot x)\neq0\cdot T(x)=0$
+1. $X=Y=\mathbb{R}\to T(x)=x+1$, not linear since $T(0\cdot x)\neq0\cdot T(x)=0$
 <br>
-2. $X=Y=\mathbb{R}$
-$T(x)=|x|$
+2. $X=Y=\mathbb{R}\to T(x)=|x|$
 
 
 ### 8.2.1 Matrices of linear transformations: general case

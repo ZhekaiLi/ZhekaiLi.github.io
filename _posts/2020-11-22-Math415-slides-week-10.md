@@ -16,7 +16,8 @@ $$A^*=(\overline{A})^T=\overline{(A^T)}$$
 >
 >又记做 $A^H,A^\dagger$
 
-例如，对于矩阵 $A=\left[\begin{matrix}
+例如，对于矩阵 
+$$A=\left[\begin{matrix}
 1 & i \\
 0 & 2
 \end{matrix}\right],A^T=\left[\begin{matrix}
@@ -25,12 +26,12 @@ i & 2
 \end{matrix}\right],A^*=\left[\begin{matrix}
 1 & 0 \\
 -i & 2
-\end{matrix}\right]$
+\end{matrix}\right]$$
 
 > ##### Def 2: Dot product, norm, and orthogonality for complex vectors 复数向量的点乘、范数以及正交性
 > 1. 对于实数向量 $x,y\in\mathbb{R}^n$
-> dot product: $x\cdot y=x^Ty=\sum x_iy_i$
-norm: $||x||=\sqrt{x\cdot x}=\sqrt{\sum x_i^2}$
+> - dot product: $x\cdot y=x^Ty=\sum x_iy_i$
+> - norm: $||x||=\sqrt{x\cdot x}=\sqrt{\sum x_i^2}$
 
 > ##### Def 3: Symmetric matrices
 > 对称矩阵 $A\in\mathbb{R}^{n\times n}$ 具有如下性质
@@ -55,7 +56,7 @@ $x^TAx$ is interpreted as "energy of $x$", 正定就意味着对于任意 $x\in\
 
 **等效性质** (以下性质可于正定互推)
 - All pivots are positive
-- Upper left deteminants are positive ???
+- Upper left deteminants are positive
 - $A=B^TB, B\in\mathbb{R}^{m\times x}$ with independent columns
 
 ## 18.2
