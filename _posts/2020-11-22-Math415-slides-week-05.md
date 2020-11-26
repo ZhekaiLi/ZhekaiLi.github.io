@@ -14,7 +14,7 @@ Independence, basis, dimension
 Let $X$ be a vector space, $Y$ and $Z$ be a subspaces.
 
 > #### Def 1: Sum of subspaces 
-> $$Y+Z=\{y+z,y\in Y, z\in Z\}$$
+> $$Y+Z=\lbrace y+z,y\in Y, z\in Z\rbrace$$
 
 **Fact 1:** $Y+Z,Y\cap Z$ are also subspaces, while $Y\cup Z$ is not
 
@@ -35,8 +35,8 @@ $$A^{-1}b=\sum c_ku_k\to b=A(A^{-1}b)=\sum c_k(Au_k)$$
 Similar for Theorem 2.2
 
 
-### 7.2.1 How to find if $\{u_1,...,u_n\}\subset \mathbb{E}^n$ is a basis
-**The rule:** Compose a matrix using $\{u_1, ..., u_n\}$ as columns (or, alternatively, as rows). The set $\{u_1, ..., u_n\}$ is a basis iff $A$ is invertible.
+### 7.2.1 How to find if $\lbrace u_1,...,u_n\rbrace\subset \mathbb{E}^n$ is a basis
+**The rule:** Compose a matrix using $\lbrace u_1, ..., u_n\rbrace$ as columns (or, alternatively, as rows). The set $\lbrace u_1, ..., u_n\rbrace$ is a basis iff $A$ is invertible.
 Since Gauss-Jordan elimination procedure means multiplication on an invertible matrix, we can apply Gauss- Jordan elimination procedure to test matrix invertibility.
 
 ### 7.2.2 Infinite dimensional spaces
@@ -63,12 +63,12 @@ $$x_{part}+N(A)$$
 in $E^n$ that has dimension $n-\text{rank}(A)$ ($x_{part}$ is the particular solution)
 
 ### 8.1.1 Lines and planes in $\mathbb{R}^3$
-**Ex.1:** For any nonzero $a\in \mathbb{R}^3$ and $b\in \mathbb{R}$, let $Y = \{x\in\mathbb{R}^3 : a^Tx = b\}$. Find $Y$ and $\text{dim}(Y)$
+**Ex.1:** For any nonzero $a\in \mathbb{R}^3$ and $b\in \mathbb{R}$, let $Y = \lbrace x\in\mathbb{R}^3 : a^Tx = b\rbrace$. Find $Y$ and $\text{dim}(Y)$
 
 1. $A=a^T$, then we get $Y=x_{part}+N(A)$
 2. Since $m=1,n=3,\text{rank}(A)=1$, $\text{dim}(Y)=\text{dim}(N(A))\to Y$ is a plane
 
-**Ex.2:** For $A\in\mathbb{R}^{3\times 3}$ and $b\in\mathbb{R}^3$, let $Y = \{x\in\mathbb{R}^3 : Ax = b\}$. Find $Y$ and $\text{dim}(Y)$
+**Ex.2:** For $A\in\mathbb{R}^{3\times 3}$ and $b\in\mathbb{R}^3$, let $Y = \lbrace x\in\mathbb{R}^3 : Ax = b\rbrace$. Find $Y$ and $\text{dim}(Y)$
 
 1. If $\text{rank}(A)=3$, $Y=x_{part}$, $\text{dim}(Y)=0$
 2. If $\text{rank}(A)=2$, $Y=x_{part}+N(A)$, $\text{dim}(Y)=1$, is a line
@@ -110,28 +110,28 @@ $T(x)=|x|$
 
 ### 8.2.1 Matrices of linear transformations: general case
 
-**Theoerm:** Let $T:X\to Y$ is a linear transformation from vector spaces $X$ and $Y$ with bases $\{u_j\}$ and $\{v_k\}$ respectively. Let $\{a_{ij}\}$ be the set of coordinates for $T(u_j)$ in the basis $\{v_k\}$, and let matrix $A$ be formed as $A = \{a_{ij}\}$. Then
+**Theoerm:** Let $T:X\to Y$ is a linear transformation from vector spaces $X$ and $Y$ with bases $\lbrace u_j\rbrace$ and $\lbrace v_k\rbrace$ respectively. Let $\lbrace a_{ij}\rbrace$ be the set of coordinates for $T(u_j)$ in the basis $\lbrace v_k\rbrace$, and let matrix $A$ be formed as $A = \lbrace a_{ij}\rbrace$. Then
 $$T(x)=y\text{ iff } Ac=d$$
 
-where $c$ is the vector column of x in the basis $\{u_j\}$, $d$ is the vector column of y in the basis $\{v_k\}$
+where $c$ is the vector column of x in the basis $\lbrace u_j\rbrace$, $d$ is the vector column of y in the basis $\lbrace v_k\rbrace$
 
 **关于 $u,k,c,d,A$ 的维度**
 1. 令 $X\in \mathbb{E}^n, Y\in \mathbb{E}^m$，因此 $u_j\in \mathbb{E}^n, v_k\in \mathbb{E}^m$
-2. 再令 $\text{dim}(\{u_j\})=p$，即 $X$ 有 $p$ 个 bases
-同时 $\text{dim}(\{v_k\})=q$，即 $Y$ 有 $q$ 个 bases
-因此 $c\in \mathbb{E}^p, d\in \mathbb{E}^q$，验证： $x_{n\times 1}=\{u_j\}_{n\times p}\times c_{p\times 1}$
+2. 再令 $\text{dim}(\lbrace u_j\rbrace)=p$，即 $X$ 有 $p$ 个 bases
+同时 $\text{dim}(\lbrace v_k\rbrace)=q$，即 $Y$ 有 $q$ 个 bases
+因此 $c\in \mathbb{E}^p, d\in \mathbb{E}^q$，验证： $x_{n\times 1}=\lbrace u_j\rbrace_{n\times p}\times c_{p\times 1}$
 3. 注意，这里的 $A$ 并不是 $Ax=y$ 的变换矩阵，而通过 $Ac=d$ 易得 $A\in \mathbb{E} ^{q\times p}$
 
 **理解 $T(x)=y\text{ iff }Ac=d$**
 如果用一个公式来联系 $T(x)=y$ 与 $Ac=d$，
-$$T(x)=T(\{u_j\}\times c)=\{v_k\}\times Ac=\{v_k\}\times d=y$$
+$$T(x)=T(\lbrace u_j\rbrace\times c)=\lbrace v_k\rbrace\times Ac=\lbrace v_k\rbrace\times d=y$$
 
 具体示例详见以下两个示例
 
-**Ex 1:** Let $X=\text{span}\{1, t, t^2\}$, $Y=\text{span}\{1, t\}$ and the ransform $T=\frac{dx}{dt}$, find the matrix of tranform $T$
+**Ex 1:** Let $X=\text{span}\lbrace 1, t, t^2\rbrace$, $Y=\text{span}\lbrace 1, t\rbrace$ and the ransform $T=\frac{dx}{dt}$, find the matrix of tranform $T$
 $$\dim({u_j})=3,\dim({v_k})=2 \to c_{3\times 1}, d_{2\times 1}\to Ac=d \to A_{2\times 3}$$
 
-由于 $A$ 的第 $i$ 列相当于把 $\{v_k\}$ 转换成 $T(u_i)$ ，因此可得
+由于 $A$ 的第 $i$ 列相当于把 $\lbrace v_k\rbrace$ 转换成 $T(u_i)$ ，因此可得
 $$\begin{aligned} T(u_0)&=0=0\cdot v_0+0\cdot v_1 \\
 T(u_1)&=1=1\cdot v_0+0\cdot v_1 \\
 T(u_2)&=2t=0\cdot v_0+2\cdot v_1 \\

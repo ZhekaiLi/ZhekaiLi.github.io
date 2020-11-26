@@ -106,7 +106,7 @@ If we have $$A=\begin{pmatrix}
 then $\det(C)=\det(A)+\det(B)$
 # L14
 ## 14.1 Representation of $A^{-1}$ via cofactors
-$$A^{-1}=\frac{1}{|A|}C^{T},C=\{C_{ij}\}^n_{i,j=1}$$
+$$A^{-1}=\frac{1}{|A|}C^{T},C=\lbrace C_{ij}\rbrace ^n_{i,j=1}$$
 
 具体证明在 **Def 3** 之后
 

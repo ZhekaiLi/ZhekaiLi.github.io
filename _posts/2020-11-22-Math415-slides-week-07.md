@@ -18,7 +18,7 @@ $$\begin{aligned}
 **Examples**
 1. When $X=\mathbb{R}^2$
 $$\begin{aligned}\|x\|_1=\vert x_1\vert+\vert x_2\vert \\ \|x\|_2=\sqrt{x_1^2+x_2^2}\end{aligned}$$
-2. When $X=\{\text{all polynomials on }[0,1]\}$
+2. When $X=\lbrace \text{all polynomials on }[0,1]\rbrace$
 $$\begin{aligned}\|x\|_1&=\int_0^1 \vert x(t)\vert dt \\
 \|x\|_2&=\sqrt{\int_0^1  x^2(t) dt}\end{aligned}$$
 
@@ -40,7 +40,7 @@ Vector $x\perp y$ iff
 > Let $S,T$ be subspaces in $\mathbb{R}^n$, $x\in \mathbb{R}^n$
 > 1. $x\perp S$ if $x$ is orthogonal to any vector from $S$
 > 2. $S\perp T$ if any from $S$ is orthogonal to any from $T$
-> 3. Orthogonal complement $S^{\perp}=\{x:x\perp S\}$
+> 3. Orthogonal complement $S^{\perp}=\lbrace x:x\perp S\rbrace$
 
 **Facts:**
 1. $T=S^\perp \iff S=T^\perp$
@@ -77,7 +77,7 @@ $$p=P_Sb$$
 **Proof:** For $A^TAx=0\to x^TA^TAx=0\to \|Ax\|=0\to x=0$
 
 **Theorem 4:** Let $S=\text{span}(a_1,...,a_n)$, then we have
-$$S=C(A)=\{Ax,x\in\mathbb{R}^n\}$$
+$$S=C(A)=\lbrace Ax,x\in\mathbb{R}^n\rbrace$$
 
 > #### Def 5: Prjection matrix $P$
 > The projection $p$ of vector $b$ onto $S=C(A)$ is
@@ -97,9 +97,9 @@ $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
 For a model 
 $$b\approx a_1x_1+a_2x_2+...+a_nx_n$$
 
-where $\{a_i\}$ are paramters and $\{x_i\}$ are variables
+where $\lbrace a_i\rbrace$ are paramters and $\lbrace x_i\rbrace$ are variables
 
-When $\{x_i,b\}$ are given, we want to estimate a set of $\{a_i\}$ to make $\sum a_ix_i$ close to $b$ as possible, that's why we need **LSA** (least squares approximation)
+When $\lbrace x_i,b\rbrace$ are given, we want to estimate a set of $\lbrace a_i\rbrace$ to make $\sum a_ix_i$ close to $b$ as possible, that's why we need **LSA** (least squares approximation)
 
 > #### Def 1: Fitting error $e_k$
 > $$e_k=b_k-\sum_{i=1}^na_{ki}x_i$$
@@ -152,10 +152,10 @@ finally from $\frac{df}{dx}=0$, we get $x=(A^TA)^{-1}A^Tb$, as in **L12.2**
 2. Rotation matrix
 
 > #### Def 5: Orthonormal vectors
-> 1. A system of vectors $\{q_i\}$ is **orthogonal** if $q_i^Tq_j=0$ when $i\neq j$
-> 2. A system of vectors $\{q_i\}$ is **orthonormal** if $q_i^Tq_j=0$ when $i\neq j$ and $\vert\vert q_i\vert\vert=1$
+> 1. A system of vectors $\lbrace q_i\rbrace$ is **orthogonal** if $q_i^Tq_j=0$ when $i\neq j$
+> 2. A system of vectors $\lbrace q_i\rbrace$ is **orthonormal** if $q_i^Tq_j=0$ when $i\neq j$ and $\vert\vert q_i\vert\vert=1$
 
-**Corollary:** Let matrix $A_{m\times n}=[a_1,...,a_n]$, if $\{a_I\}$ is orthonormal, then $A$ is orthogonal ($A^TA=I$)
+**Corollary:** Let matrix $A_{m\times n}=[a_1,...,a_n]$, if $\lbrace a_I\rbrace$ is orthonormal, then $A$ is orthogonal ($A^TA=I$)
 
 ## 12.5 Gram-Schmidt procudure
 能够由一组相互独立的向量，生成一组相互正交的向量
@@ -166,7 +166,7 @@ finally from $\frac{df}{dx}=0$, we get $x=(A^TA)^{-1}A^Tb$, as in **L12.2**
 
 ## 12.6 QR-factorization and application to least squares
 
-For matrix $A_{m\times n}$, we can use GS procedure in **L12.5**, to generate a matrix $Q$, in which $\{q_i\}$ are orthonormal vectors
+For matrix $A_{m\times n}$, we can use GS procedure in **L12.5**, to generate a matrix $Q$, in which $\lbrace q_i\rbrace$ are orthonormal vectors
 
 then we get factorization $A=QR$
 

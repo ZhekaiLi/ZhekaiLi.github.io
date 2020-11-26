@@ -15,7 +15,10 @@ $$Ax=\lambda x$$
 > 其中特征向量 $\lambda$ 体现了 $x$ 发生的伸缩、取反变换
 
 **Corollary 1:** 
-$$A^nx=\lambda^nx$$
+$$A^nx=\lambda^nx,A^{-1}x=\lambda^{-1}x$$
+
+**Corollary 2:**
+$$a_{11}+...+a_{nn}=\lambda_1+...+\lambda_n$$
 
 > #### Def 2: Characteristic polynomial
 > The characteristic polynomial of $A_{n\times n}$ has degree $n$
