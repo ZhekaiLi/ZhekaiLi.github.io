@@ -41,26 +41,106 @@ $$LSE=\sum_{i=1}^k\sum_{x\in C_i}\|x-u_i\|^2$$
 # Randomly select k number of data as the initial cluster centroids
 centroids = [random select] 
 
-LSE = float('inf');
-LSE_last = 0;
+LSE = float('inf')
+LSE_last = 0
 
 # When LSE do not change, it reaches minimun
-while(LSE_last == LSE):
+while LSE_last != LSE:
     LSE_last = LSE
 
-    # Calculate an k*m distance matrix DIST.
+    # 1. Calculate an k*m distance matrix DIST.
     # where DIST_ij means the distance between centroid u_i and data point x_j
-    DSIT = [calculate distance]
-
-    # Renew centroids with centroids of new clusters
-    centroids = centroids.renew()
-    LSE = LSE.renew()
+    # 2. Renew centroids with centroids of new clusters
+    centroids, LSE, clusters = Renew()
 ```
 
 ### 1.3 Code
 #### 1.3.1 Use basic python
 ```py
-
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
 ```
+**Generate data**
+```py
+n_samples = 1500
+centers = [[0, 0], [5, 0], [0, 5]]
+random_state = 6
+X, y = datasets.make_blobs(n_samples=n_samples, centers=centers, cluster_std=0.6, random_state=random_state)
+```
+**Functions**
+```py
+def Compute_distance(centroids, X):    
+    cx = centroids[:, 0]
+    cy = centroids[:, 1]
+    Xx = X[:, 0]
+    Xy = X[:, 1]
+    
+    dx = cx.reshape(-1, 1) - Xx.reshape(1, -1)
+    dy = cy.reshape(-1, 1) - Xy.reshape(1, -1)    
+    return np.sqrt(dx**2 + dy**2)
+
+def Renew(DIST, X):
+    """Renew centroids, LSE and return clusters"""
+    clusters = np.argmin(DIST, 0)
+    k = DIST.shape[0]
+    
+    centroids = []
+    error = 0
+    for i in range(k):
+        label = np.array(np.where(clusters == i))
+        data = X[label.reshape(-1, 1), :].reshape(-1, 2)
+        
+        centroid = np.mean(data, 0)
+        centroids.append(centroid)
+        
+        delta = data - centroid
+        error = error + np.sum(delta[:, 0]**2) + np.sum(delta[:, 1]**2)       
+    return centroids, error, clusters
+```
+**Main**
+The main code I write is just very similar to the **pseudocode in Part 1.2**
+```py
+k = 3
+centroids = X[np.random.randint(n_samples, size=k)]
+
+LSE = float('inf')
+LSE_last = 0
+
+while LSE_last != LSE:
+    LSE_last = LSE
+    
+    DIST = Compute_distance(centroids, X)
+    
+    centroids, LSE, clusters = Renew(DIST, X)
+    centroids = np.array(centroids)
+
+colors = np.array(['#377eb8', '#ff7f00', '#4daf4a', '#a65628'])
+plt.scatter(X[:, 0], X[:, 1], color = colors[clusters]
+```
+![pic1](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-27_20-28-31.jpg)
+
+#### 1.3.2 Use KMeans in sklearn
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+```
+```py
+k = 3
+random_state = 6
+y_pred = KMeans(n_clusters=k, random_state=random_state).fit_predict(X)
+
+colors = np.array(['#377eb8', '#ff7f00', '#4daf4a', '#a65628'])
+plt.scatter(X[:, 0], X[:, 1], color = colors[clusters])
+```
+#### 1.3.3 Compare
+The running time of my code is **at most half** of that of KMeans in sklearn. There is still much space to improve since I still use `for` loop and did not use Broadcast very well.
+
+### 1.4 Cons and pros
+
+
+
+
 
 
