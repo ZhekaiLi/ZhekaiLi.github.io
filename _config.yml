@@ -56,6 +56,9 @@ navs:
     href: /categories/
     label: Category
   -
+    href: /wiki/
+    label: Wiki
+  -
     href: /about/
     label: About
 
@@ -85,6 +88,10 @@ plugins:
     - jekyll-feed
     - jemoji
 #     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
 
 # ---------------- #
 #      Search      #
