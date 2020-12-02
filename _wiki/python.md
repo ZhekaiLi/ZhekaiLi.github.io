@@ -7,7 +7,9 @@ keywords: Python, Numpy
 ---
 
 # Numpy
-##### 1 Find index
+## 1 Array
+### 1.1 Opertations with index
+#### 1.1.1 Find index
 寻找数组中符合条件的元素的位置 (index)
 ```py
 np.argwhere(L == a) 
@@ -36,13 +38,14 @@ df = pd.read_csv('...address')
 df.head()
 ```
 查看 dataframe 的前五行 (可用于判断读取的数据是不是我们实际需要的)
-||LON| LAT| NAME|
-|---|---|---|---|
-|0| 28.17858| -25.73882| 11th Street Taxi Rank
-|1| 28.17660| -25.73795| 81 Bazaar Street Taxi Rank
-|2| 27.83239| -26.53722| Adams Road Taxi Rank
-|3| 28.12514| -26.26666| Alberton City Mall Taxi Rank
-|4| 28.10144| -26.10567| Alexandra Main Taxi Rank
+
+| | LON     | LAT      | NAME                        |
+|-| --------| ---------| ----------------------------|
+|0| 28.17858| -25.73882| 11th Street Taxi Rank       |
+|1| 28.17660| -25.73795| 81 Bazaar Street Taxi Rank  |
+|2| 27.83239| -26.53722| Adams Road Taxi Rank        |
+|3| 28.12514| -26.26666| Alberton City Mall Taxi Rank|
+|4| 28.10144| -26.10567| Alexandra Main Taxi Rank    |
 ### 1.3 Check 
 #### 1.3.1 Check duplication
 ```py
