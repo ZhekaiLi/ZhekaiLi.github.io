@@ -9,6 +9,10 @@ mathjax: true
 
 # L21
 Geometry of SVD. Principal component analysis (PCA).
+**Attention:**
+1. 定义 $m$ 为样本数
+2. 定义 $n$ 为样本所包含的特征数
+
 ## 21.1 Geometry of SVD
 > #### Def 1: Geometry of SVD
 > For SVD
@@ -52,12 +56,12 @@ $$\begin{aligned}
 samples, mean, variance 就不提了
 > #### Def 3: Covariance and Correlation
 > $$\begin{aligned}
-c_{XY}&=\frac{1}{m-1}\sum_{i=1}^m(X_i-\mu_X)(Y_i-\mu_Y) \\
-\rho_{XY}&=\frac{c_{XY}}{\sqrt{S^2_XS^2_Y}}
+c_{xy}&=\frac{1}{n-1}\sum_{i=1}^n(x_i-\mu_x)(y_i-\mu_y) \\
+\rho_{xy}&=\frac{c_{xy}}{\sqrt{S^2_xS^2_y}}
 \end{aligned}$$
 > 相关系数 (Correlation) 体现了两个样本集之间的关联度
-> $$\rho\begin{cases} >0 \text{ positive correlation: }X_i>\mu_X\to\text{more chance that } Y_i>mu_i \\
-< 0 \text{ negative correlation: }X_i>\mu_X\to\text{more chance that } Y_i<mu_i \\
+> $$\rho\begin{cases} >0 \text{ positive correlation: }x_i>\mu_x\to\text{more chance that } y_i>\mu_y \\
+< 0 \text{ negative correlation: }x_i>\mu_x\to\text{more chance that } y_i<\mu_y \\
 = 0 \text{ no correlation}
 \end{cases}$$
 
@@ -67,6 +71,11 @@ x_1^T \\
 x_2^T \\
 ... \\
 x_m^T
+\end{pmatrix}=\begin{pmatrix}
+x_{11} & x_{12} & ... & x_{1n} \\
+x_{21} & x_{22} & ... & x_{2n} \\
+... & ... & ... & ... \\
+x_{m1} & x_{m2} & ... & x_{mn}
 \end{pmatrix}\to C_X=\begin{pmatrix}
 S_{x_1}^2 & c_{x_1,x_2} & ... & c_{x_1,x_m} \\
 c_{x_2,x_1} & S_{x_2}^2 & ... & c_{x_1,x_m} \\
@@ -80,4 +89,94 @@ x_1^T - \mu_{x_1} \\
 x_2^T - \mu_{x_2} \\
 ... \\
 x_m^T - \mu_{x_m}
-\end{pmatrix}\to C_x=\frac{1}{m-1}XX^T$$
+\end{pmatrix}\to C_X=\frac{1}{m-1}XX^T$$
+
+# L22
+Principal component analysis (PCA). Change of basis
+
+From last lecture, we get the matrix $X_{m\times n}$ and $C_X$, now lets focus on $XX^T$
+> #### Def 1: SVD of $XX^T$
+> $$XX^T=U\Sigma V^T=U\Sigma U^T$$
+> 
+> Define $Y=U^TX$, then we get
+> $$\begin{aligned}(n-1)C_Y&=YY^T=U^TXX^TU=\Sigma \\
+C_Y&=\frac{1}{n-1}\Sigma \text{ (对角矩阵)} \\
+S^2_{Y_k}&=\frac{\sigma_k^2}{n-1}\;(Y_k\text{ 的样本方差})
+\end{aligned}$$ 
+
+> #### Def 2: PVE (percentage of variance explained)
+> $$\text{PVE for component }k=\frac{S^2_{Y_k}}{\sum_{i=1}^mS^2_{Y_i}}$$
+
+> #### Def 3: Idea of PCA
+> 保留特征值较大的特征，去除小的，详见如下示例
+
+**Example:**
+假设对于一个 $2\times n$ 的数据，满足以下特征
+$$\begin{aligned}(n-1)C_X&=XX^T=U\Sigma U^T,u_1=\begin{pmatrix}
+0.6 \\
+0.8
+\end{pmatrix},u_2=\begin{pmatrix}
+-0.8 \\
+0.6
+\end{pmatrix} \\
+\Sigma&=\begin{pmatrix}
+\sigma_1^2 & 0 \\
+0 & \sigma_2^2
+\end{pmatrix} = \begin{pmatrix}
+57 & 0 \\
+0 & 3
+\end{pmatrix}
+\end{aligned}$$
+
+Since $57 >> 3$, 去除第二个特征，因此
+$$Y=U^TX=\begin{pmatrix}
+u_1^TX \\
+u_2^TX
+\end{pmatrix}\to\bar{Y}=\begin{pmatrix}
+u_1^TX \\
+0
+\end{pmatrix}=0.6x_1+0.8x_2$$
+## 22.1 Basis changes
+> #### Def 4: Orthonormal matrices in $\mathbb{C}^{n\times n}$
+> Remind that we defined 共轭转置 as $x^*=\overline{(x^T)}=(\overline{x})^T$, and $\vert\vert x\vert\vert=(x^*x)^{1/2}=(\sum \overline{x_i}x_i)^{1/2}$. Then for orthonormal matrices $Q\in\mathbb{C}^{n\times n}$,
+$$Q^*=Q^{-1},Q^*Q=QQ^*=I$$
+
+**Lemma 1:** Let $x_1,...,x_n$ be a basis in X, $B$ be an invertible matrix, then $Bx_1,...,Bx_n$ is also a basis in $X$
+
+**Lemma 2:** Let $x_1,...,x_n$ be an **orthonormal** basis in X, $Q$ be an orthogonal matrix, then $Qx_1,...,Qx_n$ is also an orthonormal basis in $X$
+
+> #### Def 5: Change of basis: new coordinates
+> In vector space $X$, define two basis, $U=\lbrace u_i\rbrace,W=\lbrace w_i\rbrace$, then denote
+$$[v]_U=
+\begin{pmatrix}
+c_1 \\
+... \\
+c_n
+\end{pmatrix},[v]_W=
+\begin{pmatrix}
+d_1 \\
+... \\
+d_n
+\end{pmatrix},i.e.\;v=c_1u_1+...+c_nu_n
+$$
+>
+> Also, denote transform matrix $A=\lbrace a_{ij}\rbrace$, such that
+$$\begin{aligned}
+u_1&= a_{11}w_1+...+a_{n1}w_n \\
+... \\
+u_n&=a_{1n}w_1+...+a_{nn}w_n
+\end{aligned}$$
+>
+> then we can find that
+$$[v]_W=A[v]_U\text{ or }d=Ac$$
+>
+> That $A$ can be called as $A_{U\to W}$, we can alos find $A_{W\to U}$ similarly, such that
+$$\begin{aligned}
+[v]_W&=A_{U\to W}[v]_U \\
+[v]_U&=A_{W\to U}[v]_W \\
+A_{U\to W}&= ([u_1]_W,...,[u_n]_W) \\
+A_{W\to U}&= ([w_1]_U,...,[w_n]_U) \\
+I&=A_{U\to W}A_{W\to U}
+\end{aligned}$$ 
+
+后面还差一页没有理

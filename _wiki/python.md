@@ -46,6 +46,11 @@ df.head()
 |2| 27.83239| -26.53722| Adams Road Taxi Rank        |
 |3| 28.12514| -26.26666| Alberton City Mall Taxi Rank|
 |4| 28.10144| -26.10567| Alexandra Main Taxi Rank    |
+
+**test:**
+| a | b |
+| --- | --- |
+| 1 | 2 |
 ### 1.3 Check 
 #### 1.3.1 Check duplication
 ```py
