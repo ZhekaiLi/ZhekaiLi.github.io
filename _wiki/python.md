@@ -6,6 +6,20 @@ description:
 keywords: Python, Numpy
 ---
 
+# Matplotlib
+## 1 matplotlib.pyplot
+### 1.1 Scatter
+```py
+plt.scatter(x=, y=, s=, alpha=)
+```
+参数
+1. `s` size，即点的大小
+2. `alpha` 透明度，取值区间为 $[0,1]$
+
+
+---
+
+
 # Numpy
 ## 1 Array
 ### 1.1 Opertations with index
@@ -24,8 +38,12 @@ array([[1],
        [3]], dtype=int64)
 ```
 
+
+---
+
+
 # Pandas
-## 1 Dataframe
+## 1 pandas.Dataframe
 ### 1.1 Read
 例如，将 csv 表格文件转化为 pandas 的 dataframe 数据结构
 ```py
@@ -56,7 +74,7 @@ df.duplicated(subset=['col1', 'col2']])
 - 其中 `True` 说明对应行的数据重复了，反之 `False`。
 - 可以用 `.values` 的方式将其转换为 $m\times 1$ 的 array
 
-其他可选参数：
+参数:
 1. `subset=['column name']` 将查重范围限制在特定的列中
 
 **应用场景：检查数据集中是否存在一、二两列元素相同的数据**
@@ -65,6 +83,7 @@ df.duplicated(subset=['LON', 'LAT']]).values.any()
 ```
 - 其中 `L.any()` 用于检测列表中是否包含 `True` 元素，包含则返回 `True`，全元素均为 `False` 则返回 `False`
 - 当然，类似的还可以用于**检查是否存在 NaN 数值**： `df.isna().values.any()`
+
 #### 1.3.2 Check NaN
 ```py
 df.isna()
@@ -72,6 +91,42 @@ df.isna()
 该函数的使用可以参考上一个 section
 
 ### 1.4 Drop, Delete
+去除重复数据以及 NaN
+```py
+df.drop_duplicates(subset=['LON', 'LAT'], keep='first', inplace=True)
+df.dropna(inplace=True)
+```
+参数:
+1. `subset=['column name']` 将查重范围限制在特定的列中
+2. `keep='first'` 保留重复数据的第一个
+3. `inplace=True` 删除 NaN 或重复数据
 
+### 1.5 Type Convertion
+#### 1.5.1 Convert to Numpy array
+```py
+X = df[['column name']]
+```
+例如将 dataframe 中的 'LON', 'LAT' 两列转化为一个 $m\times2$ 的数组
+```py
+X = df[['LON', 'LAT']]
+```
 
+### 1.6 Access 访问
+#### 1.6.1 访问列
+```py
+df.columnName
+```
+访问列的第一个元素
+```py
+df.columnName[0]
+```
+#### 1.6.2 访问行
+使用 generator fuction `df.iterrows()` 来访问行。
+
+例如将 df 中 'col1' 列的所有元素赋值为 0
+```py
+for _, row in df.iterrows():
+       row.col1 = 0
+```
+如果 'col1' 就是第一列的话，也可以直接用索引的方式: `row[0] = 0`
 
