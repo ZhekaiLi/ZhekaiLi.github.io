@@ -33,7 +33,7 @@ $$Ux_B=x_C:(\sigma_1x_1',\sigma_2x_2',0)\to (x_1'',x_2'',x_3'')$$
 
 ## 21.2 Matrix norm
 **Presume:** SVD is selected that $\sigma_1\geq\sigma_2\geq...$
-#### Def 2: Euclidean norm of matrix
+> #### Def 2: Euclidean norm of matrix
 > If $A=U\Sigma V^T$, then
 $$\|A\|=\max\vert A_{ij}\vert=\max\|Ax\|=\sigma_1,\;\|x\|\leq 1$$
 - **Proof:** 
