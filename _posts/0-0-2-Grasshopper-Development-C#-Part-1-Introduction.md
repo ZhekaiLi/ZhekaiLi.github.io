@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: Grasshopper 二次开发 (C#) Part 1 - Introductions to the C# Coding in Grasshopper
+title: Grasshopper-Development C# Part 1 - Introduction
 categories: Grasshopper-Development
 description: Personal Notes
 keywords: Grasshopper-Development, Grasshopper, C#

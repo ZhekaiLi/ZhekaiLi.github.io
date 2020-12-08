@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: Grasshopper 二次开发 (C#) Part 4 - Write Your Own Class
+title: Grasshopper-Development C# Part 4 - Write Own Class
 categories: Grasshopper-Development
 description: Personal Notes
 keywords: Grasshopper-Development, Grasshopper, C#

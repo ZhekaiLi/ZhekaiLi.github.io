@@ -6,11 +6,56 @@ description:
 keywords: Python, Numpy
 ---
 
+# Folium
+**Reference**
+1.[知乎: Python绘制地图神器folium入门](https://zhuanlan.zhihu.com/p/112324234)
+
+这是一个能够生成交互地图的包
+
+## 1 folium.Map 创建地图
+```py
+folium.Map(location=None, 
+    tiles='OpenStreetMap', 
+    zoom_start=10, 
+    crs='EPSG3857'
+)
+```
+参数:
+1. `location=[LAT, LON]` 经纬度坐标位置
+2. `tiles` 显示样式，默认为'OpenStreetMap'，也就是开启街道显示 (上、左下、右下分别对应 OpenStreetMap, Stamen Toner, and Stamen Terrain)
+![pic1](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-12-06_22-06-54.jpg)
+![pic2](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-12-06_22-07-14.jpg)
+3. `zoom_start` 缩放值，默认为 10
+4. `crs` 地理坐标参考系统，默认为 'EPSG3857'
+
+## 2 Note the map 在地图上做标记
+### 2.1 folium.CircleMaker 画圆
+```py
+folium.CircleMaker(location=None,
+    radius=5, # 标记圆圈的半径
+    # 标记圆圈的名字，在点击后出现 
+    # 其中 re.sub() 利用正则表达式避免乱码
+    popup=re.sub(r'[a^-zA-Z]+', '', 'name'),
+    color='#1787FE',
+    fill=True,
+    fill_color='#1787FE'   
+).add_to(m)
+```
+注意! 不要忘了在函数结尾括号外添加 `.add_to(m)`, 否则将无法显示标记, 效果如下
+![pic3](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-07_18-49-25.jpg)
+
+
+---
+
+
 # Matplotlib
 ## 1 matplotlib.pyplot
 ### 1.1 Scatter
 ```py
-plt.scatter(x=, y=, s=, alpha=)
+plt.scatter(x=X[:, 0], y=X[:, 1], 
+    s=10, 
+    alpha=0.5
+)
 ```
 参数
 1. `s` size，即点的大小
@@ -21,7 +66,7 @@ plt.scatter(x=, y=, s=, alpha=)
 
 
 # Numpy
-## 1 Array
+## 1 numpy.array
 ### 1.1 Opertations with index
 #### 1.1.1 Find index
 寻找数组中符合条件的元素的位置 (index)
@@ -36,6 +81,25 @@ np.argwhere(L == 2)
 ```
 array([[1],
        [3]], dtype=int64)
+```
+### 1.2 Sort
+#### 1.2.1 Delete duplications and sort
+去除数组中的重复数字, 并进行排序之后输出
+```py
+np.unique([1, 2, 2, 3, 3])
+>>> array([1, 2, 3])
+np.unique([[1, 1], [2, 3]])
+>>> array([1, 2, 3])
+```
+
+### 1.3 Save and Load
+将 numpy.array 类型的数据已 `.npy` 为格式保存起来
+```py
+np.save('address/filename.npy', X)
+```
+读取 `.npy` 格式的文件
+```py
+X = np.load('address/filename.npy')
 ```
 
 
@@ -93,13 +157,13 @@ df.isna()
 ### 1.4 Drop, Delete
 去除重复数据以及 NaN
 ```py
-df.drop_duplicates(subset=['LON', 'LAT'], keep='first', inplace=True)
+df.drop_duplicates(subset=['LON', 'LAT'], # 将查重范围限制在特定的列中
+    keep='first', # 保留重复数据的第一个
+    inplace=True # 删除重复数据
+)
 df.dropna(inplace=True)
 ```
-参数:
-1. `subset=['column name']` 将查重范围限制在特定的列中
-2. `keep='first'` 保留重复数据的第一个
-3. `inplace=True` 删除 NaN 或重复数据
+
 
 ### 1.5 Type Convertion
 #### 1.5.1 Convert to Numpy array
@@ -130,3 +194,25 @@ for _, row in df.iterrows():
 ```
 如果 'col1' 就是第一列的话，也可以直接用索引的方式: `row[0] = 0`
 
+
+---
+
+
+# Sklearn
+## 1 sklearn.datasets
+### 1.1 生成数据
+```py
+X_blobs, _ = sklearn.datasets.make_blobs(n_samples=1000, 
+    centers=10, # 团的个数
+    n_features=2, # 数据维度
+    cluster_std=0.5, 
+    random_state=4
+)
+```
+## 2 sklearn.matrics
+### 2.1 Value the clustering 检查聚类算法的性能
+```py
+sklearn.matrics.silhouette_score(X_blobs, # 原数据
+    class_prediction # 分类标签, 例如以下表示有三类 array([0, 1, 2, 1, 1, 2])
+)
+```

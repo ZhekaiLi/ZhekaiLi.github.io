@@ -1,12 +1,10 @@
 ﻿---
 layout: post
-title: Grasshopper Note-2 Geometry 几何体（基本几何体、相关操作、自由曲面）
+title: Grasshopper-Development GhNote-01 Basic Components 基本组件
 categories: Grasshopper-Development
 description: Personal Notes
 keywords: Grasshopper-Development, Grasshopper, C#
 ---
-
-本博客内容正在持续更新，最后一次更新时间：2020.09.05
 
 # 1 Grasshopper 窗口
 ## 1.1 在不同文件之间切换

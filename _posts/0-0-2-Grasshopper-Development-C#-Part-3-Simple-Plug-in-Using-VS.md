@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: Grasshopper 二次开发 (C#) Part 3 - Write Simple Plug-in for Grasshopper in Visual Studio
+title: Grasshopper-Development C# Part 3 - Simple Plug-in for Grasshopper Using VS
 categories: Grasshopper-Development
 description: Personal Notes
 keywords: Grasshopper-Development, Grasshopper, C#

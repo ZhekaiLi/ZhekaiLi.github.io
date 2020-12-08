@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: Grasshopper Note 1 - Basic Components 基本组件
+title: Grasshopper-Development GhNote-02 Geometry 几何体 (基本几何体, 相关操作, 自由曲面)
 categories: Grasshopper-Development
 description: Personal Notes
 keywords: Grasshopper-Development, Grasshopper, C#
