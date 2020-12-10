@@ -69,3 +69,34 @@ when $r<n$, the optimal solution $\hat x$ is **not unique**, we have one of opti
 $$\hat x=A^\dagger b$$
 
 接下来还有一个例子和一个证明, 篇幅有点长, 日后再补充
+
+# L24
+Complex matrices. Discrete Fourier transform
+## 24.1 Complex vectors and matrices 
+> #### Def 1: Conjugate transpose 共轭转置 (in L19)
+> 又称 Hermitian transpose
+$$A^*=(\overline{A})^T=\overline{(A^T)}$$
+>
+>又记做 $A^H,A^\dagger$
+
+> #### Def 2: Unitary matrices
+> Orthogonal matrix: 
+$$Q\in\mathbb{R}^{n\times n}:Q^TQ=I,Q^{-1}=Q^T$$
+> 
+> Unitary matrix:
+$$Q\in\mathbb{C}^{n\times n}:Q^*Q=I,Q^{-1}=Q^*$$
+
+## 24.2 Fourier transform and its discretization
+> #### Def 3: Fourier transform of $x(t)$ 时域转频域
+> $$X(w)=\int_{-\infty}^\infty x(t)e^{-iwt}dt$$
+> #### Inverse of Fourier transform for $X(w)$ 频域转时域
+> $$x(t)=\frac{1}{2\pi}\int_{-\infty}^\infty X(w)e^{iwt}dw$$
+
+**Theorem 1:**
+If function $X(w)$ is piecewise constant, we can rewrite $x(t)$ as
+$$x(t)=\frac{1}{2\pi}\sum X(k)e^{ikt}$$
+
+where, $e^{ikt}=\cos(kt)+i\sin(kt)$
+
+**Theorem 2:** If assume $x(t)=0$ when $t\in(-\infty,0)\cup (n,\infty)$, and funcion $x(t)$ is constant on invervals $[k,k+1)$, then
+$$X(w)=\int_{0}^n x(t)e^{-iwt}dt=\sum_{k=0}^{n-1}x(k)e^{-iwk}$$
