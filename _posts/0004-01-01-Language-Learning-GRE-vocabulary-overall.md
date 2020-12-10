@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: GRE Vocabulary - Overall
+title: GRE Vocabulary Overall
 categories: Language-Learning
 description: Personal Notes
 keywords: [Language-Learning, GRE, Vocabulary]
