@@ -10,7 +10,7 @@ HW9, problem 3,4,6
 HW10 problems 2, 6
 HW11, problem 1
 
-# D7.2
+## D7.2
 ![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_15-18-46.jpg)
 - (a). $$\cos(A)x=x-\frac{1}{2!}A^2x+\frac{1}{4!}A^4x-...=x(1-\frac{1}{2!}\lambda^2x+\frac{1}{4!}\lambda^4x...)=\cos(\lambda)x$$
 So $x$ is the eigenvector of $\cos(A)$ and eigenvalue is $\cos(\lambda)$
@@ -70,8 +70,67 @@ $$u(t)=c_1\cos(\lambda_1t)x_1+c_2\cos(\lambda_2t)x_2=3\cos(2\pi t)\begin{bmatrix
 -1
 \end{bmatrix}$$
 
-# D8.4
-同 [Midterm 2 Review D7.2]()
+## D8.4
+同 [Midterm 2 Review D7.2](https://zhekaili.github.io/0001/03/02/Math415-midterm-2-review/#d72)
+
+## D9.1, 2, 3
+这三题讲的都是奇异值分解 SVD, 选一道比较复杂的为例
+> Find the singular values of 
+$$A=\begin{bmatrix}
+0 & 1 & 1\\
+\sqrt2 & 2 & 0\\
+0 & 1 & 1
+\end{bmatrix}$$ and find the SDV decomposition of $A$
+
+**Solution:**
+1. Compute $$AA^T=\begin{bmatrix}
+2 & 2 & 2\\
+2 & 6 & 2\\
+2 & 2 & 2
+\end{bmatrix}\to\det(A)=0:-\lambda(\lambda-8)(\lambda-2)$$
+2. $\lambda=8,2,0$ are eigenvalues of $AA^T$, and therefore the singular vlues of $A$ is $\sigma=2\sqrt2,\sqrt2,0$, then we get $\Sigma$
+$$\Sigma=\begin{bmatrix}
+2\sqrt2 & 0 & 0\\
+0 & \sqrt2 & 0\\
+0 & 0 & 0
+\end{bmatrix}$$
+3. For $\lambda=8,2,0$, we find three eigenvectors $u_1,u_2,u_3$, after **normalizing** them, we therefore get $U$
+4. Similarly, use $A^TA$ to find $V$. 还可以使用如下方式来计算 $v_i$
+$$v_i=\frac{1}{\sigma_i}A^Tu_i$$
+
+## D10.1
+重复上题内容, 略
+
+## D10.2
+> Find the pseudoinverse of
+$$A=\begin{bmatrix}
+-1 & 2 & 2
+\end{bmatrix}$$
+
+**Solution:**
+1. Compute $AA^T=9$, then $\lambda=9,\sigma=3$, and ($\Sigma, A$ 的 shape 相同)
+$$U=[1], \Sigma=\begin{bmatrix}
+3 & 0 & 0
+\end{bmatrix}$$
+2. 由于 $u_i$ 只有一个, 因此我们能够计算出的 $v_i$ 也只有一个
+$$v_1=\frac{1}{\sigma_1}A^Tu_1=\begin{bmatrix}
+-\frac{1}{3}\\
+\frac{2}{3}\\
+\frac{2}{3}
+\end{bmatrix}$$
+3. 已知 $V_{3\times 3}$ orthonormal, 因此由 $v_1$ 可以推测 $v_2,v_3$, 最后求得 $V$
+$$V=\begin{bmatrix}
+-\frac{1}{3} & \frac{2}{3} & \frac{2}{3}\\
+\frac{2}{3} & -\frac{1}{3} & \frac{2}{3}\\
+\frac{2}{3} & \frac{2}{3} & -\frac{1}{3}
+\end{bmatrix}$$
+
+## D8.3
+这道题比较偏而且内容不多, 个人感觉应该不太会考
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_22-17-01.jpg)
+
+## HW8.3, 5
+这之后的 solution bb 上还没给, 过几天再整
 
 
 

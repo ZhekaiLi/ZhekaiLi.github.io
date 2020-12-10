@@ -19,7 +19,7 @@ Midterm-2 Review
 >
 > where, 
 >1. $\Sigma$ 所有元素均非负，且对角线上的元素非零
->2. $U_{m\times m},V_{n\times n}$ are orthogonal matrices
+>2. $U_{m\times m},V_{n\times n}$ are orthonormal matrices
 
 - **Rule:**
 We will presume that SVD is selected s.t. $\sigma_1\geq\sigma_2\geq...\geq0$, where $\sigma_i$ is the diagonal elements of $\Sigma$, and is called **singular value**
