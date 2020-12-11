@@ -26,6 +26,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |access | ac + cess | [go (in)to] | (v.) 接近、访问、获取; (n.) 通道、进入、使用权
 |addict | ad + dict | [to say (repeatedly)] | (v.) 沉溺、上瘾
 |adore | | [prey to] | 喜爱、爱慕
+|adverse| ad + vers + e| [turn to (相反的立场)]| (v.) 相反的, 敌对的, 不利的
 |advocate | | [to call] | 支持、提倡
 |affable | | [(easily) speak to] | 和蔼的、温和的
 |aggress | ag + gress | [强行 go] | (v.) 侵略
@@ -84,25 +85,35 @@ cacophony [bad sound] 刺耳的声音
 |convoke | con + voke | [call together] | (v.) 召集开会
 
 
-**conter- [against]**
+**conter- [against], [counter 对立面]**
 ***contra-**
-contermand [against command] 取消、撤销
-contradict [say against] 否认、反驳
+***contro-**
+
+|||||
+|---|---|---|---
+|contermand| conter + mand| [against command]| (v.) 取消, 撤销
+|contradict| contra + dict| [say against]| (v.) 否认, 反驳
+|controversy| contro + vers + y| [turn to counter]| (n.) 争端, 争议
 
 
 # d
 
-**de- [down, intensify]**
+**de- [down], [intensify]**
 declaim [intensify shout] 慷慨陈词、朗诵
 denounce [announce down] 谴责、公然抨击
 
-**dis- [否定], [away, apart, 偏离]**
+**dis- [表否定], [away, apart, 偏离]**
 ***di-**
-dissonance [apart (in) sound] （音调）不和谐、刺耳；不一致，分歧
 
 |||||
 |---|---|---|---
-|digress | di(s) + gress | [go apart] | 离题、岔道
+|digress | di(s) + gress | [go apart] | (v.) 离题, 走向岔道
+|diverge| di(s) + ver + ge| [turn apart]| (v.) 分歧, 分叉, 偏离
+|divert| di(s) + vert| [turn to different ...]| (v.) 转移, 使转向
+|dissonance| | [apart (in) sound]| (音调) 不和谐, 刺耳；不一致, 分歧
+
+
+
 
 # e
 
@@ -114,8 +125,13 @@ enchant [(let sb) enter song] 施魔法、使入迷
 equivocate [call equally (to conflicting points)] 说谎话、模棱两可地说
 
 **eu- [well]**
-eulogize [speak well] 称赞、颂扬
-euphonious [good sound] 悦耳的
+
+|||||
+|---|---|---|---
+|eulogize| eu + log + ize| [speak well]| 称赞、颂扬
+|euphemism| eu + phem + ism| [往好里说]| 委婉语
+|euphonious| eu + phon + ious| [good sound]| 悦耳的
+|euphoria| eu + phor + ia| [(sth.) that can bring well feeling]| (医)狂喜症, 狂喜
 
 **ex- [out]**
 ***e-**
@@ -170,6 +186,12 @@ introduce ---- intro + duc + e ---- [lead (sb) enter] 引入、引荐、介绍
 ***limin-**
 limp 软的、无力的；跛行
 
+**-lyze [loose]**
+
+|||||
+|---|---|---|---
+|paralyze| para + lyze| [loose sides (of body)]| 使瘫痪
+
 # m
 
 **mut- [change]**
@@ -186,11 +208,32 @@ obloquy [speak against] 谩骂、诽谤、恶名、耻辱
 # p
 
 **par- [生]**
-parent ---- par + ent ---- (生出人) 父母
-biparous ---- bi + par + ous ---- (双生) 双生的、双胞胎的
+
+|||||
+|---|---|---|---
+|parent| par + ent| | (生出人) 父母
+|biparous| bi + par + ous| | (双生) 双生的、双胞胎的
+
+**para- [besides]**
+
+|||||
+|---|---|---|---
+|paraphernalia| para + pher + nalia| [bring beside]| 随身用具, 全套设备
+|paralyze| para + lyze| [loose sides (of body)]| 使瘫痪
 
 **per- [through]**
-peroration [through oration] 结束语
+
+|||||
+|---|---|---|---
+|peroration| |[through oration]| 结束语
+
+**peri- [around]**
+
+|||||
+|---|---|---|---
+|perianal| peri + anal| [around anus]| 肛周的
+|periphery| peri + pher + y| [carry around]| 外围, 边缘, 圆周
+|perpheral| | | 周围的, 边缘的
 
 **prim [first]**
 primal 最初的、主要的

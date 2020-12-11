@@ -42,6 +42,11 @@ enchant [(let sb) enter song] 施魔法、使入迷
 **cob- [heap, lump, rounded object]**
 cobble 鹅卵石
 
+**coni- [cone 圆锥, 球果]**
+|||||
+|---|---|---|---
+|conifer| coni + fer | [(plants) that carry cones 带着球果的植物]| 针叶树
+
 # d
 **duc(t) [lead 引导]**
 
@@ -62,16 +67,25 @@ cobble 鹅卵石
 |edible| ed + ible| [able to eat]| 可以吃的
 
 # f
-**-fer [carry, bring, bear 带来, 忍受, 发生, 怀有]**
+**-fer [carry, bring 带来, 发生, 怀有]**
 ***-fur**
 ***-pher**
+***-phor**
+
 |||||
 |---|---|---|---
-|circumference| circum + fer + ence| [carry around]| 周长、圆周
-|conifer| coni + fer | [(plants) that carry cones 带着球果的植物]| 针叶树
+|circumference| circum + fer + ence| [carry around]| 周长, 圆周
+|conifer| coni + fer| [(plants) that carry cones 带着球果的植物]| 针叶树
+|metaphor| meta + phor| [carry change 带着改变]| 暗喻, 隐喻
+|periphery| peri + pher + y| [carry around]| 外围, 边缘, 圆周
+|pestiferous| pest + i + fer + ous| [pest that bring (illness)]| 传播疾病的
+|phosphorus| phos + phor + us| [(sth.) that bring light]| 磷
 |prefer| pre + fer | [bring before]| 更喜欢
 |preferable| | | 更好的
 |preferential| | | 优先的
+|euphoric| eu + phor + ic| | 欣快的
+|euphoria| eu + phor + ia| [(sth.) that can bring well feeling, "ia" 通常作为医学名词后缀]| (医)狂喜症, 狂喜
+|paraphernalia| para + pher + nalia| [bring beside]| 随身用具, 全套设备
 |vociferous| voci + fer + ous| [bring (too much) voice]| 喧哗的
 
 
@@ -94,6 +108,13 @@ cobble 鹅卵石
 |regress | re + gress | [go back] | (v.) 逆行、倒退
 |transgress | trans + gress | [走过 (界限)] | (v.) 越界、违反、犯罪
 
+# p
+**phos- [light]**
+
+|||||
+|---|---|---|---
+|phosphorus| phos + phor + us| [(sth.) that bring light]| 磷
+
 # v
 **-van [comg, 过来]**
 ***-ven**
@@ -108,9 +129,39 @@ cobble 鹅卵石
 |conventional | | | (a.) 传统的、惯例的
 |convenient | con + ven(i) + ent | [强调走, 引申为靠走就能达到] | (a.) 附近的 (本义)、方便的
 |intervene | inter + vene | | (v.) 干涉、干预 = interfere
-|intervening | interven(e) + ing | | (a.) 介于...中间的、在...期间内的
+| | intervening | | (a.) 介于...中间的、在...期间内的
 |preventative = preventive| prevent + ative (= ate + ive = ive) | | (a.) 预防性的、预备的
 |revenue | re + ven + ue | [(money) come back] | (n.) 收入 = income 
+
+**vari- [vary, change]**
+
+|||||
+|---|---|---|---
+|variability| vari + ability| [ability to vary]| (n.) 可变性, 变化性
+|variegate| vari + eg + ate| [act change (on colors)]| (v.) 使杂色, 使丰富多彩, 使多样化
+
+**-ver [to turn, 转]**
+***-vers**
+***-vert**
+***-vel**
+***-vol**
+
+|||||
+|---|---|---|---
+|adverse = adversarial| ad + vers + e| [turn to (相反的立场)]| (v.) 相反的, 敌对的, 不利的
+| | adversary, adversity| | (n.) 对手, (n.) 逆境, 不幸
+|converse| con + vers + e| [强调 turn]| (a.) 相反的, 颠倒的 (v.) 交谈
+|controversy| contro + vers + y| [turn to counter]| (n.) 争端, 争议
+|diverge| di(s) + ver + ge| [turn apart]| (v.) 分歧, 分叉, 偏离
+|divert| di(s) + vert| [turn to different ...]| (v.) 转移, 使转向
+|diverse| | | (a.) 不同的, 多样的
+| | diversify, diversification, diversity | | (v.) 使多样化, (n.) 多样化, (n.) 多样性
+|reversal| re + vers + al| [turn back]| (n.) 逆转, 反转
+|revert| re + vert| | (v.) 恢复, 归还
+|verse| ver + se| [需要规则地由一行转向下一行的文学体裁]| (n.) 诗, 韵文
+| |对比散文 prose| ver + se 表示 turn, pro + se 表示 go forward| 由此可知 verse 是形式比较规则的诗, 而 prose 则是比较随意的散文
+|versatile| vers + ateile(=ile)| [可以, 容易 turn to (各个领域的)]| (a.) 多才多艺的, 通用的, 万能的
+
 
 
 
