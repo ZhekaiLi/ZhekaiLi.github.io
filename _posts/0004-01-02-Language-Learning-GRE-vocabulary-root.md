@@ -15,6 +15,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 **-cess [to go, 走] (n. 更多)**
 ***-ceed (v. 更多)**
 ***-cede**
+
 |||||
 |---|---|---|---
 |abscess | ab + scess | [(cannot) go away (from skin)] | (n.) 脓肿
@@ -34,24 +35,52 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |proceeding | | | (n.) 进行、程序、诉讼
 |predecessor | pre + de + cess + or | [sb. go down before] | (n.) 前辈、前任
 |recession| re + cess + ion | [go back] | (n.) 衰退、凹处、不景气
+
+**chant- [sing, song]**
+enchant [(let sb) enter song] 施魔法、使入迷
+
+**cob- [heap, lump, rounded object]**
+cobble 鹅卵石
+
 # d
 **duc(t) [lead 引导]**
-abduct ---- ab + duc + t ---- [lead away] 诱拐、绑架
-produce ---- pro + duc + e ---- [lead forward] 引起、引发、造成、产生、生产
-seduce ---- se + duc + e ---- [sex lead] 引诱、诱奸
+
+|||||
+|---|---|---|---
+|abduct| ab + duc + t| [lead away]| 诱拐、绑架
+|produce| pro + duc + e| [lead forward]| 引起、引发、造成、产生、生产
+|seduce| se + duc + e| [sex lead]| 引诱、诱奸
 
 # e
 **-es [eat 吃]**
 ***-ed**
 这两个词根和单词 eat 同义（元音、辅音替换组合不改变含义）
-obese ---- ob + es + e ---- [over eat] 肥胖的
-edible ---- ed + ible ---- [able to eat] 可以吃的
+
+|||||
+|---|---|---|---
+|obese| ob + es + e| [over eat]| 肥胖的
+|edible| ed + ible| [able to eat]| 可以吃的
+
+# f
+**-fer [carry, bring, bear 带来, 忍受, 发生, 怀有]**
+***-fur**
+***-pher**
+|||||
+|---|---|---|---
+|circumference| circum + fer + ence| [carry around]| 周长、圆周
+|conifer| coni + fer | [(plants) that carry cones 带着球果的植物]| 针叶树
+|prefer| pre + fer | [bring before]| 更喜欢
+|preferable| | | 更好的
+|preferential| | | 优先的
+|vociferous| voci + fer + ous| [bring (too much) voice]| 喧哗的
+
 
 # g
 **-gress [to go, 走]**
 ***-gred**
 ***-greed**
 ***-grad**
+
 |||||
 |---|---|---|---
 |aggress | ag + gress | [强行 go] | (v.) 侵略
@@ -69,6 +98,7 @@ edible ---- ed + ible ---- [able to eat] 可以吃的
 **-van [comg, 过来]**
 ***-ven**
 ***-vent**
+
 |||||
 |---|---|---|---
 |advance | ad + van + (an)c + e | [come to before] | (n. v.) 发展、前进、增长
