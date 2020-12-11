@@ -47,6 +47,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 ***ant-**
 ***ante-**
 ***anti-**
+
 |||||
 |---|---|---|---|
 |ancestor | anc + cest + or | [sb. go in old time] | (n.) 祖先|

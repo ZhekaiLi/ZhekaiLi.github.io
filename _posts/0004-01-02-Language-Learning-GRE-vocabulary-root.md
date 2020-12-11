@@ -23,7 +23,6 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |accessory | access + ory | [(和主体) 走得很近] | (n.) 附件、配件、从犯
 |concede | con + cede | [go (back) together, 各退一步] | (v.) 退让、承认
 |concession | | | (n.) 让步、特权
-|exceed | | | (v.) 超过
 |incessant | in + cess + ant | [not (stop) going] | (a.) 不断的、连续的
 |intercede | inter + cede | [go between (2 people)] | (v.) 调节、调停
 |necessory | ne + cess + ory | [不能走开的] | (a.) 必需的、必然的
@@ -32,7 +31,6 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |precedent | precede + ent | [sth go before] | (n.) 先例; (a.) 先前的
 |process | pro + cess | [go forward] | (n. 重音在 p) 过程、进程；(v. 重音在 c) 处理、加工
 |processor | process + or | | (n.) 处理器
-|proceed | pro + ceed | [go forward] | (v.) 前进、继续
 |proceeding | | | (n.) 进行、程序、诉讼
 |predecessor | pre + de + cess + or | [sb. go down before] | (n.) 前辈、前任
 |recession| re + cess + ion | [go back] | (n.) 衰退、凹处、不景气
