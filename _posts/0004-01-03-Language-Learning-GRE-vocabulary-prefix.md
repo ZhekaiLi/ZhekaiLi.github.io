@@ -48,10 +48,10 @@ keywords: [Language-Learning, GRE, Vocabulary]
 ***ante-**
 ***anti-**
 |||||
-|---|---|---|---
-|ancestor | anc + cest + or | [sb. go in old time] | (n.) 祖先
-|antecedent | ante + ced(e) + ent | | (a.) 先前的；(n.) 祖先、先行词
-|anteparum | ante + par + um | |  (a.) 分娩前的
+|---|---|---|---|
+|ancestor | anc + cest + or | [sb. go in old time] | (n.) 祖先|
+|antecedent | ante + ced(e) + ent | | (a.) 先前的；(n.) 祖先、先行词|
+|anteparum | ante + par + um | |  (a.) 分娩前的|
 
 **aque- [water]**
 ***aqua-**
