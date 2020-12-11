@@ -19,6 +19,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 ***ag-**
 ***ar-**
 ***at-**
+
 |||||
 |---|---|---|---
 |accede | ac + cede | [go (in)to] | (v.) 加入、同意、就任
@@ -34,6 +35,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 
 **ab- [away]** 
+
 |||||
 |---|---|---|---
 |abdicate | ab + dic + ate | [say away] | 正式放弃（权力、责任）
@@ -71,6 +73,7 @@ cobble 鹅卵石
 **col- [together], [加强语气]**
 ***com-**
 ***con-** 
+
 |||||
 |---|---|---|---
 |conduct | con + duct | [lead together] | (v.) 引导、指导、指挥
