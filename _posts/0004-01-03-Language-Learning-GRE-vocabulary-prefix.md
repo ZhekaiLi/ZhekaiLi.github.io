@@ -12,13 +12,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 
 # a
-**a- [to], [加强语气]**
-***ac-**
-***ad-**
-***af-**
-***ag-**
-***ar-**
-***at-**
+**a- [to], [加强语气], [away]** <br> ***ac-, ad-, af-, ag-, ar-, at-**
 
 |||||
 |---|---|---|---
@@ -32,8 +26,8 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |aggress | ag + gress | [强行 go] | (v.) 侵略
 |arrogance | | [to (repeatedly) ask] | 傲慢、自大
 |attune | | [to (a same) tune] | 使协调、使和谐
+|avert| a + vert| [turn away (from bad)]| (v.) 避免, 防止, 转移
 |avowal | | [to vow] | 公开宣布、承认
-
 
 **ab- [away]** 
 
@@ -46,10 +40,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |abuse | ab + use | [(stay) away to (normal) use] | 滥用、虐待
 
 
-**anc- [old], [以前]**
-***ant-**
-***ante-**
-***anti-**
+**anc- [old], [以前]** <br> ***ant-** <br> ***ante, anti-**
 
 |||||
 |---|---|---|---|
@@ -57,9 +48,13 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |antecedent | ante + ced(e) + ent | | (a.) 先前的；(n.) 祖先、先行词|
 |anteparum | ante + par + um | |  (a.) 分娩前的|
 
-**aque- [water]**
-***aqua-**
-***aqui-**
+**anni- [year]** <br> ***annu-**
+
+|||||
+|---|---|---|---|
+|anniversary| anni + vers + ary| [turn a year, 时光流转了一年]| (n.) 周年纪念日
+
+**aque- [water]** <br> ***aqua-, aqui-**
 
 |||||
 |---|---|---|---|
@@ -73,9 +68,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 **caco [bad]**
 cacophony [bad sound] 刺耳的声音
 
-**col- [together], [加强语气]**
-***com-**
-***con-** 
+**col- [together], [加强语气]** <br> ***com-, con-** 
 
 |||||
 |---|---|---|---
@@ -85,9 +78,7 @@ cacophony [bad sound] 刺耳的声音
 |convoke | con + voke | [call together] | (v.) 召集开会
 
 
-**conter- [against], [counter 对立面]**
-***contra-**
-***contro-**
+**conter- [against], [counter 对立面]** <br> ***contra-, contro-**
 
 |||||
 |---|---|---|---
@@ -102,8 +93,7 @@ cacophony [bad sound] 刺耳的声音
 declaim [intensify shout] 慷慨陈词、朗诵
 denounce [announce down] 谴责、公然抨击
 
-**dis- [表否定], [away, apart, 偏离]**
-***di-**
+**dis- [表否定], [away, apart, 偏离]** <br> ***di-**
 
 |||||
 |---|---|---|---
@@ -133,15 +123,12 @@ equivocate [call equally (to conflicting points)] 说谎话、模棱两可地说
 |euphonious| eu + phon + ious| [good sound]| 悦耳的
 |euphoria| eu + phor + ia| [(sth.) that can bring well feeling]| (医)狂喜症, 狂喜
 
-**ex- [out]**
-***e-**
-***ef-**
-***-es**
+**ex- [out]** <br> ***e-** <br> ***ef-** <br> ***-es**
 
 |||||
 |---|---|---|---
-|educate | e + duc + ate | [lead out, 引导出来] | 教导、教育
-|enunciate | e + nunc + i + ate | [announce out] |公开宣布、阐明、发音
+|enunciate| e + nunc + i + ate| [announce out]| (v.) 公开宣布, 阐明, 发音
+|evert| e + vert| [turn out]| (v.) 使外翻
 
 # g
 
@@ -150,23 +137,19 @@ grandiloquent [big speak] 浮夸的
 
 # h
 
-**hier [sacred]**
-***hiero**
+**hier [sacred]** <br> ***hiero**
 hieroglyph [sacred carve] 象形文字
 
 # i
 
-**i- [not, 否定], [=in, enter], [=en, 使]**
-***il-**
-***im-**
-***in-**
-***ir-**
+**i- [not], [=in, enter], [=en, 使], [opposite]** <br> ***il-, im-, in-, ir-**
 
 |||||
 |---|---|---|---
 |intact | in + tact | [not be touched] | (a.) 完整的、保存良好的
+|invert| in + vert| [let ... turn to opposite]| (n.) 使转化, 使颠倒 
 |irrigate | ir + rag + ate | [let rain enter] | (v.) 灌溉、冲洗
-irritate [rit in (rit 表示摩擦)] 使烦躁、激怒
+|irritate | | [rit in (rit 表示摩擦)]| 使烦躁、激怒
 
 
 
@@ -182,20 +165,27 @@ introduce ---- intro + duc + e ---- [lead (sb) enter] 引入、引荐、介绍
 
 # l
 
-**lim- [threshold]**
-***limin-**
+**lim- [threshold]** <br> ***limin-**
 limp 软的、无力的；跛行
 
 **-lyze [loose]**
 
 |||||
 |---|---|---|---
-|paralyze| para + lyze| [loose sides (of body)]| 使瘫痪
+|paralyze| para + lyze| [loose sides (of body)]| (v.) 使瘫痪
 
 # m
 
+**mal- [bad]**
+
+|||||
+|---|---|---|---
+|maltreat| mal + treat| [treat badly]| (v.) 虐待, 滥用
+|malversation| mal + vers + ation| [turn bad]| (n.) (政府机关) 盗用, 贪污, 渎职
+
 **mut- [change]**
-mutiny 兵变、叛乱；mutineer 叛变者
+mutiny 兵变、叛乱
+mutineer 叛变者
 
 **mona- [alone]**
 monastery 寺院、修道院
@@ -254,11 +244,15 @@ provoke [call forth] 驱使、煽动、激怒
 
 |||||
 |---|---|---|---
-|revenue| re + ven + ue | [(money) come back] | (n.) 收入 = income 
-|revoke| |[call back]| 撤回、宣告无效
 |renounce| |[announce against]| 正式放弃、宣布决裂
-|reverberate| |[word back]| 回响、回荡
 |resonant| |[sound back]| 洪亮的、共鸣的
+|revenue| re + ven + ue | [(money) come back] | (n.) 收入 = income
+|reverberate| |[word back]| 回响、回荡 
+|reversal| re + vers + al| [turn back]| (n.) 逆转, 反转
+|revert| re + vert| | (v.) 恢复, 归还
+|revoke| |[call back]| 撤回、宣告无效
+|revolt| re + volt| [turn back]| (v.) (n.) 违抗, 反叛, 起义
+|revolve| re + vol + ve| [turn again]| (v.) 旋转, 使旋转, 反复出现
 
 
 # s
@@ -277,10 +271,7 @@ serpent 长蛇
 **sh- [shake]**
 shiver 颤抖、哆嗦、战栗、打碎
 
-**sub- [下、向下], [次于], [back]**
-***suc-**
-***sup-**
-***sus-**
+**sub- [下、向下], [次于], [back]** <br> ***suc-, sup-, sus-**
 
 |||||
 |---|---|---|---
@@ -313,12 +304,6 @@ valediction [say well] 告别、告别词
 **vin [同vim，精力]**
 vindicate [有力地说] 证明、证实、为...辩护、使无罪
 
-# w
-
-**wr- [wring]**
-wrinkle 起皱；皱纹
-wrest 用力拧、抢夺；歪曲
-wrestle 摔跤
 
 
 

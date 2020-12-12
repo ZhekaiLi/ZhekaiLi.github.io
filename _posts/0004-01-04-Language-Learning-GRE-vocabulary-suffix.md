@@ -42,6 +42,15 @@ precedence (n.) 优先 (相较于 precedent "先例、先前的" 中的 ent, enc
 |graduate | grad + u + ate | [(使) 出走] | (v.) 毕业；(n.) 毕业生
 |necessitate | ne + cess + itate (= ite + ate = ate) | [(使) 必要] | (v.) (使) 成为必需、迫使
 
+# b
+
+**-bra [表工具]**
+
+|||||
+|---|---|---|---
+|vertebra| vert + e + bra| [(控制身体) 扭转的工具]| (n.) 脊椎
+
+
 # g
 
 **-glyph [carve]**

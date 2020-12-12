@@ -12,9 +12,8 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 
 # c
-**-cess [to go, 走] (n. 更多)**
-***-ceed (v. 更多)**
-***-cede**
+
+**-cess [to go, 走] (n. 更多)** <br> ***-ceed (v. 更多)** <br> ***-cede**
 
 |||||
 |---|---|---|---
@@ -48,6 +47,7 @@ cobble 鹅卵石
 |conifer| coni + fer | [(plants) that carry cones 带着球果的植物]| 针叶树
 
 # d
+
 **duc(t) [lead 引导]**
 
 |||||
@@ -57,8 +57,8 @@ cobble 鹅卵石
 |seduce| se + duc + e| [sex lead]| 引诱、诱奸
 
 # e
-**-es [eat 吃]**
-***-ed**
+
+**-es [eat 吃]** <br> ***-ed**
 这两个词根和单词 eat 同义（元音、辅音替换组合不改变含义）
 
 |||||
@@ -67,10 +67,7 @@ cobble 鹅卵石
 |edible| ed + ible| [able to eat]| 可以吃的
 
 # f
-**-fer [carry, bring 带来, 发生, 怀有]**
-***-fur**
-***-pher**
-***-phor**
+**-fer [carry, bring 带来, 发生, 怀有]** <br> ***-fur** <br> ***-pher** <br> ***-phor**
 
 |||||
 |---|---|---|---
@@ -90,10 +87,7 @@ cobble 鹅卵石
 
 
 # g
-**-gress [to go, 走]**
-***-gred**
-***-greed**
-***-grad**
+**-gress [to go, 走]** <br> ***-gred** <br> ***-greed** <br> ***-grad**
 
 |||||
 |---|---|---|---
@@ -115,10 +109,16 @@ cobble 鹅卵石
 |---|---|---|---
 |phosphorus| phos + phor + us| [(sth.) that bring light]| 磷
 
+# t
+**tum- [turn, 转]**
+
+|||||
+|---|---|---|---
+|tumble| tum + ble| [turn (down)]| (v.) (使) 摔倒, 倒塌, 滚动
+| | tumbler| [经常要做出滚倒动作的人]| (n.) 不倒翁, 杂技演员
+
 # v
-**-van [comg, 过来]**
-***-ven**
-***-vent**
+**-van [comg, 过来]** <br> ***-ven** <br> ***-vent**
 
 |||||
 |---|---|---|---
@@ -140,28 +140,61 @@ cobble 鹅卵石
 |variability| vari + ability| [ability to vary]| (n.) 可变性, 变化性
 |variegate| vari + eg + ate| [act change (on colors)]| (v.) 使杂色, 使丰富多彩, 使多样化
 
-**-ver [to turn, 转]**
-***-vers**
-***-vert**
-***-vel**
-***-vol**
+**-ver [to turn, 转], [扭转]** <br> ***-vers, -vert** <br> ***-vel, -vol** <br> ***-wal, -wil** <br> ***-wer, -wor** <br> ***-wra, -wre, -wri, -wry**
 
 |||||
 |---|---|---|---
 |adverse = adversarial| ad + vers + e| [turn to (相反的立场)]| (v.) 相反的, 敌对的, 不利的
 | | adversary, adversity| | (n.) 对手, (n.) 逆境, 不幸
-|converse| con + vers + e| [强调 turn]| (a.) 相反的, 颠倒的 (v.) 交谈
+|anniversary| anni + vers + ary| [turn a year, 时光流转了一年]| (n.) 周年纪念日
+|avert| a + vert| [turn away (from bad)]| (v.) 避免, 防止, 转移
+| | aversion| [(sth./ sb. that need to be) averted]| (n.) 厌恶, 讨厌的人
+|circumvolve| circum + volv + e| | (v.) 旋转
 |controversy| contro + vers + y| [turn to counter]| (n.) 争端, 争议
+|converse| con + vers + e| [强调 turn]| (a.) 相反的, 颠倒的 (v.) 交谈
+|convoluted| con + vol + uted| [turn togehter]| (a.) 复杂的, 费解的, 旋绕的 
+|devolve| de + volv + e| [turn down]| (v.) 移交, 转让, 衰落
 |diverge| di(s) + ver + ge| [turn apart]| (v.) 分歧, 分叉, 偏离
-|divert| di(s) + vert| [turn to different ...]| (v.) 转移, 使转向
+|divert| di(s) + vert| [turn to opposite]| (v.) 转移, 使转向
 |diverse| | | (a.) 不同的, 多样的
 | | diversify, diversification, diversity | | (v.) 使多样化, (n.) 多样化, (n.) 多样性
+|evert| e + vert| [turn out]| (v.) 使外翻
+|extrovert| extro + vert| | (a.) 外向的; (n.) 外向的人
+|introvert| intro + vert| | (a.) 内向的; (n.) 内向的人
+|invert| in + vert| [let ... turn to opposite]| (n.) 使转化, 使颠倒 
+| | inversion| | (n.) 倒置, 反向
+|malversation| mal + vers + ation| [turn bad]| (n.) (政府机关) 盗用, 贪污, 渎职
+|pervert| per + vert| [turn throughly]| (v.) (彻底地) 颠覆, 歪曲, 使错乱
 |reversal| re + vers + al| [turn back]| (n.) 逆转, 反转
 |revert| re + vert| | (v.) 恢复, 归还
-|verse| ver + se| [需要规则地由一行转向下一行的文学体裁]| (n.) 诗, 韵文
+|revolt| re + volt| [turn back]| (v.) (n.) 违抗, 反叛, 起义
+|revolve| re + vol + ve| [turn again]| (v.) 旋转, 使旋转, 反复出现
+| | revolver| [可以旋转的物体]| (n.) 左轮手枪, 旋转器
+|subvert| sub + vert| [turn down]| (v.) 推翻, 颠覆
+| | subversive, subversion| | (a.) 破坏性的. (n.) 推翻
+|verge| ver + ge| [(close to) turn]| (n.) 边缘; (v.) 濒临
+|verse| ver + se| [规则地由一行转向另一行的文体]| (n.) 诗, 韵文
 | |对比散文 prose| ver + se 表示 turn, pro + se 表示 go forward| 由此可知 verse 是形式比较规则的诗, 而 prose 则是比较随意的散文
 |versatile| vers + ateile(=ile)| [可以, 容易 turn to (各个领域的)]| (a.) 多才多艺的, 通用的, 万能的
-
+|vertebra| vert + e + bra| [(控制身体) 扭转的工具]| (n.) 脊椎
+|vertex| vert + ex| | (n.) 顶点, 转折点
+|vertigo| vert + i + go| [转着走]| (n.) 眩晕
+|volume| vol + ume| [由 vol 可知其本义为 "卷, 册"]| (n.) 卷, 册, 体积, 大量
+| | voluminous| | (a.) 多卷的, 长篇的, 大量的
+|vortex| vort + ex| [vort 想 water, water turn]| (n.) 涡流, 漩涡, 旋风
+|wallow| | | (v.) 打滚, 沉迷
+|waltz| | [旋转舞]| (n.) 华尔兹
+|wrath| | [被曲解]| (n.) 愤怒, 激怒
+|wreath(e)| wre + ath| [(sth.) that wring (around head)]| (n.) 花冠, 圈状物
+|wrench| | | (n.) 歪曲, 扳手
+|wrest| | | (v.) 用力拧, 抢夺, 歪曲
+| | wrestle| | (n.) (v.) 摔跤
+|wriggle| | | (v.) 蠕动, 蜿蜒
+|wring| | | (v.) 绞, 扭
+|wrinkle| | | (v.) 起皱, 皱纹
+|wrist| | | (n.) 手腕
+|writhe| | | (v.) 翻滚, 蠕动, 扭曲
+|wry| | | (a.) 歪斜的, 扭曲的; (n.) 扭曲
 
 
 
