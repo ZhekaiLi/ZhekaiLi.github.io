@@ -1,3 +1,12 @@
+---
+layout: post
+title: Math415 Midterm-3 Review
+categories: Math415
+description: Personal Notes
+keywords: [Math415, Calculas, Matrix]
+---
+**ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
+
 Discussions sessions 7, problem 2
 Discussions sessions 8, problem 4 
 Discussions sessions 9, problems  1-3  
@@ -131,6 +140,12 @@ $$V=\begin{bmatrix}
 
 ## HW8.3, 5
 这之后的 solution bb 上还没给, 过几天再整
+
+## HW9.3, 4, 6
+
+## HW10.2, 6
+
+## HW11.1
 
 
 

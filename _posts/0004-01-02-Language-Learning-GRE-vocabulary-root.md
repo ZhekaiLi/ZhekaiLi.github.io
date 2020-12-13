@@ -13,7 +13,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 # c
 
-**-cess [to go, 走] (n. 更多)** <br> ***-ceed (v. 更多)** <br> ***-cede**
+**-cess [to go, 走] (做为 n. 更多)** <br> **^-ceed (做为 v. 更多)** <br> **^-cede**
 
 |||||
 |---|---|---|---
@@ -58,7 +58,7 @@ cobble 鹅卵石
 
 # e
 
-**-es [eat 吃]** <br> ***-ed**
+**-es [eat 吃]** <br> **^-ed**
 这两个词根和单词 eat 同义（元音、辅音替换组合不改变含义）
 
 |||||
@@ -67,7 +67,7 @@ cobble 鹅卵石
 |edible| ed + ible| [able to eat]| 可以吃的
 
 # f
-**-fer [carry, bring 带来, 发生, 怀有]** <br> ***-fur** <br> ***-pher** <br> ***-phor**
+**-fer [carry, bring 带来, 发生, 怀有]** <br> **^-fur** <br> **^-pher** <br> **^-phor**
 
 |||||
 |---|---|---|---
@@ -87,7 +87,7 @@ cobble 鹅卵石
 
 
 # g
-**-gress [to go, 走]** <br> ***-gred** <br> ***-greed** <br> ***-grad**
+**-gress [to go, 走]** <br> **^-gred** <br> **^-greed** <br> **^-grad**
 
 |||||
 |---|---|---|---
@@ -118,7 +118,7 @@ cobble 鹅卵石
 | | tumbler| [经常要做出滚倒动作的人]| (n.) 不倒翁, 杂技演员
 
 # v
-**-van [comg, 过来]** <br> ***-ven** <br> ***-vent**
+**-van [comg, 过来]** <br> **^-ven** <br> **^-vent**
 
 |||||
 |---|---|---|---
@@ -140,7 +140,7 @@ cobble 鹅卵石
 |variability| vari + ability| [ability to vary]| (n.) 可变性, 变化性
 |variegate| vari + eg + ate| [act change (on colors)]| (v.) 使杂色, 使丰富多彩, 使多样化
 
-**-ver [to turn, 转], [扭转]** <br> ***-vers, -vert** <br> ***-vel, -vol** <br> ***-wal, -wil** <br> ***-wer, -wor** <br> ***-wra, -wre, -wri, -wry**
+**-ver [to turn, 转], [扭转]** <br> **^-vers, -vert** <br> **^-vel, -vol** <br> **^-wal, -wil** <br> **^-wer, -wor** <br> **^-wra, -wre, -wri, -wry**
 
 |||||
 |---|---|---|---
