@@ -6,6 +6,36 @@ description:
 keywords: Python, Numpy
 ---
 
+# Collections
+
+## 1.1 collections.defaultdict
+这是一个比普通 `dict()` 更好的数据结构
+使用如下代码声明变量
+```py
+from collections import defaultdict
+
+D = defaultdict(p1)
+```
+参数 `p1` 有比较多的选项，常见的有
+1. `int, dict, set, str, list` 使用这些参数时, 将规定 defaultdict 中 value 的数值类型, 不能混淆. 当 ‘key1’ 不存在时, `D[‘key1’]` 将会返回对应的空值 (int: 0, dict: {}, list: ()). 例如
+```py
+Dd = defaultdict(dict)
+# Dd['key1'] = {'key1.1': 'value1.1'} 用这个也可以
+Dd['key1']['key1.1'] = 'value1.1'
+```
+defaultdict(dict, {'key1': {'key1.1': 'value1.1'}})
+```py
+Dl = defaultdict(list)
+Dl['l1'] = [1, 2, 3]
+```
+defaultdict(list, {'l1': [1, 2, 3]})
+```py
+Dl['l2']
+```
+()
+
+2. `lambda:  None` 该参数表示当 ‘key1’ 不存在时, 使用 `D[‘key1’]` 什么都不会返回 (可以把 None 更换为任意参数, 例如 `lambda: 0` 表示返回数值 0)
+
 # Folium
 **Reference**
 1.[知乎: Python绘制地图神器folium入门](https://zhuanlan.zhihu.com/p/112324234)
@@ -30,6 +60,8 @@ folium.Map(location=None,
 
 ## 2 Note the map 在地图上做标记
 ### 2.1 folium.CircleMaker 画圆
+
+<font color=red>以下代码可能存在一些问题: 本人在使用过程中发现在 for 循环中使用以下添加代码可能导致只能画出一个标记点, 尚未查明错误原因, 但将 `popup=, fill=, fill_color` 这三行删去之后可以正常运行</font>
 ```py
 folium.CircleMaker(location=None,
     radius=5, # 标记圆圈的半径
@@ -41,11 +73,9 @@ folium.CircleMaker(location=None,
     fill_color='#1787FE'   
 ).add_to(m)
 ```
-注意! 不要忘了在函数结尾括号外添加 `.add_to(m)`, 否则将无法显示标记, 效果如下
+效果如下 (注意! 不要忘了在函数结尾括号外添加 `.add_to(m)`, 否则将无法显示标记)
 ![pic3](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-07_18-49-25.jpg)
 
-
----
 
 
 # Matplotlib

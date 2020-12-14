@@ -21,21 +21,21 @@ keywords: [Language-Learning, GRE, Vocabulary]
 # a
 
 **-able [a. 能够...的], [a. 容易...的], [n. (极少)]**
-***-ible**
-***-ile**
+**^-ible**
+**^-ile**
 
 **-acious [much]**
 loquacious [speak much] 话多的
 
 **-ance [n. 表示名词]**
-***-ence**
-***-ancy**
+**^-ence**
+**^-ancy**
 ***-ency**
 precedence (n.) 优先 (相较于 precedent "先例、先前的" 中的 ent, ence 此时没有含义，只表达词性)
 
 **-ate [v. (使)], [a.], [n. 人、物 (极少出现)] (v.)**
-***-ite (a.)**
-***-ute (v.)**
+**^-ite (a.)**
+**^-ute (v.)**
 
 |||||
 |---|---|---|---
@@ -58,25 +58,40 @@ hieroglyph [sacred carve] 象形文字
 
 # i
 
+**ics- [a. 表示学科, 学问, 方法], [无意, 表示关于...]** <br> **^-ic**
+
+|||||
+|---|---|---|---
+|aerobic| aero + b(i) + ics| [method about biology and air]| (n.) 有氧运动法
+|demographics| demo + graph + ics| [about people recording]| (n.) 人口统计资料
+|genetics| gene + t + ics| [subject about gene]| (n.) 遗传学
+|gymnastics| gymnast + ics| [about gymnast]| (n.) 体操, 体育
+|logistics| logis + t + ics| [about providing lodges]| (n.) 后勤, 物流, 后勤学
+
 **-ion [n.]**
-procession ---- pro + cess + ion ---- [(group of poeple) go forward] 队伍、行列、一排
+
+|||||
+|---|---|---|---
+|procession| pro + cess + ion| [(group of poeple) go forward]| (n.) 队伍, 行列, 一排
 
 **-ity [n. 表示状态/ 能力]**
 productivity ---- productiv + ity ---- 生产力
 creativity 创造力
 
-**-ive [a. 大量, a lot]、[n. 表示人/ 物]**
-***-iv**
-expensive ---- expens + ive ---- [expense a lot] 贵重的
-creative ---- creat + ive ---- [create a lot] 创造性的
-relative ---- relat + ive ---- 做形容词: [relate a lot] 相对的、相关的；做名词: [related people/ thing] 亲戚、相关物
+**-ive [a. 大量, a lot], [n. 表示人/ 物]**
+**^-iv**
+
+|||||
+|---|---|---|---
+|expensive| expens + ive| [expense a lot]| (a.) 贵重的
+|creative| creat + ive| [create a lot]| (a.) 创造性的
+|relative| relat + ive| (a.) [relate a lot]. <br> (n.) [related people/ thing]| (a.) 相对的, 相关的. <br> (n.) 亲戚, 相关物.
+|secretive| secret + ive| [a lot of secrets]| (a.) 深藏不露的, 讳莫如深的
 
 # o
 
 **-or [n. 表人，表物 (常译为"机"、"器")], [a.], [n. (极少出现)]**
-***-ar**
-***-er**
-***-ur**
+**^-ar, -er, -ur**
 processor ---- process + or ---- 处理器
 conductor ---- con + duct + or ---- [the people or object that lead sth together] 指挥、列车员；导体
 

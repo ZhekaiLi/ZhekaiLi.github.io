@@ -7,17 +7,9 @@ keywords: [Math415, Calculas, Matrix]
 ---
 **ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
-Discussions sessions 7, problem 2
-Discussions sessions 8, problem 4 
-Discussions sessions 9, problems  1-3  
-Discussions sessions 10 problem 1
-Discussions sessions 10, problem 2
-Discussions sessions 8, problem 3
+Discussions sessions 7, problem 2 <br> Discussions sessions 8, problem 4 <br> Discussions sessions 9, problems  1-3 <br> Discussions sessions 10 problem 1 <br> Discussions sessions 10, problem 2 <br> Discussions sessions 8, problem 3 <br> 
 
-HW8, problems 3,5
-HW9, problem 3,4,6
-HW10 problems 2, 6
-HW11, problem 1
+HW8, problems 3,5 <br> HW9, problem 3,4,6 <br> HW10 problems 2, 6 <br> HW11, problem 1 <br> 
 
 ## D7.2
 ![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_15-18-46.jpg)

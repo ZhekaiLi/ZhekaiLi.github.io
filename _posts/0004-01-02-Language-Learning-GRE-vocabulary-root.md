@@ -13,6 +13,27 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 # c
 
+**-cern [separate], [distinguish]** <br> **^-cert** <br> **^-crim, -cris, crit** <br> **^-cree**
+
+|||||
+|---|---|---|---
+|concert| con + cert| [separate (music pieces) togethor]| (n.) 音乐会, 和谐一致; (v.) 协调, 使协调
+| | concerted <br> concerto <br> disconcert| | (a.) 协调的. <br> (n.) 协奏曲. <br> (v.) 使不安, 使困惑.
+|crisis| cris + is| [time to separate]| (n.) 危机, 决定性时刻
+|critic| crit + ic| | (n.) 批评家, 评论家
+| | critical| | (a.) 批评的 (from critic), 危机的 (from crisis)  
+|critique| | | (n.) 批评, 评论文章
+|criteria| | [用于区分事物的(标准)]| (n.) 标准, 条件
+|decree| de + cree| [自上而下的区分]| (n.) 法令, 判决; (v.) 命令, 颁布
+|discern| dis + cern| [distinguish different ...]| (v.) 觉察出, 识别, 辨别
+| | discerning <br> discernible| | (a.) 有辨识能力的. <br> (a.) 可辨别的. 
+|discreet| dis + creet| [区分不同事物时, 要(谨慎)]| (a.) 谨慎的, 小心的
+|discriminate| discrim (=discern) + inate| | (v.) 区别, 辨别, 歧视
+| | discriminant <br> discriminating <br> discriminatory| | (n.) 可辨别的因素, 判别式. <br> (a.) =discerning. <br> (a.) 区别对待的, 歧视的.
+|hypocrisy| hypo + cris + y| [under (the level to) distinguish, 没有做出s
+
+
+
 **-cess [to go, 走] (做为 n. 更多)** <br> **^-ceed (做为 v. 更多)** <br> **^-cede**
 
 |||||
@@ -47,6 +68,13 @@ cobble 鹅卵石
 |conifer| coni + fer | [(plants) that carry cones 带着球果的植物]| 针叶树
 
 # d
+
+**demo- [people]**
+
+|||||
+|---|---|---|---
+|demographics| demo + graph + ics| [about people recording]| (n.) 人口统计资料
+
 
 **duc(t) [lead 引导]**
 
@@ -87,6 +115,13 @@ cobble 鹅卵石
 
 
 # g
+
+**graph [record]** <br>
+
+|||||
+|---|---|---|---
+|demographics| demo + graph + ics| [about people recording]| (n.) 人口统计资料
+
 **-gress [to go, 走]** <br> **^-gred** <br> **^-greed** <br> **^-grad**
 
 |||||
@@ -103,13 +138,15 @@ cobble 鹅卵石
 |transgress | trans + gress | [走过 (界限)] | (v.) 越界、违反、犯罪
 
 # p
+
 **phos- [light]**
 
 |||||
 |---|---|---|---
-|phosphorus| phos + phor + us| [(sth.) that bring light]| 磷
+|phosphorus| phos + phor + us| [(sth.) that bring light]| (n.) 磷
 
 # t
+
 **tum- [turn, 转]**
 
 |||||
@@ -118,6 +155,7 @@ cobble 鹅卵石
 | | tumbler| [经常要做出滚倒动作的人]| (n.) 不倒翁, 杂技演员
 
 # v
+
 **-van [comg, 过来]** <br> **^-ven** <br> **^-vent**
 
 |||||
@@ -144,7 +182,7 @@ cobble 鹅卵石
 
 |||||
 |---|---|---|---
-|adverse = adversarial| ad + vers + e| [turn to (相反的立场)]| (v.) 相反的, 敌对的, 不利的
+|adverse = adversarial| ad + vers + e| [turn to (相反的立场)]| (a.) 相反的, 敌对的, 不利的
 | | adversary, adversity| | (n.) 对手, (n.) 逆境, 不幸
 |anniversary| anni + vers + ary| [turn a year, 时光流转了一年]| (n.) 周年纪念日
 |avert| a + vert| [turn away (from bad)]| (v.) 避免, 防止, 转移

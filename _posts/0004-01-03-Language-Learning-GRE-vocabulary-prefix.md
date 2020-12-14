@@ -12,7 +12,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 
 # a
-**a- [to], [加强语气], [away]** <br> ***ac-, ad-, af-, ag-, ar-, at-**
+**a- [to], [加强语气], [away]** <br> **^ac-, ad-, af-, ag-, ar-, at-**
 
 |||||
 |---|---|---|---
@@ -40,7 +40,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |abuse | ab + use | [(stay) away to (normal) use] | 滥用、虐待
 
 
-**anc- [old], [以前]** <br> ***ant-** <br> ***ante, anti-**
+**anc- [old], [以前]** <br> **^ant-** <br> **^ante-, anti-**
 
 |||||
 |---|---|---|---|
@@ -48,7 +48,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |antecedent | ante + ced(e) + ent | | (a.) 先前的；(n.) 祖先、先行词|
 |anteparum | ante + par + um | |  (a.) 分娩前的|
 
-**anni- [year]** <br> ***annu-**
+**anni- [year]** <br> **^annu-**
 
 |||||
 |---|---|---|---|
@@ -68,7 +68,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 **caco [bad]**
 cacophony [bad sound] 刺耳的声音
 
-**col- [together], [加强语气]** <br> ***com-, con-** 
+**col- [together], [加强语气]** <br> **^com-, con-** 
 
 |||||
 |---|---|---|---
@@ -78,7 +78,7 @@ cacophony [bad sound] 刺耳的声音
 |convoke | con + voke | [call together] | (v.) 召集开会
 
 
-**conter- [against], [counter 对立面]** <br> ***contra-, contro-**
+**conter- [against], [counter 对立面]** <br> **^contra-, contro-**
 
 |||||
 |---|---|---|---
@@ -93,14 +93,15 @@ cacophony [bad sound] 刺耳的声音
 declaim [intensify shout] 慷慨陈词、朗诵
 denounce [announce down] 谴责、公然抨击
 
-**dis- [表否定], [away, apart, 偏离]** <br> ***di-**
+**dis- [not], [different], [away, apart, 偏离]** <br> **^di-**
 
 |||||
 |---|---|---|---
-|digress | di(s) + gress | [go apart] | (v.) 离题, 走向岔道
-|diverge| di(s) + ver + ge| [turn apart]| (v.) 分歧, 分叉, 偏离
-|divert| di(s) + vert| [turn to different ...]| (v.) 转移, 使转向
-|dissonance| | [apart (in) sound]| (音调) 不和谐, 刺耳；不一致, 分歧
+|digress | di + gress | [go apart] | (v.) 离题, 走向岔道
+|diverge| di + ver + ge| [turn apart]| (v.) 分歧, 分叉, 偏离
+|divert| di + vert| [turn to different ...]| (v.) 转移, 使转向
+|discern| dis + cern| [distinguish different ...]| (v.) 觉察出, 识别, 辨别
+|dissonance| | [apart (in) sound]| (n.) (音调) 不和谐, 刺耳；不一致, 分歧
 
 
 
@@ -123,7 +124,7 @@ equivocate [call equally (to conflicting points)] 说谎话、模棱两可地说
 |euphonious| eu + phon + ious| [good sound]| 悦耳的
 |euphoria| eu + phor + ia| [(sth.) that can bring well feeling]| (医)狂喜症, 狂喜
 
-**ex- [out]** <br> ***e-** <br> ***ef-** <br> ***-es**
+**ex- [out]** <br> **^e-** <br> **^ef-** <br> **^-es**
 
 |||||
 |---|---|---|---
@@ -137,12 +138,21 @@ grandiloquent [big speak] 浮夸的
 
 # h
 
-**hier [sacred]** <br> ***hiero**
+**hier [sacred]** <br> **^hiero-**
 hieroglyph [sacred carve] 象形文字
+
+**hypo- [under]**
+
+|||||
+|---|---|---|---
+|hypocrisy| hypo + cris + y| [under (the level to) distinguish, 没有做出s什么区别, 只是抄袭]| (n.) 虚伪, 伪善
+|hypocrite| hypo + crit + e| | (n.) 伪君子
+| | hypocritical| | (a.) 虚伪的, 伪善的
+
 
 # i
 
-**i- [not], [=in, enter], [=en, 使], [opposite]** <br> ***il-, im-, in-, ir-**
+**i- [not], [=in, enter], [=en, 使], [opposite]** <br> **^il-, im-, in-, ir-**
 
 |||||
 |---|---|---|---
@@ -165,7 +175,7 @@ introduce ---- intro + duc + e ---- [lead (sb) enter] 引入、引荐、介绍
 
 # l
 
-**lim- [threshold]** <br> ***limin-**
+**lim- [threshold]** <br> **^limin-**
 limp 软的、无力的；跛行
 
 **-lyze [loose]**
@@ -182,6 +192,13 @@ limp 软的、无力的；跛行
 |---|---|---|---
 |maltreat| mal + treat| [treat badly]| (v.) 虐待, 滥用
 |malversation| mal + vers + ation| [turn bad]| (n.) (政府机关) 盗用, 贪污, 渎职
+
+**meta- [higher]**
+
+|||||
+|---|---|---|---
+|metaphysics| meta + physics| [higher than physics]| (n.) 玄学, 形而上学
+
 
 **mut- [change]**
 mutiny 兵变、叛乱
@@ -225,7 +242,7 @@ obloquy [speak against] 谩骂、诽谤、恶名、耻辱
 |periphery| peri + pher + y| [carry around]| 外围, 边缘, 圆周
 |perpheral| | | 周围的, 边缘的
 
-**prim [first]**
+**prim- [first]**
 primal 最初的、主要的
 primitive 原始的
 primordial 原始的、最初的
@@ -271,7 +288,7 @@ serpent 长蛇
 **sh- [shake]**
 shiver 颤抖、哆嗦、战栗、打碎
 
-**sub- [下、向下], [次于], [back]** <br> ***suc-, sup-, sus-**
+**sub- [下、向下], [次于], [back]** <br> **^suc-, sup-, sus-**
 
 |||||
 |---|---|---|---
