@@ -32,6 +32,9 @@ i & 2
 > 1. 对于实数向量 $x,y\in\mathbb{R}^n$
 > - dot product: $x\cdot y=x^Ty=\sum x_iy_i$
 > - norm: $||x||=\sqrt{x\cdot x}=\sqrt{\sum x_i^2}$
+> 2. 对于复数向量 $x,y\in\mathbb{C}^n$
+> - dot product: $x\cdot y=x^T\overline{y}=\sum x_i\overline{y_i}$ 
+> - norm: $||x||=\sqrt{x\cdot \overline{x}}$
 
 > ##### Def 3: Symmetric matrices
 > 对称矩阵 $A\in\mathbb{R}^{n\times n}$ 具有如下性质
