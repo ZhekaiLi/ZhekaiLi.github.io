@@ -51,13 +51,14 @@ A symmetric matrix $A\in\mathbb{C}^{n\times n}$ is said to be positive definite 
 $x^TAx$ is interpreted as "energy of $x$", 正定就意味着对于任意 $x\in\mathbb{R}^n,x\neq 0$, 都有 $x^TAx > 0$ 
 
 **Theorem 1**: Def 1 与 Def 2 可以相互转化
-- Proof (1) Def 1 $\to$ Def 2
-- Proof (2) Def 2 $\to$ Def 1
 
 **等效性质** (以下性质可于正定互推)
 - All pivots are positive
-- Upper left deteminants are positive
+- All the upper left deteminants are positive
 - $A=B^TB, B\in\mathbb{R}^{m\times x}$ with independent columns
+
+**其他性质**
+- 正定一定满秩, 反推不成立
 
 ## 18.2
 > **Def 1: Negative definite**

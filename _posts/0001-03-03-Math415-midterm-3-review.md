@@ -11,7 +11,9 @@ Discussions sessions 7, problem 2 <br> Discussions sessions 8, problem 4 <br> Di
 
 HW8, problems 3,5 <br> HW9, problem 3,4,6 <br> HW10 problems 2, 6 <br> HW11, problem 1 <br> 
 
-## D7.2
+## D7
+
+> **D7.2**
 ![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_15-18-46.jpg)
 - (a). $$\cos(A)x=x-\frac{1}{2!}A^2x+\frac{1}{4!}A^4x-...=x(1-\frac{1}{2!}\lambda^2x+\frac{1}{4!}\lambda^4x...)=\cos(\lambda)x$$
 So $x$ is the eigenvector of $\cos(A)$ and eigenvalue is $\cos(\lambda)$
@@ -35,6 +37,7 @@ $$\cos(A)=\begin{bmatrix}
 3. Add up the solution $u(t)=c_1\cos(\lambda_1t)x_1+c_2\cos(\lambda_2t)x_2+c_3\cos(\lambda_3t)x_3$. 
 
 **示例: 定义如下, solve $u(t)$**
+
 $$A=\begin{bmatrix}
 \pi & \pi\\
 \pi & \pi
@@ -71,19 +74,21 @@ $$u(t)=c_1\cos(\lambda_1t)x_1+c_2\cos(\lambda_2t)x_2=3\cos(2\pi t)\begin{bmatrix
 -1
 \end{bmatrix}$$
 
-## D8.4
+## D8
+
+> **D8.4**
 同 [Midterm 2 Review D7.2](https://zhekaili.github.io/0001/03/02/Math415-midterm-2-review/#d72)
 
-## D9.1, 2, 3
-这三题讲的都是奇异值分解 SVD, 选一道比较复杂的为例
-> Find the singular values of 
+## D9
+D9.1, 2, 3 这三题讲的都是奇异值分解 SVD, 选一道比较复杂的为例
+> **D9.3**
+Find the singular values of 
 $$A=\begin{bmatrix}
 0 & 1 & 1\\
 \sqrt2 & 2 & 0\\
 0 & 1 & 1
 \end{bmatrix}$$ and find the SDV decomposition of $A$
 
-**Solution:**
 1. Compute $$AA^T=\begin{bmatrix}
 2 & 2 & 2\\
 2 & 6 & 2\\
@@ -99,16 +104,17 @@ $$\Sigma=\begin{bmatrix}
 4. Similarly, use $A^TA$ to find $V$. 还可以使用如下方式来计算 $v_i$
 $$v_i=\frac{1}{\sigma_i}A^Tu_i$$
 
-## D10.1
+## D10
+
+> **D10.1**
 重复上题内容, 略
 
-## D10.2
+> **D10.2**
 > Find the pseudoinverse of
 $$A=\begin{bmatrix}
 -1 & 2 & 2
 \end{bmatrix}$$
 
-**Solution:**
 1. Compute $AA^T=9$, then $\lambda=9,\sigma=3$, and ($\Sigma, A$ 的 shape 相同)
 $$U=[1], \Sigma=\begin{bmatrix}
 3 & 0 & 0
@@ -136,17 +142,43 @@ $$\Sigma^\dagger=\begin{bmatrix}
 \frac{2}{9}
 \end{bmatrix}$$
 
-## D8.3
-这道题比较偏而且内容不多, 个人感觉应该不太会考
+## D8
+
+> **D8.3**
 ![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_22-17-01.jpg)
+
+这道题比较偏而且内容不多, 个人感觉应该不太会考
 
 ## HW8.3, 5
 
-****
 
-## HW9.3, 4, 6
+
+## HW9
+
+> **HW9.3**
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-15_14-23-30.jpg)
+
+> **HW9.4**
+Whether positive definite or not
+$$\frac{1}{9}\begin{bmatrix}
+-2 & 2 & 8\\
+2 & 7 & 10\\
+8 & 10 & 4
+\end{bmatrix}$$
+
+由 [Math415 Week-10 L18.1](https://zhekaili.github.io/0001/04/10/Math415-slides-week-10/#181-%E6%AD%A3%E5%AE%9A%E7%9F%A9%E9%98%B5) 中判断正定的各种方法可得, 由于该函数第一个 upper left determinant 就小于 0 了, 因此显然不正定 
+
+> **HW9.6**
+Suppose $C$ is positive definite and $A$ has independent columns. Apply the energy test to $x^TA^TCAx$ to show that $S=A^TCA$ is positive definite.
+
+$A$ is positive definite $\iff$ $x^TAx>0$, when $x\neq0$, 然后根据 $C$ 和 $A$ 的性质来做
 
 ## HW10.2, 6
+
+> 
+
+
+HW10.6 略 (这道题题目本身就有问题, 应该是要给出 $U,\Sigma,V$ 这些数据来做计算的
 
 ## HW11.1
 
