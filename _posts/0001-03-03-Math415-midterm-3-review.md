@@ -125,13 +125,24 @@ $$V=\begin{bmatrix}
 \frac{2}{3} & -\frac{1}{3} & \frac{2}{3}\\
 \frac{2}{3} & \frac{2}{3} & -\frac{1}{3}
 \end{bmatrix}$$
+4. 由于 $A^\dagger=V\Sigma^\dagger U^T$, 还差一个 $\Sigma^\dagger$
+$$\Sigma^\dagger=\begin{bmatrix}
+\frac{1}{3}\\
+0\\
+0
+\end{bmatrix}\to A^\dagger=\begin{bmatrix}
+-\frac{1}{9}\\
+\frac{2}{9}\\
+\frac{2}{9}
+\end{bmatrix}$$
 
 ## D8.3
 这道题比较偏而且内容不多, 个人感觉应该不太会考
 ![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_22-17-01.jpg)
 
 ## HW8.3, 5
-这之后的 solution bb 上还没给, 过几天再整
+
+****
 
 ## HW9.3, 4, 6
 

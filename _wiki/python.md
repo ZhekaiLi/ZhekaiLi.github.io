@@ -16,8 +16,10 @@ from collections import defaultdict
 
 D = defaultdict(p1)
 ```
-参数 `p1` 有比较多的选项，常见的有
-1. `int, dict, set, str, list` 使用这些参数时, 将规定 defaultdict 中 value 的数值类型, 不能混淆. 当 ‘key1’ 不存在时, `D[‘key1’]` 将会返回对应的空值 (int: 0, dict: {}, list: ()). 例如
+### 1.1.1 参数 `p1` 
+`p1` 有比较多的选项，常见的有
+#### `int, dict, set, str, list` 
+使用这些参数时, 将规定 defaultdict 中 value 的**默认**数值类型, 也就是说, 当 ‘key1’ 不存在时, `D[‘key1’]` 将会返回对应的空值 (int: 0, dict: {}, list: ()). 例如
 ```py
 Dd = defaultdict(dict)
 # Dd['key1'] = {'key1.1': 'value1.1'} 用这个也可以
@@ -30,11 +32,30 @@ Dl['l1'] = [1, 2, 3]
 ```
 defaultdict(list, {'l1': [1, 2, 3]})
 ```py
+Dd['key2']
+```
+{}
+```py
 Dl['l2']
 ```
-()
+() 
 
-2. `lambda:  None` 该参数表示当 ‘key1’ 不存在时, 使用 `D[‘key1’]` 什么都不会返回 (可以把 None 更换为任意参数, 例如 `lambda: 0` 表示返回数值 0)
+需要注意的是, 虽然这些参数**不是强制的规定**, 譬如完全可以在 `defaultdic(str)` 中储存 `int`, 但是**不推荐这样做**
+
+#### `lambda:  None` 
+
+该参数表示当 ‘key1’ 不存在时, 使用 `D[‘key1’]` 什么都不会返回 (可以把 None 更换为任意参数, 例如 `lambda: 0` 表示返回数值 0)
+```py
+D = defaultdict(lambda: None)
+D['key1']
+```
+啥都不返回, 此时 `D = defaultdict(<function __main__.<lambda>>, {'key1': None})`
+
+```py
+D = defaultdict(lambda: 0)
+D['key1']
+```
+0 (参数 `lambda: 0` 的效果近似于 `int`)
 
 # Folium
 **Reference**

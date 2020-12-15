@@ -15,8 +15,8 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 |||||
 |---|---|---|---
-|necessitate | ne + cess + itate (= ite + ate = ate) | [(使) 必要] | (v.) (使) 成为必需、迫使
-|preventative = preventive | prevent + ative (= ate + ive = ive) | | (a.) 预防性的、预备的
+|necessitate | ne + cess + itate (= ite + ate = ate) | [(使) 必要] | (v.) (使) 成为必需, 迫使
+|preventative = preventive | prevent + ative (= ate + ive = ive) | | (a.) 预防性的, 预备的
 
 # a
 
@@ -31,16 +31,17 @@ loquacious [speak much] 话多的
 **^-ence**
 **^-ancy**
 ***-ency**
-precedence (n.) 优先 (相较于 precedent "先例、先前的" 中的 ent, ence 此时没有含义，只表达词性)
+precedence (n.) 优先 (相较于 precedent "先例, 先前的" 中的 ent, ence 此时没有含义，只表达词性)
 
-**-ate [v. (使)], [a.], [n. 人、物 (极少出现)] (v.)**
+**-ate [v. (使)], [a.], [n. 人, 物 (极少出现)] (v.)**
 **^-ite (a.)**
 **^-ute (v.)**
 
 |||||
 |---|---|---|---
 |graduate | grad + u + ate | [(使) 出走] | (v.) 毕业；(n.) 毕业生
-|necessitate | ne + cess + itate (= ite + ate = ate) | [(使) 必要] | (v.) (使) 成为必需、迫使
+|necessitate | ne + cess + itate (= ite + ate = ate) | [(使) 必要] | (v.) (使) 成为必需, 迫使
+|variegate| vari + eg + ate| [使发生 (颜色上) 的变化]| (v.) 使杂色, 使丰富多彩, 使多样化
 
 # b
 
@@ -58,6 +59,38 @@ hieroglyph [sacred carve] 象形文字
 
 # i
 
+**-ian [n. 表示人或动物], [a. 关于...的]**
+
+|||||
+|---|---|---|---
+|agrarian| agra + r + ian| [about land and soil]| (a.) 土地的, 耕地的
+|amphibian| amphi + bi + (i)an| [biology lives in both water and land]| (n.) 两栖动物; (a.) 两栖类的
+|authoritarian| | | (a.) 独裁主义的; (n.) 独裁主义者
+|avian| av + ian| [about bird]| (a.) 鸟的, 鸟类的
+|civilian| civil + ian| | (a.) 民用的; (n.) 平民百姓
+|clinician| clinic + ian| [在诊所工作的人]| (n.) 临床医生
+|comedian| comed(y) + ian| | (n.) 喜剧演员
+|custodian| custod(y) + ian| [poeple about custody]| (n.) 管理人, 监护人
+|dietitian| diet + itian| | (n.) 营养学家
+|egalitarian| egalit(y) + arian | | (a.) 平等主义的; (n.) 平等主义, 平等主义者
+|electrician| | | (a.) 电工
+|equestrian| eque + str + ian| | (a.) 马的, 骑马的; (n.) 骑手
+|librarian| libr(y) + arian| | (n.) 图书管理员
+|pedestrian| ped + estr + ian| [about foot]| (a.) 徒步的, 缺乏想象的; (n.) 行人
+|pediatrician| pediatric(s) + ian | [做儿科工作的人]| (n.) 儿科医生
+|physician| physic(治愈, 医学) + ian| | (n.) 医师 (注意: physicist 指 "物理学家")
+|technician| | | (n.) 技师
+|totalitarian| totalit(y) + arian| | (a.) 极权主义的; (n.) 极权主义者
+|utopian| utopia + (ia)n| | (a.) 乌托邦的, 空想的; (n.) 空想家
+
+
+
+
+
+
+
+
+
 **ics- [a. 表示学科, 学问, 方法], [无意, 表示关于...]** <br> **^-ic**
 
 |||||
@@ -67,6 +100,7 @@ hieroglyph [sacred carve] 象形文字
 |genetics| gene + t + ics| [subject about gene]| (n.) 遗传学
 |gymnastics| gymnast + ics| [about gymnast]| (n.) 体操, 体育
 |logistics| logis + t + ics| [about providing lodges]| (n.) 后勤, 物流, 后勤学
+|pediatrics| pedi + atr + ics| [subject about child]| (n.) (医)儿科
 
 **-ion [n.]**
 
@@ -90,17 +124,17 @@ creativity 创造力
 
 # o
 
-**-or [n. 表人，表物 (常译为"机"、"器")], [a.], [n. (极少出现)]**
+**-or [n. 表人，表物 (常译为"机", "器")], [a.], [n. (极少出现)]**
 **^-ar, -er, -ur**
 processor ---- process + or ---- 处理器
-conductor ---- con + duct + or ---- [the people or object that lead sth together] 指挥、列车员；导体
+conductor ---- con + duct + or ---- [the people or object that lead sth together] 指挥, 列车员；导体
 
 **-ose [full of]**
-verbose [full of word] 冗长的、啰嗦的
+verbose [full of word] 冗长的, 啰嗦的
 
 # u
 
-**-um [n. 表示地点、场馆]、[a. 形容词后缀]**
+**-um [n. 表示地点, 场馆], [a. 形容词后缀]**
 aquarium 水族馆
 planetarium 天文馆
 
