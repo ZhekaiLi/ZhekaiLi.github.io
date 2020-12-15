@@ -76,6 +76,11 @@ $$u(t)=c_1\cos(\lambda_1t)x_1+c_2\cos(\lambda_2t)x_2=3\cos(2\pi t)\begin{bmatrix
 
 ## D8
 
+> **D8.3**
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_22-17-01.jpg)
+
+这道题比较偏而且内容不多, 个人感觉应该不太会考
+
 > **D8.4**
 同 [Midterm 2 Review D7.2](https://zhekaili.github.io/0001/03/02/Math415-midterm-2-review/#d72)
 
@@ -103,6 +108,8 @@ $$\Sigma=\begin{bmatrix}
 3. For $\lambda=8,2,0$, we find three eigenvectors $u_1,u_2,u_3$, after **normalizing** them, we therefore get $U$
 4. Similarly, use $A^TA$ to find $V$. 还可以使用如下方式来计算 $v_i$
 $$v_i=\frac{1}{\sigma_i}A^Tu_i$$
+如果先算的是 $A^TA$ 和 $V$ 的话, 使用相似公式计算 $u_i$
+$$u_i=\frac{1}{\sigma_i}Au_i$$
 
 ## D10
 
@@ -141,13 +148,6 @@ $$\Sigma^\dagger=\begin{bmatrix}
 \frac{2}{9}\\
 \frac{2}{9}
 \end{bmatrix}$$
-
-## D8
-
-> **D8.3**
-![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_22-17-01.jpg)
-
-这道题比较偏而且内容不多, 个人感觉应该不太会考
 
 ## HW8.3, 5
 

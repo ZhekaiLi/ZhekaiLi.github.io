@@ -6,7 +6,7 @@ description:
 keywords: [Python]
 ---
 
-# Collections
+# collections
 
 ## 1.1 collections.defaultdict
 这是一个比普通 `dict()` 更好的数据结构
@@ -57,7 +57,7 @@ D['key1']
 ```
 0 (参数 `lambda: 0` 的效果近似于 `int`)
 
-# Folium
+# folium
 **Reference**
 1.[知乎: Python绘制地图神器folium入门](https://zhuanlan.zhihu.com/p/112324234)
 
@@ -96,6 +96,29 @@ folium.CircleMaker(location=None,
 ```
 效果如下 (注意! 不要忘了在函数结尾括号外添加 `.add_to(m)`, 否则将无法显示标记)
 ![pic3](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-07_18-49-25.jpg)
+
+# tqdm
+这是常用于显示程序运行进度的包, 用在 for 循环语句非常好用, 例如
+```py
+from tqdm import tqdm
+
+best_score, best_k = -1, 0
+
+for k in tqdm(range(2, 100)):
+    m = KMeans(n_clusters=k, random_state=1).fit(X)
+    predictions = model.predict(X)
+    
+    curr_score = silhouette_score(X, predictions)
+    if curr_score > best_score:
+        best_k = k
+        best_score = curr_score
+        
+print('K={}'.format(best_k))
+print('Silhouette Score: {}'.format(best_score)) 
+```
+这段代码用于在 [2, 99] 区间内寻找使得 KMeans 拟合效果最好的 k 值. 运行效果如下
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/GIF%202020-12-15%2018-24-56.gif)
+
 
 
 
