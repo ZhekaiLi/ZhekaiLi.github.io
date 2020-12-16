@@ -17,9 +17,9 @@ D4.5 略
 
 ## D5
 
-D5.1 见 [Math415 Chapter-10](https://zhekaili.github.io/2020/11/22/Math415-chapter-10/#101-graphs-and-networks)
+D5.1 见 [Chapter-10](https://zhekaili.github.io/2020/11/22/Math415-chapter-10/#101-graphs-and-networks)
 
-D5.4 见 [Math415 Week-07](https://zhekaili.github.io/2020/11/22/Math415-slides-week-07/#113-projection-of-a-vector-onto-a-subspace-in-mathbbrn)
+D5.4 见 [Week-07](https://zhekaili.github.io/2020/11/22/Math415-slides-week-07/#113-projection-of-a-vector-onto-a-subspace-in-mathbbrn)
 > **Prjection matrix $P$**
 > The projection $p$ of vector $b$ onto $S=C(A)$ is
 $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
@@ -27,7 +27,7 @@ $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
 ## D6
 
 > **D6.1, D6.2**
-[Math415 Week-08 L13.3](https://zhekaili.github.io/2020/11/22/Math415-slides-week-08/#133-properties-of-determinants) 中列举的行列式的部分性质，可以在求矩阵行列式时提供一定的帮助，例如
+[Week-08 L13.3](https://zhekaili.github.io/2020/11/22/Math415-slides-week-08/#133-properties-of-determinants) 中列举的行列式的部分性质，可以在求矩阵行列式时提供一定的帮助，例如
 
 ![pic5](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-24_22-40-58.jpg)
 
@@ -112,7 +112,7 @@ Jordan Form, 略
 
 ## HW5
 
-HW5.4 见 [Math415 Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/#821-matrices-of-linear-transformations-general-case) 的最后两个例子
+HW5.4 见 [Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/#821-matrices-of-linear-transformations-general-case) 的最后两个例子
 
 ## HW6
 
