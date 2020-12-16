@@ -75,3 +75,6 @@ $$e^{At}=Xe^{\Lambda t}X^{-1}$$
 
 这一小节的其他部分应该也不会考, 不过可以看看下面这个 example, 它提供了一种求解二阶微分方程的新方法, 很有意思
 ![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-16_19-41-52.jpg)
+
+## 6.4 Symmetric Matrices
+
