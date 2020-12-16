@@ -14,7 +14,8 @@ HW8, problems 3,5 <br> HW9, problem 3,4,6 <br> HW10 problems 2, 6 <br> HW11, pro
 ## D7
 
 > **D7.2**
-![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_15-18-46.jpg)
+>![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_15-18-46.jpg)
+
 - (a). $$\cos(A)x=x-\frac{1}{2!}A^2x+\frac{1}{4!}A^4x-...=x(1-\frac{1}{2!}\lambda^2x+\frac{1}{4!}\lambda^4x...)=\cos(\lambda)x$$
 So $x$ is the eigenvector of $\cos(A)$ and eigenvalue is $\cos(\lambda)$
 
@@ -149,8 +150,12 @@ $$\Sigma^\dagger=\begin{bmatrix}
 \frac{2}{9}
 \end{bmatrix}$$
 
-## HW8.3, 5
+## HW8
 
+HW8.3 略
+
+> **HW8.5**
+> 需要用到[欧拉公式](https://zhekaili.github.io/0001/05/02/Math415-some-math-concepts/)
 
 
 ## HW9
@@ -173,14 +178,20 @@ Suppose $C$ is positive definite and $A$ has independent columns. Apply the ener
 
 $A$ is positive definite $\iff$ $x^TAx>0$, when $x\neq0$, 然后根据 $C$ 和 $A$ 的性质来做
 
-## HW10.2, 6
+## HW10
 
-> 
+HW10.2 略 (代值硬算, 没啥好写的)
 
 
 HW10.6 略 (这道题题目本身就有问题, 应该是要给出 $U,\Sigma,V$ 这些数据来做计算的
 
-## HW11.1
+## HW11
+
+> **HW11.1**
+这是一道更一般化的 SVD 计算题, 即 $A_{m\times n}$ when $m\neq n$. 此时会出现 $u_i, v_i$ 个数不对等的情况, 即无法直接用 $v_i=\frac{1}{\sigma_i}A^Tu_i$ 计算出所有 $u_i$ (令 $n>m$)
+
+使用已知的 $m$ 个 $u_i$, 利用正交的方式求出剩下的 $n-m$ 个 $u_i$
+
 
 
 
