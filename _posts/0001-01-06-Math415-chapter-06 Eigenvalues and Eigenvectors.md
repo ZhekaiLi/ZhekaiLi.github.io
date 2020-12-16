@@ -60,7 +60,18 @@ $$a_{11}+...+a_{nn}=\lambda_1+...+\lambda_n$$
 > #### Def 1 Matrix exponential $e^{At}$
 > $$\begin{aligned}
 e^x&= 1 + x + \frac{1}{2}x^2+\frac{1}{6}x^3+...=\sum_{k=0}^\infty{\frac{x^k}{k!}}\\
-e^{Ax}&=I+At+\frac{1}{2}(At)^2+...=\sum\frac{(At)^k}{k!}
+e^{At}&=I+At+\frac{1}{2}(At)^2+...=\sum\frac{(At)^k}{k!}
 \end{aligned}$$
 > 
-> The eigenvalues of $e^{At}$ are $e^{\lambda t}$, since $(I+At+\frac{1}{2}(At)^2+...)\pmb{x}$
+> The eigenvalues of $e^{At}$ are $e^{\lambda t}$, since $(I+At+\frac{1}{2}(At)^2+...)\pmb{x}=(I+\lambda t+\frac{1}{2}(\lambda t)^2+...)\pmb{x}$
+
+**Lemma 1:** If $A$ is diagonalized, then $e^{At}$ is also diagonalized
+$$A=X\Lambda X^{-1}\to e^{At}=X[I+\Lambda t+\frac{1}{2}(\Lambda t)^2+...]X^{-1}$$
+
+therefore
+$$e^{At}=Xe^{\Lambda t}X^{-1}$$
+
+可以利用这个性质来求解 Chapter 6.3.1 中的 $u(t)=e^{At}u(0)$
+
+这一小节的其他部分应该也不会考, 不过可以看看下面这个 example, 它提供了一种求解二阶微分方程的新方法, 很有意思
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-16_19-41-52.jpg)
