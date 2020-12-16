@@ -11,6 +11,8 @@ Discussions sessions 7, problem 2 <br> Discussions sessions 8, problem 4 <br> Di
 
 HW8, problems 3,5 <br> HW9, problem 3,4,6 <br> HW10 problems 2, 6 <br> HW11, problem 1 <br> 
 
+
+
 ## D7
 
 > **D7.2**
@@ -83,7 +85,7 @@ $$u(t)=c_1\cos(\lambda_1t)x_1+c_2\cos(\lambda_2t)x_2=3\cos(2\pi t)\begin{bmatrix
 这道题比较偏而且内容不多, 个人感觉应该不太会考
 
 > **D8.4**
-同 [Midterm 2 Review D7.2](https://zhekaili.github.io/0001/03/02/Math415-midterm-2-review/#d72)
+同 [Midterm 2 Review D7.2](https://zhekaili.github.io/0001/03/02/Math415-midterm-2-review/#d7)
 
 ## D9
 D9.1, 2, 3 这三题讲的都是奇异值分解 SVD, 选一道比较复杂的为例
