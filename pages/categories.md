@@ -4,8 +4,8 @@ title: Category
 description: 
 keywords: Category
 comments: false
-menu: Category
-permalink: /category/
+menu: 分类
+permalink: /categories/
 ---
 
 <section class="container posts-content">
