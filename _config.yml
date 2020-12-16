@@ -52,14 +52,12 @@ navs:
   -
     href: /
     label: Home
-
   -
-    href: /category/
+    href: /categories/
     label: Category
   -
     href: /wiki/
     label: Wiki
-    
   -
     href: /about/
     label: About
