@@ -206,6 +206,9 @@ $$AA^T=\begin{bmatrix}
 \end{bmatrix},\vert AA^T\vert=0\to \lambda_1=\lambda_2=2$$
 
 
+1
+
+
 
 
 
