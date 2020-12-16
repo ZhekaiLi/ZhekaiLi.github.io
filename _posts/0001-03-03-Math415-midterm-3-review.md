@@ -16,7 +16,7 @@ HW8, problems 3,5 <br> HW9, problem 3,4,6 <br> HW10 problems 2, 6 <br> HW11, pro
 ## D7
 
 > **D7.2**
->![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_15-18-46.jpg)
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_15-18-46.jpg)
 
 - (a). $$\cos(A)x=x-\frac{1}{2!}A^2x+\frac{1}{4!}A^4x-...=x(1-\frac{1}{2!}\lambda^2x+\frac{1}{4!}\lambda^4x...)=\cos(\lambda)x$$
 So $x$ is the eigenvector of $\cos(A)$ and eigenvalue is $\cos(\lambda)$
@@ -50,7 +50,7 @@ $$A=\begin{bmatrix}
 \end{bmatrix},x_2=\begin{bmatrix}
 1\\
 -1
-\end{bmatrix},$$$$\frac{d^2u}{dt^2}=-A^2u,u'(0)=0,u(0)=\begin{bmatrix}
+\end{bmatrix}$$$$\frac{d^2u}{dt^2}=-A^2u,u'(0)=0,u(0)=\begin{bmatrix}
 4\\
 2
 \end{bmatrix}$$
@@ -156,8 +156,7 @@ $$\Sigma^\dagger=\begin{bmatrix}
 
 HW8.3 略
 
-> **HW8.5**
-> 需要用到[欧拉公式](https://zhekaili.github.io/0001/05/02/Math415-some-math-concepts/)
+HW8.5 需要用到[欧拉公式](https://zhekaili.github.io/0001/05/02/Math415-some-math-concepts/)
 
 
 ## HW9

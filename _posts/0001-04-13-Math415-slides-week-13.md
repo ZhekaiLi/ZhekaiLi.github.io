@@ -42,7 +42,7 @@ $$\Sigma^\dagger_{n\times m}=\begin{bmatrix}
 \hat{\Sigma}^{-1}_{n\times n} & 0_{n\times(m-n)}
 \end{bmatrix}$$
 
-当然, 上式**假设**的是 $\text{rank}(A)=\min(m,n)=n$, 如果 $r<n$ 则 $\hat\Sigma_{r\times r}$, $\Sigma^\dagger$ 的维度不变, 只是多增加了一些 $0$
+当然, 上式**假设**的是 $\text{rank}(A)=\min(m,n)=n$, 如果 $r<n$ 则 $\hat\Sigma_{n\times n}$ 将缩小成 $\hat\Sigma_{r\times r}$, 而 $\Sigma^\dagger$ 的维度保持不变, 只是多增加了一些 $0$
 > #### Def 3: Pseudoinverse $A^\dagger$
 > $$A^\dagger=V\Sigma^\dagger U^T$$
 

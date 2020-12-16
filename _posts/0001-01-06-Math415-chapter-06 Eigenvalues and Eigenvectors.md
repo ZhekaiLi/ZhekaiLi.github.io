@@ -39,5 +39,28 @@ $$a_{11}+...+a_{nn}=\lambda_1+...+\lambda_n$$
 > 3. $n$ 个不同的特征值
 > 4. 实对称矩阵
 
+## 6.3 Systems of Differential Equations
 
+(已看完)
 
+### 6.3.1 Solution of $du/dt = Au$
+这部分可以用一个例题概括, 见 [Midterm 2 Review D7.2](https://zhekaili.github.io/0001/03/02/Math415-midterm-2-review/#d7)
+
+### 6.3.2 Second Order Equations
+这部分大概率不会考到, 如果考到最多也是长这样的 [Midterm 3 Review D7.2](https://zhekaili.github.io/0001/03/03/Math415-midterm-3-review/#d7)
+
+### 6.3.3 Difference Equations (optional)
+不考
+
+### 6.3.4 Stability of 2 by 2 Matrices
+不考 (不过挺有意思的, 有时间可以看看)
+
+### 6.3.5 The Exponential of a Matrix
+
+> #### Def 1 Matrix exponential $e^{At}$
+> $$\begin{aligned}
+e^x&= 1 + x + \frac{1}{2}x^2+\frac{1}{6}x^3+...=\sum_{k=0}^\infty{\frac{x^k}{k!}}\\
+e^{Ax}&=I+At+\frac{1}{2}(At)^2+...=\sum\frac{(At)^k}{k!}
+\end{aligned}$$
+> 
+> The eigenvalues of $e^{At}$ are $e^{\lambda t}$, since $(I+At+\frac{1}{2}(At)^2+...)\pmb{x}$

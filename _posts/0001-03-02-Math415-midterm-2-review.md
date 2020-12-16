@@ -59,13 +59,13 @@ $$\lambda_1=1,\lambda_2=2,x_1=\begin{pmatrix}
 \end{pmatrix}$$
 2. 求系数 $c_i$
 $$\begin{aligned}
-x(t)&=c_1x^{(1)}(t)+c_2x^{(2)}(t)=c_1\begin{pmatrix}
+x(t)&=c_1e^{\lambda_1t}x_1+c_2e^{\lambda_2t}x_2=c_1e^t\begin{pmatrix}
 1\\
 -1
-\end{pmatrix}e^t+c_2\begin{pmatrix}
+\end{pmatrix}+c_2e^{2t}\begin{pmatrix}
 1\\
 0
-\end{pmatrix}e^{2t} \\
+\end{pmatrix} \\
 x(0)&=\begin{pmatrix}
 c_1+c_2\\
 -c_1
