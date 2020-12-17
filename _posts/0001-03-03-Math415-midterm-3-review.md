@@ -34,7 +34,7 @@ $$\cos(A)=\begin{bmatrix}
 1 & 1\\
 1 & -1
 \end{bmatrix}^{-1}$$
-(之所以能够这样计算, 是因为 $A,\cos(A)$ 都是可对角化的矩阵, 详见 [Chapter 6.2](https://zhekaili.github.io/0001/01/06/Math415-chapter-06-Eigenvalues-and-Eigenvectors/#62-diagonalizing-a-matrix))
+(之所以能够这样计算, 是因为 $A,\cos(A)$ 都是可对角化 (diagonalizable) 的矩阵, 详见 [Chapter 6.2](https://zhekaili.github.io/0001/01/06/Math415-chapter-06-Eigenvalues-and-Eigenvectors/#62-diagonalizing-a-matrix))
 
 - (c). 填空: 
 1. Expand $u(0)=c_1x_1+c_2x_2+c_3x_3$
@@ -82,7 +82,8 @@ $$u(t)=c_1\cos(\lambda_1t)x_1+c_2\cos(\lambda_2t)x_2=3\cos(2\pi t)\begin{bmatrix
 ## D8
 
 > **D8.3**
-![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_22-17-01.jpg)
+>
+>![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-10_22-17-01.jpg)
 
 这道题比较偏而且内容不多, 个人感觉应该不太会考
 
@@ -114,7 +115,8 @@ $$\Sigma=\begin{bmatrix}
 4. Similarly, use $A^TA$ to find $V$. 还可以使用如下方式来计算 $v_i$
 $$v_i=\frac{1}{\sigma_i}A^Tu_i$$
 如果先算的是 $A^TA$ 和 $V$ 的话, 使用相似公式计算 $u_i$
-$$u_i=\frac{1}{\sigma_i}Au_i$$
+$$u_i=\frac{1}{\sigma_i}Av_i$$
+5. 该题的 $\sigma_3=0$, 这意味着无法使用上述公式由 $u_3$ 求得 $v_3$, 此时只能通过 $N(A^TA)$ 来计算 $v_3$ 
 
 ## D10
 
@@ -153,6 +155,10 @@ $$\Sigma^\dagger=\begin{bmatrix}
 \frac{2}{9}\\
 \frac{2}{9}
 \end{bmatrix}$$
+
+<font color=red>注 1:</font> 作者认为该题从小推大不够严谨, 应使用大推小, 改进方法参考 [Midterm-3 Review](https://zhekaili.github.io/0001/03/03/Math415-midterm-3-review/#hw11)
+
+<font color=red>注 2:</font> 对于 $v_i$ 的计算, 要注意各个 $v_i$ 之间是相互正交的, 例如这里先求得是 $v_1$, 那么 $v_1$ 就会对 $v_2,v_3$ 造成一个限制 (本题就出现了 $v_2,v_3$ 自由度过高的问题, 此时就需要 $v_1$ 的限制)
 
 ## HW8
 
@@ -206,6 +212,23 @@ $$AA^T=\begin{bmatrix}
 2 & 0\\
 0 & 2
 \end{bmatrix},\vert AA^T\vert=0\to \lambda_1=\lambda_2=2$$
+
+由此可得
+$$u_1=\begin{pmatrix}
+1\\0
+\end{pmatrix},u_2=\begin{pmatrix}
+0\\1
+\end{pmatrix}$$
+
+再由 $v_i=\frac{1}{\sigma_i}A^Tu_i$ 求出 $v_1,v_2$, 然后使用正交的方式根据 $v_1,v_2$ 求出 $v_3,v_4$ (作者认为该方法的不严谨性就体现在这一步)
+
+**Method 2:** 大推小
+
+使用已知的 $n$ 个 $v_i$, 由 $u_i=\frac{1}{\sigma_i}Av_i$ 求得前 $m$ 个 $v_i$. 该方法因为没用到正交, 所以足够严谨, 但是也面临着 $\det(A^TA-\lambda I)=0$ 计算太麻烦的问题.
+
+解决方法是先用 $\det(AA^T-\lambda I)=0$ 算出 $\lambda_1=\lambda_2=2$, 再由 $AA^T,A^TA$ 特征根相同可直接得到 $\lambda_3=\lambda_4=0$. 这样就能求得四个 $v_i$, 最后再用 $v_1,v_2$ 求 $u_1,u_2$
+
+
 
 
 
