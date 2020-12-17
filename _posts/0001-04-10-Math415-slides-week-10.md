@@ -45,6 +45,8 @@ i & 2
 # L18
 Positive definite matrices and quadratic forms
 
+(已看完)
+
 ## 18.1 正定矩阵
 
 > #### Def 1: Positive definite matrices (eigenvalues base)

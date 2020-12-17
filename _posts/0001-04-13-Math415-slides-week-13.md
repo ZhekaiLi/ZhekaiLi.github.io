@@ -65,7 +65,7 @@ $$A^\dagger=A_{left}^{-1}$$
 For the problem 
 $$\text{Minimize } \|Ax-b\| \text{ over } x\in\mathbb{R}^n$$
 
-when $r<n$, the optimal solution $\hat x$ is **not unique**, we have one of optimal solitions:
+when $r<n$, $A^{-1}$ does not exist, and the optimal solution $\hat x$ is **not unique**, we have one of optimal solitions:
 $$\hat x=A^\dagger b$$
 
 接下来还有一个例子和一个证明, 篇幅有点长, 日后再补充

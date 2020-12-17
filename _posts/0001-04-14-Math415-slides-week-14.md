@@ -17,11 +17,23 @@ Review: Topics included in midterm 3
 
 ## 25.2 Symmetric matrices
 
-见 [Chapter 6.4]()
+见 [Chapter 6.4](https://zhekaili.github.io/0001/01/06/Math415-chapter-06-Eigenvalues-and-Eigenvectors/#64-symmetric-matrices)
 
 ## 25.3 Quadratic forms
 
+见 [Week-10 L18](https://zhekaili.github.io/0001/01/06/Math415-chapter-06-Eigenvalues-and-Eigenvectors/#64-symmetric-matrices)
+
 ## 25.4 Least square problems
 
+见 [Week-13 L23.4](https://zhekaili.github.io/0001/04/13/Math415-slides-week-13/#234-connection-with-least-square-problem)
+
 ## 25.5 SVD, left and right inverse, pseudoinverse
+
+1. SVD 就不多说了
+2. left and right inverse 见 [Week-13 L23.2](https://zhekaili.github.io/0001/04/13/Math415-slides-week-13/#232-left-and-right-inverse)
+3. pseudoinverse 见 [Week-13 L23.3](https://zhekaili.github.io/0001/04/13/Math415-slides-week-13/#233-pseudoinverse)
+
+# L26
+
+Final review
 
