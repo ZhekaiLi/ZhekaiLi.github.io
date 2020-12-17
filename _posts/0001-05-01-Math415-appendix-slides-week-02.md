@@ -43,7 +43,7 @@ keywords: Math415，Calculas，Matrix
 
 现有一向量 $A$，其原本的基向量 为 $i,j$
 
-对 $A$ 进行一个旋转变换，即 $A_{new}=T_rA$。其中，线性变换矩阵 $T_r=[i',j']$ 将 $A$ 的基向量变换成 $A_new$ 的基向量，即将 $i,j$ 转变为 $i',j'$
+对 $A$ 进行一个旋转变换，即 $A_{new}=T_rA$。其中，线性变换矩阵 $T_r=[i',j']$ 将 $A$ 的基向量变换成 $A_{new}$ 的基向量，即将 $i,j$ 转变为 $i',j'$
 
 例如对于 $$T_r=\begin{bmatrix}
    \cos(\theta) & -\sin(\theta) \\

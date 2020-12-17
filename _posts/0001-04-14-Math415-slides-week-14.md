@@ -17,6 +17,8 @@ Review: Topics included in midterm 3
 
 ## 25.2 Symmetric matrices
 
+见 [Chapter 6.4]()
+
 ## 25.3 Quadratic forms
 
 ## 25.4 Least square problems

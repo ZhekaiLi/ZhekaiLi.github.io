@@ -33,11 +33,16 @@ $$a_{11}+...+a_{nn}=\lambda_1+...+\lambda_n$$
 
 ## 6.2 Diagonalizing a Matrix
 > #### Def 1: Diagonalizable matrix 可对角化矩阵
+> $n$ independent eigenvectors (**normalized**) in $X$ diagonalize $A$
+> $$A=X\Lambda X^{-1}$$
+> 
 > 判断一个矩阵是否为可对角化矩阵主要有以下几个途径
 > 1. $n$ 个线性无关的特征向量
 > 2. 代数重数 = 几何重数
 > 3. $n$ 个不同的特征值
 > 4. 实对称矩阵
+
+当存在相同的特征值是, $A$ **might** have too few independent eigenvectors. Then $X^{-1}$ fails
 
 ## 6.3 Systems of Differential Equations
 
@@ -78,3 +83,34 @@ $$e^{At}=Xe^{\Lambda t}X^{-1}$$
 
 ## 6.4 Symmetric Matrices
 
+### 6.4.1 Main
+
+> #### Def 1: Symmetric diagonalization
+> $$S=Q\Lambda Q^{-1}=Q\Lambda Q^T \text{ with } Q^{-1}=Q^T$$ 
+>
+>$Q$ is orthonormal.
+
+**Proof:** Since symmetric matrix $S$ is diagonalizable, then $S=X\Lambda X^{-1}$, plus that $S^T=X^{-T}\Lambda X^T$ and $S^T=S$, we have
+$$X^T=X^{-1}\to X\text{ orthonormal, denoted by }Q$$
+
+**Theorem 1: Real Eigenvalues** All the eigenvalues of a real symmetric matrix are real.
+
+**Theorem 2: Orthogonal Eigenvectors** Eigenvectors of a real symmetric matrix (when they correspond to different $\lambda$'s) are always perpendicular.
+
+**Theorem 3:** For every symmetric matrices, we have
+$$S=Q\Lambda Q^T=\lambda_1q_1q_1^T+...+\lambda_nq_nq_n^T$$
+
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2020-12/Snipaste_2020-12-17_10-01-03.jpg)
+
+注: 上图中 (**rotation**)(**stretch**)(**rotate back**) 中的 (**stretch**) 会改变向量的方向, 并不是传统意义上的拉伸 (不改变方向), 譬如 $$\Lambda=\begin{bmatrix}
+3 & 0\\
+0 & 1
+\end{bmatrix}\to \Lambda\begin{pmatrix}
+x_1 \\ x_2
+\end{pmatrix}=\begin{pmatrix}
+3x_1 \\ x_2
+\end{pmatrix}$$
+
+### 6.4.2 Complex Eigenvalues of Real Matrices
+
+后面个人感觉至少对于 midterm 3 不太重要, 等 final 再看
