@@ -42,7 +42,7 @@ $$a_{11}+...+a_{nn}=\lambda_1+...+\lambda_n$$
 > 3. $n$ 个不同的特征值
 > 4. 实对称矩阵
 
-当存在相同的特征值是, $A$ **might** have too few independent eigenvectors. Then $X^{-1}$ fails
+当存在相同的特征根时, $A$ **might** have too few independent eigenvectors. Then $X^{-1}$ fails.
 
 ## 6.3 Systems of Differential Equations
 

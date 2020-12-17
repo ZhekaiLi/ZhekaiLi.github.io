@@ -156,7 +156,7 @@ $$\Sigma^\dagger=\begin{bmatrix}
 \frac{2}{9}
 \end{bmatrix}$$
 
-<font color=red>注 1:</font> 作者认为该题从小推大不够严谨, 应使用大推小, 改进方法参考 [Midterm-3 Review](https://zhekaili.github.io/0001/03/03/Math415-midterm-3-review/#hw11)
+<font color=red>注 1:</font> 作者认为该题从小推大不够严谨, 应使用大推小, 改进方法参考 [Midterm-3 Review HW11.1](https://zhekaili.github.io/0001/03/03/Math415-midterm-3-review/#hw11)
 
 <font color=red>注 2:</font> 对于 $v_i$ 的计算, 要注意各个 $v_i$ 之间是相互正交的, 例如这里先求得是 $v_1$, 那么 $v_1$ 就会对 $v_2,v_3$ 造成一个限制 (本题就出现了 $v_2,v_3$ 自由度过高的问题, 此时就需要 $v_1$ 的限制)
 

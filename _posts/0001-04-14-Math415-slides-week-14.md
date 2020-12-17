@@ -21,7 +21,7 @@ Review: Topics included in midterm 3
 
 ## 25.3 Quadratic forms
 
-见 [Week-10 L18](https://zhekaili.github.io/0001/01/06/Math415-chapter-06-Eigenvalues-and-Eigenvectors/#64-symmetric-matrices)
+见 [Week-10 L18](https://zhekaili.github.io/0001/04/10/Math415-slides-week-10/#l18)
 
 ## 25.4 Least square problems
 
