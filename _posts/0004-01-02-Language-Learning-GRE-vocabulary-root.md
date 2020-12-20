@@ -18,6 +18,29 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |---|---|---|---
 |agrarian| agra + r + ian| [about land and soil]| (a.) 土地的, 耕地的
 
+**am [love]**
+
+|||||
+|---|---|---|---
+|amiable| am + iable| [able to love]| (a.) 亲切的, 容易相处的
+|amicable| am + icable| | (a.) 友善的
+|amity| am + ity| | (n.) 友好关系, 和睦
+|enamored| en(=in) + am + ored| [in love]| (a.) 迷恋的, 热爱的
+
+**anim [life]**
+
+|||||
+|---|---|---|---
+|animate| anim + ate(a., v.)| | (a.) 有生命的, 有活力的; (v.) 使有活力
+|unanimous| un(i) + anim + ous| [single life, single spirit, 万众一心]| (a.) 一致同意的
+
+**anthrop [mankind]**
+
+|||||
+|---|---|---|---
+|misanthropic| mis + anthrop + ic| [bad to mankind]| (a.) 反人类的
+|philanthropic| phil + anthrop + ic| [love mankind]| (a.)
+
 **av- [bird]**
 
 |||||
@@ -35,7 +58,44 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |amphibian| amphi + bi + (i)an| [biology lives in both water and land]| (n.) 两栖动物; (a.) 两栖类的
 |aerobic| aero + b(i) + ics| [method about biology and air]| (n.) 有氧运动法
 
+**-bin [bind, 约束, 限制]** <br> **^-band, -bind, -bond** <br> **^-fin + [结束]**
+
+|||||
+|---|---|---|---|
+|band| | | (n.) 带, 环, 乐队
+|| disband| | (v.) 解散
+|| headband, waistband| | (n.) 头带, 腰带
+|bind| | | (v.) 捆绑, 约束, 装订, 包扎
+|bond| | | (n.) 债券, 约定, 粘合剂, 纽带; (v.) 结合
+|| bondage| | (n.) 奴役, 束缚
+|| ribbon| | (n.) 带, 勋带, 绶带
+|defining| | | (a.) 最典型的, 起决定性作用的(=decisive)
+|definite| de + fin + ite| [加强限制]| (a.) 一定的, 确切的
+|definitive| | | (a.) 最后的, 最佳的, 最权威的
+
+**bon [good]**
+
+|||||
+|---|---|---|---|
+|boon| | | (n.) 恩惠, 福利
+|bonhomie| bon + hom + ie| [good human]| (n.) 温和, 和蔼
+
+**brav [brave]**
+
+|||||
+|---|---|---|---|
+|bravado| brava + do| [(pretend to) do a brave]| (n.) 假装勇敢, 虚张声势
+|bravura| brav + ura| [you are a(=ura) brave man (on stage)]| (a.) (n.) 出色的表演, 精湛的演技
+
 # c
+
+**cand [candle]** <br> **^kind**
+
+|||||
+|---|---|---|---
+|candor| cand + or| [man like a candle]| (n.) 坦白, 直率
+|incandescent| in + cand + escent| [进入蜡烛燃烧般的状态]| (a.) 明亮灿烂的, 热情饱满的
+|kindle| | | (v.) 点燃
 
 **-cern [separate], [distinguish]** <br> **^-cert** <br> **^-crim, -cris, crit** <br> **^-cree**
 
@@ -81,6 +141,21 @@ keywords: [Language-Learning, GRE, Vocabulary]
 **chant- [sing, song]**
 enchant [(let sb) enter song] 施魔法, 使入迷
 
+**chrome [color]**
+
+|||||
+|---|---|---|---
+|chromatic| chrom + atic| | (a.) 彩色的
+|monochromatic| | | (a.) 单色的, 单调的
+
+**chron [time]**
+
+|||||
+|---|---|---|---
+|anachronistic| ana + chron + istic| [wrong time]| (a.) 时代错误的
+|chronic| chron + ic| [(lasting long) time]| (a.) 慢性的, 长期的, 习惯性的
+|synchronous| syn + chron + ous| [same time]| (a.) 同时期的, 同步的
+
 **cob- [heap, lump, rounded object]**
 cobble 鹅卵石
 
@@ -89,6 +164,16 @@ cobble 鹅卵石
 |||||
 |---|---|---|---
 |conifer| coni + fer | [(plants) that carry cones 带着球果的植物]| (n.) 针叶树
+
+**cred [believe]**
+
+|||||
+|---|---|---|---
+|credence| cred + ence| | (n.) 坚信
+|credible| | | (a.) 值得信赖的
+|credit| | (n.) 信用, 信誉, 学分, 贷款; (v.) 相信, 赞颂
+|credulous| cred + ul + ous| [believe too much]| (a.) 轻信的, 易受骗的
+|discredit| | | (v.) 怀疑, 使丢脸
 
 **cus- [cover 掩护]**
 
@@ -103,7 +188,6 @@ cobble 鹅卵石
 |||||
 |---|---|---|---
 |demographics| demo + graph + ics| [about people recording]| (n.) 人口统计资料
-
 
 **duc(t) [lead 引导]**
 
@@ -124,6 +208,7 @@ cobble 鹅卵石
 |edible| ed + ible| [able to eat]| (a.) 可以吃的
 
 # f
+
 **-fer [carry, bring 带来, 发生, 怀有]** <br> **^-fur** <br> **^-pher** <br> **^-phor**
 
 |||||
@@ -141,6 +226,36 @@ cobble 鹅卵石
 |paraphernalia| para + pher + nalia| [bring beside]| (n.) 随身用具, 全套设备
 |vociferous| voci + fer + ous| [bring (too much) voice]| (a.) 喧哗的
 
+**ferv [hot]**
+
+|||||
+|---|---|---|---
+|effervesce| ef + ferv + esce| [hot out]| (v.) (液体)泡腾, 冒泡; 兴奋, 热情洋溢
+|fervent <br> = fervid| ferv + ent| | (a.) 炽热的, 热心的
+|fervor| ferv + or| | (n.) 热情, 狂热
+|perfervid| per + fervid| [thoroughly hot]| (a.) 非常热情的
+
+**fid [trust]**
+
+|||||
+|---|---|---|---
+|diffident| dif(=dis) + fid + ent| | (a.) 不自信的, 内向的
+|fidelity| | | (n.) 忠诚
+|perfidy| per + fid + y| [go through trust, 穿过信任]| (n.) 不忠, 背信弃义
+
+**flam [burn]** <br> **^flagr**
+
+|||||
+|---|---|---|---
+|conflagration| con + flagr + ation| [burn together]| (n.) 战争, 武装冲突
+|flamboyant| | [像燃烧一样]| (a.) 艳丽的, 火焰似的
+
+**fulg [shine]**
+
+|||||
+|---|---|---|---
+|effulgent| ef(=ex) + fulg + ent| [shine out]| (a.) 光辉灿烂的
+|refulgent| re + fulg + ent| [shine back and again]| (a.) 辉煌的
 
 # g
 
@@ -165,6 +280,42 @@ cobble 鹅卵石
 |regress | re + gress | [go back] | (v.) 逆行, 倒退
 |transgress | trans + gress | [走过 (界限)] | (v.) 越界, 违反, 犯罪
 
+# l
+
+**lib [free 自由]**
+
+|||||
+|---|---|---|---
+|liberal| | | (a.) 自由主义的, 思想前卫的, 慷慨的
+|libertine| | | (n.) 浪子, 放荡不羁的人
+|ad-lib| | | (a.) 即兴的
+
+
+
+
+**luc [light]** <br> **^lumin** <br> **^lust, lustr**
+
+|||||
+|---|---|---|---
+|elucidate| e + lus + idate| [light out $\to$ make clear]| (v.) 阐明
+|lucid| luc + id| | (a.) 有光亮的, 神志清醒的
+|illuminati| il(=in) + lumin + ati| [进入光中(的人)]| (n.) 智者, 精英
+|illustrious| il(=in) + lustr + ious| | (a.) 著名的, 杰出的
+|lackluster| | | (a.) 黯淡无光的
+|luminary| lumin + ary| [光芒四射(的人)]| (n.) 杰出人物, 发光体
+|lustrous| lustr + ous| | (a.) 有光泽的
+|pellucid <br> = translucent| pel(=per) + luc + id| [light through]| (a.) 透明的, 清晰明了的
+
+# n
+
+**nov [new]**
+
+|||||
+|---|---|---|---
+|innovative| in + nov + ative| [in new]| (a.) 创新性的
+|novice| | | (n.) 新手, 初学者
+|renovate| re + nov + ate| [new again]| (v.) 修复, 翻新
+
 # p
 
 **ped- [foot]** <br> **^pet-, pod-,pus-** <br> **^peach-, patch-**
@@ -179,11 +330,47 @@ cobble 鹅卵石
 |---|---|---|---
 |pediatrics| pedi + atr + ics| [subject about child]| (n.) (医)儿科
 
+**-pen [pay, 付钱], [hang, 悬挂]** <br> **^-pens** <br> **^(s)pend** <br> **^(s)pon** 
+
+|||||
+|---|---|---|---
+|dependency| de + pend + ency| | (n.) 属国, 从属物
+|dispensable| | | (a.) 可有可无的
+|expenditure <br> = expense| | | (n.) 花费, 开支
+|pendant| pend + ant| | (n.) 坠饰, 吊灯
+|pendent <br> = pending| pend + ent| | (a.) 下垂的, 悬而未决的
+|pendular| | | (a.) 摆动的
+|pendulous| | | (a.) 下垂的, 悬垂的
+|pendulum| | | (n.) 钟摆
+|penthouse| pent + house| [有着下垂屋顶的房子]| (n.) 阁楼, 顶层公寓
+|pensive| pens + ive| [(头)下垂]| (n.) 沉思的, 忧郁的, 悲伤的
+|propensity| pro + pens + ity| | (n.) 倾向, 习性, 癖好
+|spender| | | (n.) 挥金如土的人, 挥霍者
+|stipend| | | (n.) 助学津贴, 薪俸
+|suspend| sus + pend| [在下面挂一会儿]| (v.) 延缓, 推迟, 使暂停, 使悬浮
+
 **phos- [light]**
 
 |||||
 |---|---|---|---
 |phosphorus| phos + phor + us| [(sth.) that bring light]| (n.) 磷
+
+**pi [devout 忠诚]**
+
+|||||
+|---|---|---|---
+|expiate| ex[former] + pi + ate| [使(-ate)回到从前的忠诚]| (v.) 赎罪, 纠正
+|pious| pi + ous| | (a.) 虔诚的, 忠诚的
+|impious| | | (a.) 不敬神的
+
+# r
+
+**rect [right 直]**
+
+|||||
+|---|---|---|---
+|rectitude| rect + itude| | (n.) 正直
+|resurrect| re + sur(=sub) + rect| [重新从下面直立]| (v.) 使重生, 使复苏
 
 # s
 
@@ -201,6 +388,24 @@ cobble 鹅卵石
 |---|---|---|---
 |tumble| tum + ble| [turn (down)]| (v.) (使) 摔倒, 倒塌, 滚动
 | | tumbler| [经常要做出滚倒动作的人]| (n.) 不倒翁, 杂技演员
+
+# u
+
+**umbr [shadow]**
+
+|||||
+|---|---|---|---
+|adumbrate| ad + umbr + ate| [to (cast in) shadow, 给出影子一样的轮廓]| (v.) 预示着, 给出轮廓
+|umbrage| umbr + age| [(live in) shadow]| (n.) 不悦, 生气
+
+**und [flow]**
+
+|||||
+|---|---|---|---
+|inundate| in + und + ate| [flow in]| (v.) 淹没
+|redundant| re(d) + und + ant| [flow again, overflow]| (a.) 多余的
+
+
 
 # v
 

@@ -53,6 +53,12 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |antecedent | ante + ced(e) + ent | | (a.) 先前的；(n.) 祖先, 先行词|
 |anteparum | ante + par + um | |  (a.) 分娩前的|
 
+**anna- [wrong]**
+
+|||||
+|---|---|---|---|
+|anachronistic| ana + chron + istic| [wrong time]| (a.) 时代错误的
+
 **anni- [year]** <br> **^annu-**
 
 |||||
@@ -133,12 +139,14 @@ equivocate [call equally (to conflicting points)] 说谎话, 模棱两可地说
 |euphonious| eu + phon + ious| [good sound]| 悦耳的
 |euphoria| eu + phor + ia| [(sth.) that can bring well feeling]| (医)狂喜症, 狂喜
 
-**ex- [out]** <br> **^e-** <br> **^ef-** <br> **^-es**
+**ex- [out], [former]** <br> **^e-** <br> **^ef-** <br> **^-es**
 
 |||||
 |---|---|---|---
+|effulgent| ef(=ex) + fulg + ent| [shine out]| (a.) 光辉灿烂的
 |enunciate| e + nunc + i + ate| [announce out]| (v.) 公开宣布, 阐明, 发音
 |evert| e + vert| [turn out]| (v.) 使外翻
+|expiate| ex[former] + pi + ate| [使(-ate)回到从前的忠诚]| (v.) 赎罪, 纠正
 
 # g
 
@@ -208,6 +216,11 @@ limp 软的, 无力的；跛行
 |---|---|---|---
 |metaphysics| meta + physics| [higher than physics]| (n.) 玄学, 形而上学
 
+**mis- [bad]**
+
+|||||
+|---|---|---|---
+|misanthropic| mis + anthrop + ic| [bad to mankind]| (a.) 反人类的
 
 **mut- [change]**
 mutiny 兵变, 叛乱
@@ -270,6 +283,7 @@ provoke [call forth] 驱使, 煽动, 激怒
 
 |||||
 |---|---|---|---
+|refulgent| re + fulg + ent| [shine back and again]| (a.) 辉煌的
 |renounce| |[announce against]| 正式放弃, 宣布决裂
 |resonant| |[sound back]| 洪亮的, 共鸣的
 |revenue| re + ven + ue | [(money) come back] | (n.) 收入 = income
