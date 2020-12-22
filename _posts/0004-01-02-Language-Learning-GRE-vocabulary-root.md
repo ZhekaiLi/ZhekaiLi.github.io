@@ -12,7 +12,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 # a
 
-**agri- [land and soil]**
+**agri [land and soil]**
 
 |||||
 |---|---|---|---
@@ -41,7 +41,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |misanthropic| mis + anthrop + ic| [bad to mankind]| (a.) 反人类的
 |philanthropic| phil + anthrop + ic| [love mankind]| (a.)
 
-**av- [bird]**
+**av [bird]**
 
 |||||
 |---|---|---|---
@@ -50,15 +50,27 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 # b
 
-**-bi [biology]**
+**base [bottom]** <br> **^bysm**
 
+|||||
+|---|---|---|---|
+|abase| a(=ad) + base| [to base, 向底部]| (v.) 降低(地位, 职位, 尊严), 表现卑微
+||self-abasement| | (n.) 自卑
+|abysmal| a[away] + bysm + al| [base away, 无底的]| (a.) 深不可测的, 极度的, 级低的
+|debase| | | (v.) 降低, 贬低
+
+
+
+
+**bi [biology]**
 这是作为词根时的含义, 当作为前缀时表示 "double"
+
 |||||
 |---|---|---|---|
 |amphibian| amphi + bi + (i)an| [biology lives in both water and land]| (n.) 两栖动物; (a.) 两栖类的
 |aerobic| aero + b(i) + ics| [method about biology and air]| (n.) 有氧运动法
 
-**-bin [bind, 约束, 限制]** <br> **^-band, -bind, -bond** <br> **^-fin + [结束]**
+**bin [bind, 约束, 限制]** <br> **^band, bind, bond** <br> **^fin + [结束]**
 
 |||||
 |---|---|---|---|
@@ -97,7 +109,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |incandescent| in + cand + escent| [进入蜡烛燃烧般的状态]| (a.) 明亮灿烂的, 热情饱满的
 |kindle| | | (v.) 点燃
 
-**-cern [separate], [distinguish]** <br> **^-cert** <br> **^-crim, -cris, crit** <br> **^-cree**
+**cern [separate], [distinguish]** <br> **^cert** <br> **^crim, cris, crit** <br> **^cree**
 
 |||||
 |---|---|---|---
@@ -116,7 +128,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 | | discriminant <br> discriminating <br> discriminatory| | (n.) 可辨别的因素, 判别式. <br> (a.) =discerning. <br> (a.) 区别对待的, 歧视的.
 |hypocrisy| hypo + cris + y| [under (the level to) distinguish, 没有做出s
 
-**-cess [to go, 走] (做为 n. 更多)** <br> **^-ceed (做为 v. 更多)** <br> **^-cede**
+**cess [to go, 走] (做为 n. 更多)** <br> **^ceed (做为 v. 更多)** <br> **^cede**
 
 |||||
 |---|---|---|---
@@ -138,7 +150,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |predecessor | pre + de + cess + or | [sb. go down before] | (n.) 前辈, 前任
 |recession| re + cess + ion | [go back] | (n.) 衰退, 凹处, 不景气
 
-**chant- [sing, song]**
+**chant [sing, song]**
 enchant [(let sb) enter song] 施魔法, 使入迷
 
 **chrome [color]**
@@ -156,10 +168,10 @@ enchant [(let sb) enter song] 施魔法, 使入迷
 |chronic| chron + ic| [(lasting long) time]| (a.) 慢性的, 长期的, 习惯性的
 |synchronous| syn + chron + ous| [same time]| (a.) 同时期的, 同步的
 
-**cob- [heap, lump, rounded object]**
+**cob [heap, lump, rounded object]**
 cobble 鹅卵石
 
-**coni- [cone 圆锥, 球果]**
+**coni [cone 圆锥, 球果]**
 
 |||||
 |---|---|---|---
@@ -175,13 +187,29 @@ cobble 鹅卵石
 |credulous| cred + ul + ous| [believe too much]| (a.) 轻信的, 易受骗的
 |discredit| | | (v.) 怀疑, 使丢脸
 
-**cus- [cover 掩护]**
+**culp [guilt, 罪行]**
+
+|||||
+|---|---|---|---
+|culpable| culp + able| | (a.) 有罪的, 应被谴责的
+|exculpate| ex + culp + ate| [make sb. out of guilt]| (v.) 使无罪, 开脱
+|inculpate| in + culp + ate| [make sb. in guilt]| (v.) 归罪于
+
+**cus [cover 掩护]**
 
 |||||
 |---|---|---|---
 |custody| cus + tody| | (n.) 保管, 监护
 
 # d
+
+**damn [damage]** <br> **^demn**
+
+|||||
+|---|---|---|---
+|condemn| con[加强] + demn(=damn)| | (v.) 谴责
+|damn| | | (v.) 谴责, 该死
+|indemnity| in + demn + ity| [not damage, 将损害抵消]| (n.) 补偿, 赔偿 
 
 **demo- [people]**
 
@@ -199,7 +227,7 @@ cobble 鹅卵石
 
 # e
 
-**-es [eat 吃]** <br> **^-ed**
+**es [eat 吃]** <br> **^ed**
 这两个词根和单词 eat 同义（元音, 辅音替换组合不改变含义）
 
 |||||
@@ -308,6 +336,15 @@ cobble 鹅卵石
 
 # n
 
+**noc [hurt]** <br> **^nox** <br> **^nic**
+
+|||||
+|---|---|---|---
+|innocuous| in + noc + uous| [not hurtful]| (a.) 无害的
+|noxious| nox + ious| | (a.) 有害的, 有毒的
+|pernicious| per + nic + ious| [thoroughly hurtful]| (a.) 有害的
+
+
 **nov [new]**
 
 |||||
@@ -382,12 +419,39 @@ cobble 鹅卵石
 
 # t
 
+**tim [fear]**
+
+|||||
+|---|---|---|---
+|intimidate| in + tim + idate| [使进入害怕的状态]| (v.) 威吓
+|timorous| | | (a.) 胆小的
+
+**tric [trick]** <br> **^treac**
+
+|||||
+|---|---|---|---
+|intricate| in + tric + ate| [陷入诡计]| (a.) 错综复杂的
+|extricate| ex + tric + ate| [使逃出诡计]| (v.) 使解脱, 解救
+|treacherous| treac(h) + er + out| | (a.) 背叛的
+
+**turb [disturb]** 
+
+|||||
+|---|---|---|---
+|imperturbable| im + perturb + able| [无法被扰乱]| (a.) 淡定的, 沉着冷静的
+|perturb| per + turb| [disturb through, 从中打搅]| (v.) 扰乱, 使心神不宁
+|turbid| | | (a.) 浑浊的
+|turbulent| | | (a.) 湍急的
+
 **tum- [turn, 转]**
 
 |||||
 |---|---|---|---
+|contumacious| con[加强] + tum + acious| [用力转(也转不动)]| (a.) 不服从的, 倔强的
 |tumble| tum + ble| [turn (down)]| (v.) (使) 摔倒, 倒塌, 滚动
-| | tumbler| [经常要做出滚倒动作的人]| (n.) 不倒翁, 杂技演员
+| | tumbler| [做出滚倒动作的人]| (n.) 不倒翁, 杂技演员
+|tumor| | | (n.) 肿瘤
+|tumult| tum + ult| [turn out]| (n.) 骚动, 暴乱
 
 # u
 

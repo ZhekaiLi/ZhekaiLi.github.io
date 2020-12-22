@@ -16,6 +16,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 |||||
 |---|---|---|---
+|abysmal| a[away] + bysm + al| [base away, 无底的]| (a.) 深不可测的, 极度的, 级低的
 |accede | ac + cede | [go (in)to] | (v.) 加入, 同意, 就任
 |access | ac + cess | [go (in)to] | (v.) 接近, 访问, 获取; (n.) 通道, 进入, 使用权
 |addict | ad + dict | [to say (repeatedly)] | (v.) 沉溺, 上瘾
@@ -250,11 +251,15 @@ obloquy [speak against] 谩骂, 诽谤, 恶名, 耻辱
 |paraphernalia| para + pher + nalia| [bring beside]| 随身用具, 全套设备
 |paralyze| para + lyze| [loose sides (of body)]| 使瘫痪
 
-**per- [through]**
+**per- [through, 穿过], [thoroughly, 完全]** <br> **^pel**
 
 |||||
 |---|---|---|---
+|perfervid| per + fervid| [thoroughly hot]| (a.) 非常热情的
+|perfidy| per + fid + y| [go through trust, 穿过信任]| (n.) 不忠, 背信弃义
+|pellucid <br> = translucent| pel(=per) + luc + id| [light through]| (a.) 透明的, 清晰明了的
 |peroration| |[through oration]| 结束语
+
 
 **peri- [around]**
 
