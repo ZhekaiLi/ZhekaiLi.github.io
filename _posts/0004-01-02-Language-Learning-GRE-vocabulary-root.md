@@ -308,6 +308,48 @@ cobble 鹅卵石
 |regress | re + gress | [go back] | (v.) 逆行, 倒退
 |transgress | trans + gress | [走过 (界限)] | (v.) 越界, 违反, 犯罪
 
+# j
+
+**ject [throw]** <nr> **^jet**
+
+|||||
+|---|---|---|---
+|abject| ab + ject| [be thrown away]| (a.) 悲凉的, 可怜的, 卑微的, 无精打采的
+|conjecture| con + ject + ure| [throw (facts) together, 将事实扔到一起, 进而做出推测]| (n.) (v.) 推测, 猜测
+|deject| de + ject| [throw (spirit) down]| (v.) 使沮丧
+|jettison| jet + tison| | (v.) 丢弃
+|subject| sub + ject| [throw under, 把最重要的扔到下面/ 把自己扔到下面]| (n.) 主题, 主体, 科目; (a.) 臣服的, 受支配的
+
+**jocu [joy, joke]** <br> **^jovi, joci, joic**
+
+|||||
+|---|---|---|---
+|jocular| jocu + lar| | (a.) 搞笑的, 欢乐的
+|jocund| jocu + nd| | (a.) 欢快的, 高兴的
+|jovial| jovi + al| | (a.) 愉快的
+|rejoice| re + joic + e| | (v.) 欣喜, 喜悦
+
+**jud [judge]**
+
+|||||
+|---|---|---|---
+|adjudicate| ad + jud + icate| [to judge]| (v.) 裁决, 判定
+|judicious| jud + icious| [lots of judge]| (a.) 明智的, 慎重的
+
+**junct [join]**
+
+|||||
+|---|---|---|---
+|adjunct| ad + junct| [to join]| (n.) 附属物
+|disjunctive| dis + junct + ive| | (a.) 分离的
+
+**jur [swear, 发誓]**
+
+|||||
+|---|---|---|---
+|abjure| ab + jur(e)| [swear (being) away, 发誓远离]| (v.) 发誓放弃, 避免
+|conjure| con + jur(e)| [swear together]| (v.) 请求, 恳求, 施魔法
+
 # l
 
 **lib [free 自由]**

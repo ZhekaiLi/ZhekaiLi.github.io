@@ -34,11 +34,12 @@ keywords: [Language-Learning, GRE, Vocabulary]
 
 |||||
 |---|---|---|---
-|abdicate | ab + dic + ate | [say away] | 正式放弃（权力, 责任）
-|abduct | ab + duc + t | [lead away] | 诱拐, 绑架
-|abrogate | ab + rog + ate | [ask away] | 正式废除, 无视存在
+|abdicate | ab + dic + ate | [say away] | (v.) 正式放弃 (权力, 责任)
+|abduct | ab + duc + t | [lead away] | (v.) 诱拐, 绑架
+|abjure| ab + jur(e)| [swear (being) away, 发誓远离]| (v.) 发誓放弃, 避免
+|abrogate | ab + rog + ate | [ask away] | (v.) 正式废除, 无视存在
 |abscess | ab + scess | [(cannot) go away (from skin)] | (n.) 脓肿
-|abuse | ab + use | [(stay) away to (normal) use] | 滥用, 虐待
+|abuse | ab + use | [away to (normal) use] | (v.) 滥用, 虐待
 
 **amphi- [both sides]**
 
