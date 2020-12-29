@@ -9,11 +9,28 @@ keywords: [Python]
 ## 1 sklearn.datasets
 ### 1.1 生成数据
 ```py
-X_blobs, _ = sklearn.datasets.make_blobs(n_samples=1000, 
-    centers=10, # 团的个数
+from sklearn import datasets
+```
+生成团状样本点集
+```py
+X, y = datasets.make_blobs(n_samples=1000, 
+    # 团的个数
+    # 默认随机生成分布, 也可以自定义质心
+    # 例如 centers=[[1,2], [2,3]] 
+    centers=10,
     n_features=2, # 数据维度
     cluster_std=0.5, 
     random_state=4
+)
+```
+生成内外两个环状分布的样本点集
+```py
+X, y = datasets.make_circles(n_samples=1000, 
+    # 取值 [0, 1), 决定了内外两个环之间的距离
+    # 靠近 0 时, 内环在中央聚合成一个团
+    # 靠近 1 时, 内环外扩与外环合并
+    factor=0.5,
+    noise=0.05 # 噪音
 )
 ```
 ## 2 sklearn.matrics

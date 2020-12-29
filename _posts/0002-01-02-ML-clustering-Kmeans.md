@@ -1,42 +1,22 @@
 ---
 layout: post
-title: Cluster Algorithm
+title: Clustering Algorithm 01 - K-means
 categories: Machine-Learning
 description: Personal Notes
 keywords: [Machine-Learning, Python]
 ---
 
-**Reference**
-1.[万门大学: 实用数据挖掘与人工智能一月特训班，第26讲: 聚类与代码实战](https://www.wanmen.org/courses/59df20a60dcf357a8bc0000c/lectures/5aab7757f1f2ef4816e8634f)
-2.[scikit-learn clustering](https://scikit-learn.org/stable/modules/clustering.html)
+# K-means
 
-# 1 Introduction
-- **Partitioning based clustering:** K-means, Mean shift
-- **Hierarchical clustering:** Agglomerative clustering, BIRCH
-- **Density based clustering:** DBSCAN
-- **Model based clustering:** GMM
+K-means, 即 k-均值聚类算法, 属于非监督学习
 
-## 1.1 Basic components
-### 1.1.1 Cluster
-The cluster is defined to 
-1. maximize the similarity inside the cluster
-2. minimize the similarity between clusters
-
-### 1.1.2 Distance
-1. **Minkowski Distance:**
-$$dist_{mk}=(\sum_{i=1}^n\vert x_i-y_i\vert^p)^{\frac{1}{p}}$$
-2. **Euclidean Distance:** $dist_{mk}$ with $t=2$
-$$dist_{mk}=\sqrt{\sum_{i=1}^n\vert x_i-y_i\vert^2}$$
-
-# 2 Partition Based Clustering
-## 2.1 K-means
-### 2.1.1 Object 
+## 1 Object 
 Given number $k$ and data $D=\lbrace x_1,...,x_m\rbrace$, divide the data into $k$ different clusters $C=\lbrace C_1,...,C_k\rbrace$ with the **least square error (LSE)**
 $$LSE=\sum_{i=1}^k\sum_{x\in C_i}\|x-u_i\|^2$$
 
 where $u_i$ is the centroid of cluster $C_i$
-### 2.1.2 Procedure (pseudocode)
-
+## 2 Procedure (pseudocode)
+以下是伪代码
 ```py
 # Randomly select k number of data as the initial cluster centroids
 centroids = [random select] 
@@ -54,8 +34,8 @@ while LSE_last != LSE:
     centroids, LSE, clusters = Renew()
 ```
 
-### 2.1.3 Code
-#### 2.1.3.1 Use basic python
+## 3 Code
+### 3.1 Use basic python
 ```py
 import numpy as np
 import matplotlib.pyplot as plt
@@ -120,7 +100,7 @@ plt.scatter(X[:, 0], X[:, 1], color = colors[clusters]
 ```
 ![pic1](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-27_20-28-31.jpg)
 
-#### 2.1.3.2 Use KMeans in sklearn
+### 3.2 Use KMeans in sklearn
 ```py
 import numpy as np
 import matplotlib.pyplot as plt
@@ -134,15 +114,15 @@ y_pred = KMeans(n_clusters=k, random_state=random_state).fit_predict(X)
 colors = np.array(['#377eb8', '#ff7f00', '#4daf4a', '#a65628'])
 plt.scatter(X[:, 0], X[:, 1], color = colors[clusters])
 ```
-#### 2.1.3.3 Compare
+### 3.3 Compare
 The running time of my code is **at most half** of that of KMeans in sklearn. There is still much space to improve since I still use `for` loop and did not use Broadcast very well.
 
-### 2.1.4 Cons and pros
-**Pros**
+## 4 Cons and pros
+### Pros
 1. Easy and direct.
 2. Running time is short when $k$ is not too large.
 
-**Cons**
+### Cons
 1. Need the number of clusters $k$ first.
 2. Sensitive to the initial centroids. For example,
 ![pic2](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-27_21-28-31.jpg)
@@ -150,27 +130,3 @@ The running time of my code is **at most half** of that of KMeans in sklearn. Th
 3. Suitable for only circle like distribution, and therefore does not work well on other distribution shapes. For example,
 ![pic3]()
 4. Sensitive to noise. (Could use the **median but not mean** to generate centroids)
-
-## 2.2 BIRCH
-BIRCH, 全称 Balanced Iterative Reducing and Clustering Using Hierarchies, 简言之就是使用一种特殊的树结构, 聚类特征树 CF-tree (Clustering Feature Tree), 以实现快速聚类.
-
-### 2.2.1 Backgrouds
-> #### CF 聚类特征
-> Define $CF$ as 
-$$CF_i=(N_i,LS_i,SS_i)$$
->
-> where,
-$i$: 第 $i$ 个簇 <br> $N_i$: 第 $i$ 个簇所包含的样本个数 <br> $LS_i$: Linear Sum. 第 $i$ 个簇中所有样本点的线性和 <br> $SS_i$: Squre Sum. 第 $i$ 个簇中所有样本点的平方和
-
-例如, 若簇 $i$ 包含 $(1,2),(2,4)$ 这两个样本点, 则有 <br> $N_i=2$ <br> $LS_i=(1,2)+(2,4)=(3,6)$ <br> $SS_i=(1^2,2^2)+(2^2,4^2)=(5,20)$
-
-**Theorem:** $CF$ 具有**良好的可加性**. 令两个不相交簇 $i,j$ 的聚类特征分别为 $CF_i,CF_j$, 则由簇 $i,j$ 合并而成的大簇的聚类特征为 $CF_i+CF_j$
-
-> #### CF-tree 聚类特征树
-
-
-## 2.3 DBSCAN
-
-
-
-
