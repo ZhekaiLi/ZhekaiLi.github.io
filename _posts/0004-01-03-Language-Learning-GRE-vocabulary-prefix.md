@@ -41,10 +41,11 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |abscess | ab + scess | [(cannot) go away (from skin)] | (n.) 脓肿
 |abuse | ab + use | [away to (normal) use] | (v.) 滥用, 虐待
 
-**amphi- [both sides]**
+**amphi [both sides]** <br> **ambi**
 
 |||||
 |---|---|---|---|
+|ambivalent| ambi + val + ent| [both sides strong, 两边都很有道理]| (a.) 矛盾的 
 |amphibian| amphi + bi + (i)an| [biology lives in both water and land]| (n.) 两栖动物; (a.) 两栖类的
 
 **anc- [old], [以前]** <br> **^ant-** <br> **^ante-, anti-**
@@ -115,18 +116,20 @@ denounce [announce down] 谴责, 公然抨击
 |||||
 |---|---|---|---
 |digress | di + gress | [go apart] | (v.) 离题, 走向岔道
+|discern| dis + cern| [distinguish different ...]| (v.) 觉察出, 识别, 辨别
+|dispensable | dis[away] + pens + able | [able to hang away, 可以挂在一边的]| (a.) 可有可无的
+|dissonance| | [apart (in) sound]| (n.) (音调) 不和谐, 刺耳；不一致, 分歧
 |diverge| di + ver + ge| [turn apart]| (v.) 分歧, 分叉, 偏离
 |divert| di + vert| [turn to different ...]| (v.) 转移, 使转向
-|discern| dis + cern| [distinguish different ...]| (v.) 觉察出, 识别, 辨别
-|dissonance| | [apart (in) sound]| (n.) (音调) 不和谐, 刺耳；不一致, 分歧
-
-
-
 
 # e
 
-**en- [enter]**
-enchant [(let sb) enter song] 施魔法, 使入迷
+**en- [enter], [make]**
+
+|||||
+|---|---|---|---
+|enchant| | [(let sb) enter song]| (v.) 施魔法, 使入迷
+|engender| en + gen + (d)er| [make generate]| (v.) 产生, 出现
 
 
 **equi [equal]**
@@ -209,6 +212,7 @@ limp 软的, 无力的；跛行
 
 |||||
 |---|---|---|---
+|malign| mal + i + gn(=gen)| [generate bad]| (a.) 恶意的; (v.) 诽谤
 |maltreat| mal + treat| [treat badly]| (v.) 虐待, 滥用
 |malversation| mal + vers + ation| [turn bad]| (n.) (政府机关) 盗用, 贪污, 渎职
 
@@ -285,12 +289,14 @@ provoke [call forth] 驱使, 煽动, 激怒
 
 # r
 
-**re- [not], [back], [again]**
+**re- [not], [back, again], [against], [opposite]**
 
 |||||
 |---|---|---|---
 |refulgent| re + fulg + ent| [shine back and again]| (a.) 辉煌的
 |renounce| |[announce against]| 正式放弃, 宣布决裂
+|reprobate| re[opposite] + prob + ate| [反向证明]| (n.) 堕落者, 道德败坏的人; (a.) 堕落的, 放荡的; (v.) 拒绝, 谴责
+|reprove| re[against] + prob + ate| [prove against]| (v.) 警告, 责骂
 |resonant| |[sound back]| 洪亮的, 共鸣的
 |revenue| re + ven + ue | [(money) come back] | (n.) 收入 = income
 |reverberate| |[word back]| 回响, 回荡 
@@ -299,7 +305,6 @@ provoke [call forth] 驱使, 煽动, 激怒
 |revoke| |[call back]| 撤回, 宣告无效
 |revolt| re + volt| [turn back]| (v.) (n.) 违抗, 反叛, 起义
 |revolve| re + vol + ve| [turn again]| (v.) 旋转, 使旋转, 反复出现
-
 
 # s
 

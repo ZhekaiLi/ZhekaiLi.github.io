@@ -59,9 +59,6 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |abysmal| a[away] + bysm + al| [base away, 无底的]| (a.) 深不可测的, 极度的, 级低的
 |debase| | | (v.) 降低, 贬低
 
-
-
-
 **bi [biology]**
 这是作为词根时的含义, 当作为前缀时表示 "double"
 
@@ -85,7 +82,13 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |definite| de + fin + ite| [加强限制]| (a.) 一定的, 确切的
 |definitive| | | (a.) 最后的, 最佳的, 最权威的
 
-**bon [good]**
+**bell [war]**
+
+|||||
+|---|---|---|---|
+|belligerent| bell + i + ger + ent| [bring war]| (a.) 好斗的, 好战的
+
+**bon [good]** <br> **^ben**
 
 |||||
 |---|---|---|---|
@@ -168,6 +171,22 @@ enchant [(let sb) enter song] 施魔法, 使入迷
 |chronic| chron + ic| [(lasting long) time]| (a.) 慢性的, 长期的, 习惯性的
 |synchronous| syn + chron + ous| [same time]| (a.) 同时期的, 同步的
 
+**cid [fall]** <br> **^cad, cas** <br> 该词根也引申指 "事件的意外**降临**", 例如 casual, case, accident
+
+|||||
+|---|---|---|---
+|cascade| cas + cad(e)| [fall and fall]| (n.) 小瀑布
+|decadent| decad(e) + ent| | (a.) 堕落的, 腐败的; (n.) 堕落的人, 放纵者
+|recidivate| re + cid + ivate| [fall back]| (v.) 再犯, 重犯(罪行)
+
+**cit [arouse]** 
+
+|||||
+|---|---|---|---
+|incite| in + cit(e)| [arouse in, 从内部唤醒]| (v.) 煽动, 激起
+|resuscitate| re + sus(=sub) + cit + ate| [从下面才起唤醒]| (v.) 使复活, 使苏醒
+|solicitous| sol[entire] + i + cit + ous| [arouse entire]| (a.) 热心的, 热切的
+
 **cob [heap, lump, rounded object]**
 cobble 鹅卵石
 
@@ -217,6 +236,12 @@ cobble 鹅卵石
 |---|---|---|---
 |demographics| demo + graph + ics| [about people recording]| (n.) 人口统计资料
 
+**dict [say]**
+
+|||||
+|---|---|---|---
+|valediction| val(e) + dict + ion| [say "be strong and valuable"]| (n.) 告别演说, 告别词
+
 **duc(t) [lead 引导]**
 
 |||||
@@ -237,21 +262,36 @@ cobble 鹅卵石
 
 # f
 
-**-fer [carry, bring 带来, 发生, 怀有]** <br> **^-fur** <br> **^-pher** <br> **^-phor**
+**fall [false]**
 
 |||||
 |---|---|---|---
+|fallacious| fall + acious| [lots of false]| (a.) 谬误的, 欺骗性的
+|fallible| fall + ible| [able to be false]| (a.) 可能出错的
+|felony| fel(=fell=fall) + ony| | (n.) 重罪
+
+**fer [carry, bring 带来, 发生, 怀有]** <br> **^fur** <br> **^ger** <br> **^pher, phor**
+
+|||||
+|---|---|---|---
+|aphorism| a + phor + rism| | (n.) 格言, 警句
+|belligerent| bell + i + ger + ent| [bring war]| (a.) 好斗的, 好战的
 |circumference| circum + fer + ence| [carry around]| (n.) 周长, 圆周
 |conifer| coni + fer| [(plants) that carry cones 带着球果的植物]| (n.) 针叶树
+|defer| de + fer| [bring down]| (v.) 延迟, 遵从
+|| deference| | (n.) 尊崇, 顺从
+|euphoria| eu + phor + ia| [(sth.) that can bring well feeling, "ia" 通常作为医学名词后缀]| (n.) (医)狂喜症, 狂喜
+|euphoric| eu + phor + ic| | (a.) 欣快的
+|indifferent| in + different| (a.) 冷漠的, 不关心的, 中规中矩的, 一般的
 |metaphor| meta + phor| [carry change 带着改变]| (n.) 暗喻, 隐喻
+|paraphernalia| para + pher + nalia| [bring beside]| (n.) 随身用具, 全套设备
 |periphery| peri + pher + y| [carry around]| (n.) 外围, 边缘, 圆周
 |pestiferous| pest + i + fer + ous| [pest that bring (illness)]| (a.) 传播疾病的
 |phosphorus| phos + phor + us| [(sth.) that bring light]| (n.) 磷
 |prefer| pre + fer | [bring before]| (v.) 更喜欢
 | | preferable <br> preferential| | (a.) 更好的 <br> (a.) 优先的
-|euphoric| eu + phor + ic| | (a.) 欣快的
-|euphoria| eu + phor + ia| [(sth.) that can bring well feeling, "ia" 通常作为医学名词后缀]| (n.) (医)狂喜症, 狂喜
-|paraphernalia| para + pher + nalia| [bring beside]| (n.) 随身用具, 全套设备
+|proffer| pro + (o)ffer| [offer forth]| (v.) 献出, 提供
+|referee| refer + ee| [who is referred]| (n.) 仲裁者, 裁判员
 |vociferous| voci + fer + ous| [bring (too much) voice]| (a.) 喧哗的
 
 **ferv [hot]**
@@ -287,7 +327,24 @@ cobble 鹅卵石
 
 # g
 
-**graph [record]** <br>
+**gen [generate], [gentle]**
+
+gene
+
+|||||
+|---|---|---|---
+|benign| ben(=bon) + i + gn(=gen)| [generate good]| (a.) 好心的, 仁慈的
+|engender| en + gen + (d)er| [make generate]| (v.) 产生, 出现
+|genial <br> = congenial| | [gentle]| (a.) 和蔼亲切的, 友好的
+|genteel| | [gentle]| (a.) 有教养的, 不粗俗的
+|homogenize| homo + gen + ize| [generate same]| (v.) 使统一化
+|indigenous| in(di) + gen + ous| [generate in, 在内部产生]| (a.) 土产的, 本地的, 天生的
+|ingenious| | | (a.) 聪明的
+|ingenuous| in + gen + uous| [in generating state, 处于新生状态的]| (a.) 坦白的, 天真淳朴的
+|malign| mal + i + gn(=gen)| [generate bad]| (a.) 恶意的; (v.) 诽谤
+|| malignant| | (a.) 恶毒的, 有害的
+
+**graph [record]**
 
 |||||
 |---|---|---|---
@@ -352,6 +409,13 @@ cobble 鹅卵石
 
 # l
 
+**laps [fall]** <br> 引申为**犯错** 
+
+|||||
+|---|---|---|---
+|lapse| | | (n.) 小错, 过失; (v.) 结束, 终止
+|relapse| re + laps(e)| [fall back]| (n.) (v.) 返回原状, 再犯, 旧病复发
+
 **lib [free 自由]**
 
 |||||
@@ -359,9 +423,6 @@ cobble 鹅卵石
 |liberal| | | (a.) 自由主义的, 思想前卫的, 慷慨的
 |libertine| | | (n.) 浪子, 放荡不羁的人
 |ad-lib| | | (a.) 即兴的
-
-
-
 
 **luc [light]** <br> **^lumin** <br> **^lust, lustr**
 
@@ -375,6 +436,28 @@ cobble 鹅卵石
 |luminary| lumin + ary| [光芒四射(的人)]| (n.) 杰出人物, 发光体
 |lustrous| lustr + ous| | (a.) 有光泽的
 |pellucid <br> = translucent| pel(=per) + luc + id| [light through]| (a.) 透明的, 清晰明了的
+
+**lud [play]** <br> **^lus**
+
+|||||
+|---|---|---|---
+|allude| al(=ad) + lud + e| [to play (music), 弦外之音]| (v.) 暗指, 间接提到
+|collude| col(=com) + lud + e| [play together]| (v.) 串通, 共谋(坏事)
+|delusion| | [down play]| (n.) 错觉, 妄想
+|elude| e(=ex) + lud + e| [play out, 捉迷藏]| (v.) 躲闪, 躲避, 使困惑， 使无法达到
+|ludicrous| lud + icrous| [too much play]| (a.) 荒唐的, 可笑的
+
+# m
+
+**mot [move]** <br> **^mat**
+
+|||||
+|---|---|---|---
+|automatic| auto + mat + ic| [self move]| (a.) 自动的, 自发的
+|commotion| com + mot + ion| [move together]| (n.) 骚乱, 动乱
+|demote| de + mot + e| [move down]| (v.) 降职, 降级
+|motile| | | (a.) 能动的
+
 
 # n
 
@@ -409,15 +492,20 @@ cobble 鹅卵石
 |---|---|---|---
 |pediatrics| pedi + atr + ics| [subject about child]| (n.) (医)儿科
 
-**-pen [pay, 付钱], [hang, 悬挂]** <br> **^-pens** <br> **^(s)pend** <br> **^(s)pon** 
+**pen [pay, 付钱], [hang, 悬挂]** <br> **^pens, pend** <br> **^(s)pon** 
+
+depend, pending
 
 |||||
 |---|---|---|---
+|compendium| com + pend + ium| [将(主要的东西)挂在一起]| (n.) 摘要, 目录
 |dependency| de + pend + ency| | (n.) 属国, 从属物
-|dispensable| | | (a.) 可有可无的
+|dispensable | dis[away] + pens + able | [able to hang away, 可以挂在一边的]| (a.) 可有可无的
+|| indispensable | in + dispensable| (a.) 必不可少的
 |expenditure <br> = expense| | | (n.) 花费, 开支
+|impending| im + pending| | (a.) 迫切的, 即将发生的
 |pendant| pend + ant| | (n.) 坠饰, 吊灯
-|pendent <br> = pending| pend + ent| | (a.) 下垂的, 悬而未决的
+|pendent <br> = pending| pen   d + ent| | (a.) 下垂的, 悬而未决的
 |pendular| | | (a.) 摆动的
 |pendulous| | | (a.) 下垂的, 悬垂的
 |pendulum| | | (n.) 钟摆
@@ -442,6 +530,52 @@ cobble 鹅卵石
 |pious| pi + ous| | (a.) 虔诚的, 忠诚的
 |impious| | | (a.) 不敬神的
 
+**ple [fill]** <br> **^plet, plen**
+
+complete, plenty
+
+|||||
+|---|---|---|---
+|complementary| com + ple + mentary| [fill together]| (a.) 互补的
+|deplete| de + ple + te| [fill away]| (v.) 耗尽, 使衰竭
+|plebeian| ple + be + ian| [be filled, 大量存在的(人)]| (a.) 平民的, 社会下层的
+|plentitude| | | (n.) 大量
+|replenish| re + plen + ish| [fill again]| (v.) 补充
+|replete| re + plet + e| [filled again]| (a.) 吃饱的, 充满...的, 富于...的
+
+**port [carry]**
+
+|||||
+|---|---|---|---
+|deportation| de + port + ation| [carry away]| (n.) 放逐
+|importune| | [not carry, 不带来就不行]| (v.) 哀求, 迫切请求
+|opportune| | | (a.) 适合的
+|rapport| ra(=re) + (p)port| [carry agian, 一直带在身边]| (n.) 和睦, 友好
+
+**prob [test], [prove]** <br> **^prov**
+
+probable, approve
+
+|||||
+|---|---|---|---
+|approbation| | | (n.) 同意
+|probity| prob + ity| [prove (to be right), 经受得住检验的]| (n.) 正直
+|proofread| proof + read| [为了证实无误而阅读]| (v.) 校对
+|reprobate| re[opposite] + prob + ate| [反向证明]| (n.) 堕落者, 道德败坏的人; (a.) 堕落的, 放荡的; (v.) 拒绝, 谴责
+|reprove| re[against] + prob + ate| [prove against]| (v.) 警告, 责骂
+
+
+# q
+
+**quir [ask, seek]** <br> **^quis**
+
+|||||
+|---|---|---|---
+|exquisite| ex + quis + ite| [seek (in and) out, 里外都找过的]| (a.) 细致精巧的, 程度强烈的
+|inquisitive| in + quis + itive| [ask into]| (a.) 过分好奇的
+|perquisite| per + quis + ite| [through seek, 通过寻求得到的]| (n.) 额外的好处
+|prerequisite| pre + requis(=require) + ite| | (n.) 前提, 先决条件
+ 
 # r
 
 **rect [right 直]**
@@ -453,11 +587,28 @@ cobble 鹅卵石
 
 # s
 
-**se- [sex]**
+**scend [climb]**
+
+|||||
+|---|---|---|---
+|ascendant| ascend + ant| | (a.) 上升的, 有影响力的; (n.) 优势
+|condescend| con + de + scend| [climb down]| (v.) 屈尊, 俯就
+|| condescending| | (a.) 居高临下的, 表现出优越感的
+|crescendo| cre + scend + o| [climb and increase]| (n.) (v.) (声音)渐强
+|transcend| tran + scend| [climb across]| (v.) 超越
+
+**se [sex]**
 
 |||||
 |---|---|---|---
 |seduce| se + duce| [lead to sex]| (v.) 引诱, 诱奸
+
+**surg [rise]**
+
+|||||
+|---|---|---|---
+|insurgent| in + surg + ent| [rise in, 在内部]| (n.) 叛乱分子
+|resurgence| re + surg + ence| [rise back]| (n.) 复兴
 
 # t
 
@@ -515,7 +666,33 @@ cobble 鹅卵石
 
 # v
 
-**-van [come, 过来]** <br> **^-ven** <br> **^-vent**
+**vac [empty]** <br> **^van**
+
+|||||
+|---|---|---|---
+|evacuate| e(=ex) + vac + uate| [let empty out]| (v.) 撤空, 撤退
+|evanescent| e + van + escent[(a.) become]| [become empty out]| (a.) 逐渐消逝的, 短暂的
+|vacuous| vacuum 的形容词形式| | (a.) 空的, 空虚的, 无意义的
+
+**val [strong], [value]**
+
+|||||
+|---|---|---|---
+|ambivalent| ambi + val + ent| [both sides strong, 两边都很有道理]| (a.) 矛盾的
+|convalesce| con + val + esce[(v.) become]| [become strong]| (v.) 渐渐康复
+|unavailing| un + availing(=available)| | (a.) 徒劳的, 无用的
+|valediction| val(e) + dict + ion| [say "be strong and valuable"]| (n.) 告别演说, 告别词
+|valiant| val + iant| | (a.) 勇敢的, 英勇的
+
+
+**vari- [vary, change]**
+
+|||||
+|---|---|---|---
+|variability| vari + ability| [ability to vary]| (n.) 可变性, 变化性
+|variegate| vari + eg + ate| [使发生 (颜色上) 的变化]| (v.) 使杂色, 使丰富多彩, 使多样化
+
+**ven [come, 过来]** <br> **^vent** <br> **^van**
 
 |||||
 |---|---|---|---
@@ -528,13 +705,6 @@ cobble 鹅卵石
 | | intervening | | (a.) 介于...中间的, 在...期间内的
 |preventative = preventive| prevent + ative (=ive) | | (a.) 预防性的, 预备的
 |revenue | re + ven + ue | [(money) come back] | (n.) 收入 = income 
-
-**vari- [vary, change]**
-
-|||||
-|---|---|---|---
-|variability| vari + ability| [ability to vary]| (n.) 可变性, 变化性
-|variegate| vari + eg + ate| [使发生 (颜色上) 的变化]| (v.) 使杂色, 使丰富多彩, 使多样化
 
 **-ver [to turn, 转], [扭转]** <br> **^-vers, -vert** <br> **^-vel, -vol** <br> **^-wal, -wil** <br> **^-wer, -wor** <br> **^-wra, -wre, -wri, -wry**
 
@@ -592,6 +762,17 @@ cobble 鹅卵石
 |writhe| | | (v.) 翻滚, 蠕动, 扭曲
 |wry| | | (a.) 歪斜的, 扭曲的; (n.) 扭曲
 
+**veri [true]**
 
+|||||
+|---|---|---|---
+|veracious| ver(i) + acious| | (a.) 诚实的, 精准的
+|verisimilar| veri + similar| [similar to be true]| (a.) 貌似真实的
+|veritable| veri + (i)t + able|  | (a.) 真正的, 确实的
 
+**vol [will]** <br> **同 vell 时表示 turn, 扭转**
 
+|||||
+|---|---|---|---
+|malevolent| mal(e) + vol + ent| [bad will]| (a.) 恶意的, 恶毒的
+|volition| vol + ition| | (n.) 意志, 决断力

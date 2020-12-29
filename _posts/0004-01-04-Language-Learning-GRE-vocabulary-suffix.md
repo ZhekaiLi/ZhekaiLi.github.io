@@ -51,6 +51,24 @@ precedence (n.) 优先 (相较于 precedent "先例, 先前的" 中的 ent, ence
 |---|---|---|---
 |vertebra| vert + e + bra| [(控制身体) 扭转的工具]| (n.) 脊椎
 
+# c
+
+**-cious [lots of]**
+
+|||||
+|---|---|---|---
+|fallacious| fall + acious| [lots of false]| (a.) 谬误的, 欺骗性的
+|judicious| jud + icious| [lots of judge]| (a.) 明智的, 慎重的
+|veracious| ver(i) + acious| | (a.) 诚实的, 精准的
+
+# e
+
+**-esce [(v.) become]** <br> **-escent [(a.) become]**
+
+|||||
+|---|---|---|---
+|convalesce| con + val + esce[(v.) become]| [become strong]| (v.) 渐渐康复
+|evanescent| e + van + escent[(a.) become]| [become empty out]| (a.) 逐渐消逝的, 短暂的
 
 # g
 

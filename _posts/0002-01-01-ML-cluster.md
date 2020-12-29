@@ -29,12 +29,12 @@ $$dist_{mk}=(\sum_{i=1}^n\vert x_i-y_i\vert^p)^{\frac{1}{p}}$$
 $$dist_{mk}=\sqrt{\sum_{i=1}^n\vert x_i-y_i\vert^2}$$
 
 # 2 Partition Based Clustering
-> ## Alogrithm 2.1 K-means
-> ### 2.1.1 Object 
-> Given number $k$ and data $D=\lbrace x_1,...,x_m\rbrace$, divide the data into $k$ different clusters $C=\lbrace C_1,...,C_k\rbrace$ with the **least square error (LSE)**
+## 2.1 K-means
+### 2.1.1 Object 
+Given number $k$ and data $D=\lbrace x_1,...,x_m\rbrace$, divide the data into $k$ different clusters $C=\lbrace C_1,...,C_k\rbrace$ with the **least square error (LSE)**
 $$LSE=\sum_{i=1}^k\sum_{x\in C_i}\|x-u_i\|^2$$
->
-> where $u_i$ is the centroid of cluster $C_i$
+
+where $u_i$ is the centroid of cluster $C_i$
 ### 2.1.2 Procedure (pseudocode)
 
 ```py
@@ -151,6 +151,25 @@ The running time of my code is **at most half** of that of KMeans in sklearn. Th
 ![pic3]()
 4. Sensitive to noise. (Could use the **median but not mean** to generate centroids)
 
+## 2.2 BIRCH
+BIRCH, 全称 Balanced Iterative Reducing and Clustering Using Hierarchies, 简言之就是使用一种特殊的树结构, 聚类特征树 CF-tree (Clustering Feature Tree), 以实现快速聚类.
+
+### 2.2.1 Backgrouds
+> #### CF 聚类特征
+> Define $CF$ as 
+$$CF_i=(N_i,LS_i,SS_i)$$
+>
+> where,
+$i$: 第 $i$ 个簇 <br> $N_i$: 第 $i$ 个簇所包含的样本个数 <br> $LS_i$: Linear Sum. 第 $i$ 个簇中所有样本点的线性和 <br> $SS_i$: Squre Sum. 第 $i$ 个簇中所有样本点的平方和
+
+例如, 若簇 $i$ 包含 $(1,2),(2,4)$ 这两个样本点, 则有 <br> $N_i=2$ <br> $LS_i=(1,2)+(2,4)=(3,6)$ <br> $SS_i=(1^2,2^2)+(2^2,4^2)=(5,20)$
+
+**Theorem:** $CF$ 具有**良好的可加性**. 令两个不相交簇 $i,j$ 的聚类特征分别为 $CF_i,CF_j$, 则由簇 $i,j$ 合并而成的大簇的聚类特征为 $CF_i+CF_j$
+
+> #### CF-tree 聚类特征树
+
+
+## 2.3 DBSCAN
 
 
 
