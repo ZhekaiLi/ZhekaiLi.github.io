@@ -18,9 +18,6 @@ $$Ax=\lambda x$$
 **Corollary 1:** 
 $$A^nx=\lambda^nx,A^{-1}x=\lambda^{-1}x$$
 
-**Corollary 2:**
-$$a_{11}+...+a_{nn}=\lambda_1+...+\lambda_n$$
-
 > #### Def 2: Characteristic polynomial
 > The characteristic polynomial of $A_{n\times n}$ has degree $n$
 > $$\delta_A(\lambda)=\det(A-\lambda I)$$
@@ -30,6 +27,10 @@ $$a_{11}+...+a_{nn}=\lambda_1+...+\lambda_n$$
 > #### Def 3: Trace 矩阵的迹
 > $$\text{tr}(A)=\sum_{k=1}^n a_{kk}=\sum_{k=1}^n \lambda_k$$
 
+> #### About Eigenvlues, Eigenvector, rank and trace
+> 1. $n$ 阶矩阵有 $n$ 个特征值
+> 2. 对称矩阵的秩 = 非零特征值的个数
+> 3. 
 
 ## 6.2 Diagonalizing a Matrix
 > #### Def 1: Diagonalizable matrix 可对角化矩阵
@@ -37,10 +38,9 @@ $$a_{11}+...+a_{nn}=\lambda_1+...+\lambda_n$$
 > $$A=X\Lambda X^{-1}$$
 > 
 > 判断一个矩阵是否为可对角化矩阵主要有以下几个途径
-> 1. $n$ 个线性无关的特征向量
+> 1. $n$ 个不同的特征值/ $n$ 个线性无关的特征向量
 > 2. 代数重数 = 几何重数
-> 3. $n$ 个不同的特征值
-> 4. 实对称矩阵
+> 3. 实对称矩阵
 
 当存在相同的特征根时, $A$ **might** have too few independent eigenvectors. Then $X^{-1}$ fails.
 

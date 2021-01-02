@@ -49,13 +49,15 @@ Positive definite matrices and quadratic forms
 
 ## 18.1 正定矩阵
 
+**首先要明确定义, 正定矩阵的"正"体现在其特征值都是正数.**
+
+**其次要知晓前提, 即必须是一个对称矩阵**
+
 > #### Def 1: Positive definite matrices (eigenvalues base)
 > A **symmetric matrix** $A\in\mathbb{C}^{n\times n}$ is said to be positive definite if all its **eigenvalues are positive**
 
 > #### Def 2: Energy base definition
 > $x^TAx$ is interpreted as "energy of $x$", 正定就意味着对于任意 $x\in\mathbb{R}^n,x\neq 0$, 都有 $x^TAx > 0$ 
-
-**Theorem 1**: Def 1 $\iff$ Def 2
 
 **等效性质** (以下性质可于正定互推)
 - All pivots are positive

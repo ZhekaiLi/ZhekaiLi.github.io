@@ -19,7 +19,7 @@ D4.5 略
 
 D5.1 见 [Chapter-10](https://zhekaili.github.io/2020/11/22/Math415-chapter-10/#101-graphs-and-networks)
 
-D5.4 见 [Week-07](https://zhekaili.github.io/2020/11/22/Math415-slides-week-07/#113-projection-of-a-vector-onto-a-subspace-in-mathbbrn)
+D5.4 见 [Week-07](https://zhekaili.github.io/0001/04/07/Math415-slides-week-07/#113-projection-of-a-vector-onto-a-subspace-in-mathbbrn)
 > **Prjection matrix $P$**
 > The projection $p$ of vector $b$ onto $S=C(A)$ is
 $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
@@ -112,7 +112,7 @@ Jordan Form, 略
 
 ## HW5
 
-HW5.4 见 [Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/#821-matrices-of-linear-transformations-general-case) 的最后两个例子
+HW5.4 见 [Week-05](https://zhekaili.github.io/0001/04/05/Math415-slides-week-05/#821-matrices-of-linear-transformations-general-case) 的最后两个例子
 
 ## HW6
 

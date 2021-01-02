@@ -18,9 +18,10 @@ X, y = datasets.make_blobs(n_samples=1000,
     # 默认随机生成分布, 也可以自定义质心
     # 例如 centers=[[1,2], [2,3]] 
     centers=10,
-    n_features=2, # 数据维度
+    n_features=2,  # 数据维度
     cluster_std=0.5, 
-    random_state=4
+    random_state=4,
+    s=10  # 样本点的大小
 )
 ```
 生成内外两个环状分布的样本点集
@@ -36,7 +37,7 @@ X, y = datasets.make_circles(n_samples=1000,
 ## 2 sklearn.matrics
 ### 2.1 Value the clustering 检查聚类算法的性能
 ```py
-sklearn.matrics.silhouette_score(X_blobs, # 原数据
-    class_prediction # 分类标签, 例如以下表示有三类 array([0, 1, 2, 1, 1, 2])
+sklearn.matrics.silhouette_score(X_blobs,  # 原数据
+    class_prediction  # 分类标签, 例如以下表示有三类 array([0, 1, 2, 1, 1, 2])
 )
 ```

@@ -124,9 +124,12 @@ The running time of my code is **at most half** of that of KMeans in sklearn. Th
 
 ### Cons
 1. Need the number of clusters $k$ first.
-2. Sensitive to the initial centroids. For example,
+2. Sensitive to the initial centroids. For example, the unsuitable initial centroids make the result looked awful. The algorithm **Kmeans++** introduced next could help to avoid that.
+
 ![pic2](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/Snipaste_2020-11-27_21-28-31.jpg)
-**Kmeans++** introduced in **Part 2.1.5** could help to save that.
+
 3. Suitable for only circle like distribution, and therefore does not work well on other distribution shapes. For example,
+
 ![pic3]()
+
 4. Sensitive to noise. (Could use the **median but not mean** to generate centroids)

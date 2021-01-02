@@ -8,27 +8,31 @@ keywords: Math415，Calculas，Matrix
 **ATTENSION - If some LeTeX equations could not show well, pleae try to refresh this page.**
 
 # L1
-1. 矩阵乘法：需满足列数 = 行数，即 $(a\times b)(b\times c)$
-2. 对于单位矩阵 $I_{n\times n}$，以及可逆矩阵 $A_{n\times n}$，满足
-$A=IA=AI$
-$A^{-1}A=AA^{-1}=I$
-3. 点乘 Dot Product
-$x,y\in\mathbb{R}^n$
-$x\cdot y=x^T y=\sum_{i=1}^n x_i y_i$
-$x\cdot y=y\cdot x$
-但是对于 $x,y\in \mathbb{C}^n$，点乘的定义不同
-4. 范式
-$||x||=(\sum_{i=1}^n|x_i|^2)^{1/2}=(x\cdot x)^{1/2}$
+
+> #### Def 1: 矩阵乘法
+> 需满足列数 = 行数，即 $A_{m\times n}B_{n\times l}$ <br> 由此可得 
+$$AB=(a_1,...,a_n)\begin{pmatrix}
+b_1 \\
+... \\
+b_n
+\end{pmatrix}$$
+
+> #### Def 2: 点乘 Dot Product
+> $x,y\in\mathbb{R}^n$ <br> $x\cdot y=x^T y=\sum_{i=1}^n x_i y_i$ <br> $x\cdot y=y\cdot x$ <br> 但是对于 $x,y\in \mathbb{C}^n$，点乘的定义不同
+
+> #### Def 3: 范式 Norm
+> $||x||=(\sum_{i=1}^n|x_i|^2)^{1/2}=(x\cdot x)^{1/2}$
+
+> #### Def 4: Conditions of solutions of $Ax=b$
+> 讨论 $Ax=b$ 的解的情况, 相当于讨论几个方程与几个未知数之间的关系, 结论是: **显然是没什么关系**, 基本都需要具体讨论, 譬如当方程数多未知数时并不一定会出现无限个解, 因为可能出现两个及以上方程矛盾从而导致无解
 
 # L2
 ## 2.1 Lines on $\mathbb{R}^2$
 $L$ is a line if stasify
 $$L=\{(x,y):ax+by=c\}$$
-where,
-1. $a,b,c,x,y\in \mathbb{R}$
-2. $\vert a\vert+\vert b\vert\neq 0$
+where, $\vert a\vert+\vert b\vert\neq 0$
 
-**EX**
+**Examples**
 1. $x=1,\;L=\{(1,y),y\in\mathbb{R}\}$
 2. $y=x+1,\;L=\{(x,x+1),x\in\mathbb{R}\}$
 
@@ -37,7 +41,7 @@ $$P=\{(x,y,z)\in\mathbb{R}^3:ax+by+cz=d\}$$
 $$L=P_1\cap P_2\to\begin{cases}
    \text{plane} &\text{if } P_1=P_2\\
    \text{line}  &\text{if } P_1,P_2 \text{ are not paralled}\\
-   \empty  &\text{if } P_1 || P_2 \text{ and } P_1 \neq P_2
+   \text{\O}  &\text{if } P_1 || P_2 \text{ and } P_1 \neq P_2
 \end{cases}$$
 $$P_1\cap P_2=\{(x,y,z):eq_1,eq_2\}$$
 
@@ -86,7 +90,7 @@ $$H_k=\{x\in\mathbb{R}^n:\tilde{a}_k \textbf{x}=b_k\}\to\begin{cases}
 2. many solutions
 3. single solution
 
-例如当 $m=2,\;n=3$（三维空间中的两个面），除了两面不想交时没有解之外，还可能有直线解或者平面解（这里的 many solutions 由于涉及到高维空间，没有必要从几何的角度理解，只要把它看做是矩阵有多个解就行了）
+例如当 $m=2,\;n=3$（三维空间中的两个面），除了两面不相交时没有解之外，还可能有直线解或者平面解（这里的 many solutions 由于涉及到高维空间，没有必要从几何的角度理解，只要把它看做是矩阵有多个解就行了）
 
 ## 2.5 Elimination
 $$

@@ -11,15 +11,27 @@ keywords: Math415，Calculas，Matrix
 对于 $Ax=b$ 的**解的可能性** ($A_{m\times n},b_{m\times 1}$)
 
 首先，所有的解都能表示成 $x=x_p+x_n$
-1. 无解：
-$x_p$ 不存在 $\to C(A)\neq \R^m\to r<m$
-2. 只有一个解：
+- 无解
+$x_p$ 不存在 $C(A)$ 的维度低于消元后的 $b$. 例如
+$$A=\begin{bmatrix}
+1 & 0\\
+0 & 1\\
+0 & 0
+\end{bmatrix},b=\begin{bmatrix}
+1\\
+1\\
+1
+\end{bmatrix}$$
+- 唯一解：
 $x=x_p+0\to N(A)=\{0\}\to r=n$
-3. 无数解：
+- 无数解：
 $x_n$ 存在 $\to \text{dim}(N(A))=n-r \geq 1$
 # P2
-Attention plz! 在求解 $x_p,x_n$ 时等号右边的东西是不一样的，别搞混了：
-$Rx=d,Rx=0$
+<font color='red'>Attention plz!</font>
+1. 在求解 $x_p,x_n$ 时等号右边的东西是不一样的，别搞混了：
+$$Rx=d,Rx=0$$
+2. 求解 $x_p$, all free column = 0; 求解 $x_n$, one free column = 1, other = 0
+
 # P3 
 从 $R$ 中提炼原矩阵 $A$ 的列的信息
 例如
