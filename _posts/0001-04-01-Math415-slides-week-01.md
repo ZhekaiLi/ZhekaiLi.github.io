@@ -24,7 +24,7 @@ b_n
 > $||x||=(\sum_{i=1}^n|x_i|^2)^{1/2}=(x\cdot x)^{1/2}$
 
 > #### Def 4: Conditions of solutions of $Ax=b$
-> 讨论 $Ax=b$ 的解的情况, 相当于讨论几个方程与几个未知数之间的关系, 结论是: **显然是没什么关系**, 基本都需要具体讨论, 譬如当方程数多未知数时并不一定会出现无限个解, 因为可能出现两个及以上方程矛盾从而导致无解
+> 讨论 $Ax=b$ 的解的情况, 相当于讨论几个方程与几个未知数之间的关系, 结论是: **显然是没什么关系**, 基本都需要具体讨论, 譬如当方程数多于未知数时并不一定会出现无限个解, 因为可能出现两个及以上方程矛盾从而导致无解
 
 # L2
 ## 2.1 Lines on $\mathbb{R}^2$
@@ -49,14 +49,16 @@ where,
 1. $eq_1=a_1x+b_1y+c_1z=d_1$
 2. $eq_2=a_2x+b_2y+c_2z=d_2$
 
-## 2.3 Hyperplain
+## 2.3 Hyperplane
 Consider the dimensions
 1. $\mathbb{R}^3\to \text{dimension } 3\to 3D$
-2. $\text{plains in }\mathbb{R}^3\to 2D$
+2. $\text{planes in }\mathbb{R}^3\to 2D$
 3. $\text{lines in }\mathbb{R}^2\text{ and }\mathbb{R}^3\to 1D$
 
-Then we define huperplain
+Then we define hyperplane
+
 $$P=\{\mathbf{x}\in\mathbb{R}^n:\textbf{a}\cdot\textbf{x}=b\}$$
+
 where,
 1. $P$ has dimension $n-1$
 2. $\textbf{a}\in\mathbb{R}^n,\;b\in \mathbb{R}$
@@ -68,13 +70,12 @@ $$\textbf{A}\textbf{x}=\textbf{b}\to\begin{cases}
    & a_{m1}x_1+...+a_{mn}x_n=b_m
 \end{cases}$$
 where,
-1. $\textbf{A}=\begin{bmatrix}
+$$\textbf{A}=\begin{bmatrix}
    a_{11} & a_{12} & ... & a_{1n} \\
    a_{21} & a_{22} & ... & a_{2n} \\
    ...    & ...    & ... & ...    \\
    a_{m1} & a_{m2} & ... & a_{mn}
-\end{bmatrix}$
-2. $\textbf{b}=(b_1,...,b_m)^T,\;\textbf{x}=(x_1,...,x_n)^T$
+\end{bmatrix},\textbf{b}=(b_1,...,b_m)^T,\;\textbf{x}=(x_1,...,x_n)^T$$
 
 令 $\tilde{a}_k=(a_{k1},...a_{km})\in\mathbb{R}^n$
 由此可得 $m$ 个超平面 $H_k$

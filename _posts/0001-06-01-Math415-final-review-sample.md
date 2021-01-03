@@ -13,12 +13,29 @@ keywords: [Math415，Calculas，Matrix]
 3. [Math415 Midterm-2 Review](https://zhekaili.github.io/0001/03/02/Math415-midterm-2-review/)
 4. [Math415 Midterm-3 Review](https://zhekaili.github.io/0001/03/03/Math415-midterm-3-review/)
 
-# P1
 
+# P4
+> ![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2021-01/Snipaste_2021-01-03_11-40-46.jpg)
 
-# P5
+> **(a)**
 
-这个 linear 看着有点问题
+$$Aq_j=\lambda_jq_j\to q_j=\lambda_jA^{-1}q_j\to A^{-1}q_j=\frac{1}{\lambda_j}q_j$$
+
+> **(b)**
+
+利用 $q_j$ 的标准正交性, 两边同乘 $q_1^T$
+
+$$q_1^Tb=c_1$$
+
+> **(c)**
+
+同 (b) 两边同乘 $q_1^T$
+
+$$d_1=q_1^TA^{-1}b=q_1^TA^{-1}\sum c_iq_i$$
+
+Since $A^{-1}q_j=\frac{1}{\lambda_j}q_j$, 注意题干里是给了 $\lambda_j$ 作为已知的
+
+$$d_1=q_1^T\sum\frac{c_i}{\lambda_i}q_i=\frac{c_1}{\lambda_1}$$
 
 # P6
 > **Let** $$A=I-cE=\begin{bmatrix}

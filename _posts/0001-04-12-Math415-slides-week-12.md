@@ -96,7 +96,7 @@ Principal component analysis (PCA). Change of basis
 
 From last lecture, we get the matrix $X_{m\times n}$ and $C_X$, now lets focus on $XX^T$
 > #### Def 1: SVD of $XX^T$
-> $$XX^T=U\Sigma V^T=U\Sigma U^T$$
+> $$XX^T=U\Sigma U^T$$
 > 
 > Define $Y=U^TX$, then we get
 > $$\begin{aligned}(n-1)C_Y&=YY^T=U^TXX^TU=\Sigma \\

@@ -11,7 +11,7 @@ Discussions sessions 7, problem 2 <br> Discussions sessions 8, problem 4 <br> Di
 
 HW8, problems 3,5 <br> HW9, problem 3,4,6 <br> HW10 problems 2, 6 <br> HW11, problem 1 <br> 
 
-[**Week-14 L25**](https://zhekaili.github.io/0001/04/14/Math415-slides-week-14/#l25)
+[Week-14 L25](https://zhekaili.github.io/0001/04/14/Math415-slides-week-14/#l25)
 
 
 ## D7
@@ -227,6 +227,43 @@ $$u_1=\begin{pmatrix}
 使用已知的 $n$ 个 $v_i$, 由 $u_i=\frac{1}{\sigma_i}Av_i$ 求得前 $m$ 个 $v_i$. 该方法因为没用到正交, 所以足够严谨, 但是也面临着 $\det(A^TA-\lambda I)=0$ 计算太麻烦的问题.
 
 解决方法是先用 $\det(AA^T-\lambda I)=0$ 算出 $\lambda_1=\lambda_2=2$, 再由 $AA^T,A^TA$ 特征根相同可直接得到 $\lambda_3=\lambda_4=0$. 这样就能求得四个 $v_i$, 最后再用 $v_1,v_2$ 求 $u_1,u_2$
+
+当然, 还存在更加极端的情况, 例如对于下例中的 $A$, 其对应三个 $u$ 与两个 $v$, 但是三个奇异值中却只有一个非零, 这意味着只有 $u_1,v_1$ 能通过 $u_1=\frac{1}{\sigma_1}Av_1$ 关联起来, 此时的解决方案时同时用 $A^TA$ 与 $AA^T$
+
+$$A=\begin{bmatrix}
+1 & 0\\
+3 & 0\\
+0 & 0\\
+\end{bmatrix},A^TA=\begin{bmatrix}
+10 & 0\\
+0 & 0
+\end{bmatrix}\to \sigma_1=\sqrt{10},\sigma_2=\sigma_3=0$$
+
+Let $\lambda=10$
+
+$$A^TA-10I=\begin{bmatrix}
+0 & 0\\
+0 & -10
+\end{bmatrix}\to v_1=\begin{bmatrix}
+1 \\
+0
+\end{bmatrix},u_1=\frac{1}{\sigma_1}Av_1=\frac{1}{\sqrt{10}}\begin{bmatrix}
+1 \\
+3 \\
+0
+\end{bmatrix}$$
+
+Let $\lambda=0$
+
+$$A^TA-0I=\begin{bmatrix}
+10 & 0\\
+0 & 0
+\end{bmatrix}\to v_2=\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}$$
+
+剩下的 $u_2,u_3$ 使用 $AA^T - 0I$ 来求
 
 
 

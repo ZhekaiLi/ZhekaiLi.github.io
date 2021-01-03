@@ -29,10 +29,14 @@ Since when $x=1\in Y,i*x\notin Y$
 
 #### Lemma
 1. For any two subspaces $Y,Z$ of a vector space $X$, $Y\cap Z$ is also a subspace of $X$
-**proof:** let $y,z\in Y\cap Z \newline
-\to y\in Y, y\in Z, z\in Y, z\in Z \newline
-\to y+z\in Y,y+z\in Z \newline
-\to y+z\in Y\cap Z$
+**proof:** let 
+
+$$\begin{aligned}
+&y,z\in Y\cap Z \\
+&\to y\in Y, y\in Z, z\in Y, z\in Z \\
+&\to y+z\in Y,y+z\in Z \\
+&\to y+z\in Y\cap Z\end{aligned}$$
+
 2. $Y-Z$ is also a subspace of $X$
 证明类似
 3. $Y\cup Z$ is **not** a subspace of $X$
@@ -127,7 +131,7 @@ $$\text{Let }X\text{ be a vector space},\;a\in X,\;Y\text{ is a subspace of }X
 
 例如在 $\R^2$ 空间中，linear manifolds 可以是点、线或者 $\R^2$ 自身
 
-其他部分详见 Chapter3.md
+其他部分详见 Chapter3
 
 
 

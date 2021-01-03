@@ -73,7 +73,7 @@ c & d
 a & b \\
 c & d 
 \end{vmatrix}+\begin{vmatrix}
-a & b \\
+a' & b' \\
 c & d 
 \end{vmatrix}$$
 
@@ -92,19 +92,6 @@ c & d
 
 **Theorem 2:** If $PA=LU$,  then $\det(A)=\det(U)/\det(P)=\pm u_{11}...u_{nn}$
 
-## 13.5 Other properties
-If we have $$A=\begin{pmatrix}
-   a & b \\
-   c & d
-\end{pmatrix}, B=\begin{pmatrix}
-   e & f \\
-   c & d
-\end{pmatrix},C=\begin{pmatrix}
-   a+e & b+f \\
-   c & d
-\end{pmatrix}$$
-
-then $\det(C)=\det(A)+\det(B)$
 # L14
 ## 14.1 Representation of $A^{-1}$ via cofactors
 $$A^{-1}=\frac{1}{|A|}C^{T},C=\lbrace C_{ij}\rbrace ^n_{i,j=1}$$
