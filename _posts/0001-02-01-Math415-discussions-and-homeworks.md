@@ -18,7 +18,7 @@ $$||\bm{w}||\geq(\bm{v}\cdot\bm{w})/||\bm{v}||$$
 $\text{Let }x_1,...,x_n \in \R^n, \text{we say that they are linearly independent if, for any }c_1,...,c_n \in \R, \text{if } \sum_{i=1}^n c_ix_i=0 \text{ then } c_i=0 \text{ for all } i$
 
 根据这一定义，使用反证法可得：
-$\text{If }x_1=0\;(i.e\;||x_1||=0),\text{ then the system }x_1,...,x_n\in\R^n \text{is not independent}$
+$\text{If }x_1=0\;(i.e\;||x_1||=0),\text{ then the system }x_1,...,x_n\in\R^n \text{is not independent}$ (因为当 $c_1=1,c_i=0,i>1$ 时, 满足 $\sum c_ix_i=0$, 却不满足 $c_i=0 \text{ for all } i$)
 
 ## 1.3 
 Let $x_1,x_2,x_3$ 为矩阵 $X$ 的列向量，且有 $Ax_1=b_1,Ax_2=b_2,Ax_3=b_3$ 则
@@ -29,7 +29,7 @@ $$AX=[Ax_1,Ax_2,Ax_3]=[b_1,b_2,b_3]$$
 > If $A$ if a square matrix such that $I-A$ is nonsingular, prove that
 $$A(I-A)^{-1}=(I-A)^{-1}A$$
 
-**Ans** <br> 已知等式 $A(I-A)=(I-A)A$ 恒成立, 对于等式两边的两边都乘上 $(I-A)^{-1}$，可得
+已知等式 $A(I-A)=(I-A)A$ 恒成立, 对于等式两边的两边都乘上 $(I-A)^{-1}$，可得
 $$(I-A)^{-1}A(I-A)(I-A)^{-1}=(I-A)^{-1}(I-A)A(I-A)^{-1}$$
 
 $$(I-A)^{-1}A=A(I-A)^{-1}$$  
@@ -80,6 +80,11 @@ A_2
 ## 3.3 If $b\in C(A)$
 $b\in C(A)$ 的充要条件为 $Ax=b$ 有解
 
+## 3.4 
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2021-01/Snipaste_2021-01-02_23-28-35.jpg)
+
+当 $x\in \mathbb{C}^n$ 时, 其 mutiplication on scalars 也可以乘以虚数
+
 # DH4
 ## 4.1
 > **T/F: A vector space has infinitely many different bases**
@@ -103,3 +108,72 @@ Therefore, we can conclude that the only solution to $0=\alpha_0p+\sum_{i=1}^{n-
 # DH5
 ## 5.1 
 看一下 [Chapter-10](https://zhekaili.github.io/0001/01/10/Math415-chapter-10/)
+
+# DH6
+## 6.1
+> ![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2021-01/Snipaste_2021-01-02_13-56-21.jpg)
+
+$y$ should be in $N(A^T)$, but not $N(A)$. 零空间意味着 $Ay$ 把每个等式的左边变成 0, 况且这时候求的应该是 $[x,y,z]$, 因此不符合要求
+
+而左零空间则能够吧矩阵每列的和变成 0, 例如 $y_1(x)+y_2(2x)+y_3(3x)=0$, 这样就满足了题目要求 "so that they add to $0=1$". 求出左零空间的 base 之后, 再乘上一个常数使等号右侧加起来等于 $1$ 即可
+
+$$N(A^T)=\text{span}\{\begin{pmatrix}
+-1\\
+-1\\
+1
+\end{pmatrix}\}\to y=\begin{pmatrix}
+1\\
+1\\
+-1
+\end{pmatrix}$$
+
+## 6.2
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2021-01/Snipaste_2021-01-02_14-23-26.jpg)
+
+当两个投影矩阵的投影空间存在包含关系时, 即先投到小的在投到大的, 只要算出投小的即可
+
+## 6.3 QR Factorization
+$$A=QR$$
+
+对于矩阵 $A=[a_1,a_2,a_3],\{a_i\}$ independent, 使用 Gram-Schmidt process 由相互独立的 $\{a_i\}$ 生成标准正交矩阵 $Q=[q_1,q_2,q_3]$
+
+由于 $Q^{-1}=Q^T$, 因此 $R=Q^TA$
+
+**注意:** 虽然 QR 是一种矩阵分解方式, 但这并不意味着在算 least squares problem $Ax=b$ 时, 以下公式 2 就一定比公式 1 好用, 往往还是直接用公式 1 比较简单粗暴
+$$\tag{1} \hat{x}=(A^TA)^{-1}A^Tb$$
+
+$$\tag{2} \hat{x}=(R^TQ^TQR)^{-1}R^TQ^Tb=R^{-1}Q^Tb$$
+
+# DH7 
+## 7.1 Skew-symmetric matrix
+$$A^T=-A$$
+
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2021-01/Snipaste_2021-01-02_14-49-21.jpg)
+
+# DH8
+## 8.1 
+> Find the eigenvectors from
+$$A-3I=\begin{bmatrix}
+0 & 0 & 0\\
+0 & 1 & -1\\
+0 & 1 & -1
+\end{bmatrix}$$
+
+在上次遇到这种情况, 作者"很自然"地直接算出来了一个 $x=[1,1,1]^T$, **大错特错!!!** 从 free columns 的角度看, 两个 free columns 意味着两个特征向量 $x_1=[1,0,0]^T,x_2=[0,1,1]^T$
+
+# DH9
+## 9.1 Diagonalizable matrix
+判定方式详见 [Chapter-06.2](https://zhekaili.github.io/0001/01/06/Math415-chapter-06-Eigenvalues-and-Eigenvectors/#62-diagonalizing-a-matrix)
+
+# DH10
+## 10.1
+![pic](https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2021-01/Snipaste_2021-01-02_16-40-49.jpg)
+
+这道题挺神奇的, 原理不是很懂. 但是就结果来看, 特征值中的 max 与 min 等同于 $\frac{x^TSx}{x^Tx}$ 的 max 与 min
+
+## 10.2
+对于 $A=U\Sigma V^T$, $u_i\in C(A),v_i\in C(A^T)$
+
+
+
+

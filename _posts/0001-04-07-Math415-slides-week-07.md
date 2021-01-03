@@ -158,7 +158,7 @@ finally from $\frac{df}{dx}=0$, we get $x=(A^TA)^{-1}A^Tb$, as in **L12.2**
 
 **Corollary:** Let matrix $A_{m\times n}=[a_1,...,a_n]$, if $\lbrace a_I\rbrace$ is orthonormal, then $A$ is orthogonal ($A^TA=I$)
 
-## 12.5 Gram-Schmidt procudure
+## 12.5 Gram-Schmidt procedure
 能够由一组相互独立的向量，生成一组相互正交的向量
 **Example:** Generate orthogonal vectors $[A,B,C]$ from independent vectors $[a,b,c]$ 
 1. $A=a$
