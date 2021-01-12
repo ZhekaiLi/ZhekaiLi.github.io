@@ -603,6 +603,16 @@ probable, approve
 |---|---|---|---
 |seduce| se + duce| [lead to sex]| (v.) 引诱, 诱奸
 
+**secu [follow]** <br> **^sequ**
+
+sequence, execute
+
+|||||
+|---|---|---|---
+|sequel| | | (n.) 结果, 续集
+|sequela| | | (n.) 结果, 后遗症
+ 
+
 **surg [rise]**
 
 |||||
