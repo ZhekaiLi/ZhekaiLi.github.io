@@ -101,15 +101,7 @@ hieroglyph [sacred carve] 象形文字
 |totalitarian| totalit(y) + arian| | (a.) 极权主义的; (n.) 极权主义者
 |utopian| utopia + (ia)n| | (a.) 乌托邦的, 空想的; (n.) 空想家
 
-
-
-
-
-
-
-
-
-**ics- [a. 表示学科, 学问, 方法], [无意, 表示关于...]** <br> **^-ic**
+**-ics [a. 表示学科, 学问, 方法], [无意, 表示关于...]** <br> **^-ic**
 
 |||||
 |---|---|---|---
@@ -119,6 +111,13 @@ hieroglyph [sacred carve] 象形文字
 |gymnastics| gymnast + ics| [about gymnast]| (n.) 体操, 体育
 |logistics| logis + t + ics| [about providing lodges]| (n.) 后勤, 物流, 后勤学
 |pediatrics| pedi + atr + ics| [subject about child]| (n.) (医)儿科
+
+**-ify [v. make]**
+
+|||||
+|---|---|---|---
+|diversify| divers(e) + ify| [make diverse]| 
+|pacify| pac + ify[make]| [make in pleace]| (v.) 使平静, 安慰
 
 **-ion [n.]**
 
@@ -146,6 +145,14 @@ creativity 创造力
 **^-ar, -er, -ur**
 processor ---- process + or ---- 处理器
 conductor ---- con + duct + or ---- [the people or object that lead sth together] 指挥, 列车员；导体
+
+**-ory [...的地方]**
+
+factory
+
+|||||
+|---|---|---|---
+|conservatory| conserv(e) + at + ory[place]| [保存...的地方]| (n.) 温室, 艺术学院 
 
 **-ose [full of]**
 verbose [full of word] 冗长的, 啰嗦的

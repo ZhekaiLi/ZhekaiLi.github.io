@@ -480,13 +480,19 @@ gene
 
 # p
 
-**ped- [foot]** <br> **^pet-, pod-,pus-** <br> **^peach-, patch-**
+**pac [pease]** 
+
+|||||
+|---|---|---|---
+|pacify| pac + ify[make]| [make in pleace]| (v.) 使平静, 安慰
+
+**ped [foot]** <br> **^pet-, pod-,pus-** <br> **^peach-, patch-**
 
 |||||
 |---|---|---|---
 |pedestrian| ped + estr + ian| [about foot]| (a.) 徒步的, 缺乏想象的; (n.) 行人
 
-**pedi- [child]**
+**pedi [child]**
 
 |||||
 |---|---|---|---
@@ -529,6 +535,16 @@ depend, pending
 |expiate| ex[former] + pi + ate| [使(-ate)回到从前的忠诚]| (v.) 赎罪, 纠正
 |pious| pi + ous| | (a.) 虔诚的, 忠诚的
 |impious| | | (a.) 不敬神的
+
+**plac [please]** <br> **^pac**
+
+|||||
+|---|---|---|---
+|complacent| com + plac + ent| [加强高兴]| (a.) 自满的
+|implacable| im + plac + able| [not able to please, 无法讨好的]| (a.) 固执的, 无法平息的
+|placate| plac + ate| | (v.) 使和解, 抚慰
+|placebo| plac + ebo| | (n.) 安慰剂
+|placid| plac + id| | (a.) 平静的, 温和的, 沉着的
 
 **ple [fill]** <br> **^plet, plen**
 
@@ -609,9 +625,26 @@ sequence, execute
 
 |||||
 |---|---|---|---
-|sequel| | | (n.) 结果, 续集
-|sequela| | | (n.) 结果, 后遗症
- 
+|inconsequential| in + cosequen(ce) + tial| [与结果无关]| (a.) 不重要的
+|obsequious| ob + sequ + ious| [follow toward]| (a.) 谄媚的, 奴性的
+|persecute| per + secu + te| [follow through, 时刻跟着]| (v.) 迫害, 折磨
+|prosecute| pro + secu + te| [follow forth]| (v.) 贯彻执行, 检举起诉
+|sequel <br> sequela| | [跟在后面的]| (n.) 结果, 续集 <br> (n.) 结果, 后遗症
+
+**serv [keep]**
+
+conserve, preserve
+
+|||||
+|---|---|---|---
+|conservatory| conserv(e) + at + ory[place]| [保存...的地方]| (n.) 温室, 艺术学院 
+|observant| observ(e) + ant| [keep watching]| (a.) 警惕的, 警觉的
+|preservative| preserv(e) + ative| | (n.) 防腐剂
+|reserved| re + serv + ed| [keep back]| (a.) 内向的, 缄默的
+|servant| serv + ant| [被保留起来(干活)的人]| (n.) 仆人, 佣人
+|servile| serv(e) + ile| [(提供)服务的]| (a.) 低下的, 卑屈的
+|subservient| sub + serv(e) + ient| [surve under]| (a.) 奉承的, 屈从的
+
 
 **surg [rise]**
 

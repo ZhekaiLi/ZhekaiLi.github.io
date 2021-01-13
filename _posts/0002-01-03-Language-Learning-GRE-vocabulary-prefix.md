@@ -237,8 +237,12 @@ monastery 寺院, 修道院
 
 # o
 
-**ob- [against]**
-obloquy [speak against] 谩骂, 诽谤, 恶名, 耻辱
+**ob- [against], [toward]**
+
+|||||
+|---|---|---|---
+|obloquy| | [speak against] | (v.) 谩骂, 诽谤, 恶名, 耻辱
+|obsequious| ob + sequ + ious| [follow toward]| (a.) 谄媚的, 奴性的
 
 # p
 
