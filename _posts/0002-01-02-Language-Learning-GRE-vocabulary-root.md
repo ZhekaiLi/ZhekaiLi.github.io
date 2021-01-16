@@ -350,6 +350,17 @@ gene
 |---|---|---|---
 |demographics| demo + graph + ics| [about people recording]| (n.) 人口统计资料
 
+**grat [pleased]**
+
+grateful
+
+|||||
+|---|---|---|---
+|ingratiating| in + grat + iating| [pleased in]| (a.) 讨人喜欢的, 逢迎的
+|gratify| grat + ify| [make pleased]| (v.) 使满足
+|gratuitous| gratuit(y) + ous| [(送额外)的礼物]| (a.) 无根据的, 无端的, 免费的
+|gratuity| | | (n.) 小费, 赠物
+
 **-gress [to go, 走]** <br> **^-gred** <br> **^-greed** <br> **^-grad**
 
 |||||
@@ -415,6 +426,16 @@ gene
 |---|---|---|---
 |lapse| | | (n.) 小错, 过失; (v.) 结束, 终止
 |relapse| re + laps(e)| [fall back]| (n.) (v.) 返回原状, 再犯, 旧病复发
+
+**lect [choose]** <br> **^leg**
+
+select, election
+
+|||||
+|---|---|---|---
+|eclectic| ec[=ex] + lect + ic| [choose out (from different resources)]| (a.) 混合的, 多元的
+|legion| leg + ion| [people chosen]| (n.) 军团; (a.) 大量的 
+|predilection| pre + di + lect + ion| [choose before, 最先选择]| (n.) 爱好, 偏袒
 
 **lib [free 自由]**
 
@@ -612,6 +633,14 @@ probable, approve
 || condescending| | (a.) 居高临下的, 表现出优越感的
 |crescendo| cre + scend + o| [climb and increase]| (n.) (v.) (声音)渐强
 |transcend| tran + scend| [climb across]| (v.) 超越
+
+**sci [know]**
+
+science, SCI
+
+|||||
+|---|---|---|---
+|omniscient| omni[all] + sci + ient| [know all]| (a.) 无所不知的
 
 **se [sex]**
 

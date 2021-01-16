@@ -20,11 +20,11 @@ lookfor integral  % 查找有关积分的指令
 
 
 # 2 Drawing
-**2D 绘图**
+**二维绘图**
 ```matlab
 plot(x, y, 'color_point_linestyle', 'linewidth', 2, 'markersize', 12);
 ```
-**'color_point_linestyle' = 线型 + 线色 + 数据点** (例如 `'--r*'`)
+'color_point_linestyle' = 线型 + 线色 + 数据点 (例如 `'--r*'`)
 - 线型(-, -., --, : \)
 - 线色(r-red, g-green, b-blue, w-white, k-black，i-invisible，y-yellow)
 - 数据点(., o, x, +, *, S, H, D, V, ^)
@@ -54,6 +54,21 @@ gtext('');
 ```matlab
 subplot(r, c, p) 
 ```
+
+### 2.1.3 极坐标绘图
+```matlab
+x = 0:0.1:2*pi; 
+r = cos(2*x); 
+
+polar(x, r)
+```
+
+### 2.1.3 函数绘图
+`fplot(fun, lims)` 绘制由字符串 `fun` 指定函数名的函数在 $x$ 轴区间为 `lims=[xmin, xmax]` 的函数图。例如：
+$$f(x)=\begin{cases}
+x + 1,\;\;x<1\\
+1 +\frac{1}{x},\;\; x\geq 1
+\end{cases}$$
 
 # 3 Math
 ## 3.1 矩阵
