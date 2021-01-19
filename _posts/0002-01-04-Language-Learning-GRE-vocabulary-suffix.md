@@ -155,7 +155,10 @@ factory
 |conservatory| conserv(e) + at + ory[place]| [保存...的地方]| (n.) 温室, 艺术学院 
 
 **-ose [full of]**
-verbose [full of word] 冗长的, 啰嗦的
+
+|||||
+|---|---|---|---
+|verbose| verb + ose[a. full of]| [full of words]| (a.) 冗长的, 啰嗦的
 
 # u
 

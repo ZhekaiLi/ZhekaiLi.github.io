@@ -112,6 +112,14 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |incandescent| in + cand + escent| [进入蜡烛燃烧般的状态]| (a.) 明亮灿烂的, 热情饱满的
 |kindle| | | (v.) 点燃
 
+**cant [sing]**
+
+|||||
+|---|---|---|---
+|incantation|| [进入唱歌的状态]| (n.) 咒语
+|recant||| (v.) 撤回, 放弃
+|disenchant|| [使不进入唱歌的状态]| (v.) 使清醒
+
 **cern [separate], [distinguish]** <br> **^cert** <br> **^crim, cris, crit** <br> **^cree**
 
 |||||
@@ -187,8 +195,27 @@ enchant [(let sb) enter song] 施魔法, 使入迷
 |resuscitate| re + sus(=sub) + cit + ate| [从下面才起唤醒]| (v.) 使复活, 使苏醒
 |solicitous| sol[entire] + i + cit + ous| [arouse entire]| (a.) 热心的, 热切的
 
+**claim [shout]** <br> **^clam**
+
+|||||
+|---|---|---|---
+|acclaim|| [shout to, 叫好]| (n. v.) 称赞
+|clamor||| (n.) 喧哗, 噪声
+|declaim||| (v.) 慷慨陈词
+|disclaim||| (v.) 拒绝, 否认
+|proclaim||| (v.) 宣告
+|reclaim||| (v.) 重申, 要求收回
+
 **cob [heap, lump, rounded object]**
 cobble 鹅卵石
+
+**cond [hide]**
+
+|||||
+|---|---|---|---
+|abscond| ab(s) + cond| [hide away]| (v.) 偷偷离开
+|ensconce| en(s) + conc(e)| [hide in]| (v.) 安置, 隐藏
+|recondite| re + cond + ite| [hide back]| (a.) 深奥的, 难解的
 
 **coni [cone 圆锥, 球果]**
 
@@ -238,9 +265,32 @@ cobble 鹅卵石
 
 **dict [say]**
 
+predict
+
 |||||
 |---|---|---|---
+|abdicate| ab + dic + ate| [say away]| (v.) 正式放弃(权力、责任)
+|indict| | | (v.) 起诉, 控告
+|interdict| | | (v.) 禁止, 组织
 |valediction| val(e) + dict + ion| [say "be strong and valuable"]| (n.) 告别演说, 告别词
+|vindicate| v(勾勾符) + indicate| [indicate right]| (v.) 为...平反, 为...辩护, 使无罪
+|vindictive| vin[=win] + dict + ive| [扬言战胜]| (a.) 复仇的 
+
+**doc(t) [teach]**
+
+|||||
+|---|---|---|---
+|doctrinaire||| (a.) 教条主义的, 照本宣科的
+|doctrine||| (n.) 主义, 教义, 信条
+|indoctrinate|| [doctrine in]| (v.) 灌输思想, 教育
+
+**dox [opinion]**
+
+|||||
+|---|---|---|---
+|heterodox| hetero[other] + dox| [other opinion]| (a.) 异端的, 非正统的
+|orthodox| ortho[right] + dox| [right opinion]| (a.) 传统的
+
 
 **duc(t) [lead 引导]**
 
@@ -261,6 +311,19 @@ cobble 鹅卵石
 |edible| ed + ible| [able to eat]| (a.) 可以吃的
 
 # f
+
+**fa [speak]**
+
+famous, fable
+
+|||||
+|---|---|---|---
+|affable| af[=ad] + fa + ble| [(easily) speak to]| (a.) 和蔼的, 温和的
+|fable| | | (n.) 寓言, 传说, 虚构
+|fabulous| fabul[fable] + ous| | (a.) 传说中的, 幻想中的; 极好的, 难以置信的
+|ineffable| in + ef[=ex] + fa + ble| [cannot speak out]| (a.) 难以表达的
+|infamous| | | (a.) 臭名昭著的
+|preface| | [speak before] (n.) 序言
 
 **fall [false]**
 
@@ -292,7 +355,7 @@ cobble 鹅卵石
 | | preferable <br> preferential| | (a.) 更好的 <br> (a.) 优先的
 |proffer| pro + (o)ffer| [offer forth]| (v.) 献出, 提供
 |referee| refer + ee| [who is referred]| (n.) 仲裁者, 裁判员
-|vociferous| voci + fer + ous| [bring (too much) voice]| (a.) 喧哗的
+|vociferous| voc(i) + fer + ous| [bring (too much) voice]| (a.) 喧哗的
 
 **ferv [hot]**
 
@@ -333,7 +396,7 @@ gene
 
 |||||
 |---|---|---|---
-|benign| ben(=bon) + i + gn(=gen)| [generate good]| (a.) 好心的, 仁慈的
+|benign| ben[=bon, good] + i + gn(=gen)| [generate good]| (a.) 好心的, 仁慈的
 |engender| en + gen + (d)er| [make generate]| (v.) 产生, 出现
 |genial <br> = congenial| | [gentle]| (a.) 和蔼亲切的, 友好的
 |genteel| | [gentle]| (a.) 有教养的, 不粗俗的
@@ -445,6 +508,19 @@ select, election
 |libertine| | | (n.) 浪子, 放荡不羁的人
 |ad-lib| | | (a.) 即兴的
 
+**log [speak]** <br> **^loq, loc, loqu**
+
+|||||
+|---|---|---|---
+|circumlocution| circum + locu + tion| [speak circly]| (v.) 绕圈子的话, 累赘的陈述
+|eulogize| eu + log + ize| [speak well]| (v.) 称赞
+|grandiloquent| grand(i) + loque(t)| [speak big]| (v.) 浮夸的
+|loquacious| loqu + acious| [too much speak]| (a.) 多话的
+|monologue| | | (n.) 独白
+|obloquy| | [speak against]| (n.) 谩骂, 诽谤; 恶名, 耻辱
+|prologue| | | (n.) 前言, 序言
+|soliloquy| | | (n.) 独白
+
 **luc [light]** <br> **^lumin** <br> **^lust, lustr**
 
 |||||
@@ -469,6 +545,15 @@ select, election
 |ludicrous| lud + icrous| [too much play]| (a.) 荒唐的, 可笑的
 
 # m
+
+**mand [command]**
+
+|||||
+|---|---|---|---
+|countermand|| [command against]| (v.) 取消, 撤销
+|demanding||| (a.) 难取悦的; 费时间的
+|mandatory|| [命令的]| (a.) 强制的
+
 
 **mot [move]** <br> **^mat**
 
@@ -498,6 +583,35 @@ select, election
 |innovative| in + nov + ative| [in new]| (a.) 创新性的
 |novice| | | (n.) 新手, 初学者
 |renovate| re + nov + ate| [new again]| (v.) 修复, 翻新
+
+**nunc [speak]** <br> **^nounc**
+
+pronounce, announce
+
+|||||
+|---|---|---|---
+|denounce| | [speak down]| (v.) 公开指责
+|enunciate| e[=ex] + nunc + iate| [speak out]| (v.) 发音, 阐明, 宣布, 宣称 
+|renounce| re[against] + nounc(e)| [speak against]| (v.) 放弃, 宣布决裂
+
+# o
+
+**or [speak], [pray]** 
+
+|||||
+|---|---|---|---
+|adore| | [喜欢去跟她讲话]| (a.) 喜爱, 崇拜
+|inexorable| in[not] + ex + or + able| [not able to pray out]| (a.) 不为所动的, 无法劝阻的
+|oration| | | (n.) 演说
+|peroration| | [through a speech]| (n.) 结束语
+
+**ord [order]** 
+
+|||||
+|---|---|---|---
+|insubordinate||| (a.) 不服从权威的
+|primordial| prim[first] + ord + ial| [first order]| (a.) 原始的, 最初的
+|subordinate|| [under order]| (a.) 下级的, 次要的; (v.) 征服
 
 # p
 
@@ -543,7 +657,14 @@ depend, pending
 |stipend| | | (n.) 助学津贴, 薪俸
 |suspend| sus + pend| [在下面挂一会儿]| (v.) 延缓, 推迟, 使暂停, 使悬浮
 
-**phos- [light]**
+**phon [sound]**
+
+|||||
+|---|---|---|---
+|cacophony| caco[bad] + phon + y|| (n.) 刺耳的声音
+|euphonious||| (a.) 悦耳的 
+
+**phos [light]**
 
 |||||
 |---|---|---|---
@@ -622,6 +743,16 @@ probable, approve
 |rectitude| rect + itude| | (n.) 正直
 |resurrect| re + sur(=sub) + rect| [重新从下面直立]| (v.) 使重生, 使复苏
 
+**rog [ask]**
+
+|||||
+|---|---|---|---
+|abrogate| ab + rog + ate| [ask away]| (v.) 废除, 无视...的存在
+|arrogance| ar + rog + ance| [一再提出要求]| (n.) 傲慢, 自大
+|interrogate| | | (v.) 质问, 审问
+|prerogative| | [预先提出要求]| (n.) 特权, 权力
+|surrogate| sur[sub] + rog + ate| [要求从下面替代]| (n.) 替代品
+
 # s
 
 **scend [climb]**
@@ -640,7 +771,10 @@ science, SCI
 
 |||||
 |---|---|---|---
+|conscience| con + sci + ence| | (n.) 良心
+|conscientious| | | (a.) 有良心的, 正直的; 仔细的
 |omniscient| omni[all] + sci + ient| [know all]| (a.) 无所不知的
+|prescience| pre + sci + ence| [know before]| (n.) 预知, 先见
 
 **se [sex]**
 
@@ -674,6 +808,13 @@ conserve, preserve
 |servile| serv(e) + ile| [(提供)服务的]| (a.) 低下的, 卑屈的
 |subservient| sub + serv(e) + ient| [surve under]| (a.) 奉承的, 屈从的
 
+**son [sound]**
+
+|||||
+|---|---|---|---
+|consonant| con + son + ant| [sound together]| (a.) 和谐一致的
+|dissonance| dis + son + ance| [sound apart]| (n.) 不和谐, 刺耳; 不一致, 分歧
+|resonant| | [sound again]| (a.) 洪亮的, 共鸣的
 
 **surg [rise]**
 
@@ -698,6 +839,15 @@ conserve, preserve
 |intricate| in + tric + ate| [陷入诡计]| (a.) 错综复杂的
 |extricate| ex + tric + ate| [使逃出诡计]| (v.) 使解脱, 解救
 |treacherous| treac(h) + er + out| | (a.) 背叛的
+
+**ton [tone]**
+
+tune
+
+|||||
+|---|---|---|---
+|attune| at[=ad] + tune| [to (a same) tune]| (v.) 使协调
+|monotonous||| (a.) 单调的, 无聊的
 
 **turb [disturb]** 
 
@@ -834,6 +984,14 @@ conserve, preserve
 |writhe| | | (v.) 翻滚, 蠕动, 扭曲
 |wry| | | (a.) 歪斜的, 扭曲的; (n.) 扭曲
 
+**verb [word]**
+
+|||||
+|---|---|---|---
+|verbatim| verb + a + tim(e)| [a word a time]| (a.) 逐字的, 一字不差的
+|verbose| verb + ose[a. full of]| [full of words]| (a.) 冗长的, 啰嗦的
+|reverberate| re + verb + erate| [word back]| (v.) 回荡, 回响
+
 **veri [true]**
 
 |||||
@@ -842,9 +1000,30 @@ conserve, preserve
 |verisimilar| veri + similar| [similar to be true]| (a.) 貌似真实的
 |veritable| veri + (i)t + able|  | (a.) 真正的, 确实的
 
+**voc [call, 呼唤]** <br> **^vok**
+
+|||||
+|---|---|---|---
+|equivocate| | [call equally]| (v.) 支吾, 含糊其辞
+|convoke| | | (v.) 召集开会
+|evoke| | | (v.) 唤起, 引发
+|invoke| | | (v.) 唤起, 祈求, 援引
+|provoke| | | (v.) 驱使, 激起, 激怒
+|revoke| | | (v.) 撤回, 宣告无效
+|vocation| | | (n.) 职业
+|vociferous| voc(i) + fer[bring] + ous| [bring much voice]| (a.) 喧哗的
+
+
 **vol [will]** <br> **同 vell 时表示 turn, 扭转**
 
 |||||
 |---|---|---|---
 |malevolent| mal(e) + vol + ent| [bad will]| (a.) 恶意的, 恶毒的
 |volition| vol + ition| | (n.) 意志, 决断力
+
+**vow [郑重地说]**
+
+|||||
+|---|---|---|---
+|avow <br> avowl||| (v.) 承认, 公开宣称. <br> (n.)
+|disavow||| (v.) 拒绝承认, 否认
