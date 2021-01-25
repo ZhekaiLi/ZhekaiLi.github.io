@@ -918,7 +918,7 @@ extend, extent
 |pretense|| [pretend 的名词形式] <br> [stretch before, 在他人面前展示]| (n.) 虚假, 伪装 <br> (n.) 自大, 优越感
 |unpretentious|| [不在他人面前展示], [not pretend, 不做作的]| (a.) 低调的, 谦逊的; 坦诚的
 |tendentious|| [(见解)向某个方向伸展的]| (a.) 有偏见的
-|tenuous| tenu[thin] + ous| [(内容)浅薄的]| (a.) 空洞的, 没有实际内容的
+|tenuous| tenu[thin] + ous| [(内容)浅薄的]| (a.) 空洞的, 没有实际内容的; 纤细的, 稀薄的, 贫乏的
 
 **tim [fear]**
 
