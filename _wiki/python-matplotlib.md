@@ -38,3 +38,9 @@ plt.figure(figsize=(l, w)  # 调整图像大小
 ```py
 plt.xlim(_min, _max)
 ```
+
+### 1.5 plt.grid
+生成网格
+```py
+plt.grid()
+```

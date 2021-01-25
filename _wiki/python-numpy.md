@@ -21,6 +21,13 @@ np.argwhere(L == 2)
 >>> array([[1],
            [3]], dtype=int64)
 ```
+#### 1.1.2 Find index of max/ min
+寻找数组中最大/ 最小值的位置 (index)
+```py
+np.argmax(L) 
+np.argmin(L) 
+```
+
 ### 1.2 Sort
 #### 1.2.1 Delete duplications and sort
 去除数组中的重复数字, 并进行排序之后输出

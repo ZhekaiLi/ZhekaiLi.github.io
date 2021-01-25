@@ -120,6 +120,25 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |recant||| (v.) 撤回, 放弃
 |disenchant|| [使不进入唱歌的状态]| (v.) 使清醒
 
+**cap [seize, 抓], [take 拿]** <br> **^cip, cup** <br> **^capt, cept** 
+
+capacity, capture, accept
+
+|||||
+|---|---|---|---
+|captious| capt + ious| [too much cap, 过分地抓毛病]| (a.) 挑剔的, 吹毛求疵的
+|captivate||| (v.) 吸引
+|disciple|| [(people could be) taken away]| (n.) 门徒, 信徒
+|emancipate| e[=ex] + man[hand] + cip + ate| [take hand out, 解开被束缚的手]| (v.) 解放, 解除束缚
+|inception <br> incipient|| [take in, 入手]| (n.) 开始, 开端 <br> (a.) 起初的
+|perceptible|| [able to be taken thoroughly]| (a.) 可察觉的
+|perceptive||| (a.) 敏锐的, 洞察力强的
+|preoccupation|| [occupy before]| (n.) 全神贯注
+|recuperate|| [take back]| (v.) 恢复, 康复
+|susceptible| sus[=sub] + cept + ible| [easy to be taken under (emotion)]| (a.) 易受影响的
+|unexceptionable| un + ex + cept + ion + able| [not able to take out (any mistake)]| (a.) 无懈可击的, 完美的
+
+
 **cern [separate], [distinguish]** <br> **^cert** <br> **^crim, cris, crit** <br> **^cree**
 
 |||||
@@ -302,6 +321,15 @@ predict
 
 # e
 
+**emp(t) [take 拿]**
+
+|||||
+|---|---|---|---
+|exemplary||| (a.) 榜样的, 作为警告的
+|exempt|| [take out]| (v.) 免除, 豁免
+|peremptory| per + empt + ory| [要求别人全部接受]| (a.) 强制的, 绝对的, 专横的
+|preempt||| (v.) 预先占有, 替换
+
 **es [eat 吃]** <br> **^ed**
 这两个词根和单词 eat 同义（元音, 辅音替换组合不改变含义）
 
@@ -312,18 +340,18 @@ predict
 
 # f
 
-**fa [speak]**
+**fa [say]**
 
 famous, fable
 
 |||||
 |---|---|---|---
-|affable| af[=ad] + fa + ble| [(easily) speak to]| (a.) 和蔼的, 温和的
+|affable| af[=ad] + fa + ble| [(easily) say to]| (a.) 和蔼的, 温和的
 |fable| | | (n.) 寓言, 传说, 虚构
 |fabulous| fabul[fable] + ous| | (a.) 传说中的, 幻想中的; 极好的, 难以置信的
-|ineffable| in + ef[=ex] + fa + ble| [cannot speak out]| (a.) 难以表达的
+|ineffable| in + ef[=ex] + fa + ble| [cannot say out]| (a.) 难以表达的
 |infamous| | | (a.) 臭名昭著的
-|preface| | [speak before] (n.) 序言
+|preface| | [say before] (n.) 序言
 
 **fall [false]**
 
@@ -657,11 +685,12 @@ depend, pending
 |stipend| | | (n.) 助学津贴, 薪俸
 |suspend| sus + pend| [在下面挂一会儿]| (v.) 延缓, 推迟, 使暂停, 使悬浮
 
-**phon [sound]**
+**phon [sound]** <br> **^phem**
 
 |||||
 |---|---|---|---
 |cacophony| caco[bad] + phon + y|| (n.) 刺耳的声音
+|euphemism||| (n.) 委婉语
 |euphonious||| (a.) 悦耳的 
 
 **phos [light]**
@@ -706,9 +735,19 @@ complete, plenty
 |||||
 |---|---|---|---
 |deportation| de + port + ation| [carry away]| (n.) 放逐
-|importune| | [not carry, 不带来就不行]| (v.) 哀求, 迫切请求
+|importune| | [not carry, 不带来就不行]| (v.) 胡搅蛮缠, 迫切请求
 |opportune| | | (a.) 适合的
 |rapport| ra(=re) + (p)port| [carry agian, 一直带在身边]| (n.) 和睦, 友好
+
+**prehend [seize 抓]** <br> **^prehens** <br> **^pris**
+
+|||||
+|---|---|---|---
+|apprehension <br> misapprehension|| [to seize (meaning, heartt or cirminal)]| (n.) 理解; 忧虑, 恐惧; 逮捕 <br> (n.) 误解, 误判
+|apprise|| [使抓住(消息)]| (v.) 通知, 告知
+|comprehend||| (v.) 理解; 包含(该义同 compise)
+|comprise|| [抓到一起]| (v.) 包含, 由...构成
+|reprehend|| [反复抓(毛病)]| (v.) 谴责, 批评
 
 **prob [test], [prove]** <br> **^prov**
 
@@ -722,7 +761,6 @@ probable, approve
 |reprobate| re[opposite] + prob + ate| [反向证明]| (n.) 堕落者, 道德败坏的人; (a.) 堕落的, 放荡的; (v.) 拒绝, 谴责
 |reprove| re[against] + prob + ate| [prove against]| (v.) 警告, 责骂
 
-
 # q
 
 **quir [ask, seek]** <br> **^quis**
@@ -735,6 +773,17 @@ probable, approve
 |prerequisite| pre + requis(=require) + ite| | (n.) 前提, 先决条件
  
 # r
+
+**rap(t) [seize 抓]** <br> **^rep(t)** <br> **^rav** 
+
+rape
+
+|||||
+|---|---|---|---
+|rapacious|| [seize too much]| (a.) 贪婪的, 贪食的, 掠夺的
+|rapt|| [抓住注意力]| (a.) 全神贯注的, 入迷的
+|ravenous||| (a.) 贪婪的, 贪食的 (同 rapatious)
+|surreptitious| sur[=sub] + rept + itious| [(小偷)在下面抓]| (a.) 偷偷摸摸的, 秘密的
 
 **rect [right 直]**
 
@@ -816,6 +865,13 @@ conserve, preserve
 |dissonance| dis + son + ance| [sound apart]| (n.) 不和谐, 刺耳; 不一致, 分歧
 |resonant| | [sound again]| (a.) 洪亮的, 共鸣的
 
+**sum(pt) [take 拿]**
+
+|||||
+|---|---|---|---
+|presumptuous|| [(在被允许)之前拿]| (a.) 放肆的, 冒昧的
+|sumptuous| sumpt + uous| [take (money) too much]| (a.) 豪华的, 奢侈的
+
 **surg [rise]**
 
 |||||
@@ -825,12 +881,65 @@ conserve, preserve
 
 # t
 
+**tain [hold]** <br> **^tin, ten(t)**
+
+contain, attain
+
+|||||
+|---|---|---|---
+|abstain|| [away from hold]| (v.) 弃权, 回避, 自制, 戒除
+|countenance||| (v.) 容忍, 赞成, 推崇; (n.) 沉着, 冷静
+|detain| de[away] + tain| [拿走]| (v.) 拘留, 扣留
+|pertain|| [hold through, 始终持有]| (v.) 属于, 从属, 关于, 适用
+|pertinent <br> impertinent||| (a.) 相关的, 恰当的 <br> (a.) 无关紧要的; 无理的, 粗俗的
+|retainor||| (n.) 家仆
+|retentive|| [hold (memory) back]| (a.) 记性好的
+|retinue|| [(people) hould back]| (n.) 随行人员
+|tenable <br> (反)untenable|| [able to hold]| (a.) （主张）站得住脚的, 有据可依的
+|tenacious <br> (同)pertinacious| ten + acious[表程度深]| (a.) 顽固的, 不屈不挠的
+
+**tend [stretch]** <br> **^tens, tent**
+
+词根 **tenu** 表示 **[thin, 薄]**, 即被拉伸薄了
+
+extend, extent
+
+|||||
+|---|---|---|---
+|attenuate|| [make ... thin]| (v.) 降低（数量、力量、价值）
+|contend|| [stretch out togethor, 都伸出手去拿] <br> [con 表加强, 伸张(正义)]| (v.) 竞争, 争夺 <br> (v.) 声明, 主张
+|contentious||| (a.) 引起争论的, 好战的
+|distend|| [stretch away]| (v.) (使)膨胀
+|extenuate|| [make (seriousness) thin out]| (v.) 减轻罪过
+|intensify|| [make intense]| (v.) 将强, 激化
+|ostensible| os[toward] + tens + ible|| (a.) 表面上的, 佯装的
+|ostentatious| os[toward] + tent + atious| [向别人展示]| (a.) 炫耀的, 卖弄的
+|portentous| por[pro] + tent + ous| [stretch forch (badly)]| (a.) 凶兆的, 不祥的; 令人惊讶的, 勾起兴趣的
+|pretense|| [pretend 的名词形式] <br> [stretch before, 在他人面前展示]| (n.) 虚假, 伪装 <br> (n.) 自大, 优越感
+|unpretentious|| [不在他人面前展示], [not pretend, 不做作的]| (a.) 低调的, 谦逊的; 坦诚的
+|tendentious|| [(见解)向某个方向伸展的]| (a.) 有偏见的
+|tenuous| tenu[thin] + ous| [(内容)浅薄的]| (a.) 空洞的, 没有实际内容的
+
 **tim [fear]**
 
 |||||
 |---|---|---|---
 |intimidate| in + tim + idate| [使进入害怕的状态]| (v.) 威吓
 |timorous| | | (a.) 胆小的
+
+**tract [draw, 拉]**
+
+attract, abstract
+
+|||||
+|---|---|---|---
+|contract|| [draw together, 拉到一起]| (n.) 契约, 合同 <br> (v.) 收缩
+|detract||| (v.) 贬低, 降低价值
+|distract <br> disdraught||| (v.) 使分心, 使焦虑 (a.) 疯狂的 <br> (a.) 精神狂乱的
+|extraction||| (n.) 取出抽出(物); 血统, 出身
+|protract||| (v.) 延长, 拖长
+|retract||| (v.) 收回, 否认
+|tractable|| [able to tract]| (a.) 易驾驭的, 温顺的
 
 **tric [trick]** <br> **^treac**
 
