@@ -6,15 +6,17 @@ description: Personal Notes
 keywords: [Linear Programming, ICM]
 ---
 
+【说明】
+1. 加载图片需用 VPN
+2. 如遇数学公式加载异常，可通过刷新解决
+
 【参考资料】 
 1. [B站：【零基础教程】老哥：数学建模算法、编程、写作和获奖指南全流程培训！](https://www.bilibili.com/video/BV1kC4y1a7Ee?p=4)
 2. 书籍：数学建模算法与程序（司守奎）
 
 # 1 线性规划
 ## 1.1 线性规划的 Matlab 标准型
-$$\underset{x}{\min}\;c^Tx$$
-
-$$s.t.\begin{cases}
+$$\underset{x}{\min}\;c^Tx$$$$s.t.\begin{cases}
 Ax\leq b\\
 Aeq\cdot x=beq\\
 lb\leq x\leq ub
@@ -29,9 +31,7 @@ lb\leq x\leq ub
 ```
 
 例如，对于如下线性规划问题：
-$$\underset{x}{\max}\;2x_1-3x_2$$
-
-$$s.t.\begin{cases}
+$$\underset{x}{\max}\;2x_1-3x_2$$$$s.t.\begin{cases}
 2x_1-5x_2\geq 10\\
 x_1+2x_2\leq 12\\
 x_1+x_2=7\\
@@ -48,16 +48,14 @@ value = c' * x
 ```
 
 ## 1.2 可以转化为线性规划的问题
-很多看起来不是线性规划的问题也可以通过变换变成线性规划的问题来解决。如：
+很多看起来不属于线性规划的问题，也可以通过一定的转换变成线性规划问题。如：
 $$\underset{x}{\min}\;\vert x_1\vert+\vert x_2\vert+...+\vert x_n\vert,\;\;s.t.\;Ax\leq b$$
 
-要把上面的问题变换成线性规划问题，只要注意到事实：对任意的 $x_i$，存在 $u_i, v_i>0$ 满足 $x_i = u_i − v_i, \vert x_i\vert= u_i + v_i$。事实上，只要取 
+由于对于任意的 $x_i$，都存在 $u_i, v_i>0$ 满足 $x_i = u_i − v_i, \vert x_i\vert= u_i + v_i$。例如： 
 $$u_i=\frac{\vert x_i\vert+x_i}{2},v_i=\frac{\vert x_i\vert-x_i}{2}$$
 
-这样，记 $u=[u_1,...,u_n]^T,v_i=[v_1,...,v_n]^T$，从而我们可以把上面的问题变成：
-$$\underset{x}{\min}\;\sum_{i=1}^n(u_i+v_i)$$
-
-$$s.t.\begin{cases}
+这样，记 $u=[u_1,...,u_n]^T,v_i=[v_1,...,v_n]^T$，从而即可把上面的问题转换为：
+$$\underset{x}{\min}\;\sum_{i=1}^n(u_i+v_i)$$$$s.t.\begin{cases}
 A(u-v)\leq b\\
 u,v\geq 0
 \end{cases}$$
@@ -65,9 +63,7 @@ u,v\geq 0
 # 2 指派问题
 ## 2.1 数学模型
 拟分配 $n$ 个人去干 $n$ 项工作，每个人只能干一项，令 $c_{ij}$ 表示分配第 $i$ 个人去干第 $j$ 项工作所需的时间，$x_{ij}=1$ 表示分配 $i$ 干工作 $j$，否则为零。可得指派的数学模型为：
-$$\underset{x}{\min}\;\sum_{i=1}^n\sum_{j=1}^nc_{ij}x_{ij}$$
-
-$$s.t.\begin{cases}
+$$\underset{x}{\min}\;\sum_{i=1}^n\sum_{j=1}^nc_{ij}x_{ij}$$$$s.t.\begin{cases}
 \sum_{i=1}^nx_{ij}=1\\
 \sum_{j=1}^nx_{ij}=1
 \end{cases}$$
@@ -136,18 +132,14 @@ x_i\geq0
 ### 3.3.1 模型一：固定风险，优化收益
 
 固定最大可承受的风险为 $a$，即需满足 $R/M\leq a$：
-$$\max\;\sum_{i=0}^{n=4}(r_i-p_i)x_i$$
-
-$$s.t.\begin{cases}
+$$\max\;\sum_{i=0}^{n=4}(r_i-p_i)x_i$$$$s.t.\begin{cases}
 (q_ix_i)/M\leq a\\
 \sum_{i=0}^{n=4}(1+p_i)x_i=M
 \end{cases}$$
 ### 3.3.2 模型二：固定收益，优化风险
 
 固定最小可承受的收益为 $k$，即需满足 $Q\geq k$：
-$$\min\;\max\{q_ix_i\}$$
-
-$$s.t.\begin{cases}
+$$\min\;\max\{q_ix_i\}$$$$s.t.\begin{cases}
 \sum_{i=0}^{n=4}(r_i-p_i)x_i\geq k\\
 \sum_{i=0}^{n=4}(1+p_i)x_i=M
 \end{cases}$$
@@ -155,9 +147,7 @@ $$s.t.\begin{cases}
 ### 3.3.3 模型三：设置收益与风险的相对权重
 
 对风险、收益分别赋予权重 $s,(1-s)$：
-$$\min\;s(\max\{q_ix_i\})-(1-s)\sum_{i=0}^{n=4}(r_i-p_i)x_i$$
-
-$$s.t.\;
+$$\min\;s(\max\{q_ix_i\})-(1-s)\sum_{i=0}^{n=4}(r_i-p_i)x_i$$$$s.t.\;
 \sum_{i=0}^{n=4}(1+p_i)x_i=M
 $$
 
@@ -196,6 +186,11 @@ xlabel('a'); ylabel('Q');
     <div style="color: #999;">图 3-2 模型一的 a-Q relationship</div>
 </center><br>
 
-由图可知最大收益与风险承受能力的关系
+由图可知最大收益与风险承受能力的关系，特别的：
+1. $a_1=0.006$ 是第一个拐点，其左侧最大收益随可承受的风险增加而快速增长，右侧的增长则较为缓慢。
+2. $a_2=0.025$ 是第二个拐点，其右侧最大收益不再增长
+
+因此，可以判断 $a=0.006$ 是一个比较好的风险承受能力，当选择 $a=0.006$ 时，求解线性规划可得：
+$$Q=0.2019,x_0=0,x_1=0.24,x_2=0.4,x_3=0.1091,x_4=0.2212$$
 
 

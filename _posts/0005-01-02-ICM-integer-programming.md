@@ -5,10 +5,17 @@ categories: ICM
 description: Personal Notes
 keywords: [Integer Programming, ICM]
 ---
+【说明】
+1. 加载图片需用 VPN
+2. 如遇数学公式加载异常，可通过刷新解决
+
+【参考资料】 
+1. [B站：【零基础教程】老哥：数学建模算法、编程、写作和获奖指南全流程培训！](https://www.bilibili.com/video/BV1kC4y1a7Ee?p=4)
+2. 书籍：数学建模算法与程序（司守奎）
 
 相较于线性规划，整数规划要复杂的多，一般可以用以下几种方法来求解
 
-# 1 分支定界法
+# 一、分支定界法
 分支定界法主要由三步构成，分支、定界和剪枝：
 1. **分支**：根据线性规划的结果，把可行解空间反复分割为越来越小的子集。
 2. **定界**：对分支后的每个子集，使用线性规划计算其目标上界和下界。
@@ -21,7 +28,13 @@ $$\max\;z=40x+90y,\;\;s.t.\begin{cases}
 x,y\in N
 \end{cases}$$
 
-### 1.1 分支 1-2：$B_1,B_2$
+下图展示了分支定界法的大致流程（该示例与上题无关）
+<center>
+    <img src="https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2021-01/Snipaste_2021-01-25_19-11-53.jpg" style="zoom:50%"> <br>
+    <div style="color: #999;">图 1-1 示例：分支定界法（该示例与上题无关）</div>
+</center><br>
+
+### 1.1 第一层分支：$B_1,B_2$
 使用线性规划求最优解（非整数），可得 $x=4.81,y=1.82,z=355.88$
 ```matlab
 c = [40; 90];
@@ -49,7 +62,7 @@ x\geq 5\\
 x,y\in N
 \end{cases}$$
 
-### 1.2 定界
+#### 定界
 分别对 $B_1,B_2$ 使用线性规划求最优解（代码略），可得：
 $$\begin{aligned}
 & B_1: x=4,y=2.1,z=349\\
@@ -57,7 +70,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 此时更新目标最优值的上下界 $z\in[0,349]$
-### 1.3 分支 1-4：$B_{11},B_{12},B_{21},B_{22}$
+### 1.2 第二层分支：$B_{11},B_{12},B_{21},B_{22}$
 同分支 1，此时可以利用 $y$ 进行分支：
 $$\begin{aligned}
 & B_1: y=2.1\to y\in[0,2]+y\in[3,\infty)\\
@@ -66,7 +79,7 @@ $$\begin{aligned}
 
 从而得到新的分支 $B_{11},B_{12},B_{21},B_{22}$
 
-### 1.4 定界
+#### 定界
 同 1.2，
 $$\begin{aligned}
 & B_{11}: x=4,y=2,z=340\\
@@ -74,7 +87,6 @@ $$\begin{aligned}
 \end{aligned}$$
 
 此时由于 $B_{11}$ 为整数解且其结果大于 $B_{12}$，可以直接剪掉 $B_{12}$（**剪枝 1**）
-
 $$\begin{aligned}
 & B_{21}: x=5.44,y=1,z=307.78\\
 & B_{22}: \text{无解}
@@ -82,17 +94,17 @@ $$\begin{aligned}
 
 同理，剪去 $B_{21}, B_{22}$（**剪枝 2**），并最终得到该整数规划的最优解 $B_{11}: x=4,y=2,z=340$
 
-# 2 蒙特卡罗法
+# 二、蒙特卡罗法
 当解空间过大时，可以使用概率的方法随机选择部分解尽心验证，当随机解足够多是便能大概率获得最优解。例如求解以下非线性规划的问题：
-
 <center>
-    <img src="https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2021-01/Snipaste_2021-01-16_10-57-39.jpg"> <br>
-    <div style="color: #999;">图 1 蒙特卡罗法示例</div>
+    <img src="https://github.com/ZhekaiLi/PICTURE-for-markdown/raw/master/2021-01/Snipaste_2021-01-16_10-57-39.jpg" style="zoom:80%"> <br>
+    <div style="color: #999;">图 2-1 蒙特卡罗法示例</div>
 </center><br>
 
 ```matlab
 rng(sum(clock));  % 根据时间改变随机种子
 p0 = 0;
+
 for i=1:10^6
     x = 99 * rand(5,1);
 	x1 = floor(x); x2 = ceil(x);
@@ -100,14 +112,12 @@ for i=1:10^6
     if sum(g<=0) == 4
         if p0 <= f
             x0 = x1; p0 = f;
-        end
-    end
+        end, end
     [f,g] = mengte(x2);
     if sum(g<=0) == 4
         if p0 <= f
             x0 = x2; p0 = f;
-        end
-    end
+        end, end
 end
 
 function [f,g] = mengte(x)
