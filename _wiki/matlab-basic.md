@@ -17,59 +17,6 @@ lookfor integral  % 查找有关积分的指令
 ### 1.1.2 字符串
 使用单引号声明字符串，matlab 中不存在双引号
 
-
-
-# 2 Drawing
-**二维绘图**
-```matlab
-plot(x, y, 'color_point_linestyle', 'linewidth', 2, 'markersize', 12);
-```
-'color_point_linestyle' = 线型 + 线色 + 数据点 (例如 `'--r*'`)
-- 线型(-, -., --, : \)
-- 线色(r-red, g-green, b-blue, w-white, k-black，i-invisible，y-yellow)
-- 数据点(., o, x, +, *, S, H, D, V, ^)
-
-
-## 2.1 常用命令
-```matlab
-hold on;  # 持续绘图
-hold off; 
-```
-### 2.1.1 标注
-```matlab
-xlabel(''); 
-ylabel('');
-title(''); 
-axis([xmin, xmax, ymin, ymax]);
-```
-```matlab
-text(x, y, '')  % 图内文字
-% 在指定位置插入文字
-% 这个命令会在图片窗口显示后生成一个会随鼠标移动的十字光标
-% 需要移动光标来指定插入文字的位置
-gtext('');
-```
-### 2.1.2 绘制多个子图
-分成 $r\times c$ 个子窗口，$p$ 为子窗口排位(自左向右，自上而下)
-```matlab
-subplot(r, c, p) 
-```
-
-### 2.1.3 极坐标绘图
-```matlab
-x = 0:0.1:2*pi; 
-r = cos(2*x); 
-
-polar(x, r)
-```
-
-### 2.1.3 函数绘图
-`fplot(fun, lims)` 绘制由字符串 `fun` 指定函数名的函数在 $x$ 轴区间为 `lims=[xmin, xmax]` 的函数图。例如：
-$$f(x)=\begin{cases}
-x + 1,\;\;x<1\\
-1 +\frac{1}{x},\;\; x\geq 1
-\end{cases}$$
-
 # 3 Math
 ## 3.1 矩阵
 ### 3.1.1 共轭转置
@@ -143,7 +90,7 @@ conv(u, v);  % 卷积
 ```
 
 # 4 Data Structure
-## 4.1 结构数据
+## 4.1 结构数组
 ### 4.1.1 结构数组的定义
 **方法 1**
 ```matlab
@@ -151,11 +98,11 @@ conv(u, v);  % 卷积
 ```
 例如：
 ```matlab
-student.name='John'; 
-student.ID='000'; 
+student.name = 'John'; 
+student.ID = '000'; 
 
-student(2).name='Rose'; 
-student(2).ID='001'; 
+student(2).name = 'Rose'; 
+student(2).ID = '001'; 
 ```
 **方法 2**
 ```matlab
@@ -208,6 +155,21 @@ struct2cell()  % 把结构数组转换为细胞数组
 iscell()  % 检验数组是否为细胞型
 ```
 
+# 5 Function
+## 5.1 Basic
+### 5.1.1 读取输入参数的个数
+```matlab
+nargin
+```
+示例：
+```matlab
+function [c] = plus(a,b)
+    if nargin < 2, b = 1;
+        if nargin < 1, a = 1;
+        end, end
+    c = a + b;
+end
+```
 
 
 ```matlab

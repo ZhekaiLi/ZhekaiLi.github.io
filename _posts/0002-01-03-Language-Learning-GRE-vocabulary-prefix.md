@@ -131,9 +131,17 @@ denounce [announce down] 谴责, 公然抨击
 |enchant| | [(let sb) enter song]| (v.) 施魔法, 使入迷
 |engender| en + gen + (d)er| [make generate]| (v.) 产生, 出现
 
-
 **equi [equal]**
-equivocate [call equally (to conflicting points)] 说谎话, 模棱两可地说
+
+|||||
+|---|---|---|---
+|equivocate|| [call equally (to conflicting points)]| (v.) 说谎话, 模棱两可地说
+
+**epi- [addition]**
+
+|||||
+|---|---|---|---
+|epithet| epi[addition] + thet| [起额外的(名字)]| (n.) 外号, 绰号
 
 **eu- [well]**
 
@@ -275,7 +283,6 @@ monastery 寺院, 修道院
 |pellucid <br> = translucent| pel(=per) + luc + id| [light through]| (a.) 透明的, 清晰明了的
 |peroration| |[through oration]| 结束语
 
-
 **peri- [around]**
 
 |||||
@@ -283,6 +290,12 @@ monastery 寺院, 修道院
 |perianal| peri + anal| [around anus]| 肛周的
 |periphery| peri + pher + y| [carry around]| 外围, 边缘, 圆周
 |perpheral| | | 周围的, 边缘的
+
+**post- [back]**
+
+|||||
+|---|---|---|---
+|preposterous| pre + post + erous| [既在前面又在后面]| (a.) 荒谬的, 不符合常理的
 
 **prim- [first]**
 primal 最初的, 主要的
@@ -348,14 +361,11 @@ surrogate [ask A in the place of B] 替代品
 spout 喷口；喷出, 喷射, 滔滔不绝地说
 spurt 冲刺；喷出
 
-# t
+**syn- [together]**
 
-**tim [time]**
-verbatim [(a) word (a) time] 逐字地, 一字不差地
-
-**tr- [tread]**
-
-**trans- [through, 穿], [传], [转]**
+|||||
+|---|---|---|---
+|synthesis| syn[together] + thes + is|| (n.) 综合, 合成
 
 # v
 

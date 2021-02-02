@@ -6,9 +6,11 @@ description: Personal Notes
 keywords: [Language-Learning, GRE, Vocabulary]
 ---
 
+【说明】
+1. 查找单词时结合 prefix 和 suffix 另外两张表
+
 【参考资料】
-1.“跟谁学”平台：刘彬 20000 词汇巅峰速记
-2.《GRE 核心词汇 助记与精炼》第2版
+1. 书本: GRE核心词汇助记与精炼, 第2版
 
 # a
 
@@ -26,6 +28,16 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |amicable| am + icable| | (a.) 友善的
 |amity| am + ity| | (n.) 友好关系, 和睦
 |enamored| en(=in) + am + ored| [in love]| (a.) 迷恋的, 热爱的
+
+**amb [wander, 漫步]**
+
+ambulance
+
+|||||
+|---|---|---|---
+|amble||| (v.n.) 漫步, 闲逛
+|perambulate|| [wander through| (v.) 徒步穿过
+|ramble||| (v.) 漫步; 漫谈 长篇大论地说
 
 **anim [life]**
 
@@ -109,7 +121,7 @@ keywords: [Language-Learning, GRE, Vocabulary]
 |||||
 |---|---|---|---
 |candor| cand + or| [man like a candle]| (n.) 坦白, 直率
-|incandescent| in + cand + escent| [进入蜡烛燃烧般的状态]| (a.) 明亮灿烂的, 热情饱满的
+|incandescent| in + cand + escent[become]| [进入蜡烛燃烧般的状态]| (a.) 明亮灿烂的, 热情饱满的
 |kindle| | | (v.) 点燃
 
 **cant [sing]**
@@ -138,6 +150,32 @@ capacity, capture, accept
 |susceptible| sus[=sub] + cept + ible| [easy to be taken under (emotion)]| (a.) 易受影响的
 |unexceptionable| un + ex + cept + ion + able| [not able to take out (any mistake)]| (a.) 无懈可击的, 完美的
 
+**ced [to go, 走] (v.)** <br> **^ceed, cede** <br> **^cess [to go] (n.), [停止]**
+
+access
+
+|||||
+|---|---|---|---
+|abscess | ab + scess | [(cannot) go away (from skin)] | (n.) 脓肿
+|accede | ac + cede | [go (in)to] | (v.) 加入, 同意, 就职
+|access | ac + cess | [go (in)to] | (v.) 接近, 访问, 获取; (n.) 通道, 进入, 使用权
+|accessory | access + ory | [(和主体) 走得很近] | (n.) 附件, 配件, 从犯
+|cessation||| (n.) 终止, 暂停
+|concede | con + cede | [go (back) together, 各退一步] | (v.) 退让, 承认
+|concession | | | (n.) 让步, 特权
+|incessant | in + cess + ant | [not (stop) going] | (a.) 不断的, 连续的
+|intercede <br> intercessor | inter + cede | [go between (2 people)] | (v.) 调节, 调停 <br> (n.) 调停者
+|necessory | ne + cess + ory | [不能走开的] | (a.) 必需的, 必然的
+|necessitate | necess + itate (ite + ate) | [(使) 必要] | (v.) (使) 成为必需, 迫使
+|precede | pre + cede | [go before] | (v.) 领先, 在...之前
+|precedent | precede + ent | [sth go before] | (n.) 先例; (a.) 先前的
+|process | pro + cess | [go forward] | (n. 重音在 p) 过程, 进程；(v. 重音在 c) 处理, 加工
+|processor | process + or | | (n.) 处理器
+|proceeding | | | (n.) 进行, 程序, 诉讼
+|predecessor | pre + de + cess + or | [sb. go down before] | (n.) 前辈, 前任
+|recession| re + cess + ion | [go back] | (n.) 衰退, 凹处, 不景气
+|recessive|| [(person, gene) go back]| (a.) 后退的; 内向的; （基因）隐性的
+|secede| se[apart] + cede|| (v.) 脱离, 退出
 
 **cern [separate], [distinguish]** <br> **^cert** <br> **^crim, cris, crit** <br> **^cree**
 
@@ -156,29 +194,6 @@ capacity, capture, accept
 |discreet| dis + creet| [区分不同事物时, 要(谨慎)]| (a.) 谨慎的, 小心的
 |discriminate| discrim (=discern) + inate| | (v.) 区别, 辨别, 歧视
 | | discriminant <br> discriminating <br> discriminatory| | (n.) 可辨别的因素, 判别式. <br> (a.) =discerning. <br> (a.) 区别对待的, 歧视的.
-|hypocrisy| hypo + cris + y| [under (the level to) distinguish, 没有做出s
-
-**cess [to go, 走] (做为 n. 更多)** <br> **^ceed (做为 v. 更多)** <br> **^cede**
-
-|||||
-|---|---|---|---
-|abscess | ab + scess | [(cannot) go away (from skin)] | (n.) 脓肿
-|accede | ac + cede | [go (in)to] | (v.) 加入, 同意
-|access | ac + cess | [go (in)to] | (v.) 接近, 访问, 获取; (n.) 通道, 进入, 使用权
-|accessory | access + ory | [(和主体) 走得很近] | (n.) 附件, 配件, 从犯
-|concede | con + cede | [go (back) together, 各退一步] | (v.) 退让, 承认
-|concession | | | (n.) 让步, 特权
-|incessant | in + cess + ant | [not (stop) going] | (a.) 不断的, 连续的
-|intercede | inter + cede | [go between (2 people)] | (v.) 调节, 调停
-|necessory | ne + cess + ory | [不能走开的] | (a.) 必需的, 必然的
-|necessitate | necess + itate (ite + ate) | [(使) 必要] | (v.) (使) 成为必需, 迫使
-|precede | pre + cede | [go before] | (v.) 领先, 在...之前
-|precedent | precede + ent | [sth go before] | (n.) 先例; (a.) 先前的
-|process | pro + cess | [go forward] | (n. 重音在 p) 过程, 进程；(v. 重音在 c) 处理, 加工
-|processor | process + or | | (n.) 处理器
-|proceeding | | | (n.) 进行, 程序, 诉讼
-|predecessor | pre + de + cess + or | [sb. go down before] | (n.) 前辈, 前任
-|recession| re + cess + ion | [go back] | (n.) 衰退, 凹处, 不景气
 
 **chant [sing, song]**
 enchant [(let sb) enter song] 施魔法, 使入迷
@@ -252,13 +267,26 @@ cobble 鹅卵石
 |credulous| cred + ul + ous| [believe too much]| (a.) 轻信的, 易受骗的
 |discredit| | | (v.) 怀疑, 使丢脸
 
-**culp [guilt, 罪行]**
+**culp [guilt 罪行]**
 
 |||||
 |---|---|---|---
 |culpable| culp + able| | (a.) 有罪的, 应被谴责的
 |exculpate| ex + culp + ate| [make sb. out of guilt]| (v.) 使无罪, 开脱
 |inculpate| in + culp + ate| [make sb. in guilt]| (v.) 归罪于
+
+**cur(s) [run 跑]**
+
+occur
+
+|||||
+|---|---|---|---
+|concur|| [run together]| (v.) 同意, 一致, 互助
+|cursory|| [跑得快而草率的]| (a.) 匆忙的, 草率的
+|discursive|| [run apart]| (a.) （内容）杂乱的, 散漫的, 离题的
+|excursive||| (a.) 离题的, 散漫的
+|incursion||| (n.) 入侵
+|precursor||| (n.) 先驱者
 
 **cus [cover 掩护]**
 
@@ -330,7 +358,17 @@ predict
 |peremptory| per + empt + ory| [要求别人全部接受]| (a.) 强制的, 绝对的, 专横的
 |preempt||| (v.) 预先占有, 替换
 
+**err [wander, 游荡, 迷失]**
+
+|||||
+|---|---|---|---
+|aberrant|| [wander away, 走开| (a.) 异常的, 非常规的
+|errant|| [处于游荡或迷失的状态]| (a.) 居无定所的, 误入歧途的
+|erratic|| [（想法）处于游荡状态]| (a.) 善变的, 古怪的, 异常的
+|erroneous| error + neous|| (a.) 错误的, 不正确的 
+
 **es [eat 吃]** <br> **^ed**
+
 这两个词根和单词 eat 同义（元音, 辅音替换组合不改变含义）
 
 |||||
@@ -452,24 +490,26 @@ grateful
 |gratuitous| gratuit(y) + ous| [(送额外)的礼物]| (a.) 无根据的, 无端的, 免费的
 |gratuity| | | (n.) 小费, 赠物
 
-**-gress [to go, 走]** <br> **^-gred** <br> **^-greed** <br> **^-grad**
+**gress [step, 迈步, 踏]** <br> **^gred, greed, grad**
+
+progress
 
 |||||
 |---|---|---|---
-|aggress | ag + gress | [强行 go] | (v.) 侵略
-|congress | con + gress | [go together] | (n.) 国会, 议会
-|digress | di(s) + gress | [go apart] | (v.) 离题, 岔道
-|egress | e + gress | [go out] | (n.) 外出, 出口
+|aggress | ag + gress | [强行踏入] | (v.) 侵略
+|congress | con + gress | [一起踏入] | (n.) 国会, 议会
+|digress ||| (v.) 离题, 岔道
+|egress ||| (n.) 外出, 出口
 |graduate | grad + u + ate | [(使)出走] | (v.) 毕业; (n.) 毕业生
-|ingredient | in + gred + i + ent | [(sth) go into] | (n.) 原料, 要素, 组成部分
-|ingress | in + gress | [go in] | (n.) 进入, 入口
-|progress | pro + gress | | (n. v.) 进步, 前进
-|regress | re + gress | [go back] | (v.) 逆行, 倒退
+|ingredient | in + gred + i + ent | [(sth) step into] | (n.) 原料, 要素, 组成部分
+|ingress ||| (n.) 进入, 入口
+|regress ||| (v.) 逆行, 倒退
+|retrograde| retro + grad(e)|| (a.) 倒退的. (v.) 退步, 退化
 |transgress | trans + gress | [走过 (界限)] | (v.) 越界, 违反, 犯罪
 
 # j
 
-**ject [throw]** <nr> **^jet**
+**ject [throw]** <br> **^jet**
 
 |||||
 |---|---|---|---
@@ -730,6 +770,15 @@ complete, plenty
 |replenish| re + plen + ish| [fill again]| (v.) 补充
 |replete| re + plet + e| [filled again]| (a.) 吃饱的, 充满...的, 富于...的
 
+**pond [weight]**
+
+|||||
+|---|---|---|---
+|ponder|| [重要的东西值得仔细考虑]| (v.) 仔细考虑, 衡量
+|ponderable|| [值得考虑的]| (n.) 值得考虑的事物. (a.) 有重量的, 有价值的
+|ponderous| pond + er + ous| [too much weight]| (a.) 沉重的, 沉闷的, 呆板的
+|preponderant|| [重量在其他之上]| (a.) 占优势的, 更重要的
+
 **port [carry]**
 
 |||||
@@ -738,6 +787,30 @@ complete, plenty
 |importune| | [not carry, 不带来就不行]| (v.) 胡搅蛮缠, 迫切请求
 |opportune| | | (a.) 适合的
 |rapport| ra(=re) + (p)port| [carry agian, 一直带在身边]| (n.) 和睦, 友好
+
+**pos(t) [put]** <br> **^pon**
+
+expose, poster, suppose
+
+|||||
+|---|---|---|---
+|apposite| ap[=ad] + posite[position]| [(near) to position, 说到点子上, 很到位]| (a.) 相关的, 合适的
+|apropos|| [(near) to propose]| (a.) 适当的; (prep) 关于
+|compose <br> discompose|| [把内心的冲突放到一起处理]| (v.) 使平静; 组成, 构成 <br> (v.) 使不安, 使混乱
+|compound|| [将（相同的、不同的、矛盾的）东西放在一起]| (v.) 和解, 妥协; 恶化, 扩大; 混合 (n.) 混合物 (a.) 混合的
+|depose| de[away] + pos(e)|| (v.) 废黜, 罢免; 宣誓作证
+|deposit| de[down] + pos + it|| (v.) 存钱, 沉淀. (n.) 存款, 押金, 沉积物
+|exponent|| [put out (to the public)]| (n.) 指数; 倡导者, 支持者
+|imposing|| [(easy to be) put in (sight)]| (a.) 宏伟壮丽的
+|impostor|| [放到他人的位置上]| (n.) 冒充者
+|poseur|| [(喜欢)摆弄姿势的人]| (n.) 故作姿态、装腔作势的人
+|posit|| [放出(一个假设)]| (v.) 假定, 安置. (n.) 假设
+|postulate|| [put (as truth)]| (v.) 假定为真. (n.) 前提条件
+|posture||| (n.) 姿势 (v.) 摆姿势, 故作姿态
+|proponent|| [put forward (to the public)]| (n.) 建议者, 支持者
+|repose| re[rest] + pose[pause]|| (v.) 休息, 放置. (n.) 休息, 平静
+|superimpose| super[over] + im + pos(e)| [put over]| (v.) 添加, 重叠
+|supposition||| (n.) 猜想, 推测 
 
 **prehend [seize 抓]** <br> **^prehens** <br> **^pris**
 
@@ -809,8 +882,7 @@ rape
 |||||
 |---|---|---|---
 |ascendant| ascend + ant| | (a.) 上升的, 有影响力的; (n.) 优势
-|condescend| con + de + scend| [climb down]| (v.) 屈尊, 俯就
-|| condescending| | (a.) 居高临下的, 表现出优越感的
+|condescend <br> condescending| con + de + scend| [climb down, 趴下去迁就]| (v.) 屈尊, 俯就 <br> (a.) 居高临下的, 表现出优越感的
 |crescendo| cre + scend + o| [climb and increase]| (n.) (v.) (声音)渐强
 |transcend| tran + scend| [climb across]| (v.) 超越
 
@@ -865,6 +937,17 @@ conserve, preserve
 |dissonance| dis + son + ance| [sound apart]| (n.) 不和谐, 刺耳; 不一致, 分歧
 |resonant| | [sound again]| (a.) 洪亮的, 共鸣的
 
+**sul(t) [leap]**
+
+insult
+
+|||||
+|---|---|---|---
+|desultory||| (a.) 漫无目的的, 令人失望的, 不连贯的
+|exult|| [leap out, 欢呼雀跃]| (v.) 感到欢喜
+|resilience||| (n.) 弹力, 恢复能力
+|salient||| (a.) 显著的, 突出的
+
 **sum(pt) [take 拿]**
 
 |||||
@@ -888,7 +971,7 @@ contain, attain
 |||||
 |---|---|---|---
 |abstain|| [away from hold]| (v.) 弃权, 回避, 自制, 戒除
-|countenance||| (v.) 容忍, 赞成, 推崇; (n.) 沉着, 冷静
+|countenance| coun[=con] + ten + ance| [hou住心态$\to$面容表情, 沉着] <br> [保持(拥护的心)$\to$支持拥护]| (v.) 支持, 拥护; (n.) 面容表情, 沉着
 |detain| de[away] + tain| [拿走]| (v.) 拘留, 扣留
 |pertain|| [hold through, 始终持有]| (v.) 属于, 从属, 关于, 适用
 |pertinent <br> impertinent||| (a.) 相关的, 恰当的 <br> (a.) 无关紧要的; 无理的, 粗俗的
@@ -896,7 +979,7 @@ contain, attain
 |retentive|| [hold (memory) back]| (a.) 记性好的
 |retinue|| [(people) hould back]| (n.) 随行人员
 |tenable <br> (反)untenable|| [able to hold]| (a.) （主张）站得住脚的, 有据可依的
-|tenacious <br> (同)pertinacious| ten + acious[表程度深]| (a.) 顽固的, 不屈不挠的
+|tenacious <br> (同)pertinacious| ten + acious[表程度深]|| (a.) 顽固的, 不屈不挠的
 
 **tend [stretch]** <br> **^tens, tent**
 
@@ -920,12 +1003,22 @@ extend, extent
 |tendentious|| [(见解)向某个方向伸展的]| (a.) 有偏见的
 |tenuous| tenu[thin] + ous| [(内容)浅薄的]| (a.) 空洞的, 没有实际内容的; 纤细的, 稀薄的, 贫乏的
 
-**tim [fear]**
+**thes [place, put]** <br> **^thet**
+
+|||||
+|---|---|---|---
+|antithetical|| [put against]| (a.) 对立的, 相反的
+|epithet| epi[addition] + thet| [起额外的(名字)]| (n.) 外号, 绰号
+|parenthesis| par[不译] + en + thes + is| [put in]| (n.) 插入语, 间断, 圆括号
+|synthesis| syn[together] + thes + is|| (n.) 综合, 合成
+
+**tim [fear], [time]**
 
 |||||
 |---|---|---|---
 |intimidate| in + tim + idate| [使进入害怕的状态]| (v.) 威吓
 |timorous| | | (a.) 胆小的
+|verbatim| verb + a + tim| [(a) word (a) time]| (a.) 逐字地, 一字不差地
 
 **tract [draw, 拉]**
 
@@ -947,7 +1040,7 @@ attract, abstract
 |---|---|---|---
 |intricate| in + tric + ate| [陷入诡计]| (a.) 错综复杂的
 |extricate| ex + tric + ate| [使逃出诡计]| (v.) 使解脱, 解救
-|treacherous| treac(h) + er + out| | (a.) 背叛的
+|treacherous| treac(h) + er + ous| [耍把戏的]| (a.) 背叛的
 
 **ton [tone]**
 
@@ -1005,6 +1098,16 @@ tune
 |evanescent| e + van + escent[(a.) become]| [become empty out]| (a.) 逐渐消逝的, 短暂的
 |vacuous| vacuum 的形容词形式| | (a.) 空的, 空虚的, 无意义的
 
+**vad [go]** <br> **vas**
+
+invade
+
+|||||
+|---|---|---|---
+|evasive| e[ex] + vas + ive| [(easily) go away]| (a.) 难以发现的, 逃避的, 托辞的
+|extravagant|| [go outside]| (a.) 过度的, 不必要的, 挥霍的
+|pervade||| (v.) 弥漫, 充满
+
 **val [strong], [value]**
 
 |||||
@@ -1014,7 +1117,6 @@ tune
 |unavailing| un + availing(=available)| | (a.) 徒劳的, 无用的
 |valediction| val(e) + dict + ion| [say "be strong and valuable"]| (n.) 告别演说, 告别词
 |valiant| val + iant| | (a.) 勇敢的, 英勇的
-
 
 **vari- [vary, change]**
 
@@ -1029,11 +1131,15 @@ tune
 |---|---|---|---
 |advance | ad + van + (an)c + e | [come to before] | (n. v.) 发展, 前进, 增长
 |advent | ad + vent | [come to] | (n.) 出现, 降临
+|adventitious|| [come (from outside)]| (a.) 外来的, 后天的, 非内在的
+|circumvent|| [绕圈子（以避免）]| (v.) 躲避, 不遵从
+|contravene| contra + ven(e)|| (v.) 违反, 反对
 |convene | con + ven + e | [come together] | (v.) 集合, 召集
 |convention | conven(e) + (t)ion | [开会制定惯例] | (n.) 大会, 习俗, 惯例
 |conventional | | | (a.) 传统的, 惯例的
 |intervene | inter + vene | | (v.) 干涉, 干预 = interfere
 | | intervening | | (a.) 介于...中间的, 在...期间内的
+|inventory||| (n.) 存货清单, 详细目录
 |preventative = preventive| prevent + ative (=ive) | | (a.) 预防性的, 预备的
 |revenue | re + ven + ue | [(money) come back] | (n.) 收入 = income 
 

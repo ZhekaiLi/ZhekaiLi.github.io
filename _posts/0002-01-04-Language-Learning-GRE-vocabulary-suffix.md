@@ -68,6 +68,7 @@ precedence (n.) 优先 (相较于 precedent "先例, 先前的" 中的 ent, ence
 |||||
 |---|---|---|---
 |convalesce| con + val + esce[(v.) become]| [become strong]| (v.) 渐渐康复
+|incandescent| in + cand + escent[become]| [进入蜡烛燃烧般的状态]| (a.) 明亮灿烂的, 热情饱满的
 |evanescent| e + van + escent[(a.) become]| [become empty out]| (a.) 逐渐消逝的, 短暂的
 
 # g
