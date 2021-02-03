@@ -36,7 +36,7 @@ ambulance
 |||||
 |---|---|---|---
 |amble||| (v.n.) 漫步, 闲逛
-|perambulate|| [wander through| (v.) 徒步穿过
+|perambulate|| [wander through]| (v.) 步行通过, 漫步于
 |ramble||| (v.) 漫步; 漫谈 长篇大论地说
 
 **anim [life]**
@@ -51,7 +51,7 @@ ambulance
 |||||
 |---|---|---|---
 |misanthropic| mis + anthrop + ic| [bad to mankind]| (a.) 反人类的
-|philanthropic| phil + anthrop + ic| [love mankind]| (a.)
+|philanthropic| phil + anthrop + ic| [love mankind]| (a.) 博爱的, 仁慈的
 
 **av [bird]**
 
@@ -362,7 +362,7 @@ predict
 
 |||||
 |---|---|---|---
-|aberrant|| [wander away, 走开| (a.) 异常的, 非常规的
+|aberrant|| [wander away, 四处游荡]| (a.) 异常的, 非常规的
 |errant|| [处于游荡或迷失的状态]| (a.) 居无定所的, 误入歧途的
 |erratic|| [（想法）处于游荡状态]| (a.) 善变的, 古怪的, 异常的
 |erroneous| error + neous|| (a.) 错误的, 不正确的 
@@ -937,13 +937,13 @@ conserve, preserve
 |dissonance| dis + son + ance| [sound apart]| (n.) 不和谐, 刺耳; 不一致, 分歧
 |resonant| | [sound again]| (a.) 洪亮的, 共鸣的
 
-**sul(t) [leap]**
+**sul(t) [leap]** <br> **^sal, sil**
 
 insult
 
 |||||
 |---|---|---|---
-|desultory||| (a.) 漫无目的的, 令人失望的, 不连贯的
+|desultory|| [向下随便跳]| (a.) 漫无目的的, 令人失望的, 不连贯的
 |exult|| [leap out, 欢呼雀跃]| (v.) 感到欢喜
 |resilience||| (n.) 弹力, 恢复能力
 |salient||| (a.) 显著的, 突出的
@@ -1131,7 +1131,7 @@ invade
 |---|---|---|---
 |advance | ad + van + (an)c + e | [come to before] | (n. v.) 发展, 前进, 增长
 |advent | ad + vent | [come to] | (n.) 出现, 降临
-|adventitious|| [come (from outside)]| (a.) 外来的, 后天的, 非内在的
+|adventitious|| [come (from outside)]| (a.) 外来的, 偶然的, 非内在的
 |circumvent|| [绕圈子（以避免）]| (v.) 躲避, 不遵从
 |contravene| contra + ven(e)|| (v.) 违反, 反对
 |convene | con + ven + e | [come together] | (v.) 集合, 召集
