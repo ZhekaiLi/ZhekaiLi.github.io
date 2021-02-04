@@ -445,7 +445,7 @@ famous, fable
 |||||
 |---|---|---|---
 |conflagration| con + flagr + ation| [burn together]| (n.) 战争, 武装冲突
-|flamboyant| | [像燃烧一样]| (a.) 艳丽的, 火焰似的
+|flamboyant| | [像燃烧一样]| (a.) 艳丽的, 火焰似的, 炫耀的
 
 **fulg [shine]**
 
