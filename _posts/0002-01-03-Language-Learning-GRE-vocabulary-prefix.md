@@ -249,8 +249,9 @@ monastery 寺院, 修道院
 
 |||||
 |---|---|---|---
-|obloquy| | [speak against] | (v.) 谩骂, 诽谤, 恶名, 耻辱
+|obloquy|| [speak against] | (v.) 谩骂, 诽谤, 恶名, 耻辱
 |obsequious| ob + sequ + ious| [follow toward]| (a.) 谄媚的, 奴性的
+|obsess| ob + sess[sit]| [sit toward, （一直）坐在对面挡着]| (v.) 使迷住, 使困扰
 
 **omni- [all]**
 

@@ -267,6 +267,18 @@ cobble 鹅卵石
 |credulous| cred + ul + ous| [believe too much]| (a.) 轻信的, 易受骗的
 |discredit| | | (v.) 怀疑, 使丢脸
 
+**cu(m)b [lie]**
+
+|||||
+|---|---|---|---
+|cumber|| [躺在（路上）的东西]| (n. v.) 阻碍
+|cumbersome| comber + some|| (a.) 笨重的, 难处理的
+|encumber||| (v.) 阻碍, 妨碍
+|incumbate| in[on] + cub + ate| [lie on (eggs)]| (v.) 孵化; 帮助, 培养, 促进
+|incumbent|| [lie on (duty, job)]| (n.) 在职者, 任职者. (a.) 在任的, 义不容辞的
+|recumbent|| [lie back]| (a.) 躺着的
+|succumb|| [lie down]| (v.) 屈服, 死亡
+
 **culp [guilt 罪行]**
 
 |||||
@@ -360,6 +372,8 @@ predict
 
 **err [wander, 游荡, 迷失]**
 
+error
+
 |||||
 |---|---|---|---
 |aberrant|| [wander away, 四处游荡]| (a.) 异常的, 非常规的
@@ -444,7 +458,7 @@ famous, fable
 
 |||||
 |---|---|---|---
-|conflagration| con + flagr + ation| [burn together]| (n.) 战争, 武装冲突
+|conflagration| con + flagr + ation| [burn together]| (n.) 大火; 战争, 武装冲突
 |flamboyant| | [像燃烧一样]| (a.) 艳丽的, 火焰似的, 炫耀的
 
 **fulg [shine]**
@@ -935,7 +949,46 @@ conserve, preserve
 |---|---|---|---
 |consonant| con + son + ant| [sound together]| (a.) 和谐一致的
 |dissonance| dis + son + ance| [sound apart]| (n.) 不和谐, 刺耳; 不一致, 分歧
-|resonant| | [sound again]| (a.) 洪亮的, 共鸣的
+|resonant|| [sound again]| (a.) 洪亮的, 共鸣的
+
+**sid [sit]** <br> **^sed, sess**
+
+president
+
+|||||
+|---|---|---|---
+|assiduous|| [to sit, 一直坐着（学习）, 很用心]| (a.) 勤勉的, 专心仔细的
+|obsess| ob + sess| [sit toward, （一直）坐在对面挡着]| (v.) 使迷住, 使困扰
+|residue|| [sit back]| (n.) 剩余物
+|sedate| sed + ate[a.]| [坐着的]| (a.) 淡定的, 安静的
+|sedentary||| (a.) 久坐的, 固定不动的
+|sedulous|| [坐下（学习）的]| (a.) 勤奋认真的
+|subside||| (v.) 下陷, 下沉, 减弱
+|subsidiary|| [坐在下面（当替补）]| (a.) 次要的, 起辅助作用的. (n.) 子公司
+|subsidy|| [在下面（维持生活）]| (n.) 补助金, 津贴
+|supersede|| [sit over]| (v.) 取代, 替代
+
+**stas [stand]** <br> **^stat**
+
+|||||
+|---|---|---|---
+|apostasy| apo[away] + stats(y)| [stand away (from religion, party)]| (n.) 变节, 背叛; 放弃宗教信仰
+|ecstasy| ec[out] + stas(y)| [(emotion) stand out (of control)]| (n.) 无法控制的情绪, 狂喜
+|instate|| [(make sb.) stand in (a position)]| (v.) 任命
+|stasis|| [站着（不进不退）]| (n.) 平衡, 停滞
+|stature||| (n.) 身高, 高度; 才干, 水平
+|understate| under + state|| (v.) 保守陈述
+
+**stit(ut) [stand]**
+
+|||||
+|---|---|---|---
+|constitute|| [使某人站到某职位上/ 让东西站到一起]| (v.) 指派, 任命; 构成, 组成
+|institute||| (v.) 创立, 制定. (n.) 机构
+|reconstitute|| [stand again together]| (v.) 重建, 使复原
+|restitution|| [stand back (to origion)]| (n.) 归还; 补偿, 赔偿
+|substitute||| (n.) 取代者, 替代品. (v.) 取代, 替代
+
 
 **sul(t) [leap]** <br> **^sal, sil**
 
@@ -943,7 +996,7 @@ insult
 
 |||||
 |---|---|---|---
-|desultory|| [向下随便跳]| (a.) 漫无目的的, 令人失望的, 不连贯的
+|desultory|| [向下随便跳]| (a.) 随意的, 散漫的
 |exult|| [leap out, 欢呼雀跃]| (v.) 感到欢喜
 |resilience||| (n.) 弹力, 恢复能力
 |salient||| (a.) 显著的, 突出的
@@ -1086,8 +1139,6 @@ tune
 |inundate| in + und + ate| [flow in]| (v.) 淹没
 |redundant| re(d) + und + ant| [flow again, overflow]| (a.) 多余的
 
-
-
 # v
 
 **vac [empty]** <br> **^van**
@@ -1098,7 +1149,7 @@ tune
 |evanescent| e + van + escent[(a.) become]| [become empty out]| (a.) 逐渐消逝的, 短暂的
 |vacuous| vacuum 的形容词形式| | (a.) 空的, 空虚的, 无意义的
 
-**vad [go]** <br> **vas**
+**vad [go]** <br> **^vas, vag**
 
 invade
 

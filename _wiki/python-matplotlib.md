@@ -38,6 +38,11 @@ plt.figure(figsize=(l, w)  # 调整图像大小
 ```py
 plt.xlim(_min, _max)
 ```
+当然也可以只设定最大/ 最小值，例如：
+```py
+plt.xlim(xmin=0)
+plt.ylim(ymin=0)
+```
 
 ### 1.5 plt.grid
 生成网格
