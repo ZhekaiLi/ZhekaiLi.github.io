@@ -123,7 +123,6 @@ denounce [announce down] 谴责, 公然抨击
 |divert| di + vert| [turn to different ...]| (v.) 转移, 使转向
 
 # e
-
 **en- [enter], [make]**
 
 |||||

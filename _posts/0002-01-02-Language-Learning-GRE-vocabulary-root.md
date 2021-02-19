@@ -13,12 +13,51 @@ keywords: [Language-Learning, GRE, Vocabulary]
 1. 书本: GRE核心词汇助记与精炼, 第2版
 
 # a
+**ac [sharp, 尖, 锐利]**
 
-**agri [land and soil]**
+acid
 
 |||||
 |---|---|---|---
-|agrarian| agra + r + ian| [about land and soil]| (a.) 土地的, 耕地的
+|acerb (=acerbic)||| (a.) 尖锐的, 尖酸刻薄的
+|acme||| (n.) 极点, 顶点; 典范
+|acrid||| (a.) 辛辣的, 刺鼻的; 刻薄的
+|acrimonious||| (a.) 刻薄的, 充满仇恨的
+|acumen|| [（思维）锐利]| (n.) 聪明, 敏锐
+|acute||| (a.) 敏锐的; 严重的, 急性的
+|exacerbate| ex[thoroughly] + acerb[sharp] + ate| [make sharp thoroughly]| (v.) 使加剧, 使恶化
+
+**ag [act, drive, lead]**
+
+|||||
+|---|---|---|---
+|agility| ag + il(e)[easy]| [easy to act]| (n.) 身手敏捷
+|agitate|| [drive (motion)]| (v.) 煽动, 激起; 使不安
+|agog| ag + og[=ag]| [两倍的 drive]| (a.) 极度感兴趣
+|coagulate| co[together] + ag + ulate| [drive together, 使...到一起]| (v.) （使）凝结, （使）变稠
+|cogent|| [把（很多事实）放在一起]| (a.) 令人信服的, 相关的
+|demagogue| demago[=damage] + (a)g + ue| [drive to damage]| (n.) 煽动者
+|pedagogue| ped(i) + ag[lead] + ogue| [lead children]| (n.) 教育者, 老师
+|reactionary|| [act back]| (a.) 保守的, 反动的
+
+**ali [another]**
+
+alien
+
+|||||
+|---|---|---|---
+|alibi| ali + bi[be]| [be (at) another (place)]| (n.) 不在场的证明; 托辞, 借口
+|alienate|| （友谊和信任）转移到了其他地方| (v.) 使疏远, 离间; 转让, 让与
+|inalienable|| [不能转移到别处]| (a.) 不可剥夺的, 不能让与的
+
+**alter [other]**
+
+作为单词时含义为“替换”, alternate
+
+|||||
+|---|---|---|---
+|altruism|| [帮助别人]| (n.) 利他主义
+|adulterate|| [加入其它低等成分]| (v.) 掺假
 
 **am [love]**
 
@@ -61,7 +100,6 @@ ambulance
 |aviate| av + iate| [使像鸟一样(飞)]| (v.) 飞行, 驾驶飞机
 
 # b
-
 **base [bottom]** <br> **^bysm**
 
 |||||
@@ -70,6 +108,15 @@ ambulance
 ||self-abasement| | (n.) 自卑
 |abysmal| a[away] + bysm + al| [base away, 无底的]| (a.) 深不可测的, 极度的, 级低的
 |debase| | | (v.) 降低, 贬低
+
+**beat [敲打]**
+
+|||||
+|---|---|---|---|
+|abate|| [beat (down)]| (v.) 减轻, 减少, 降低
+|browbeat| brow[眉毛] + beat| [用眉毛打人]| (v.) 恐吓
+|offbeat|| [（弹钢琴时）离开了应该敲击的键]| (a.) 不平常的
+|upbeat|| [（弹钢琴时）向高音处敲击]| (a.) 上升的, 乐观的, 积极向上的
 
 **bi [biology]**
 这是作为词根时的含义, 当作为前缀时表示 "double"
@@ -114,8 +161,15 @@ ambulance
 |bravado| brava + do| [(pretend to) do a brave]| (n.) 假装勇敢, 虚张声势
 |bravura| brav + ura| [you are a(=ura) brave man (on stage)]| (a.) (n.) 出色的表演, 精湛的演技
 
-# c
+**brev [brief]**
 
+|||||
+|---|---|---|---|
+|abbreviate|| [make brief]| (v.) 缩写, 缩短
+|brevity||| (n.) 简短, 简洁
+|abridge|| [有桥直通两地, 缩短了距离]| (v.) 缩短; 删节, 缩写
+
+# c
 **cand [candle]** <br> **^kind**
 
 |||||
@@ -143,8 +197,12 @@ capacity, capture, accept
 |disciple|| [(people could be) taken away]| (n.) 门徒, 信徒
 |emancipate| e[=ex] + man[hand] + cip + ate| [take hand out, 解开被束缚的手]| (v.) 解放, 解除束缚
 |inception <br> incipient|| [take in, 入手]| (n.) 开始, 开端 <br> (a.) 起初的
+|madcap| mad[mad] + cap| [抓着狂热的东西]| (a.) 大胆的, 鲁莽的. (n.) 热爱冒险的人
 |perceptible|| [able to be taken thoroughly]| (a.) 可察觉的
 |perceptive||| (a.) 敏锐的, 洞察力强的
+|precipice|| [抓住前面的东西，（不然就要掉下去了）]| (n.) 悬崖峭壁
+|precipitous||| (a.) 匆忙的, 鲁莽的; 险峻的
+|precipitate|| [向前抓]| (a.) 鲁莽的, 仓促的. (v.) 促使, 导致; 使落下, 使沉淀
 |preoccupation|| [occupy before]| (n.) 全神贯注
 |recuperate|| [take back]| (v.) 恢复, 康复
 |susceptible| sus[=sub] + cept + ible| [easy to be taken under (emotion)]| (a.) 易受影响的
@@ -221,12 +279,21 @@ enchant [(let sb) enter song] 施魔法, 使入迷
 |decadent| decad(e) + ent| | (a.) 堕落的, 腐败的; (n.) 堕落的人, 放纵者
 |recidivate| re + cid + ivate| [fall back]| (v.) 再犯, 重犯(罪行)
 
+**cis [cut]** 
+
+precise, suicide
+
+|||||
+|---|---|---|---
+|concise|| [把没用的都切掉]| (a.) 简洁的
+|incisive|| [切到里面]| (a.) 敏锐的; 直接的, 果断的; 深刻的, 锋利的
+
 **cit [arouse]** 
 
 |||||
 |---|---|---|---
 |incite| in + cit(e)| [arouse in, 从内部唤醒]| (v.) 煽动, 激起
-|resuscitate| re + sus(=sub) + cit + ate| [从下面才起唤醒]| (v.) 使复活, 使苏醒
+|resuscitate| re + sus(=sub) + cit + ate| [从下面唤醒]| (v.) 使复活, 使苏醒
 |solicitous| sol[entire] + i + cit + ous| [arouse entire]| (a.) 热心的, 热切的
 
 **claim [shout]** <br> **^clam**
@@ -251,6 +318,15 @@ cobble 鹅卵石
 |ensconce| en(s) + conc(e)| [hide in]| (v.) 安置, 隐藏
 |recondite| re + cond + ite| [hide back]| (a.) 深奥的, 难解的
 
+**cord [heart]** <br> **^core**
+
+|||||
+|---|---|---|---
+|cardinal|| [像心脏一样的地位]| (a.) 主要的, 非常重要的
+|chord|| [心弦]| (n.) 弦, 和弦. (v.) 与...和谐一致
+|concord <br> discord|| [heart together] <br> [heart away]| (n.) 一致, 和睦 <br> (n.) 意见不一致, 不和谐
+|cordial||| (a.) 热情友好的, 由衷的; (n.) 甜果汁饮料, 兴奋剂, 甜香酒
+
 **coni [cone 圆锥, 球果]**
 
 |||||
@@ -274,7 +350,7 @@ cobble 鹅卵石
 |cumber|| [躺在（路上）的东西]| (n. v.) 阻碍
 |cumbersome| comber + some|| (a.) 笨重的, 难处理的
 |encumber||| (v.) 阻碍, 妨碍
-|incumbate| in[on] + cub + ate| [lie on (eggs)]| (v.) 孵化; 帮助, 培养, 促进
+|incubate| in[on] + cub + ate| [lie on (eggs)]| (v.) 孵化; 帮助, 培养, 促进
 |incumbent|| [lie on (duty, job)]| (n.) 在职者, 任职者. (a.) 在任的, 义不容辞的
 |recumbent|| [lie back]| (a.) 躺着的
 |succumb|| [lie down]| (v.) 屈服, 死亡
@@ -343,6 +419,16 @@ predict
 |doctrine||| (n.) 主义, 教义, 信条
 |indoctrinate|| [doctrine in]| (v.) 灌输思想, 教育
 
+**don [give]** <br> **^dot**
+
+donate
+
+|||||
+|---|---|---|---
+|anecdote| an[not] + ec[=ex] + dot(e)| [未被发表的事情]| (n.) 奇闻轶事
+|donor||| (n.) 捐赠人
+|condone|| [give (away one's fault)]| (v.) 宽恕, 赦免
+
 **dox [opinion]**
 
 |||||
@@ -356,11 +442,13 @@ predict
 |||||
 |---|---|---|---
 |abduct| ab + duct| [lead away]| (v.) 诱拐, 绑架
+|conducive||| (a.) 有益的, 促进的
+|induce <br> inducement||| (v.) 诱导, 引起 <br> (n.) 动机, 刺激源, 诱因; 劝说
+|irreducible||| (a.) 不可约减的
 |produce| pro + duce| [lead forward]| (v.) 引起, 造成, 生产
 |seduce| se + duce| [lead to sex]| (v.) 引诱, 诱奸
 
 # e
-
 **emp(t) [take 拿]**
 
 |||||
@@ -369,6 +457,17 @@ predict
 |exempt|| [take out]| (v.) 免除, 豁免
 |peremptory| per + empt + ory| [要求别人全部接受]| (a.) 强制的, 绝对的, 专横的
 |preempt||| (v.) 预先占有, 替换
+
+**equ [equal]**
+
+equator
+
+|||||
+|---|---|---|---
+|egalitarian|| [来自 equality]| (a.) 平等主义的
+|equable|| [（情绪）稳定的]| (a.) 平静的
+|equity||| (n.) 公平, 不偏不倚
+|iniquity||| (n.) 不公正, 邪恶
 
 **err [wander, 游荡, 迷失]**
 
@@ -391,7 +490,6 @@ error
 |edible| ed + ible| [able to eat]| (a.) 可以吃的
 
 # f
-
 **fa [say]**
 
 famous, fable
@@ -404,6 +502,29 @@ famous, fable
 |ineffable| in + ef[=ex] + fa + ble| [cannot say out]| (a.) 难以表达的
 |infamous| | | (a.) 臭名昭著的
 |preface| | [say before] (n.) 序言
+
+**fac(t) [do, make]** <br> **^fect, feit**
+
+|||||
+|---|---|---|---
+|affectation|| [（刻意地）去做]| (n.) 虚伪, 做作
+|counterfeit|| [make against (the real one)]| (a.) 仿制的, 假冒的. (v.) 仿制, 伪装成
+|disaffected|| [bad affect, 不好的情感]| (a.) 不满的, 叛逆的
+|disinfect||| (v.) 消毒, 使无菌
+|faction|| [做事的一伙人]| (n.) 派系 
+|feckless|| [less do, 行动很少]| (a.) 不负责任的, 无效的, 没有价值的
+|forfeit|| [(money) for doing (wrong)]| (v.) （因犯罪、失职、违约等）丧失（权利、名誉、生命等）. (n.) 罚金
+|surfeit|| [do over]| (n. v.) （使）过量、过度, 饮食过度
+
+**face [face]**
+
+|||||
+|---|---|---|---
+|barefaced||| (a.) 公然的, 厚颜无耻的
+|efface|| [face out]| (v.) 抹去, 抹掉
+|facetious|| [做很多鬼脸]| (a.) 喜欢开玩笑的, 轻浮的
+|facile||| (a.) 表面的, 浅尝辄止的; (a.) 容易的, 唾手可得的                           
+|superficial| super + fic[=face] + ial| [over face]| (a.) 表面的, 肤浅的
 
 **fall [false]**
 
@@ -446,6 +567,19 @@ famous, fable
 |fervor| ferv + or| | (n.) 热情, 狂热
 |perfervid| per + fervid| [thoroughly hot]| (a.) 非常热情的
 
+**fic [make]**
+
+magnificent, gasify, specific
+
+|||||
+|---|---|---|---
+|beneficent|| [make good]| (a.) 慈善的, 善行的
+|efficacious| effic[efect] + acious| [lot of effects]| (a.) 有效的
+|nullification| null + i + fic + ation| [make nothing]| (n.) 无效, 废弃, 取消
+|officious| offic(e) + ious| [like an officer]| (a.) 爱管闲事的, 爱摆官架子的
+|proficient|| [之前做过, 所以很熟练]| (a.) 熟练的, 精通的
+|soporific| sopor[sleep] + i + fic| [make sleepy]| (n.) 安眠药. (a.) 催眠的, 困倦的, 单调乏味的
+
 **fid [trust]**
 
 |||||
@@ -454,6 +588,15 @@ famous, fable
 |fidelity| | | (n.) 忠诚
 |perfidy| per + fid + y| [go through trust, 穿过信任]| (n.) 不忠, 背信弃义
 
+**fin [border, end, 边界]**
+
+finish, confine[强化边界 $\to$ 限制, 监禁], infinite
+
+|||||
+|---|---|---|---
+|affinity|| [to border, 靠近]| (n.) 喜欢, 倾向
+|finale|| [final]| (n.) 终场, 结局
+
 **flam [burn]** <br> **^flagr**
 
 |||||
@@ -461,12 +604,56 @@ famous, fable
 |conflagration| con + flagr + ation| [burn together]| (n.) 大火; 战争, 武装冲突
 |flamboyant| | [像燃烧一样]| (a.) 艳丽的, 火焰似的, 炫耀的
 
+**flec [bend]** <br> **^flex**
+
+flexible, reflect
+
+|||||
+|---|---|---|---
+|deflect| de[aside] + flec + t| [bend aside]| (v.) 使偏斜, 使转向
+
+**flu [flow]**
+
+influence
+
+|||||
+|---|---|---|---
+|affluent|| [多的像水一样流淌]| (a.) 富裕的
+|confluence|| [flow together]| (n.) 汇合, 混合
+|effluvium|| [(sth. should be) flowed out]| (n.) 恶臭, 臭气, 废品
+|fluctuate||| (v.) 波动
+|flush|| [流动冲洗, 血液流动, 像流水一样多]|(n. v. a.) 脸红, 潮红; 冲洗; 大量的
+|influx||| (n.) 涌入
+|mellifluous| melli[honey] + flu + ous| [honey flow]| (a.) （曲调）甜蜜优美的, 流畅的
+|superfluous|| [overflow]| (a.) 多余的, 过剩的
+
+**fract [break]**
+
+fracture, fraction
+
+|||||
+|---|---|---|---
+|infraction|| [break in]| (n.) 违背, 违犯
+|frail|| [类似于 fragile]| (a.) 脆弱的, 虚弱的
+
 **fulg [shine]**
 
 |||||
 |---|---|---|---
 |effulgent| ef(=ex) + fulg + ent| [shine out]| (a.) 光辉灿烂的
 |refulgent| re + fulg + ent| [shine back and again]| (a.) 辉煌的
+
+**fus [pour, 倒, 流, 倾泻]**
+
+confuse, refuse
+
+|||||
+|---|---|---|---
+|diffuse| dif[apart] + fus(e)| [pour apart]| (v.) 扩散, 散开. (a.) 弥漫的, 扩散的, 啰嗦的
+|effusive|| (flow of emotion) pour out| (a.) 喷发的; 感情泛滥的, 多情的
+|infuse||| (v.) 灌输, 使充满; 鼓舞
+|profuse||| (a.) 丰富的, 慷慨的, 浪费的
+|suffuse|| [pour under]| (v.) 充满, 染遍
 
 # g
 
@@ -521,6 +708,16 @@ progress
 |retrograde| retro + grad(e)|| (a.) 倒退的. (v.) 退步, 退化
 |transgress | trans + gress | [走过 (界限)] | (v.) 越界, 违反, 犯罪
 
+# h
+**heart [heart]**
+
+|||||
+|---|---|---|---
+|halfhearted||| (a.) 不感兴趣的, 不热情的
+|hearten <br> dishearten||| (v.) 鼓舞 <br> (v.) 使沮丧, 使失去信心
+|heartrending| heart + rend[撕破] + ing|| (a.) 悲惨的, 令人心碎的
+|stouthearted| stout[勇敢的] + heart + ed|| (a.) 勇敢的
+
 # j
 
 **ject [throw]** <br> **^jet**
@@ -564,6 +761,15 @@ progress
 |conjure| con + jur(e)| [swear together]| (v.) 请求, 恳求, 施魔法
 
 # l
+**labor [work]**
+
+collaborate
+
+|||||
+|---|---|---|---
+|belabor|| [反复工作]| (v.) 抨击; 喋喋不休, 过度说明
+|elaborate|| [work out]| (a.) 详尽的, 精心制作的 (v.) 详述, 精心制作
+|laborious|| [work 做的很多]| (a.) 勤奋的; 费力的
 
 **laps [fall]** <br> 引申为**犯错** 
 
@@ -582,6 +788,14 @@ select, election
 |legion| leg + ion| [people chosen]| (n.) 军团; (a.) 大量的 
 |predilection| pre + di + lect + ion| [choose before, 最先选择]| (n.) 爱好, 偏袒
 
+**lev [raise]**
+
+|||||
+|---|---|---|---
+|alleviate|| [举起（压在身上的东西）]| (v.) 缓和, 减轻
+|leaven|| [使（情绪）上升]| (v.) 为...增色, 使...变有趣, 使发酵. (n.) 酵素
+|levity|| [（容易）举起]| (n.) 轻浮
+
 **lib [free 自由]**
 
 |||||
@@ -589,6 +803,14 @@ select, election
 |liberal| | | (a.) 自由主义的, 思想前卫的, 慷慨的
 |libertine| | | (n.) 浪子, 放荡不羁的人
 |ad-lib| | | (a.) 即兴的
+
+**loft [lift]**
+
+|||||
+|---|---|---|---
+|aloft|| [在高处]| (ad.) 在空中
+|aloof||| (a.) 冷淡的, 冷漠的, 高冷的. (ad.) 远离, 避开地
+|lofty||| (a.) 高的, 崇高的, 高级的
 
 **log [speak]** <br> **^loq, loc, loqu**
 
@@ -628,6 +850,19 @@ select, election
 
 # m
 
+**man [hand]**
+
+manuscript
+
+|||||
+|---|---|---|---
+|emancipate| e[=ex] + man[hand] + cip[take] + ate| [take hand out, 解开被束缚的手]| (v.) 解放, 解除束缚
+|maneuver||| (n. v.) 巧妙地操纵, （军）机动, 演习, 策略
+|manipulate| man + i + pul[pull] + ate| [（暗地里）用手拉]| (v.) 操纵, 操作; 篡改, 暗中操控
+|mannered| manner[方式] + ed| [按照特定方式的]| (a.) 不自然的, 做作的
+|manumit| man[hand] + u + mit[send]| [send hands (from restriction), 解放双手]| (v.) 解放, 释放
+|outmaneuver| out + maneuver| [通过巧妙的操纵脱颖而出]| (v.) 以策略取胜
+
 **mand [command]**
 
 |||||
@@ -636,6 +871,36 @@ select, election
 |demanding||| (a.) 难取悦的; 费时间的
 |mandatory|| [命令的]| (a.) 强制的
 
+**min [small, 小], [jet, 突出]** <br> **^men**
+
+minimum
+
+|||||
+|---|---|---|---
+|diminish| di[=de] + min + ish| [make small down]| (v.) （使）变小、减少; 轻视, 贬低
+|eminent|| [jut out]| (a.) 杰出的
+|menace|| [突出的（小尖刺）]| (n. v.) 威胁, 恐吓
+|menial|| [卑微渺小的]| (a.) 卑贱的, 低下的. (n.) 仆人
+|minatory|| [源自 menace]| (a.) 威胁的, 恐吓的
+|mince|| [small (pieces)] (v.) 切碎, 碎步走
+|miniscule|| [small scale]| (a.) 极小的
+|preeminent| pre + e[=ex] + min + ent| [jut out forth, 脱颖而出]| (a.) 优秀的, 重要的
+
+**mis(s) [send, emit]** <br> **^mit**
+
+missle[导弹]
+
+|||||
+|---|---|---|---
+|commitment|| [send (effort) together]| (n.) 承诺, 保证; 委托; 投入, 致力
+|committed|| [投入一个人的全部]| (a.) 坚定的, 忠诚的, 承担责任的
+|compromise||| (n. v.) 妥协, 和解 
+|intermittent|| [send between]| (a.) 间歇的, 断断续续的
+|manumit| man[hand] + u + mit[send]| [send hands (from restriction), 解放双手]| (v.) 解放, 释放
+|remiss|| [send (attention) back]| (a.) 疏忽的, 不留心的
+|submissive|| [send (oneself) under (control)]| (a.) 服从的, 恭顺的
+|surmise|| [send (conjectures) upon]| (n.) v.) 猜测, 推测
+|unremitting|| [not send (effort) back, 不松懈的]| (a.) 连续不断的
 
 **mot [move]** <br> **^mat**
 
@@ -648,6 +913,16 @@ select, election
 
 
 # n
+**neg [deny]**
+
+negative
+
+|||||
+|---|---|---|---
+|abnegate|| [deny away]| (v.) 否认; 投降, 放弃, 交出（权力）
+|negligent||| (a.) 疏忽大意的
+|renege| re[强调] + nege|| (v.) 放弃, 摒弃; 背叛; 违例, 违约
+
 
 **noc [hurt]** <br> **^nox** <br> **^nic**
 
@@ -696,24 +971,71 @@ pronounce, announce
 |subordinate|| [under order]| (a.) 下级的, 次要的; (v.) 征服
 
 # p
-
 **pac [pease]** 
 
 |||||
 |---|---|---|---
 |pacify| pac + ify[make]| [make in pleace]| (v.) 使平静, 安慰
 
+**par [相同, 相似]**
+
+|||||
+|---|---|---|---
+|disparate|| [not equal]| (a.) 不同的, 不相干的
+|parity||| (n.) 相称, 同等, 平等
+
+**part [part]**
+
+particle
+
+|||||
+|---|---|---|---
+|counterpart||| (n.) （地位、功能）对等的人或物
+|jeopardy| jeo[=joke, game] + pard[=part] + y| [game with (equal) parts, 势均力敌的游戏]| (n.) 危险
+|partial||| (a.) 部分的, 不完整的
+|particularize| particular + ize|| (v.) 详述, 列举
+|partisan| parti[party] + san|| (n.) 跟随者, 信徒, 拥护者. (a.) 偏袒的（盲目拥护的）
+
+**pass [feeling, pass]** <br> **^path, pati**
+
+sympathy, passion
+
+|||||
+|---|---|---|---
+|antipathy||| (n.) 厌恶, 反感; 令人反感的事物
+|apathy| a[without] + path + y|| (n.) 冷漠, 缺乏情感
+|compass|| [强调（能够帮助人们）通过/ 很多人过来]| (n.) 指南针, 罗盘. (v.) 包围
+|encompass||| (v.) 包含; 包围, 环绕
+|compatible|| [feeling together]| (a.) 一致的, 能共存的
+|dispassionate|| [没有加入（个人）情感的]| (a.) 客观公正的, 不带感情的
+|encompass|
+|impassive||| (a.) 冷漠的, 无感情的
+|surpass||| (v.) 超越, 强于; 突破
+|trespass| tres[=trans] + pass|| (v.) 入侵, 违反, 冒犯
+
 **ped [foot]** <br> **^pet-, pod-,pus-** <br> **^peach-, patch-**
 
 |||||
 |---|---|---|---
+|expedite|| [为双脚去除束缚]| (v.) 加快进程
+|footloose||| (a.) 无拘束的, 自由的
+|impede|| [双脚之间的镣铐]| (v.) 妨碍, 阻碍
 |pedestrian| ped + estr + ian| [about foot]| (a.) 徒步的, 缺乏想象的; (n.) 行人
 
 **pedi [child]**
 
 |||||
 |---|---|---|---
+|pedagogue| ped(i) + ag[lead] + ogue| [lead children]| (n.) 教育者, 老师
 |pediatrics| pedi + atr + ics| [subject about child]| (n.) (医)儿科
+
+**pel [drive]** <br> **^pul**
+
+|||||
+|---|---|---|---
+|compel <br> compelling|| [强调 drive] <br> [在时间/ 道理上的强迫]| (v.) 强迫 <br> (a.) 极具说服力的; 迫切的, 紧迫的
+|repel||| (v.) 抵制, 使厌恶
+|repulse||| (v.) 使厌恶, 排斥
 
 **pen [pay, 付钱], [hang, 悬挂]** <br> **^pens, pend** <br> **^(s)pon** 
 
@@ -761,6 +1083,21 @@ depend, pending
 |pious| pi + ous| | (a.) 虔诚的, 忠诚的
 |impious| | | (a.) 不敬神的
 
+**pin [针, 刺]** <br> **^punct, pung** <br> **^piq, pik**
+
+|||||
+|---|---|---|---
+|compunction|| [强调被针扎的感觉，如坐针毡]| (n.) 焦虑, 内疚, 后悔
+|pike||| (n.) 矛
+|pinnacle|| [像针一样的尖峰]| (n.) 顶峰
+|pinpoint||| (n.) 针尖; 精确位置. (v.) 精确定位, 查明, 准确描述. (a.) 精确的, 详尽的
+|pique||| (v.) 使愤恨, 激起
+|piquant||| (a.) 辛辣的, 痛快的, 刺激的
+|punctilious|| [能够注意到微小事物]| (a.) 注意细节的, 一丝不苟的
+|punctuation|| [次出来的小点]| (n.) 标点符号
+|puncture||| (v.) 刺穿. (n.) 小孔, 刺伤
+|pungent|| [（话语）有刺的]| (a.) 讽刺的; 辛辣的, 刺激性的
+
 **plac [please]** <br> **^pac**
 
 |||||
@@ -783,6 +1120,24 @@ complete, plenty
 |plentitude| | | (n.) 大量
 |replenish| re + plen + ish| [fill again]| (v.) 补充
 |replete| re + plet + e| [filled again]| (a.) 吃饱的, 充满...的, 富于...的
+
+**pli [fold, 折叠, 弯曲]** <br> **^plic [fold, 折叠, 重叠]**
+
+diploma <br> complicate, duplicate, replicate
+
+|||||
+|---|---|---|---
+|compliant|| [完全弯折的]| (a.) 顺从的
+|compliment||| (n. v.) 称赞, 恭维, 敬意
+|comply||| (v.) 遵从
+|duplicity| du[double] + plic + ity| [double-fold, 双重的]| (n.) 欺骗, 口是心非, 表里不一
+|explicate|| [make fold out, 去除重叠的部分]| (v.) 解释, 说明
+|explicit|| [out of fold]| (a.) 表达清晰的
+|pleat||| (n.) 衣褶, 褶皱. (v.) 打褶
+|pliable||| (a.) 易弯曲的, 柔韧的
+|pliant||| (a.) 易弯曲的, 顺从的, 易受影响的
+|supple|| [under fold]| (a.) 易弯曲的, 柔软的; 顺从的, 逢迎的. (v.) （使/ 变）柔软、顺从
+|supplicate|| [fold (knees) under (sb.)]| (v.) 恳求, 乞求
 
 **pond [weight]**
 
@@ -836,6 +1191,16 @@ expose, poster, suppose
 |comprise|| [抓到一起]| (v.) 包含, 由...构成
 |reprehend|| [反复抓(毛病)]| (v.) 谴责, 批评
 
+**press [press]**
+
+compress
+
+|||||
+|---|---|---|---
+|depressed||| (a.) 沮丧的, 消沉的, 萧条的
+|repress||| (v.) 镇压, 阻止
+|suppress| sup[=sub] + press|| (v.) 抑制, 镇压
+
 **prob [test], [prove]** <br> **^prov**
 
 probable, approve
@@ -849,6 +1214,13 @@ probable, approve
 |reprove| re[against] + prob + ate| [prove against]| (v.) 警告, 责骂
 
 # q
+**qui(et) [quiet]**
+
+|||||
+|---|---|---|---
+|acquiesce| ac + qui + esce[v. become]| [变的安静（不再有异议）]| (v.) 勉强同意, 默许
+|quiescent| qui + escent[a. become]|| (a.) 平静的, 静止的
+|tranquility| tran[over] + qui + lity| [over quiet, 十分安静]| (n.) 宁静, 淡定
 
 **quir [ask, seek]** <br> **^quis**
 
@@ -860,7 +1232,6 @@ probable, approve
 |prerequisite| pre + requis(=require) + ite| | (n.) 前提, 先决条件
  
 # r
-
 **rap(t) [seize 抓]** <br> **^rep(t)** <br> **^rav** 
 
 rape
@@ -878,6 +1249,14 @@ rape
 |---|---|---|---
 |rectitude| rect + itude| | (n.) 正直
 |resurrect| re + sur(=sub) + rect| [重新从下面直立]| (v.) 使重生, 使复苏
+
+**rest [rest]**
+
+|||||
+|---|---|---|---
+|restless||| (a.) 不平静的
+|arrest|| [使不活跃/ 使人停留]| (v.) 逮捕, 阻止, 吸引; (n.) 逮捕, 停止
+|arresting||| (a.) 醒目的, 引人注意的
 
 **rog [ask]**
 
@@ -911,11 +1290,26 @@ science, SCI
 |omniscient| omni[all] + sci + ient| [know all]| (a.) 无所不知的
 |prescience| pre + sci + ence| [know before]| (n.) 预知, 先见
 
-**se [sex]**
+**scri [write]**
+
+describe
 
 |||||
 |---|---|---|---
-|seduce| se + duce| [lead to sex]| (v.) 引诱, 诱奸
+|circumscribe|| [write around]| (v.) 限制, 包围, 围绕
+|nondescript|| [没什么可以描述的]| (a.) 平凡的, 不吸引人的 
+|prescription|| [预先写好的东西]| (n.) 规定, 惯例; 药方
+|proscribe|| [写在（危险）之前]| (v.) 禁止, 排斥
+|scribble|| [write (carelessly)]| (v.) 潦草地书写, 乱写
+
+**sect [cut]** 
+
+section
+
+|||||
+|---|---|---|---
+|dissect|| [cut apart]| (v.) 切细, 仔细分析, 进行剖析
+|segment||| (n.) 分割, 部分
 
 **secu [follow]** <br> **^sequ**
 
@@ -928,6 +1322,21 @@ sequence, execute
 |persecute| per + secu + te| [follow through, 时刻跟着]| (v.) 迫害, 折磨
 |prosecute| pro + secu + te| [follow forth]| (v.) 贯彻执行, 检举起诉
 |sequel <br> sequela| | [跟在后面的]| (n.) 结果, 续集 <br> (n.) 结果, 后遗症
+
+**sens [sense]** <br> **^sent**
+
+sense
+
+|||||
+|---|---|---|---
+|assent| as[=ad] + sent| [to (the same) sense]| (v.) 同意
+|commonsensical||| (a.) 符合常识的, 有依据的
+|consent <br> consensus||| (v.) 同意 <br> (n.) 一致同意
+|dissent <br> dissension||| (v.) 不同意. (n.) 意见不一致, 反对正统 <br> (n.) 意见不合
+|insensible|| [not able to sense]| (a.) 昏迷的, 无知觉的; 莫不关心的, 粗俗的
+|insentient||| (a.) 无知觉的; 无生命、无感情的
+|sensation|| [同 sense/ 所有人都感知]| (n.) 感觉; 轰动事件
+|sentinel||| (n.) 哨兵, 看守. (v.) 守卫, 放哨
 
 **serv [keep]**
 
@@ -943,6 +1352,41 @@ conserve, preserve
 |servile| serv(e) + ile| [(提供)服务的]| (a.) 低下的, 卑屈的
 |subservient| sub + serv(e) + ient| [surve under]| (a.) 奉承的, 屈从的
 
+**sign [mark, 签字, 标志]**
+
+|||||
+|---|---|---|---
+|consign|| [共同签字, 达成协议]| (v.) 交付, 托运, 委托
+|designate| de[加强语气] + sign[assign] + ate| [assign a position to]| (v.) 任命, 指定, 指派
+|resign|| [opposite to sign in]| (v.) 辞职
+|signal||| (n.) 信号, 暗号. (v.) 标志, 表示; 发信号. (a.) 显著的
+
+**sim [like, 像]**
+
+similar, simulate
+
+|||||
+|---|---|---|---
+|simile||| (n.) 明喻
+
+**sin [sin 函数]**
+
+|||||
+|---|---|---|---
+|sinew| sin + (n)ew| [新生的事物像 sin 函数那样不断跳动]| (n.) 活力, 精力, 体力; 筋肉. (v.) 加强, 使牢固
+|sinuous||| (a.) 蜿蜒的, 迂回的
+
+**solv [loosen, 解开, 松开]** <br> **^solut**
+
+solve, solution
+
+|||||
+|---|---|---|---
+|absolve|| [loosen away (from guilt)]| (v.) 使无罪, 解除责任
+|dissolute|| [loosen apart, 行为松散]| (a.) 放荡的, 无节制的
+|resolute| re[again] + solute[=solve]| [反复尝试解决]| (a.) 坚定的
+|solvent||| (n.) 溶剂（溶质为 solute）, 解决方法. <br> (a.) 有偿付能力的, 有溶解力的  
+
 **son [sound]**
 
 |||||
@@ -951,6 +1395,31 @@ conserve, preserve
 |dissonance| dis + son + ance| [sound apart]| (n.) 不和谐, 刺耳; 不一致, 分歧
 |resonant|| [sound again]| (a.) 洪亮的, 共鸣的
 
+**sti [sting]** <br> **^sti(n)g**
+
+|||||
+|---|---|---|---
+|distinctive|| [能够用针刺区分开]| (a.) 明显的, 独特的; 清楚的
+|extinguish|| [刺灭（火焰）]| (v.) 熄灭, 压制, 终止
+|instigate||| (v.) 煽动, 激起
+|prestige|| [向前冲刺（赢得荣耀）]| (n.) 声望, 威望
+|stickler||| (n.) 坚持细节的人, 一丝不苟的人
+|stifle| stif(f) + le| [（使人）变得僵硬]| (v.) 扼杀, 使窒息
+|stigma <br> stigmatize| stig + ma[骂]| [刺上骂名]| (n.) 耻辱, 污名 <br> (v.) 使蒙上污名
+|stingy|| [像刺一样小]| (a.) 小气的, 吝啬的
+|stipple||| (n. v.) 点画, 点刻
+|stipulate|| [钉定下来的规范]| (v.) 规定, 保证
+|stitch||| (v.) 缝, 缝合. (n.) 针脚; 突然的剧痛
+
+**sunder [cut]**
+
+音同 thunder, 被雷劈开了
+
+|||||
+|---|---|---|---
+|sunder||| (v.) 分裂, 分离
+|asunder||| (a. ad.) 分离的（地）, 化为碎片的（地）
+ 
 **sid [sit]** <br> **^sed, sess**
 
 president
@@ -962,11 +1431,38 @@ president
 |residue|| [sit back]| (n.) 剩余物
 |sedate| sed + ate[a.]| [坐着的]| (a.) 淡定的, 安静的
 |sedentary||| (a.) 久坐的, 固定不动的
-|sedulous|| [坐下（学习）的]| (a.) 勤奋认真的
+|sedulous|| [坐下（学习）的]| (a.) 勤奋认真的, 聚精会神的, 不懈的
 |subside||| (v.) 下陷, 下沉, 减弱
 |subsidiary|| [坐在下面（当替补）]| (a.) 次要的, 起辅助作用的. (n.) 子公司
 |subsidy|| [在下面（维持生活）]| (n.) 补助金, 津贴
 |supersede|| [sit over]| (v.) 取代, 替代
+
+**sciss [cut]** <br> **^scind**
+
+|||||
+|---|---|---|---
+|scission||| (n.) 切断, 分离, 分裂
+|rescind|| [往回砍]| (v.) 废除, 取消
+
+**spec(t) [look]** <br> **^spic**
+
+expect, introspect, speculate, spectrum
+
+|||||
+|---|---|---|---
+|aspect|| [第一眼看到的]| (n.) 外表, 容貌; 方面, 方向
+|auspicious| au[=av, bird] + spic + ious| [看到飞鸟预示吉祥, 这里还可以把 au 当做 AU(黄金)]| (a.) 吉祥的, 有利的
+|circumspect|| [look around]| (a.) 谨慎的, 小心的
+|conspicuous|| [大家都能看见/ 大家都去看]| (a.) 显而易见的, 显著的; 吸引人的
+|despicable|| [able to look down]| (a.) 令人鄙视的, 不得体的; 卑鄙的
+|despise|| [look down]| (v.) 轻视, 鄙视, 不喜欢
+|perspicacious|| [look through very much]| (a.) 敏锐的, 有洞察力的, 聪颖的
+|perspicuous|| [be looked through, 容易被看透]| (a.) 清晰明了的
+|prospect|| [look forth]| (v.) 勘探, 找矿. (n.) 前途, 预期
+|retrospective||| (a.) 回顾的
+|specious|| [看起来是真的]| (a.) 欺骗性的, 似是而非的, 华而不实的
+|spectator||| (n.) 观众, 目击者, 旁观者 
+
 
 **stas [stand]** <br> **^stat**
 
@@ -989,6 +1485,16 @@ president
 |restitution|| [stand back (to origion)]| (n.) 归还; 补偿, 赔偿
 |substitute||| (n.) 取代者, 替代品. (v.) 取代, 替代
 
+**strain [拉紧]** <br> **^string, strict**
+
+|||||
+|---|---|---|---
+|constrict|| [拉到一起]| (v.) 压缩, 压紧
+|constringe||| (v.) 使紧缩
+|hamstring| ham[大腿] + string[线]| [大腿里的线/ 用线隔断腿]| (n.) 腿筋. (v.) 使残废, 使无力, 使无效
+|restrain|| [往回拉紧]| (v.) 阻止, 限制, 控制
+|stricture|| [要求很 strict]| (n.) 苛责, 非难
+|stringent||| (a.) 紧绷的; 严格的
 
 **sul(t) [leap]** <br> **^sal, sil**
 
@@ -1016,7 +1522,16 @@ insult
 |resurgence| re + surg + ence| [rise back]| (n.) 复兴
 
 # t
+**ta(n)g [touch]**
 
+|||||
+|---|---|---|---
+|contagious|| [touch together, 通过接触传播]| (a.) 传染的, 会蔓延的, 唤起共鸣的
+|contiguous|| [touch together]| (a.) 接壤的, 相邻的
+|integral|| [没被摸过]| (a.) 完整的, 整体的; 构成整体所必须的 
+|tangent|| [正切的 $\to$ 接触的部分很少]| (n. a.) 离题（的）, 不相关（的）; 正切, 切线
+|tangible <br> intangible||| (a.) 有形的, 切实的, 可感知的 <br> (a.) 无形的, 难以理解的, 触摸不到的
+ 
 **tain [hold]** <br> **^tin, ten(t)**
 
 contain, attain
@@ -1056,6 +1571,14 @@ extend, extent
 |tendentious|| [(见解)向某个方向伸展的]| (a.) 有偏见的
 |tenuous| tenu[thin] + ous| [(内容)浅薄的]| (a.) 空洞的, 没有实际内容的; 纤细的, 稀薄的, 贫乏的
 
+**test [test]**
+
+|||||
+|---|---|---|---
+|attest||| (v.) 证实, 为...作证
+|testimony||| (n.) 证词, 声明
+|testy|| [考试、测验很多]| (a.) 易怒的, 暴躁的
+
 **thes [place, put]** <br> **^thet**
 
 |||||
@@ -1073,6 +1596,27 @@ extend, extent
 |timorous| | | (a.) 胆小的
 |verbatim| verb + a + tim| [(a) word (a) time]| (a.) 逐字地, 一字不差地
 
+**tom [cut]** 
+
+atom
+
+|||||
+|---|---|---|---
+|dichotomy| dicho[=di, two] + tom + y| [cut into two]| (n.) 二分法, 分割; 对立
+|epitomize| epi[in] + tom + ize| [cut in, 剪影]| (v.) 代表, 体现; 摘要, 概括
+
+**tort [twist]** 
+
+torture
+
+|||||
+|---|---|---|---
+|contort||| (v.) 扭曲
+|distort||| (v.) 歪曲, 扭曲
+|extort|| [twist (money) out, 扭出钱来]| (v.) 勒索
+|retort|| [twist back]| (n. v.) 反驳, 顶嘴; 回应, 回答
+|tortuous||| (a.) 拐弯抹角的, 冗长费解的
+
 **tract [draw, 拉]**
 
 attract, abstract
@@ -1086,6 +1630,13 @@ attract, abstract
 |protract||| (v.) 延长, 拖长
 |retract||| (v.) 收回, 否认
 |tractable|| [able to tract]| (a.) 易驾驭的, 温顺的
+
+**trench [cut]**
+
+|||||
+|---|---|---|---
+|retrench| re[加强语气] + trench|| (v.) 削减开支
+|trenchant||| (a.) 锐利的, 一针见血的
 
 **tric [trick]** <br> **^treac**
 
@@ -1124,7 +1675,6 @@ tune
 |tumult| tum + ult| [turn out]| (n.) 骚动, 暴乱
 
 # u
-
 **umbr [shadow]**
 
 |||||
@@ -1138,6 +1688,14 @@ tune
 |---|---|---|---
 |inundate| in + und + ate| [flow in]| (v.) 淹没
 |redundant| re(d) + und + ant| [flow again, overflow]| (a.) 多余的
+
+**use [use]**
+
+|||||
+|---|---|---|---
+|abuse|| [偏离（正确的）使用]| (n. v.) 滥用, 不正确的使用; 辱骂, 虐待; 恶习
+|disabuse||| (v.) 使醒悟, 纠正, 矫正
+|peruse|| [use (a book) thoroughly]| (v.) 细读
 
 # v
 
@@ -1194,19 +1752,21 @@ invade
 |preventative = preventive| prevent + ative (=ive) | | (a.) 预防性的, 预备的
 |revenue | re + ven + ue | [(money) come back] | (n.) 收入 = income 
 
-**-ver [to turn, 转], [扭转]** <br> **^-vers, -vert** <br> **^-vel, -vol** <br> **^-wal, -wil** <br> **^-wer, -wor** <br> **^-wra, -wre, -wri, -wry**
+**ver [to turn, 转], [roll, 扭转]** <br> **^-vers, vert, verg** <br> **^vel, vol** <br> **^wal, wil** <br> **^wer, wor** <br> **^wra, wre, wri, wry**
 
 |||||
 |---|---|---|---
-|adverse = adversarial| ad + vers + e| [turn to (相反的立场)]| (a.) 相反的, 敌对的, 不利的
-| | adversary, adversity| | (n.) 对手, (n.) 逆境, 不幸
+|adverse (=adversarial) <br> adversary <br> adversity| ad + vers + e|     [turn to (相反的立场)]| (a.) 相反的, 敌对的, 不利的 <br> (n.) 对手. <br> (n.) 逆境, 不幸
+|advert <br> advertise|| [(make sb.) turn to]| (v.) 引起注意, 提到 <br> (n.) 广告
 |anniversary| anni + vers + ary| [turn a year, 时光流转了一年]| (n.) 周年纪念日
-|avert| a + vert| [turn away (from bad)]| (v.) 避免, 防止, 转移
-| | aversion| [(sth./ sb. that need to be) averted]| (n.) 厌恶, 讨厌的人
+|avert <br> aversion| a + vert| [turn away (from bad)] <br> [(sb. sth. need to be) avert]| (v.) 避免, 防止, 转移 <br> (n.) 厌恶, 讨厌的人
 |circumvolve| circum + volv + e| | (v.) 旋转
-|controversy| contro + vers + y| [turn to counter]| (n.) 争端, 争议
+|controvert <br> controversy| contro + vers + y| [turn to counter]| (v.) 否认, 驳斥. <br> (n.) 争端, 争议
+|converge|| [turn together]| (v.) 汇集, 交汇
 |converse| con + vers + e| [强调 turn]| (a.) 相反的, 颠倒的 (v.) 交谈
-|convoluted| con + vol + uted| [turn togehter]| (a.) 复杂的, 费解的, 旋绕的 
+|conversant|| [流畅得像转动的纺锤]| (a.) 熟悉的, 精通的
+|convert|| [turn (to a different form)]| (v.) 改变, 转化, 改变信仰
+|convoluted| con + vol + uted| [be turned togehter]| (a.) 复杂的, 费解的, 旋绕的 
 |devolve| de + volv + e| [turn down]| (v.) 移交, 转让, 衰落
 |diverge| di(s) + ver + ge| [turn apart]| (v.) 分歧, 分叉, 偏离
 |divert| di(s) + vert| [turn to opposite]| (v.) 转移, 使转向
@@ -1214,6 +1774,8 @@ invade
 | | diversify, diversification, diversity | | (v.) 使多样化, (n.) 多样化, (n.) 多样性
 |evert| e + vert| [turn out]| (v.) 使外翻
 |extrovert| extro + vert| | (a.) 外向的; (n.) 外向的人
+|inadvertent|| [not advert, 没有被注意到]| (a.) 疏忽的, 不留意的; 偶然发生的
+|incontrovertible|| [not able to controvert]| (a.) 无可争议的
 |introvert| intro + vert| | (a.) 内向的; (n.) 内向的人
 |invert| in + vert| [let ... turn to opposite]| (n.) 使转化, 使颠倒 
 | | inversion| | (n.) 倒置, 反向
@@ -1221,20 +1783,20 @@ invade
 |pervert| per + vert| [turn throughly]| (v.) (彻底地) 颠覆, 歪曲, 使错乱
 |reversal| re + vers + al| [turn back]| (n.) 逆转, 反转
 |revert| re + vert| | (v.) 恢复, 归还
-|revolt| re + volt| [turn back]| (v.) (n.) 违抗, 反叛, 起义
+|revolt| re + volt| [turn back]| (n. v.) 违抗, 反叛, 起义; 厌恶, 反感
 |revolve| re + vol + ve| [turn again]| (v.) 旋转, 使旋转, 反复出现
 | | revolver| [可以旋转的物体]| (n.) 左轮手枪, 旋转器
-|subvert| sub + vert| [turn down]| (v.) 推翻, 颠覆
-| | subversive, subversion| | (a.) 破坏性的. (n.) 推翻
+|subvert <br> subversive <br> subversion| sub + vert| [turn down]| (v.) 推翻, 颠覆 <br> (a.) 破坏性的. <br> (n.) 推翻
+|traverse| tra[across] + vers + e|| (v.) 横穿
 |verge| ver + ge| [(close to) turn]| (n.) 边缘; (v.) 濒临
-|verse| ver + se| [规则地由一行转向另一行的文体]| (n.) 诗, 韵文
+|verse <br> versed| ver + se| [规则地由一行转向另一行的文体]| (n.) 诗, 韵文. (v.) 使精通, 使运转 <br> (a.) 精通的, 熟练的
 | |对比散文 prose| ver + se 表示 turn, pro + se 表示 go forward| 由此可知 verse 是形式比较规则的诗, 而 prose 则是比较随意的散文
-|versatile| vers + ateile(=ile)| [可以, 容易 turn to (各个领域的)]| (a.) 多才多艺的, 通用的, 万能的
+|versatile| vers + ateile(=ile)| [可以转到（各个领域的）]| (a.) 多才多艺的, 通用的, 万能的
 |vertebra| vert + e + bra| [(控制身体) 扭转的工具]| (n.) 脊椎
 |vertex| vert + ex| | (n.) 顶点, 转折点
 |vertigo| vert + i + go| [转着走]| (n.) 眩晕
-|volume| vol + ume| [由 vol 可知其本义为 "卷, 册"]| (n.) 卷, 册, 体积, 大量
-| | voluminous| | (a.) 多卷的, 长篇的, 大量的
+|voluble|| [（嘴巴不停地）转]| (a.) 健谈的, 话多的
+|volume <br> voluminous| vol + ume| [由 vol 可知其本义为 "卷, 册"]| (n.) 卷, 册, 体积, 大量 <br> (a.) 多卷的, 长篇的, 大量的
 |vortex| vort + ex| [vort 想 water, water turn]| (n.) 涡流, 漩涡, 旋风
 |wallow| | | (v.) 打滚, 沉迷
 |waltz| | [旋转舞]| (n.) 华尔兹
@@ -1266,6 +1828,22 @@ invade
 |verisimilar| veri + similar| [similar to be true]| (a.) 貌似真实的
 |veritable| veri + (i)t + able|  | (a.) 真正的, 确实的
 
+**vid [see]** <br> **^vis**
+
+visible, revise, vision
+
+|||||
+|---|---|---|---
+|improvise| im + pro + vis + e| [not see before]| (v.) 即兴创作
+|invidious|| [看（别人）里边, 把人惹毛了]| (a.) 惹人反感的, 招人妒忌的; 诽谤的, 不公平的
+|provident|| [see forth]| (a.) 有远见的, 节俭的
+|providential|| [神的（只有神能看到未来）]| (a.) 天意的, 幸运的
+|provisional|| [see forth, 临时的靠不住, 得看以后了]| (a.) 临时的, 目前的
+|provisory|| [=provisional/ provided that]| (a.) 临时的, 目前的; 有附带条件的
+|unwitting|| [not know]| (a.) 不知情的, 未察觉的; 并非有意的
+|visionary|| [see in mind/ see before]| (a.) 空想的, 不切实际的; 有远见的. (n.) 空想家; 有远见的人 
+|wit| wit[know]|| (n.) 智慧, 才智, 智者
+
 **voc [call, 呼唤]** <br> **^vok**
 
 |||||
@@ -1293,3 +1871,36 @@ invade
 |---|---|---|---
 |avow <br> avowl||| (v.) 承认, 公开宣称. <br> (n.)
 |disavow||| (v.) 拒绝承认, 否认
+
+# 其他
+
+**这里会包括一些难以用词根词缀解释的、或者词根过于明显的单词**
+
+|||||
+|---|---|---|---
+|aggrieve| ag[=ad] + griev[=grav, heavy] + e| [使（心情）沉重]| (v.) 使悲痛, 使受折磨
+|agrarian| agra[土地] + r + ian| [土地的]| (a.) 土地的, 耕地的
+|antagonize| ant(i) + gon[角] + ize| [用角对峙]| (v.) 反对, 激怒, 与...敌对
+|backhanded||| (a.) 间接的, 拐弯抹角的; 反手的
+|crook <br> crouch <br> crumple|| [交叉（cross）的手臂是弯曲的（crook）] <br> [来自 crook, 将身体弯曲] <br> [参考 crook, 将纸张或建筑物弯曲]| (v.) 使弯曲. (n.) 弯曲, 骗子 <br> (v.) 蹲伏 <br> (v.) 弄皱, 垮塌
+|deliberate| de[加强语气] + lib(e)r[秤] + ate| [通过秤去衡量的]| (a.) 深思熟虑的, 故意的 
+|dissuade|| [与 persuade 相反]| (v.) 劝阻, 阻止
+|ham-handed|| [手像火腿一样笨]| (a.) 笨手笨脚的
+|headlong|| [头很长，（事情不过脑子）]| (a.) 鲁莽的
+|hearken| hear[听] + ken[keen, 热心的]| [热心地听]| (v.) 倾听, 关注, 留心 
+|levelheaded|| [平静的头脑]| (a.) 明智的
+|linger| ling[=long] + er| [stay long]| (v.) 徘徊, 磨蹭, 消磨
+|offhand||| (a.) 即兴的, 没有准备的, 随便的
+|oxymoron| oxy[sharp] + moron[傻瓜]| [聪明的傻子]| (n.) 矛盾修饰法
+|panoramic| pan[all] + oram[roam, 漫游] + ic| [满有过全部（地方）]| (a.) 全景的
+|paragon| para[beyond] + gon[角]| [崭露头角]| (n.) 优秀模范
+|paroxysm| par[=para, beyond] + oxy[sharp]| [时间短程度烈]| (n.) 突发, 动乱
+|scruple| scru[四顾] + ple|| (n. v.) 顾虑, 踌躇
+|scrupulous|| [要经常顾及（道德）]| (a.) 正直的, 一丝不苟的
+|scrutable|| [四顾可（看清）]| (a.) 可理解的
+|scrutinize| scru + tini[tiny] + ze| [四顾细微之处]| (v.) 仔细检查
+|shiftless|| [不尝试去移动、去变化]| (a.) 胸无大志的, 懒惰的
+|shifty|| [变化多端的（贬）]| (a.) 狡诈的, 欺诈的, 变化的
+|supercilious| super[over] + cil[cilia, 睫毛] + ious| [翻白眼的]| (a.) 高傲的, 傲慢的
+|surveillance| sur[up] + veil[近似于 view] + lance| [在上面看]| (n.) 监视, 监控
+|wrongheaded||| (a.) 固执己见的, 坚持错误的

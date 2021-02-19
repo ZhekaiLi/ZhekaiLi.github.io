@@ -62,14 +62,15 @@ precedence (n.) 优先 (相较于 precedent "先例, 先前的" 中的 ent, ence
 |veracious| ver(i) + acious| | (a.) 诚实的, 精准的
 
 # e
-
 **-esce [(v.) become]** <br> **-escent [(a.) become]**
 
 |||||
 |---|---|---|---
+|acquiesce| ac + qui + esce[v. become]| [变的安静（不再有异议）]| (v.) 勉强同意, 默许
 |convalesce| con + val + esce[(v.) become]| [become strong]| (v.) 渐渐康复
 |incandescent| in + cand + escent[become]| [进入蜡烛燃烧般的状态]| (a.) 明亮灿烂的, 热情饱满的
 |evanescent| e + van + escent[(a.) become]| [become empty out]| (a.) 逐渐消逝的, 短暂的
+||quiescent| qui + escent[a. become]|| (a.) 平静的, 静止的
 
 # g
 
