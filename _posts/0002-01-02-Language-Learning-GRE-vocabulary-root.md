@@ -114,7 +114,7 @@ ambulance
 |---|---|---|---|
 |abase| a(=ad) + base| [to base, 向底部]| (v.) 降低(地位, 职位, 尊严), 表现卑微
 ||self-abasement| | (n.) 自卑
-|abysmal| a[away] + bysm + al| [base away, 无底的]| (a.) 深不可测的, 极度的, 级低的
+|abysmal| a[away] + bysm + al| [base away, 无底的]| (a.) 深不可测的, 极度的, 级低的, 糟透的
 |debase||| (v.) 降低, 贬低
 
 **beat [敲打]** <br> **^bat, but**
@@ -322,7 +322,7 @@ precise, suicide
 |---|---|---|---
 |preclude||| (v.) 阻止, 妨碍, 排除
 |recluse|| [一再反复地关闭自己]| (n.) 隐士. (a.) 隐居的
-|seclude||| (v.) 隔离, 隔绝
+|seclude| se[apart] + clude|| (v.) 隔离, 隔绝
 
 **cond [hide]**
 
@@ -405,11 +405,16 @@ occur
 |damn| | | (v.) 谴责, 该死
 |indemnity| in + demn + ity| [not damage, 将损害抵消]| (n.) 补偿, 赔偿 
 
-**demo- [people]**
+**dem [people]**
+
+democracy
 
 |||||
 |---|---|---|---
-|demographics| demo + graph + ics| [about people recording]| (n.) 人口统计资料
+|demographics| dem(o) + graph[record] + ics| [about people recording]| (n.) 人口统计资料
+|demotic||| (a.) 大众化的, 通俗的
+|endemic|| [in people, 在（特定的）人群内]| (a.) 地方性的
+|pandemic| pan[all] + dem + mic| [among all people]| (a.) 大范围流行的
 
 **dict [say]**
 
@@ -589,7 +594,7 @@ famous, fable
 |fervor| ferv + or| | (n.) 热情, 狂热
 |perfervid| per + fervid| [thoroughly hot]| (a.) 非常热情的
 
-**fic [make]**
+**fic [make, do]**
 
 magnificent, gasify, specific
 
@@ -671,7 +676,7 @@ confuse, refuse
 
 |||||
 |---|---|---|---
-|diffuse| dif[apart] + fus(e)| [pour apart]| (v.) 扩散, 散开. (a.) 弥漫的, 扩散的, 啰嗦的
+|diffuse| dif[=dis, apart] + fus(e)| [pour apart]| (v.) 扩散, 散开. (a.) 弥漫的, 扩散的, 啰嗦的
 |effusive|| (flow of emotion) pour out| (a.) 喷发的; 感情泛滥的, 多情的
 |infuse||| (v.) 灌输, 使充满; 鼓舞
 |profuse||| (a.) 丰富的, 慷慨的, 浪费的
@@ -701,11 +706,21 @@ gene
 |---|---|---|---
 |glisten||| (n. v.) 闪光, 闪亮 
 
+**grand [large]**
+
+grandmother
+
+|||||
+|---|---|---|---
+|aggrandize||| (v.) 增加, 提高
+|grandeur||| (n.) 宏伟, 壮丽
+|grandiose||| (a.) 宏伟的, 宏大的; 浮夸的, 不切实际的
+
 **graph [record]**
 
 |||||
 |---|---|---|---
-|demographics| demo + graph + ics| [about people recording]| (n.) 人口统计资料
+|demographics| dem(o)[people] + graph + ics| [about people recording]| (n.) 人口统计资料
 
 **grat [pleased]**
 
@@ -1069,6 +1084,13 @@ pronounce, announce
 |palliate|| [使（愤怒、病痛等在程度上）变弱]| (v.) 平息, 减轻
 |pallid|| [（面色）苍白]| (a.) 无生气的, 缺乏活力的
 
+**pan [all]**
+
+|||||
+|---|---|---|---
+|pandemic| pan[all] + dem + mic| [among all people]| (a.) 大范围流行的
+|panoramic| pan[all] + oram[roam, 漫游] + ic| [满有过全部（地方）]| (a.) 全景的
+
 **par [相同, 相似]**
 
 |||||
@@ -1104,6 +1126,17 @@ sympathy, passion
 |impassive||| (a.) 冷漠的, 无感情的
 |surpass||| (v.) 超越, 强于; 突破
 |trespass| tres[=trans] + pass|| (v.) 入侵, 违反, 冒犯
+
+**patr [father, 父亲, 祖先], [fatherland, 祖国]**
+
+patron[n. 监护人, 赞助人]
+
+|||||
+|---|---|---|---
+|patrician|| [像父亲一样（高高在上）]| (n.) 贵族 (a.) 贵族的, 地位高的
+|patriot||| (n.) 爱国者
+|patronize|| [像父亲一样（对待别人）]| (v.) 以高人一等的态度对待; 赞助, 保护
+|repatriate|| [（被迫）返回祖国]| (v.) 遣返 
 
 **ped [foot]** <br> **^pet-, pod-,pus-** <br> **^peach-, patch-**
 
@@ -1186,7 +1219,7 @@ depend, pending
 |pique||| (v.) 使愤恨, 激起
 |piquant||| (a.) 辛辣的, 痛快的, 刺激的
 |punctilious|| [能够注意到微小事物]| (a.) 注意细节的, 一丝不苟的
-|punctuation|| [次出来的小点]| (n.) 标点符号
+|punctuation|| [刺出来的小点]| (n.) 标点符号
 |puncture||| (v.) 刺穿. (n.) 小孔, 刺伤
 |pungent|| [（话语）有刺的]| (a.) 讽刺的; 辛辣的, 刺激性的
 
@@ -1401,6 +1434,20 @@ erode
 |surrogate| sur[sub] + rog + ate| [要求从下面替代]| (n.) 替代品
 
 # s
+**sacr [holy, 神的, 神圣的]** <br> **^sanct**
+
+sacred, sacrifice, saint
+
+|||||
+|---|---|---|---
+|desecrate| de + secr[=sacr] + ate|| (v.) 亵渎, 玷污
+|execrate|| [请神消灭]| (v.) 谴责, 痛恨
+|sacrosanct| sacr + o + sanct| [两倍的神圣]| (a.) 极为神圣的, 神圣不可侵犯的
+|sanctify| sanct + ify[make]|| (v.) 使神圣化
+|sanctimonious||| (a.) 假装虔诚的
+|sanction|| [神下达旨意]| (n. v.) 制裁, 处罚; 批准, 认可
+|sanctuary| sanct + u + ary[n. 地方]| [神在的地方]| (n.) 避难所
+
 **scend [climb]**
 
 |||||
@@ -1533,6 +1580,17 @@ solve, solution
 |consonant| con + son + ant| [sound together]| (a.) 和谐一致的
 |dissonance| dis + son + ance| [sound apart]| (n.) 不和谐, 刺耳; 不一致, 分歧
 |resonant|| [sound again]| (a.) 洪亮的, 共鸣的
+
+**spir [breathe]**
+
+inspire
+
+|||||
+|---|---|---|---
+|aspire <br> aspirant|| [to breathe, 希望吸到空气]| (v.) 渴望, 追求 <br> (a.) 上进的, 有野心的 (n.) 有抱负的人
+|conspire|| [串通一气]| (v.) 合谋, 密谋
+|expire|| [out of breathe]| (v.) 断气, 死亡, 到期
+|repire|| [breathe again]| (v.) 呼吸
 
 **sti [sting]** <br> **^sti(n)g**
 
@@ -2067,7 +2125,6 @@ wring
 |linger| ling[=long] + er| [stay long]| (v.) 徘徊, 磨蹭, 消磨
 |offhand||| (a.) 即兴的, 没有准备的, 随便的
 |oxymoron| oxy[sharp] + moron[傻瓜]| [聪明的傻子]| (n.) 矛盾修饰法
-|panoramic| pan[all] + oram[roam, 漫游] + ic| [满有过全部（地方）]| (a.) 全景的
 |paragon| para[beyond] + gon[角]| [崭露头角]| (n.) 优秀模范
 |paroxysm| par[=para, beyond] + oxy[sharp]| [时间短程度烈]| (n.) 突发, 动乱
 |patchwork||| (a.) 拼缝的 (n.) 拼缝物, 拼凑的东西
