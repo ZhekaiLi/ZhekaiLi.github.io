@@ -1080,7 +1080,7 @@ pronounce, announce
 |||||
 |---|---|---|---
 |appall|| [to pale, 使面色苍白]| (v.) 使惊恐
-|pall|| [（感兴趣的事物变得）苍白寡淡]| (v.) 失去兴趣
+|pall|| [（感兴趣的事物变得）苍白寡淡]| (v.) 使乏味, 厌倦 (n.) 幕, 棺罩, 遮盖物
 |palliate|| [使（愤怒、病痛等在程度上）变弱]| (v.) 平息, 减轻
 |pallid|| [（面色）苍白]| (a.) 无生气的, 缺乏活力的
 
@@ -1313,7 +1313,7 @@ potential
 |||||
 |---|---|---|---
 |impotent|| [not powerful]| (a.) 无力的, 无能的, 无效的, 阳痿的
-|potentate||| (a.) 有权势的人
+|potentate||| (n.) 有权势的人
 |potentiate|| [make ... powerful]| (v.) 加强, 激活
 
 **prehend [seize 抓]** <br> **^prehens** <br> **^pris**
@@ -1354,7 +1354,7 @@ probable, approve
 |---|---|---|---
 |depute|| [经过思考之后，向下授权]| (v.) 授权, 委任
 |dispute||| (n. v.) 争论
-|impute|| [把...放进思考中 $\to$ 归因于]| (v.) 归罪于, 归咎于
+|impute|| [把...放进思考中，经过考虑之后 $\to$ 归因于]| (v.) 归罪于, 归咎于
 |repute|| [能够让人反复想起来]| (n.) 名望, 名气 (v.) 认为, 以为
 
 # q
@@ -1410,7 +1410,7 @@ ridiculous
 |---|---|---|---
 |deride|| [laugh down]| (v.) 嘲弄, 嘲笑
 |derision <br> derisive||| (n.) 嘲笑, 嘲笑的对象 <br> (a.) 嘲笑的, 嘲弄的
-|ridicule||| (a.) 嘲笑, 愚弄, 奚落
+|ridicule||| (n. v.) 嘲笑, 愚弄, 奚落
 |risible|| [able to laugh]| (a.) 可笑的, 滑稽的; 爱笑的
 
 **rod [bite]** <br> **^mord**
@@ -1590,7 +1590,7 @@ inspire
 |aspire <br> aspirant|| [to breathe, 希望吸到空气]| (v.) 渴望, 追求 <br> (a.) 上进的, 有野心的 (n.) 有抱负的人
 |conspire|| [串通一气]| (v.) 合谋, 密谋
 |expire|| [out of breathe]| (v.) 断气, 死亡, 到期
-|repire|| [breathe again]| (v.) 呼吸
+|respire|| [breathe again]| (v.) 呼吸
 
 **sti [sting]** <br> **^sti(n)g**
 
@@ -2013,17 +2013,6 @@ invade
 |vortex| vort + ex| [vort 想 water, water turn]| (n.) 涡流, 漩涡, 旋风
 |wallow| | | (v.) 打滚, 沉迷
 |waltz| | [旋转舞]| (n.) 华尔兹
-|wrath| | [被曲解]| (n.) 愤怒, 激怒
-|wreath(e)| wre + ath| [(sth.) that wring (around head)]| (n.) 花冠, 圈状物
-|wrench| | | (n.) 歪曲, 扳手
-|wrest| | | (v.) 用力拧, 抢夺, 歪曲
-| | wrestle| | (n.) (v.) 摔跤
-|wriggle| | | (v.) 蠕动, 蜿蜒
-|wring| | | (v.) 绞, 扭
-|wrinkle| | | (v.) 起皱, 皱纹
-|wrist| | | (n.) 手腕
-|writhe| | | (v.) 翻滚, 蠕动, 扭曲
-|wry| | | (a.) 歪斜的, 扭曲的; (n.) 扭曲
 
 **verb [word]**
 
@@ -2093,7 +2082,15 @@ wring
 |||||
 |---|---|---|---
 |wrangle|| [纠缠、扭打 $\to$ 争吵]| (n. v.) 争论, 口角
-|wrath|| [（眉头）拧起来]| (n.) 愤怒
+|wrath|| [（眉头）拧起来/ 被曲解]| (n.) 愤怒
+|wreath(e)| wre + ath| [(sth.) that wring (around head)]| (n.) 花冠, 圈状物
+|wrench| | | (n.) 歪曲, 扳手
+|wrest <br> wrestle| | | (v.) 用力拧, 抢夺, 歪曲 <br> (n.) (v.) 摔跤
+|wriggle| | | (v.) 蠕动, 蜿蜒
+|wrinkle| | | (v.) 起皱, 皱纹
+|wrist| | | (n.) 手腕
+|writhe| | | (v.) 翻滚, 蠕动, 扭曲
+|wry| | | (a.) 歪斜的, 扭曲的; (n.) 扭曲
 
 # 其他
 
@@ -2128,7 +2125,7 @@ wring
 |paragon| para[beyond] + gon[角]| [崭露头角]| (n.) 优秀模范
 |paroxysm| par[=para, beyond] + oxy[sharp]| [时间短程度烈]| (n.) 突发, 动乱
 |patchwork||| (a.) 拼缝的 (n.) 拼缝物, 拼凑的东西
-|portray||| (v.) 描绘, 描写, 描绘...的肖像
+|portray|| [向前延展，引申为描绘]| (v.) 描绘, 描写, 描绘...的肖像
 |scorch|| [用 torch 把...烧焦]| (n. v.) 烧焦, 枯萎, 讽刺 
 |scruple| scru[四顾] + ple|| (n. v.) 顾虑, 踌躇
 |scrupulous|| [要经常顾及（道德）]| (a.) 正直的, 一丝不苟的
