@@ -947,6 +947,7 @@ obligation, oblige, religion
 |elucidate| e + lus + idate| [light out $\to$ make clear]| (v.) 阐明
 |hallucination| hal[hall] + luc + ination| [（在教堂的）大厅里看见圣光]| (n.) 错觉, 幻觉, 幻想 
 |illuminati| il(=in) + lumin + ati| [进入光中(的人)]| (n.) 智者, 精英
+|illusory|| [进入炫目的光中]| (a.) 幻影的, 错觉
 |illustrious| il(=in) + lustr + ious| | (a.) 著名的, 杰出的
 |lackluster| | | (a.) 黯淡无光的
 |lucid| luc + id| | (a.) 有光亮的, 神志清醒的
@@ -987,6 +988,13 @@ manuscript
 |demanding||| (a.) 难取悦的; 费时间的
 |mandatory|| [命令的]| (a.) 强制的
 
+**mano [pressure]**
+
+|||||
+|---|---|---|---
+|manometer||| (n.) 测压计
+|manometry| meno + metry|| (n.) 测压法
+
 **ment [mind, 思考, 神志]** <br> **^mind**
 
 comment, mental
@@ -994,6 +1002,15 @@ comment, mental
 |||||
 |---|---|---|---
 |mentor||| (v.) 指导. (n.) 指导者, 良师益友
+
+**merg [沉没, 没入]** <br> **^mers**
+
+|||||
+|---|---|---|---
+|emerge||| [从水面出来]| (v.) 浮现, 形成, 出现, 显露
+|immerge = <br> immerse||| (v.) 浸没, 隐入, 沉浸于
+|merge|| [水流到一起]| (v.) （使）合并, 消失, 吞没
+|submerge||| (v.) 淹没, 浸入, 沉浸
 
 **min [small, 小], [jet, 突出]** <br> **^men**
 
@@ -1018,7 +1035,6 @@ missle[导弹]
 |---|---|---|---
 |commitment|| [send (effort) together]| (n.) 承诺, 保证; 委托; 投入, 致力
 |committed|| [投入一个人的全部]| (a.) 坚定的, 忠诚的, 承担责任的
-|compromise||| (n. v.) 妥协, 和解
 |eleemosynary| ele[elegant] + e[=ex] + mos + ynary| [优雅地送出]| (a.) 慈善的 
 |intermittent|| [send between]| (a.) 间歇的, 断断续续的
 |manumit| man[hand] + u + mit[send]| [send hands (from restriction), 解放双手]| (v.) 解放, 释放
@@ -1403,7 +1419,7 @@ probable, approve
 
 |||||
 |---|---|---|---
-|approbation| | | (n.) 同意
+|approbation| | | (n.) 同意, 批准
 |probity| prob + ity| [prove (to be right), 经受得住检验的]| (n.) 正直
 |proofread| proof + read| [为了证实无误而阅读]| (v.) 校对
 |reprobate| re[opposite] + prob + ate| [反向证明]| (n.) 堕落者, 道德败坏的人; (a.) 堕落的, 放荡的; (v.) 拒绝, 谴责
@@ -1481,6 +1497,13 @@ ridiculous
 |hubris|| [在心中狂笑]| (n.) 狂妄自大
 |ridicule||| (n. v.) 嘲笑, 愚弄, 奚落
 |risible|| [able to laugh]| (a.) 可笑的, 滑稽的; 爱笑的
+
+**riv [flow]**
+
+|||||
+|---|---|---|---
+|derive <br> derivation|| [从源头流下]| (v.) 起源, 得自 <br> (n.) 导数; 起源; 推导, 推论
+|rival|| [一起流动、一起跑，引申为竞争]| (a.) 竞争的 (n.) 对手, 竞争者
 
 **rod [bite]** <br> **^mord**
 
@@ -1721,7 +1744,7 @@ inspire
 |---|---|---|---
 |distinctive|| [能够用针刺区分开]| (a.) 明显的, 独特的; 清楚的
 |extinguish|| [刺灭（火焰）]| (v.) 熄灭, 压制, 终止
-|instigate||| (v.) 煽动, 激起
+|instigate||| (v.) 煽动, 
 |prestige|| [向前冲刺（赢得荣耀）]| (n.) 声望, 威望
 |stickler||| (n.) 坚持细节的人, 一丝不苟的人
 |stifle| stif(f) + le| [（使人）变得僵硬]| (v.) 扼杀, 使窒息
@@ -1736,6 +1759,7 @@ inspire
 |||||
 |---|---|---|---
 |constitute|| [使某人站到某职位上/ 让东西站到一起]| (v.) 指派, 任命; 构成, 组成
+|constituent||| (n.) 成分, 构成物; 选民 (a.) 构成的, 组织的, 选举的
 |institute||| (v.) 创立, 制定. (n.) 机构
 |reconstitute|| [stand again together]| (v.) 重建, 使复原
 |restitution|| [stand back (to origion)]| (n.) 归还; 补偿, 赔偿
@@ -1814,7 +1838,6 @@ contain, attain
 |||||
 |---|---|---|---
 |abstain|| [away from hold]| (v.) 弃权, 回避, 自制, 戒除
-|abstemious|| [away from hold (wine)]| (a.) 有节制的, 节俭的
 |countenance| coun[=con] + ten + ance| [hou住心态$\to$面容表情, 沉着] <br> [保持(拥护的心)$\to$支持拥护]| (v.) 支持, 拥护; (n.) 面容表情, 沉着
 |detain| de[away] + tain| [拿走]| (v.) 拘留, 扣留
 |pertain|| [hold through, 始终持有]| (v.) 属于, 从属, 关于, 适用
@@ -1831,6 +1854,7 @@ atom
 
 |||||
 |---|---|---|---
+|abstemious|| [cut away (wine)]| (a.) 有节制的, 节俭的; 戒酒的
 |contemn <br> contempt|| [被切去、被省略的部分]| (v.) 侮辱, 蔑视 <br> (n.) 轻视, 蔑视
 |dichotomy| dicho[=di, two] + tom + y| [cut into two]| (n.) 二分法, 分割; 对立
 |epitomize| epi[in] + tom + ize| [cut in, 剪影]| (v.) 代表, 体现; 摘要, 概括
@@ -2173,6 +2197,8 @@ wring
 
 **这里会包括一些难以用词根词缀解释的、词根不常用、或者词根过于明显的单词**
 
+## a
+
 |||||
 |---|---|---|---
 |agrarian| agra[土地] + r + ian| [土地的]| (a.) 土地的, 耕地的
@@ -2181,17 +2207,30 @@ wring
 |antagonize| ant(i) + gon[角] + ize| [用角对峙]| (v.) 反对, 激怒, 与...敌对
 |backhanded||| (a.) 间接的, 拐弯抹角的; 反手的
 |braid||| (n.) 辫子
+|buoy||| (n.) 浮标, 航标, 救生圈 (v.) （使）浮起, 鼓励, 价格上浮
+|buoyant <br> buoyance = buoyancy||| (a.) 有浮力的, 轻快的, 愉悦的 <br> (n.) 浮力, 弹性, （股票）保持高价 
 |charisma|| [(excellent) character]| (n.) 魅力, 非凡的领导能力 
 |crook <br> crouch <br> crumple|| [交叉（cross）的手臂是弯曲的（crook）] <br> [来自 crook, 将身体弯曲] <br> [参考 crook, 将纸张或建筑物弯曲]| (v.) 使弯曲. (n.) 弯曲, 骗子 <br> (v.) 蹲伏 <br> (v.) 弄皱, 垮塌
+
+## d
+
+|||||
+|---|---|---|---
 |decipher| de + cipher[密码]|| (v.) 破译, 辨认, 理解 (n.) 密信的译文
 |deliberate| de[加强语气] + lib(e)r[秤] + ate| [通过秤去衡量的]| (a.) 深思熟虑的, 故意的
 |devil||| (n.) 魔鬼 (v.) 折磨, 戏弄
+|dissipate <br> dissipation| dis[away] + sip[throw] + ate|| (v.) 消散, 驱散; 浪费; 放荡 <br> (n.) 物理损耗; 浪费, 消散
 |dissuade|| [与 persuade 相反]| (v.) 劝阻, 阻止
 |domicile| dom[home] + icile|| (n.) 住所, 住宅. (v.) 为...提供住处
 |domineer| domin[master] + eer|| (n. v.) 专制统治, 压制
 |exuberant| ex + uber[fertile] + ant|| (a.) 繁茂的, 热情洋溢的
 |falsehood||| (n.) 谎言
 |gash|| [（划开之后剩下空气）]| (n.) 深长的伤口、裂缝 (v.) 划开, 砍入很深
+
+## h
+
+|||||
+|---|---|---|---
 |halt <br> halting||| (v.) 使停住; 踌躇, 犹豫; 有缺陷 (n.) 停住, 小火车站 <br> (a.) 犹豫的, 蹒跚的
 |ham-handed|| [手像火腿一样笨]| (a.) 笨手笨脚的
 |headlong|| [头很长，（事情不过脑子）]| (a.) 鲁莽的
@@ -2210,7 +2249,12 @@ wring
 |paroxysm| par[=para, beyond] + oxy[sharp]| [时间短程度烈]| (n.) 突发, 动乱
 |patchwork||| (a.) 拼缝的 (n.) 拼缝物, 拼凑的东西
 |portray|| [向前延展，引申为描绘]| (v.) 描绘, 描写, 描绘...的肖像
-|reciprocate| reci[re] + pro + cate| [向后再向前]| (v.) 回报, 报答; 交换, 互换 
+|reciprocate| reci[re] + pro + cate| [向后再向前]| (v.) 回报, 报答; 交换, 互换
+
+## s
+
+|||||
+|---|---|---|---
 |scorch|| [用 torch 把...烧焦]| (n. v.) 烧焦, 枯萎, 讽刺 
 |scruple| scru[四顾] + ple|| (n. v.) 顾虑, 踌躇
 |scrupulous|| [要经常顾及（道德）]| (a.) 正直的, 一丝不苟的
@@ -2230,6 +2274,12 @@ wring
 |---|---|---|---
 |playful||| (a.) 爱开玩笑的, 好打闹的
 |willful||| (a.) 固执的, 倔强的; 故意的
+
+**-metry [术, 学科, 方法]**
+
+|||||
+|---|---|---|---
+|manometry| mano[pressure] + metry|| (n.) 测压法
 
 **-some [a. tending to]**
 
@@ -2325,6 +2375,7 @@ wring
 |bluster| blu[blow] + ster[monster]| [blow like a monster]| (v.) 咆哮, 呼啸, 恐吓
 |boisterous| boi[boil] + ster[monster] + ous| [沸腾的怪兽]| (a.) 喧嚷的, 吵闹的
 |bulge|| [词源同 ball]| (n. v.) 膨胀
+|compromise| com + promise| [相互承诺，互退一步]| (n. v.) 妥协, 和解
 |congeal| con + geal[jell, 读音相近]| [像 jelly 一样]| (v.) 凝固, 固化
 |connoisseur| con + nois[know] + seur[sir]|| (n.) 专家, 行家, 鉴赏家
 |contemplate| con[加强] + templ[temple] + ate| [像庙里僧人一样思考]| (v.) 注视, 沉思, 冥思苦想
