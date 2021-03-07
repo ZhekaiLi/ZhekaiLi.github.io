@@ -618,7 +618,7 @@ famous, fable
 
 **fic [make, do]**
 
-magnificent, gasify, specific
+magnificent, gasify, specific, deficiency
 
 |||||
 |---|---|---|---
@@ -901,7 +901,7 @@ select, election
 |leaven|| [使（情绪）上升]| (v.) 为...增色, 使...变有趣, 使发酵. (n.) 酵素
 |levity|| [（容易）举起]| (n.) 轻浮
 
-**lib [free 自由]**
+**lig [free 自由]**
 
 |||||
 |---|---|---|---
@@ -1366,6 +1366,17 @@ potential
 |potentate||| (n.) 有权势的人
 |potentiate|| [make ... powerful]| (v.) 加强, 激活
 
+**prais [value]** <br> **^preci** <br> **^pret, pric**
+
+price, appreciate
+
+|||||
+|---|---|---|---
+|apprise||| (v.) 评价, 估价
+|appreciable|| [能够（感知）价值的]| (a.) 可感知的, 可评估的
+|depreciate||| (v.) 贬值, 降价, 贬低
+
+
 **prehend [seize 抓]** <br> **^prehens** <br> **^pris**
 
 |||||
@@ -1397,6 +1408,12 @@ probable, approve
 |proofread| proof + read| [为了证实无误而阅读]| (v.) 校对
 |reprobate| re[opposite] + prob + ate| [反向证明]| (n.) 堕落者, 道德败坏的人; (a.) 堕落的, 放荡的; (v.) 拒绝, 谴责
 |reprove| re[against] + prob + ate| [prove against]| (v.) 警告, 责骂
+
+**pulver [dust]**
+
+|||||
+|---|---|---|---
+|pulverize||| (v.) 粉碎, 研磨, 使成为粉末
 
 **put [think]**
 
@@ -1746,12 +1763,12 @@ construct, destruction
 
 **sul(t) [leap]** <br> **^sal, sil**
 
-insult
-
 |||||
 |---|---|---|---
+|consult|| [跳到一起 $\to$ 聚集到一起]| (v.) 咨询, 商量; 查阅
 |desultory|| [向下随便跳]| (a.) 随意的, 散漫的
 |exult|| [leap out, 欢呼雀跃]| (v.) 感到欢喜
+|insult|| [跳起来往里打]| (v.) 侮辱, 辱骂
 |resilience||| (n.) 弹力, 恢复能力
 |salient||| (a.) 显著的, 突出的
 
@@ -1971,7 +1988,6 @@ tune
 |peruse|| [use (a book) thoroughly]| (v.) 细读
 
 # v
-
 **vac [empty]** <br> **^van**
 
 |||||
@@ -1996,6 +2012,7 @@ invade
 |---|---|---|---
 |ambivalent| ambi + val + ent| [both sides strong, 两边都很有道理]| (a.) 矛盾的
 |convalesce| con + val + esce[(v.) become]| [become strong]| (v.) 渐渐康复
+|prevalent|| [强有力地向前]| (a.) 流行的, 普遍的
 |unavailing| un + availing(=available)| | (a.) 徒劳的, 无用的
 |valediction| val(e) + dict + ion| [say "be strong and valuable"]| (n.) 告别演说, 告别词
 |valiant| val + iant| | (a.) 勇敢的, 英勇的
@@ -2304,6 +2321,7 @@ wring
 |||||
 |---|---|---|---
 |barren|| [bare]| (a.) 无果的, 贫瘠的, 不育的, 空洞无趣的
+|beaker|| [有着像鸟嘴一样杯口的容器]| (n.) 烧杯, 大口酒杯
 |bluster| blu[blow] + ster[monster]| [blow like a monster]| (v.) 咆哮, 呼啸, 恐吓
 |boisterous| boi[boil] + ster[monster] + ous| [沸腾的怪兽]| (a.) 喧嚷的, 吵闹的
 |bulge|| [词源同 ball]| (n. v.) 膨胀
