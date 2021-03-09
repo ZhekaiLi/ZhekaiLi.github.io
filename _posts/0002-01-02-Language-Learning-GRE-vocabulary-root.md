@@ -234,6 +234,7 @@ access
 |accede | ac + cede | [go (in)to] | (v.) 加入, 同意, 就职
 |access | ac + cess | [go (in)to] | (v.) 接近, 访问, 获取; (n.) 通道, 进入, 使用权
 |accessory | access + ory | [(和主体) 走得很近] | (n.) 附件, 配件, 从犯
+|cede|| [走开]| (v.) 割让
 |cessation||| (n.) 终止, 暂停
 |concede | con + cede | [go (back) together, 各退一步] | (v.) 退让, 承认
 |concession | | | (n.) 让步, 特权
@@ -804,6 +805,23 @@ progress
 |cohesive|| [stick together]| (a.) 有粘性的, 有凝聚力的
 |inherent||| (a.) 内在的, 本质的
 
+**hor [颤抖, 害怕]**
+
+horrible
+
+|||||
+|---|---|---|---
+|abhor|| [令人害怕让人感到憎恶，想要远离]| (v.) 憎恶, 痛恨; 回避
+
+**hum [土地]**
+
+|||||
+|---|---|---|---
+|exhume||| (v.) 掘出, 发掘
+|humble||| (a.) 谦逊的, 低下的. (v.) 贬低, 使卑微, 谦逊
+|humiliate| hum + il[=in] + (i)ate| [把人按到地里]| (v.) 使丢脸, 屈辱
+|humility| hum + ility[表状态]| [低地的状态]| (n.) 谦虚, 谦逊, 谦卑
+
 # i
 **ign [fire]**
 
@@ -918,6 +936,12 @@ obligation, oblige, religion
 |obligatory||| (a.) 强制性的, 义务的, 必须的; 无聊的
 |oblige||| (v.) 迫使, 强制; 施恩惠, 帮忙
 |obliging||| (a.) 乐于助人的
+
+**linqu [离开]**
+
+|||||
+|---|---|---|---
+|relinquish|| [把现有东西交出来，然后离开]| (v.) 放弃, 自愿交出
 
 **loft [lift]**
 
@@ -1477,6 +1501,12 @@ rape
 |rectitude| rect + itude| | (n.) 正直
 |resurrect| re + sur(=sub) + rect| [重新从下面直立]| (v.) 使重生, 使复苏
 
+**reg [rule]**
+
+|||||
+|---|---|---|---
+|regime|| [指定规则的东西]| (n.) 政权, 政体, 社会制度, 管理体制
+
 **rest [rest]**
 
 |||||
@@ -1886,7 +1916,7 @@ extend, extent
 |||||
 |---|---|---|---
 |eternal|| [end out]| (a.) 永恒的
-|exterminate|| [end (sth.) out]| (v.) 根除, 消灭
+|exterminate|| [end (sth.) out]| (v.) 根除, 消��
 |interminable||| (a.) 冗长的, 无止尽的
 |terminus||| (n.) 终点, 终点站
 
@@ -1903,7 +1933,7 @@ extend, extent
 |||||
 |---|---|---|---
 |antithetical|| [put against]| (a.) 对立的, 相反的
-|epithet| epi[addition] + thet| [起额外的(名字)]| (n.) 外号, 绰号
+|epithet| epi[on] + thet| [把（额外的名字）放上去]| (n.) 外号, 绰号
 |parenthesis| par[不译] + en + thes + is| [put in]| (n.) 插入语, 间断, 圆括号
 |synthesis| syn[together] + thes + is|| (n.) 综合, 合成
 
@@ -2197,36 +2227,6 @@ wring
 
 **这里会包括一些难以用词根词缀解释的、词根不常用、或者词根过于明显的单词**
 
-## a
-
-|||||
-|---|---|---|---
-|agrarian| agra[土地] + r + ian| [土地的]| (a.) 土地的, 耕地的
-|albeit|| [=although it be]| (conj.) 尽管, 虽然
-|allure||| (v.) 诱惑, 引诱 (n.) 诱惑力
-|antagonize| ant(i) + gon[角] + ize| [用角对峙]| (v.) 反对, 激怒, 与...敌对
-|backhanded||| (a.) 间接的, 拐弯抹角的; 反手的
-|braid||| (n.) 辫子
-|buoy||| (n.) 浮标, 航标, 救生圈 (v.) （使）浮起, 鼓励, 价格上浮
-|buoyant <br> buoyance = buoyancy||| (a.) 有浮力的, 轻快的, 愉悦的 <br> (n.) 浮力, 弹性, （股票）保持高价 
-|charisma|| [(excellent) character]| (n.) 魅力, 非凡的领导能力 
-|crook <br> crouch <br> crumple|| [交叉（cross）的手臂是弯曲的（crook）] <br> [来自 crook, 将身体弯曲] <br> [参考 crook, 将纸张或建筑物弯曲]| (v.) 使弯曲. (n.) 弯曲, 骗子 <br> (v.) 蹲伏 <br> (v.) 弄皱, 垮塌
-
-## d
-
-|||||
-|---|---|---|---
-|decipher| de + cipher[密码]|| (v.) 破译, 辨认, 理解 (n.) 密信的译文
-|deliberate| de[加强语气] + lib(e)r[秤] + ate| [通过秤去衡量的]| (a.) 深思熟虑的, 故意的
-|devil||| (n.) 魔鬼 (v.) 折磨, 戏弄
-|dissipate <br> dissipation| dis[away] + sip[throw] + ate|| (v.) 消散, 驱散; 浪费; 放荡 <br> (n.) 物理损耗; 浪费, 消散
-|dissuade|| [与 persuade 相反]| (v.) 劝阻, 阻止
-|domicile| dom[home] + icile|| (n.) 住所, 住宅. (v.) 为...提供住处
-|domineer| domin[master] + eer|| (n. v.) 专制统治, 压制
-|exuberant| ex + uber[fertile] + ant|| (a.) 繁茂的, 热情洋溢的
-|falsehood||| (n.) 谎言
-|gash|| [（划开之后剩下空气）]| (n.) 深长的伤口、裂缝 (v.) 划开, 砍入很深
-
 ## h
 
 |||||
@@ -2251,21 +2251,14 @@ wring
 |portray|| [向前延展，引申为描绘]| (v.) 描绘, 描写, 描绘...的肖像
 |reciprocate| reci[re] + pro + cate| [向后再向前]| (v.) 回报, 报答; 交换, 互换
 
-## s
+
+# 经典前缀
+**epi- [表示方位], [on, over, at, in]**
 
 |||||
 |---|---|---|---
-|scorch|| [用 torch 把...烧焦]| (n. v.) 烧焦, 枯萎, 讽刺 
-|scruple| scru[四顾] + ple|| (n. v.) 顾虑, 踌躇
-|scrupulous|| [要经常顾及（道德）]| (a.) 正直的, 一丝不苟的
-|scrutable|| [四顾可（看清）]| (a.) 可理解的
-|scrutinize| scru + tini[tiny] + ze| [四顾细微之处]| (v.) 仔细检查
-|secure| se + cure[=care]| [apart from care, 不用关心 $\to$ 安全的]| (a.) 安全的, 可靠的 (v.) 保证, 掩护, 使安全
-|shiftless|| [不尝试去移动、去变化]| (a.) 胸无大志的, 懒惰的
-|shifty|| [变化多端的（贬）]| (a.) 狡诈的, 欺诈的, 变化的
-|supercilious| super[over] + cil[cilia, 睫毛] + ious| [翻白眼的]| (a.) 高傲的, 傲慢的
-|surveillance| sur[up] + veil[近似于 view] + lance| [在上面看]| (n.) 监视, 监控
-|wrongheaded||| (a.) 固执己见的, 坚持错误的
+|epithet| epi[on] + thet| [把（额外的名字）放上去]| (n.) 外号, 绰号
+|epitomize| epi[in] + tom + ize| [cut in, 剪影]| (v.) 代表, 体现; 摘要, 概括
 
 # 经典后缀
 **-ful [a. full of]**
@@ -2361,8 +2354,14 @@ wring
 |||||
 |---|---|---|---
 |abash| ab[away] + ash[灰]| [使灰溜溜地溜走]| (v.) 使尴尬, 使羞愧
+|abide <br> abiding| a + bide[等待]|| (v.) 停留, 遵; 忍受, 经受 <br> (a.) 永久的, 持久的
+|abominate| ab[away] + omin[预兆] + ate| [没有预兆突然发生的事让人厌恶]| (v.) 厌恶, 憎恨
 |abstruse| abs[away] + truse[truth]| [与认为的真理不一致]| (a.) 难以理解的
+|agrarian| agra[土地] + r + ian| [土地的]| (a.) 土地的, 耕地的
+|albeit|| [=although it be]| (conj.) 尽管, 虽然
+|allure||| (v.) 诱惑, 引诱 (n.) 诱惑力
 |amalgamate| amalg[among] + amate| [使混到一起]| (v.) 合并, 混合
+|antagonize| ant(i) + gon[角] + ize| [用角对峙]| (v.) 反对, 激怒, 与...敌对
 |arduous| (h)ard + uous|| (a.) 难以做到的, 费劲的
 |assert| as + sert[certain]|| (v.) 维护, 坚持, 断言, 主张
 
@@ -2370,38 +2369,99 @@ wring
 
 |||||
 |---|---|---|---
+|backhanded||| (a.) 间接的, 拐弯抹角的; 反手的
 |barren|| [bare]| (a.) 无果的, 贫瘠的, 不育的, 空洞无趣的
 |beaker|| [有着像鸟嘴一样杯口的容器]| (n.) 烧杯, 大口酒杯
 |bluster| blu[blow] + ster[monster]| [blow like a monster]| (v.) 咆哮, 呼啸, 恐吓
 |boisterous| boi[boil] + ster[monster] + ous| [沸腾的怪兽]| (a.) 喧嚷的, 吵闹的
+|braid||| (n.) 辫子
 |bulge|| [词源同 ball]| (n. v.) 膨胀
+|buoy||| (n.) 浮标, 航标, 救生圈 (v.) （使）浮起, 鼓励, 价格上浮
+|buoyant <br> buoyance = buoyancy||| (a.) 有浮力的, 轻快的, 愉悦的 <br> (n.) 浮力, 弹性, （股票）保持高价 
+
+## c
+
+|||||
+|---|---|---|---
+|charisma|| [(excellent) character]| (n.) 魅力, 非凡的领导能力 
 |compromise| com + promise| [相互承诺，互退一步]| (n. v.) 妥协, 和解
 |congeal| con + geal[jell, 读音相近]| [像 jelly 一样]| (v.) 凝固, 固化
 |connoisseur| con + nois[know] + seur[sir]|| (n.) 专家, 行家, 鉴赏家
 |contemplate| con[加强] + templ[temple] + ate| [像庙里僧人一样思考]| (v.) 注视, 沉思, 冥思苦想
+|crook <br> crouch <br> crumple|| [交叉（cross）的手臂是弯曲的（crook）] <br> [来自 crook, 将身体弯曲] <br> [参考 crook, 将纸张或建筑物弯曲]| (v.) 使弯曲. (n.) 弯曲, 骗子 <br> (v.) 蹲伏 <br> (v.) 弄皱, 垮塌
+
+## d
+
+|||||
+|---|---|---|---
+|debauch| de + bauch[balk, 栏杆]| [从栏杆上掉下来]| (v.) 使堕落, 放荡
+|decipher| de + cipher[密码]|| (v.) 破译, 辨认, 理解 (n.) 密信的译文
 |decrepit| de + crep[creep] + it| [在下面爬的]| (a.) 衰老的, 破旧的
+|deliberate| de[加强语气] + lib(e)r[秤] + ate| [通过秤去衡量的]| (a.) 深思熟虑的, 故意的
+|devil||| (n.) 魔鬼 (v.) 折磨, 戏弄
+|dissipate <br> dissipation| dis[away] + sip[throw] + ate|| (v.) 消散, 驱散; 浪费; 放荡 <br> (n.) 物理损耗; 浪费, 消散
+|dissuade|| [与 persuade 相反]| (v.) 劝阻, 阻止
+|domicile| dom[home] + icile|| (n.) 住所, 住宅. (v.) 为...提供住处
+|domineer| domin[master] + eer|| (n. v.) 专制统治, 压制
 |drivel|| [满嘴跑火车]| (n. v.) 胡言乱语, 说傻话
+
+## e
+
+|||||
+|---|---|---|---
 |enfranchise| en + fr[free] + an(d) + chise[choose]| [使自由并有选举权]| (v.) 解放, 释放; 给予选举权
+|escalate|| [有点像 elevate]| (v.) 逐步扩大、升高、增强
+|exuberant| ex + uber[fertile] + ant|| (a.) 繁茂的, 热情洋溢的
+|falsehood||| (n.) 谎言
 |fluky|| [飞来的 lucky]| (a.) 侥幸的, 偶然的
-|forsake| for + sake[shake]| [摇着头说不行]| (v.) 放弃, 抛弃 
+|forsake| for[相反] + sake[shake]| [摇着头说不行]| (v.) 放弃, 抛弃 
+|gash|| [（划开之后剩下空气）]| (n.) 深长的伤口、裂缝 (v.) 划开, 砍入很深
+
+## h
+
+|||||
+|---|---|---|---
+|halt <br> halting||| (v.) 使停住; 踌躇, 犹豫; 有缺陷 (n.) 停住, 小火车站 <br> (a.) 犹豫的, 蹒跚的
+|ham-handed|| [手像火腿一样笨]| (a.) 笨手笨脚的
+|headlong|| [头很长，（事情不过脑子）]| (a.) 鲁莽的
+|hearken| hear[听] + ken[keen, 热心的]| [热心地听]| (v.) 倾听, 关注, 留心
+|hoard|| [近似于 hide, house]| (v.) 囤积, 贮藏. (n.) 贮藏物, 密藏的金钱
+|hostile||| (a.) 敌人的, 敌对的 (n.) 敌对分子
 |humdrum| hum[嗡嗡] + drum| [只有嗡嗡的鼓声]| (n. a.) 单调（的）, 乏味（的）
 |hurricane| hurri[hurry] + cane[came]|| (n.) 飓风
+
+## i
+
+|||||
+|---|---|---|---
 |idiosyncrasy| idio[idiot] + syn[together] + crasy[crazy]| [傻而疯]| (n.) 独特而奇怪的习惯、性格、气质
+|impecunious| im[not] + pecun[wealth] + ious|| (a.) 贫穷的
+|impenetrable| im + penetr(ate) + able|| (a.) 不能通过的, 顽固的
 |indigent|| [（地里）什么都挖不出来]| (a.) 贫穷的
 |inane| in + (n)ane[none]|| (a.) 空洞的
+|irritate| ir[in] + rit[rise] + ate| [内部的（情绪）上升]| (v.) 激怒, 使兴奋
 |largesse|| [large $\to$ 大度]| (n.) 慷慨, 捐赠物
 |laudatory| (p)laud + atory| [鼓掌]| (a.) 表示赞扬的
+|levelheaded|| [平静的头脑]| (a.) 明智的
+|linger| ling[=long] + er| [stay long]| (v.) 徘徊, 磨蹭, 消磨
 |machination|| [机器构造精妙]| (n.) 诡计
 |maculate <br> immaculate| mac[mark] + ulate|| (v.) 使有斑点, 弄脏, 玷污 <br> (a.) 完美的, 洁净的, 无瑕疵的
 |meager| m + eager|| (a.) 贫乏的
 |maelstrom| mael[mal] + strom[storm]| [bad storm]| (n.) 漩涡; 混乱、动荡的局势
+|offhand||| (a.) 即兴的, 没有准备的, 随便的
+|offish||| (a.) 冷淡的
+|oxymoron| oxy[sharp] + moron[傻瓜]| [聪明的傻子]| (n.) 矛盾修饰法
 
 ## p
 
 |||||
 |---|---|---|---
+|paragon| para[beyond] + gon[角]| [崭露头角]| (n.) 优秀模范
+|paroxysm| par[=para, beyond] + oxy[sharp]| [时间短程度烈]| (n.) 突发, 动乱
+|patchwork||| (a.) 拼缝的 (n.) 拼缝物, 拼凑的东西
 |peril <br> perilous| per + il(l)| [thoroughly ill]| (n.) 危险, 冒险 (v.) 危及 <br> (a.) 危险的
 |perish <br> imperishable|| [使 peril]| (v.) 死亡, 消亡 <br> (a.) 不朽的, 永恒的
+|portray|| [向前延展，引申为描绘]| (v.) 描绘, 描写, 描绘...的肖像
 |prairie| pr[pure] + air + ie| [空气新鲜的地方]| (n.) 大草原
 |precarious|| [需要在之前多留心]| (a.) 危险的, 不确定的, 可疑的
 |procrastinate| pro + crast[cast] + inate| [扔到明天去做]| (v.) 拖延
@@ -2415,6 +2475,7 @@ wring
 
 |||||
 |---|---|---|---
+|reciprocate| reci[re] + pro + cate| [向后再向前]| (v.) 回报, 报答; 交换, 互换
 |reticent| re + tic[滴答] + ent| [一再听到滴答的钟声]| (a.) 沉默不语的
 |revelry| revel[rebel] + ry| [像造反一样]| (n.) 狂欢, 欢宴
 
@@ -2422,23 +2483,35 @@ wring
 
 |||||
 |---|---|---|---
+|scorch|| [用 torch 把...烧焦]| (n. v.) 烧焦, 枯萎, 讽刺 
+|scruple| scru[四顾] + ple|| (n. v.) 顾虑, 踌躇
+|scrupulous|| [要经常顾及（道德）]| (a.) 正直的, 一丝不苟的
+|scrutable|| [四顾可（看清）]| (a.) 可理解的
+|scrutinize| scru + tini[tiny] + ze| [四顾细微之处]| (v.) 仔细检查
+|secure| se + cure[=care]| [apart from care, 不用关心 $\to$ 安全的]| (a.) 安全的, 可靠的 (v.) 保证, 掩护, 使安全
 |sermon|| [series of words on Mondy, 每周一国旗下的讲话]| (n.) 布道, 说教
-|serried| serried[series]| [一系列密密麻麻的东西]| (a.) 密集的  
+|serried| serried[series]| [一系列密密麻麻的东西]| (a.) 密集的
+|shiftless|| [不尝试去移动、去变化]| (a.) 胸无大志的, 懒惰的
+|shifty|| [变化多端的（贬）]| (a.) 狡诈的, 欺诈的, 变化的  
 |snobbish| snob[势力小人] + bish|| (a.) 势力的, 自大的
 |stagger|| [用 stick 把腿打伤了]| (n. v.) 蹒跚, 踉跄; 犹豫
 |stoic|| [像石头一样不带感情（褒）]| (a.) 隐忍的, 冷静的, 坚忍的
 |stray|| [源于 extra, 向外偏离、流浪]| (v.) 迷路, 彷徨, 流浪 (a.) 迷路的, 偶然的 (n.) 走失的孩子、宠物 
 |striate| stri[strip] + ate|| (v.) 加条纹
 |strident| stri[strip] + dent| [剥树皮的声音]| (a.) 刺耳的
+|supercilious| super[over] + cil[cilia, 睫毛] + ious| [翻白眼的]| (a.) 高傲的, 傲慢的
+|surveillance| sur[up] + veil[近似于 view] + lance| [在上面看]| (n.) 监视, 监控
 
 ## t
 
 |||||
 |---|---|---|---
+|taper|| [来自古英语，义为灯芯、蜡烛]| (n.) 蜡烛, 点火目标; 逐渐缩小、变细 (a.) 尖细的 (v.) （使）逐渐变细
 |topsy-turvy| topsy[top] + turvy[turn]| [顶部翻转]| (a.) 混乱的
 |trifle <br> trifling| tri[trivial] + fle|| (n.) 不重要的事 (v.) 轻视, 虚度 <br> (a.) 微不足道的, 轻浮的
 |uncanny|| [不能够知道的]| (a.) 异常的, 难以解释的
-|weary|| [穿着的衣服磨损了]| (a.) 疲倦的, 厌倦的 (v.) （使）疲倦, 厌烦 
+|weary|| [穿着的衣服磨损了]| (a.) 疲倦的, 厌倦的 (v.) （使）疲倦, 厌烦
+|wrongheaded||| (a.) 固执己见的, 坚持错误的
 |willy-nilly|| [willing or not willing]| (a.) 无秩序的, 随意的
 |zenith| zen[sen, senior] + ith|| (n.) 最高点, 巅峰
 

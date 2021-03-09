@@ -136,12 +136,6 @@ denounce [announce down] 谴责, 公然抨击
 |---|---|---|---
 |equivocate|| [call equally (to conflicting points)]| (v.) 说谎话, 模棱两可地说
 
-**epi- [addition]**
-
-|||||
-|---|---|---|---
-|epithet| epi[addition] + thet| [起额外的(名字)]| (n.) 外号, 绰号
-
 **eu- [well]**
 
 |||||
