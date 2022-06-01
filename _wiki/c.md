@@ -534,4 +534,47 @@ void change(int *pp){
 void main(){
     int i=3, *q=&i;
     change(&q); // i=5 here
+}
+```
+
+1. 结构体指针
+
+```c
+struct person per, *p;
+p = &per;
+p->name == per.name == (*per).name;
+
+struct person pers[3], *p;
+for(p=pers; p<pers+3; p++){
+    printf("%s\n", p->name)
+}
+```
+
+2. 结构体与函数
+结构体作为实参传入函数时，一般不传其本体（系统开销大），而是以指针的形式传入
+```c
+void print_name(struct person *p){
+    printf("%s\n", p->name)
+}
+```
+
+3. 共用体：定义方式与结构体类似，特点是<span style="background-color: yellow; color: black;">在每一时刻只能有一个成员起作用</span>
+```c
+union state{
+    int s1;
+    int s2;
+    char c;
+};
+
+
+union state s;
+s.s1 = 1;
+s.s2 = 2;
+printf("%d", s.s1);
+>>> 2 // 也就是说共用体只包含最后的输入
+
+s.c = 'A;
+printf("%d", s.s1);
+>>> 65 // 'A' 的ascii码值
+```
 
