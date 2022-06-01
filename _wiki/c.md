@@ -538,7 +538,6 @@ void main(){
 ```
 
 1. 结构体指针
-
 ```c
 struct person per, *p;
 p = &per;
@@ -566,15 +565,14 @@ union state{
     char c;
 };
 
-
 union state s;
 s.s1 = 1;
 s.s2 = 2;
 printf("%d", s.s1);
->>> 2 // 也就是说共用体只包含最后的输入
+-> 2 // 也就是说共用体只包含最后的输入
 
 s.c = 'A;
 printf("%d", s.s1);
->>> 65 // 'A' 的ascii码值
+-> 65 // 'A' 的ascii码值
 ```
 
