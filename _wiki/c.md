@@ -225,3 +225,73 @@ float func_max(float a, float b);
 
 void main( ) {
     printf("%f", func_max(5, 8));
+}
+
+float func_max(float a, float b){
+    return (a>b)? a: b;
+}
+```
+
+### 2.2.1 形参与实参
+- 形参: 定义函数时所定义的输入，如上例中 `float a, float b`
+- 实际: 调用函数时的实际输入
+- 传参方式分为传值调用和传地址调用，其中<span style="background-color: yellow; color: black;">传地址调用</span>会使得输入的实参随着形参的变化而变化
+
+### 2.2.2 函数作为形参输入
+```c
+int add(int a, int b){ return a+b; }
+int compute(int x, int y, int (*p)()){
+    return (*p)(x,y);
+}
+void main(){
+    result = compute(1, 2, add)
+}
+```
+
+## 2.3 递归 
+汉诺塔问题
+```c
+void hanot(int n, char a, char b, char c){
+    if (n==1) printf("%c --> %c\n", a, c);
+    else{
+        hanot(n-1, a, c, b);
+        hanot(1, a, b, c);
+        hanot(n-1, b, a, c);
+    }
+}
+```
+斐波那契数列
+```c
+int fibonaci(int n){
+    if (n==1 || n==2) return 1;
+    return fibonaci(n-1) + fibonaci(n-2);
+}
+```
+
+# 3. 程序控制流程
+```mermaid
+graph LR
+A(控制流程)
+    A-->B1(顺序结构)
+    A-->B2(判断结构 if)
+    A-->B3(选择结构 switch)
+    A-->B4(循环结构 for, while) 
+```
+
+```c
+/* --------- */
+/* 判断结构 if */
+if (a<0) a=0;
+
+if (a<0) a=0;
+else if (a>0) a++;
+[else;]
+
+/* ------------- */
+/* 选择结构 switch */
+switch(a){
+    // 若不加break，则会执行其后的所有语句。例如当a=2时，则输出"a=2\na is unknown"
+    case 1: printf("a=1"); break;
+    case 2: printf("a=2"); break;
+    [default: printf("a is unknown");]    
+}
