@@ -576,3 +576,16 @@ printf("%d", s.s1);
 -> 65 // 'A' 的ascii码值
 ```
 
+4. 枚举类型
+```c
+enum color{ red, yellow, blue };
+
+for(int c=red; c<3; c++){ // r,y,b 依次等于 0,1,2
+    switch(c){
+        case red:    printf("r\n"); break;
+        case yellow: printf("y\n"); break;
+        case blue:   printf("b\n"); break;
+    }
+}
+```
+
