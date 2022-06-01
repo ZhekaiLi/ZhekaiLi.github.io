@@ -553,6 +553,8 @@ struct person{
 };
 
 void main( ) {
+    struct person p1 = {0, "Zeka", 20, {"Tom", "Ammy"}};
+    printf("%s", p1.families.dad_name);
 }
 ```
 
