@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Ccc
+title: Clang
 cate1: Others
 cate2:
 description: 
