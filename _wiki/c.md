@@ -553,10 +553,6 @@ struct person{
 };
 
 void main( ) {
-    struct person p1 = {0, "Zeka", 20, {"Tom", "Ammy"}};
-    printf("%s", p1.families.dad_name);
-
-    struct family fs[2] = {{"d1","m1"}, {"d2","m2"}};
 }
 ```
 
