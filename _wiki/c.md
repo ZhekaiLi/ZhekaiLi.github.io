@@ -537,6 +537,15 @@ void main(){
 }
 ```
 
+# 6. 结构体
+
+```c
+struct family{
+    char dad_name[20];
+    char mom_name[20];
+};
+```
+
 1. 结构体指针
 ```c
 struct person per, *p;
