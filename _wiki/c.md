@@ -534,29 +534,4 @@ void change(int *pp){
 void main(){
     int i=3, *q=&i;
     change(&q); // i=5 here
-}
-```
-
-# 6. 结构体
-
-```c
-struct family{
-    char dad_name[20];
-    char mom_name[20];
-};
-
-struct person{
-    float num;
-    char name[20];
-    int age;
-    struct family families;
-};
-
-void main( ) {
-    struct person p1 = {0, "Zeka", 20, {"Tom", "Ammy"}};
-    printf("%s", p1.families.dad_name);
-
-    struct family fs[2] = {{"d1","m1"}, {"d2","m2"}};
-}
-```
 
