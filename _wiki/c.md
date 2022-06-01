@@ -544,6 +544,14 @@ struct family{
     char dad_name[20];
     char mom_name[20];
 };
+
+struct person{
+    float num;
+    char name[20];
+    int age;
+    struct family families;
+};
+
 ```
 
 1. 结构体指针
