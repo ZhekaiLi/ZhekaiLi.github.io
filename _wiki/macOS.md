@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: macOS Shortcut
+title: macOS
 cate1: Others
 cate2:
 description: 

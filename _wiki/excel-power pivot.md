@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: Excel
-cate1: Others
+title: Power Pivot
+cate1: Excel
 cate2: 
 description: 
 keywords:
