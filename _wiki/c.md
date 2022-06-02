@@ -5,6 +5,7 @@ cate1: Others
 cate2:
 description: 
 keywords: C
+mermaid: true
 ---
 
 ```c
