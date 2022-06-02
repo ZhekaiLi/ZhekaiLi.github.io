@@ -553,7 +553,7 @@ struct person{
 };
 
 void main( ) {
-    struct person p1 = {0, "Zeka", 20, {"Tom", "Ammy"}};
+    struct person p1 = { 0, "Zeka", 20, {"Tom", "Ammy"} };
     printf("%s", p1.families.dad_name);
     
     struct family fs[2] = { {"d1","m1"}, {"d2","m2"} };
@@ -561,6 +561,7 @@ void main( ) {
 ```
 
 1. 结构体指针
+
 ```c
 struct person per, *p;
 p = &per;
@@ -571,9 +572,9 @@ for(p=pers; p<pers+3; p++){
     printf("%s\n", p->name)
 }
 ```
-
 2. 结构体与函数
 结构体作为实参传入函数时，一般不传其本体（系统开销大），而是以指针的形式传入
+
 ```c
 void print_name(struct person *p){
     printf("%s\n", p->name)
