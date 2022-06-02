@@ -33,6 +33,7 @@ keywords: Windows Terminal
 <img src="https://img-blog.csdnimg.cn/20210416233437775.png" width="35%"> <img src="https://img-blog.csdnimg.cn/20210416233526709.png" width="61%">
 
 # Hello World
+
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -60,10 +61,12 @@ namespace ConsoleApp2
 
 # 注释
 **单行注释 `//`**
+
 ```csharp
 // 这是单行注释
 ```
 **多行注释 `/**/`**
+
 ```csharp
 /* 这是
 多行注释 */
@@ -72,7 +75,8 @@ namespace ConsoleApp2
 选中目标区域后按下 `Ctrl + K + C` （取消注释为 `Ctrl + K + U`）
 
 **文档注释 `///`**
-在命名空间、类、方法前输入 `///`，会自动生成一个文档注释模板，例如：
+在命名空间、类、方法前输入 `///`，会自动生成一个文档注释模板，例如:
+
 ```csharp
 /// <summary>
 /// 
@@ -86,7 +90,8 @@ public static int GetMax(int n1, int n2)
     return n1 > n2 ? n1 : n2;
 }
 ```
-填入内容后：
+填入内容后:
+
 ```csharp
 /// <summary>
 /// 求两个整数中的较大值
@@ -111,7 +116,8 @@ public static int GetMax(int n1, int n2)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210417124445343.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
 
 # 变量和数据类型
-示例：
+示例:
+
 ```csharp
 int n1 = 1;
 double n2 = 3.14;
@@ -123,7 +129,8 @@ bool ifCorrect = true;
 ## .1 变量的作用范围
 在一个 `{}` 内声明的变量仅在当前大括号内生效（可读、可写），这个范围包括大括套的嵌套。
 
-而在两个平行的函数之间，由于无法在函数1中访问函数2内定义的变量，我们可以通过==在类中创建静态变量==的方式，来模拟全局变量。以下代码展示了静态变量的基础应用：
+而在两个平行的函数之间，由于无法在函数1中访问函数2内定义的变量，我们可以通过==在类中创建静态变量==的方式，来模拟全局变量。以下代码展示了静态变量的基础应用:
+
 ```csharp
 class Program
 {
@@ -145,7 +152,6 @@ class Program
 	}
 }
 
->>>
 "Initial:12.56, Accurated:12.5663706"
 ```
 
@@ -159,11 +165,11 @@ C# 中的变量主要分为这两种类型。其中：
 引用类型：`string`, `自定义类`, `数组`
 
 还有一种特殊的 `var` 类型，能够根据输入自动为变量分配数据类型。例如下例中的 n 会被自动分配为 int 类型，ns 为 int[] 类型
+
 ```csharp
 var n = 3;
 var ns = new int[] { 0, 1 };
 ```
-
 > 不理解以上 `enum, struct, 自定义类, 数组` 这几个概念的读者请忽略他们，这些内容将在之后的两篇博客中具体描述：[精简 C# 入门（二）](https://blog.csdn.net/weixin_43728138/article/details/115793759), [精简 C# 入门（三）](https://blog.csdn.net/weixin_43728138/article/details/115840788))
 
 **值类型、引用类型在内存分配上的区别**（这部分不重要，可以忽略）
@@ -172,9 +178,7 @@ var ns = new int[] { 0, 1 };
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422153740554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
 
 
-**值类型、引用类型在可修改性上的区别**
-
-(这个 "可修改性" 的表述可能不太恰当，日后会做修改)。如下图，可得
+**值类型、引用类型在可修改性上的区别** (这个 "可修改性" 的表述可能不太恰当，日后会做修改)。如下图，可得
 1. 对于值类型 `double d` 无论在外部函数中怎么修改，其值均为初值
 2. 对于引用类型 `string name` 和 `int[] list`：
 在外部函数中==对其整体的修改不会影响它们在 Main 函数中的值==，正如 Change 1
@@ -184,26 +188,31 @@ var ns = new int[] { 0, 1 };
 
 ## .3 数组 list
 一次性存储多个相同类型的变量
+
 ```csharp
 数组类型[] 数组名 = new 数组类型[(数组长度)] // （）意味着可以省略
 ```
 **数组的声明**
 
 示例（1）：
+
 ```csharp
 int[] nums = new int[10]; // 声明一个数组，此时默认数组内 10 个元素均为 0
 nums[0] = 1;              // 修改第 0 个元素为 1
 ```
 示例（2）：
+
 ```csharp
 int[] nums1 = { 1, 2, 3 }；
 int[] nums2 = new int[3] { 1, 2, 3 };
 ```
 **数组的属性**
+
 ```csharp
-nums.Length >>> 10 // 长度
+nums.Length; // 长度
 ```
-不同于变量，外部函数==可以直接对传入的数组进行修改，从而改变数组在该函数外部的值==。例如以下代码中，`Change` 函数更改了 `Main` 函数中的数组 `nums`，但并未改变变量 `n`：
+不同于变量，外部函数==可以直接对传入的数组进行修改，从而改变数组在该函数外部的值==。例如以下代码中，`Change` 函数更改了 `Main` 函数中的数组 `nums`，但并未改变变量 `n`:
+
 ```csharp
 static void Main(string[] args)
 {
@@ -222,13 +231,13 @@ static void Change(int n, int[] nums)
     nums[0] += 1; 
 }
 
->>>
-"0
-1"
+"0"
+"1"
 ```
 
 ### .3.1 冒泡排序
-由于本博客默认读者并不是完全不会其他任何计算机语言的，因此冒泡排序的原理不在这里赘述。直接给出 C# 冒泡排序的实现方式（从小到大）：
+由于本博客默认读者并不是完全不会其他任何计算机语言的，因此冒泡排序的原理不在这里赘述。直接给出 C# 冒泡排序的实现方式（从小到大）:
+
 ```csharp
 int[] nums = { 3, 4, 7, 1, 6, 6, 8 };
 for (int i = 0; i < nums.Length; i++)
@@ -246,10 +255,10 @@ for (int i = 0; i < nums.Length; i++)
 for (int i = 0; i < nums.Length; i++) { Console.Write(nums[i]); }
 Console.ReadKey();
 
->>>
 "1346678"
 ```
-当然，C# 中有内置的方法能帮助我们快速实现数组的升序 or 降序排序：
+当然，C# 中有内置的方法能帮助我们快速实现数组的升序 or 降序排序:
+
 ```csharp
 Array.Sort(nums);    // 升序
 Array.Reverse(nums); // 降序
@@ -257,6 +266,7 @@ Array.Reverse(nums); // 降序
 
 ## .4 ArrayList 泛型集合
 > ==注意==：ArrayList 由于在读写的过程中存在类型转换（装箱/拆箱），导致其读写速度较为缓慢，因此一般更多地会 ==**使用 List<> 代替 ArrayList**==，详见 Section 8
+
 ```csharp
 using System.Collections;
 
@@ -271,6 +281,7 @@ list.Add(2);
 int sum = (int)list[0] + (int)list[1];
 ```
 **类方法**：以下代码中 `obj` 表示任意类型的元素
+
 ```csharp
 list.Count;                   // 查看长度
 list.Capacity;                // 查看集合容量
@@ -291,10 +302,12 @@ list.InsertRange(index, 数组、集合);
 ```
 ## .5 List<> 泛型集合
 创建对象
+
 ```csharp
 List<数据类型> 对象名 = new List<数据类型>();
 ```
-List<> 泛型集合的大部分类方法同 ArrayList，详见 Section 7。除此以外，泛型集合也有一些独有的类方法：
+List<> 泛型集合的大部分类方法同 ArrayList，详见 Section 7。除此以外，泛型集合也有一些独有的类方法:
+
 ```csharp
 List<int> list = new List<int>();
 
@@ -306,12 +319,14 @@ List<int> list = new List<int>();
 > ==注意==：HashTable 由于在读写的过程中存在类型转换（装箱/拆箱），导致其读写速度较为缓慢，因此一般更多地会 ==**使用 Dictionary 代替 HashTable**==，详见 Section 10
 
 类似 Python 中的字典，==键必须唯一，值可以重复==
+
 ```csharp
 using System.Collections;
 
 HashTable ht = new HashTable();
 ```
-**类方法**：
+**类方法**:
+
 ```csharp
 ht.Count;         // 长度
 
@@ -332,12 +347,14 @@ ht.Remove(键);   // 根据键来移除键值对
 ```
 ## .7 Dictionary 键值对集合
 创建对象
+
 ```csharp
 Dictionary<键类型, 值类型> dict = new Dictionary<键类型, 值类型>();
 ```
 Dictionary 键值对集合的大部分类方法同 HashTable，详见 Section 9。
 
 读取 Dictionary 中的键值对的两种方法
+
 ```csharp
 Dictionary<int, string> dict = new Dictionary<int, string>();
 
@@ -356,18 +373,21 @@ foreach (KeyValuePair<int, string> kv in dict)
 
 # 输入输出 Read & Write
 **Write**
-From Section 2: 
+From Section 2:
+
 ```csharp
 Console.WriteLine(); // 输出一个字符串并换行，当字符串为空时，相当于一个换行符 \n
 Console.Write();     // 输出但不换行
 ```
 **Read**
-From Section 2: 
+From Section 2:
+
 ```csharp
 Console.ReadKey();   // 读取输入的一个键
 Console.ReadLine();  // 读取输入的一个字符串
 ```
-示例：
+示例:
+
 ```csharp
 Console.WriteLine("请输入你的QQ");
 string input = Console.ReadLine();
@@ -375,13 +395,13 @@ Console.WriteLine("你的QQ为：{0}", input);
 Console.ReadKey();
 ```
 ## .1 占位符 `{}`
-C# 中的占位符有点类似于 Python 中的 `.format`，都需要使用 `{}`。示例：
+C# 中的占位符有点类似于 Python 中的 `.format`，都需要使用 `{}`。示例:
+
 ```csharp
 int a = 1;
 int b = 11;
 Console.WriteLine("{0}+{1}={2}", a, b, a+b);
 
->>>
 "12"
 ```
 保留数位：`{0:0.00}` 表示对第 0 个变量保留两位小数
@@ -395,14 +415,6 @@ Console.WriteLine("{0}+{1}={2}", a, b, a+b);
 `@"..."` 主要有两个作用：
 1. 取消 `\` 的转义作用，例如 `@"C:\Users\Desktop"`
 2. 将字符串按照原格式输出，例如（删去 `@` 则会报错）
-```csharp
-Console.WriteLine(@"lala~
-yaya~");
-
->>>
-"lala~"
-"yaya~"
-```
 
 # 运算符
 ## .1 算数运算符
@@ -426,7 +438,7 @@ yaya~");
 `&&`, `||`, `!`，与，或，非
 
 逻辑运算符之间存在优先级差异，并且 `&&` 与 `&` 同表示逻辑与但仍有一些不同。但是针对这两点，作者认为是==可以忽视==它们的：
-1. 在优先级方面，==使用括号来体现优先级==，例如：
+(1) 在优先级方面，==使用括号来体现优先级==，例如：
 
 ```csharp
 // 由于 || 优先级低于 &&，因此上下两行所表示的含义一致
@@ -435,13 +447,13 @@ bool judge = (a > b) || (b > c && c > d);
 // bad
 bool judge = a > b || b > c && c > d;
 ```
-
-1. 对于使用 `&&` or `&`，绝大部分情况使用 `&&` 即可，`||` 同理
+(2) 对于使用 `&&` or `&`，绝大部分情况使用 `&&` 即可，`||` 同理
 
 # 数据类型转换
 ## .1 隐式类型转换
 特点：自动发生
 要求：两种类型兼容，且==目标类型范围 > 原类型范围==，例如 `int` 转 `double`
+
 ```csharp
 int n1 = 3;
 int n2 = n1;
@@ -449,19 +461,22 @@ int n2 = n1;
 ## .2 显示类型转换
 特点：需要使用特定语法 `(目标类型)原变量`
 要求：两种类型兼容，且==目标类型范围 < 原类型范围==，例如 `double` 转 `int`
+
 ```csharp
 double n1 = 3.14;
 int n2 = (int)n1;
 ```
 ## .3 `Convert` 强制类型转换
-使用 `Convert.ToXXX()`，例如：
+使用 `Convert.ToXXX()`，例如:
+
 ```csharp
 string str = "123";
 int n1 = Convert.ToInt32(str);
 double n2 = Convert.ToDouble(str);
 ```
 ## .4 `Parse`, `TryParse` 强制类型转换
-例如使用 `int.Parse()` 将 `string` 转换为 `int`：
+例如使用 `int.Parse()` 将 `string` 转换为 `int`:
+
 ```csharp
 string str = "123";
 int n1 = int.parse(str);
@@ -472,6 +487,7 @@ int n1 = int.parse(str);
 # 选择与循环 if & for
 ==使用 `Tab + Tab` 快捷键，实现快速生成结构体格式==
 ## .1 if else
+
 ```csharp
 if (判断条件 1)
 {
@@ -487,6 +503,7 @@ else
 }
 ```
 ## .2 switch case
+
 ```csharp
 switch (变量或表达式的值)
 {
@@ -499,6 +516,7 @@ switch (变量或表达式的值)
 }
 ```
 ## .3 while
+
 ```csharp
 while (循环条件)
 {
@@ -510,6 +528,7 @@ while (循环条件)
 ## .4 do while
 while 循环：先判断再执行
 do while 循环：先执行再判断
+
 ```csharp
 do
 {
@@ -517,6 +536,7 @@ do
 }while(循环条件)
 ```
 ## .5 for
+
 ```csharp
 for (int i = 0; i < length; i++)
 {
@@ -524,6 +544,7 @@ for (int i = 0; i < length; i++)
 }
 ```
 ## .6 for each
+
 ```csharp
 foreach (var item in collection)
 {
@@ -542,6 +563,7 @@ foreach (var item in collection)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210418100425974.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
 ## .2 异常处理 `try-catch`
 近似于 Python 的 `try-except`
+
 ```csharp
 try
 {
@@ -552,7 +574,8 @@ catch
 	// 出现异常后需要执行的代码块
 }
 ```
-恰当地使用 `try-catch`，可以实现一些 `if else` 语句无法实现的效果，例如：
+恰当地使用 `try-catch`，可以实现一些 `if else` 语句无法实现的效果，例如:
+
 ```csharp
 int n = 0;
 Console.WriteLine("请输入一个数字");
@@ -566,7 +589,8 @@ catch
 }
 ```
 ## .3 查看运行时间
-对于两个不同的算法，可以通过比较其运行时间来判断优劣。示例：
+对于两个不同的算法，可以通过比较其运行时间来判断优劣。示例:
+
 ```csharp
 using System.Diagnostics; // 需要现在开头引用一个命名空间
 
@@ -578,23 +602,27 @@ Console.WriteLine(sw.Elapsed);
 ```
 
 # 三元表达式
-语法：
+语法:
+
 ```csharp
 变量 = 表达式1 ? 表达式2 : 表达式3
 ```
-`表达式1` True 就执行 `表达式2`，False 则执行 `表达式3`，例如：
+`表达式1` True 就执行 `表达式2`，False 则执行 `表达式3`，例如:
+
 ```csharp
 int max = n1 > n2 ? n1 : n2;
 ```
 
 # 产生随机数
-这一块是在【参考资料】(1) 的 P61 中突然中途插入的内容，个人感觉其与上下文的关系有点割裂，因此仅做一个简短总结。
-```cs
+这一块是在【参考资料】(1) 的 P61 中突然中途插入的内容，个人感觉其与上下文的关系有点割裂，因此仅做一个简短总结
+
+```csharp
 Random r = new Random();    // 创建能够生成随机数的对象
 int rndInt = r.Next(1, 10); // 调用该对象的方法，产生一个 1-9 之间的随机数  
 ```
 
 # 常量
+
 ```csharp
 const 常量类型 常量名 = 常量值;
 const double pi = 3.14;
@@ -602,7 +630,8 @@ const double pi = 3.14;
 相较于变量，常量不能被修改（重新赋值）
 
 # 枚举 `enum`
-枚举类型是一种特殊的类，与类同级，因此直接写在命名空间内，定义：
+枚举类型是一种特殊的类，与类同级，因此直接写在命名空间内，定义:
+
 ```csharp
 public enum Gender
 {
@@ -610,43 +639,44 @@ public enum Gender
 	woman
 }
 ```
-有了 `Gender` 这个类，在之后的 Main 函数中，我们就可以创建类对象，例如：
+有了 `Gender` 这个类，在之后的 Main 函数中，我们就可以创建类对象，例如:
+
 ```csharp
 Gender gender = Gender.man;
 ```
 更具体的使用方式如下图：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021041817040912.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
-**枚举类型与 `int` 类型兼容**（可以相互转换），依旧使用刚刚定义好的的 `Gender` 类：
+**枚举类型与 `int` 类型兼容**（可以相互转换），依旧使用刚刚定义好的的 `Gender` 类:
+
 ```csharp
 Gender gender = Gender.woman;
 int n = (int)gender;
 
->>> 
 "1"
 ```
+
 ```csharp
 int n = 0;
 Gender gender = (Gender)n;
 
->>> 
 "man"
 ```
 更复杂的，枚举类型中的变量还可以进行赋值。赋值后，该变量转换成 `int` 时的数值等于该赋值。并且改变量之后的其他变量所对应的 `int` 数值也会发生改变，具体如下图：
 ![](https://img-blog.csdnimg.cn/2021041818155820.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
-**枚举类型与 `string` 不兼容**，因此相互转换要麻烦一些（尤其是 `string` 转枚举）。使用以上 `Animal` 类为例：
+**枚举类型与 `string` 不兼容**，因此相互转换要麻烦一些（尤其是 `string` 转枚举）。使用以上 `Animal` 类为例:
+
 ```csharp
 // 枚举转 string
 string str = Animal.dog.ToString();
 
->>>
 "dog"
 ```
+
 ```csharp
 // string 转枚举
 string str = "dog";
 Animal animal = (Animal)Enum.Parse(tyepof(Animal), str);
 
->>>
 "dog"
 ```
 # 结构 `struct`
@@ -667,6 +697,7 @@ public struct Person
 **注意**：我们将结构中的“变量”称之为字段。与变量的唯一性不同，字段可以同时存在同名的多个，例如不同人可以有相同的 _name 字段。因此==为了体现这一差别，一般习惯在字段前加上一个下划线==。
 
 **示例：`enum` in `struct`**
+
 ```csharp
 public struct Person
 {
@@ -696,10 +727,10 @@ class Program
 ```
 
 
-
 # 函数（方法）
 ## .1 声明 & 调用
 **函数的声明**
+
 ```csharp
 [public] static 返回值类型 函数名([参数列表])
 {
@@ -709,7 +740,8 @@ class Program
 1. 我们将用 `static` 关键字修饰的函数称之为静态函数，相反的，如果不用则称之为非静态函数，这两者有相当显著的区别，详见 [博客园：C#中静态与非静态方法比较](https://www.cnblogs.com/NothingIsImpossible/archive/2010/07/28/1786706.html)
 2. 返回值类型除了 `int`, `string` 等之外，还可以使用空类型 `void`。返回值为空类型的函数可以不写 `return` 或者用 `return` 来表示函数的执行结束
 
-以 [(C#) 精简 C# 入门（一）](https://blog.csdn.net/weixin_43728138/article/details/115771081)Section 4 中的一段代码为例：
+以 [(C#) 精简 C# 入门（一）](https://blog.csdn.net/weixin_43728138/article/details/115771081)Section 4 中的一段代码为例:
+
 ```csharp
 class Program
 {
@@ -720,10 +752,12 @@ class Program
 }
 ```
 **函数的调用**
+
 ```csharp
 类名.函数名([参数列表])
 ```
-示例：
+示例:
+
 ```csharp
 int max = Program.GetMax(1, 2);
 ```
@@ -732,12 +766,14 @@ int max = Program.GetMax(1, 2);
 对于一个函数而言，其功能单一并不是缺点，反而是基本要求。
 
 ## .2 参数 `out`, `ref`, `params[]`
-**`out` 输出参数：** 使函数能够返回多个类型的值。语法：
+**`out` 输出参数：** 使函数能够返回多个类型的值。语法:
+
 ```csharp
 [public] static 返回值类型 函数名([参数列表], out 返回值类型 变量名, ...)
 ```
 
-示例：
+示例:
+
 ```csharp
 class Program
 {
@@ -757,7 +793,6 @@ class Program
     }
 }
 
->>>
 "Hello World 520"
 ```
 **`ref` 引用参数**：使函数内对变量的更改在函数外仍有效。语法：
@@ -765,7 +800,8 @@ class Program
 [public] static 返回值类型 函数名([参数列表], ref 返回值类型 变量名, ...)
 ```
 
-示例：
+示例:
+
 ```csharp
 class Program
 {
@@ -785,11 +821,11 @@ class Program
     static void Add_2(ref int n1) { n1 += 1; }
 }
 
->>>
 "0"
 "1"
 ```
-**`params[]` 可变参数数组**：将输入参数中与可变参数数组类型一致的元素，均当做数组的元素。可变参数数组只能作为输入参数列表中的最后一个元素，示例：
+**`params[]` 可变参数数组**：将输入参数中与可变参数数组类型一致的元素，均当做数组的元素。可变参数数组只能作为输入参数列表中的最后一个元素，示例:
+
 ```csharp
 class Program
 {
@@ -808,7 +844,6 @@ class Program
     }
 }
 
->>>
 "小红's all score: 297"
 "小白's all score: 97"
 ```
@@ -818,6 +853,7 @@ class Program
 重载指的是多个==名称相同，但参数不同==的函数（返回值类型不需要相同），使得计算机能够根据输入参数的类型以及个数，来选择相应的需要执行的函数。
 
 示例：以下代码中对 `Add` 函数的重载使其既可以读取 `double` 类型的数据，也可以读取 `string` 来进行相加操作
+
 ```csharp
 class Program
 {
@@ -845,7 +881,8 @@ class Program
 2. 如果参数类型相同，那么参数个数就不能相同
 
 **递归：**
-自己调用自己。示例：
+自己调用自己。示例:
+
 ```csharp
 class Program
 {
@@ -868,7 +905,6 @@ class Program
     }
 }
 
->>>
 "重复一次"
 "重复一次"
 "重复一次"
@@ -907,7 +943,8 @@ class Program
 # 类
 ==类就是一个模子，确定了某种对象应该具有的属性和方法==，因此对象是通过类来创建的，例如白炽灯与LED灯这两个对象可以由 "灯类" 创建 。
 
-类的代码描述：
+类的代码描述:
+
 ```csharp
 [public] class 类名
 {
@@ -916,7 +953,8 @@ class Program
 	Methods 方法
 }
 ```
-一个关于类的完整示例：
+一个关于类的完整示例:
+
 ```csharp
 class Pet
 {
@@ -965,7 +1003,8 @@ class Pet
 ```
 以上代码中的新内容将在下列几个 subsection 中依次介绍。
 ## .1 字段 Fields
-==字段是属于类的变量==，它表示了由类所创建的变量的某种属性。定义方式：
+==字段是属于类的变量==，它表示了由类所创建的变量的某种属性。定义方式:
+
 ```csharp
 [private] 字段类型 字段名;
 ```
@@ -975,7 +1014,8 @@ class Pet
 3. 为了显示字段与方法中的变量的区别，字段名建议以 `_` 开头
 4. 使用 `this.字段名` 的形式在类的内部调用字段，例如上例中的 `this._age`
 ## .2 属性 Properties
-==属性用于保护字段，对其读取、修改操作进行限制==。属性由两个方法组成：
+==属性用于保护字段，对其读取、修改操作进行限制==。属性由两个方法组成:
+
 ```csharp
 public 字段类型 属性名 { get => species; set => species = value; }
 ```
@@ -991,6 +1031,7 @@ public 字段类型 属性名 { get => species; set => species = value; }
 5. **只读属性** & **只写属性**：顾名思义，只读属性没有 `set()` 方法，只写属性没有 `get()` 方法
 
 **应用示例：**
+
 ```csharp
 // 类内部
  class Pet
@@ -1015,7 +1056,6 @@ Pet cat = new Pet();
 cat.Age = 2; // 修改
 Console.WriteLine(cat.Age); // 读取
 
->>>
 "2"
 ```
 
@@ -1033,13 +1073,15 @@ Console.WriteLine(cat.Age); // 读取
 在具体使用的时候，如果想要定义一个 “工具类”，可以考虑将其写成静态类。例如 C# 自带的 Console 类
 ### .3.2 构造函数
 作用：初始化对象
+
 ```csharp
 public 类名([参数列表])
 {
 	// 赋值
 }
 ```
-示例：
+示例:
+
 ```csharp
 public Pet(string species, int age)
 {
@@ -1047,11 +1089,13 @@ public Pet(string species, int age)
     this.Age = age;
 }
 ```
-构造函数当然也可以重载，在重载构造函数时为了减少代码冗余，可以使用 `this` 关键字（之前的已经介绍了 `this` 的两种用法 `this.字段名`、`this.属性名`）：
+构造函数当然也可以重载，在重载构造函数时为了减少代码冗余，可以使用 `this` 关键字（之前的已经介绍了 `this` 的两种用法 `this.字段名`、`this.属性名`）:
+
 ```csharp
 public 类名([参数列表1]):this([参数列表2]) { }
 ```
 构造函数重载的对象一般为最完整的构造函数，因此需要在 `参数列表1` 加入一些默认初值来组成 `参数列表2`，例如下例中第二个构造函数将 age 默认为 0
+
 ```csharp
 public Pet(string species, int age)
 {
@@ -1063,17 +1107,20 @@ public Pet(string species):this(species, 0) { }
 ```
 ### .3.3 析构函数
 作用：在程序结束时会自动调用，帮助释放占用的内存资源
+
 ```csharp
 ~类名() { }
 ```
-示例：
+示例:
+
 ```csharp
 ~Pet() { }
 ```
 
 ## .4 类的引用
 **引用系统类：**
-系统类一般都位于名字类似为 `System.XXX` 的命名空间，因此只需直接在代码开头添加： 
+系统类一般都位于名字类似为 `System.XXX` 的命名空间，因此只需直接在代码开头添加:
+
 ```csharp
 using System.XXX;
 ```
@@ -1106,6 +1153,7 @@ using System.XXX;
 
 **使用 `StringBuilder` 避免对字符串的操作占用过量内存**
 示例：将 1-100 的整数串成一个字符串
+
 ```csharp
 // 直接用 string：占用内存且耗时
 string s = "";
@@ -1128,7 +1176,8 @@ string s = sb.ToString();
 我们可以使用 `字符串名[index]` 的方式来访问该位置的字符，但无法修改。
 
 **使用 `char[]` 与 `string` 的相互转换修改字符串中的字符**
-虽然字符串可以看作只读 `char[]`，但是仍然可以通过一些列操作来修改其某个位置的字符，实现 "曲线救国"。示例：
+虽然字符串可以看作只读 `char[]`，但是仍然可以通过一些列操作来修改其某个位置的字符，实现 "曲线救国"。示例:
+
 ```csharp
 string str = "Hello World!"
 // 首先将其转化为 char[]
@@ -1138,12 +1187,12 @@ chs[4] = "";
 // 再转回字符串
 str = new string(chs);
 
->>>
 "Hell World!"
 ```
 
 ## .3 字符串的相关方法
-以下代码中 `[]` 里的内容表示该方法的返回值类型：
+以下代码中 `[]` 里的内容表示该方法的返回值类型:
+
 ```csharp
 [double] str.Length;                        // 长度
 [string] str.ToUpper();                     // 转成大写
@@ -1168,16 +1217,17 @@ str = new string(chs);
 [string] str.Replace(substr1, substr1);     // 将子串 substr1 替换为 substr2
 [string] str.Substring(startIndex, length); // 从 startIndex 位置截取长度为 length 的子串
 ```
-应用1：使用 `LastIndexOf`, `Substring` 提取地址中文件名	
+应用1：使用 `LastIndexOf`, `Substring` 提取地址中文件名
+
 ```csharp
 string path = @"C:\file1\file2\1.txt":
 int index = path.LastIndexOf("\\"); // "\\" 表示 "\"
 string fileName = path.Substring(index+1);
 
->>>
 "1.txt"
 ```
 **分割字符串**
+
 ```csharp
 [string[]] str.Split(chs, StringSplitOptions.None/RemoveEmptyEntries)
 ```
@@ -1186,21 +1236,22 @@ string fileName = path.Substring(index+1);
 `None` 表示不删除分割后的空值 `""`
 `RemoveEmptyEntries` 表示删除
 
-示例：
+示例:
+
 ```csharp
 string str = "a b  + c";
 char[] chs = { ' ', '+' };
 
 string[] splits = str.Split(chs, StringSplitOptions.RemoveEmptyEntries);
->>>
+
 { "a", "b", "c" }
 
-
 string[] splits = str.Split(chs, StringSplitOptions.None);
->>>
+
 { "a", "b", "", "", "", "c" }
 ```
 **拼接字符串**
+
 ```csharp
 [string] string.Split(connection, str);
 ```
@@ -1208,7 +1259,7 @@ string[] splits = str.Split(chs, StringSplitOptions.None);
 ```csharp
 string[] strs = { "a", "b", "c" };
 string strJoint = string.Join(" | ", strs);
->>>
+
 "a | b | c"
 ```
 
@@ -1216,6 +1267,7 @@ string strJoint = string.Join(" | ", strs);
 `File` 类是一个静态的系统类，这里介绍一些其中的方法：
 
 读取文件的每一行
+
 ```csharp
 using System.IO;
 using System.Text;
@@ -1228,7 +1280,8 @@ using System.Text;
 # 继承
 继承主要是类的继承，通过子类继承父类的形式，使得子类能够沿用父类当中的字段、属性与方法（只能继承 public 的），从而==降低代码冗余。==
 
-示例，子类 `Cat` 继承父类 `Animal`：
+示例，子类 `Cat` 继承父类 `Animal`:
+
 ```csharp
 public class Animal
 {
@@ -1269,7 +1322,8 @@ public class Cat: Animal
 	public string Name { get => _name; set => _name = value; }
 }
 ```
-如果在子类中需要写一个与父类中的==同名的成员==，建议为其添加一个关键字 `new`（不加也不会报错，但是加了就看的比较清楚），示例：
+如果在子类中需要写一个与父类中的==同名的成员==，建议为其添加一个关键字 `new`（不加也不会报错，但是加了就看的比较清楚），示例:
+
 ```csharp
 public class Animal
 {
@@ -1293,7 +1347,8 @@ public class Cat: Animal
 2. 如果父类对象中装的是子类对象，那么可已将这个父类强转为子类对象
 
 **子类可以赋值给父类**
-依旧以上个代码片段中的 `Animal`, `Cat` 类为例：
+依旧以上个代码片段中的 `Animal`, `Cat` 类为例:
+
 ```csharp
 Cat cat = new Cat();
 Animal animal1 = cat;
@@ -1302,7 +1357,8 @@ Animal animal2 = new Cat();
 作用：当一个地方需要某类的对象时，可以使用其子类的对象替代
 
 **如果父类对象中装的是子类对象，那么可已将这个父类强转为子类对象**
-示例：
+示例:
+
 ```csharp
 Aniaml animal = new Cat(); // 父类对象中装的是子类对象
 Cat cat = (Cat)animal;     // 强转
@@ -1324,6 +1380,7 @@ Cat cat = (Cat)animal;     // 强转
 `Path` 类为静态类，用于操作路径
 
 **类方法：**
+
 ```csharp
 using System.IO;
 
@@ -1334,13 +1391,14 @@ using System.IO;
 
 // 示例
 string path = @"C:\file1\test.txt";
-Path.GetFileName(path)                 >>> "test.txt"
-Path.GetFileNameWithoutExtension(path) >>> "test"
-Path.GetExtension(path)                >>> ".txt"
-Path.GetDirectoryName(path)            >>> "C:\file1"
+Path.GetFileName(path)                 // "test.txt"
+Path.GetFileNameWithoutExtension(path) // "test"
+Path.GetExtension(path)                // ".txt"
+Path.GetDirectoryName(path)            // "C:\file1"
 ```
 ## .2 `File` 类
 `Path` 类为静态类，用于操作文件
+
 ```csharp
 using System.IO;
 using System.Text;
@@ -1355,6 +1413,7 @@ File.Copy(path, @"C:\file1\new.txt");   // 复制文件，新文件名为 "new.t
 File.Move(path, @"C:\file1\new.txt");   // 移动文件至新地址
 ```
 **读取**
+
 ```csharp
 string path = @"C:\file1\test.txt";
 
@@ -1365,6 +1424,7 @@ string path = @"C:\file1\test.txt";
 	[string] Encoding.Default.GetString(); 
 ```
 **写入**
+
 ```csharp
 string path = @"C:\file1\test.txt";
 string content = "Hello World!";
@@ -1396,7 +1456,8 @@ FileStream fsRead = new FileStream(path,
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210511110655219.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210511110924973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
-**类方法**：
+**类方法**:
+
 ```csharp
 // 创建示例（以下是两种常用的创建模式）
 FileStream fsRead = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read);
