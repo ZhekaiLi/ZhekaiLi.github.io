@@ -560,7 +560,7 @@ void main( ) {
 }
 ```
 
-1. 结构体指针
+**(1) 结构体指针**
 
 ```c
 struct person per, *p;
@@ -572,16 +572,15 @@ for(p=pers; p<pers+3; p++){
     printf("%s\n", p->name)
 }
 ```
-2. 结构体与函数
-结构体作为实参传入函数时，一般不传其本体（系统开销大），而是以指针的形式传入
+**(2) 结构体与函数**: 结构体作为实参传入函数时，一般不传其本体（系统开销大），而是以指针的形式传入
 
 ```c
 void print_name(struct person *p){
     printf("%s\n", p->name)
 }
 ```
+**(3) 共用体**: 定义方式与结构体类似，特点是<span style="background-color: yellow; color: black;">在每一时刻只能有一个成员起作用</span>
 
-3. 共用体：定义方式与结构体类似，特点是<span style="background-color: yellow; color: black;">在每一时刻只能有一个成员起作用</span>
 ```c
 union state{
     int s1;
@@ -599,8 +598,8 @@ s.c = 'A;
 printf("%d", s.s1);
 -> 65 // 'A' 的ascii码值
 ```
+**(4) 枚举类型**
 
-4. 枚举类型
 ```c
 enum color{ red, yellow, blue };
 
