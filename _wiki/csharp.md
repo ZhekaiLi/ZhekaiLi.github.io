@@ -134,22 +134,22 @@ bool ifCorrect = true;
 ```csharp
 class Program
 {
-	static double _PI = 3.14;
+    static double _PI = 3.14;
     static void Main(string[] args)
     {
     	double r = 2;
     	double A = _PI * r * r;
 		
-		AccuratedPI();
-		double A_accurated = _PI * r * r;
-		Console.WriteLine("Initial:{0}, Accurated:{1}", A, A_accurated);
-		Console.ReadKey();
+        AccuratedPI();
+        double A_accurated = _PI * r * r;
+        Console.WriteLine("Initial:{0}, Accurated:{1}", A, A_accurated);
+        Console.ReadKey();
     }
-
-	static void AccuratedPI()
-	{
-		_PI = 3.14159265;
-	}
+    
+    static void AccuratedPI()
+    {
+        _PI = 3.14159265;
+    }
 }
 
 "Initial:12.56, Accurated:12.5663706"
@@ -311,9 +311,8 @@ List<> 泛型集合的大部分类方法同 ArrayList，详见 Section 7。除�
 ```csharp
 List<int> list = new List<int>();
 
-[int[]] list.ToArray(); // 将 List<> 转换为数组
-	// 当然也可以将数组转换为 List<>
-	[List<int>] array.ToList();
+[int[]] list.ToArray();     // 将 List<> 转换为数组
+[List<int>] array.ToList(); // 当然也可以将数组转换为 List<>
 ```
 ## .6 HashTable 键值对集合
 > ==注意==：HashTable 由于在读写的过程中存在类型转换（装箱/拆箱），导致其读写速度较为缓慢，因此一般更多地会 ==**使用 Dictionary 代替 HashTable**==，详见 Section 10
@@ -361,13 +360,13 @@ Dictionary<int, string> dict = new Dictionary<int, string>();
 // 方法 1
 foreach (var key in dict.Keys)
 {
-	Console.WriteLine("{0}, {1}", key, dict[key]);
+    Console.WriteLine("{0}, {1}", key, dict[key]);
 }
 
 // 方法 2
 foreach (KeyValuePair<int, string> kv in dict)
 {
-	Console.WriteLine("{0}, {1}", kv.Key, kv.Value);
+    Console.WriteLine("{0}, {1}", kv.Key, kv.Value);
 }
 ```
 
@@ -491,15 +490,15 @@ int n1 = int.parse(str);
 ```csharp
 if (判断条件 1)
 {
-	// 代码块
+    // 代码块
 }
 else if (判断条件 2)
 {
-	// 代码块
+    // 代码块
 }
 else
 {
-	// 代码块
+    // 代码块
 }
 ```
 ## .2 switch case
@@ -507,12 +506,12 @@ else
 ```csharp
 switch (变量或表达式的值)
 {
-	case 值1: // 代码
-		break;
-	case 值2: // 代码
-		break;
-	default: // 代码
-		break;
+    case 值1: // 代码
+        break;
+    case 值2: // 代码
+        break;
+    default: // 代码
+        break;
 }
 ```
 ## .3 while
@@ -520,7 +519,7 @@ switch (变量或表达式的值)
 ```csharp
 while (循环条件)
 {
-	// 代码块
+    // 代码块
 }
 ```
 使用 `break` 可以跳出当前循环
@@ -532,7 +531,7 @@ do while 循环：先执行再判断
 ```csharp
 do
 {
-	// 代码块
+    // 代码块
 }while(循环条件)
 ```
 ## .5 for
@@ -540,7 +539,7 @@ do
 ```csharp
 for (int i = 0; i < length; i++)
 {
-	// 代码块
+    // 代码块
 }
 ```
 ## .6 for each
@@ -548,7 +547,7 @@ for (int i = 0; i < length; i++)
 ```csharp
 foreach (var item in collection)
 {
-	// 代码块
+    // 代码块
 }
 ```
 `var` 的作用详见 [精简 C# 入门（一）](https://blog.csdn.net/weixin_43728138/article/details/115771081)Section #5.2，可以替换为其他数据类型
@@ -567,11 +566,11 @@ foreach (var item in collection)
 ```csharp
 try
 {
-	// 可能出现异常的代码块
+    // 可能出现异常的代码块
 }
 catch
 {
-	// 出现异常后需要执行的代码块
+    // 出现异常后需要执行的代码块
 }
 ```
 恰当地使用 `try-catch`，可以实现一些 `if else` 语句无法实现的效果，例如:
@@ -581,11 +580,11 @@ int n = 0;
 Console.WriteLine("请输入一个数字");
 try
 {
-	n = Convert.ToInt32(Console.ReadLine());
+    n = Convert.ToInt32(Console.ReadLine());
 }
 catch
 {
-	Console.WriteLine("请不要输入其他字符！");
+    Console.WriteLine("请不要输入其他字符！");
 }
 ```
 ## .3 查看运行时间
@@ -635,8 +634,8 @@ const double pi = 3.14;
 ```csharp
 public enum Gender
 {
-	man,
-	woman
+    man,
+    woman
 }
 ```
 有了 `Gender` 这个类，在之后的 Main 函数中，我们就可以创建类对象，例如:
@@ -685,11 +684,11 @@ Animal animal = (Animal)Enum.Parse(tyepof(Animal), str);
 ```csharp
 public struct Person
 {
-	public string _name,
-	public string _gender,
-	public int _age,
-
-	string _nickname
+    public string _name,
+    public string _gender,
+    public int _age,
+    
+    string _nickname
 }
 ```
 `public` 关键字使得其修饰的==字段==能由外部进行访问和修改，例如 _name 这个字段。未由 `public` 修饰的字段默认为 `private`，无法由外部进行修改，例如 _nickname。
@@ -701,17 +700,17 @@ public struct Person
 ```csharp
 public struct Person
 {
-	public string _name,
-	public Gender _gender,
-	public int _age,
+    public string _name,
+    public Gender _gender,
+    public int _age,
 
-	string _nickname
+    string _nickname
 }
 
 public enum Gender
 {
-	man,
-	woman
+    man,
+    woman
 }
 
 class Program
@@ -734,7 +733,7 @@ class Program
 ```csharp
 [public] static 返回值类型 函数名([参数列表])
 {
-	// 代码块
+    // 代码块
 }
 ```
 1. 我们将用 `static` 关键字修饰的函数称之为静态函数，相反的，如果不用则称之为非静态函数，这两者有相当显著的区别，详见 [博客园：C#中静态与非静态方法比较](https://www.cnblogs.com/NothingIsImpossible/archive/2010/07/28/1786706.html)
@@ -745,10 +744,10 @@ class Program
 ```csharp
 class Program
 {
-	public static int GetMax(int n1, int n2)
-	{
-	    return n1 > n2 ? n1 : n2;
-	}
+    public static int GetMax(int n1, int n2)
+    {
+        return n1 > n2 ? n1 : n2;
+    }
 }
 ```
 **函数的调用**
@@ -815,7 +814,7 @@ class Program
     	Console.ReadKey();
     }
 
-	// 不使用 ref
+    // 不使用 ref
     static void Add_1(int n1) { n1 += 1; }
     // 使用 ref
     static void Add_2(ref int n1) { n1 += 1; }
@@ -948,9 +947,9 @@ class Program
 ```csharp
 [public] class 类名
 {
-	Fields 字段;
-	Properties 属性;
-	Methods 方法
+    Fields 字段;
+    Properties 属性;
+    Methods 方法
 }
 ```
 一个关于类的完整示例:
@@ -988,9 +987,9 @@ class Pet
     /// 实例方法：介绍由该类创建的对象
     /// </summary>
     public void IntroObj()
-	{
-		Console.WriteLine("I'm a {0} years old {1}.", this.Age, this.Species);
-	}
+    {
+        Console.WriteLine("I'm a {0} years old {1}.", this.Age, this.Species);
+    }
 
     /// <summary>
     /// 静态方法：介绍类
@@ -1036,19 +1035,19 @@ public 字段类型 属性名 { get => species; set => species = value; }
 // 类内部
  class Pet
 {
-	private int _age;
-	public int Age { 
-		get => _age;             
-		set {
-        	value = value >= 0 ? value : 0; // 限制对年龄的修改必须大于等于 0
-	        _age = value;
+    private int _age;
+    public int Age { 
+        get => _age;             
+        set {
+            value = value >= 0 ? value : 0; // 限制对年龄的修改必须大于等于 0
+            _age = value;
         }
     }
-	public void Intro()
-	{
-		// 读取。在类内部直接使用 this._age 也完全 OK
-		Console.WriteLine("I'm {0} years old.", this.Age); 
-	}
+    public void Intro()
+    {
+        // 读取。在类内部直接使用 this._age 也完全 OK
+        Console.WriteLine("I'm {0} years old.", this.Age); 
+    }
 }
 
 // 类外部
@@ -1077,7 +1076,7 @@ Console.WriteLine(cat.Age); // 读取
 ```csharp
 public 类名([参数列表])
 {
-	// 赋值
+    // 赋值
 }
 ```
 示例:
@@ -1159,14 +1158,14 @@ using System.XXX;
 string s = "";
 for (int i = 0: i < 100; i++)
 {
-	s += i;
+    s += i;
 }
 
 // 使用 StringBuilder：不占内存且高效
 StringBuilder sb = new StringBuilder();
 for (int i = 0: i < 100; i++)
 {
-	sb.Append(i);
+    sb.Append(i);
 }
 string s = sb.ToString();
 ```
@@ -1285,13 +1284,13 @@ using System.Text;
 ```csharp
 public class Animal
 {
-	private int _age;
-	public int Age { get => _age; set => _age = value; }
+    private int _age;
+    public int Age { get => _age; set => _age = value; }
 }
 
 public class Cat: Animal
 {
-	// 代码块
+    // 代码块
 }
 ```
 ==继承具有传递性==，即子类的子类能够继承父类中的字段、属性与方法。
@@ -1301,25 +1300,25 @@ public class Cat: Animal
 ```csharp
 public class Animal
 {
-	public Animal(int age)
-	{
-		this.Age = age;
-	}
+    public Animal(int age)
+    {
+        this.Age = age;
+    }
 
-	private int _age;
-	public int Age { get => _age; set => _age = value; }
+    private int _age;
+    public int Age { get => _age; set => _age = value; }
 }
 
 public class Cat: Animal
 {
-	public Cat(int age, string name)
-		: base(age)
-	{
-		this.Name = name;
-	}
-	
-	private string _name;
-	public string Name { get => _name; set => _name = value; }
+    public Cat(int age, string name)
+        : base(age)
+    {
+        this.Name = name;
+    }
+
+    private string _name;
+    public string Name { get => _name; set => _name = value; }
 }
 ```
 如果在子类中需要写一个与父类中的==同名的成员==，建议为其添加一个关键字 `new`（不加也不会报错，但是加了就看的比较清楚），示例:
@@ -1327,18 +1326,18 @@ public class Cat: Animal
 ```csharp
 public class Animal
 {
-	public void Shout()
-	{
-		Console.WriteLine("发出了叫声");
-	}
+    public void Shout()
+    {
+        Console.WriteLine("发出了叫声");
+    }
 }
 
 public class Cat: Animal
 {
-	public new void Shout()
-	{
-		Console.WriteLine("喵!");
-	}
+    public new void Shout()
+    {
+        Console.WriteLine("喵!");
+    }
 }
 ```
 # 里式转换
@@ -1420,8 +1419,7 @@ string path = @"C:\file1\test.txt";
 [string] File.ReadAllText(path, Encoding.Default);    // 以字符串格式读取整个文件
 [string[]] File.ReadAllLines(path, Encoding.Default); // 以字符串格式一行行读取文件
 [byte[]] File.ReadAllBytes(path);                     // 以二进制格式读取文件
-	// 将二进制数组转成 string
-	[string] Encoding.Default.GetString(); 
+[string] Encoding.Default.GetString();                // 将二进制数组转成 string
 ```
 **写入**
 
@@ -1450,8 +1448,8 @@ File.AppendAllText(path, content)
 using System.IO;
 
 FileStream fsRead = new FileStream(path, 
-	FileMode.XXX, // 操作系统打开文件的方式
-	FileAccess.XXX, // 定义文件读写权限
+    FileMode.XXX, // 操作系统打开文件的方式
+    FileAccess.XXX, // 定义文件读写权限
 );
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210511110655219.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
@@ -1489,16 +1487,16 @@ fsRead.Dispose();
 string s;
 using(FileStream fsRead = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read))
 {
-	int n = fsRead.Read(buffer, 0, buffer.Length);
-	s = Encoding.Default.GetString(buffer, 0, n);
+    int n = fsRead.Read(buffer, 0, buffer.Length);
+    s = Encoding.Default.GetString(buffer, 0, n);
 }
 
 // 写入
 using(FileStream fsWirte = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write))
 {
-	string str = "Hello World!";
-	byte[] buffer = Encoding.Default.GetBytes(str);
-	fsWrite.Write(buffer, 0, buffer.Length); 
+    string str = "Hello World!";
+    byte[] buffer = Encoding.Default.GetBytes(str);
+    fsWrite.Write(buffer, 0, buffer.Length); 
 }
 ```
 ==上例中用到的 `using(){ }` 方法类似于 Python 中的 with 语句，即运行完大括号内的代码之后自动释放小括号内的代码所占用的资源==
@@ -1513,8 +1511,8 @@ StreamWriter sw = new StreamWriter(path);
 [string] sr.ReadLine(); // 读取输入流中的下一行字符串 
 
 sw.Write("Hello World!"); // 覆盖写入
-	// 如果想要继续写入，不覆盖之前的文本，可以在创建对象时添加一个布尔参数
-	StreamWriter sw = new StreamWriter(path, true);
+    // 如果想要继续写入，不覆盖之前的文本，可以在创建对象时添加一个布尔参数
+    StreamWriter sw = new StreamWriter(path, true);
 ```
 示例：读写 txt 文档
 ```csharp
