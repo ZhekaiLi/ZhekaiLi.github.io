@@ -8,13 +8,13 @@ menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+I'm Zeka Lee (Zhekai Li)
 
-仰慕「优雅编码的艺术」。
+An Engineering Student
 
-坚信熟能生巧，努力改变人生。
+Believe that practice makes perfect
 
-## 联系
+## Contact
 
 <ul>
 {% for website in site.data.social %}

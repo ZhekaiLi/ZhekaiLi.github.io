@@ -4,7 +4,7 @@
 baseurl:
 url: https://zhekaili.github.io
 date_format: "ordinal"
-title: 码志
+title: Zeka's Blog
 subtitle: "Keep Shinning"
 description: "Zeka's Blog"
 keywords: Zeka Lee, Zhekai Li
@@ -83,7 +83,7 @@ navs:
 
   -
     href: /wiki/
-    label: WIKI
+    label: Wiki
 
   -
     href: /links/
