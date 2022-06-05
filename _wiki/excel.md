@@ -19,11 +19,13 @@ keywords: Excel
 **(3) 将公式自动应用到整列**: 双击单元格右下角
 
 **(4) 选取整列**: 例如当我们想要对整列 Amount 求和，可以先点击 Q2(不能是打字输入)，再点击 `Shift`+`Control`+`Down`
+
 <img src="/images/2022-06/Snipaste_2022-06-03_09-28-52.png"  width="30%">
 
 **(5) 插入新列**: 选中一列，然后 `Ctrl/Cmd`+`Shift`+`+`
 
 **(6) 函数补全**: `TAB`
+
 <img src="/images/2022-06/Snipaste_2022-06-03_14-57-49.png"  width="30%">
 
 
@@ -34,9 +36,11 @@ keywords: Excel
 用于定位一些重要数据或是定值，同时方便其调用。三种创建方式:
 **(1) 修改 Name Box**
 例如，把红框内的 "N2" 改名为 "Penalty_Rate"
+
 <img src="/images/2022-06/Snipaste_2022-06-03_20-18-05.png"  width="70%">
 - 可以通过点击红框右侧的箭头快速定位
 - 之后在调用 N2 的时候可以直接输入 Penalty_Rate
+
 <img src="/images/2022-06/Snipaste_2022-06-03_20-21-13.png"  width="70%">
 
 **(2) Define Name**
@@ -65,6 +69,7 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 
 #### .4 Data Validation
 为了实现如下效果
+
 <img src="/images/2022-06/Snipaste_2022-06-04_09-06-45.png"  width="70%">
 
 需要如下步骤
@@ -73,11 +78,13 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 3. 在弹窗中修改 `Allow` 为 List, 点击 `Source` 框
 4. 点击 `Formulas`$\to$`Use in Formula`$\to$`Locations`
 
-<img src="/images/2022-06/Snipaste_2022-06-04_09-04-33.png"  width="100%">
-<img src="/images/2022-06/Snipaste_2022-06-04_09-07-39.png"  width="70%">
+<img src="/images/2022-06/Snipaste_2022-06-04_09-04-33.png"  width="70%">
+
+<img src="/images/2022-06/Snipaste_2022-06-04_09-07-39.png"  width="50%">
 
 *Problem*: 上述方案存在一个问题，即在第一步设置的 `Locations` 是<span style="background-color: yellow; color: black;">指定的，只包含两个城市</span>。而我们希望，当继续在下方单元格填入城市名时，也能被自动纳入
-<img src="/images/2022-06/Snipaste_2022-06-04_09-19-52.png"  width="70%">
+
+<img src="/images/2022-06/Snipaste_2022-06-04_09-19-52.png"  width="50%">
 
 步骤如下:
 1. 在 `Name Manager` 中选择编辑 `Locations`
@@ -104,23 +111,27 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 > **Combine**
 
 `CONCAT()` `&` `TEXTJOIN()`
-<img src="/images/2022-06/Snipaste_2022-06-02_16-01-03.png"  width="40%">
+
+<img src="/images/2022-06/Snipaste_2022-06-02_16-01-03.png"  width="35%">
 
 > **Split**
 
 `LEFT()` `RIGHT()` `MID()`
-<img src="/images/2022-06/Snipaste_2022-06-02_16-07-57.png"  width="70%">
+
+<img src="/images/2022-06/Snipaste_2022-06-02_16-07-57.png"  width="60%">
 
 *Problem*: 如果想要提取多个时间的完整的月份，由于不同月份的单词长度可能不同，因此无法直接用以上简单形式实现
 - `FIND()`
 
 例如对于以下情况，`FIND("-",B15,6)` 指的是从目标 cell 的第 `6` 个字符开始，寻找下一个 `"-"` 的位置。因此只要再减去六，就可以得到两个横杠之间的单词长度
-<img src="/images/2022-06/Snipaste_2022-06-02_16-18-35.png"  width="70%">
+
+<img src="/images/2022-06/Snipaste_2022-06-02_16-18-35.png"  width="60%">
 
 - `LEN()`
 
 思路类似，因为所有时间的月份的前后长度都一样
-<img src="/images/2022-06/Snipaste_2022-06-02_16-26-57.png"  width="50%">
+
+<img src="/images/2022-06/Snipaste_2022-06-02_16-26-57.png"  width="45%">
 
 > **Convert**
 
@@ -382,10 +393,13 @@ ROWS(table_name)                               // 表格包含的数据行数
 AVERAGEIFS(table_name[Salary],Country,"China") // 统计某个国家的平均收入
 ```
 **(2) 列求和** 先将鼠标悬浮于 Amount 的上方横线，再点击出现的一个黑色的向下箭头。此时 `SUM()` 中出现的字段称为 **Structured Reference**
+
 <img src="/images/2022-06/Snipaste_2022-06-04_15-20-55.png"  width="70%">
 
 **(3) 列之间的运算** 计算两个日期之间的差值: 直接如下图点两下，按回车之后便会自动生成一整列，再给新生成的列改个名即可
+
 <img src="/images/2022-06/Snipaste_2022-06-04_15-30-04.png"  width="70%">
+
 <img src="/images/2022-06/Snipaste_2022-06-04_15-31-32.png"  width="50%">
 
 
