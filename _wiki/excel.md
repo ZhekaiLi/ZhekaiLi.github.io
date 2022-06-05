@@ -7,6 +7,8 @@ description:
 keywords: Excel
 ---
 
+
+
 ## Basic
 **(1) 同时选择多个 cell**: 按住 `command`
 
@@ -21,55 +23,94 @@ keywords: Excel
 **(5) 插入新列**: 选中一列，然后 `Ctrl/Cmd`+`Shift`+`+`
 
 **(6) 函数补全**: `TAB`
-
 <img src="/images/2022-06/Snipaste_2022-06-03_14-57-49.png"  width="30%">
+
+
+
+### Named Ranges
+#### .1 Define `Name`
+
+用于定位一些重要数据或是定值，同时方便其调用。三种创建方式:
+**(1) 修改 Name Box**
+例如，把红框内的 "N2" 改名为 "Penalty_Rate"
+<img src="/images/2022-06/Snipaste_2022-06-03_20-18-05.png"  width="70%">
+- 可以通过点击红框右侧的箭头快速定位
+- 之后在调用 N2 的时候可以直接输入 Penalty_Rate
+<img src="/images/2022-06/Snipaste_2022-06-03_20-21-13.png"  width="70%">
+
+**(2) Define Name**
+`Ctrl+Shift+Down` 选中一整列，点击 `Define Names` 然后可以在弹窗中改名或者修改这个名字应用的范围（Sheet or Workbook）
+<img src="/images/2022-06/Snipaste_2022-06-03_21-20-04.png"  width="70%">
+
+**(3) Create from Selection**
+先选中所有目标 headers，全选这些列之后点击 `Create from Selection` 然后在弹窗中选择以首行内容作为名字
+<img src="/images/2022-06/Snipaste_2022-06-03_21-24-54.png"  width="70%">
+
+
+#### .2 Manage
+方便地新建、编辑、删除 `Name`
+<img src="/images/2022-06/Snipaste_2022-06-03_21-33-35.png"  width="70%">
+
+
+#### .3 Calculations
+可以通过 `Name Manager` 创建常量
+
+```cs
+COUNTIFS(Country, "China")       // 查看名为 Location 的组里有多少个为 China
+SUMIFS(Salary, Country, "China") // 查看住在中国的人的总薪水
+AVERAGEIFS() MINIFS() MAXIFS()   // 同理
+```
+
+
+#### .4 Data Validation
+为了实现如下效果
+<img src="/images/2022-06/Snipaste_2022-06-04_09-06-45.png"  width="70%">
+
+需要如下步骤
+1. 把这两个地名设置为一个名为 `Locations` 的 Named Range
+2. 选中 cell K2, 点击 `Data`$\to$`Data Validation`
+3. 在弹窗中修改 `Allow` 为 List, 点击 `Source` 框
+4. 点击 `Formulas`$\to$`Use in Formula`$\to$`Locations`
+
+<img src="/images/2022-06/Snipaste_2022-06-04_09-04-33.png"  width="100%">
+<img src="/images/2022-06/Snipaste_2022-06-04_09-07-39.png"  width="70%">
+
+*Problem*: 上述方案存在一个问题，即在第一步设置的 `Locations` 是<span style="background-color: yellow; color: black;">指定的，只包含两个城市</span>。而我们希望，当继续在下方单元格填入城市名时，也能被自动纳入
+<img src="/images/2022-06/Snipaste_2022-06-04_09-19-52.png"  width="70%">
+
+步骤如下:
+1. 在 `Name Manager` 中选择编辑 `Locations`
+2. 在弹窗中输入以下表达式：
+
+```cs
+// COUNTA: 统计指定范围内非空单元格的个数
+// OFFSET: 返回一个 range，范围是以 A8 为 reference_cell, 
+//         横向纵向偏移0格（也就是还是自身），
+//         从偏移后的单元格开始往下公 COUNTA(...) 个
+=OFFSET('Recon Analysis'!$A$8, 0, 0, 
+    COUNTA('Recon Analysis'!$A$8:$A$18)
+)
+```
+
+
 
 ---
 
-`rand()` 0-1 随机数
-`log(n,i)` $\log_in$
-`average(A1:A5)` 均值
-
-线性回归
-`slope(ys, xs)` 斜率
-`intercept(ys, xs)` 截距
-`correl(array1, array2)` 协方差系数
-`rsq(ys, xs)` R-squared
-
-选中 ys,xs 数据后，创建 scatter plot
-<img src="/images/2022-04/Snipaste_2022-04-30_09-49-15.png"  width="100%">
-
-Add trendline, choose linear and click to show equation and R-squared
-<img src="/images/2022-04/Snipaste_2022-04-30_09-55-07.png"  width="50%">
-<img src="/images/2022-04/Snipaste_2022-04-30_09-56-09.png"  width="100%">
-
-排序 sort
-<img src="/images/2022-04/Snipaste_2022-04-30_10-12-08.png"  width="100%">
-
-Solver
-1000本金7%年化，几年后会增值到5000？
-<img src="/images/2022-04/Snipaste_2022-04-30_10-57-59.png"  width="100%">
-
-逻辑表达式
-`IF(logical expr, value_ifTrue, value_ifFalse)`
-<img src="/images/2022-04/Snipaste_2022-04-30_11-14-46.png"  width="40%">
-红框中之所以能够显示以等号开头的字符串，是因为其实输入的是 `'=IF(...)`，开头添加的引号声明该输入为字符串格式，因此不会被识别为计算式
 
 
 ## Functions
 ### Text
 > **Combine**
 
-`CONCAT()`, `&`, `TEXTJOIN()`
+`CONCAT()` `&` `TEXTJOIN()`
 <img src="/images/2022-06/Snipaste_2022-06-02_16-01-03.png"  width="40%">
 
 > **Split**
 
-`LEFT()`, `RIGHT()`, `MID()`
+`LEFT()` `RIGHT()` `MID()`
 <img src="/images/2022-06/Snipaste_2022-06-02_16-07-57.png"  width="70%">
 
-Problem: 如果想要提取多个时间的完整的月份，由于不同月份的单词长度可能不同，因此无法直接用以上简单形式来实现
-
+*Problem*: 如果想要提取多个时间的完整的月份，由于不同月份的单词长度可能不同，因此无法直接用以上简单形式实现
 - `FIND()`
 
 例如对于以下情况，`FIND("-",B15,6)` 指的是从目标 cell 的第 `6` 个字符开始，寻找下一个 `"-"` 的位置。因此只要再减去六，就可以得到两个横杠之间的单词长度
@@ -85,7 +126,6 @@ Problem: 如果想要提取多个时间的完整的月份，由于不同月份�
 ```cs
 VALUE(cell) // convert text to value
 ```
-
 > **Clean**
 
 ```cs
@@ -101,38 +141,37 @@ PROPER(cell)  // 首字母大写
 ```
 > **Replace characters**
 
-`SUBSTITUTE(cell, old_txt, new_txt, [order])`
-例如 `(cell,"|"," ",2)` 表示把单元格内的第二个 "|" 替换成 “ ”
+```cs
+SUBSTITUTE(cell, old_txt, new_txt, [order])`
+```
+例如 `SUBSTITUTE(cell,"|"," ",2)` 表示把单元格内的第二个 "|" 替换成 “ ”
 
-Problem: 想要完成如下转换，注意字符 "S" 与 "7" 之间存在一个奇怪的符号（不是空格，无法用 `TRIM()`） 
+*Problem*: 想要完成如下转换，注意字符 "S" 与 "7" 之间存在一个奇怪的符号（不是空格，无法用 `TRIM()`） 
 |Init|After|
 |-|-|
 |S 7|7|
 
-因此需要通过两层replace, 内层替换掉"S", 外层替换掉那个奇怪符号
+此时需要通过两层替换, 内层替换掉"S", 外层替换掉那个奇怪符号
 
 ```cs
 SUBSTITUTE(SUBSTITUTE(cell,"S",""), MID(cell,2,1), "")
 ```
 
+
+
 ### Date & Time
 > **Get time**
 
-Generate date
-
 ```cs
+/*** Generate date ***/
 DATE(2022,6,3)
-```
-Current time
 
-```cs
+/*** Current time ***/
 NOW()   // 2022/6/3 10:19
 TODAY() // 2022/6/3
-```
 
-Get day/month/year from datetime (assume `date_cell = 2022-06-03`)
-
-```cs
+/*** Get time ***/
+// Assume date_cell = 2022-06-03
 DAY(date_cell)   // 3
 MONTH(date_cell) // 6
 YEAR(date_cell)  // 2022
@@ -146,7 +185,6 @@ TEXT(date_cell, [format_text]) // datetime to year/month/day
 |"M" "MM" "MMM" "MMMM"|6, 06, Jun, June|
 |"YY" "YYYY"| 22, 2022|
 |"DDD/M/YYYY"| Fri/6/2022|
-
 
 > **Calculations**
 
@@ -174,37 +212,54 @@ EODATE("03/06/2022", 1)  // 03/07/2022
 
 ### Math
 
-取整
 ```cs
 ROUNDDOWN(value_cell, 0) // 向下取整，如果是 1 就表示取一位小数
 ```
 
+
+
 ### Statistical
 
 ```cs
-COUNTA(range) // 统计非空单元格个数
+COUNTA(range)  // 统计非空单元格个数
+RAND()         // 0-1 随机数
+LOG(n,i)       // $\log_in$
+AVERAGE(A1:A5) // 均值
+
+/*** 线性回归 ***/
+SLOPE(ys, xs)          // 斜率
+INTERCEPT(ys, xs)      // 截距
+CORREL(array1, array2) // 协方差系数
+RSQ(ys, xs)            // R-squared
 ```
 
+
+
 ### Logic
+> **IF**
 
 ```cs
 IF(logic_expr, [value_if_true], [value_if_flase])
 ```
-`logic_expr` 为逻辑表达式，包含 `>,>=.=,<,<=,<>`
+- `logic_expr` 为逻辑表达式，包含 `>,>=.=,<,<=,<>`
 
-例如，使用 `If Over Due` 为 Header 的一列来显示付款日期是否超过了截止日期，并填入以下第一行公式；再使用 `Over Due Days` 为 Header 的一列来显示过期了几天，并填入以下第二行公式
+例如: 
+- 想要显示付款日期是否超过了截止日期，可以新建一列并填入以下第一行公式
+- 想要进一步显示过期了几天，可以再新建一列并填入以下第二行公式
 
 ```cs
 =IF([@[Payment Date]]>[@[Due Date]],"Yes","")
 =IF([@[Over Due]]="",0,NETWORKDAYS([@[Due Date]],[@[Payment Date]],Holidays))
 ```
+> **AND & OR**
 
 ```cs
 AND(logic_expr1, logic_expr2, [...])
 OR(logic_expr1, logic_expr2, [...])
 ```
-
 与或函数只能返回 TRUE/FLASE，如果想要返回其他值，只需在外边套一个 `IF(AND(...),"Yes","No")`
+
+
 
 ### Lookup
 **(1) VLOOKUP**
@@ -213,16 +268,14 @@ OR(logic_expr1, logic_expr2, [...])
 VLOOKUP(value, table/array, col_index, [approximate_match])
 // 要查找的值, 查找区域, 要返回的结果在查找区域的第几列, 精确匹配或近似匹配
 ```
-
 - <span style="background-color: yellow; color: black;">要查找的值必须包含于查找区域的首列，首列必须升序排列</span>
 - 精确匹配 0/FALSE; 近似匹配 1/TRUE
 - 近似匹配是向下近似，例如下图中 9 匹配 5
 
-例如根据表格查找对应的罚款金额
-
+例如根据表格查找对应的罚款金额:
 <img src="/images/2022-06/Snipaste_2022-06-04_22-12-10.png"  width="70%">
 
-使用 `VLOOPUP()` 检查两张表中的数据是否匹配
+*Application*: 使用 `VLOOPUP()` 检查两张表中的数据是否匹配
 
 例如，要检查以下两表中同一个 Payment Ref 是否都对应一样的 Amount
 - `表1 = [Doc No., Payment Ref, Amount]`
@@ -236,8 +289,8 @@ VLOOKUP(value, table/array, col_index, [approximate_match])
 // 首先需要把表1的两列设为 Named Ranges
 =[@[$ Amount]] - XLOOKUP([@[Payment Ref]], Payment_Ref, Amount, 0)
 ```
-
 **(2) XLOOKUP**
+
 ```cs
 XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])
 ```
@@ -270,88 +323,16 @@ MATCH(lookup_value, lookup_array, [approximate_match])
 <img src="/images/2022-06/Snipaste_2022-06-05_09-59-31.png"  width="100%">
 
 <img src="/images/2022-06/Snipaste_2022-06-05_10-06-23.png"  width="100%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
 
-## Other
 
-### Use `Name` for Efficiency
 
-#### .1 Define `Name`
+---
 
-用于定位一些重要数据或是定值，同时方便其调用
-
-(1) 修改 Name Box
-例如，把红框内的 "N2" 改名为 "Penalty_Rate"
-<img src="/images/2022-06/Snipaste_2022-06-03_20-18-05.png"  width="70%">
-- 可以通过点击红框右侧的箭头快速定位
-- 之后在调用 N2 的时候可以直接输入 Penalty_Rate
-<img src="/images/2022-06/Snipaste_2022-06-03_20-21-13.png"  width="70%">
-
-(2) Define Name
-`Ctrl+Shift+Down` 选中一整列，点击 `Define Names` 然后可以在弹窗中改名或者修改这个名字应用的范围（Sheet or Workbook）
-
-<img src="/images/2022-06/Snipaste_2022-06-03_21-20-04.png"  width="70%">
-
-(3) Create from Selection
-先选中所有目标 headers，全选这些列之后点击 `Create from Selection` 然后在弹窗中选择以首行内容作为名字
-<img src="/images/2022-06/Snipaste_2022-06-03_21-24-54.png"  width="70%">
-
-#### .2 Manage
-方便地新建、编辑、删除 `Name`
-
-<img src="/images/2022-06/Snipaste_2022-06-03_21-33-35.png"  width="70%">
-
-#### .3 Calculations
-可以通过 `Name Manager` 创建常量
-
-```cs
-COUNTIFS(Country, "China")       // 查看名为 Location 的组里有多少个为 China
-SUMIFS(Salary, Country, "China") // 查看住在中国的人的总薪水
-AVERAGEIFS() MINIFS() MAXIFS()   // 同理
-```
-
-#### .4 Data Validation
-
-为了实现如下效果
-
-<img src="/images/2022-06/Snipaste_2022-06-04_09-06-45.png"  width="70%">
-
-需要如下步骤
-1. 把这两个地名设置为一个名为 `Locations` 的 Named Range
-2. 选中 cell K2, 点击 `Data`$\to$`Data Validation`
-3. 在弹窗中修改 `Allow` 为 List, 点击 `Source` 框
-4. 点击 `Formulas`$\to$`Use in Formula`$\to$`Locations`
-
-<img src="/images/2022-06/Snipaste_2022-06-04_09-04-33.png"  width="100%">
-
-<img src="/images/2022-06/Snipaste_2022-06-04_09-07-39.png"  width="70%">
-
-> **Problem**: 上述方案存在一个问题，即在第一步设置的 `Locations` 是指定的，只包含两个城市。而我们希望，当继续在下方单元格填入城市名时，也能被自动纳入
-
-<img src="/images/2022-06/Snipaste_2022-06-04_09-19-52.png"  width="70%">
-
-步骤如下:
-1. 在 `Name Manager` 中选择编辑 `Locations`
-2. 在弹窗中输入以下表达式：
-
-```cs
-// COUNTA: 统计指定范围内非空单元格的个数
-// OFFSET: 返回一个 range，范围是以 A8 为 reference_cell, 
-//         横向纵向偏移0格（也就是还是自身），
-//         从偏移后的单元格开始往下公 COUNTA(...) 个
-=OFFSET('Recon Analysis'!$A$8, 0, 0, 
-    COUNTA('Recon Analysis'!$A$8:$A$18)
-)
-```
-
-<img src="/images/2022-06/Snipaste_2022-06-04_09-22-27.png"  width="70%">
 
 
 ## Table
-
 ### .1 Create
-菜单栏 `Insert`$\to$`Tables`$\to$`Table` (Shortcut `Ctrl+T`)
+菜单栏 `Insert`$\to$`Tables`$\to$`Table` (<span style="background-color: yellow; color: black;">Shortcut `Ctrl+T`</span>)
 
 创建完后一般先 Rename
 <img src="/images/2022-06/Snipaste_2022-06-04_11-18-20.png"  width="100%">
@@ -359,15 +340,17 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 如果要取消创建，首先将 `Style` 修改为 Light空，再点击 `Convert to Range`
 <img src="/images/2022-06/Snipaste_2022-06-04_11-22-33.png"  width="100%">
 
-### .2 Customise
 
+
+### .2 Customise
 勾选 `Total Rows`，表格的底部就会自动增加一行 Total 行，接着可以选择统计方式
 <img src="/images/2022-06/Snipaste_2022-06-04_11-50-23.png"  width="70%">
 
 调整列位置: 将鼠标悬浮于 Header 的上方横线，此时会出现一个黑色的向下箭头。点一下选中整行数据，再点一下就会包括 Header，此时即可拖动来调整该列的位置。行同理
 
-### .3 Sort & Filter
 
+
+### .3 Sort & Filter
 **(1) Simple sort** 直接点击 Header 右侧的箭头                       
 
 **(2) Complex sort** 实现嵌套排序，例如
@@ -388,8 +371,9 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 然后就会出现两个非常酷的小窗口，直接点击其中的元素便能实现筛选
 <img src="/images/2022-06/Snipaste_2022-06-04_15-05-32.png"  width="70%">
 
-### .4 Calculations (& Structured References)
 
+
+### .4 Calculations (& Structured References)
 **(1) 表格运算**
 
 ```cs
@@ -400,22 +384,15 @@ AVERAGEIFS(table_name[Salary],Country,"China") // 统计某个国家的平均收
 <img src="/images/2022-06/Snipaste_2022-06-04_15-20-55.png"  width="70%">
 
 **(3) 列之间的运算** 计算两个日期之间的差值: 直接如下图点两下，按回车之后便会自动生成一整列，再给新生成的列改个名即可
-
 <img src="/images/2022-06/Snipaste_2022-06-04_15-30-04.png"  width="70%">
-
 <img src="/images/2022-06/Snipaste_2022-06-04_15-31-32.png"  width="50%">
 
-### .5 Automation
 
+
+### .5 Automation
 使用 Table 的优点:
 - 即使把当前所有数据都删除了（Headers 还在），各个列之间的关系仍然存在（包括 Named Ranges），只要填入新数据就可以自动完成所有的计算与统计
 - 更新 Table 的同时会更新其包含的 Named Ranges, Data Validation
-
-
-
-<img src="/images/2022-06/Snipaste_2022-06-05_10-06-23.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
 
 
 
