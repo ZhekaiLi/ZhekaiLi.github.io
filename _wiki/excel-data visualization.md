@@ -354,9 +354,160 @@ Positive;[Negative];[Zero];[Text]
 - 对于趋势线公式 $y=ax^2+bx+c$, $x=1$ 指的是第一年（1960），因此计算十年后（2028）预测值只需把 $x=69$ 带入公式
 - 最后取消显示公式，并把通过插入文本框来显示预测值
 
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
 
+**修改日期显示**
+
+修改日期间隔
+
+<img src="/images/2022-06/Snipaste_2022-06-08_10-00-43.png"  width="70%">
+
+修改日期显示格式
+
+<img src="/images/2022-06/Snipaste_2022-06-08_10-01-28.png"  width="70%">
+
+
+## Area Chart
+
+**(1) Normal Area Chart**
+
+左侧是一张表示长期二氧化碳浓度的线图，可以很方便地将其转化为面积图
+
+<img src="/images/2022-06/Snipaste_2022-06-07_14-51-00.png"  width="100%">
+
+**(2) Stacked Area Chart**
+
+堆叠面积图能很好地处理那种乱七八糟的线图
+
+<img src="/images/2022-06/Snipaste_2022-06-07_14-55-29.png"  width="100%">
+
+**(3) 100% Stacked Area Chart**
+
+这种图能显示比例的变化，相当于给饼图添加了一个时空维度
+
+<img src="/images/2022-06/Snipaste_2022-06-07_15-00-13.png"  width="100%">
+
+进一步美化: 将 Legend 显示在图中
+- 首先勾选 `Data Labels`，会出现像红框2那样好几条密密麻麻的数据
+- 然后在右侧栏目勾选 `Series Name`，取消勾选 `Value`
+
+<img src="/images/2022-06/Snipaste_2022-06-07_15-03-43.png"  width="100%">
+
+
+
+
+## Scatter & Bubble Chart
+
+**(1) Scatter Chart**
+
+散点图可以显示两列数据，并反映其关系
+
+<img src="/images/2022-06/Snipaste_2022-06-07_15-27-08.png"  width="100%">
+
+**(2) Bubble Chart**
+
+而气泡图可以在散点图的基础上，通过气泡大小再显示一列数据（例如表示人口）
+- 首先转换成 `3-D Bubble`，此时所有球都一样大
+- 菜单栏 `Chart Design`$\to$`Select Data`$\to$左半边的 `Edit`$\to$在弹窗中将 `Series bubble size` 与 Population 列进行绑定
+
+<img src="/images/2022-06/Snipaste_2022-06-07_15-30-50.png"  width="70%">
+
+<img src="/images/2022-06/Snipaste_2022-06-07_15-34-17.png"  width="70%">
+
+更进一步的，还可以用多种颜色的气泡来表示分类。例如下图中用不同颜色分别代表了五大洲。同时，由于亚洲有中印两个人口大国（大圈圈），因此在左侧数据栏中把 Aisa 移到了最上边（也就是在显示的时候作为最底层）
+
+<img src="/images/2022-06/Snipaste_2022-06-07_15-37-52.png"  width="100%">
+
+
+
+## Hierarchy Chart
+
+有两种图能够表示层级关系
+
+<img src="/images/2022-06/Snipaste_2022-06-08_18-20-48.png"  width="70%">
+
+<img src="/images/2022-06/Snipaste_2022-06-08_18-22-50.png"  width="70%">
+
+
+
+## Waterfall & Funnel Chart
+**(1) Waterfall Chart**
+
+瀑布图之于普通的柱状图，区别在于它基于的是数据的变化值而不是数据本身，因此能更好地反映 X-Labels 对于数据的影响（例如，下图很好地反映了各个国家对于欧洲人口增长的影响）
+
+<img src="/images/2022-06/Snipaste_2022-06-08_18-33-25.png"  width="100%">
+
+但是，上图存在一个问题: 最左下角表示总体人口增长的数据，在瀑布图中被错误得画成了最高的那一段。因此需要选中那一段$\to$右键单击$\to$`Set as Total`
+
+<img src="/images/2022-06/Snipaste_2022-06-08_18-37-50.png"  width="70%">
+
+<img src="/images/2022-06/Snipaste_2022-06-08_18-39-04.png"  width="70%">
+
+**(2) Funnel Chart**
+
+漏斗图很适合显示一些逐层缩减的关系，比如学生数量从本科到master再到phd逐层减少，再例如塑料数量从最开始的生产到废弃到泄漏再到流入海洋逐渐减少
+
+<img src="/images/2022-06/Snipaste_2022-06-08_18-45-02.png"  width="70%">
+
+## Geospatial Chart
+
+非常酷炫，但是国内好像不支持显示地图 `Sorry, map charts aren't supported for your location`
+
+## Custom Chart Techniques
+
+以人口图为例，希望实现如下非常 Amazing 的效果: 展示1996-2019之间英国人口的男女以及年龄比例的变化
+
+<img src="/images/2022-06/GIF_20220608.gif"  width="70%">
+
+
+首先需要将一个性别的数据变成负数，这样的话两个性别才能一左一右显示
+- 在任一单元格中输入 -1$\to$`Ctrl+C`复制这个单元格
+- 选中女性数据列 `Ctrl+Shift+Down`
+- 点击左上角的 `Paste`$\to$`Paste Special`
+- 在弹窗中完成如下点选
+
+<img src="/images/2022-06/Snipaste_2022-06-08_19-24-33.png"  width="100%">
+
+随后点击插入 `2-D Bar`，此时的杆状图存在一个很明显的问题: 表示男性和女性的杆是错开的，没在一条直线上
+
+<img src="/images/2022-06/Snipaste_2022-06-08_19-54-46.png"  width="70%">
+
+修改图的格式:
+- 下图1: 将 `Series Overlap` 修改为百分百，并缩小 `Gap Width`
+- 下图2: 将纵坐标轴放到图的左侧
+- 下图3: 将横坐标轴的负数上的负号去掉（通过设置 `Format Code`）
+
+<img src="/images/2022-06/Snipaste_2022-06-08_20-18-33.png"  width="100%">
+
+<img src="/images/2022-06/Snipaste_2022-06-08_20-34-30.png"  width="100%">
+
+<img src="/images/2022-06/Snipaste_2022-06-08_20-36-35.png"  width="100%">
+
+将图的标题与一个单元格绑定，使其能够随着选择年份的变化而变化
+
+<img src="/images/2022-06/Snipaste_2022-06-08_20-41-18.png"  width="100%">
+
+最后要设置两个按钮:
+- 按钮1 "Animate": 从1996-2019逐年显示人口比例的变化
+- 按钮2 "Reset": 从2019还原至1996
+
+Macro 设置如下，而后再将这些宏与按钮绑定
+
+<img src="/images/2022-06/Snipaste_2022-06-08_20-43-41.png"  width="70%">
+
+<img src="/images/2022-06/GIF_20220608.gif"  width="70%">
+
+## Creative Chart Techniques
+
+<img src="/images/2022-06/.png"  width="70%">
+<img src="/images/2022-06/.png"  width="70%">
+<img src="/images/2022-06/.png"  width="70%">
+<img src="/images/2022-06/.png"  width="70%">
+<img src="/images/2022-06/.png"  width="70%">
+<img src="/images/2022-06/.png"  width="70%">
+<img src="/images/2022-06/.png"  width="70%">
+<img src="/images/2022-06/.png"  width="70%">
+<img src="/images/2022-06/.png"  width="70%">
+<img src="/images/2022-06/.png"  width="70%">
 
 
 
