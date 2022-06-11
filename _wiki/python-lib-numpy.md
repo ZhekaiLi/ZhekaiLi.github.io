@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: numpy
+title: NumPy
 cate1: Python
 cate2: -libs
 description: 
@@ -8,58 +8,89 @@ keywords: Python
 mathjax: true
 ---
 
-## 1. numpy.array
+# 1. numpy.array
+**Define**
+
+```python
+np.array([1,2,3])
+np.zeros((n,m))      # n*m 的空矩阵
+np.ones((n,m))
+np.arange(4)         # array([0,1,2,3])
+    np.arange(1,4)   # array([1,2,3])
+    np.arange(1,6,2) # array([1,3,5])
+
+np.zeros((n,m)) # n*m 的空矩阵
+np.ones((n,m))
+```
+**Modify**
+
 ```py
-arr = np.array([1,2,3])
 arr = np.append(arr, 4)  # 从尾端添加元素
 arr = arr.reshape(2,2)   # 改变数组的维度
+arr = arr.ravel()        # 展平成一维数组（一行一行排）
 ```
 
-### 1.1 Opertations with index
+## 1.1 Index
+
+```py
+arr.argmax()  # 最大值索引
+arr.argmin()  # 最小值索引
+```
 寻找数组中符合条件的元素的位置 (index)
+
 ```py
 np.argwhere(L == a) 
-```
-示例
-```py
+
+# Example
 L = np.array([1, 2, 3, 2])
 np.argwhere(L == 2)
 
->>> array([[1],
-           [3]], dtype=int64)
+>>> array([[1], [3]], dtype=int64)
 ```
-### 1.2 Statistics
+
+
+
+## 1.2 Statistics
+
 ```py
 arr.sum()
 arr.mean()
 arr.std()
 arr.var()
-arr.argmax()  # 最大值索引
-arr.argmin()  # 最小值索引
-arr.cumsum()  # 所有元素的累计和（累加）
+arr.max()
+    arr.max(axis=0) # 每行最大值（axis=1 每列）
+
+arr.cumsum()  # 所有元素的累计和（累加） [1,2,3] >>> [1,3,6]
 arr.cumprod() # 所有元素的累计积（累乘）
 ```
 
-### 1.3 Sort
-#### 1.3.1 Delete duplications and sort
+
+## 1.3 Sort
+
 去除数组中的重复数字, 并进行排序之后输出
+
 ```py
 np.unique([1, 2, 2, 3, 3])
 >>> array([1, 2, 3])
 np.unique([[1, 1], [2, 3]])
 >>> array([1, 2, 3])
 ```
-### 1.4 Save and Load
+
+
+
+## 1.4 Save and Load
 将 numpy.array 类型的数据已 `.npy` 为格式保存起来
+
 ```py
 np.save('address/filename.npy', X)
 ```
 读取 `.npy` 格式的文件
+
 ```py
 X = np.load('address/filename.npy')
 ```
 
-### 1.5 Join
+## 1.5 Combine
 纵向堆叠 `np.vstack((a1, a2))`
 ```py
 a1 = np.array([1, 2, 3])
@@ -70,10 +101,23 @@ np.vstack((a1, a2))
            [4, 5, 6])
 ```
 横向堆叠 `np.hstack((a1, a2))`
-示例略
 
-## 2. numpy.math
-### 2.1 Calculation
+
+
+---
+
+
+
+# 2. Calculations
+## 2.1 Matrices
+
+```py
+C = np.matmul(A, B)         # 矩阵乘法
+C = np.dot(A, B)            # 矩阵乘法（和 matmul 差不多
+u, s, vh = np.linalg.svd(C) # SVD(奇异值分解)
+```
+
+
 阶乘（factorial）
 ```py
 np.math.factorial(n)

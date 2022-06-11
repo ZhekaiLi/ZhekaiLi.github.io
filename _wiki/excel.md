@@ -7,9 +7,7 @@ description:
 keywords: Excel
 ---
 
-
-
-## Basic
+# 1 Basic
 **(1) 同时选择多个 cell**: 按住 `command`
 
 **(2) 显示公式**: 在等号前加一个单引号
@@ -30,10 +28,10 @@ keywords: Excel
 
 
 
-### Named Ranges
-#### .1 Define `Name`
-
-用于定位一些重要数据或是定值，同时方便其调用。三种创建方式:
+# 2 Named Ranges
+`Named Range` 一般用于定位一些重要数据或是定值，同时方便其调用
+## 2.1 Define
+三种创建方式:
 **(1) 修改 Name Box**
 例如，把红框内的 "N2" 改名为 "Penalty_Rate"
 
@@ -45,19 +43,24 @@ keywords: Excel
 
 **(2) Define Name**
 `Ctrl+Shift+Down` 选中一整列，点击 `Define Names` 然后可以在弹窗中改名或者修改这个名字应用的范围（Sheet or Workbook）
+
 <img src="/images/2022-06/Snipaste_2022-06-03_21-20-04.png"  width="70%">
 
 **(3) Create from Selection**
 先选中所有目标 headers，全选这些列之后点击 `Create from Selection` 然后在弹窗中选择以首行内容作为名字
+
 <img src="/images/2022-06/Snipaste_2022-06-03_21-24-54.png"  width="70%">
 
 
-#### .2 Manage
+
+## 2.2 Manage
 方便地新建、编辑、删除 `Name`
+
 <img src="/images/2022-06/Snipaste_2022-06-03_21-33-35.png"  width="70%">
 
 
-#### .3 Calculations
+
+## 2.3 Calculations
 可以通过 `Name Manager` 创建常量
 
 ```cs
@@ -67,7 +70,8 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 ```
 
 
-#### .4 Data Validation
+
+### 2.4 Data Validation
 为了实现如下效果
 
 <img src="/images/2022-06/Snipaste_2022-06-04_09-06-45.png"  width="70%">
@@ -82,7 +86,7 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 
 <img src="/images/2022-06/Snipaste_2022-06-04_09-07-39.png"  width="50%">
 
-*Problem*: 上述方案存在一个问题，即在第一步设置的 `Locations` 是<span style="background-color: yellow; color: black;">指定的，只包含两个城市</span>。而我们希望，当继续在下方单元格填入城市名时，也能被自动纳入
+> *Problem*: 上述方案存在一个问题，即在第一步设置的 `Locations` 是<span style="background-color: yellow; color: black;">指定的，只包含两个城市</span>。而我们希望，当继续在下方单元格填入城市名时，也能被自动纳入
 
 <img src="/images/2022-06/Snipaste_2022-06-04_09-19-52.png"  width="50%">
 
@@ -106,8 +110,8 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 
 
 
-## Functions
-### Text
+# 3 Functions
+## 3.1 Text
 > **Combine**
 
 `CONCAT()` `&` `TEXTJOIN()`
@@ -171,7 +175,7 @@ SUBSTITUTE(SUBSTITUTE(cell,"S",""), MID(cell,2,1), "")
 
 
 
-### Date & Time
+## 3.2 Date & Time
 > **Get time**
 
 ```cs
@@ -222,7 +226,7 @@ EODATE("03/06/2022", 1)  // 03/07/2022
 
 
 
-### Math
+## 3.3 Math
 
 ```cs
 ROUNDDOWN(value_cell, 0) // 向下取整，如果是 1 就表示取一位小数
@@ -230,7 +234,7 @@ ROUNDDOWN(value_cell, 0) // 向下取整，如果是 1 就表示取一位小数
 
 
 
-### Statistical
+## 3.4 Statistical
 
 ```cs
 COUNTA(range)  // 统计非空单元格个数
@@ -247,7 +251,7 @@ RSQ(ys, xs)            // R-squared
 
 
 
-### Logic
+## 3.5 Logic
 > **IF**
 
 ```cs
@@ -273,7 +277,7 @@ OR(logic_expr1, logic_expr2, [...])
 
 
 
-### Lookup
+## 3.6 Lookup
 **(1) VLOOKUP**
 
 ```cs
@@ -342,8 +346,8 @@ MATCH(lookup_value, lookup_array, [approximate_match])
 
 
 
-## Table
-### .1 Create
+# 4 Table
+## 4.1 Create
 菜单栏 `Insert`$\to$`Tables`$\to$`Table` (<span style="background-color: yellow; color: black;">Shortcut `Ctrl+T`</span>)
 
 创建完后一般先 Rename
@@ -354,7 +358,7 @@ MATCH(lookup_value, lookup_array, [approximate_match])
 
 
 
-### .2 Customise
+## 4.2 Customise
 勾选 `Total Rows`，表格的底部就会自动增加一行 Total 行，接着可以选择统计方式
 <img src="/images/2022-06/Snipaste_2022-06-04_11-50-23.png"  width="70%">
 
@@ -362,7 +366,7 @@ MATCH(lookup_value, lookup_array, [approximate_match])
 
 
 
-### .3 Sort & Filter
+## 4.3 Sort & Filter
 **(1) Simple sort** 直接点击 Header 右侧的箭头                       
 
 **(2) Complex sort** 实现嵌套排序，例如
@@ -385,7 +389,7 @@ MATCH(lookup_value, lookup_array, [approximate_match])
 
 
 
-### .4 Calculations (& Structured References)
+## 4.4 Calculations (& Structured References)
 **(1) 表格运算**
 
 ```cs
@@ -404,10 +408,21 @@ AVERAGEIFS(table_name[Salary],Country,"China") // 统计某个国家的平均收
 
 
 
-### .5 Automation
+## 4.5 Automation
 使用 Table 的优点:
 - 即使把当前所有数据都删除了（Headers 还在），各个列之间的关系仍然存在（包括 Named Ranges），只要填入新数据就可以自动完成所有的计算与统计
 - 更新 Table 的同时会更新其包含的 Named Ranges, Data Validation
+
+
+
+---
+
+
+
+# Other
+Solver
+1000本金7%年化，几年后会增值到5000？
+<img src="/images/2022-04/Snipaste_2022-04-30_10-57-59.png"  width="100%">
 
 
 

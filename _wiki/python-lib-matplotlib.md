@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: matplotlib
+title: Matplotlib
 cate1: Python
 cate2: -libs
 description: 

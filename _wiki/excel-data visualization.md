@@ -7,8 +7,8 @@ description:
 keywords: Excel
 ---
 
-# Formatting
-## Conditional Formatting
+# 1 Formatting
+## 1.1 Conditional Formatting
 用于图形化数据，使其更容易理解
 
 `Home`$\to$`Styles`$\to$`Conditional Formatting`
@@ -141,7 +141,7 @@ keywords: Excel
 
 
 
-## Sparkline & Shape
+## 1.2 Sparkline & Shape
 
 **(1) Sparkline**
 
@@ -184,7 +184,7 @@ keywords: Excel
 
 
 
-## Custom number format
+## 1.3 Custom number format
 
 对于如下列，我们希望正数显示为绿色，负数红色，零则不显示
 
@@ -215,8 +215,8 @@ Positive;[Negative];[Zero];[Text]
 
 
 
-# Charting Techniques
-## Column Chart
+# 2 Charting Techniques
+## 2.1 Column Chart
 下图是一张非常高效的图，清晰地反映了每十年的:
 - 排放物的各种来源的比例
 - 排放物总量
@@ -256,7 +256,7 @@ Positive;[Negative];[Zero];[Text]
 
 
 
-## Pie Chart
+## 2.2 Pie Chart
 **(1) 普通的饼图**
 - 框选数据区域，插入 `2D Pie`
 - 修改 Layout: 菜单栏 `Chart Design`$\to$`Quick Layout`$\to$选择一种显示比例的
@@ -317,7 +317,7 @@ Positive;[Negative];[Zero];[Text]
 
 
 
-## Line Chart
+## 2.3 Line Chart
 
 实现效果: 根据已知数据（1960-2018）画出CO2浓度变化图，并预测10年后的浓度
 
@@ -366,7 +366,7 @@ Positive;[Negative];[Zero];[Text]
 <img src="/images/2022-06/Snipaste_2022-06-08_10-01-28.png"  width="70%">
 
 
-## Area Chart
+## 2.4 Area Chart
 
 **(1) Normal Area Chart**
 
@@ -395,7 +395,7 @@ Positive;[Negative];[Zero];[Text]
 
 
 
-## Scatter & Bubble Chart
+## 2.5 Scatter & Bubble Chart
 
 **(1) Scatter Chart**
 
@@ -419,17 +419,21 @@ Positive;[Negative];[Zero];[Text]
 
 
 
-## Hierarchy Chart
+## 2.6 Hierarchy Chart
 
 有两种图能够表示层级关系
 
+**(1) Sunburst Chart**
+
 <img src="/images/2022-06/Snipaste_2022-06-08_18-20-48.png"  width="70%">
+
+**(2) Treemap**
 
 <img src="/images/2022-06/Snipaste_2022-06-08_18-22-50.png"  width="70%">
 
 
 
-## Waterfall & Funnel Chart
+## 2.7 Waterfall & Funnel Chart
 **(1) Waterfall Chart**
 
 瀑布图之于普通的柱状图，区别在于它基于的是数据的变化值而不是数据本身，因此能更好地反映 X-Labels 对于数据的影响（例如，下图很好地反映了各个国家对于欧洲人口增长的影响）
@@ -448,7 +452,9 @@ Positive;[Negative];[Zero];[Text]
 
 <img src="/images/2022-06/Snipaste_2022-06-08_18-45-02.png"  width="70%">
 
-## Geospatial Chart
+
+
+## 2.8 Geospatial Chart
 
 非常酷炫，但是国内好像不支持显示地图 `Sorry, map charts aren't supported for your location`
 
@@ -498,35 +504,27 @@ Macro 设置如下，而后再将这些宏与按钮绑定
 
 ## Creative Chart Techniques
 
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
+创建一个汽车仪表盘图，用于表示某年海平面上升问题的严重程度
 
+<img src="/images/2022-06/Snipaste_2022-06-09_09-27-13.png"  width="70%">
 
+首先绘制仪表盘: 
+- 下图1: 插入 Doughnut 图，并旋转一定角度
+- 下图2: 将下面半圈隐去（设为 `No fill`），将上边半圈设置为渐变色，并取消白色的分割线（Border）
 
+<img src="/images/2022-06/Snipaste_2022-06-09_09-05-59.png"  width="70%">
 
+<img src="/images/2022-06/Snipaste_2022-06-09_09-15-14.png"  width="70%">
 
+其次绘制仪表指针:
+- 下图1: 红框1表示指针的位置，红框2表示指针的宽度，红框3表示剩下的圆环
+- 下图2: 将指针数据插入仪表盘图
+- 下图3: 先将除了表示指针之外的圆环隐去，再通过设置 secondary axis 是两个环重合，最后把通过指针图设置为 Pie Chart 以显示整根指针
 
+<img src="/images/2022-06/Snipaste_2022-06-09_09-19-09.png"  width="70%">
 
-选中 ys,xs 数据后，创建 scatter plot
-<img src="/images/2022-04/Snipaste_2022-04-30_09-49-15.png"  width="100%">
+<img src="/images/2022-06/Snipaste_2022-06-09_09-22-27.png"  width="70%">
 
-Add trendline, choose linear and click to show equation and R-squared
-<img src="/images/2022-04/Snipaste_2022-04-30_09-55-07.png"  width="50%">
-<img src="/images/2022-04/Snipaste_2022-04-30_09-56-09.png"  width="100%">
-
-排序 sort
-<img src="/images/2022-04/Snipaste_2022-04-30_10-12-08.png"  width="100%">
-
-Solver
-1000本金7%年化，几年后会增值到5000？
-<img src="/images/2022-04/Snipaste_2022-04-30_10-57-59.png"  width="100%">
+<img src="/images/2022-06/Snipaste_2022-06-09_09-24-31.png"  width="100%">
 
 

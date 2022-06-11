@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: sympy
+title: SymPy
 cate1: Python
 cate2: -libs
 description: 

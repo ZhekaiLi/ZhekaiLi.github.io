@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: scipy
+title: SciPy
 cate1: Python
 cate2: -libs
 description: 
