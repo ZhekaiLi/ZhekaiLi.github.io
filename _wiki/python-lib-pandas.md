@@ -252,19 +252,87 @@ df.drop_duplicates(subset=['LON', 'LAT'], # 将查重范围限制在特定的列
 画出两列数据，横坐标为 `df.index`
 
 ```py
-df[['col1','col2']].plot()
+df[['col1','col2']].plot()  # 反映两列之间关系的折线图
+df['col1'].plot(kind='bar') # 反映一列内数据大小的柱状图
 ```
 
 
 
 ## 1.9 Groupby 分组
+### 分组对象 grouby object
+
+```py
+# grouping = df.groupby(col_to_group_by)
+grouping = products.groupby('Category')
+```
+products:
+| |Category |Price |Name  |Amount|
+|-|---------|------|------|------|
+|0|Drink    |4     |Cola  |100   |
+|1|Snack    |10    |Nut   |50    |
+|2|Drink    |3     |Fenta |200   |
+
+Groupby object is kind of like a list of pairs `[(group_name, df)]`
+
+```py
+for name, df in grouping:
+    print(name, df.Price.mean())
+
+>>>
+Drink 3.5
+Snack 10
+```
+**获取某个组所有商品的信息（不包含 `Category` 列）**
+
+```py
+products.groupby('Category').get_group('Drink')
+```
+| |Price |Name  |Amount|
+|-|------|------|------|
+|0|4     |Cola  |100   |
+|2|3     |Fenta |200   |
+
+**属性**
+
+```py
+products.groupby('Category').indices # 获取各个组所包含的商品 Index
+
+>>> {'Drink':array([0,2]), 'Snack':array([1])}
+```
+**方法**
+
+```py
+# 返回数值类型列的统计值（例如 Name 列就不会被返回）
+grouping = products.groupby('Category')
+grouping.mean()
+grouping.min()
+grouping.max()
+grouping.sum()
+```
+|     |Price |Amount|
+|-----|------|------|
+|Drink|7     |300   |
+|Snack|10    |50    |
+
+```py
+# 为不同的列定义统计方式
+grouping.agg({'Price':'mean', 'Amount':'sum'})
+```
+
+|     |Price |Amount|
+|-----|------|------|
+|Drink|3.5   |300   |
+|Snack|10    |50    |
+
+**获取各个组某个列在外部函数/lambda上的统计值**
 
 ```py
 df.groupby(col_to_group_by).col_of_interest.apply(func)
-    # col_to_group_by: 分组对象
-    # col_of_interest: 根据分组来进行统计的对象
-    # func:            应用于统计对象的函数（可以是自定义函数/lambda, 也可以来自于其他库）
 ```
+- `col_to_group_by`: 分组对象
+- `col_of_interest`: 根据分组来进行统计的对象
+- `func`: 应用于统计对象的函数（自定义函数/lambda/来自于其他库的函数）
+
 Ex1: 统计每个航线的平均延误（多种方式）
 
 ```py
@@ -279,12 +347,83 @@ flights.groupby('Airline')['Arrival_dealy'].transform(np.mean)
 Ex2: 统计每个航线有多少航班的延误时间大于10小时
 
 ```py
-flights.groupby('Airline')['Arrival_delay'].apply(lambda ls: np.sum(ls>10))
+flights.groupby('Airline')['Arrival_delay'].apply(
+    lambda ls: np.sum(ls>10)
+)
 ```
-Ex3: 统计每个航班在每个月的平均延误（二层分组）
+**多层分组**
+
+统计每个航班在每个月的平均延误
 
 ```py
 flights.groupby(['Airline','Month'])['Arrival_delay'].apply(np.mean)
+```
+
+### 排序 sort_values
+products:
+| |Category |Price |Name  |Amount|
+|-|---------|------|------|------|
+|0|Drink    |4     |Cola  |100   |
+|1|Snack    |10    |Nut   |50    |
+|2|Drink    |3     |Fenta |200   |
+
+```py
+products.groupby('Category').mean().sort_values(
+    by=['Price'], ascending=False
+)
+```
+|     |Price |Amount|
+|-----|------|------|
+|Snack|10    |50    |
+|Drink|3.5   |150   |
+
+### Rolling
+Rolling object is a kind of list contains all the windows
+
+```py
+# roll = df.rolling(window_length)
+prodroll = products.rolling(2)
+```
+
+
+products:
+| |Category |Price |Name  |Amount|
+|-|---------|------|------|------|
+|0|Drink    |4     |Cola  |100   |
+|1|Snack    |10    |Nut   |50    |
+|2|Drink    |3     |Fenta |200   |
+|3|Drink    |2     |Water |500   |
+
+```py
+# df.rolling(window_length).col_of_interest.apply(func)
+products.rolling(2).Price.apply(np.mean)
+
+>>>
+0 NaN
+1 7
+2 6.5
+3 2.5
+```
+
+**Groupby + Rolling**
+
+```py
+products.groupby('Category').apply(lambda df:df.rolling(2)).Price.mean()
+
+products.groupby('Category').rolling(2).Price.mean()
+
+>>>
+Category
+Drink 0 NaN
+      2 3.5
+      3 2.5
+Snack 1 NaN
+```
+
+## 1.10 排序
+
+```py
+df.sort_values(by=['Price'], ascending=False)
 ```
 
 

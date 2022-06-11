@@ -12,7 +12,7 @@ mathjax: true
 > #### Def 1: Orthogonal subspaces
 > $v^T w=0$ for all $v\in V$ and $w\in W$
 
-![pic1](/images/Snipaste_2020-10-29_10-16-01.png)
+![pic1](/images/2020/Snipaste_2020-10-29_10-16-01.png)
 
 **The nullspace $N(A)$ and the row space $C(A^T)$ are orthogonal subspaces of $\R^n$.** Since $Ax = 0$, that is, every vector $x$ in $N(A)$ is perpendicular to every row of $A$. 
 
@@ -21,7 +21,7 @@ $$x\cdot A^Ty=x^T(A^Ty)=(Ax)^Ty=0^Ty=0$$
 
 **The left nullspace $N(A^T)$ and the column space $C(A)$ are orthogonal subspaces of $\R^m$.** 证明同上
 
-![pic2](/images/Snipaste_2020-10-29_10-27-54.png)
+![pic2](/images/2020/Snipaste_2020-10-29_10-27-54.png)
 
 两个正交空间的交点为零空间 (在二维或者三维空间中的体现就是点 $(0,0)$ 或 $(0,0,0)$)
 
@@ -34,7 +34,7 @@ $$x\cdot A^Ty=x^T(A^Ty)=(Ax)^Ty=0^Ty=0$$
 
 例如，$N(A),C(A^T)$ 正交且互为正交补 $(n-r)+r=n$；但是 $\R^3$ 中的两正交线条不能叫互为正交补 $1+1<3$
 
-![pic3](/images/Snipaste_2020-10-29_11-07-20.png)
+![pic3](/images/2020/Snipaste_2020-10-29_11-07-20.png)
 
 这里的 $x$ 之所以能被写成 $x_r+x_n$，是因为 $C(A^T),N(A)$ 在 $\mathbb{R}$ 中互为正交补
 

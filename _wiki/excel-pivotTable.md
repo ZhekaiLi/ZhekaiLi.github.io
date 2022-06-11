@@ -83,7 +83,11 @@ keywords:
 当选择日期作为 Rows 的时候，Excel 可能会自动按照年、季度对日期进行分组，点击下图中的红框来取消该自动分组
 
 <img src="/images/2022-06/Snipaste_2022-06-10_21-22-10.png"  width="100%">
-<img src="/images/2022-06/.png"  width="70%">
+
+然后自定义具体的分组方式，例如下图按照年、月对日期进行分组
+
+<img src="/images/2022-06/Snipaste_2022-06-10_21-24-55.png"  width="70%">
+
 <img src="/images/2022-06/.png"  width="70%">
 <img src="/images/2022-06/.png"  width="70%">
 <img src="/images/2022-06/.png"  width="70%">
