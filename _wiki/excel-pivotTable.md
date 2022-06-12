@@ -78,8 +78,8 @@ keywords:
 
 
 
-# Group & Sort
-
+# Data Processing
+## Group
 当选择日期作为 Rows 的时候，Excel 可能会自动按照年、季度对日期进行分组，点击下图中的红框来取消该自动分组
 
 <img src="/images/2022-06/Snipaste_2022-06-10_21-22-10.png"  width="100%">
@@ -88,13 +88,65 @@ keywords:
 
 <img src="/images/2022-06/Snipaste_2022-06-10_21-24-55.png"  width="70%">
 
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
+**创建 Group**
 
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
-<img src="/images/2022-06/.png"  width="70%">
+- 下图1: 按住 `Ctrl` 选中想要分类的三个对象$\to$点击菜单栏 `Group`
+- 下图2: 新创建的 Group
+
+<img src="/images/2022-06/Snipaste_2022-06-11_19-54-10.png"  width="100%">
+
+<img src="/images/2022-06/Snipaste_2022-06-11_20-11-39.png"  width="100%">
+
+
+
+## Sort
+**Simple Sort**: 根据选中列排序
+
+<img src="/images/2022-06/Snipaste_2022-06-11_20-15-47.png"  width="100%">
+
+**Sort with Custom List**: 使用 `Custom List`，我们可以添加/修改一些默认的排序方式（例如当对一周7天排序时，可以让 Tuesday 排在第一个）
+
+Excel 已经默认定义了一些，查看方式
+- 下图1: 点击 `Edit Custom Lists...`
+- 下图2: 可以看到默认对于一周7天的排序是从 Sunday 开始的
+- 下图3: 通过三步操作，添加一个从 Wednesday 开始的排序方式
+
+
+<img src="/images/2022-06/Snipaste_2022-06-11_20-24-40.png"  width="100%">
+
+<img src="/images/2022-06/Snipaste_2022-06-11_20-27-18.png"  width="70%">
+
+<img src="/images/2022-06/Snipaste_2022-06-11_20-35-45.png"  width="100%">
+
+
+## Filter
+**Simple Filter**
+
+<img src="/images/2022-06/Snipaste_2022-06-11_21-00-00.png"  width="50%">
+
+对于日期、文本、数字类型数据的简单排序，都能在点击上图箭头所打开的窗口内实现，详见[我的另一篇 Wiki: Excel Basis](./excel.md#43-sort--filter)
+
+**Clear Filters** 三种方式
+- M1: 点击上图红框$\to$`Clear Filter From "..."`
+- M2: 菜单栏 `PivotTable Analyze`$\to$`Actions`$\to$`Clear`
+- M2: 菜单栏 `Data`$\to$`Sort & Filter`$\to$`Clear`
+
+**Filter in Fields**
+
+To filter by a field that we do not want to show in the PivotTable itself
+
+<img src="/images/2022-06/Snipaste_2022-06-11_21-26-06.png"  width="100%">
+
+需要注意的是，当在 Filter 里选取了多个对象，PivotTable 会以求和的形式把它们合并后显示。此时如果需要分别展示这些对象，需点击下图2中红框，然后便能为每个对象单独生成一张 Sheet
+
+<img src="/images/2022-06/Snipaste_2022-06-11_21-27-27.png"  width="50%">
+
+<img src="/images/2022-06/Snipaste_2022-06-11_21-31-18.png"  width="100%">
+
+
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
 
 

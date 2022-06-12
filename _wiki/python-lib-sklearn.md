@@ -36,10 +36,29 @@ X, y = datasets.make_circles(n_samples=1000,
     noise=0.05 # 噪音
 )
 ```
+
+
+
 ## 2. sklearn.matrics
 ### 2.1 Value the clustering 检查聚类算法的性能
+
 ```py
 sklearn.matrics.silhouette_score(X_blobs,  # 原数据
     class_prediction  # 分类标签, 例如以下表示有三类 array([0, 1, 2, 1, 1, 2])
 )
+```
+
+
+## sklearn.linear_model
+
+```py
+from sklearn.linear_model import LinearRegression
+
+lr = LinearRegression()
+lr.fit(X, y)
+```
+
+```py
+lr.coef_      # 系数
+lr.intercept_ # 截距
 ```

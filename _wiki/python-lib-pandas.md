@@ -34,6 +34,8 @@ index=['a','b']) # 不填index则默认为下标，从0开始
 
 **Create from pd.Series()**
 
+- Method 1
+
 ```py
 sr1 = pd.Series([1], index=['a'])
 sr2 = pd.Series([1,2], index=['a','b'])
@@ -43,6 +45,12 @@ df = pd.DataFrame({'col_1':sr1,'col_2':sr2})
 |-|-----|-----|
 |a|1    |1    | 
 |b|NaN  |2    |
+
+- Method 2
+
+```py
+df = sr.to_frame('col_1') # 相当于给序列加了个列标题，从而变成了表格
+```
 
 **Create from .csv**
 
@@ -97,9 +105,13 @@ df.loc['a3'] = [0, 0, 0]
 ```py
 df.index = []   # 更改行名, 可以是 list or array
 df.columns = [] # 更改列名
-df.rename(columns={'原列1':'新列1', '原列2':'新列2'}, inplace=True)
 
-df.set_index('col_1', inplace=True) # 把指定列设置为行名（Index）
+# 单独更改某个或某些行/列名
+# df.rename({'old':'new'}, axis=(1 for cols, 0 for rows), inplace=True)
+df.rename({'old_col', 'new_col'}, axis=1, inplace=True)
+
+df.set_index('col_1', inplace=True) # 把指定列设置为 Index
+df.reset_index(inplace=True)        # 重新改为默认的数字 Index
 ```
 
 参数 `inplace` 默认为 Flase，即返回更改后的 DataFrame 的同时**不更改**原 DataFrame。如果设置为 True，则在效果上 `df.rename(..., inplace=True)` 等同于 `df = df.rename(...)` 
@@ -112,7 +124,7 @@ df.drop(columns = df.columns[0], inplace=True) # 删除第一列
 
 
 
-## 1.3 Arribute & Function
+## 1.3 Arributes
 
 ```py
 df.head(i)  # 查看前 i 条数据
@@ -126,27 +138,7 @@ df.shape          # (n, m) n行m列
 df.size           # n*m 元素个数
 ```
 
-### Statistic
-```py
-# 查看各列的统计数据（count, mean, std, percentile...）
-df.describe() 
 
-df.mean()           # 各列平均
-    df.mean(axis=1) # 各行平均
-df.sum()            # 各列求和
-```
-
-### Sort
-```py
-df.sort_values(by='col1') # 根据指定列做升序排列
-df.sort_values(by='col1', ascending=False) # 降序
-df.sort_index() # 根据行名做升序排列
-```
-
-### Slice
-```py
-df.rolling(n) # 滑动窗口切片，窗口长度为n
-```
 
 ## 1.4 Access
 **访问列**
@@ -252,14 +244,23 @@ df.drop_duplicates(subset=['LON', 'LAT'], # 将查重范围限制在特定的列
 画出两列数据，横坐标为 `df.index`
 
 ```py
-df[['col1','col2']].plot()  # 反映两列之间关系的折线图
-df['col1'].plot(kind='bar') # 反映一列内数据大小的柱状图
+df['col1'].plot()            # index-col1 折线图
+df['col1'].plot(kind='bar')  # 柱状图
+
+# 直方图（表示数据分布）
+df['col1'].plot(kind='hist')
+df.hist('col1')
+df.hist('col1', by='col_category') # 对每个 category 单独画图
+
+
+df.plot(x='col_x', y='col_y', kind='scatter') # col_x-col_y 散点图
 ```
 
+### 1.8.1 Plot Time Series
 
 
-## 1.9 Groupby 分组
-### 分组对象 grouby object
+## 1.9 分组
+### Groupby
 
 ```py
 # grouping = df.groupby(col_to_group_by)
@@ -278,28 +279,30 @@ Groupby object is kind of like a list of pairs `[(group_name, df)]`
 for name, df in grouping:
     print(name, df.Price.mean())
 
->>>
+"""
 Drink 3.5
 Snack 10
+"""
 ```
-**获取某个组所有商品的信息（不包含 `Category` 列）**
+#### .1 属性 & 方法
 
 ```py
-products.groupby('Category').get_group('Drink')
+grouping = products.groupby('Category')
+grouping.indices # 获取各个组所包含的商品 Index
+
+# {'Drink':array([0,2]), 'Snack':array([1])}
+```
+**方法**
+
+```py
+# 获取某个组所有商品的信息（不包含 `Category` 列）
+grouping.get_group('Drink')
 ```
 | |Price |Name  |Amount|
 |-|------|------|------|
 |0|4     |Cola  |100   |
 |2|3     |Fenta |200   |
-
-**属性**
-
-```py
-products.groupby('Category').indices # 获取各个组所包含的商品 Index
-
->>> {'Drink':array([0,2]), 'Snack':array([1])}
-```
-**方法**
+#### .2 统计
 
 ```py
 # 返回数值类型列的统计值（例如 Name 列就不会被返回）
@@ -324,7 +327,8 @@ grouping.agg({'Price':'mean', 'Amount':'sum'})
 |Drink|3.5   |300   |
 |Snack|10    |50    |
 
-**获取各个组某个列在外部函数/lambda上的统计值**
+#### .3 col_of_interest.apply()
+**获取各组的某个列在外部函数/lambda上的统计值**
 
 ```py
 df.groupby(col_to_group_by).col_of_interest.apply(func)
@@ -351,31 +355,38 @@ flights.groupby('Airline')['Arrival_delay'].apply(
     lambda ls: np.sum(ls>10)
 )
 ```
-**多层分组**
-
-统计每个航班在每个月的平均延误
+Ex3: 统计每个航班在每个月的平均延误（**多层分组**）
 
 ```py
 flights.groupby(['Airline','Month'])['Arrival_delay'].apply(np.mean)
 ```
-
-### 排序 sort_values
-products:
-| |Category |Price |Name  |Amount|
-|-|---------|------|------|------|
-|0|Drink    |4     |Cola  |100   |
-|1|Snack    |10    |Nut   |50    |
-|2|Drink    |3     |Fenta |200   |
+#### .4 Groupby + Sort
 
 ```py
 products.groupby('Category').mean().sort_values(
     by=['Price'], ascending=False
 )
 ```
-|     |Price |Amount|
-|-----|------|------|
-|Snack|10    |50    |
-|Drink|3.5   |150   |
+
+
+## 1.10 数据处理
+### Statistic
+```py
+# 查看各列的统计数据（count, mean, std, percentile...）
+df.describe() 
+
+df.mean()           # 各列平均
+    df.mean(axis=1) # 各行平均
+df.sum()            # 各列求和
+```
+
+### Sort
+
+```py
+df.sort_values(by='col1') # 根据指定列做升序排列
+df.sort_values(by='col1', ascending=False) # 降序
+df.sort_index() # 根据行名做升序排列
+```
 
 ### Rolling
 Rolling object is a kind of list contains all the windows
@@ -398,32 +409,35 @@ products:
 # df.rolling(window_length).col_of_interest.apply(func)
 products.rolling(2).Price.apply(np.mean)
 
->>>
+"""
 0 NaN
 1 7
 2 6.5
 3 2.5
+"""
 ```
 
-**Groupby + Rolling**
+
+### Trend (Change)
+数据的变化幅度（百分比）
 
 ```py
-products.groupby('Category').apply(lambda df:df.rolling(2)).Price.mean()
+df.pct_change()
 
-products.groupby('Category').rolling(2).Price.mean()
+"""
+  Price
+0 10
+1 15
+2 30
+3 33
 
 >>>
-Category
-Drink 0 NaN
-      2 3.5
-      3 2.5
-Snack 1 NaN
-```
-
-## 1.10 排序
-
-```py
-df.sort_values(by=['Price'], ascending=False)
+  Price
+0 NaN
+1 0.5
+2 1
+3 0.1
+"""
 ```
 
 
@@ -500,25 +514,32 @@ b    3
 
 
 
-## 2.2 处理数据
-**平移数据**
+## 2.2 数据处理
+**平移 Shift**
+
 ```py
 sr.shift(1) # 向右平移一个单位
 ```
+**缺失值 NaN**
 
-**处理缺失值 NaN**
 ```py
-# 删除：布尔值过滤
-sr = sr[sr.notnull()]
-
-# 删除：直接通过自带函数
+# 删除
+sr = sr[sr.notnull()] # 布尔值过滤
 sr = sr.dropna()
 
-# 替换为特定值
-sr = sr.fillna(sr.mean()) # 平均值
+
+sr = sr.fillna(sr.mean()) # 替换为平均值
+```
+**分组 Cut**
+
+```py
+pd.cut()
 ```
 
+
+
 ## 2.3 统计
+
 ```py
 sr.value_counts() # 统计每个数值出现的次数
 sr.quantile(p)    # 百分位：p从0至1
@@ -544,13 +565,25 @@ sr.plot()
 sr.value_counts().plot(kind='bar')
 ```
 
-# 3. 与时间相关的操作
-## 3.1 创建datetime对象
-将字符串格式的时间批量转换为datetime
+
+## 2.5 分组
+
 ```py
+# pd.cut(numerical_series, edge_numbers_to_split_by, labels_for_groups)
+pd.cut(sr, [-1, 50, 100], [1,2]) # 分成两组 1:[-1,50) 2:[50,100)
+```
+
+# 3. Time Series
+## 3.1 创建 datetime 对象
+
+```py
+# 将数据表的一列字符串格式的时间转换为 datetime
+df['date'] = pd.to_datetime(df['date'])
+# 将字符串格式的时间批量转换为 datetime
 pd.to_datetime(['2011-01-11', '2021/FEB/22'])
 ```
 创建一段时间range
+
 ```py
 # 生成一个包含了，从1月11到1月22之间，共12天日期的数组
 pd.date_range('2011-01-11', '2011-01-22')
@@ -565,6 +598,7 @@ pd.date_range('2011-01-11', peirods=20)
 - `'B'` work day 
 - `'A'` year
 - 其它一些自定义，例如 `'1h20min'` 表示间隔1时20分钟
+
 ```py
 # 从1月11日0点开始往后，共20小时的时间
 pd.date_range('2011-01-11', periods=20， freq='H')
@@ -572,7 +606,7 @@ pd.date_range('2011-01-11', periods=20， freq='H')
 pd.date_range('2011-01-11', periods=20， freq='W-TUE')
 ```
 ## 3.2 时间序列
-以datetime对象为索引的Series或DataFrame，例如
+以 datetime 对象为索引的 Series 或 DataFrame，例如
 
 ```py
 sr = pd.Series(np.arange(11), pd.date_range('2011-01-22', period=11))

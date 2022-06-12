@@ -323,6 +323,7 @@ Positive;[Negative];[Zero];[Text]
 
 <img src="/images/2022-06/Snipaste_2022-06-07_13-22-55.png"  width="100%">
 
+
 首先选择数据区域（二氧化碳浓度），适当更改一下表格样式
 
 <img src="/images/2022-06/Snipaste_2022-06-07_12-50-30.png"  width="100%">

@@ -375,7 +375,9 @@ MATCH(lookup_value, lookup_array, [approximate_match])
 
 **(3) Filter** 点击 Header 右侧的箭头
 - 可以直接通过勾选进行筛选
-- 如果是数字类型的数据，还可以点击 `Number Filters` 进行筛选（限定范围，top10，高于或低于平均，>/=/<）
+- 数字类型的数据，点击 `Number Filters` 进行筛选（限定范围，top10，高于或低于平均，>/=/<，...）
+- 时间类型的数据，点击 `Date Filters`（After/Before centain day, ...）
+- 文本类型的数据，点击 `Label Filters`
 
 清除所有的 Filter: 菜单栏 `Data`$\to$`Sort & Filter`$\to$`Clear`
 
