@@ -154,18 +154,18 @@ where,
 2. $\kappa(x,x')=E[(f(x)-m(x))(f(x')-m(x'))^T]$
 
 ## 4.1 Regression
-$\text{Data}:\{(x_i,y_i)\}_{i=1}^N,\;y=f(x)+\varepsilon \\
-X=[(x_1,...,x_N)^T]_{N\times p} \\
-Y=[(y_1,...,y_N)^T]_{N\times 1}$
+$\text{Data}:\{(x_i,y_i)\}_{i=1}^N,\;y=f(x)+\varepsilon$
 
-$f(X)\sim N(\mu(X),\kappa(X,X)) \\
-Y=f(X)+\varepsilon \sim N(\mu(X),\kappa(X,X)+\sigma ^2I)$
+$X=[(x_1,...,x_N)^T]_{N\times p}\;\;\;\; Y=[(y_1,...,y_N)^T]_{N\times 1}$
+
+$$f(X)\sim N(\mu(X),\kappa(X,X)) \\
+Y=f(X)+\varepsilon \sim N(\mu(X),\kappa(X,X)+\sigma ^2I)$$
 
 ## 4.2 Prediiction
-$\text{Given}\;X^*=(x_1^*,...,x_M^*)^T \\
-求\;Y^* \\
-Y^*=f(X^*)+\varepsilon \\
-\begin{pmatrix}
+$\text{Given}\;X^*=(x_1^*,...,x_M^*)^T, \text{calculate}\;Y^*=f(X^*)+\varepsilon$
+
+
+$$\begin{pmatrix}
    Y \\
    f(X^*) 
 \end{pmatrix} \sim
@@ -178,7 +178,7 @@ N\begin{pmatrix}
    \kappa(X,X)+\sigma^2I & \kappa(X,X^*) \\
    \kappa(X^*,X) & \kappa(X^*,X^*)
 \end{pmatrix}
-\end{pmatrix}$
+\end{pmatrix}$$
 
 已知公式，对于 $X\sim N(\mu,\Sigma)$
 $$\text{If}\;X=\begin{pmatrix}

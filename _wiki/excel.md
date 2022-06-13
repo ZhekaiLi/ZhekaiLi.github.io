@@ -367,6 +367,10 @@ MATCH(lookup_value, lookup_array, [approximate_match])
 
 
 ## 4.3 Sort & Filter
+LINKs Back:
+[WIKI: Excel PivotTable ##Filter](./excel-pivotTable.md#filter)
+
+
 **(1) Simple sort** 直接点击 Header 右侧的箭头                       
 
 **(2) Complex sort** 实现嵌套排序，例如

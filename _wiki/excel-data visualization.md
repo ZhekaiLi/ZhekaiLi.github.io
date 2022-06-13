@@ -216,6 +216,10 @@ Positive;[Negative];[Zero];[Text]
 
 
 # 2 Charting Techniques
+
+LINKs Back:
+[WIKI: Excel PivotTable - PivotChart](./excel-pivotTable.md#6-pivotchart)
+
 ## 2.1 Column Chart
 下图是一张非常高效的图，清晰地反映了每十年的:
 - 排放物的各种来源的比例
