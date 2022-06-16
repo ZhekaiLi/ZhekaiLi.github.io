@@ -11,7 +11,7 @@ Dashboard 不是像 PivotTable, PivotChart 那样具体的工具，而是一种�
 
 <img src="/images/2022-06/Snipaste_2022-06-13_09-46-13.png"  width="100%">
 
-## Planning & Layout
+# 1. Planning & Layout
 
 
 **确认 Dashboard 的范围**: 点击右下角 `Page Layout`（下图范围是 A1:S41）
@@ -26,7 +26,7 @@ Dashboard 不是像 PivotTable, PivotChart 那样具体的工具，而是一种�
 
 **插入 Tiles(显示框)**: 
 - 下图1: 插入矩形方框和文本框
-- 下图2: 排列矩形方框。需要注意的是，
+- 下图2: 排列矩形方框，并在其中插入一些图标和文字
 
 <img src="/images/2022-06/Snipaste_2022-06-13_10-36-07.png"  width="100%">
 
