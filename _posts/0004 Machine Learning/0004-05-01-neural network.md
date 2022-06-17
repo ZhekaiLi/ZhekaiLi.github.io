@@ -8,7 +8,7 @@ mathjax: true
 topmost: true
 ---
 
-[Jupyter Notebook: Simple neural network with sklearn](../../jupyterNotebooks/Simple_neural_networks_with_sklearn.ipynb) 展示了一个简单的神经网络示例: 使用 `sklearn.neural_network.MLPRegressor()` 作为神经网络，根据波士顿地区房子的房间个数来预测房子的售价
+[Jupyter Notebook: Simple neural network with sklearn](../../_files/JupyterNotebook/Simple_neural_networks_with_sklearn.ipynb) 展示了一个简单的神经网络示例: 使用 `sklearn.neural_network.MLPRegressor()` 作为神经网络，根据波士顿地区房子的房间个数来预测房子的售价
 
 A neuron can have many inputs and outputs.
 
@@ -101,7 +101,7 @@ Considerations:
 3. Update Weights: in the opposite direction of increasing "blame". Decreases cost
 4. Repeat 1-3 until satisfied with cost
 
-[Jupyter Notebook: Simple gradient descent](../../jupyterNotebooks/Simple_gradient_descent.ipynb) 实现了对梯度下降法的简单应用，同时研究了不同的学习速率和学习步数对学习效果的影响
+[Jupyter Notebook: Simple gradient descent](../../_files/JupyterNotebook/Simple_gradient_descent.ipynb) 实现了对梯度下降法的简单应用，同时研究了不同的学习速率和学习步数对学习效果的影响
 
 ### Loss Functions
 how bad the guesses are

@@ -7,10 +7,8 @@ keywords: IP, OR
 ---
 
 *References*
-1. [B站：【零基础教程】老哥：数学建模算法、编程、写作和获奖指南全流程培训！](https://www.bilibili.com/video/BV1kC4y1a7Ee?p=4)
-2. 书籍：数学建模算法与程序（司守奎）
+Coursera: Operations Research (1): Models and Applications (by National Taiwan University)
 
-Integer Programming (IP)
 # 1. IP 中的选择问题
 一个典型的选择问题：
 $$\max x_1+2x_2+3x_3+4x_4$$
@@ -23,22 +21,23 @@ x_i\in \{0,1\}\;\;\; i=1,2,3,4
 ## 1.1 选择变量 (item)
 > **At least/most**
 
-至少在 item $1,2,3$ 中选择一个: $x_1+x_2+x_3\geq1$
-
-至多在 item $1,3,4$ 中选择两个: $x_1+x_3+x_4\leq 2$
+- 至少在 item $1,2,3$ 中选择一个: $x_1+x_2+x_3\geq1$
+- 至多在 item $1,3,4$ 中选择两个: $x_1+x_3+x_4\leq 2$
 > **A or B or A,B**
 
-选择 item $2$，否则需同时选择 item $3,4$ (可同时选): $2x_2+x_3+x_4\geq2$
+- 选择 item $2$，否则需同时选择 item $3,4$ (可同时选): $2x_2+x_3+x_4\geq2$
 > **If-else**
 
-如果选择了 $2$，则需同时选择 $3$: $x_2\leq x_3$
+- 如果选择了 $2$，则需同时选择 $3$: $x_2\leq x_3$
+- 如果选择了 $1$，则不能选择 $3,4$: $2(1-x_1)\geq x_3+x_4$
 
-如果选择了 $1$，则不能选择 $3,4$: $2(1-x_1)\geq x_3+x_4$
 
-## 1.2 选择约束 (constraints)
-> **C1 or C2**
 
-满足约束1 or 约束2：$g_1(x)\leq b_1\text{  or  }g_2(x)\leq b_2$
+## 1.2 选择约束 (constraint)
+LINKs Back:
+[Current Note: #4 Ex: Scheduling](#41-completion-time-minimization-single-machine)
+
+> **C1 or C2** 满足约束1 or 约束2：$g_1(x)\leq b_1\text{  or  }g_2(x)\leq b_2$
 - 定义一个变量 $z\in\{0,1\}$ 
 $$z=\begin{cases}
 0 & \text{if }g_1(x)\leq b_1\text{ is satisfied}\\
@@ -50,9 +49,7 @@ g_1(x)-b_1 & \leq M_1z\\
 g_1(x)-b_1 & \leq M_2(1-z)
 \end{aligned}$$
 
-> **At least/most**
-
-至少满足三个约束中的两个 $g_i(x)\leq b_i\;\;\; i=1,2,3$
+> **At least/most** 至少满足三个约束中的两个 $g_i(x)\leq b_i\;\;\; i=1,2,3$
 - 定义三个变量 $z_i\in\{0,1\}$ 
 $$z_i=\begin{cases}
 1 & \text{if }g_i(x)\leq b_i\text{ is satisfied}\\
@@ -63,6 +60,11 @@ $$\begin{aligned}
 g_i(x)-b_i & \leq M_i(1-z_i)\\
 z_1+z_2+z_3 & \geq 2
 \end{aligned}$$
+
+
+
+
+
 
 # 2. Fixed-Charge Constraints
 常见于生产问题，$S_i$ 为工厂 $i$ 的固定生产花费，$C_i$ 为每个生产的花费
@@ -82,8 +84,14 @@ y_i &= \begin{cases}
 \end{cases}
 \end{aligned}$$
 
-# 3. 应用1: Facility Location
-选择最优的工厂建设地点，用于满足销售点的进货需求，是整数规划的一个重要应用
+
+
+
+
+
+# 3. Ex: Supply vs. Demand
+
+选择最优的工厂建设地点，用于满足销售点的进货需求
 
 **<font color=blue>定义变量</font>**:
 > **销售地点** $i\in I$
@@ -98,7 +106,8 @@ y_i &= \begin{cases}
 根据是否需要使用 $K_j$，区分出两类问题 (un)capacitated facility location problem (**<font color=blue>CFL, UFL</font>**)
 
 > **销售点与工厂之间的距离** $d_{ij}$
-- $a_{ij}=1\text{ if }d_{ij}<s$ 表示在 $j$ 地建设的工厂能满足销售点 $i$ 的货物需求，反之为零
+- $a_{ij}=1\text{ if }d_{ij}<s$ 
+表示在 $j$ 地建设的工厂能满足销售点 $i$ 的货物需求，反之为零
 
 > **从工厂到销售点的单位运费** $c_{ij}$ (可以等于或正比于 $d_{ij}$)
 
@@ -138,8 +147,12 @@ y_{ij}\leq x_j \\
 \end{cases}$$
 
 
-# 4. 应用2: Machine Scheduling
-规划任务执行的顺序，以达成最优化目标，是整数规划的另一个重要应用
+
+
+
+
+# 4. Ex: Scheduling
+规划任务执行的顺序，以达成最优化目标
 
 ## 4.1 Completion time minimization (single machine)
 
@@ -153,19 +166,22 @@ y_{ij}\leq x_j \\
 而实际上，job $i$ 亦可先于亦可后于 job $j$ 执行，即意味着必须只满足下式其一：
 $$x_j\geq x_i+p_j\text{ or }x_i\geq x_j+p_i$$
 
-因此使用 [Section 1.2](#12-选择约束-constraints) 中介绍的方法，引入变量 $z_{ij}=1$ 表示 job $j$ 先于 job $i$ 执行，反之为零：
+因此使用 [Section 1.2](#12-选择约束-constraint) 中介绍的方法，引入变量 $z_{ij}=1$ 表示 job $j$ 先于 job $i$ 执行：
 $$\begin{cases}
-x_i + p_j - x_j\leq Mz_{ij}\\
-x_j + p_i - x_i\leq M(1-z_{ij})\\
-M=\sum_{j\in J}p_j\;(\text{set manually})
+x_i + p_j - x_j\leq M_1z_{ij}\\
+x_j + p_i - x_i\leq M_2(1-z_{ij})
 \end{cases}$$
+
+其中，$M_1,M_2$ 必须满足“足够大”:
+- 例如假设 $z_{ij}=1$，此时起作用的应该是第二个公式
+- 因此第一个公式应该无效化，即 $M_1>\max(x_i+p_j-x_j)$
 
 **<font color=blue>目标</font>**: 最小化所有任务的完成时间总和
 $$\min \sum_{i\in J} x_j$$
 
 $$s.t.\begin{cases}
-x_i + p_j - x_j\leq Mz_{ij}\\
-x_j + p_i - x_i\leq M(1-z_{ij})\\
+x_i + p_j - x_j\leq M_1z_{ij}\\
+x_j + p_i - x_i\leq M_2(1-z_{ij})\\
 x_j\geq p_j\\
 z_{ij}\in\{0,1\}\\
 M=\sum_{j\in J}p_j\;(\text{set manually})
@@ -180,8 +196,9 @@ M=\sum_{j\in J}p_j\;(\text{set manually})
 因此，completion time of machine $i=\sum_{j\in J}p_jx_{ij}$
 - **<font color=blue>Makespan</font>** $w$ is the max completion time
 $$w\geq \sum_{j\in J}p_jx_{ij}\;\;\;\forall i\in I$$
+
 > 下图中的 makespan 等于最后一个机器的运行时间
-<img src="/images/2022-04/Snipaste_2022-04-16_15-34-49.png"  width="80%">
+<img src="/images/2022-04/Snipaste_2022-04-16_15-34-49.png"  width="50%">
 
 **<font color=blue>目标</font>**: 最小化 makespan
 $$\min w$$
@@ -192,8 +209,11 @@ w\geq \sum_{j\in J}p_jx_{ij} &\forall i\in I \\
 \end{cases}$$
 
 
-# 5. 应用3: Vehicle Routing
 
+
+
+
+# 5. Ex: Vehicle Routing
 *以 Traveling salesperson problem 为例*
 
 **<font color=blue>目标</font>**：规划一条最短路径，从黄色结点出发，经过所有其他结点并最终返回黄色结点
@@ -221,13 +241,15 @@ $$s.t.\begin{cases}
 
 <img src="/images/2022-04/Snipaste_2022-04-22_10-31-47.png"  width="40%">
 
+
+
 ## 5.1 Eliminate subtours: method 1
 对于任意一个至少包含两个结点的结点子集 $S\subsetneqq V, |S|\geq 2$，至多只能包含 $\vert S\vert-1$ 条被规划的边，从而避免 subtour
 $$\sum_{i\in S, j\in S, i\neq j}x_{ij}\leq \vert S\vert -1$$
 
-总共有 $2^n$ 个结点子集，其中有 $n$ 个子集仅包含单个结点，一个子集不包含结点，一个子集包含 $n$ 个结点。因此<span style="background-color: yellow; color: black;">共需要 $2^n-n-2$ 个这样的约束</span>
+总共有 $2^n$ 个结点子集，其中有 $n$ 个子集仅包含单个结点，一个子集不包含结点，一个子集包含 $n$ 个结点。因此<span style="background-color: yellow; color: black;">共需要 $2^n-n-2$ 个这样的约束</span>（因此该方法的局限在于，当 $n$ 较大时需添加的<span style="background-color: yellow; color: black;">约束数量过大</span>) 
 
-该方法的局限在于，当 $n$ 较大时，需添加的<span style="background-color: yellow; color: black;">约束数量过大</spam>
+
 
 ## 5.2 Eliminate subtours: method 2
 
@@ -239,15 +261,23 @@ $$\begin{aligned}
 \end{aligned}$$
 
 对于第三个约束
-- 当 $x_{ij}=0$ 时，无事发生
+- 当 $x_{ij}=0$ 时，无事发生，因为 $u_i-u_j\leq n-2$ 一定成立
 - 当 $x_{ij}=1$ 时，$u_i-u_j\leq -1$ 能够保证结点 $V_i$ 的访问顺序先于 $V_j$，从而避免出现如下图中 $x_{53}=1$ 的情况
 
-<img src="/images/2022-04/Snipaste_2022-04-22_13-30-27.png"  width="40%">
+<img src="/images/2022-04/Snipaste_2022-04-22_13-30-27.png"  width="30%">
+
+> **至于为什么不需要考虑 $i=1$ 或 $j=1$ 的情况呢？**
+例如有四个节点1-4，上述条件能保证 $2\to3\to4$ 这条链的构成，那么对于节点1而言，有且只有两种情况 $4\to1\to2$ 或 $2\to1\to4$。第二种情况的方向看上去是错的，但其实<span style="background-color: yellow; color: black;">因为此时**环**已经形成了，所以没有必要考虑方向性的问题</span>，也就是说这两种情况是一样的且正确的
 
 相比于方法一，方法二<span style="background-color: yellow; color: black;">只需要添加 $n+(n-1)(n-2)$ 个约束</span>
 
+
+
+
+
+
 # 6. 使用 Excel 求解 IP
-## 6.1 求解 Personal scheduling
+## 6.1 Ex: Personal scheduling
 
 **<font color=blue>目标</font>**: 在满足工厂每日的在岗工人数量的需求下，最小化总的员工数量
 |日期|在岗人数（人）|
@@ -261,14 +291,37 @@ $$\begin{aligned}
 
 <img src="/images/2022-04/Snipaste_2022-04-22_13-47-49.png"  width="80%">
 
+变量 $c_j=\sum x_i,j\in\{1,2,...,7\}$ 表示指定日期在岗上班的总人数 
+
 <img src="/images/2022-04/pic0422.png"  width="80%">
 
 运行结果如下
 <img src="/images/2022-04/pic04221425.png"  width="100%">
 
-## 6.2 求解应用1 Facility location
-Snipaste_2022-04-22_16-18-08
+## 6.2 Ex: Facility location
 
+<img src="/images/2022-04/Snipaste_2022-04-22_16-18-08.png"  width="90%">
+
+$$\min \sum_{j=1}^3f_jx_j+\sum_{i=1}^3\sum_{j=1}^3c_{ij}y_{ij}$$
+
+$$s.t.\begin{cases}
+\sum_{i=1}^3 y_{ij}\leq K_jx_j & \forall j=1,2,3 \\
+\sum_{i=1}^3 y_{ij}\geq D_i & \forall i=1,2,3 \\
+x_j\in{0,1} \\
+y_{ij}\geq 0
+\end{cases}$$
+
+Excel 示例: [Excel: Integer Programming - Facility Location](../../_files/Excel/Integer_programming_Facility_location.xlsx) 
+
+<img src="/images/2022-06/Snipaste_2022-06-16_18-39-58.png"  width="100%">
+
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
 
 
 

@@ -18,7 +18,7 @@ where $f(\cdot),g_i(\cdot)$ are all **<font color=blue>linear</font>** functions
  
 > **Transformation**
 
-$g_i(x)=b_i\Leftrightarrow g_i(x)\leq b_i\text{ and }-g_i(x)\leq -b_i$
+- $g_i(x)=b_i\Leftrightarrow g_i(x)\leq b_i\text{ and }-g_i(x)\leq -b_i$
 
 > **Feasible region & optimal solutions**
 
@@ -28,7 +28,7 @@ $g_i(x)=b_i\Leftrightarrow g_i(x)\leq b_i\text{ and }-g_i(x)\leq -b_i$
 
 > **Binding constraints**
 
-$g_i(x)$ is binding at $\bar{x}$ if $g(\bar{x})=b$
+- $g_i(x)$ is binding at $\bar{x}$ if $g(\bar{x})=b$
 
 > **Vectorized & Metrics form**
 
@@ -111,7 +111,7 @@ x_1 + 2x_2 \leq 1600\\
 
 
 # 4. Python(PuLP) 求解 LP
-[例见这个 Jupyter Notebook](../../jupyterNotebooks/Linear%20Programming%20with%20PuLP.ipynb)
+[例见这个 Jupyter Notebook](../../_files/JupyterNotebook/Linear%20Programming%20with%20PuLP.ipynb)
 
 
 

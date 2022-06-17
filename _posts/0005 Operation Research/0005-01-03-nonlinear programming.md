@@ -3,9 +3,26 @@ layout: post
 title: Nonlinear Programming
 categories: Operation-Research
 description: Personal Notes
-keywords: OR, ICM
+keywords: OR,
 mathjax: true
 ---
+
+*References*
+Coursera: Operations Research (1): Models and Applications (by National Taiwan University)
+
+顾名思义，就是有着非线性的、高维的目标函数
+
+# 1. Introduction
+
+**Ex: pricing a single good**
+A product has purchasing price $c$, and selling price $p$ with selling amount $A(p)=a-bp$
+- Parameters: $a,b,c$
+- Decision variable: $p$
+- Object: maximize profit
+
+$$\max_{p\geq 0}(p-c)(a-bp)$$
+
+
 
 # 1 非线性规划的 Matlab 标准型
 $$\underset{x}{\min}\;f(x),\;\;s.t.\begin{cases}
@@ -60,8 +77,7 @@ Aeq\cdot x=beq
 [x,fval] = quadprog(H, f, A, b, Aeq, beq, LB, UB, x0, OPTIONS);
 ```
 
-## 3.2 示例
-求解以下二次规划问题：
+**<font color=blue>示例</font>**: 求解以下二次规划问题
 <center>
     <img src="/images/2021-01/Snipaste_2021-01-16_14-35-14.jpg" style="zoom:50%"> <br>
     <div style="color: #999;">图 2 二次规划示例</div>

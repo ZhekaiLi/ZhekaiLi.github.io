@@ -96,7 +96,7 @@ from sklearn.processing import ...
 ```
 ### Scale Data
 LINKs Back
-[Jupyter Notebook: Simple_neural_network_with_sklearn](../jupyterNotebooks/Simple_neural_networks_with_sklearn.ipynb)
+[Jupyter Notebook: Simple_neural_network_with_sklearn](../_files/JupyterNotebook/Simple_neural_networks_with_sklearn.ipynb)
 
 
 **Standard Scale**
