@@ -58,7 +58,7 @@ arr.mean()
 arr.std()
 arr.var()
 arr.max()
-    arr.max(axis=0) # 每行最大值（axis=1 每列）
+    arr.max(axis=1) # 每行最大值（axis=0 每列）
 
 arr.cumsum()  # 所有元素的累计和（累加） [1,2,3] >>> [1,3,6]
 arr.cumprod() # 所有元素的累计积（累乘）
@@ -113,12 +113,22 @@ np.vstack((a1, a2))
 
 ```py
 C = np.matmul(A, B)         # 矩阵乘法
-C = np.dot(A, B)            # 矩阵乘法（和 matmul 差不多
+C = np.dot(A, B)            # 矩阵乘法（和 matmul 差不多）
 u, s, vh = np.linalg.svd(C) # SVD(奇异值分解)
+
+A.sum(axis=0) # 列求和（axis=1 行求和）
 ```
 
+## 2.2 Broadcasting
+计算矩阵中每个元素在其所在列的占的比例
+
+```py
+col_sum = A.sum(axis=0)
+percent = 100*A/col_sum
+```
 
 阶乘（factorial）
+
 ```py
 np.math.factorial(n)
 ```

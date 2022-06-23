@@ -8,6 +8,8 @@ keywords: keyword1, keyword2
 
 <span style="background-color: yellow; color: black;">高亮</span>
 
+**<font color=blue>蓝色</font>**
+
 <u>下划线</u>
 
 ~~删除线~~
@@ -54,6 +56,7 @@ $\dot u$
 
 **运算符**
 乘号 $\times$
+约等于 $\approx$
 加减号 $\pm$
 不等号 $\neq, \leq, \geq$
 累乘 $\prod$
@@ -66,6 +69,7 @@ $\zeta$
 波浪号 $\sim$
 增大括号 $[,\big[, \Big[, \bigg[, \Bigg[$
 花体效果 $\mathbb{E}, \mathcal{E}, \mathscr{E}$
+箭头 $\to, \implies, \iff$
 双箭头 $\Leftrightarrow, \leftrightarrow$
 
 

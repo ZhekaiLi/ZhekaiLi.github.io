@@ -10,6 +10,205 @@ topmost: true
 
 [Jupyter Notebook: Simple neural network with sklearn](../../_files/JupyterNotebook/Simple_neural_networks_with_sklearn.ipynb) 展示了一个简单的神经网络示例: 使用 `sklearn.neural_network.MLPRegressor()` 作为神经网络，根据波士顿地区房子的房间个数来预测房子的售价
 
+# 1. Logistic Regression as a Neural Network
+
+[Jupyter Notebook: Logistic Regression with a Neural Network](/_files/JupyterNotebook/Logistic_Regression_with_a_Neural_Network_mindset.ipynb) 展示了一个极简”神经网络“（用来判断图片中是否包含猫）: 只使用一个神经元（使用逻辑回归构建）
+
+为什么叫“逻辑回归”呢？其实是音译，本质上是因为在线性的预测结果上套了一层 logistic function (sigmoid)，从而让预测结果 $\in(0,1)$
+
+## 1.1 Model
+
+<img src="/images/2022-06/Snipaste_2022-06-21_21-22-54.png"  width="80%">
+
+- Given $x\in\R^{n_x}$, want $\hat{y}=P(y=1\vert x)$
+- Prameters: $\omega\in\R^{n_x},b\in\R$
+- Output $\hat{y}=\sigma{(\omega^Tx+b)}$
+
+> Sigmoid Function: $\sigma(z)=1/(1+e^{-z})$
+<img src="/images/2022-06/Snipaste_2022-06-18_10-25-28.png"  width="50%">
+
+
+
+## 1.2 Cost Function
+**Object**: Given $\{(x^{(1)},y^{(1)}),...,(x^{(m)},y^{(m)})\}$, want $\hat{y}^{(i)}=\sigma(\omega^Tx^{(i)}+b)\approx y^{(i)}$
+- Loss function:
+$$\mathcal{L}(\hat y,y)=-(y\log\hat{y}+(1-y)\log(1-\hat{y}))$$
+- Cost function:
+$$J(\omega,b)=\frac{1}{m}\sum_{i=1}^m\mathcal{L}(\hat{y}^{(i)},y^{(i)})$$
+
+
+
+## 1.3 Gradient Descent
+**Object**: optimize $w,b$ to minimize $J(w,b)$
+
+**Process**: repeat ($\alpha$ is the learning rate, usually from 0.0001 to 0.01)
+
+$$\omega:=\omega-\alpha\frac{\partial J(\omega,b)}{\partial\omega}$$
+
+$$b:=b-\alpha\frac{\partial J(\omega,b)}{\partial b}$$
+
+<center><img src="/images/2022-06/Snipaste_2022-06-18_10-53-56.png"  width="60%"></center>
+
+
+
+## 1.4 Calculate Derivatives & Vectorization
+
+<img src="/images/2022-06/Snipaste_2022-06-18_14-55-10.png"  width="100%">
+
+$$\text{d}a=\frac{d\mathcal{L}(a,y)}{da}=-\frac{y}{a}+\frac{1-y}{1-a}$$
+
+$$\text{d}z=\frac{d\mathcal{L}}{dz}=\frac{d\mathcal{L}}{da}\times\frac{da}{dz}=(-\frac{y}{a}+\frac{1-y}{1-a})[a(1-a)]=a-y$$
+
+$$\frac{\partial\mathcal{L}}{\partial\omega_1}=x_1\text{d}z,\;\frac{\partial\mathcal{L}}{\partial\omega_2}=x_2\text{d}z,\;\frac{\partial\mathcal{L}}{\partial b}=\text{d}z$$
+
+**Vectorization**:
+
+$$X=\left[\begin{array}{}
+|       & |   & |\\
+x^{(1)} & ... & x^{(m)}\\
+|       & |   & |\\ 
+\end{array}\right]_{n_x\times m}\; \omega=\left[\begin{array}{}
+\omega_1\\
+...  \\
+\omega_{n_x}\\ 
+\end{array}\right]\;\;\;\;\;\;Y=[y^{(1)},...,y^{(m)}]$$
+
+$$Z=[z^{(1)},...,z^{(m)}]=\omega^TX+b_{1\times m}$$
+
+$$A=[a^{(1)},...,a^{(m)}]=\sigma(Z)$$
+
+$$\text{d}Z=[\text{d}z^{(1)},...,\text{d}z^{(m)}]=A-Y=[a^{(1)}-y^{(1)},...,a^{(m)}-y^{(m)}]$$
+
+$$\text{d}\omega=\frac{1}{m}X(\text{d}Z)^T$$
+
+$$\text{d}b=\frac{1}{m}\sum_{i=1}^m\text{d}z^{(i)}$$
+
+
+**In Python**
+
+```py
+for iter in range(1000):
+    Z = np.dot(w.T,X) + b
+    A = Sigmoid(Z)
+    dZ = A - Y
+    dw = np.dot(X,dZ.T)/m
+    db = np.sum(dZ)/m
+    
+    w = w - alpha*dw
+    b = b - alpha*db
+```
+
+
+
+
+
+# 2. Neural Network
+上一节介绍了单个 Logistic Regression 神经元，而神经网络则是由多个这样的神经元组成的多重网状结构
+
+<img src="/images/2022-06/Snipaste_2022-06-22_09-25-28.png"  width="100%">
+
+**Representation**
+
+下图展示了一个 2 layer NN (1 hidden + 1 output)，使用右上角方框内的数字表示层数
+
+<img src="/images/2022-06/Snipaste_2022-06-22_09-41-13.png"  width="100%">
+
+## 2.1 Forward Propagation
+
+$$W^{[1]}=\left[\begin{array}{}
+—       & \omega_1^{[1]}   & —\\
+—       & \omega_2^{[1]}   & —\\
+—       & \omega_3^{[1]}   & —\\
+—       & \omega_4^{[1]}   & —\\
+\end{array}\right]_{4\times 3}\; x=\left[\begin{array}{}
+x_1\\
+x_2 \\
+x_3\\ 
+\end{array}\right]$$
+
+$$(z^{[1]})_{4\times 1}=W^{[1]}x+b^{[1]}\;\;\;\;a^{[1]}=\sigma(z^{[1]})$$
+
+$$z^{[2]}=(W^{[2]})_{1\times 4}a^{[1]}+b^{[2]}\;\;\;\;a^{[2]}=\sigma(z^{[2]})$$
+
+**Vectorization with $m$ samples**
+
+$$X=\left[\begin{array}{}
+|       & |   & |\\
+x^{(1)} & ... & x^{(m)}\\
+|       & |   & |\\ 
+\end{array}\right]_{3\times m}$$
+
+$$(Z^{[1]})_{4\times m}=W^{[1]}X+b^{[1]}\;\;\;\;A^{[1]}=\sigma(Z^{[1]})$$
+
+$$(Z^{[2]})_{1\times m}=(W^{[2]})_{1\times 4}A^{[1]}+b^{[2]}\;\;\;\;A^{[2]}=\sigma(Z^{[2]})$$
+
+
+
+## 2.2 Activation Functions
+
+<img src="/images/2022-06/Snipaste_2022-06-23_11-14-59.png"  width="100%">
+
+> **Sigmoid**
+
+一般只作为 Binary Classification 的 output layer's activation funcction
+
+> **tanh**
+
+**Better than Sigmoid** if want strong derivatives & big learning steps. 因为当 $x$ 的值在0附近时，tanh 的斜率要大于 Sigmoid
+
+> **ReLU** (Rectified Linear Unit)
+
+**Mostly used**. 相较于 Sigmoid 和 tanh，ReLU 右侧的斜率始终为1，这避免了像 Sigmoid 那样当 $x$ 数值较大时因为斜率过低而导致学习速率过慢的情况
+
+**Why need NON-linear activation functions?**
+
+可以发现上述所有的激活函数都是非线性的，这是因为n层线性的激活函数等同于1层
+
+$$a^{[2]}=W^{[2]}a^{[1]}+b^{[2]}=W^{[2]}(W^{[1]}x+b^{[1]})+b^{[2]}=W'x+b'$$
+
+**Derivatives**
+
+$$g(z)=\frac{1}{1+e^{-z}}\;\;\;\;\frac{d}{dz}g(z)=g(z)(1-g(z))$$
+
+$$g(z)=\tanh(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}\;\;\;\;\frac{d}{dz}g(z)=1-g^2(z)$$
+
+对于 ReLU and Leaky ReLU, 它们的求导为常数
+
+## 2.3 Backward Propagation (Gradient Descent)
+
+例如对下图神经网络，假设 Hidden Layer 使用 $g(x)$ 作为激活函数，Output Layer 使用 $g(x)=\sigma(x)$ 作为激活函数
+<img src="/images/2022-06/Snipaste_2022-06-23_14-47-31.png"  width="50%">
+
+**Layer Dimensions**: 使用 $n^{[i]}$ 表示每个 Layer 中神经元（或是输入输出）的个数
+- $n^{[0]}=n_x=3$
+- $n^{[1]}=4$
+- $n^{[2]}=1$
+
+**Parameters**: $W^{[1]}_{(n^{[1]},n^{[0]})},b^{[1]}_{(n^{[1]},1)},W^{[2]}_{(n^{[2]},n^{[1]})},b^{[2]}_{(n^{[2]},1)}$
+
+**Cost Function:** $J(W^{[1]},b^{[1]},W^{[2]},b^{[2]})=\frac{1}{m}\sum\mathcal{L}(\hat y,y)$
+
+### 2.3.1 Gradient Descent
+
+因为 Output Layer (第二层) 使用 $g(x)=\sigma(x)$，参照 Chapter 1.4
+
+$dZ^{[2]}=A^{[2]}-Y$
+$dW^{[2]}=(1/m)dZ^{[2]}(A^{[2]})^T$
+$db^{[2]}=(1/m)\sum dZ^{[2]}$
+
+$dA^{[1]}=$
+
+
+
+
+
+
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+
 A neuron can have many inputs and outputs.
 
 
