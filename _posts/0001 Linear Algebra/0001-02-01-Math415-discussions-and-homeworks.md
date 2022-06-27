@@ -44,7 +44,7 @@ $$[A\;|\;B]\to[I\;|\;X]$$
 若是求解 $XA=B$, given $A,B$, 不妨先观察一下 $A,B$ 两者间是否存在关系 (是否可以通过 elimination or permutation 由 $A$ 得到 $B$)
 
 ## 2.3
-![pic1](/images/202010201539.JPG)
+![pic1](/images/2020/202010201539.JPG)
 
 ## 2.4 LU Factorization
 1. 计算 $L=E^{-1}$ 时, 一个一个把 $E_{ij}^{-1}$ 乘起来就行 (将 $E_{ij}$ 非对角元素取负即可得到 $E_{ij}^{-1}$)
@@ -63,7 +63,7 @@ $$\text{If }\begin{cases}
 \end{cases}$$
 
 ## 3.2
-> ![pic2](/images/202010201653.JPG)
+> ![pic2](/images/2020/202010201653.JPG)
 
 这道题的解法真的很妙，
 1. $A$ is nonsingular: $$ Ax=0 \iff x = 0$$

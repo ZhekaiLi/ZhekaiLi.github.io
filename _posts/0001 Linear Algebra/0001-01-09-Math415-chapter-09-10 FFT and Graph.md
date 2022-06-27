@@ -68,7 +68,7 @@ $$a_{ij}=\begin{cases}
 \end{cases}$$
 
 例如
-![pic1](/images/202010231651.JPG)
+![pic1](/images/2020/202010231651.JPG)
 
 **$m,n$ 之间的关系**
 1. $m_{max}=\frac{1}{2}n(n-1)$

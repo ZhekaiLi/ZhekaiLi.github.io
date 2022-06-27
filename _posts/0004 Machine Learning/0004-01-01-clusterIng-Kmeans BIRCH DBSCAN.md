@@ -122,7 +122,7 @@ while LSE_last != LSE:
 colors = np.array(['#377eb8', '#ff7f00', '#4daf4a', '#a65628'])
 plt.scatter(X[:, 0], X[:, 1], color = colors[clusters]
 ```
-![pic1](/images/Snipaste_2020-11-27_20-28-31.jpg)
+![pic1](/images/2020/Snipaste_2020-11-27_20-28-31.jpg)
 
 ### 2.3.2 Use KMeans in sklearn
 ```py
@@ -150,7 +150,7 @@ The running time of my code is **at most half** of that of KMeans in sklearn. Th
 1. Need the number of clusters $k$ first.
 2. Sensitive to the initial centroids. For example, the unsuitable initial centroids make the result looked awful. The algorithm **Kmeans++** introduced next could help to avoid that.
 
-![pic2](/images/Snipaste_2020-11-27_21-28-31.jpg)
+![pic2](/images/2020/Snipaste_2020-11-27_21-28-31.jpg)
 
 3. Suitable for only circle like distribution, and therefore does not work well on other distribution shapes. For example,
 

@@ -176,7 +176,7 @@ $$g(z)=\tanh(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}\;\;\;\;\frac{d}{dz}g(z)=1-g^2(z)$$
 
 ## 2.3 Backward Propagation (Gradient Descent)
 
-例如对下图神经网络，假设 Hidden Layer 使用 $g(x)$ 作为激活函数，Output Layer 使用 $g(x)=\sigma(x)$ 作为激活函数
+例如对下图神经网络，假设 Hidden Layer 使用未知激活函数 $g(x)$，Output Layer 使用 $g(x)=\sigma(x)$ 作为激活函数
 <img src="/images/2022-06/Snipaste_2022-06-23_14-47-31.png"  width="50%">
 
 **Layer Dimensions**: 使用 $n^{[i]}$ 表示每个 Layer 中神经元（或是输入输出）的个数
@@ -184,30 +184,106 @@ $$g(z)=\tanh(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}\;\;\;\;\frac{d}{dz}g(z)=1-g^2(z)$$
 - $n^{[1]}=4$
 - $n^{[2]}=1$
 
-**Parameters**: $W^{[1]}_{(n^{[1]},n^{[0]})},b^{[1]}_{(n^{[1]},1)},W^{[2]}_{(n^{[2]},n^{[1]})},b^{[2]}_{(n^{[2]},1)}$
 
-**Cost Function:** $J(W^{[1]},b^{[1]},W^{[2]},b^{[2]})=\frac{1}{m}\sum\mathcal{L}(\hat y,y)$
+Output Layer(第二层): 因为使用 $g(x)=\sigma(x)$，直接参照 Chapter 1.4
 
-### 2.3.1 Gradient Descent
+$$\begin{aligned}
+(dZ^{[2]})_{1\times m} &= A^{[2]}-Y \\
+(dW^{[2]})_{1\times 4} &= \frac{1}{m}dZ^{[2]}(A^{[1]})^T\\
+(db^{[2]})_{1\times 1} &= \frac{1}{m}\text{np.sum}(dZ^{[2]},\text{axis}=1,\text{keepdims=True})
+\end{aligned}$$
 
-因为 Output Layer (第二层) 使用 $g(x)=\sigma(x)$，参照 Chapter 1.4
+Hidden Layer(第一层): 使用未知激活函数（下式第一行中间的小点表示点乘）
 
-$dZ^{[2]}=A^{[2]}-Y$
-$dW^{[2]}=(1/m)dZ^{[2]}(A^{[2]})^T$
-$db^{[2]}=(1/m)\sum dZ^{[2]}$
-
-$dA^{[1]}=$
-
-
+$$\begin{aligned}
+(dZ^{[1]})_{4\times m} &= W^{[2]T}dZ^{[2]}\cdot \dot g^{[1]}(Z^{[1]}) \\
+(dW^{[1]})_{4\times 3} &= \frac{1}{m}dZ^{[1]}(X^T)_{m\times 3}\\
+(db^{[1]})_{4\times 1} &= \frac{1}{m}\text{np.sum}(dZ^{[1]},\text{axis}=1,\text{keepdims=True})
+\end{aligned}$$
 
 
 
+## 2.4 Random Initialization
+
+一般会把 $W_{init}$ 设置为一个比较小的随机数，把 $b_{init}$ 设置为 0
+
+```py
+W1 = np.random.rand((4,3) * 0.01)
+b1 = np.zeros((4,1))
+```
+
+> **为什么不把 $W_{init}$ 也设置为 0?**
+<img src="/images/2022-06/Snipaste_2022-06-24_10-18-20.png"  width="80%">
+例如对于上图，如果把 $W_init$ 也设置为 0，那么 Hidden Layer 中两个神经元的初始公式就会一样，这会导致在反向传播的过程中它们所进行的更新也是同步的，因此就变成了两个一样的神经元
+
+
+
+
+# 3. Deep L-layer Neural Network
+
+
+<img src="/images/2022-06/Snipaste_2022-06-26_10-51-49.png"  width="100%">
+
+**Notations**
+
+$L=4$ (#layers)
+$n^{[l]}=$ #units in layer $l$ ($n^{[0]}=n_x=3,n^{[1]}=n^{[2]}=5,...$)
+$a^{[l]}=g^{[l]}(z^{[l]})$ activations in layer $l$
+$W^{[l]},b^{[l]}$ weights for $z^{[l]}$
+
+
+## 2.1 Forward & Backward Propagation
+<img src="/images/2022-06/IMG_BCA9795F89A1-1.png"  width="100%">
+
+**Forward Propagation**
+Input $A^{[l-1]}$
+
+Output $A^{[l]}$, cashe$(Z^{[l]},W^{[l]})$
+
+$$(Z^{[l]})_{n^{[l]}\times m}=(W^{[l]})_{n^{[l]}\times n^{[l-1]}}(A^{[l-1]})_{n^{[l-1]}\times m}+(b^{[l]})_{n^{[l]}\times 1}$$
+
+$$A^{[l]}=g^{[l]}(Z^{[l]})$$
+
+where $A^{[0]}=X,A^{[L]}=\hat{Y}$
+
+**Backward Propagation**
+
+Input $dA^{[l]}$
+
+Output $dA^{[l-1]},dW^{[l]},db^{[l]}$
+
+$$dZ^{[l]}=dA^{[l]}\cdot \dot g^{[l]}(Z^{[l]})$$
+
+$$dW^{[l]}=\frac{1}{m}dZ^{[l]}(A^{[l-1]})^T$$
+
+$$db^{[l]}=\frac{1}{m}\text{np.sum}(dZ^{[l]},\text{axis}=1,\text{keepdims}=1)$$
+
+$$dA^{[l-1]}=(W^{[l]})^TdZ^{[l]}$$
+
+
+
+
+## 2.2 Parameters vs. Hyperparameters
+
+Parameters: $W^{[1]},b^{[1]},W^{[2]},b^{[2]}...$
+
+Hyperparameters:
+- learning rate $\alpha$ 
+- #iterations
+- #hidden layer $L$
+- #hidden units of layer $l$
+- choice of activation functions
 
 <img src="/images/2022-06/.png"  width="100%">
 <img src="/images/2022-06/.png"  width="100%">
 <img src="/images/2022-06/.png"  width="100%">
 <img src="/images/2022-06/.png"  width="100%">
 <img src="/images/2022-06/.png"  width="100%">
+
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+<img src="/images/2022-06/.png"  width="100%">
+
 
 A neuron can have many inputs and outputs.
 

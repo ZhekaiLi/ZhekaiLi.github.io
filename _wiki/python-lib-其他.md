@@ -71,8 +71,8 @@ folium.Map(location=None,
 参数:
 1. `location=[LAT, LON]` 经纬度坐标位置
 2. `tiles` 显示样式，默认为'OpenStreetMap'，也就是开启街道显示 (上、左下、右下分别对应 OpenStreetMap, Stamen Toner, and Stamen Terrain)
-![pic1](/images/Snipaste_2020-12-06_22-06-54.jpg)
-![pic2](/images/Snipaste_2020-12-06_22-07-14.jpg)
+![pic1](/images/2020-12/Snipaste_2020-12-06_22-06-54.jpg)
+![pic2](/images/2020-12/Snipaste_2020-12-06_22-07-14.jpg)
 3. `zoom_start` 缩放值，默认为 10
 4. `crs` 地理坐标参考系统，默认为 'EPSG3857'
 

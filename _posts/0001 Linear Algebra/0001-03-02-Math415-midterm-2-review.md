@@ -10,7 +10,7 @@ mathjax: true
 
 **多看看 L19**
 
-![pic1](/images/Snipaste_2020-11-24_11-18-12.jpg)
+![pic1](/images/2020/Snipaste_2020-11-24_11-18-12.jpg)
 
 ## D4
 
@@ -30,10 +30,10 @@ $$p=Pb,\text{where }P=A(A^TA)^{-1}A^T$$
 > **D6.1, D6.2**
 [Week-08 L13.3](https://zhekaili.github.io/0001/04/08/Math415-slides-week-08/#133-properties-of-determinants) 中列举的行列式的部分性质，可以在求矩阵行列式时提供一定的帮助，例如
 
-![pic5](/images/Snipaste_2020-11-24_22-40-58.jpg)
+![pic5](/images/2020/Snipaste_2020-11-24_22-40-58.jpg)
 
 再例如
-![pic6](/images/Snipaste_2020-11-25_08-56-48.jpg)
+![pic6](/images/2020/Snipaste_2020-11-25_08-56-48.jpg)
 其中红框等式之所以成立，是因为从左至右相当于做了两次行交换，从 $[1;2;3]\to[3;1;2]$
 
 
@@ -118,11 +118,11 @@ HW5.4 见 [Week-05](https://zhekaili.github.io/0001/04/05/Math415-slides-week-05
 ## HW6
 
 > **HW6.6**
-> ![pic2](/images/Snipaste_2020-11-24_20-50-53.jpg)
+> ![pic2](/images/2020/Snipaste_2020-11-24_20-50-53.jpg)
 
 红框内等式成立是由于 $P_2$ 所映射的空间包含了 $P_1$ 所映射的空间，因此如果换位置则不一定成立 $P_1P_2\neq P_2$。当然这道题老老实实分别算出 $P_1,P_2$ 再乘起来也完全 OK
-![pic3](/images/Snipaste_2020-11-24_20-31-47.jpg)
-![pic4](/images/Snipaste_2020-11-24_20-47-13.jpg)
+![pic3](/images/2020/Snipaste_2020-11-24_20-31-47.jpg)
+![pic4](/images/2020/Snipaste_2020-11-24_20-47-13.jpg)
 如果 $A$ 的形式比较简单，可以直接用 $\hat{x}=(A^TA)^{-1}A^Tb$
 
 HW6.7, HW6.8 略

@@ -114,6 +114,7 @@ np.vstack((a1, a2))
 ```py
 C = np.matmul(A, B)         # 矩阵乘法
 C = np.dot(A, B)            # 矩阵乘法（和 matmul 差不多）
+C = np.multiply(A, B)       # 点乘（各元素相乘）
 u, s, vh = np.linalg.svd(C) # SVD(奇异值分解)
 
 A.sum(axis=0) # 列求和（axis=1 行求和）
@@ -133,16 +134,21 @@ percent = 100*A/col_sum
 np.math.factorial(n)
 ```
 
-## 3. numpy.random
-从指定**范围**内随机选择
+# 3. numpy.random
+从指定**范围**内随机选择（生成x行y列的随机二位数组）
+
 ```py
-# 从[0,1)中生成x行y列的随机多维数组
+# [0,1)
 np.random.rand(x, y)
-# 从[5,15)中生成x行y列的随机多维数组
+# [5,15)
 np.random.rand(x, y) * 10 + 5
+
+# 正态分布（mean 0 variance 1）
+np.random.randn(x, y)
 ```
 
 从指定**列表**中随机选择
+
 ```py
 # 等概率随机（可以反复选取同一个元素）
 np.random.choise([1,2,3], size=2, replace=True)

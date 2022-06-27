@@ -54,7 +54,7 @@ $$x\cdot A^Ty=x^T(A^Ty)=(Ax)^Ty=0^Ty=0$$
 >
 > 通过计算 $A^2$ 是否等于 $A$ 来判断该矩阵是否可以是 projection matrix 
 
-![pic5](/images/Snipaste_2020-11-01_14-21-17.jpg)
+![pic5](/images/2020/Snipaste_2020-11-01_14-21-17.jpg)
 
 如图，若 $p_1$ 是 $b$ 经 $P_1$ 在 $S$ 上的投影，而 $p_2$ 是 $b$ 经 $P_2$ 在 $S^\perp$ 上的投影，可得
 1. $b=p_1+p_2$
@@ -68,7 +68,7 @@ $$x\cdot A^Ty=x^T(A^Ty)=(Ax)^Ty=0^Ty=0$$
 
 计算 $\hat{x}$
 
-![pic6](/images/Snipaste_2020-11-01_14-34-12.jpg)
+![pic6](/images/2020/Snipaste_2020-11-01_14-34-12.jpg)
 
 这里的 $\hat{x}$ 为系数，类似于 [Math415 Week-05](https://zhekaili.github.io/2020/11/22/Math415-slides-week-05/) 中 L8.2.1 的 $c,d$, 因此当映射空间的维度为 $1$ 时, $p=\hat{x}a=a\hat{x}$。再由 $p=Pb$ 可得（下面两式其实是一样的）
 $$P_{line}=\frac{aa^T}{a^Ta}, P_{plane}=A(A^TA)^{-1}A^T$$
@@ -83,14 +83,14 @@ When $P$ projects onto one subspace, $I - P$ projects onto the perpendicular sub
 
 进一步的，对于被投影的子空间 $A_{m\times n}$，以及 $p_{m\times 1},b_{m\times 1},P_{m\times m}$，可得关于 $\hat{x},p,P$ 的表达式 (前提是 $A$ 列满秩，即 $r=n$)
 
-![pic7](/images/Snipaste_2020-11-01_14-55-01.jpg)
+![pic7](/images/2020/Snipaste_2020-11-01_14-55-01.jpg)
 
 **Warning** 
 对于 $P$ 的表达式，不能把 $(A^TA)^{-1}$ 拆成 $A^{-1}A^{-T}$，因为 $A$ 本身就是不可逆的（如果能拆的话，就会得出 $P=I$，离谱）
 
 
 **Fact**
-![pic8](/images/Snipaste_2020-11-01_15-16-56.jpg)
+![pic8](/images/2020/Snipaste_2020-11-01_15-16-56.jpg)
 
 - **Proof** 
 $$A^TAx=0\to x^TA^TAx=0\to(Ax)^T(Ax)=0\to Ax=0$$ 
@@ -100,13 +100,13 @@ $$A^TAx=0\to x^TA^TAx=0\to(Ax)^T(Ax)=0\to Ax=0$$
 
 对于 $e=b-p=b-Ax$，为了 minimize error，即使得 $e=0$，要想找到 $x$，那么 $Ax=b$ 必须有解。但是对于大部分情况而言，$Ax=b$ 无解（通常由于表达式多于未知数），此时 $\|e\|>0$
 
-![pic9](/images/Snipaste_2020-11-01_16-53-10.jpg)
+![pic9](/images/2020/Snipaste_2020-11-01_16-53-10.jpg)
 
 ### 4.3.1 Minimizing the Error
 
-![pic10](/images/Snipaste_2020-11-01_19-57-04.jpg)
+![pic10](/images/2020/Snipaste_2020-11-01_19-57-04.jpg)
 
-![pic11](/images/Snipaste_2020-11-01_19-58-29.jpg)
+![pic11](/images/2020/Snipaste_2020-11-01_19-58-29.jpg)
 
 以上是从代数的角度来 minimize $e$，如果换成从 calculus 的角度，就相当于求解当偏微分等于 $0$ 时 $x$ 的值，结果是相同的 (见 Math415 Week-07 **L12.1**)
 
@@ -117,17 +117,17 @@ The partial derivatives of $\vert\vert Ax-b\vert\vert^2$ are zero when $A^TA\hat
 当 $Ax=b$ 无解时，big picture 将变为以下形式
 为了计算方便，假使 $A$ 的列满秩，因此下图中 $N(A)$ 只有一个点
 
-![pic12](/images/Snipaste_2020-11-02_10-08-10.jpg)
+![pic12](/images/2020/Snipaste_2020-11-02_10-08-10.jpg)
 
 ### 4.3.3 Fitting a Straight Line
 
 **Example 1**
-![pic13](/images/Snipaste_2020-11-02_10-16-30.jpg)
-![pic14](/images/Snipaste_2020-11-02_10-16-40.jpg)
+![pic13](/images/2020/Snipaste_2020-11-02_10-16-30.jpg)
+![pic14](/images/2020/Snipaste_2020-11-02_10-16-40.jpg)
 
 **Example 2**
 这个例子说明当 $A$ 的列向量 orthogonal 时，$A^TA$ 会呈现出良好的对角矩阵的形式
-![pic15](/images/Snipaste_2020-11-02_10-29-50.jpg)
+![pic15](/images/2020/Snipaste_2020-11-02_10-29-50.jpg)
 
 
 ### 4.3.4 Dependent Columns in $A$: What is $\hat{x}$?
@@ -146,7 +146,7 @@ $$\bf{q}_i^T\bf{q}_j=\begin{cases}
 \end{cases}$$
 A matrix with orthonormal columns is assigned the special letter $\bf{Q}$.
 
-![pic16](/images/Snipaste_2020-11-02_10-48-39.jpg)
+![pic16](/images/2020/Snipaste_2020-11-02_10-48-39.jpg)
 
 由于 $Q^{-1}Q=I$，因 $Q^{-1}=Q^T$ (这些是当 $Q$ 为**方阵**的时候才满足的性质，再比如 $QQ^T=Q^TQ=I$)
 
@@ -162,10 +162,10 @@ A matrix with orthonormal columns is assigned the special letter $\bf{Q}$.
    1 & 0 & 0
 \end{bmatrix}$
 
-![pic17](/images/Snipaste_2020-11-02_11-07-56.jpg)
+![pic17](/images/2020/Snipaste_2020-11-02_11-07-56.jpg)
 
 ### 4.4.1 Projections Using Orthonormal Bases: $Q$ Replaces $A$
-![pic18](/images/Snipaste_2020-11-02_11-11-08.jpg)
+![pic18](/images/2020/Snipaste_2020-11-02_11-11-08.jpg)
 
 如果 $A$ 本身就是一个 orthonormal matrix，令 $Q=A$，那么就满足
 $$p=Q\hat{x}=QQ^Tb$$
@@ -175,8 +175,8 @@ $$p=b,P=I$$
 ### 4.4.2 The Gram-Schmidt Process
 
 ### 4.4.3 The Factorization $A=QR$
-![pic19](/images/Snipaste_2020-11-24_20-31-47.jpg)
+![pic19](/images/2020/Snipaste_2020-11-24_20-31-47.jpg)
 
 then from $A^TA\hat{x}=A^Tb$, we get
 
-![pic20](/images/Snipaste_2020-11-24_20-47-13.jpg)
+![pic20](/images/2020/Snipaste_2020-11-24_20-47-13.jpg)

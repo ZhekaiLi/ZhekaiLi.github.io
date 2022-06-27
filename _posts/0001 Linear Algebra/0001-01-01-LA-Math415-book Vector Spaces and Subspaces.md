@@ -29,18 +29,18 @@ then we get $[\;R\;\bf{d}\;]$
 
 求解 $x_p$：将所有 free columns 对应的 free variables 均设为 $0$, 再求解剩下的 pivots varibales
 
-![pic1](/images/202010100941.JPG)
+![pic1](/images/2020/202010100941.JPG)
 
 求解 $x_n$ 的具体过程在 Chapter 3.2 中有详细的介绍，总的来说就是分别将每个 free variable 设为 $1$，其他 free varibales 设为 $0$，再求出对应的 pivots variables 的值（例如下图中一个令 $x_2=1$，另一个令 $x_4=1$）
 
-![pic2](/images/202010100942.JPG)
-![pic3](/images/202010100945.JPG)
+![pic2](/images/2020/202010100942.JPG)
+![pic3](/images/2020/202010100945.JPG)
 
-![pic4](/images/202010101005.JPG)
-![pic5](/images/202010101006.JPG)
+![pic4](/images/2020/202010101005.JPG)
+![pic5](/images/2020/202010101006.JPG)
 上图中的第三点和第二点其实在讲同一个东西
-![pic6](/images/202010101007.JPG)
-![pic7](/images/202010101008.JPG)
+![pic6](/images/2020/202010101007.JPG)
+![pic7](/images/2020/202010101008.JPG)
 
 $r<m$ means there are $m-r$ zero rows
 $r<n$ means there are $n-r$ free columns 
