@@ -221,6 +221,9 @@ b1 = np.zeros((4,1))
 
 # 3. Deep L-layer Neural Network
 
+[Jupyter Notebook: Build Deep Neural Network Step by Step](/_files/JupyterNotebook/Building_your_Deep_Neural_Network_Step_by_Step/Building_your_Deep_Neural_Network_Step_by_Step.ipynb) 展示了构建深层神经网络的详细过程
+
+[Jupyter Notebook: Deep Neural Network (Application)](/_files/JupyterNotebook/Deep_Neural_Network-Application/Deep_Neural_Network-Application.ipynb) 在具体图像分类问题上应用上一个 Notebook 中所定义的函数
 
 <img src="/images/2022-06/Snipaste_2022-06-26_10-51-49.png"  width="100%">
 
