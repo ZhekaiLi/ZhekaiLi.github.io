@@ -315,30 +315,13 @@ Excel 示例: [Excel: Integer Programming - Facility Location](../../_files/Exce
 
 <img src="/images/2022-06/Snipaste_2022-06-16_18-39-58.png"  width="100%">
 
-<img src="/images/2022-06/.png"  width="100%">
-<img src="/images/2022-06/.png"  width="100%">
-<img src="/images/2022-06/.png"  width="100%">
-<img src="/images/2022-06/.png"  width="100%">
-<img src="/images/2022-06/.png"  width="100%">
-<img src="/images/2022-06/.png"  width="100%">
-<img src="/images/2022-06/.png"  width="100%">
 
 
 
 
-
-
-
-
-
-
-
-
-
----
-
-相较于线性规划，整数规划要复杂的多，一般可以用以下几种方法来求解
-# 一、分支定界法
+# 使用 Matlab 求解 IP
+相较于线性规划，"整数"这一限制难以在 Matlab 中约束
+## 1 分支定界法
 分支定界法主要由三步构成，分支、定界和剪枝：
 1. **分支**：根据线性规划的结果，把可行解空间反复分割为越来越小的子集。
 2. **定界**：对分支后的每个子集，使用线性规划计算其目标上界和下界。
@@ -352,10 +335,10 @@ x,y\in N
 \end{cases}$$
 
 下图展示了分支定界法的大致流程（该示例与上题无关）
+
 <center>
-    <img src="/images/2021-01/Snipaste_2021-01-25_19-11-53.jpg" style="zoom:50%"> <br>
-    <div style="color: #999;">图 1-1 示例：分支定界法（该示例与上题无关）</div>
-</center><br>
+<img src="/images/2021-01/Snipaste_2021-01-25_19-11-53.jpg" style="zoom:70%">
+</center>
 
 ### 1.1 第一层分支：$B_1,B_2$
 使用线性规划求最优解（非整数），可得 $x=4.81,y=1.82,z=355.88$
@@ -385,7 +368,7 @@ x\geq 5\\
 x,y\in N
 \end{cases}$$
 
-#### 定界
+### 1.2 对第一层定界
 分别对 $B_1,B_2$ 使用线性规划求最优解（代码略），可得：
 $$\begin{aligned}
 & B_1: x=4,y=2.1,z=349\\
@@ -393,7 +376,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 此时更新目标最优值的上下界 $z\in[0,349]$
-### 1.2 第二层分支：$B_{11},B_{12},B_{21},B_{22}$
+### 1.3 第二层分支：$B_{11},B_{12},B_{21},B_{22}$
 同分支 1，此时可以利用 $y$ 进行分支：
 $$\begin{aligned}
 & B_1: y=2.1\to y\in[0,2]+y\in[3,\infty)\\
@@ -402,7 +385,7 @@ $$\begin{aligned}
 
 从而得到新的分支 $B_{11},B_{12},B_{21},B_{22}$
 
-#### 定界
+### 1.4 对第二层定界
 同 1.2，
 $$\begin{aligned}
 & B_{11}: x=4,y=2,z=340\\
@@ -417,12 +400,11 @@ $$\begin{aligned}
 
 同理，剪去 $B_{21}, B_{22}$（**剪枝 2**），并最终得到该整数规划的最优解 $B_{11}: x=4,y=2,z=340$
 
-# 二、蒙特卡罗法
+## 2 蒙特卡罗法
 当解空间过大时，可以使用概率的方法随机选择部分解尽心验证，当随机解足够多是便能大概率获得最优解。例如求解以下非线性规划的问题：
 <center>
-    <img src="/images/2021-01/Snipaste_2021-01-16_10-57-39.jpg" style="zoom:80%"> <br>
-    <div style="color: #999;">图 2-1 蒙特卡罗法示例</div>
-</center><br>
+    <img src="/images/2021-01/Snipaste_2021-01-16_10-57-39.jpg" style="zoom:80%">
+</center>
 
 ```matlab
 rng(sum(clock));  % 根据时间改变随机种子

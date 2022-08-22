@@ -108,7 +108,7 @@ x_1 + 2x_2 \leq 1600\\
 
 
 # 4. Python(PuLP) 求解 LP
-[例见这个 Jupyter Notebook](../../_files/JupyterNotebook/Linear%20Programming%20with%20PuLP.ipynb)
+[例见这个 Jupyter Notebook](../../_files/JupyterNotebook/Linear_programming_with_PuLP.ipynb)
 
 
 

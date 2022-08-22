@@ -247,11 +247,3 @@ z\in\{0,1\}\\
 w\geq x_1-10(1-z)\\
 w\geq 0
 \end{cases}$$
-
-
-
-<img src="/images/2022-06/.png"  width="100%">
-<img src="/images/2022-06/.png"  width="100%">
-<img src="/images/2022-06/.png"  width="100%">
-<img src="/images/2022-06/.png"  width="100%">
-

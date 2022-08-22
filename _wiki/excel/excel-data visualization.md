@@ -16,7 +16,9 @@ keywords: Excel
 
 <img src="/images/2022-06/Snipaste_2022-06-05_19-58-59.png"  width="30%">
 
-### Trend-based
+
+
+### 1.1.1 Trend-based
 **(1) Data Bars**
 
 <img src="/images/2022-06/Snipaste_2022-06-05_20-00-53.png"  width="70%">
@@ -28,15 +30,13 @@ keywords: Excel
 
 <img src="/images/2022-06/Snipaste_2022-06-05_20-02-06.png"  width="70%">
 
-**Icon Sets**
+**(3) Icon Sets**
 
-首先将表格最右侧一列表示变化幅度的数据复制一遍 ()
-
-<img src="/images/2022-06/Snipaste_2022-06-05_20-05-12.png"  width="70%">
+首先将表格最右侧一列表示变化幅度的数据复制一遍（下图中列名为 CAGR 的那一列）
 
 再选中该列并点击 `Icon Sets`，之后我们发现 -0.2% 与 0.4% 这两个数据也被赋予黄色箭头，这与我们所预想的红表示下降、绿色表示上升以及黄色表示不变不符合
 
-<img src="/images/2022-06/Snipaste_2022-06-05_20-06-13.png"  width="70%">
+<img src="/images/2022-06/Snipaste_2022-06-05_20-06-13.png"  width="80%">
 
 因此需要修改图标的规则。点击 `Conditional Formatting`$\to$`Manage Rules`，在红框中选择 `This Worksheet`，随后点击编辑刚刚创建的 Icon Set
 
@@ -52,7 +52,7 @@ keywords: Excel
 
 
 
-### Value-based
+### 1.1.2 Value-based
 **(1) Top/Bottom Rules**
 
 前n个、后n个、前n%、后n%...
@@ -67,9 +67,9 @@ keywords: Excel
 
 
 
-### Interactive Visualization
+### 1.1.3 Interactive Visualization
 通过自定义 Rules 可以实现一些很棒的效果。
-#### .1 单元格与单元格交互
+#### 1.1.3.1 单元格与单元格交互
 
 实现效果: 在左上角 List 框内选中任意一个州的名字，地图中对应的黑点就会亮起来
 
@@ -84,7 +84,7 @@ keywords: Excel
 <img src="/images/2022-06/Snipaste_2022-06-06_09-29-23.png"  width="50%">
 
 
-#### .2 单元格与行列交互
+#### 1.1.3.2 单元格与行列交互
 
 实现效果: 在右上角 List 框内选中任意一个州的名字，表格中对应的行就会被蓝色高亮显示（并且不会覆盖原有的红色高亮）
 
@@ -99,7 +99,7 @@ keywords: Excel
 <img src="/images/2022-06/Snipaste_2022-06-06_10-23-40.png"  width="70%">
 
 
-#### .3 图标与其他元素交互
+#### 1.1.3.3 图标与其他元素交互
 
 实现效果，点击代表州的圆形，选择框 `K1` 就会变成对应州的名字，从而进一步地实现对于圆形的黄色高亮（详见 *(1) 单元格与单元格交互*）,以及对于表格区域数据的蓝色高亮（详见 *(2) 单元格与行列交互*）
 
@@ -163,7 +163,7 @@ keywords: Excel
 
 形状可以使我们的数据可视化更加优雅。
 
-例如，书接上文，在[这里](#3-图标与其他元素交互)我们已经完成了一个非常优雅的效果，即通过点击地图上的表示州的圆圈，就能够使之高亮，并在左侧表格中也高亮显示对应州的数据。这些实现的关键当点击任一圆圈时，选择框内都能显示出该圆圈指向的州
+例如，书接上文，在[这里](#1133-图标与其他元素交互)我们已经完成了一个非常优雅的效果，即通过点击地图上的表示州的圆圈，就能够使之高亮，并在左侧表格中也高亮显示对应州的数据。这些实现的关键在于当点击任一圆圈时，选择框内都能显示出该圆圈指向的州
 
 <img src="/images/2022-06/Snipaste_2022-06-06_15-13-30.png"  width="100%">
 
@@ -464,8 +464,13 @@ LINKs Back:
 
 非常酷炫，但是国内好像不支持显示地图 `Sorry, map charts aren't supported for your location`
 
-## Custom Chart Techniques
 
+
+
+
+
+# 3. Other Chart Techniques
+## 3.1 Ex1: 人口分布图
 以人口图为例，希望实现如下非常 Amazing 的效果: 展示1996-2019之间英国人口的男女以及年龄比例的变化
 
 <img src="/images/2022-06/GIF_20220608.gif"  width="70%">
@@ -508,8 +513,10 @@ Macro 设置如下，而后再将这些宏与按钮绑定
 
 <img src="/images/2022-06/GIF_20220608.gif"  width="70%">
 
-## Creative Chart Techniques
 
+
+
+## 3.2 Ex2: 汽车仪表图
 创建一个汽车仪表盘图，用于表示某年海平面上升问题的严重程度
 
 <img src="/images/2022-06/Snipaste_2022-06-09_09-27-13.png"  width="70%">

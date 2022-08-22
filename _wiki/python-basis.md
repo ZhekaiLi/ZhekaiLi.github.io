@@ -6,43 +6,61 @@ cate2:
 description: 
 keywords: Python
 mathjax: true
+mermaid: true
 ---
 
-# 0. ipython
-ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便的魔法命令：
+# Python 的数据储存方式
+**Reference - Stack Memory 栈**（特点是后进先出，空间有限）
+储存所有对象名。执行方式类似于执行嵌套函数:
+- 首先外部函数进入栈，然后内部函数入栈
+- 内部函数执行完后先出栈，然后外部函数出栈
 
-1. **自动补全** `Tab`
-2. **执行终端命令** `!` + `终端命令`
-例如 `!ifconfig`
-3. **模糊查找** `查找内容` + `?`
-例如 `list_1.*pp*?` 能查找目标对象所有名字中带有 pp 字段的方法/属性
-4. **查看信息** `对象/方法` + `?`
-例如 `list_1?`, `list_1.append?`
-5. **查看函数代码** `函数名` + `??`
-6. **运行python程序** `%run` + `文件名.py`
-7. **使用前面代码块的输出结果** `_` 前面第一个, `__` 前面第二个, `_n` 序号为n的代码块：
-<img src="/images/2022-01/Screenshot 2022-01-22 at 8.35.57 PM.png" width="70%">
+**Objects - Heap Memory 堆**（特点是无序杂乱，空间大）
+储存所有创建的对象
 
-### 为地址设置书签
-设置书签 `%bookmark 书签名 地址`
-删除书签 `%bookmark -d 书签名`
-删除所有书签 `%bookmark -r`
-显示所有书签 `%bookmark -l`
-跳转地址 `cd 书签名`
-
-示例：
-
-<img src="/images/2022-01/Screenshot 2022-01-22 at 8.49.22 PM.png" width="90%">
-
-### 代码调试 
-1. 打开代码调试: `%pdb on`
-2. 之后如果运行错误代码，则会跳转到报错的前一行，并打开调试器，进入 pdb 调试模式，例如：
-<img src="/images/2022-01/Screenshot 2022-01-22 at 8.02.17 PM.png" width="80%">
-3. 在调试器内输入调试命令，例如
 ```py
-p 变量名 # 查看变量值
+obj1 = MyObject()
 ```
-4. 退出调试: `q(uit)`
+
+- obj1: 对象名(实例的reference)
+- MyObject(): 实例(instance)，储存在 heap memory 中
+- 等号: 相当于创建了一个指针地址 address,，将对象名指向实例。该地址和对象名一起储存在 stack memory 中
+<img src="/images/2022-08/Snipaste_2022-08-01_10-37-05.png" width="80%">
+
+```py
+obj2 = obj1
+```
+- 把 obj1 对应的地址赋给 obj2，因此这两个对象名指向同一实例对象
+- 此时 `obj1 is obj2 >>> True` 因为指向同一个实例对象
+<img src="/images/2022-08/Snipaste_2022-08-01_10-49-21.png" width="80%">
+
+```py
+obj2 = MyObject()
+```
+
+- 又创建了一个新的实例对象，将其地址赋给 obj2
+- 此时 `obj1 is obj2 >>> False` 因为只想不同实例对象
+- 但是 `obj1 == obj2 >>> True` 因为他们指向的实例对象在属性值上相同
+<img src="/images/2022-08/Snipaste_2022-08-01_11-04-12.png" width="80%">
+
+而函数传参的本质也就是传递 the copy of object address。例如，下例中 F 函数的执行过程相当于把 obj 对应的地址赋给 input
+```py
+def F(input):
+    input.a += 1
+
+obj = MyObject()
+obj.a = 4
+
+F(obj)
+print(obj.a) # >>> 5
+```
+
+因此不管是在函数内部修改 class 的 fields 还是修改 list (list.append) 等等，都能够传递到函数外部，==因为本质上是在修改实例对象==
+
+但如果在函数内部进行的是赋值操作，那就不会传递到函数外部
+
+
+
 
 # 1. 数据结构
 ## 1.1 set 集合
@@ -58,14 +76,14 @@ T = {'b', '1', 'a', '2'}
 ```
 > **操作符**
 
-|操作符| 描述|
-|-|-|
-|S \|= T| 更新集合S，包括S与T中的所有元素|
-|S -= T| 更新集合S，包括S但不包括T中的元素|
-|S &= T| 更新集合S，包括同时在S与T中的元素|
-|S ^= T| 更新集合S，包括S与T中不相同的元素|
+|操作符| 描述| 对应函数
+|-|-|-|
+|S \|= T| 更新集合S，取S, T的并集| `S.union(T)`
+|S &= T| ...，取S, T的交集| `S.intersection(T)`
+|S -= T| ...，取在S中但不在T中的元素| `S.difference(T)`
+|S ^= T| ...，取S与T中不相同的元素| 
 
-以上操作符都可以去掉等号单独使用，例如 `H = S - T`
+以上操作符都可以去掉等号单独使用，例如 `S = S - T`
 
 > **操作函数**
 ```py
@@ -79,43 +97,62 @@ S.pop()      # 随意移除并返回一个元素，如果S为空报错，KeyErro
 1. **列表数据去重**
 将list转化为set，再将set转回list
 
-## 1.2 list 列表
+## 1.2 List 列表
 
 ```py
-L[a:b:c] # 表示在第a至第b-1个元素之间，隔c-1个元素取值
+L.append(x)  
+L.extend(L2)
+L.insert(index, x) # 在指定位置插入元素
+
+### 删除
+L.remove(x)  # 删除值为 x 的第一个元素，如果没有则会报错
+x = L.pop(i) # 删除指定位置的元素并将其返回
+del L[i]     # 删除指定位置元素
+
+L.index(x)  # 返回值为 x 的第一个元素，如果没有则会报错
+L.count(x)  # 返回 x 在列表中出现的次数
+L.reverse() # 颠倒列表
+
+L.sort() # 升序排序
 ```
-例如 `L[0:-1:2]` 表示在第一个至最后一个元素之间，隔1个元素取值
+
+**<font color=blue>NOTEs: List 为引用类型的数据</font>(本质为地址)**，因此 `l2 = l1` 这样的操作会使得对 `l1` 的修改也相当于对 `l2` 的修改
+
+解决方法: deep copy
+```py
+l2 = l1.copy()
+```
+
+### 1.2.1 Slice, Sampling
+
+
+`L[a:b:c]` 表示在第 a 至第 b-1 个元素之间，隔 c-1 个元素取值
 
 ```py
 L = [1, 2, 3, 4, 5, 6]
-L[0:-1:2]
+L[0:-1:2] # 表示在第一个至最后一个元素之间，隔1个元素取值
 
->>>
-[1, 3, 5]
+>>> [1, 3, 5]
 ```
 
 ```py
 L[::-1] # 表示从右至左逆序
 
->>>
-[6, 5, 4, 3, 2, 1]
+>>> [6, 5, 4, 3, 2, 1]
 ```
+### 1.2.2 列表推导式（内嵌复合表达式）
 
-**列表推导式**（list内嵌复合表达式）
 ```py
 [x for x in data if condition]
 
 [x+1 if condition else x-1 for x in data]
 ```
+### 1.2.3 其他操作
 
-**其他操作**
 `range(left, right, step)`
 
 ```py
-list(range(3,10,3))
-
->>>
-[3, 6, 9]
+list(range(3,10,3)) >>> [3, 6, 9]
 ```
 `zip(list1, list2)`
 
@@ -124,17 +161,29 @@ list(zip(['A','B'], [1,2]))   >>> [('A',1), ('B',2)]
 dict(zip(['A','B'], [1,2]))   >>> {'A':1, 'B':2}
 ```
 
-## 1.3 字典, 键值对
-> **操作函数**
+## 1.3 Dict 字典 (键值对)
+
 ```py
-d.get(k, <default>) # 键k存在，则返回相应值，不存在则返回<default>
-d.pop(k, <default>) # 键k存在，则取出相应值，不存在则返回<default>
-d.popitem()         # 随机取出一个键值对，以元组形式返回
+D.fromkeys(keys, vals) # 创建字典
+
+D.items()  # 返回所有 (键, 值)
+D.keys()   # 返回所有键
+D.values() # 返回所有值
+```
+
+> **操作函数**
+
+```py
+d.get(k, default=None) # 键k存在，返回相应值，不存在则返回<default>
+d.pop(k, default=None) # 键k存在，删除并返回相应值，不存在则返回<default>
+
+d.popitem()            # 随机取出一个键值对，以元组形式返回
+d.has_key(k)           # 键k存在，返回true，否则返回false
 ```
 
 
 
----
+
 
 # 2. 文件操作
 > **开关**
@@ -259,7 +308,157 @@ PyGame (简单)
 Panda3D (3D渲染和游戏开发)
 cocos2d (专业级2D游戏)
 
+# 5. ipython
+ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便的魔法命令：
+
+1. **自动补全** `Tab`
+2. **执行终端命令** `!` + `终端命令`
+例如 `!ifconfig`
+3. **模糊查找** `查找内容` + `?`
+例如 `list_1.*pp*?` 能查找目标对象所有名字中带有 pp 字段的方法/属性
+4. **查看信息** `对象/方法` + `?`
+例如 `list_1?`, `list_1.append?`
+5. **查看函数代码** `函数名` + `??`
+6. **运行python程序** `%run` + `文件名.py`
+7. **使用前面代码块的输出结果** `_` 前面第一个, `__` 前面第二个, `_n` 序号为n的代码块：
+<img src="/images/2022-01/Screenshot 2022-01-22 at 8.35.57 PM.png" width="70%">
+
+### 为地址设置书签
+设置书签 `%bookmark 书签名 地址`
+删除书签 `%bookmark -d 书签名`
+删除所有书签 `%bookmark -r`
+显示所有书签 `%bookmark -l`
+跳转地址 `cd 书签名`
+
+示例：
+
+<img src="/images/2022-01/Screenshot 2022-01-22 at 8.49.22 PM.png" width="90%">
+
+### 代码调试 
+1. 打开代码调试: `%pdb on`
+2. 之后如果运行错误代码，则会跳转到报错的前一行，并打开调试器，进入 pdb 调试模式，例如：
+<img src="/images/2022-01/Screenshot 2022-01-22 at 8.02.17 PM.png" width="80%">
+3. 在调试器内输入调试命令，例如
+```py
+p 变量名 # 查看变量值
+```
+4. 退出调试: `q(uit)`
 
 
+# 6. Time Complexity
+## 6.1 Big O
+$O$ usually used as Time Complexity notation. Understood as **how run time or space requirements grow as the input size grows**
 
+Big O mathematically defined as the upper bound. 对于函数 $f(x)$，如果存在 $c\in\R$，使得 $f(x)<c(g(x))$ 在其定义域内恒成立，则有 $f(x)\in O(g(x))$
+
+例如，$N^3+8N+9<2(N^3)\implies O(N^3)$
+
+## 6.2 Big Omega
+$\Omega$ mathematically defined as the lower bound. 对于函数 $f(x)$，如果存在 $c\in\R$，使得 $f(x)>c(g(x))$ 在其定义域内恒成立，则有 $f(x)\in\Omega(g(x))$
+
+例如，$N^3+8N+9>0.5(N^3)\implies\Omega(N^3)$
+
+## 6.3 Big Theta
+$\theta$ uderstood as **the exact performance value of the algorithm**
+
+Big Theta mathematically defined as both of the upper and lower bound i.e. if $f(x)\in O(g(x))$ and $f(x)\in\Omega(g(x))$ then $f(x)=\theta(g(x))$
+
+==虽然已经有了这些准确的定义，但我们在平常使用时只用 Big O（相当于 Big Theta）==
+
+## 6.4 Three Time Complexities
+- Best Case
+- Worst Case
+- Average Case
+
+一般情况下，我们最关注的是时间复杂度的 Average Case，此外还需要关注 Worst Case（其重要性取决于具体情况，例如在安全工程领域很重要）
+
+Ex: 对于快速排序 Quick Sort
+- Average Case: $O(n\log n)$
+- Worst Case: $O(n^2)$
+
+## 6.5 How to Calculate
+- Program structure:
+How many times is basic calculation executed (e.g. for loop; while loop)
+- Master theorem:
+usually useful in recursive deduction
+- Mathematical deduction:
+Permutation, Combination, etc.
+- Mermorize common algorithms & data structures
+
+### 6.5.1 Master theorem
+
+$$T(n) = aT(\frac{n}{b}) + c*n^d$$
+
+where $T(1)=d$. **IF**:
+- $\log_ba>d$, then $T(n)=O(n^{\log_ba})$
+- $\log_ba=d$, then $T(n)=O(n^d\log n)$
+- $\log_ba<d$, then $T(n)=O(n^d)$
+
+如何理解这个公式呢？如下图:
+- $a=2$: branch factor 每次拆分时 branch 的个数
+- $b=3$: division factor 每次拆分时问题规模缩小的幅度
+- 从 $T(n)\to T(1)$，共 $\log_bn$ 层
+
+```mermaid
+graph LR;
+A["T(n)"];
+B1["T(n/3)"]
+B2["T(n/3)"]
+C11["T(n/9)"]
+C12["T(n/9)"]
+C2["..."]
+A --> B1
+A --> B2
+B1 --> C11
+B1 --> C12
+B2 --> C2
+```
+
+**APPLICATIONs**: 常用于 recursive deduction
+- Merge sort: $T(n)=2T(\frac{n}{2})+cn\implies O(n\log n)$
+- Binary search: $T(n)=T(\frac{n}{2})+c\implies O(\log n)$
+
+但是有些递归推导式不适用于 master theorem，此时可以暴力推导
+- Selection sort: $T(n)=T(n-1)+cn\implies O(n^2)$
+  $T(n)=cn+c(n-1)+c(n-2)+...+c=n(n+1)/2$
+- Factorial: $T(n)=T(n-1)+c\implies O(n)$
+
+
+### 6.5.2 Permutation, Combination
+**Permutation**: 从 n 个人中挑选 k 个排成一列，有多少种挑选及排列方式
+
+$$n\text{P}k=P(n,k)=\frac{n!}{(n-k)!}$$
+
+**Combination**: 从 n 个人中挑选 k 个，有多少种挑选方式
+
+$$n\text{C}k=C(n,k)=\frac{n!}{(n-k)!k!}$$
+
+$$C(n,k)=\frac{P(n,k)}{P(k,k)}$$
+
+
+### 6.5.3 Memorize common algorithms & data structures
+Binary search
+
+Insertion sort
+Binary sort
+Selection sort
+Quick sort
+Merge sort
+
+Binary tree
+Binary search tree
+Recursion
+
+Hashtable (dictionary)
+www.bigocheatsheet.com
+
+
+<img src="/images/2022-08/.png" width="100%">
+<img src="/images/2022-08/.png" width="100%">
+<img src="/images/2022-08/.png" width="100%">
+<img src="/images/2022-08/.png" width="100%">
+<img src="/images/2022-08/.png" width="100%">
+<img src="/images/2022-08/.png" width="100%">
+<img src="/images/2022-08/.png" width="100%">
+<img src="/images/2022-08/.png" width="100%">
 

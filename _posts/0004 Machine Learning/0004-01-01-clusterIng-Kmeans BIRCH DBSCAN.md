@@ -9,8 +9,7 @@ topmost: true
 ---
 
 *Reference*
-1.[万门大学: 实用数据挖掘与人工智能一月特训班，第26讲: 聚类与代码实战](https://www.wanmen.org/courses/59df20a60dcf357a8bc0000c/lectures/5aab7757f1f2ef4816e8634f)
-2.[scikit-learn clustering](https://scikit-learn.org/stable/modules/clustering.html)
+[scikit-learn clustering](https://scikit-learn.org/stable/modules/clustering.html)
 
 Family of clustering:
 - **Partitioning based clustering:** K-means, Mean shift

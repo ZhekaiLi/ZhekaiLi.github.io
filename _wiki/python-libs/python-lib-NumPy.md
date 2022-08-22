@@ -28,6 +28,7 @@ np.ones((n,m))
 arr = np.append(arr, 4)  # 从尾端添加元素
 arr = arr.reshape(2,2)   # 改变数组的维度
 arr = arr.ravel()        # 展平成一维数组（一行一行排）
+
 ```
 
 ## 1.1 Index

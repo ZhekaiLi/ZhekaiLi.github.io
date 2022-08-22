@@ -8,6 +8,11 @@ mathjax: false
 ---
 
 ## 176. Second Highest Salary
+如果遇到以下需求：若查询不到匹配选项，则返回 `NULL`。可以使用嵌套 select 的方式：
+```sql
+select (select ...) as num;
+```
+
 ```sql
 SELECT
     (SELECT DISTINCT

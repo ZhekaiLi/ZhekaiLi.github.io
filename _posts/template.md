@@ -22,6 +22,12 @@ keywords: keyword1, keyword2
 print("Hello, World!")
 ```
 </details>
+
+---------------------------------------
+```py{.line-numbers}
+显示代码行数
+```
+
 ---------------------------------------
 
 
@@ -36,7 +42,8 @@ print("Hello, World!")
 <img src="/images/2021-12/Screenshot 2021-12-23 at 9.31.33 PM.png" width="50%">
 
 $$\LaTeX$$
-**公式**
+> **公式**
+
 - 任意 $\forall$ 存在 $\exists$
 - 左大括号
 $$z=\begin{cases}
@@ -50,29 +57,29 @@ g_1(x) & \leq M_1z\\
 g_1(x) & \leq M_2(1-z)
 \end{aligned}$$
 
-**求导**
-$\"u$ 
-$\dot u$
+> **求导**
 
-**运算符**
+$\"u$, $\dot u$
+
+> **运算符**
+
 乘号 $\times$
 约等于 $\approx$
 加减号 $\pm$
 不等号 $\neq, \leq, \geq$
 累乘 $\prod$
+集合运算 $\in,\notin,\subset,\subseteq,\subsetneq$
 
-**罗马（拉丁）字符**
+> **罗马（拉丁）字符**
+
 $\tau$
 $\zeta$
 
-**其他**
+> **其他**
+
 波浪号 $\sim$
 增大括号 $[,\big[, \Big[, \bigg[, \Bigg[$
 花体效果 $\mathbb{E}, \mathcal{E}, \mathscr{E}$
 箭头 $\to, \implies, \iff$
 双箭头 $\Leftrightarrow, \leftrightarrow$
-
-
-
-## title a
 

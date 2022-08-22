@@ -19,7 +19,7 @@ topmost: true
 `DataFrame` 由多个 `Series` 组成，无论是行还是列，单独拆分出来都是一个 `Series`。因此，<span style="background-color: yellow; color: black;">对数据表的行/列操作，与对数据序列的操作是一致的
 
 # 1. pandas.DataFrame
-## 1.1 Create & Trans & Save
+## 1.1 Create
 ```py 
 df = pd.DataFrame()
 df = pd.DataFrame(colums=['col_1', 'col_2'])
@@ -32,7 +32,7 @@ index=['a','b']) # 不填index则默认为下标，从0开始
 |a|1    |3    | 
 |b|2    |4    |
 
-**Create from pd.Series()**
+> **Create from pd.Series()**
 
 - Method 1
 
@@ -52,7 +52,7 @@ df = pd.DataFrame({'col_1':sr1,'col_2':sr2})
 df = sr.to_frame('col_1') # 相当于给序列加了个列标题，从而变成了表格
 ```
 
-**Create from .csv**
+> **Create from .csv**
 
 ```py
 df = pd.read_csv('地址')
@@ -62,11 +62,14 @@ df = pd.read_csv('地址')
 - `header=None` 指定程序不将csv文件的第一行读取为列名
 - `na_values=['None','null']` 指定程序将一些特定字符串视为NaN
 
-**Create from np.array()**
+> **Create from np.array()**
 
 ```py
 df = pd.DataFrame(arr1)
 ```
+
+
+## 1.2 Transform & Save
 **Transform to np.array()**
 
 ```py
@@ -82,26 +85,46 @@ df.to_csv('1.csv')
 
 
 
-## 1.2 Modify
-**添加数据**
-
+## 1.3 Modify
+### 1.3.1 添加数据
 ```py
 df = pd.DataFrame(columns=['c1','c2'])
-df.loc['a1'] = 1       # 添加一行1
-df.loc['a2', 'c2'] = 1 # 添加一个1
-df['c3'] = 0           # 添加一列0
 
-# 添加一行数据（长度必须等于现有列数）
-df.loc['a3'] = [0, 0, 0] 
+# 添加第一行: 各元素相同（两种方式）
+df.loc['a1'] = 1       
+df.iloc[0] = 1
+
+# 添加第二行: 自定义各元素（）（两种方式）
+df.loc['a2'] = [1, 2]
+df.iloc[1] = [1, 2]
+```
+
+|  |c1   |c2   |
+|--|-----|-----|
+|a1|1    |1    |
+|a2|1    |2    |
+```py
+# 添加第三行: 只为特定位置添加一个元素
+df.loc['a3', 'c2'] = 1
+```
+
+|  |c1   |c2   |
+|--|-----|-----|
+|a1|1    |1    |
+|a2|1    |2    |
+|a3|NaN  |1    |
+```py
+# 添加一列
+df['c3'] = 0
 ```
 |  |c1   |c2   |c3|
 |--|-----|-----|--|
 |a1|1    |1    |0 |
-|a2|NaN  |1    |0 |
-|a3|0    |0    |0 |
+|a2|1    |2    |0 |
+|a3|NaN  |1    |0 |
 
-**更改行列**
 
+### 1.3.2 更改行列
 ```py
 df.index = []   # 更改行名, 可以是 list or array
 df.columns = [] # 更改列名
@@ -116,13 +139,18 @@ df.reset_index(inplace=True)        # 重新改为默认的数字 Index
 
 参数 `inplace` 默认为 Flase，即返回更改后的 DataFrame 的同时**不更改**原 DataFrame。如果设置为 True，则在效果上 `df.rename(..., inplace=True)` 等同于 `df = df.rename(...)` 
 
-**删除数据**
 
+### 1.3.3 删除数据
 ```py
 df.drop(columns = df.columns[0], inplace=True) # 删除第一列
 ```
 
 
+
+### 1.3.4 其他操作
+```py
+df.T # 转置
+```
 
 ## 1.3 Arributes
 

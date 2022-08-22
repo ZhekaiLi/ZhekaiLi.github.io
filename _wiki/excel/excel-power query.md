@@ -7,8 +7,11 @@ description:
 keywords: Excel
 ---
 
-# Power Query
-## Get Data
+LINKs Back:
+[WIKI: Power BI](/_wiki/power%20bi.md)
+
+
+# 1. Get Data 导入数据
 **(1) 从当前 Workbook**
 <img src="/images/2022-05/Snipaste_2022-05-01_14-54-27.png"  width="80%">
 
@@ -45,7 +48,7 @@ keywords: Excel
 
 
 
-## UI
+# 2. User Interface
 当完成步骤 `Get Data` 后，会显示出 Power Query 的界面
 <img src="/images/2022-05/Snipaste_2022-05-01_14-57-23.png"  width="100%">
 
@@ -59,13 +62,18 @@ keywords: Excel
 - 选择 `Close & Load To...` 导入当前 sheet，或选择以其他方式导入
 <img src="/images/2022-05/Snipaste_2022-05-01_15-40-18.png"  width="50%">
 
-## Refresh (Update)
-当把字符串 MC 填入==原表格==中的一个空缺 cell 时，新生成的 Query 表不会自动同步，需要右键单击 $\to$ `Refresh`
+
+
+
+
+# 3. Query Edit 
+## 3.1 Refresh (Update)
+当把字符串 "MC" 填入==原表格==中的一个空缺 cell 时，其对应的 Query 表不会自动同步，需要右键单击 $\to$ `Refresh`
 <img src="/images/2022-05/Snipaste_2022-05-01_15-18-36.png"  width="100%">
 <img src="/images/2022-05/Snipaste_2022-05-01_15-21-11.png"  width="80%">
 <img src="/images/2022-05/Snipaste_2022-05-01_15-22-15.png"  width="100%">
 
-同理，对于其他导入方式，数据源发生改变后，点击 $Refresh$ 即可同步数据源的改变
+同理，对于其他导入方式，数据源发生改变后，点击 `Refresh` 即可同步数据源的改变
 - 对于 Folder 类型的数据源，“改变”一般指的是文件的添加/删除
 
 
@@ -74,36 +82,11 @@ keywords: Excel
 
 
 
-## 常用功能
-> **Merge columns 聚合数据**
-
-按住 Shift, 同时选择两个目标列 $\to$ 右键单击任一列名 $\to$ 选择 `Merge Columns`
-<img src="/images/2022-05/Snipaste_2022-05-02_09-36-24.png"  width="100%">
-
-> **将第一行设置为 Headers**
-
-<img src="/images/2022-05/Snipaste_2022-05-02_10-12-16.png"  width="100%">
-
-> **Format 修改格式** 
-
-菜单栏 `Transform` $\to$ `Text Column` `Format`
-
-### About null
-> **Fill 填充 null**
-
-<img src="/images/2022-05/Snipaste_2022-05-01_15-38-35.png"  width="100%">
-
-> **Replace Values 更改 null**
-
-菜单栏 `Transform` $\to$ `Any Column` `Replace Values`
-
-
-
-
-
-## Add Column 添加列
+## 3.2 Add Column 添加列
 ### Custom Column
 菜单栏 `Add Column` $\to$ `General` `Custom Column`
+
+例如，添加一列来统计各类商品的总价
 <img src="/images/2022-05/Snipaste_2022-05-03_09-53-46.png"  width="100%">
 
 ### Conditional Column
@@ -121,7 +104,7 @@ keywords: Excel
 
 
 
-## 分隔列 & 提取数据
+## 3.3 Split Column 分隔列 (用以提取数据)
 ### Split Columns
 例如，目标是把下图中的第一列分隔成两列 (课程代码 + 课程名)
 <img src="/images/2022-05/Snipaste_2022-05-01_14-57-23.png"  width="100%">
@@ -159,46 +142,46 @@ keywords: Excel
 
 
 
-## Append Queries 纵向合并
+## 3.4 Append Queries 纵向合并
 ### 合并两个 Query
 目标：为下图的两张表分别创建 Query，并将它们纵向合并
 <img src="/images/2022-05/Snipaste_2022-05-02_16-32-26.png"  width="100%">
 
-1. 首先，为 table `Sydney` 创建 Query。为了使 `Sydney` 的列数与 `Other Instructors` 匹配，==需添加 Location 列==
-- - Get Data: 点击 `From Table/Rage`
+(1) 首先，为表 `Sydney` 创建 Query。为了使 `Sydney` 的列数与 `Other Instructors` 匹配，==需添加 Location 列==
+- Get Data: 点击 `From Table/Rage`
 <img src="/images/2022-05/Snipaste_2022-05-02_16-37-28.png"  width="80%">
 
-- - 添加 Location 列
+- 添加 Location 列
 <img src="/images/2022-05/Snipaste_2022-05-02_16-39-48.png"  width="100%">
 效果如下
 <img src="/images/2022-05/Snipaste_2022-05-02_16-41-53.png"  width="80%">
 
-- - 导出 Query:
+- 导出 Query:
 命名为 "Instructors_Sydney" $\to$ 点击 `Close & Load To...` $\to$ 点选 `Only Create Connection`
 
-2. 其次，为 table `Other Instructors` 创建 Query
-- - 命名为 "Instructors_Other" $\to$ 点击 `Close & Load To...` $\to$ 点选 `Only Create Connection`
-- - 创建效果如下:
+(2) 然后为表 `Other Instructors` 创建 Query
+- 命名为 "Instructors_Other" $\to$ 点击 `Close & Load To...` $\to$ 点选 `Only Create Connection`
+- 创建效果如下:
 <img src="/images/2022-05/Snipaste_2022-05-02_16-53-29.png"  width="50%">
 
-3. 最后，Append Queries 实现纵向合并
-- - 点击 `Get Data` $\to$ `Combine Queries` $\to$ `Append`
-- - 在弹窗中选择刚刚创建的两个 Query Connections
+(3) 最后，Append Queries 实现纵向合并
+- 点击 `Get Data` $\to$ `Combine Queries` $\to$ `Append`，在弹窗中选择刚刚创建的两个 Query Connections
 <img src="/images/2022-05/Snipaste_2022-05-02_16-56-52.png"  width="100%">
 
-- - 纵向合并结果如下，可以将这个新的 Query 命名为 "Instructors_All"
+- 纵向合并结果如下，可以将这个新的 Query 命名为 "Instructors_All"
 <img src="/images/2022-05/Snipaste_2022-05-02_16-58-32.png"  width="100%">
 
 ### 合并多个 Query
 目标: 将一个 Workbook 中三个 Sheet 纵向合并为一个 Sheet
-1. 首先，将这三个 Sheet 都创建为 Query
+
+(1) 首先，将这三个 Sheet 都创建为 Query
 <img src="/images/2022-05/Snipaste_2022-05-02_21-03-28.png"  width="100%">
 
-2. 选择 `Append Queries as New`
+- 选择 `Append Queries as New`
 <img src="/images/2022-05/Snipaste_2022-05-02_21-05-34.png"  width="100%">
 <img src="/images/2022-05/Snipaste_2022-05-02_21-06-26.png"  width="100%">
 
-3. 通过改名解决 Append 异常
+- 通过改名解决 Append 异常
 - - 下图显示多出来了三列，这是因为除了 Table1 有正常的 Header 以外，Table2 & Table3 均没有
 <img src="/images/2022-05/Snipaste_2022-05-02_21-09-00.png"  width="100%">
 
@@ -214,7 +197,7 @@ keywords: Excel
 
 
 
-## Merge Queries 横向合并
+## 3.5 Merge Queries 横向合并
 Append vs. Merge
 <img src="/images/2022-05/Snipaste_2022-05-02_21-19-33.png"  width="100%">
 
@@ -238,9 +221,9 @@ select * from A (inner) join B on A.keyA = B.keyB
 select * from A full outer join B on A.keyA = B.keyB
 ```
 
-例如，想要在下表中根据 Instructor ID，添加 Instructor Name 信息(储存在另一张表中)
+例如，想要在下一图的表中根据 Instructor ID，添加 Instructor Name 信息(储存在另一张表中(下二图))
 <img src="/images/2022-05/Snipaste_2022-05-02_21-31-13.png"  width="100%">
-<img src="/images/2022-05/Snipaste_2022-05-02_21-33-13.png"  width="80%">
+<img src="/images/2022-05/Snipaste_2022-05-02_21-33-13.png"  width="70%">
 
 点击 `Merge Queries`，在弹窗中除了指定两张表以及 Merge 类型，还需在每张表都选一列用于匹配，类似于
 ```sql
@@ -257,7 +240,8 @@ on A.keyA = B.keyB
 
 
 
-## Unpivot
+
+## 3.6 Unpivot
 对于下图这样 pivoted 的五列，会让我们难以分析其统计值。因此需要把它们聚合为一列 (unpivot)，用以直接储存分数 (1-5)
 <img src="/images/2022-05/Snipaste_2022-05-04_08-56-49.png"  width="60%">
 
@@ -272,7 +256,7 @@ on A.keyA = B.keyB
 
 
 
-## Pivot
+## 3.7 Pivot
 目标: 把每个 Room 的所有 Facility 信息都显示在一行数据中
 <img src="/images/2022-05/Snipaste_2022-05-04_09-59-14.png"  width="100%">
 
@@ -286,7 +270,8 @@ on A.keyA = B.keyB
 
 
 
-## Group
+
+## 3.8 Group
 例如，统计每个 Brach 的每个 Department 的所有课程的天数和
 <img src="/images/2022-05/Snipaste_2022-05-04_22-35-06.png"  width="100%">
 ```sql
@@ -316,8 +301,37 @@ group by Branch, Department
 
 
 
+## 其他常用功能
+> **Merge columns 聚合数据**
 
-## Clean Data 数据清洗
+按住 Shift, 同时选择两个目标列 $\to$ 右键单击任一列名 $\to$ 选择 `Merge Columns`
+<img src="/images/2022-05/Snipaste_2022-05-02_09-36-24.png"  width="100%">
+
+> **将第一行设置为 Headers**
+
+<img src="/images/2022-05/Snipaste_2022-05-02_10-12-16.png"  width="100%">
+
+> **Format 修改格式** 
+
+菜单栏 `Transform` $\to$ `Text Column` `Format`
+
+### About null
+> **Fill 填充 null**
+
+<img src="/images/2022-05/Snipaste_2022-05-01_15-38-35.png"  width="100%">
+
+> **Replace Values 更改 null**
+
+菜单栏 `Transform` $\to$ `Any Column` `Replace Values`
+
+
+
+
+
+
+
+
+# 4. Ex: Clean Data 数据清洗
 
 例如对于这样一张表，由上至下储存了多个人的 Course Evaluation，每个 Evaluation 包含七个小问题以及对应的打分
 

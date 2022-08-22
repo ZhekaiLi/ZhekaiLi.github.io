@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Regression Overview
+title: Regression Basis
 categories: Machine-Learning
 description:
 keywords: Machine-Learning, Regression, Python
