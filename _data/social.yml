@@ -1,8 +1,12 @@
+- sitename: Email
+  name: zli3125@gatech.edu
+  url:
+
 - sitename: GitHub
   name: ZhekaiLi
   url: https://github.com/ZhekaiLi
 
-- sitename: CSDN BLOG
+- sitename: CSDN Blog
   name: 江湖留名
   url: https://blog.csdn.net/weixin_43728138?type=blog
 

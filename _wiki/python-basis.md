@@ -9,7 +9,7 @@ mathjax: true
 mermaid: true
 ---
 
-# Python 的数据储存方式
+# 1. Python 的数据储存方式
 **Reference - Stack Memory 栈**（特点是后进先出，空间有限）
 储存所有对象名。执行方式类似于执行嵌套函数:
 - 首先外部函数进入栈，然后内部函数入栈
@@ -62,129 +62,6 @@ print(obj.a) # >>> 5
 
 
 
-# 1. 数据结构
-## 1.1 set 集合
-> **创建**
-
-集合由大括号或 `set()` 命令创建，集合内元素唯一，且不存在顺序
-```py
-S = {1, "4", (5, 10)}
-T = set("aabb12")
-
->>>
-T = {'b', '1', 'a', '2'}
-```
-> **操作符**
-
-|操作符| 描述| 对应函数
-|-|-|-|
-|S \|= T| 更新集合S，取S, T的并集| `S.union(T)`
-|S &= T| ...，取S, T的交集| `S.intersection(T)`
-|S -= T| ...，取在S中但不在T中的元素| `S.difference(T)`
-|S ^= T| ...，取S与T中不相同的元素| 
-
-以上操作符都可以去掉等号单独使用，例如 `S = S - T`
-
-> **操作函数**
-```py
-S.add(x)     # 添加元素
-S.discard(x) # 移除元素，如果x不在S中不报错
-S.remove(x)  # 移除元素，如果x不在S中报错，KeyError
-S.clear()    # 移除所有元素
-S.pop()      # 随意移除并返回一个元素，如果S为空报错，KeyError
-```
-> **应用场景**
-1. **列表数据去重**
-将list转化为set，再将set转回list
-
-## 1.2 List 列表
-
-```py
-L.append(x)  
-L.extend(L2)
-L.insert(index, x) # 在指定位置插入元素
-
-### 删除
-L.remove(x)  # 删除值为 x 的第一个元素，如果没有则会报错
-x = L.pop(i) # 删除指定位置的元素并将其返回
-del L[i]     # 删除指定位置元素
-
-L.index(x)  # 返回值为 x 的第一个元素，如果没有则会报错
-L.count(x)  # 返回 x 在列表中出现的次数
-L.reverse() # 颠倒列表
-
-L.sort() # 升序排序
-```
-
-**<font color=blue>NOTEs: List 为引用类型的数据</font>(本质为地址)**，因此 `l2 = l1` 这样的操作会使得对 `l1` 的修改也相当于对 `l2` 的修改
-
-解决方法: deep copy
-```py
-l2 = l1.copy()
-```
-
-### 1.2.1 Slice, Sampling
-
-
-`L[a:b:c]` 表示在第 a 至第 b-1 个元素之间，隔 c-1 个元素取值
-
-```py
-L = [1, 2, 3, 4, 5, 6]
-L[0:-1:2] # 表示在第一个至最后一个元素之间，隔1个元素取值
-
->>> [1, 3, 5]
-```
-
-```py
-L[::-1] # 表示从右至左逆序
-
->>> [6, 5, 4, 3, 2, 1]
-```
-### 1.2.2 列表推导式（内嵌复合表达式）
-
-```py
-[x for x in data if condition]
-
-[x+1 if condition else x-1 for x in data]
-```
-### 1.2.3 其他操作
-
-`range(left, right, step)`
-
-```py
-list(range(3,10,3)) >>> [3, 6, 9]
-```
-`zip(list1, list2)`
-
-```py
-list(zip(['A','B'], [1,2]))   >>> [('A',1), ('B',2)]
-dict(zip(['A','B'], [1,2]))   >>> {'A':1, 'B':2}
-```
-
-## 1.3 Dict 字典 (键值对)
-
-```py
-D.fromkeys(keys, vals) # 创建字典
-
-D.items()  # 返回所有 (键, 值)
-D.keys()   # 返回所有键
-D.values() # 返回所有值
-```
-
-> **操作函数**
-
-```py
-d.get(k, default=None) # 键k存在，返回相应值，不存在则返回<default>
-d.pop(k, default=None) # 键k存在，删除并返回相应值，不存在则返回<default>
-
-d.popitem()            # 随机取出一个键值对，以元组形式返回
-d.has_key(k)           # 键k存在，返回true，否则返回false
-```
-
-
-
-
-
 # 2. 文件操作
 > **开关**
 ```py
@@ -229,7 +106,8 @@ f.close()
 ```
 
 
----
+
+
 # 3. 函数
 ## 3.1 常用函数
 **eval()**
@@ -242,13 +120,38 @@ b = eval("a * 6")
 **map(参数1, 参数2)**
 将参数1的方法作用于参数2得每一个元素
 ```py
-list(map(eval, ["1+1", "2*2"]))
-
->>>
-[2, 4]
+list(map(eval, ["1+1", "2*2"])) >>> [2, 4]
 ```
 
----
+**max(iterable, key=func)**
+使用 max + key 来发掘更多可用性
+```py
+# 1. 统计列表中出现频率最高的元素
+a = [1,2,3,1,2,3,2,2,4,5,1]
+max(set(a), key=a.count) >>> 2
+
+# 2. 求特定位置的最大值
+lst = [(1,'a'), (3,'c'), (4,'e')]
+max(lst, key=lambda x: x[0]) >>> (4, 'e')
+```
+
+
+## 3.1 lambda
+```py
+func = lambda [arg1, arg2, ...]: expression
+```
+
+示例
+```py
+power = lambda a, b: a**b
+power(2, 3) >>> 8
+```
+
+
+
+
+
+
 # 4. 库
 可以在 pypi.org 上根据关键字搜索第三方库
 ```py
@@ -260,70 +163,67 @@ pip show <库名> # 查看库的详细信息
 pip search <库名> # 检索与该库相关的信息
 ```
 
-## 4.1 常用库
-> **数据处理**
+> **常用库**
 
-**数据分析**
+**1. 数据处理**
+- **数据分析**
 numpy, pandas, scipy
-
-**数据可视化**
+- **数据可视化**
 matplotlib (matplotlib.pyplot)
 seaborn (统计类数据)
 Mayavi (三维数据可视化)
-
-**文本处理**
+- **文本处理**
 PyPDF2 (处理pdf文件)
 NLTK (自然语言文本处理)
 Python-docx (Word文件)
-
 wordcloud (绘制词云)
 
-**机器学习**
-Sickit-learn
-TensorFlow
-MXNet (基于神经网络的深度学习计算框架)
+**2. 机器学习**
+- Sickit-learn
+- TensorFlow
+- MXNet (基于神经网络的深度学习计算框架)
 
-> **web**
-
-**网络爬虫**
+**3. web**
+- **网络爬虫**
 Requests, Scrapy, pysipder
-
-**Web信息提取**
+- **Web信息提取**
 Beautiful Soup, Re (正则表达式), Python-Goose
-
-**Web网站开发**
+- **Web网站开发**
 Django (大型网站), Pyramid (中型), Flask (简易)
-
-**网络应用开发**
+- **网络应用开发**
 WeRobot (微信小程序), aip (百度AI框架), MyQR (定制二维码)
-...
 
-> **人机交互与设计**
-
-**图形用户界面 GUI**
+**4. 人机交互与设计**
+- **图形用户界面 GUI**
 PyQt5, wxPython, PyGObject
-
-**游戏开发**
+- **游戏开发**
 PyGame (简单)
 Panda3D (3D渲染和游戏开发)
 cocos2d (专业级2D游戏)
 
-# 5. ipython
+# 5. ipython (with Jupyter)
 ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便的魔法命令：
 
-1. **自动补全** `Tab`
-2. **执行终端命令** `!` + `终端命令`
+**1. 自动补全** `Tab`
+
+**2. 执行终端命令** `!` + `终端命令`
 例如 `!ifconfig`
-3. **模糊查找** `查找内容` + `?`
+
+**3. 模糊查找** `查找内容` + `?`
 例如 `list_1.*pp*?` 能查找目标对象所有名字中带有 pp 字段的方法/属性
-4. **查看信息** `对象/方法` + `?`
+
+**4. 查看信息** `对象/方法` + `?`
 例如 `list_1?`, `list_1.append?`
-5. **查看函数代码** `函数名` + `??`
-6. **运行python程序** `%run` + `文件名.py`
-7. **使用前面代码块的输出结果** `_` 前面第一个, `__` 前面第二个, `_n` 序号为n的代码块：
+
+**5. 查看函数代码** `函数名` + `??`
+例如 `help??` 查看help函数的使用方法
+
+**6. 运行python程序** `%run` + `文件名.py`
+
+**7. 使用前面代码块的输出结果** `_` 前面第一个, `__` 前面第二个, `_n` 序号为n的代码块：
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.35.57 PM.png" width="70%">
 
-### 为地址设置书签
+## 5.1 为地址设置书签
 设置书签 `%bookmark 书签名 地址`
 删除书签 `%bookmark -d 书签名`
 删除所有书签 `%bookmark -r`
@@ -334,7 +234,7 @@ ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便�
 
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.49.22 PM.png" width="90%">
 
-### 代码调试 
+## 5.2 代码调试 
 1. 打开代码调试: `%pdb on`
 2. 之后如果运行错误代码，则会跳转到报错的前一行，并打开调试器，进入 pdb 调试模式，例如：
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.02.17 PM.png" width="80%">
@@ -342,7 +242,12 @@ ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便�
 ```py
 p 变量名 # 查看变量值
 ```
+
 4. 退出调试: `q(uit)`
+
+
+
+
 
 
 # 6. Time Complexity
@@ -451,6 +356,25 @@ Recursion
 
 Hashtable (dictionary)
 www.bigocheatsheet.com
+
+
+
+
+
+# 7. 其他操作
+## 7.1 *星号的使用
+星号的作用为 unpacking
+```py
+values = (1, 2)
+sum(*values) >>> 3
+```
+
+```py
+a, *b = [1, 2, 3]
+a >>> 1
+b >>> [2, 3]
+```
+
 
 
 <img src="/images/2022-08/.png" width="100%">

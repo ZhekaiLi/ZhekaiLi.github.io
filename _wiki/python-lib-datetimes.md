@@ -7,8 +7,7 @@ description:
 keywords: Python
 ---
 
-# datetime
-
+# datetimes
 将字符串形式的数据转化为datetime时间对象
 ```py
 import datetimes as dt

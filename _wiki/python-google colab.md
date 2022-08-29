@@ -11,6 +11,10 @@ mathjax: true
 Google Colab 是一种在线 JupyterNotebook
 
 输入以下代码实现对 Google Drive 的链接
+```py
+from google.colab import drive
+drive.mount("gdrive")
+````
 
 <img src="/images/2022-06/Snipaste_2022-06-16_09-35-04.png"  width="100%">
 

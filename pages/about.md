@@ -8,11 +8,11 @@ menu: 关于
 permalink: /about/
 ---
 
-I'm Zeka Lee (Zhekai Li)
+Hi, I'm a graduate student in **MS Supply Chain Engineering** at the Georgia Institute of Technology. I'll graduate in December 2023 and I'm currently looking for a **2023 summer internship in supply chain analysis**. 
 
-An Engineering Student
+I have finished 3 research projects about **modeling, machine learning, and programming**. As an assistant researcher, I developed a metric to evaluate the vulnerability of a metro network and applied its utility through a case study; I exploited different clustering methods, and modified DBSCAN(a density-based clustering algorithm) to fit the dataset from road failure detection; I designed a python class and created a workflow to extract geometric information from 3D point cloud data.
 
-Believe that practice makes perfect
+Moreover, I have 2 months of internship as a structure designer at a local design institute. From this experience, I practiced my knowledge from school into real work and learned some basic principles with colleagues and bosses.
 
 ## Contact
 
@@ -20,12 +20,6 @@ Believe that practice makes perfect
 {% for website in site.data.social %}
 <li>{{website.sitename }}：<a href="{{ website.url }}" target="_blank">@{{ website.name }}</a></li>
 {% endfor %}
-{% if site.url contains 'mazhuang.org' %}
-<li>
-微信公众号：<br />
-<img style="height:192px;width:192px;border:1px solid lightgrey;" src="{{ assets_base_url }}/assets/images/qrcode.jpg" alt="闷骚的程序员" />
-</li>
-{% endif %}
 </ul>
 
 

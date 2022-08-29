@@ -91,8 +91,10 @@ np.save('address/filename.npy', X)
 X = np.load('address/filename.npy')
 ```
 
-## 1.5 Combine
+## 1.5 Combine, Join
 纵向堆叠 `np.vstack((a1, a2))`
+横向堆叠 `np.hstack((a1, a2))`
+
 ```py
 a1 = np.array([1, 2, 3])
 a2 = np.array([4, 5, 6])
@@ -101,7 +103,19 @@ np.vstack((a1, a2))
 >>> array([[1, 2, 3],
            [4, 5, 6])
 ```
-横向堆叠 `np.hstack((a1, a2))`
+
+多向连接 `np.concatenate((a1, ...), axis=0))`
+
+```py
+# a1, a2 一维
+np.concatenate((a1, a2)) # a1.extend(a2)
+
+# a1, a2 二维
+### 纵向堆叠 np.vstack((a1, a2))
+np.concatenate((a1, a2))
+### 横向堆叠 np.hstack((a1, a2))
+np.concatenate((a1, a2), axis=1)
+```
 
 
 
@@ -157,4 +171,9 @@ np.random.choise([1,2,3], size=2, replace=True)
 np.random.choise([1,2,3], size=2, replace=False)
 # 指定概率随机
 np.random.choise([1,2,3], size=100, replace=True, p=[0.2, 0.3, 0.5])
+```
+
+## 3.1 生成概率分布
+```py
+np.random.normal(mean, std, size) # 高斯分布，size 可以是多维的
 ```

@@ -77,6 +77,7 @@ $\zeta$
 
 > **其他**
 
+无限 $\infin$
 波浪号 $\sim$
 增大括号 $[,\big[, \Big[, \bigg[, \Bigg[$
 花体效果 $\mathbb{E}, \mathcal{E}, \mathscr{E}$
