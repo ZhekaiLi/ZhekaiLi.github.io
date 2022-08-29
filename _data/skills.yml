@@ -1,19 +1,18 @@
-- name: Software Engineer Keywords
+- name: Machine Learning
   keywords:
-      - Java
-      - C++
+      - Clustering (K-means, Mean Shift, DBSCAN)
+      - Basic Neural Network
+
+- name: Data Analysis
+  keywords:
+      - Python (numpy, pandas, matplotlib)
+      - SQL
+      - Excel (vlookip, power pivot, power query)
+      - Tableau
+
+- name: Programming
+  keywords:
       - Python
-      - Design Patterns
-
-- name: Mobile Developer Keywords
-  keywords:
-      - Android
-      - Reverse Engineering
-
-- name: Windows Developer Keywords
-  keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+      - SQL
+      - Matlab
+      - C# (basic)
