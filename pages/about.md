@@ -10,7 +10,7 @@ permalink: /about/
 
 <div style="display: flex;justify-content: center;align-items: top;">
 <img src="/images/2022-08/Snipaste_2022-08-30_22-39-34.png" width="23%" style="vertical-align:down;">&nbsp;&nbsp;&nbsp;&nbsp;
-<span> LinkedIn: Zeka Li <a href="https://www.linkedin.com/in/zeka-li-a949a2236/" target="_blank" title="Go to LinkedIn">Zeka Li</a> <br> Email: zli3125@gatech.edu<br>Hi, I'm Zeka(Zhekai) Li, a graduate student in <b>MS Supply Chain Engineering</b> at the Georgia Institute of Technology. I'll graduate in December 2023 and I'm currently looking for a <b>2023 summer internship in supply chain analysis</b></span>
+<span> LinkedIn: Zeka Li <a href="https://www.linkedin.com/in/zeka-li-a949a2236/" target="_blank" title="Go to LinkedIn">Zeka Li</a> <br> Email: zli3125@gatech.edu<br>Hi, I'm Zeka(Zhekai) Li, a graduate student in <b>MS Supply Chain Engineering</b> at the Georgia Institute of Technology. I'll graduate in December 2023 and I'm currently looking for a <b>2023 summer internship in supply chain analysis</b><br> </span>
 <span></span>
 </div>
 
