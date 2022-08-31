@@ -10,9 +10,9 @@ permalink: /about/
 
 <div style="display: flex;justify-content: center;align-items: top;">
 <img src="/images/2022-08/Snipaste_2022-08-30_22-39-34.png" width="30%" style="vertical-align:down;">
-<span>&nbsp;&nbsp;&nbsp;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh<br>
-&nbsp;&nbsp;&nbsp;sladfjlaskfjlskafjklsajflasjfksaflslasfjkdlfjsla<br>
-&nbsp;&nbsp;&nbsp;sflaksfjklsdjflsa8439ij24123jkh</span>
+<span>&nbsp;&nbsp;&nbsp; Hi, I'm Zeka(Zhekai) Li<br>
+&nbsp;&nbsp;&nbsp; A graduate student in <b>MS Supply Chain Engineering</b><br>
+&nbsp;&nbsp;&nbsp; I'llgraduate in December 2023 </span>
 <span></span>
 </div>
 
