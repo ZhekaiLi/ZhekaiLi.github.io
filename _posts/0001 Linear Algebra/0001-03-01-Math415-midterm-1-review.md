@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Math415 Midterm-1 Review
-categories: Math415:Linear-Algebra
+categories: Linear-Algebra
 description: Personal Notes
 keywords: Math415，Linear-Algebra，Matrix
 mathjax: true

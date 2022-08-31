@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Math415 Chapter 06 Eigenvalues and Eigenvectors
-categories: Math415:Linear-Algebra
+categories: Linear-Algebra
 description: Personal Notes
 keywords: Math415，Linear-Algebra，Matrix
 mathjax: true
