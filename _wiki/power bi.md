@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Power BI
-cate1: 
+cate1: Others
 cate2: 
 description: 
 keywords:

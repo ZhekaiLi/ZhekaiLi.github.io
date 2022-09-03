@@ -19,13 +19,23 @@ topmost: true
 `DataFrame` 由多个 `Series` 组成，无论是行还是列，单独拆分出来都是一个 `Series`。因此，<span style="background-color: yellow; color: black;">对数据表的行/列操作，与对数据序列的操作是一致的
 
 # 1. pandas.DataFrame
+```py
+# 以下两种方式效果相同
+df = df.func(inplace=False)
+df.func(inplace=True)
+```
+
+**通用参数**
+- `inplace`: 默认为 False，表示函数操作不会改变 df，而是创建了一个临时对象。True 表示函数操作会应用在 df 本身
+
 ## 1.1 Create
 ```py 
 df = pd.DataFrame()
 df = pd.DataFrame(colums=['col_1', 'col_2'])
 
-df = pd.DataFrame({'col_1':[1,2],'col_2':[3,4]}, 
-index=['a','b']) # 不填index则默认为下标，从0开始
+# Create from Array()/ Dictionary()
+df = pd.DataFrame(np.array([[1,2], [3,4]]), colums=['col_1','col_2'], index=['a','b'])
+df = pd.DataFrame({'col_1':[1,2],'col_2':[3,4]}, index=['a','b']) # 不填index则默认为下标，从0开始
 ```
 | |col_1|col_2|
 |-|-----|-----|
@@ -62,11 +72,6 @@ df = pd.read_csv('地址')
 - `header=None` 指定程序不将csv文件的第一行读取为列名
 - `na_values=['None','null']` 指定程序将一些特定字符串视为NaN
 
-> **Create from np.array()**
-
-```py
-df = pd.DataFrame(arr1)
-```
 
 
 ## 1.2 Transform & Save
@@ -86,7 +91,8 @@ df.to_csv('1.csv')
 
 
 ## 1.3 Modify
-### 1.3.1 添加数据
+### 1.3.1 添加数据(行/列)
+> **添加行**
 ```py
 df = pd.DataFrame(columns=['c1','c2'])
 
@@ -113,15 +119,18 @@ df.loc['a3', 'c2'] = 1
 |a1|1    |1    |
 |a2|1    |2    |
 |a3|NaN  |1    |
+
+> **添加列**
 ```py
-# 添加一列
-df['c3'] = 0
+df['c3'] = 0 # 添加一列(个元素相同)
+df['c4'] = [5, 5, 5]
 ```
-|  |c1   |c2   |c3|
-|--|-----|-----|--|
-|a1|1    |1    |0 |
-|a2|1    |2    |0 |
-|a3|NaN  |1    |0 |
+
+|  |c1   |c2   |c3|c4|
+|--|-----|-----|--|--|
+|a1|1    |1    |0 | 5|
+|a2|1    |2    |0 | 5|
+|a3|NaN  |1    |0 | 5|
 
 
 ### 1.3.2 更改行列
@@ -131,28 +140,39 @@ df.columns = [] # 更改列名
 
 # 单独更改某个或某些行/列名
 # df.rename({'old':'new'}, axis=(1 for cols, 0 for rows), inplace=True)
-df.rename({'old_col', 'new_col'}, axis=1, inplace=True)
+df.rename({'old1':'new1', 'old3':'new3'}, axis=1, inplace=True)
 
 df.set_index('col_1', inplace=True) # 把指定列设置为 Index
 df.reset_index(inplace=True)        # 重新改为默认的数字 Index
 ```
 
-参数 `inplace` 默认为 Flase，即返回更改后的 DataFrame 的同时**不更改**原 DataFrame。如果设置为 True，则在效果上 `df.rename(..., inplace=True)` 等同于 `df = df.rename(...)` 
 
+### 1.3.3 更改/替换元素
+**df[col1].map(func)**
+将 func 应用于指定列的每个元素（不会改变 DataFrame 自身）
+```py
+df['col1'].map(str.lower)
+df['col2'].map({'A':'Aa', 'B':'Bb'}) # 修改特定元素
+```
 
-### 1.3.3 删除数据
+**df.replace()**
+```py
+df.replace(['A','B'], ['Aa','Bb'])
+```
+
+### 1.3.4 删除数据
 ```py
 df.drop(columns = df.columns[0], inplace=True) # 删除第一列
 ```
 
 
 
-### 1.3.4 其他操作
+### 1.3.5 其他操作
 ```py
 df.T # 转置
 ```
 
-## 1.3 Arributes
+## 1.4 Arributes (Inspection 查看属性)
 
 ```py
 df.head(i)  # 查看前 i 条数据
@@ -166,20 +186,32 @@ df.shape          # (n, m) n行m列
 df.size           # n*m 元素个数
 ```
 
+```py
+# 查看各列的统计数据（count, mean, std, percentile...）
+df.describe() 
+```
+
+其他统计值详见 [Chp:1.10.2 统计数据](#1102-statistic-统计数据)
 
 
-## 1.4 Access
+
+
+## 1.5 Access (Slice)
 **访问列**
 ```py
-df['columnName']    # 访问单列
-df.columnName
-df[['col1','col2']] # 访问多列
+df['columnName']    # 单列
+    df.columnName
+df[['col1','col2']] # 多列
 ```
 
 **访问行**
 ```py
-df.loc['rowName',:]      # 访问单行
-df.loc[['row1', 'row2']] # 访问多行
+df.loc['rowName',:]      # 单行
+df.loc[['row1', 'row2']] # 多行
+df.iloc[0:2]             # 前两行
+
+# 如果行名是默认的 index
+df[0:2]  # 前两行
 ```
 
 或使用 `df.iterrows()`
@@ -190,7 +222,6 @@ for _, row in df.iterrows():
 ```
 
 **索引和切片**
-
 ```py
 # 推荐方式
 df.loc['rowName','columnName'] # 使用行列名索引
@@ -203,35 +234,25 @@ df['columnName']['rowName']
 df.columnName['rowName']
 ```
 
-
 ```py
 df.sample()                     # 随机获取一行
     df.sample(frac=1, inplace=True) # 随机打乱整个 DataFrame
 ```
 
-**筛选（mask）**
-
-```py
-mask1 = df.Poplation > 1000000                       # 人口大于一百万的地区
-mask2 = df.Region.apply(lambda x: x.startswith('A')) # 名字以 A 开头的地区
-
-df[mask1]         # 人口大于一百万的地区的所属行
-    df.loc[mask1] # 同上
-df[mask1 & mask2] # 人口大于一百万以及名字以 A 开头的地区的所属行
-df[mask1 | mask2]
-```
 
 
 
-## 1.6 NaN & Duplication
-### NaN
 
+
+## 1.6 NaN (Null)
 ```py
 df.isna()            # 检查每个数据是否为NaN
     df.isna().any()  # 检查每列是否包含NaN
     df.isna().mean() # 查看每列中NaN的比例
+    df.isnull()      # 等于 isna()
+    df.notnull()     # 取反 isnull()
 
-df.fillna(0, inplace=True)            # 为NaN赋0
+df.fillna(0, inplace=True)            # 为所有NaN赋0
     df['col1'].fillna(method='ffill') # propagate last valid observation forward
     df['col1'].fillna(method='bfill') # use next valid observation to fill gap
 
@@ -241,28 +262,33 @@ df.dropna(inplace=True)               # 删去所有包含NaN的行
     df.dropna(subset=['col1','col2']) # 删去所有指定列包含NaN的行
 ```
 
-### Duplication
 
+
+
+
+
+## 1.7 Duplication
+### 1.7.1 Check Duplication
 ```py
-df.duplicated(subset=['col1', 'col2']])
+df.duplicated()                        # 查看是否存在完全重复的数据
+df.duplicated(subset=['col1', 'col2']) # 查看是否存在指定列重复的数据
 ```
-查看是否存在重复数据，返回一个 `pd.Series()`
+返回一个 `pd.Series()`
 - 其中 `True` 说明对应行的数据重复了，反之 `False`
 - 可以用 `.values` 的方式将其转换为 `np.array()`
 
-**应用：检查在指定两列中，是否存在相同的数据**
+> **应用：检查在指定两列中，是否存在相同的数据**
 ```py
-df.duplicated(subset=['LON', 'LAT']]).values.any()
+df.duplicated(subset=['LON', 'LAT']).values.any()
 ```
 - 其中 `L.any()` 用于检测列表中是否包含 `True` 元素，包含则返回 `True`，全元素均为 `False` 则返回 `False`
 - 当然，类似的还可以用于**检查是否存在 NaN 数值**： `df.isna().values.any()`
 
-**去除重复数据**
-
+### 1.7.2 Remove Duplication
 ```py
 df.drop_duplicates(subset=['LON', 'LAT'], # 将查重范围限制在特定的列中
-    keep='first', # 保留重复数据的第一个
-    inplace=True # 删除重复数据
+    keep='first', # 保留重复数据的第一个，可以换成 'last'
+    inplace=True
 )
 ```
 
@@ -284,16 +310,10 @@ df.hist('col1', by='col_category') # 对每个 category 单独画图
 df.plot(x='col_x', y='col_y', kind='scatter') # col_x-col_y 散点图
 ```
 
-### 1.8.1 Plot Time Series
 
 
-## 1.9 分组
-### Groupby
-
-```py
-# grouping = df.groupby(col_to_group_by)
-grouping = products.groupby('Category')
-```
+## 1.9 Query
+### 1.9.1 Group by
 products:
 | |Category |Price |Name  |Amount|
 |-|---------|------|------|------|
@@ -302,8 +322,10 @@ products:
 |2|Drink    |3     |Fenta |200   |
 
 Groupby object is kind of like a list of pairs `[(group_name, df)]`
-
 ```py
+# grouping = df.groupby(col_to_group_by)
+grouping = products.groupby('Category')
+
 for name, df in grouping:
     print(name, df.Price.mean())
 
@@ -312,16 +334,22 @@ Drink 3.5
 Snack 10
 """
 ```
-#### .1 属性 & 方法
 
+多层分组
+```py
+grouping_mul = df.groupby(['col1', 'col2', ...])
+```
+
+#### 1.9.1.1 属性 & 方法
+**属性**
 ```py
 grouping = products.groupby('Category')
 grouping.indices # 获取各个组所包含的商品 Index
 
-# {'Drink':array([0,2]), 'Snack':array([1])}
+>>> {'Drink':array([0,2]), 'Snack':array([1])}
 ```
-**方法**
 
+**方法**
 ```py
 # 获取某个组所有商品的信息（不包含 `Category` 列）
 grouping.get_group('Drink')
@@ -330,14 +358,12 @@ grouping.get_group('Drink')
 |-|------|------|------|
 |0|4     |Cola  |100   |
 |2|3     |Fenta |200   |
-#### .2 统计
+
+#### 1.9.1.2 统计
 
 ```py
 # 返回数值类型列的统计值（例如 Name 列就不会被返回）
-grouping = products.groupby('Category')
-grouping.mean()
-grouping.min()
-grouping.max()
+grouping.mean() # min() max()
 grouping.sum()
 ```
 |     |Price |Amount|
@@ -355,15 +381,14 @@ grouping.agg({'Price':'mean', 'Amount':'sum'})
 |Drink|3.5   |300   |
 |Snack|10    |50    |
 
-#### .3 col_of_interest.apply()
-**获取各组的某个列在外部函数/lambda上的统计值**
+> **获取各组的某个列在外部函数/lambda上的统计值**
 
 ```py
 df.groupby(col_to_group_by).col_of_interest.apply(func)
 ```
 - `col_to_group_by`: 分组对象
 - `col_of_interest`: 根据分组来进行统计的对象
-- `func`: 应用于统计对象的函数（自定义函数/lambda/来自于其他库的函数）
+- `func`: 应用于统计对象的函数（自定义函数/lambda/其他库的函数）
 
 Ex1: 统计每个航线的平均延误（多种方式）
 
@@ -388,8 +413,8 @@ Ex3: 统计每个航班在每个月的平均延误（**多层分组**）
 ```py
 flights.groupby(['Airline','Month'])['Arrival_delay'].apply(np.mean)
 ```
-#### .4 Groupby + Sort
 
+#### 1.9.3 Groupby + Sort
 ```py
 products.groupby('Category').mean().sort_values(
     by=['Price'], ascending=False
@@ -397,33 +422,41 @@ products.groupby('Category').mean().sort_values(
 ```
 
 
-## 1.10 数据处理
-### Statistic
-```py
-# 查看各列的统计数据（count, mean, std, percentile...）
-df.describe() 
-
-df.mean()           # 各列平均
-    df.mean(axis=1) # 各行平均
-df.sum()            # 各列求和
-```
-
-### Sort
-
+### 1.9.2 Sort
 ```py
 df.sort_values(by='col1') # 根据指定列做升序排列
 df.sort_values(by='col1', ascending=False) # 降序
 df.sort_index() # 根据行名做升序排列
 ```
 
-### Rolling
-Rolling object is a kind of list contains all the windows
+### 1.9.3 Where (Filter)
+```py
+df[df['col1']<n]                    # 筛选出所有满足条件的行
+df[(df['col1']<n) & (df['col2']>m)] # 多条件('|'表示或)
+```
 
+示例:
+```py
+mask1 = df.Poplation > 1000000                       # 人口大于一百万的地区
+mask2 = df.Region.apply(lambda x: x.startswith('A')) # 名字以 A 开头的地区
+
+df[mask1]         # 人口大于一百万的地区的所属行
+df[mask1 & mask2] # 人口大于一百万以及名字以 A 开头的地区的所属行
+df[mask1 | mask2]
+```
+
+
+
+
+
+
+## 1.10 数据处理
+### 1.10.1 Rolling
+Rolling object is a kind of list contains all the windows
 ```py
 # roll = df.rolling(window_length)
 prodroll = products.rolling(2)
 ```
-
 
 products:
 | |Category |Price |Name  |Amount|
@@ -432,7 +465,6 @@ products:
 |1|Snack    |10    |Nut   |50    |
 |2|Drink    |3     |Fenta |200   |
 |3|Drink    |2     |Water |500   |
-
 ```py
 # df.rolling(window_length).col_of_interest.apply(func)
 products.rolling(2).Price.apply(np.mean)
@@ -445,8 +477,18 @@ products.rolling(2).Price.apply(np.mean)
 """
 ```
 
+### 1.10.2 Statistic 统计数据
+```py
+# 查看各列的统计数据（count, mean, std, percentile...）
+df.describe() 
 
-### Trend (Change)
+df.mean()           # 各列平均
+    df.mean(axis=1) # 各行平均
+df.sum()            # 各列求和。此外: std() max() min() median()
+df.corr()           # 各列之间的 correlation
+```
+
+### 1.10.3 Trend (Change)
 数据的变化幅度（百分比）
 
 ```py
@@ -470,7 +512,7 @@ df.pct_change()
 
 
 
----
+
 
 
 
