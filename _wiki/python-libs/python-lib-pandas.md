@@ -132,6 +132,18 @@ df['c4'] = [5, 5, 5]
 |a2|1    |2    |0 | 5|
 |a3|NaN  |1    |0 | 5|
 
+> **将 Index 添加为第一列**
+```py
+df.reset_index(inplace=True)
+```
+
+| |index |c1   |c2   |c3|c4|
+|-|------|-----|-----|--|--|
+|0|a1    |1    |1    |0 | 5|
+|1|a2    |1    |2    |0 | 5|
+|2|a3    |NaN  |1    |0 | 5|
+
+
 
 ### 1.3.2 更改行列
 ```py
@@ -156,9 +168,19 @@ df['col2'].map({'A':'Aa', 'B':'Bb'}) # 修改特定元素
 ```
 
 **df.replace()**
+将 A 替换成 Aa, B 替换成 Bb
 ```py
 df.replace(['A','B'], ['Aa','Bb'])
 ```
+
+**df.apply(func, axis=0)**
+将函数 func 应用在指定行(axis=0)或列(axis=1)
+```py
+# 将第四列平方并以 Series 格式输出
+df.apply(lambda row:row[3]**2, axis=1)
+```
+
+
 
 ### 1.3.4 删除数据
 ```py
@@ -167,9 +189,9 @@ df.drop(columns = df.columns[0], inplace=True) # 删除第一列
 
 
 
-### 1.3.5 其他操作
+### 1.3.5 合并 DataFrame
 ```py
-df.T # 转置
+pd.concat([df1, df2], axis=1) # 横向合并
 ```
 
 ## 1.4 Arributes (Inspection 查看属性)
@@ -197,6 +219,7 @@ df.describe()
 
 
 ## 1.5 Access (Slice)
+### 1.5.1 访问行列
 **访问列**
 ```py
 df['columnName']    # 单列
@@ -221,7 +244,19 @@ for _, row in df.iterrows():
        row.col1 = 0
 ```
 
-**索引和切片**
+> 通过列名访问时出现 **KeyError**
+
+很可能是列名没有正确输出（例如忽略了前后空格）。例如下一图报错的原因，就是列名前后都特么有空格（下二图）
+<img src="/images/2022-08/Snipaste_2022-09-03_15-23-48.png" width="80%">
+<img src="/images/2022-08/Snipaste_2022-09-03_15-24-31.png" width="50%">
+
+解决方式: 打空格或者为所有列名去空格
+```py
+df.columns = df.columns.str.strip()
+```
+
+
+### 1.5.2 索引和切片
 ```py
 # 推荐方式
 df.loc['rowName','columnName'] # 使用行列名索引
@@ -238,6 +273,7 @@ df.columnName['rowName']
 df.sample()                     # 随机获取一行
     df.sample(frac=1, inplace=True) # 随机打乱整个 DataFrame
 ```
+
 
 
 
@@ -362,9 +398,11 @@ grouping.get_group('Drink')
 #### 1.9.1.2 统计
 
 ```py
-# 返回数值类型列的统计值（例如 Name 列就不会被返回）
-grouping.mean() # min() max()
-grouping.sum()
+# 特定列统计值
+grouping['Amount'].sum()
+
+# 所有数值类型列的统计值（例如 Name 列就不会被返回）
+grouping.sum() # mean() min() max()
 ```
 |     |Price |Amount|
 |-----|------|------|
@@ -380,6 +418,13 @@ grouping.agg({'Price':'mean', 'Amount':'sum'})
 |-----|------|------|
 |Drink|3.5   |300   |
 |Snack|10    |50    |
+
+> **Use `as_index=False` to return a flat DataFrame**
+
+使用前 vs. 使用后
+<img src="/images/2022-08/Snipaste_2022-09-03_10-41-52.png" width="80%">
+<img src="/images/2022-08/Snipaste_2022-09-03_10-42-53.png" width="90%">
+
 
 > **获取各组的某个列在外部函数/lambda上的统计值**
 
@@ -429,6 +474,15 @@ df.sort_values(by='col1', ascending=False) # 降序
 df.sort_index() # 根据行名做升序排列
 ```
 
+> **Customized Sorting**
+
+使用 `pd.Categorical()` 创建自定义排序方式
+```py
+season_order = ["Fall", "Winter", "Spring", "Summer"]
+df["season"] = pd.Categorical(df["season"], season_order)
+df.sort_values(by="season", inplace=True)
+```
+
 ### 1.9.3 Where (Filter)
 ```py
 df[df['col1']<n]                    # 筛选出所有满足条件的行
@@ -445,6 +499,27 @@ df[mask1 & mask2] # 人口大于一百万以及名字以 A 开头的地区的所
 df[mask1 | mask2]
 ```
 
+### 1.9.4 Join (Merge)
+**Inner Join**
+```sql
+select * from df1 join df2
+on df1.col1 = df2.col1 and df1.col2 = df2.col2
+```
+
+```py
+df = pd.merge(df1, df2, on=["col1", "col2"])
+```
+
+**Outer Join**
+保留两个表单的全部内容，为无法匹配的内容填入 NaN
+```sql
+select * from df1 full outer join df2
+on df1.col1 = df2.col1
+```
+
+```py
+df = pd.merge(df1, df2, on=["col1"], how="outer")
+```
 
 
 
@@ -509,6 +584,54 @@ df.pct_change()
 3 0.1
 """
 ```
+
+### 1.10.4 Dummy Variables (Pivot)
+通过 Pivot 将三种性别转化为三个 Dummy Vraibles（之后可应用于机器学习）
+
+students:
+| |id |Gender|
+|-|---|------|
+|0|001|Man   |
+|1|021|Woman |
+|2|241|Other |
+
+```py
+dummies = pd.get_dummies(students["Gender"])
+students_new = pd.concat([students, dummies], aixs=1)
+```
+
+| |id |Gender|Man |Woman |Other|
+|-|---|------|----|------|-----|
+|0|001|Man   |1   |0     |0    |
+|1|021|Woman |0   |1     |0    |
+|2|241|Other |0   |0     |1    |
+
+> **Dummy Varaibl Trap**
+
+观察以上 DataFrame，我们发现<span style="background-color: yellow; color: black;">只需要两个 Dummy Variables 就足以区分三种性别</span>。因此可以把第一个 Dummy 去掉
+
+```py
+dummies = pd.get_dummies(students["Gender"], drop_first=True)
+```
+
+| |Woman |Other|
+|-|------|-----|
+|0|0     |0    |
+|1|1     |0    |
+|2|0     |1    |
+
+
+
+## 1.11 Datetime
+把 string 格式的时间转化为 Datetime 格式并添加为新的一列
+```py
+df['datetime'] = pd.to_datetime(df['Date'])
+```
+
+
+
+
+
 
 
 

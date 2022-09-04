@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CEE491 Lecture 01-05
-categories: CEE491:Decision-and-Risk-Analysis
+title: Class Notes (ISYE6334, CEE491)
+categories: Probability Theory
 description: Personal Notes
 keywords: CEE491，Risk-Analysis，Probability, Decision
 mathjax: true
@@ -59,7 +59,7 @@ $$n\text{C}k=\frac{n!}{(n-k)!k!}$$
 - $P(E,F)=P(E)P(F\vert E)$ if dependent
 - $P(E\vert F)=P(E)$ in other words
 
-==Two mutually exlusive events are dependent==, 因为如果一个发生我们就知道另一个不会发生
+==Two mutually exlusive events are dependent==, 因为如果一个发生我们就知道另一个不会发生 ($P(E,F)=0$)
 
 **Conditional Independent**:
 $$p(x,y\vert z)=p(x\vert z)p(y\vert z)$$ 
@@ -69,14 +69,17 @@ $$p(x,y\vert z)=p(x\vert z)p(y\vert z)$$
 
 **Collective exhaustive** events: $\bigcup_{i=1}^M  E_i=S$
 
-## 2.2 Associate Properties
 
+
+# 2. Multiple Events
+For multiple events: $E_1,E_2,...,E_M$
+
+## 2.1 Associate Properties
 (1) $(E_1\cup E_2)\cup E_3 = E_1\cup(E_2 \cup E_3) = E_1\cup E_2\cup E_3$
 
 (2) $(E_1E_2)E_3 = E_1(E_2E_3) = E_1E_2E_3$
 
-## 2.3 De Morgan's Rules
-
+## 2.2 De Morgan's Rules
 $$\tag{2.1}\overline{\bigcup_{i=1}^M  E_i}=\bigcap_{i=1}^M \overline{E_i}$$
 
 That is $\overline{E_i\cup E_2\cup...\cup E_M}=\overline{E_1}...\overline{E_M}$
@@ -93,16 +96,13 @@ Let $E_i$ indicates the failure event of $i$-th component, and $E_{sys}$ indicat
     <img src="/images/2021-09/011300.jpg" style="zoom:40%"> <br><div style="color: #999;"></div>
 </center><br>
 
-For series connections: $E_{sys} = E_1\cup E_2\cup E_3$
-$\overline{E_{sys}}=\bar{E_1}\bar{E_2}\bar{E_3}$
+Series connections: $E_{sys} = E_1\cup E_2\cup E_3$, &nbsp;&nbsp;&nbsp;&nbsp;$\overline{E_{sys}}=\bar{E_1}\bar{E_2}\bar{E_3}$
 
-For parallel connections: $E_{sys} = E_1E_2E_3$
-$\overline{E_{sys}}=\bar{E_1}\cup\bar{E_2}\cup\bar{E_3}$
+Parallel connections: $E_{sys} = E_1E_2E_3$, &nbsp;&nbsp;&nbsp;&nbsp;$\overline{E_{sys}}=\bar{E_1}\cup\bar{E_2}\cup\bar{E_3}$
 
-# L3
-## 3.1 Elements of Probability Theory
 
-#### Inclusion-Exclusion Rule
+# 3. Elements of Probability Theory
+## 3.1 Inclusion-Exclusion Rule
 For simplest case: $P(E_1\cup E_2)=P(E_1) + P(E_2) - P(E_1E_2)$
 
 For general cases:
@@ -124,13 +124,11 @@ Two events are **statistically independant (S.I.)** if the occurrence of one eve
 
 Only when $E_1,E_2$ are S.I., the formulation $P(E_1E_2)=P(E_1)\cdot P(E_2)$ works
 
-# L4
-<span style="background-color: yellow; color: black;">There is an important example written in ipad, don't forget to review it.</span>
 
 
 
 
-# ISYE 6334
+
 
 $$Pr(A\vert B)=\frac{Pr(A\cap B)}{Pr(B)}$$
 

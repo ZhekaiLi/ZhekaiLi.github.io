@@ -8,7 +8,10 @@ mathjax: true
 topmost: true
 ---
 
-> This class is designed for reconstructing beam model from 3d object (or point cloud)
+> This class is designed for reconstructing beam model from 3d object (or point cloud). The class mainly contains a workflow from loading data, constructing beam skeleton through step slicing, recoordinating and projecting, and finally reconstrut the model in a required coordinate.
+> 
+> Athor: Zeka(Zhekai) Li
+> Time: Jun 2021
 
 # Simple example
 ```py

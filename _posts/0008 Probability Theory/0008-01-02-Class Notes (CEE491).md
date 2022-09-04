@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CEE491 Lecture 06-10
-categories: CEE491:Decision-and-Risk-Analysis
+title: Class Notes (CEE491)
+categories: Probability Theory
 description: Personal Notes
 keywords: CEE491，Risk-Analysis，Probability, Decision
 mathjax: true
@@ -301,3 +301,45 @@ $$p_{XY}(x,y)=P(X=x\cap Y=y)$$
 
 ## 10.3 Conditional PDF
 $$p_{X\vert Y}(x\vert y)=P(X=x\vert Y=y)=\frac{p_{XY}(x,y)}{p_Y(y)}$$
+
+# L13
+## 13.1 Conditional Discripter
+(1) $E[X\vert Y]=\int xf(x\vert y)dx$
+
+(2) $V[X\vert Y]=\int (x-\mu_{x\vert y})^2f(x\vert y)dx$
+
+(3) $E[X]=\int E[X\vert Y]f(y)dy$
+
+## 13.2 Sample Space
+$X=[x_1, x_2, ..., x_M], Y=[y_1, y_2, ..., y_M]$
+
+(1) Sample mean: $E[X]=\bar{x}=\sum x_i/M$
+
+(2) Sample variance: $S_x^2=\frac{1}{M}\sum(x-\bar{x})^2$
+
+(3) $E[XY]=\frac{1}{M}\sum x_iy_i$
+
+(4) $Cov[XY]=E[XY]-\bar{x}\bar{y}$
+
+(5) $\rho=Cov[XY]/S_xS_y$
+
+对于样本 $X,Y$ 在坐标系中的图像，如果是比较细的直线（点分布密集）则 $\rho=1$ or $-1$；如果比较粗（点分布稀疏），则 $\rho\in(-1,0)\cup(0,1)$；如果是分散的团状分布，则 $\rho=0$
+
+# L14 Multinormal Distribution
+$$f(\bf{x})=(2\pi)^{-\frac{n}{2}}\vert\bf\Sigma\vert^{-\frac{1}{2}} \exp\Big[-\frac{1}{2}(\bf{x}-\bf{\mu})^T\vert\bf\Sigma\vert^{-1}(\bf{x}-\bf{\mu})\Big]$$
+
+where
+1. $\bf{x-\mu}=[x_1-\mu_1,...,x_n-\mu_n]^T$
+2. $\bf\Sigma=\begin{bmatrix}
+   \sigma_1^2 & 0 & ... & 0 \\
+   0 & \sigma_2^2 & ... & 0 \\
+   ... & ... & ... & .... \\
+   0 & ... & 0 & \sigma_n^2
+\end{bmatrix}$
+
+### 14.1 (m=1) (Univariate) Normal Distribution
+$$f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\Big[-\frac{1}{2}(x-\mu)\sigma^{-2}(x-\mu)\Big]$$
+
+
+### 14.2 (m=2) Bi-variate Normal Distribution
+$$f(x_1,x_2)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}\exp\Big\{-\frac{1}{2(1-\rho^2)}\Big[(\frac{x_1-\mu_1}{\sigma_1})^2-2\rho(\frac{x_1-\mu_1}{\sigma_1})(\frac{x_2-\mu_2}{\sigma_2})-(\frac{x_2-\mu_2}{\sigma_2})^2\Big]\Big\}$$

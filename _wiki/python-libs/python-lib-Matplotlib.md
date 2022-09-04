@@ -29,12 +29,19 @@ ax.scatter(x=X[:, 0], y=X[:, 1],
     alpha=0.5  # 透明度, 取值区间为 [0, 1]
 )
 ```
+
 **折线图**
 ```py
 ax.plot([x1, x2], [y1, y2], '样式', label='Name')
 ```
 - `样式=点形+线形+颜色`，例如 `o-r` 表示红色圆点实线
 - 分开表示样式：`linestyle` `marker` `color`
+
+**柱状图**
+```py
+ax.bar(X, Y)
+```
+
 
 ### 1.2 插入文字
 
@@ -48,22 +55,28 @@ for i_x, i_y in zip(X, Y):
 ```
 
 ### 1.4 坐标轴
+```py
+# 设置坐标轴名
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+```
 
 **(1) 设置坐标轴范围**
 ```py
-ax.xlim(_min, _max)
+ax.set_xlim(_min, _max)
 ```
+
 当然也可以只设定最大/ 最小值，例如：
 ```py
-ax.xlim(xmin=0)
-ax.ylim(ymin=0)
+ax.set_ylim(ymin=0)
 ```
-**(2) 取消刻度显示**
 
+**(2) 取消刻度(标签)显示**
 ```py
 ax.set_xticks([])
 ax.set_yticks([])
 ```
+
 **(3) 设置刻度字体大小**
 ```py
 ax.tick_params(labelsize=13)
@@ -87,4 +100,15 @@ ax[0].plot(...)
 ax[1].scatter(...)
 ...
 ```
+
+### 1.8 设置右侧 y 轴
+```py
+fig, axl = plt.subplots(2, 3, figsize=(10, 7))
+axr = axl.twinx()
+
+axl.bar(...)
+axr.plot(...)
+```
+
+<img src="/images/2022-08/Snipaste_2022-09-03_22-14-59.png" width="70%">
 

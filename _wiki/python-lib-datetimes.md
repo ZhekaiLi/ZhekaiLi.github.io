@@ -31,3 +31,13 @@ dt.date.today()
 dt.timedelta(days=n)
 ```
 `days=`, `hours=`, `minutes=`, `seconds=`
+
+时间差
+```py
+t1 = dateutil.parser.parse('01/11/2011')
+t2 = dateutil.parser.parse('01/21/2011')
+delta_t = t2 - t1
+delta_t.days
+
+>>> 10
+```
