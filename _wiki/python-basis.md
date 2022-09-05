@@ -55,7 +55,7 @@ F(obj)
 print(obj.a) # >>> 5
 ```
 
-因此不管是在函数内部修改 class 的 fields 还是修改 list (list.append) 等等，都能够传递到函数外部，==因为本质上是在修改实例对象==
+因此不管是在函数内部修改 class 的 fields 还是修改 list (list.append) 等等，都能够传递到函数外部，<span style="background-color: yellow; color: black;">因为本质上是在修改实例对象</span>
 
 但如果在函数内部进行的是赋值操作，那就不会传递到函数外部
 
@@ -268,7 +268,7 @@ $\theta$ uderstood as **the exact performance value of the algorithm**
 
 Big Theta mathematically defined as both of the upper and lower bound i.e. if $f(x)\in O(g(x))$ and $f(x)\in\Omega(g(x))$ then $f(x)=\theta(g(x))$
 
-==虽然已经有了这些准确的定义，但我们在平常使用时只用 Big O（相当于 Big Theta）==
+<span style="background-color: yellow; color: black;">虽然已经有了这些准确的定义，但我们在平常使用时只用 Big O（相当于 Big Theta）</span>
 
 ## 6.4 Three Time Complexities
 - Best Case

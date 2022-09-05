@@ -183,7 +183,7 @@ where $\bf{R}_i, \bf{t}_i$ denote the rotation matrix and translation vecotr in 
 As shown in the figure above:
 1. $\bf{b}_{ij}$: vector from the projection centre of Camera $i$ to $j$
 2. $\Pi$: plane perpendicular to $\bf{b}_{ij}$
-3. $\bf{n}_i, \bf{n}_j$: project the unit vectors $z_i^\circ$ and $z_j^\circ$ of both optical axes into $\Pi$, which results in vectors $\bf{n}_i, \bf{n}_j$ (==由于我们的目的是求解 $\bf{z}_{ij}$ 的方向，因此不需要在意向量 $\bf{n}$ 的具体大小，只要保证 $\bf{n}_i, \bf{n}_j$ 等比例即可==)
+3. $\bf{n}_i, \bf{n}_j$: project the unit vectors $z_i^\circ$ and $z_j^\circ$ of both optical axes into $\Pi$, which results in vectors $\bf{n}_i, \bf{n}_j$ (<span style="background-color: yellow; color: black;">由于我们的目的是求解 $\bf{z}_{ij}$ 的方向，因此不需要在意向量 $\bf{n}$ 的具体大小，只要保证 $\bf{n}_i, \bf{n}_j$ 等比例即可</span>)
 <center>
     <img src="/images/2021-04/Snipaste_2021-04-06_23-00-50.jpg" style="zoom:100%"></div>
 </center><br>
@@ -205,8 +205,8 @@ As shown in the figure above:
 最后，能够得到旋转矩阵 $\bf{R}_{ij}=(\bf{x}_{ij}, \bf{y}_{ij}, \bf{z}_{ij})^T$ 
 
 > **旋转矩阵 $\bf{R}$ 的一些性质**
-> 1. ==旋转矩阵的行表示目标坐标系的基向量==，例如第一行表示目标坐标系的 $x$ 轴
-> 2. 旋转矩阵为正交矩阵，因此 ==$R^{-1}=R^T$==
+> 1. <span style="background-color: yellow; color: black;">旋转矩阵的行表示目标坐标系的基向量</span>，例如第一行表示目标坐标系的 $x$ 轴
+> 2. 旋转矩阵为正交矩阵，因此 <span style="background-color: yellow; color: black;">$R^{-1}=R^T$</span>
 
 > **Producing the Rectified Image Pair**
 
@@ -235,7 +235,7 @@ $L$ denotes left camera and $R$ denotes right camera. Let $p_L,p_R$ be correspon
 $$\tag{6.31} p^T_R\cdot\textbf{F}\cdot p_L=0$$
 
 > **Explain**
-> 如下图所示，已知左侧 image plane 上的一点 $p_L$，则该点的实际位置一定在 $P-P_1-P_2$ 这条 直线上。再把该直线映射到右侧 image plane 上，得到直线 $l'$。==Fundamental matrix 基础矩阵 $\bf{F}$ 能够将 $p_L$ 映射至 $l'$: $l'=\textbf{F}\cdot p_L$==
+> 如下图所示，已知左侧 image plane 上的一点 $p_L$，则该点的实际位置一定在 $P-P_1-P_2$ 这条 直线上。再把该直线映射到右侧 image plane 上，得到直线 $l'$。<span style="background-color: yellow; color: black;">Fundamental matrix 基础矩阵 $\bf{F}$ 能够将 $p_L$ 映射至 $l'$: $l'=\textbf{F}\cdot p_L$</span>
 > 
 > 由于 $p_R$ 一定在直线 $l'$ 上，且在 homogeneous coordinates 中，二维点 $(x,y)$ 被表示为 $(x,y,1)$，直线 $ax+by+c=0$ 被表示为 $(a,b,c)$，因此 $p_R^T\cdot l'=ax+by+c=0$
 
@@ -253,7 +253,7 @@ where
     <img src="/images/2021-04/Snipaste_2021-04-07_14-32-48.jpg" style="zoom:80%"></div>
 </center><br>
 
-Define ==essential matrix $\bf{E}$==:
+Define <span style="background-color: yellow; color: black;">essential matrix $\bf{E}$</span>:
 $$\tag{6.35} \bf{E}=\bf{R}[t]_\times$$
 
 
@@ -340,11 +340,11 @@ $$\tag{9.1}R(I)=R(C(S))=\bf{r}$$
 定义一个变化函数 $N(S)$，可以包括旋转、明暗等变化：
 $$\tag{9.2}R(I_{new})=R(C(N(S)))$$
 
-当 $R(I)=R(I_{new})=\bf{r}$ 时，可以说 ==procedure $\mathscr{X}$ is invariant to the change $N$==
+当 $R(I)=R(I_{new})=\bf{r}$ 时，可以说 <span style="background-color: yellow; color: black;">procedure $\mathscr{X}$ is invariant to the change $N$</span>
 
 > **Invariance w.r.t. Used Camera**
 
-Similarly, if a modification $M$ in camera $C$ that $C_{mod}=M(C)$ also keep $R(I_{mod})=R(I)$, we call ==procedure $\mathscr{X}$ is invariant to the change $M$==
+Similarly, if a modification $M$ in camera $C$ that $C_{mod}=M(C)$ also keep $R(I_{mod})=R(I)$, we call <span style="background-color: yellow; color: black;">procedure $\mathscr{X}$ is invariant to the change $M$</span>
 
 ### 9.1.2 Keypoints and 3D Flow Vectors
 **Keypoint** (or interest point) is defined by some particular image intensities “around” it, such as a corner. 

@@ -17,7 +17,7 @@ keywords: Windows Terminal
 引用 `命名空间 namespace`（类似 Python 中的 import 库）
 
 区域2：代码区
-由大到小分别为 `命名空间 namespace` > `类 class` > `方法 method`，分别对应区域 2, 2.1, 2.1.1（可以将这三者==粗略地==理解为 Python 中的 库 > 类 > 方法）
+由大到小分别为 `命名空间 namespace` > `类 class` > `方法 method`，分别对应区域 2, 2.1, 2.1.1（可以将这三者<span style="background-color: yellow; color: black;">粗略地</span>理解为 Python 中的 库 > 类 > 方法）
 <img src="https://img-blog.csdnimg.cn/20210416202949880.png" width="80%">
 
 **修改字体：建议使用 Consolas**
@@ -53,7 +53,7 @@ namespace ConsoleApp2
     }
 }
 ```
-第二行代码 `Console.ReadKey();` 功能见注释，目的在于==暂停程序，防止控制台闪退==（如果不添加，控制台在输出 "Hello World" 后将马上退出）
+第二行代码 `Console.ReadKey();` 功能见注释，目的在于<span style="background-color: yellow; color: black;">暂停程序，防止控制台闪退</span>（如果不添加，控制台在输出 "Hello World" 后将马上退出）
 
 **运行：单击运行按钮 & F5**
 
@@ -129,7 +129,7 @@ bool ifCorrect = true;
 ## .1 变量的作用范围
 在一个 `{}` 内声明的变量仅在当前大括号内生效（可读、可写），这个范围包括大括套的嵌套。
 
-而在两个平行的函数之间，由于无法在函数1中访问函数2内定义的变量，我们可以通过==在类中创建静态变量==的方式，来模拟全局变量。以下代码展示了静态变量的基础应用:
+而在两个平行的函数之间，由于无法在函数1中访问函数2内定义的变量，我们可以通过<span style="background-color: yellow; color: black;">在类中创建静态变量</span>的方式，来模拟全局变量。以下代码展示了静态变量的基础应用:
 
 ```csharp
 class Program
@@ -156,7 +156,7 @@ class Program
 ```
 
 ## .2 值类型 vs 引用类型
-==注意：这个 Section 中有大量在之后的博客中才会具体介绍的内容，读者可以先跳过==
+<span style="background-color: yellow; color: black;">注意：这个 Section 中有大量在之后的博客中才会具体介绍的内容，读者可以先跳过</span>
 
 C# 中的变量主要分为这两种类型。其中：
 
@@ -181,8 +181,8 @@ var ns = new int[] { 0, 1 };
 **值类型、引用类型在可修改性上的区别** (这个 "可修改性" 的表述可能不太恰当，日后会做修改)。如下图，可得
 1. 对于值类型 `double d` 无论在外部函数中怎么修改，其值均为初值
 2. 对于引用类型 `string name` 和 `int[] list`：
-在外部函数中==对其整体的修改不会影响它们在 Main 函数中的值==，正如 Change 1
-在外部函数中==对其元素的修改会影响==，正如 Change 2
+在外部函数中<span style="background-color: yellow; color: black;">对其整体的修改不会影响它们在 Main 函数中的值</span>，正如 Change 1
+在外部函数中<span style="background-color: yellow; color: black;">对其元素的修改会影响</span>，正如 Change 2
 (string 可以理解为只允许读不允许写的 char[]，这导致无法对其元素进行修改)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422160910594.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
 
@@ -211,7 +211,7 @@ int[] nums2 = new int[3] { 1, 2, 3 };
 ```csharp
 nums.Length; // 长度
 ```
-不同于变量，外部函数==可以直接对传入的数组进行修改，从而改变数组在该函数外部的值==。例如以下代码中，`Change` 函数更改了 `Main` 函数中的数组 `nums`，但并未改变变量 `n`:
+不同于变量，外部函数<span style="background-color: yellow; color: black;">可以直接对传入的数组进行修改，从而改变数组在该函数外部的值</span>。例如以下代码中，`Change` 函数更改了 `Main` 函数中的数组 `nums`，但并未改变变量 `n`:
 
 ```csharp
 static void Main(string[] args)
@@ -265,14 +265,14 @@ Array.Reverse(nums); // 降序
 ```
 
 ## .4 ArrayList 泛型集合
-> ==注意==：ArrayList 由于在读写的过程中存在类型转换（装箱/拆箱），导致其读写速度较为缓慢，因此一般更多地会 ==**使用 List<> 代替 ArrayList**==，详见 Section 8
+> 注意：ArrayList 由于在读写的过程中存在类型转换（装箱/拆箱），导致其读写速度较为缓慢，因此一般更多地会 <span style="background-color: yellow; color: black;">**使用 List<> 代替 ArrayList**</span>，详见 Section 8
 
 ```csharp
 using System.Collections;
 
 ArrayList list = new ArrayList();
 ```
-集合的概念类似于数组，但是==不同于数组的长度固定、元素类型单一，集合没有这些限制。集合也有缺陷==，由于任何添加进集合的元素都会被自动转换为 `object` 类型，因此在之后调用这些元素的时候，需要使用强制类型转换，示例：
+集合的概念类似于数组，但是<span style="background-color: yellow; color: black;">不同于数组的长度固定、元素类型单一，集合没有这些限制。集合也有缺陷</span>，由于任何添加进集合的元素都会被自动转换为 `object` 类型，因此在之后调用这些元素的时候，需要使用强制类型转换，示例：
 
 ```csharp
 list.Add(1);
@@ -315,9 +315,9 @@ List<int> list = new List<int>();
 [List<int>] array.ToList(); // 当然也可以将数组转换为 List<>
 ```
 ## .6 HashTable 键值对集合
-> ==注意==：HashTable 由于在读写的过程中存在类型转换（装箱/拆箱），导致其读写速度较为缓慢，因此一般更多地会 ==**使用 Dictionary 代替 HashTable**==，详见 Section 10
+> 注意：HashTable 由于在读写的过程中存在类型转换（装箱/拆箱），导致其读写速度较为缓慢，因此一般更多地会 <span style="background-color: yellow; color: black;">**使用 Dictionary 代替 HashTable**</span>，详见 Section 10
 
-类似 Python 中的字典，==键必须唯一，值可以重复==
+类似 Python 中的字典，<span style="background-color: yellow; color: black;">键必须唯一，值可以重复</span>
 
 ```csharp
 using System.Collections;
@@ -419,7 +419,7 @@ Console.WriteLine("{0}+{1}={2}", a, b, a+b);
 ## .1 算数运算符
 `+`, `-`, `*`, `/`, `%` 加，减，乘，除，取余
 
-运算结果（输出）的数据类型，与输入变量中==范围最大==的那个相同，例如 `int % double = double`
+运算结果（输出）的数据类型，与输入变量中<span style="background-color: yellow; color: black;">范围最大</span>的那个相同，例如 `int % double = double`
 
 ## .2 复合运算符 
 **`++`, `--`**
@@ -436,8 +436,8 @@ Console.WriteLine("{0}+{1}={2}", a, b, a+b);
 ## .4 逻辑运算符
 `&&`, `||`, `!`，与，或，非
 
-逻辑运算符之间存在优先级差异，并且 `&&` 与 `&` 同表示逻辑与但仍有一些不同。但是针对这两点，作者认为是==可以忽视==它们的：
-(1) 在优先级方面，==使用括号来体现优先级==，例如：
+逻辑运算符之间存在优先级差异，并且 `&&` 与 `&` 同表示逻辑与但仍有一些不同。但是针对这两点，作者认为是<span style="background-color: yellow; color: black;">可以忽视</span>它们的：
+(1) 在优先级方面，<span style="background-color: yellow; color: black;">使用括号来体现优先级</span>，例如：
 
 ```csharp
 // 由于 || 优先级低于 &&，因此上下两行所表示的含义一致
@@ -451,7 +451,7 @@ bool judge = a > b || b > c && c > d;
 # 数据类型转换
 ## .1 隐式类型转换
 特点：自动发生
-要求：两种类型兼容，且==目标类型范围 > 原类型范围==，例如 `int` 转 `double`
+要求：两种类型兼容，且<span style="background-color: yellow; color: black;">目标类型范围 > 原类型范围</span>，例如 `int` 转 `double`
 
 ```csharp
 int n1 = 3;
@@ -459,7 +459,7 @@ int n2 = n1;
 ```
 ## .2 显示类型转换
 特点：需要使用特定语法 `(目标类型)原变量`
-要求：两种类型兼容，且==目标类型范围 < 原类型范围==，例如 `double` 转 `int`
+要求：两种类型兼容，且<span style="background-color: yellow; color: black;">目标类型范围 < 原类型范围</span>，例如 `double` 转 `int`
 
 ```csharp
 double n1 = 3.14;
@@ -484,7 +484,7 @@ int n1 = int.parse(str);
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210418141234225.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
 
 # 选择与循环 if & for
-==使用 `Tab + Tab` 快捷键，实现快速生成结构体格式==
+<span style="background-color: yellow; color: black;">使用 `Tab + Tab` 快捷键，实现快速生成结构体格式</span>
 ## .1 if else
 
 ```csharp
@@ -691,9 +691,9 @@ public struct Person
     string _nickname
 }
 ```
-`public` 关键字使得其修饰的==字段==能由外部进行访问和修改，例如 _name 这个字段。未由 `public` 修饰的字段默认为 `private`，无法由外部进行修改，例如 _nickname。
+`public` 关键字使得其修饰的<span style="background-color: yellow; color: black;">字段</span>能由外部进行访问和修改，例如 _name 这个字段。未由 `public` 修饰的字段默认为 `private`，无法由外部进行修改，例如 _nickname。
 
-**注意**：我们将结构中的“变量”称之为字段。与变量的唯一性不同，字段可以同时存在同名的多个，例如不同人可以有相同的 _name 字段。因此==为了体现这一差别，一般习惯在字段前加上一个下划线==。
+**注意**：我们将结构中的“变量”称之为字段。与变量的唯一性不同，字段可以同时存在同名的多个，例如不同人可以有相同的 _name 字段。因此<span style="background-color: yellow; color: black;">为了体现这一差别，一般习惯在字段前加上一个下划线</span>
 
 **示例：`enum` in `struct`**
 
@@ -849,7 +849,7 @@ class Program
 当然，如果直接填 `int[]` 类型的数组也是 OK 的
 ## .3 重载 & 递归
 **重载：**
-重载指的是多个==名称相同，但参数不同==的函数（返回值类型不需要相同），使得计算机能够根据输入参数的类型以及个数，来选择相应的需要执行的函数。
+重载指的是多个<span style="background-color: yellow; color: black;">名称相同，但参数不同</span>的函数（返回值类型不需要相同），使得计算机能够根据输入参数的类型以及个数，来选择相应的需要执行的函数。
 
 示例：以下代码中对 `Add` 函数的重载使其既可以读取 `double` 类型的数据，也可以读取 `string` 来进行相加操作
 
@@ -914,10 +914,15 @@ class Program
 # 案例：飞行棋游戏
 仅使用当前所介绍的知识，就足矣写出一款飞行棋游戏，由于内容比较长，建议感兴趣的读者跳转到【参考资料】(1) 中的案例练习，[传送门](https://www.bilibili.com/video/BV1FJ411W7e5?p=90)。
 
-作者根据自己的理解写了一个类似功能的游戏，目前还没有做代码优化，因此可以看到将近写了 400 行左右（就效果而言总体满意）。==待优化一遍后应该会上传至 github==，以下是代码截图以及运行截图：
+作者根据自己的理解写了一个类似功能的游戏，目前还没有做代码优化，因此可以看到将近写了 400 行左右（就效果而言总体满意）。以下是代码截图以及运行截图：
 <img src="https://img-blog.csdnimg.cn/20210420222859768.png">
 <img src="https://img-blog.csdnimg.cn/2021042022354155.png" width="36%"> <img src="https://img-blog.csdnimg.cn/20210420223633109.png" width="61.5%">
 <img src="https://img-blog.csdnimg.cn/20210420223717877.png" width="60%">
+
+
+
+
+
 
 # 面向过程 $\to$ 面向对象
 **面向过程**：分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现。
@@ -927,7 +932,7 @@ class Program
 
 而在【参考资料】(1) 中，[传送门](https://www.bilibili.com/video/BV1FJ411W7e5?p=98)，讲师也提供了几个能够帮助理解面向对象和面向过程差异的例子。例如，分别用这两者来描述“关门”：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210420234841543.png)
-==我们使用 `属性` + `方法` 来描述对象==。以三个对象，白炽灯、LED灯、小猫为例：
+<span style="background-color: yellow; color: black;">我们使用 `属性` + `方法` 来描述对象</span>。以三个对象，白炽灯、LED灯、小猫为例：
 > **白炽灯**
 属性：尺寸（20''）、价格（5 $）
 方法：发光（黄色）
@@ -938,12 +943,17 @@ class Program
 属性：种类（橘猫）、体重（10kg）、性格（闷骚）
 方法：吃喝拉撒、与主人玩
 
-上述三个例子当中，很显然白炽灯与LED灯这两个对象具有非常类似的属性和方法，我们把这样的对象进行进一步的封装，从而抽象出 “**类**” 这一概念。
+上述三个例子当中，很显然白炽灯与LED灯这两个对象具有非常类似的属性和方法，我们把这样的对象进行进一步的封装，从而抽象出 “**类**” 这一概念
+
+
+
+
+
+
 # 类
-==类就是一个模子，确定了某种对象应该具有的属性和方法==，因此对象是通过类来创建的，例如白炽灯与LED灯这两个对象可以由 "灯类" 创建 。
+<span style="background-color: yellow; color: black;">类就是一个模子，确定了某种对象应该具有的属性和方法</span>，因此对象是通过类来创建的，例如白炽灯与LED灯这两个对象可以由 "灯类" 创建 。
 
 类的代码描述:
-
 ```csharp
 [public] class 类名
 {
@@ -952,8 +962,8 @@ class Program
     Methods 方法
 }
 ```
-一个关于类的完整示例:
 
+一个关于类的完整示例:
 ```csharp
 class Pet
 {
@@ -1002,18 +1012,18 @@ class Pet
 ```
 以上代码中的新内容将在下列几个 subsection 中依次介绍。
 ## .1 字段 Fields
-==字段是属于类的变量==，它表示了由类所创建的变量的某种属性。定义方式:
+<span style="background-color: yellow; color: black;">字段是属于类的变量</span>，它表示了由类所创建的变量的某种属性。定义方式:
 
 ```csharp
 [private] 字段类型 字段名;
 ```
 **关于字段，我们需要知道：**
 1. 关键字 `private` 则表示不可由外界访问 
-关键字 `public` 表示可由外界访问（读取、修改）。为了字段的安全性，==一般不使用 `public`==
+关键字 `public` 表示可由外界访问（读取、修改）。为了字段的安全性，<span style="background-color: yellow; color: black;">一般不使用 `public`</span>
 3. 为了显示字段与方法中的变量的区别，字段名建议以 `_` 开头
 4. 使用 `this.字段名` 的形式在类的内部调用字段，例如上例中的 `this._age`
 ## .2 属性 Properties
-==属性用于保护字段，对其读取、修改操作进行限制==。属性由两个方法组成:
+<span style="background-color: yellow; color: black;">属性用于保护字段，对其读取、修改操作进行限制</span>。属性由两个方法组成:
 
 ```csharp
 public 字段类型 属性名 { get => species; set => species = value; }
@@ -1024,7 +1034,7 @@ public 字段类型 属性名 { get => species; set => species = value; }
 **关于属性，我们需要知道：**
 1. 属性一般都定义为 `public`
 2. 属性名其对应与字段名应该相同（含义相同），例如属性 `Age` 对应字段 `_age`
-3. 选中对应的字段后，==使用快捷键 `Ctrl+R+E` 实现属性的快速生成==（更加详细的步骤演示可参考这篇博客：[【.NET】VS2017+C#如何快速生成属性](https://blog.csdn.net/qq_41324483/article/details/93718399)）
+3. 选中对应的字段后, <span style="background-color: yellow; color: black;">使用快捷键 `Ctrl+R+E` 实现属性的快速生成</span>（更加详细的步骤演示可参考这篇博客：[【.NET】VS2017+C#如何快速生成属性](https://blog.csdn.net/qq_41324483/article/details/93718399)）
 4. 为了限制修改，一般情况下会对 `set()` 方法做一定的修改。
 例如在以下代码中，`Age` 属性就对年龄的修改做了限制，规定必须要大于等于 0
 5. **只读属性** & **只写属性**：顾名思义，只读属性没有 `set()` 方法，只写属性没有 `get()` 方法
@@ -1131,7 +1141,7 @@ using System.XXX;
 2. 在弹窗中勾选 `ConsoleApp2`，点击确定
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422145939668.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70)
 3. 使用 using 添加 `using ConsoleApp2`，然后就能调用其中的 `Pet` 类了。
-==注意！这个该类必须是由 `public` 修饰的，即允许外界访问==
+<span style="background-color: yellow; color: black;">注意！这个该类必须是由 `public` 修饰的，即允许外界访问</span>
 <img src="https://img-blog.csdnimg.cn/2021042215022158.png">
 
 # 字符串 string
@@ -1148,7 +1158,7 @@ using System.XXX;
 当给字符串重新赋值时，原初值并没有销毁，而是在堆中重新开辟一块区域储存。如下图中字符串 `s` 赋新值 "孙权" 后，其初值 "张三" 并未在堆中被销毁。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210424075611983.png)
 
-不同于栈空间垃圾内存的立即销毁，像这样未被销毁的堆空间垃圾，只有当程序结束时才会被处理。因此==为了防止程序运行时内存占用过高，要避免大量的对字符串的赋值操作==
+不同于栈空间垃圾内存的立即销毁，像这样未被销毁的堆空间垃圾，只有当程序结束时才会被处理。因此<span style="background-color: yellow; color: black;">为了防止程序运行时内存占用过高，要避免大量的对字符串的赋值操作</span>
 
 **使用 `StringBuilder` 避免对字符串的操作占用过量内存**
 示例：将 1-100 的整数串成一个字符串
@@ -1277,7 +1287,7 @@ using System.Text;
 `Encoding.XXX` 为解码方式，常见有 Encoding.Default, Encoding.UTF8 等
 
 # 继承
-继承主要是类的继承，通过子类继承父类的形式，使得子类能够沿用父类当中的字段、属性与方法（只能继承 public 的），从而==降低代码冗余。==
+继承主要是类的继承，通过子类继承父类的形式，使得子类能够沿用父类当中的字段、属性与方法（只能继承 public 的），从而<span style="background-color: yellow; color: black;">降低代码冗余</span>
 
 示例，子类 `Cat` 继承父类 `Animal`:
 
@@ -1293,9 +1303,9 @@ public class Cat: Animal
     // 代码块
 }
 ```
-==继承具有传递性==，即子类的子类能够继承父类中的字段、属性与方法。
+<span style="background-color: yellow; color: black;">继承具有传递性</span>，即子类的子类能够继承父类中的字段、属性与方法。
 
-==子类不继承父类的构造函数==。但是可以通过在子类的构造函数前==添加 `:base([参数列表])` 来实现构造函数的继承==，示例：
+<span style="background-color: yellow; color: black;">子类不继承父类的构造函数</span>。但是可以通过在子类的构造函数前<span style="background-color: yellow; color: black;">添加 `:base([参数列表])` 来实现构造函数的继承</span>，示例：
 
 ```csharp
 public class Animal
@@ -1321,7 +1331,7 @@ public class Cat: Animal
     public string Name { get => _name; set => _name = value; }
 }
 ```
-如果在子类中需要写一个与父类中的==同名的成员==，建议为其添加一个关键字 `new`（不加也不会报错，但是加了就看的比较清楚），示例:
+如果在子类中需要写一个与父类中的<span style="background-color: yellow; color: black;">同名的成员</span>，建议为其添加一个关键字 `new`（不加也不会报错，但是加了就看的比较清楚），示例:
 
 ```csharp
 public class Animal
@@ -1499,7 +1509,7 @@ using(FileStream fsWirte = new FileStream(path, FileMode.OpenOrCreate, FileAcces
     fsWrite.Write(buffer, 0, buffer.Length); 
 }
 ```
-==上例中用到的 `using(){ }` 方法类似于 Python 中的 with 语句，即运行完大括号内的代码之后自动释放小括号内的代码所占用的资源==
+<span style="background-color: yellow; color: black;">上例中用到的 `using(){ }` 方法类似于 Python 中的 with 语句，即运行完大括号内的代码之后自动释放小括号内的代码所占用的资源</span>
 
 ### .3.2 StreamReader & StreamWriter
 类方法
@@ -1528,9 +1538,9 @@ using (StreamReader sr = new StreamReader(path))
 }
 ```
 # 面向对象之多态
-==概念：== 让一个对象能够表现出多种状态（类型）
+<span style="background-color: yellow; color: black;">概念</span>: 让一个对象能够表现出多种状态（类型）
 
-==为什么要使用多态？== 便利性。例如，以下代码的运行结果为：
+<span style="background-color: yellow; color: black;">为什么要使用多态</span>? 便利性。例如，以下代码的运行结果为：
 ```csharp
 "发出了叫声"
 "发出了叫声"
@@ -1557,7 +1567,7 @@ for (int i = 0; i < animals.Length; i++)
     animals[i].Shout();
 }
 ```
-==多态的实现方式：== 虚方法、抽象类、接口
+<span style="background-color: yellow; color: black;">多态的实现方式</span>：虚方法、抽象类、接口
 ## .1 虚方法
 步骤：
 1. 将父类中的函数标记为虚方法，关键字 `virtual`
@@ -1590,7 +1600,7 @@ public class Cat : Animal
     public override void Shout() { Console.WriteLine("喵"); }
 }
 ```
-==Others for 抽象类==
+<span style="background-color: yellow; color: black;">Others for 抽象类</span>
 1. 不能单独创建抽象类的对象，但可以创建其子类
 2. 当子类继承抽象类时，需要重写其中的抽象方法，否则报错（可以使用 `Alt+Shift+F10` 自动填充），除非这个子类也是抽象类
 3. 抽象类中可以包含非抽象成员，即属性、字段、函数

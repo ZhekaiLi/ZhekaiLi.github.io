@@ -59,7 +59,7 @@ $$n\text{C}k=\frac{n!}{(n-k)!k!}$$
 - $P(E,F)=P(E)P(F\vert E)$ if dependent
 - $P(E\vert F)=P(E)$ in other words
 
-==Two mutually exlusive events are dependent==, 因为如果一个发生我们就知道另一个不会发生 ($P(E,F)=0$)
+<span style="background-color: yellow; color: black;">Two mutually exlusive events are dependent</span>, 因为如果一个发生我们就知道另一个不会发生 ($P(E,F)=0$)
 
 **Conditional Independent**:
 $$p(x,y\vert z)=p(x\vert z)p(y\vert z)$$ 

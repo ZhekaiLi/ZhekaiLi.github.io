@@ -99,7 +99,7 @@ keywords:
 <img src="/images/2022-04/Snipaste_2022-04-29_09-27-51.png"  width="100%">
 
 **(2) 画出年薪中位数随季度变化的涨跌**
-操作: 点击 YEAR 左侧的加号(就会变成下图中的减号)。这里折线的==不连续==，是因为 Case Receive Date 为 Dimention 类的数据
+操作: 点击 YEAR 左侧的加号(就会变成下图中的减号)。这里折线<span style="background-color: yellow; color: black;">不连续</span>，是因为 Case Receive Date 为 Dimention 类的数据
 <img src="/images/2022-04/Snipaste_2022-04-29_09-31-54.png"  width="100%">
 
 而将其转换为 Measure 类型后，再点击加号(由 YEAR 变为 QUARTER)，即可显示出连续折线
@@ -107,7 +107,7 @@ keywords:
 
 <img src="/images/2022-04/Snipaste_2022-04-29_09-38-25.png"  width="100%">
 
-相较于时间跨度为年的折线图的平稳趋势，跨度为季度的折线图==有明显的先降后升的趋势，能反映出更多细节==
+相较于时间跨度为年的折线图的平稳趋势，跨度为季度的折线图<span style="background-color: yellow; color: black;">有明显的先降后升的趋势，能反映出更多细节</span>
 
 **(3) 画出不同职业年薪中位数的涨跌**
 把 Job Title 拖入 Colors 框中，不难发现大部分数据都在 2019 年之后
@@ -137,7 +137,7 @@ keywords:
 ### 4 箱形图
 <img src="/images/2022-04/Snipaste_2022-04-29_10-57-39.png"  width="100%">
 
-绘制每年年薪的 boxplot(需要在 Analysis 菜单中取消选择 Aggregate Measures)，==可以看到有很多 outliers==
+绘制每年年薪的 boxplot(需要在 Analysis 菜单中取消选择 Aggregate Measures)，<span style="background-color: yellow; color: black;">可以看到有很多 outliers</span>
 <img src="/images/2022-04/Snipaste_2022-04-29_11-22-37.png"  width="100%">
 
 通过限制 y 轴范围来不显示 >= 1000K 的 outliers

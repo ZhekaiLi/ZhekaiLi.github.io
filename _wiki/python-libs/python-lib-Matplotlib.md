@@ -9,7 +9,7 @@ keywords: Python
 
 
 ## Key Points
-==为方便之后的操作，更建议使用以下代码作为绘图代码的首行==
+<span style="background-color: yellow; color: black;">为方便之后的操作，更建议使用以下代码作为绘图代码的首行</span>
 （不要使用 `plt.figure()`）
 ```py
 import matplotlib.pyplot as plt

@@ -68,7 +68,7 @@ LINKs Back:
 
 # 3. Query Edit 
 ## 3.1 Refresh (Update)
-当把字符串 "MC" 填入==原表格==中的一个空缺 cell 时，其对应的 Query 表不会自动同步，需要右键单击 $\to$ `Refresh`
+当把字符串 "MC" 填入<span style="background-color: yellow; color: black;">原表格</span>中的一个空缺 cell 时，其对应的 Query 表不会自动同步，需要右键单击 $\to$ `Refresh`
 <img src="/images/2022-05/Snipaste_2022-05-01_15-18-36.png"  width="100%">
 <img src="/images/2022-05/Snipaste_2022-05-01_15-21-11.png"  width="80%">
 <img src="/images/2022-05/Snipaste_2022-05-01_15-22-15.png"  width="100%">
@@ -115,7 +115,7 @@ LINKs Back:
 将两个分隔列都改名之后效果如下
 <img src="/images/2022-05/Snipaste_2022-05-01_15-04-37.png"  width="100%">
 
-==除此之外，还有非常多分隔的方式==，以满足不同需求
+<span style="background-color: yellow; color: black;">除此之外，还有非常多分隔的方式</span>，以满足不同需求
 <img src="/images/2022-05/Snipaste_2022-05-06_09-03-02.png"  width="50%">
 
 ### Other Methods
@@ -147,7 +147,7 @@ LINKs Back:
 目标：为下图的两张表分别创建 Query，并将它们纵向合并
 <img src="/images/2022-05/Snipaste_2022-05-02_16-32-26.png"  width="100%">
 
-(1) 首先，为表 `Sydney` 创建 Query。为了使 `Sydney` 的列数与 `Other Instructors` 匹配，==需添加 Location 列==
+(1) 首先，为表 `Sydney` 创建 Query。为了使 `Sydney` 的列数与 `Other Instructors` 匹配<span style="background-color: yellow; color: black;">需添加 Location 列</span>
 - Get Data: 点击 `From Table/Rage`
 <img src="/images/2022-05/Snipaste_2022-05-02_16-37-28.png"  width="80%">
 
@@ -247,7 +247,7 @@ on A.keyA = B.keyB
 
 首先打开 Power Query 界面 $\to$ 选中这五列数据 (按住Shift) $\to$ 菜单栏 `Transform` $\to$ `Unpivot Columns` (或者选中其他所有的数据，然后点击 `Unpivot Other Columns`)
 
-将生成的第一列改名为 "Rating"，==并将其数据类型修改为 Number==。再删除第二列，即可完成 unpivoting
+将生成的第一列改名为 "Rating"，<span style="background-color: yellow; color: black;">并将其数据类型修改为 Number</span>。再删除第二列，即可完成 unpivoting
 <img src="/images/2022-05/Snipaste_2022-05-04_09-07-36.png"  width="60%">
 
 
@@ -283,7 +283,7 @@ group by Branch, Department
 在 Power Query 界面菜单栏 `Home` $\to$ `Group By`
 <img src="/images/2022-05/Snipaste_2022-05-04_22-39-52.png"  width="100%">
 
-初步完成分组，但同时也发现==异常: Sydney 下有两个 Sales==
+初步完成分组，但同时也发<span style="background-color: yellow; color: black;">异常: Sydney 下有两个 Sales</span>
 <img src="/images/2022-05/Snipaste_2022-05-04_22-41-04.png"  width="80%">
 
 合理怀疑是其中的一个 Sales 字符串后面跟了一些空格，从而被识别为不同的两组。为了解决这个问题:
@@ -335,7 +335,7 @@ group by Branch, Department
 
 例如对于这样一张表，由上至下储存了多个人的 Course Evaluation，每个 Evaluation 包含七个小问题以及对应的打分
 
-而我们需要从中提取出每个 Qustion 的==平均分==
+而我们需要从中提取出每个 Qustion 的 **average score**
 
 <img src="/images/2022-05/Snipaste_2022-05-03_10-51-21.png"  width="100%">
 
