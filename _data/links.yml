@@ -1,3 +1,15 @@
 - name: 码志
   url: http://mazhuang.org
   src: life
+
+- name: ISYE - Georgia Institute of Technology
+  url: https://www.isye.gatech.edu/
+  src: www
+
+- name: University of Illinois Urbana-Champaign
+  url: https://illinois.edu/
+  src: www
+
+- name: Zhejiang University
+  url: https://www.zju.edu.cn/
+  src: www

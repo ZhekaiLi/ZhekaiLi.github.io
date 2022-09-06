@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Class Notes (ISYE6334, CEE491)
-categories: Probability Theory
+categories: Probability-Theory
 description: Personal Notes
 keywords: CEE491，Risk-Analysis，Probability, Decision
 mathjax: true

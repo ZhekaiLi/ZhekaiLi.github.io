@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Class Notes (CEE491)
-categories: Probability Theory
+categories: Probability-Theory
 description: Personal Notes
 keywords: CEE491，Risk-Analysis，Probability, Decision
 mathjax: true
@@ -343,3 +343,4 @@ $$f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\Big[-\frac{1}{2}(x-\mu)\sigma^{-2}(x-\mu)
 
 ### 14.2 (m=2) Bi-variate Normal Distribution
 $$f(x_1,x_2)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}\exp\Big\{-\frac{1}{2(1-\rho^2)}\Big[(\frac{x_1-\mu_1}{\sigma_1})^2-2\rho(\frac{x_1-\mu_1}{\sigma_1})(\frac{x_2-\mu_2}{\sigma_2})-(\frac{x_2-\mu_2}{\sigma_2})^2\Big]\Big\}$$
+
