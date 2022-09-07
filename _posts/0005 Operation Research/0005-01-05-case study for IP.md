@@ -4,6 +4,7 @@ title: Case Study for Integer Programming
 categories: Operation-Research
 description: Personal Notes
 keywords: IP, OR
+mathjax: true
 ---
 
 # Case Study: Call Center Personnel Scheduling

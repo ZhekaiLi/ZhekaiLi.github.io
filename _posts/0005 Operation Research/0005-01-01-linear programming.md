@@ -4,6 +4,7 @@ title: Linear Programming (LP)
 categories: Operation-Research
 description: Personal Notes
 keywords: LP, OR
+mathjax: true
 ---
 
 除了以下介绍的线性规划问题，还有一些非线形规划问题通过 Linearization 也能转化为线性规划问题 [Wiki: Operation Research - Linearizaiton](./0005-01-04-linearization.md)

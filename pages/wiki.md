@@ -9,6 +9,7 @@ menu: 维基
 permalink: /wiki/
 ---
 
+
 > Remember how much knowledge will explode our brains?
 
 {% case site.components.wiki.view %}

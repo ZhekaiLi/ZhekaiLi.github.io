@@ -4,6 +4,7 @@ title: Linear Programming (LP)
 categories: Operation-Research
 description: Personal Notes
 keywords: LP, OR
+mathjax: true
 ---
 
 LINKs Back:

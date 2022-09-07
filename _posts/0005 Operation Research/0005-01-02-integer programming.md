@@ -4,6 +4,8 @@ title: Integer Programming (IP)
 categories: Operation-Research
 description: Personal Notes
 keywords: IP, OR
+mathjax: true
+topmost: true
 ---
 
 *References*
