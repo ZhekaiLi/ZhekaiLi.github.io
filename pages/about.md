@@ -8,10 +8,14 @@ menu: 关于
 permalink: /about/
 ---
 
-<div style="display: flex;justify-content: center;align-items: top;">
+<!-- <div style="display: flex;justify-content: center;align-items: top;">
 <img src="/images/2022-08/Snipaste_2022-08-30_22-39-34.png" width="20%" height="21%" style="vertical-align:down;">&nbsp;&nbsp;&nbsp;&nbsp;
-<span> Hi, I'm Zeka(Zhekai) Li, a graduate student in <b>MS Supply Chain Engineering</b> at the Georgia Institute of Technology. I'll graduate in December 2023 and I'm currently looking for a <b>2023 summer internship in supply chain analysis</b><br><a href="https://www.linkedin.com/in/zeka-li-a949a2236/" target="_blank" title="Go to LinkedIn"><b>[LinkedIn]</b></a> [zli3125@gatech.edu] [zhekai18@163.com]</span>
-</div> 
+<span> 文字内容 </span>
+</div> -->
+
+Hi, I'm Zeka(Zhekai) Li, a graduate student in <b>MS Supply Chain Engineering</b> at the Georgia Institute of Technology. I'll graduate in December 2023 and I'm currently looking for a <b>2023 summer internship in supply chain analysis</b>
+
+<a href="https://www.linkedin.com/in/zeka-li-a949a2236/" target="_blank" title="Go to LinkedIn"><b>[LinkedIn]</b></a> [zli3125@gatech.edu] [zhekai18@163.com]
 
 ---
 I have finished 3 research projects about <b>modeling, machine learning, and programming</b>. As an assistant researcher, I developed a metric to evaluate the vulnerability of a metro network and applied its utility through a case study; I exploited different clustering methods, and modified DBSCAN(a density-based clustering algorithm) to fit the dataset from road failure detection; I designed a python class and created a workflow to extract geometric information from 3D point cloud data.

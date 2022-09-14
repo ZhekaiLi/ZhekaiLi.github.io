@@ -172,6 +172,7 @@ MAX objective function:
 
 
 ### Example (1)
+
 $$\max\;\;2x_1+3x_2$$
 
 $$\text{s.t.}\;\;\begin{aligned}

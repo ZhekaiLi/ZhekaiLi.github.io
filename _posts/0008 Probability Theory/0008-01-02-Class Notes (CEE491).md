@@ -7,7 +7,7 @@ keywords: CEE491，Risk-Analysis，Probability, Decision
 mathjax: true
 ---
 
-# L6
+# 1. PMF, PDF, CDF
 
 > **Probability Mass Function (PMF)**
 
@@ -35,15 +35,14 @@ $$F_X(a)=P(X\leq a)=\int_{-\infty}^af_X(x)dx$$
 
 $$f_X(x)=\frac{dF_X(x)}{dx}$$
 
-But for **Mixed Random Varaibles**, 其实就是两者的结合体，但是体现在公式方面则会另有区别，详见 September 9 的课件
 
 
 
 
 
 
+# 2. Statistics Descriptor
 
-# Statistics Descriptor
 **Expectation (mean)**: $E[X]=\mu_X=\begin{cases}\sum_{\forall x}xp(x) \\ \int_{-\infty}^\infty xf(x)dx\end{cases}$
 
 **Median:** $x_{0.5}\to F(x_{0.5})=0.5$
@@ -74,22 +73,33 @@ $$E[(x-\mu_X)^3]\begin{cases}
 \end{cases}$$
 
 
-## Calculation Rules
-(1) $E[aX]=aE[X], E[X+b]=E[X]+b$
+## 2.1 Calculation Rules
+(1) $\begin{cases} 
+E[aX]=aE[X]\\
+E[X+b]=E[X]+b
+\end{cases}$
 
-(2) $V[aX]=a^2V[X], V[X+b]=V[X]$
-
-(3) $V[X_1+X_2]=V[X_1]+V[X_2]$, where $x_1,x_2$ S.I.
+(2) $\begin{cases} 
+Var(aX)=a^2Var(X)\\
+Var(X)=Var(-X)\\
+Var(X+b)=Var(X)
+\end{cases}$
 
 (4) $V[X_1X_2]=E[X_1^2]E[X_2^2]-E^2[X_1]E^2[X_2]$
 
 > **For Joint Distributions**
 
-(1) $E[X+Y]=E[X]+ E[Y]$
+(1) $\begin{cases} 
+E[X+Y]=E[X]+ E[Y]\\
+E\big[\sum a_iX_i\big] = \sum a_iE[X_i]
+\end{cases}$ 
 
-(2) $cov(X,Y)=E[(X-\mu_X)]E[(Y-\mu_Y)]-E[X]E[Y]$
+(2) $\begin{cases} 
+Var(aX+bY)=a^2Var(X)+b^2Var(Y)+2ab\times Cov[X,Y]\\
+Var\big(\sum a_iX_i\big) = \sum a_i^2Var(X_i) + 2\sum_{i<j}a_ia_jCov[X_i,X_j]
+\end{cases}$ 
 
-(3) $V(X+Y)=V(X)+2cov(X.Y)+V(Y)$
+
 
 
 
