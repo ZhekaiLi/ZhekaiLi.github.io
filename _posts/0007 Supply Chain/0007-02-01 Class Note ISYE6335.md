@@ -1,4 +1,12 @@
-
+---
+layout: post
+title: ISYE6335 Class Notes
+categories: Supply-Chain
+description:
+keywords: SCE, Supply-Chain
+mathjax: true
+topmost: true
+---
 
 # L1: Intro to Warehousing
 
