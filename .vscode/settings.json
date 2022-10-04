@@ -1,0 +1,6 @@
+{
+    "markdown.experimental.editor.pasteLinks.enabled": true,
+    "markdown.experimental.validate.enabled": true,
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "jupyter.allowUnauthorizedRemoteConnection": true
+}
