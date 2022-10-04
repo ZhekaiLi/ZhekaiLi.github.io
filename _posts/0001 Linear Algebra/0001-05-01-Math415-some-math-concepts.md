@@ -6,7 +6,6 @@ description: Personal Notes
 keywords: Math415，Linear-Algebra，Matrix
 mathjax: true
 ---
--
 
 # 0 Eular Equation
 $$\begin{aligned}

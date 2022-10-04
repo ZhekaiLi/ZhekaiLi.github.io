@@ -34,12 +34,19 @@ print("Hello, World!")
 插入图片的两种方式
 (1)
 <center>
-    <img src="/images/2021-04/Snipaste_2021-03-31_15-39-47.jpg" width="50%"> <br>
-    <div style="color: #808080;">Figure: Intersection Point</div>
+    <img src="/images/2022-10/Snipaste_2022-10-01_10-24-37.png" width="50%"> <br>
+    <div style="color: #808080;">Paths of material flow through a warehouse</div>
 </center><br>
 
 (2)
-<img src="/images/2021-12/Screenshot 2021-12-23 at 9.31.33 PM.png" width="50%">
+<img src="/images/2021-12/Screenshot 2021-12-23 at 9.31.33 PM.png" width="40%">
+
+(3)
+<table><tr>
+<td><img src="/images/2022-06/Snipaste_2022-06-04_15-31-32.png" border=0>    <center><div style="color: #808080;">Figure Left</div></td>
+<td><img src="/images/2022-06/Snipaste_2022-06-04_15-31-32.png" border=0>
+<center><div style="color: #808080;">Figure Right</div></td>
+</tr></table>
 
 $$\LaTeX$$
 > **公式**
@@ -56,6 +63,9 @@ $$\begin{aligned}
 g_1(x) & \leq M_1z\\
 g_1(x) & \leq M_2(1-z)
 \end{aligned}$$
+
+- 凸显结论（添加方框）
+$$f(x)=...=\boxed{a+b}$$
 
 > **求导**
 
@@ -83,4 +93,5 @@ $\zeta$
 花体效果 $\mathbb{E}, \mathcal{E}, \mathscr{E}$
 箭头 $\to, \implies, \iff$
 双箭头 $\Leftrightarrow, \leftrightarrow$
+
 

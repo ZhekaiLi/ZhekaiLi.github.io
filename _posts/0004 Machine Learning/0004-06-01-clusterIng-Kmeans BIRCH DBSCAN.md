@@ -29,15 +29,38 @@ $$dist_{mk}=(\sum_{i=1}^n\vert x_i-y_i\vert^p)^{\frac{1}{p}}$$
 $$dist_{mk}=\sqrt{\sum_{i=1}^n\vert x_i-y_i\vert^2}$$
 
 # 2. K-means
+## 2.1 Version 1
+### 2.1.1 Object
+Given $m$ data points $\{x^1,x^2,...x^m\}\in R^n$
 
-K-means, 即 k-均值聚类算法, 属于非监督学习
+1. Find $k$ clusters centers $\{c^1,c^2,...c^k\}\in R^n$
+2. Assign each data point $i$ to one cluster, $\pi(i)=k$ indicates that point $i$ is assigned to cluster $k$
 
-## 2.1 Object 
-Given number $k$ and data $D=\lbrace x_1,...,x_m\rbrace$, divide the data into $k$ different clusters $C=\lbrace C_1,...,C_k\rbrace$ with the **least square error (LSE)**
-$$LSE=\sum_{i=1}^k\sum_{x\in C_i}\|x-u_i\|^2$$
+Such that the average distance from each point to its cluster center is small:
+$$\min \frac{1}{m}\sum_{i=1}^m\|x^i-c^{\pi(i)}\|^2$$
+
+### 2.1.2 Algorithm
+Initialize $k$ cluster centers, $\{c^1,c^2,...c^k\}$ randomly
+
+Do
+- For each data points, decide which cluster it should be sent to (<font color='red'>cluster assignment</font>)
+$$\pi(i)=\argmin_{j=1,...,k}\|x^i-c^j\|^2$$
+- Adjust the cluster centers, 即把当前各个 cluster 内所有元素的均值作为新的簇中心 (<font color='red'>center adjustment</font>)
+$$c^j=\frac{1}{\vert\{i:\pi(i)=j\}\vert}\sum_{i:\pi(i)=j}x^i$$
+
+While any cluster center has been changed
+
+
+  
+
+## 2.2 Version 2
+### 2.2.1 Object 
+Given number $k$ and data $D=\lbrace x_1,...,x_m\rbrace$, divide the data into $k$ different clusters $C=\lbrace C_1,...,C_k\rbrace$ with the least **mean square error (MSE)**
+$$\min\sum_{i=1}^k\sum_{x\in C_i}\|x-u_i\|^2$$
 
 where $u_i$ is the centroid of cluster $C_i$
-## 2.2 Procedure (pseudocode)
+
+### 2.2.2 Procedure (pseudocode)
 以下是伪代码
 ```py
 # Randomly select k number of data as the initial cluster centroids
@@ -56,8 +79,7 @@ while LSE_last != LSE:
     centroids, LSE, clusters = Renew()
 ```
 
-## 2.3 Code
-### 2.3.1 Use basic python
+### 2.2.3 Code with basic python
 ```py
 import numpy as np
 import matplotlib.pyplot as plt
@@ -100,6 +122,7 @@ def Renew(DIST, X):
         error = error + np.sum(delta[:, 0]**2) + np.sum(delta[:, 1]**2)       
     return centroids, error, clusters
 ```
+
 **Main**
 The main code I write is just very similar to the **pseudocode in Part 2.1.2**
 ```py
@@ -120,9 +143,10 @@ while LSE_last != LSE:
 colors = np.array(['#377eb8', '#ff7f00', '#4daf4a', '#a65628'])
 plt.scatter(X[:, 0], X[:, 1], color = colors[clusters]
 ```
+
 ![pic1](/images/2020/Snipaste_2020-11-27_20-28-31.jpg)
 
-### 2.3.2 Use KMeans in sklearn
+### 2.2.4 Code with k-means in sklearn
 ```py
 import numpy as np
 import matplotlib.pyplot as plt
@@ -136,23 +160,27 @@ y_pred = KMeans(n_clusters=k, random_state=random_state).fit_predict(X)
 colors = np.array(['#377eb8', '#ff7f00', '#4daf4a', '#a65628'])
 plt.scatter(X[:, 0], X[:, 1], color = colors[clusters])
 ```
-### 2.3.3 Compare
+
+
+> **Compare**
 The running time of my code is **at most half** of that of KMeans in sklearn. There is still much space to improve since I still use `for` loop and did not use Broadcast very well.
 
-## 2.4 Cons and pros
-### Pros
-1. Easy and direct.
-2. Running time is short when $k$ is not too large.
 
-### Cons
-1. Need the number of clusters $k$ first.
-2. Sensitive to the initial centroids. For example, the unsuitable initial centroids make the result looked awful. The algorithm **Kmeans++** introduced next could help to avoid that.
+## 2.3 Cons (缺点)
+(1)  Need the number of clusters $k$ first.
+
+(2) Sensitive to the initial centroids. For example, the unsuitable initial centroids make the result looked awful. 
+- **K-means++ Algorithm** could help to avoid that
 
 ![pic2](/images/2020/Snipaste_2020-11-27_21-28-31.jpg)
 
-3. Suitable for only circle like distribution, and therefore does not work well on other distribution shapes. For example,
+(3) Suitable for only circle like distribution, and therefore does not work well on other distribution shapes. For example:
+<img src="/images/2022-09/Snipaste_2022-09-16_22-18-14.png" width="60%">
 
-4. Sensitive to noise. (Could use the **median but not mean** to generate centroids)
+(4) Sensitive to noise. (Could use the **median but not mean** to generate centroids)
+- **K-medoids Algorithm** could help to avoid that
+
+
 
 
 # 3. BIRCH
@@ -174,35 +202,10 @@ $i$: 第 $i$ 个簇 <br> $N_i$: 第 $i$ 个簇所包含的样本个数 <br> $LS_
 > #### CF-tree 聚类特征树
 
 
-# 4. DBSCAN
-
-DBSCAN, Density-based spatial clustering of applications with noise, 是一种基于密度的聚类方法
 
 
-$$
-\begin{aligned}
-&\text{Input: Data Set }D=(x_1,x_2,...,x_m), \text{Neighborhood Parameter }(\epsilon, minPts) \\
-&\text{1. Initialize the core objects sets: } \Omega=\text{\O} \\
-&\text{2. For }j=1,2,...,m,\text{ find all core objects and add them to }\Omega \\
-&\text{3. Initialize the number of clusters: }k=0 \\
-&\text{4. Initialize the set of unaccessed samples: }\Gamma=D \\
-&\text{5. while }\Omega\neq\text{\O}\text{ do}\\
-&\qquad\text{Record the recent unaccessed samples set: }\Gamma_{old}=\Gamma\\
-&\qquad\text{Select a core object }o\in\Omega,\text{ initialize a queue }Q=<o> \\
-&\qquad\text{while }Q\neq\text{\O}\text{ do}\\
-&\;\;\;\qquad\text{Pop out the first sample }q\text{ from }Q\\
-&\;\;\;\qquad\text{if }q\in\Omega\text{ then}\\
-&\;\;\;\;\;\;\qquad\text{Define }\Delta=\Gamma\bigcap\text{Neighbors of }q\\
-&\;\;\;\;\;\;\qquad\text{Add }\Delta\text{ into }Q\\
-&\;\;\;\;\;\;\qquad\text{}\Gamma=\Gamma-\Delta\\
-&\;\;\;\qquad\text{end if}\\
-&\qquad\text{end while}\\
-&\qquad\text{}k=k+1,\text{ generate the cluster }C_k=\Gamma_{old}-\Gamma\\
-&\qquad\text{}\Omega=\Omega-C_k\\
-&\;\;\;\;\text{end while}\\
-&\text{Output: Cluster Division }C
-\end{aligned}
-$$
+
+
 
 
 

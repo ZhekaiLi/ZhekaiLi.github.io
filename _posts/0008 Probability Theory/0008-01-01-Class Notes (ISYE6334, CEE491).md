@@ -18,18 +18,20 @@ mathjax: true
 
 Statistical uncertatinty could be reduced through accumulation of data.
 
-## 1.1 Trial, Sample, Event
+## 1.1 Basic Definitions
 
 **Trials** (experiments or observations):
 - probability is concerned with the outcome of trials
 - trail refers to an event whose outcome is unknown
+- e.g. flip 2 coins, roll a die
 
 **Sample Space** $S$: 
 - the collection of all possible outcomes of a trial
-
+- e.g. for flip 2 coins $S=\{HH,HT,TH,TT\}$
 
 **Sample Point** $x$: each indivisual outcome
-**Event** $E$: any collection of sample points
+
+**Event** $E$: any collection of sample points (subset of $S$)
 
 General relation: $x\in S$, $E\subseteq S$, $S=\bar{E}\cup E$
 Special case: $E=S$: certain event; $E=\empty$: null event
@@ -51,11 +53,11 @@ $$n\text{C}k=\frac{n!}{(n-k)!k!}$$
 
 
 ## 1.3 Relationship between Events
-**Mutually exclusive**: $EF=\empty$ (不能同时发生)
+**Mutually exclusive**: $P(E,F)=0$ (不能同时发生)
 - $P(E\cup F)=P(E) + P(F)$ if mutually exclusive
 - $P(E\cup F)=P(E) + P(F) - P(E,F)$ if not mutually exclusive
 
-**Independent**: $P(E,F)=P(E)P(F)$
+**Independent**: $P(E,F)=P(E)P(F)$ (S.I. statistica)
 - $P(E,F)=P(E)P(F\vert E)$ if dependent
 - $P(E\vert F)=P(E)$ in other words
 
@@ -68,6 +70,22 @@ $$p(x,y\vert z)=p(x\vert z)p(y\vert z)$$
 **Complementary**: $E\bar{F}=\emptyset$
 
 **Collective exhaustive** events: $\bigcup_{i=1}^M  E_i=S$
+
+## 1.4 Random Varaibles
+A ramdom variable is a <span style="background-color: yellow; color: black;">mapping from sample space $S$ to a real number space $R$</span>
+
+e.g. Tossing tow coins, $S=\{HH,HT,TH,TT\}$
+
+denote $X$ as number of H, then $S_X=\{0,1,2\}$
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,46 +119,24 @@ Series connections: $E_{sys} = E_1\cup E_2\cup E_3$, &nbsp;&nbsp;&nbsp;&nbsp;$\o
 Parallel connections: $E_{sys} = E_1E_2E_3$, &nbsp;&nbsp;&nbsp;&nbsp;$\overline{E_{sys}}=\bar{E_1}\cup\bar{E_2}\cup\bar{E_3}$
 
 
-# 3. Elements of Probability Theory
+# 3. Rules of Probability Theory
 ## 3.1 Inclusion-Exclusion Rule
 For simplest case: $P(E_1\cup E_2)=P(E_1) + P(E_2) - P(E_1E_2)$
 
 For general cases:
 $$P(\bigcup_{i=1}^nE_i)=\sum_{i=1}^nP(E_i) - \sum_{i=1}^{n-1}\sum_{j=i+1}^nP(E_iE_j)+...+(-1)^{n-1}P(E_1E_2...E_n)$$
 
-#### Conditional Probability
 
-$$P(E_1\vert E_2)=\begin{cases}
-   \frac{P(E_1E_2)}{P(E_2)} & P(E_2)\neq 0\\
-   0 & P(E_2)= 0
-\end{cases}$$
-
-#### Multiplication Rule
-$$P(E_1E_2)=P(E_1\vert E_2)\cdot P(E_2)$$
-
-#### Statistical Independence
+### Statistical Independence
 
 Two events are **statistically independant (S.I.)** if the occurrence of one event doesn't change the probability of the other, that is, $P(E_1\vert E_2)=P(E_1)$ and $P(E_2\vert E_1)=P(E_2)$. 
 
 Only when $E_1,E_2$ are S.I., the formulation $P(E_1E_2)=P(E_1)\cdot P(E_2)$ works
 
 
+## 3.2 Total Probability Rule
 
-
-
-
-
-$$Pr(A\vert B)=\frac{Pr(A\cap B)}{Pr(B)}$$
-
-$$Pr(A\cup B)=Pr(A) + Pr(B) - Pr(A\cap B)$$
-
-
-## 1. Total Probability Rule
-
-Let $E_1,E_2,...,E_M$:
-
-(1) $E_iE_i=\empty$ for any $i\neq j$  
-(2) $\bigcup_{i=1}^ME_i=S$
+Let $E_1,E_2,...,E_M$ satisfy $\begin{cases}E_iE_j=\empty \text{ for any } i\neq j \\ \bigcup_{i=1}^ME_i=S\end{cases}$
 
 then
 $P(A)=\sum_{i=1}^MP(A\vert E_i)P(E_i)$
@@ -149,7 +145,7 @@ $P(A)=\sum_{i=1}^MP(A\vert E_i)P(E_i)$
 That's because $=\sum_{i=1}^MP(A, E_i)=P(AE_1\cup...\cup AE_M)=P(A(E_1\cup...\cup E_M))=P(AS)=P(A)$
 
 
-## 2. Bayes's Rule
+## 3.3 Bayes's Rule
 
 $$P(E_1\vert E_2)=\frac{P(E_2\vert E_1)}{P(E_2)}\cdot P(E_1)$$
 
