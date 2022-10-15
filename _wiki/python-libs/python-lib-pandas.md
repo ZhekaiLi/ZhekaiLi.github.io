@@ -95,11 +95,9 @@ df.to_csv('1.csv')
 > **添加行**
 ```py
 df = pd.DataFrame(columns=['c1','c2'])
-
 # 添加第一行: 各元素相同（两种方式）
 df.loc['a1'] = 1       
 df.iloc[0] = 1
-
 # 添加第二行: 自定义各元素（）（两种方式）
 df.loc['a2'] = [1, 2]
 df.iloc[1] = [1, 2]
@@ -143,6 +141,7 @@ df.reset_index(inplace=True)
 |1|a2    |1    |2    |0 | 5|
 |2|a3    |NaN  |1    |0 | 5|
 
+> **把置顶列**
 
 
 ### 1.3.2 更改行列
@@ -521,6 +520,10 @@ on df1.col1 = df2.col1
 df = pd.merge(df1, df2, on=["col1"], how="outer")
 ```
 
+**Left Join**
+```sql
+df = pd.merge(df1, df2, on=["col1"], how='left')
+```
 
 
 

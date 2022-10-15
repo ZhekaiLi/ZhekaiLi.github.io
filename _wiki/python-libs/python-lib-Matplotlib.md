@@ -54,6 +54,17 @@ for i_x, i_y in zip(X, Y):
     ax.text(i_x, i_y, '({:.2f}, {:.2f})'.format(i_x, i_y))
 ```
 
+### 1.3 标题 & 图例
+```py
+ax.set_title("chart name")
+```
+
+```py
+ax.plot(..., lable="line1")
+ax.plot(..., lable="line2")
+ax.legend()
+```
+
 ### 1.4 坐标轴
 ```py
 # 设置坐标轴名
@@ -96,8 +107,8 @@ plt.savefig('figname.jpg')
 绘制两行三列共六个子图
 ```py
 fig, ax = plt.subplots(2, 3, figsize=(10, 7))
-ax[0].plot(...)
-ax[1].scatter(...)
+ax[0][0].plot(...)
+ax[0][1].scatter(...)
 ...
 ```
 
@@ -111,4 +122,8 @@ axr.plot(...)
 ```
 
 <img src="/images/2022-08/Snipaste_2022-09-03_22-14-59.png" width="70%">
+
+
+### 1.9 输出图片
+
 

@@ -376,26 +376,34 @@ $$B_i=\frac{sp_i-c_rd_i}{l_i}$$
 net benefit less than zero means:
 $$\frac{p_i}{d_i}<\frac{c_r}{s}$$
 
-这样就提取出一个不依赖 SKU_i 的常数 $c_r/s$，方便将其与每个 SKU 的 $p_i/d_i$ 直接比较
+这样就提取出一个不依赖 SKU_i 的常数 $c_r/s$，方便将其与每个 SKU 的 $p_i/d_i$ 直接比较，然后排除那些 net benefit 小于 0 的 SKU
 
 ## 5.2 Alternative: Storing all in forward area
+**Benefit**: no need to restock $\implies d_i=0$
+BUT will take the finite space of other SKUs in forward area
 
-$u_i$ upper bound on inventory of the SKU_i
-$D_i$ full pallet picks for SKU_i 
+$u_i$: upper bound on inventory of the SKU_i
+$D_i$: full pallet picks for SKU_i 
+$p_i$: \# carton picks
 
-例如对于 SKU_A
-order 1: 1.5 pallets
-order 2: 2 pallets
-order 3: 0.5 pallet
-
-p_i = 2 = 1 + 1 (order_1 的 0.5 pallet 是从 forward area 拿的，算一次 carton pick. 同理对于 order_3)
-D_i = 3 (order_1 拿了一个, order_2 拿了两个)
-d_1 = 1 (给 order_1 的 forward 补 0.5个，给 order_3 的 forward 补 0.5个)
-
-Net benefit of fully stocking in forward area
+**Net benefit** of fully stocking in forward area
 
 $$B_{i,full}=\frac{s(p_i+D_i)}{u_i}$$
 
 So if $B_{i,full}>B_i$, all should be stocked in forward areas
+
+**More benefit**: 在满足放满 $u_i$ 的前提下，每多放一个 location 能带来的相比于只放 $l_i$ 更多的收益
+$$B_m=\frac{c_rd_i+sD_i}{u_i-l_i}$$
+
+
+## 5.3 Ex: $p_i$ vs. $d_i$ vs. $D_i$
+For SKU_A, there are three orders:
+- order 1: 1.5 pallets
+- order 2: 2 pallets
+- order 3: 0.5 pallet
+
+$p_A$ = 2 = 1 + 1 (order_1 的 0.5 pallet 是从 forward area 拿的，算一次 carton pick. 同理对于 order_3)
+$D_A$ = 3 (order_1 拿了一个, order_2 拿了两个)
+$d_A$ = 1 (给 order_1 的 forward 补 0.5个，给 order_3 的 forward 补 0.5个)
 
 

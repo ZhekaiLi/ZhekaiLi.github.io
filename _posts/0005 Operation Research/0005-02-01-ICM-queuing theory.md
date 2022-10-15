@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Queing Theory
+title: Queuing Theory
 categories: Operation-Research
 description: Personal Notes
 keywords: ICM, OR
