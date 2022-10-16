@@ -1,13 +1,13 @@
 - name: Machine Learning
   keywords:
-      - Clustering (K-means, Mean Shift, DBSCAN)
-      - Basic Neural Network
+      - Unsupervised Learning (Clustering, PCA, EM, Gaussian Mixture)
+      - Supervised Learning (KNN, SVM, Logistic Regression, NN)
 
 - name: Data Analysis
   keywords:
       - Python (numpy, pandas, matplotlib)
       - SQL
-      - Excel (vlookup, power pivot, power query)
+      - Excel (vlookup, pivot table, power query)
       - Tableau
       - Visio
 

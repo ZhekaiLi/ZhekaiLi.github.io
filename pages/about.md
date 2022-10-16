@@ -41,5 +41,3 @@ Moreover, I have 2 months of internship as a structure designer at a local desig
 {% endfor %}
 </div>
 {% endfor %}
-
-Designed a metric to measure the vulnerability of different metro route planning. The metric statistically measured the mean and variance of the operational efficacy loss due to network failures
