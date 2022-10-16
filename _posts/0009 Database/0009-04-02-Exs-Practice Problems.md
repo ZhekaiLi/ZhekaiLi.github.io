@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Practice
-categories: Z-attach
+title: Database Practice Problems
+categories: Database
 description: Personal Notes
-keywords: Z-attach
+keywords: 
 mathjax: false
 ---
 

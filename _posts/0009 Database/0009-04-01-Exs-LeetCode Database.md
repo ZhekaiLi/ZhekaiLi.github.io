@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Practice
-categories: Z-attach
+title: LeetCode Database Practice
+categories: Database
 description: Personal Notes
-keywords: Z-attach
+keywords: 
 mathjax: false
 ---
 
