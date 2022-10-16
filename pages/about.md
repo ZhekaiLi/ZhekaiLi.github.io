@@ -22,7 +22,7 @@ I have finished 3 research projects about <b>modeling, machine learning, and pro
 
 Moreover, I have 2 months of internship as a structure designer at a local design institute. From this experience, I practiced my knowledge from school into real work and learned some basic principles with colleagues and bosses.
 
-## Contact
+## Contact:
 
 <ul>
 {% for website in site.data.social %}
@@ -31,7 +31,7 @@ Moreover, I have 2 months of internship as a structure designer at a local desig
 </ul>
 
 
-## Skill Keywords
+## Skill Keywords:
 
 {% for skill in site.data.skills %}
 ### {{ skill.name }}
