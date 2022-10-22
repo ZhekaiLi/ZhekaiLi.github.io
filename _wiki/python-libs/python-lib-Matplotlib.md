@@ -114,7 +114,7 @@ ax[0][1].scatter(...)
 
 ### 1.8 设置右侧 y 轴
 ```py
-fig, axl = plt.subplots(2, 3, figsize=(10, 7))
+fig, axl = plt.subplots(figsize=(10, 7))
 axr = axl.twinx()
 
 axl.bar(...)
@@ -125,5 +125,9 @@ axr.plot(...)
 
 
 ### 1.9 输出图片
+```py
+fig, ax = plt.subplots(figsize=())
+fig.savefig('pic1.png')
+```
 
 
