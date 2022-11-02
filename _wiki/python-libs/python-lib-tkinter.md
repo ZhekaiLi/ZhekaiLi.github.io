@@ -16,17 +16,23 @@ class Application(Frame):
         self.pack()
 
         self.CreateEntry()
-        self.CreateCanvas()
+        self.CreatePicture()
         self.CreateBotton()
         # other elements
 
     def CreateEntry(self):
         pass
 
-    def CreateCanvas(self):
+    def CreatePicture(self):
         pass
 
     def CreateBotton(self):
+        # 创建按钮对象
+        self.B = Button(self, text="Button_1", command=Bt_function)
+        # 定位
+        self.B.grid(row=0, column=0, rowspan=1, columnspan=1)
+
+    def Bt_function(self):
         pass
 
 
@@ -37,4 +43,39 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-# 控件
+# Elements
+```py
+from tkinter import *
+tk = Tk()
+```
+
+## Label
+显示文字标签
+```py
+lb = Label(tk, text="Text Content")
+```
+
+显示图片标签
+```py
+pic = PhotoImage(file="pic.png")
+lb_pic = Label(tk, image=pic)
+```
+
+## Entry
+输入框
+```py
+# 定义一个字符串变量，用于接收输入
+v = StringVar()
+# 定义一个长度为 10 个字符的输入框
+ety = Entry(tk, textvariable=v, width=10) 
+```
+
+## Botton
+创建按钮，并绑定触发事件
+```py
+B = Button(tk, text="Botton", command=Bt_function)
+
+def Bt_function:
+    pass
+```
+

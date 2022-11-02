@@ -407,3 +407,86 @@ $D_A$ = 3 (order_1 拿了一个, order_2 拿了两个)
 $d_A$ = 1 (给 order_1 的 forward 补 0.5个，给 order_3 的 forward 补 0.5个)
 
 
+# L6: Layout of piece-picking from cartons
+
+Layout decisions when designing piece(each) forward pick area
+- How much of each SKU should be stored in forward pick area
+- Which SKUs to store forward?
+- How large should the forward pick area be?
+
+Easy extensions:
+- Product families
+- Multiple ...
+
+## How much forward space should a SKU get
+Common stocking strategies:
+- Equal space allocation (EQS): same amount of space
+- Equal time allocation (EQT): same time supply
+
+
+Estimated number of restocks = (flow in cubic-ft/yr)/(volume stored in forward-pick area) $f_i/v_i$
+
+If $n$ SKUs in forward area, each with flow $f_i$, suppose 
+EQS: $$
+
+
+$$v_i=\frac{f_i}{C}=\frac{f_i}{\sum^n_{j=1}f_j}$$
+
+
+### Number of restocks
+EQS: $$\frac{f_i}{v_i}=nf_i$$
+
+Total restocks across all $n$ SKUs $=n\sum_{j=1}^nf_j$
+
+
+EQT: (number of restocks for every SKU is identical)
+$$\frac{f_i}{v_i}=\frac{f_i}{}$$
+
+### Optimal space allocation strategy
+$$\boxed{v^*_i=\frac{\sqrt{f_i}}{\sum^n_{j=1}\sqrt{f_j}}}$$
+
+Restocks of SKU_i $=\sqrt{f_i}\sum^n_{j=1}\sqrt{f_j}$
+
+**Variations**:
+
+<center><img src="/images/2022-10/Snipaste_2022-10-26_09-48-04.png" width="100%"></center>
+
+Example:
+<center><img src="/images/2022-10/Snipaste_2022-10-26_09-49-46.png" width="100%"></center>
+
+$V = 80-40 = 40$
+$v^*_A=\sqrt{90}/(\sqrt{90}+\sqrt{250}+\sqrt{490})=0.2$
+$V^*_A=0.2*40=8<10\implies V^*_A=10$
+
+$V=80-40-10=30$
+$v^*_B=\sqrt{250}/(\sqrt{250}+\sqrt{490})=0.42$
+$V^*_B=0.42*30=12.6>10$
+$V^*_C=17.4>15$
+
+therefore, $\boxed{V^*_A=10, V^*_B=12.6, V^*_C=17.4}$
+
+### Which SKUs should go into the forward area?
+**Max net benefit**
+
+$$\max \sum_i(sp_i-c_r\frac{f_i}{V_i})x_i$$
+
+$$s.t.\begin{cases}
+\sum_i V_ix_i &\leq V\\
+V_i&\geq 0\\
+x_i&\in\{0,1\}
+\end{cases}$$
+
+$p_i$: # picks
+$f_i/V_i$: # retocks
+$x_i$: whether or not to store SKU_i
+
+more complex since **two decision variables** $v_i,x_i$
+
+$$\max \sum_i(sp_i-c_r\frac{f_i}{\frac{\sqrt{f_i}}{\sum\sqrt{f_i}}})x_i$$
+
+
+sorting by $\frac{p_i}{\sqrt{f_i}}$ is
+
+
+# Guest Lecture
+**DC Design Methodology with a Focus of Picking Activity**

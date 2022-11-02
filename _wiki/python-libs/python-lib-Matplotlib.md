@@ -46,7 +46,7 @@ ax.bar(X, Y)
 ### 1.2 插入文字
 
 ```py
-ax.text(x, y, "content")
+ax.text(x, y, "content", fontsize=10)
 ```
 示例: 在图中显示各点的坐标
 ```py
@@ -129,5 +129,26 @@ axr.plot(...)
 fig, ax = plt.subplots(figsize=())
 fig.savefig('pic1.png')
 ```
+可选参数
+- `bbox_inches='tight'`: 缩小输出的图片中可能存在的大面积白色外框
+
+## 2. 几何图
+### 2.1 画方块
+```py
+fig, ax = plt.subplots(figsize=(7, 7))
+# 设置坐标轴范围，否则可能因为太小而无法显示画的图
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 10)
+
+ax.add_patch(
+    patches.Rectangle(
+        (x, y), # location
+        w,      # width
+        h,      # height
+        color='grey'
+    )
+)
+```
+
 
 

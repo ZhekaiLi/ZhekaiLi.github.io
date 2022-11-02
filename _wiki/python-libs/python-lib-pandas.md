@@ -76,17 +76,24 @@ df = pd.read_csv('地址')
 
 ## 1.2 Transform & Save
 **Transform to np.array()**
-
 ```py
 arr = df.values
 ```
-**Save to .csv**
 
+**Save to .csv**
 ```py
-df.to_csv('1.csv')
+df.to_csv('fileName.csv')
 ```
 - `header=False` 不输出列名
 - `index=False` 不输出行名
+
+**Save to .xlsx**
+```py
+writer = pd.ExcelWriter('fileName.xlsx')
+df1.to_excel(writer, "sheetName1")
+df2.to_excel(writer, "sheetName2")
+writer.save()
+```
 
 
 
