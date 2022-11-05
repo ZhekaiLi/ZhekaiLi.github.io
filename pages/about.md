@@ -19,21 +19,34 @@ Hi, I'm Zeka(Zhekai) Li, a graduate student in <b>MS Supply Chain Engineering</b
 
 ---
 
+### Technical Skills
+<center><img src="/images/2022-11/Snipaste_2022-11-05_19-07-52.png" width="100%">
+</center>
 
-I have finished 3 research projects about <b>modeling, machine learning, and programming</b>. As an assistant researcher, I developed a metric to evaluate the vulnerability of a metro network and applied its utility through a case study; I exploited different clustering methods, and modified DBSCAN(a density-based clustering algorithm) to fit the dataset from road failure detection; I designed a python class and created a workflow to extract geometric information from 3D point cloud data.
+---
 
-Moreover, I have 2 months of internship as a structure designer at a local design institute. From this experience, I practiced my knowledge from school into real work and learned some basic principles with colleagues and bosses.
+### Projects
+<center><img src="/images/2022-11/Snipaste_2022-11-05_19-09-37.png" width="100%">
+</center>
 
-## Contact:
+---
+
+### Work Experience
+<center><img src="/images/2022-11/Snipaste_2022-11-05_19-10-22.png" width="100%">
+</center>
+
+
+
+<!-- ## Contact:
 
 <ul>
 {% for website in site.data.social %}
 <li>{{website.sitename }}：<a href="{{ website.url }}" target="_blank">@{{ website.name }}</a></li>
 {% endfor %}
-</ul>
+</ul> -->
 
 
-## Skill Keywords:
+<!-- ## Skill Keywords:
 
 {% for skill in site.data.skills %}
 ### {{ skill.name }}
@@ -42,4 +55,4 @@ Moreover, I have 2 months of internship as a structure designer at a local desig
 <button class="btn btn-outline" type="button">{{ keyword }}</button>
 {% endfor %}
 </div>
-{% endfor %}
+{% endfor %} -->
