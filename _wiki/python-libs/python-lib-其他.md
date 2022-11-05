@@ -8,8 +8,7 @@ keywords: Python
 ---
 
 # collections
-
-## 1.1 collections.defaultdict
+## 1. collections.defaultdict
 这是一个比普通 `dict()` 更好的数据结构
 使用如下代码声明变量
 ```py
@@ -55,7 +54,8 @@ D['key1']
 ```
 0 (参数 `lambda: 0` 的效果近似于 `int`)
 
-## 1.2 collections.Counter
+## 2. collections.Counter
+统计
 ```py
 from collections import Counter
 a = [1,2,3,1,2,3,2,2,4,5,1]
@@ -74,7 +74,7 @@ Counter({2: 4, 1: 3, 3: 2, 4: 1, 5: 1})
 
 这是一个能够生成交互地图的包
 
-## 1 folium.Map 创建地图
+## 1.folium.Map 创建地图
 ```py
 folium.Map(location=None, 
     tiles='OpenStreetMap', 
@@ -90,7 +90,7 @@ folium.Map(location=None,
 3. `zoom_start` 缩放值，默认为 10
 4. `crs` 地理坐标参考系统，默认为 'EPSG3857'
 
-## 2 Note the map 在地图上做标记
+## 2. Note the map 在地图上做标记
 ### 2.1 folium.CircleMaker 画圆
 
 <font color=red>以下代码可能存在一些问题: 本人在使用过程中发现在 for 循环中使用以下添加代码可能导致只能画出一个标记点, 尚未查明错误原因, 但将 `popup=, fill=, fill_color` 这三行删去之后可以正常运行</font>

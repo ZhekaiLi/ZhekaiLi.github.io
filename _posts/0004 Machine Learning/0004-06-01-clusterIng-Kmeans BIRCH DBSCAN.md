@@ -158,7 +158,7 @@ random_state = 6
 y_pred = KMeans(n_clusters=k, random_state=random_state).fit_predict(X)
 
 colors = np.array(['#377eb8', '#ff7f00', '#4daf4a', '#a65628'])
-plt.scatter(X[:, 0], X[:, 1], color = colors[clusters])
+plt.scatter(X[:, 0], X[:, 1], color = colors[y_pred])
 ```
 
 

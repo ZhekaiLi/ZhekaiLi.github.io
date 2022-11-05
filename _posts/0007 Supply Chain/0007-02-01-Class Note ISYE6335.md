@@ -488,5 +488,103 @@ $$\max \sum_i(sp_i-c_r\frac{f_i}{\frac{\sqrt{f_i}}{\sum\sqrt{f_i}}})x_i$$
 sorting by $\frac{p_i}{\sqrt{f_i}}$ is
 
 
-# Guest Lecture
+# Guest Lecture: FORTNA
 **DC Design Methodology with a Focus of Picking Activity**
+
+Measure of Success
+improve our design
+- quality and repeatability
+- ability to scale the organization
+
+improve our client's ability to operate
+
+Knowledge:
+
+SKills:
+- How to compare one picking methodology to another in terms of laber contnet
+- 
+
+## Picking Methodologies
+Three main steps of Design Methodology
+- **Inputs**: Design, Requirements
+- **Construction**: Picking, Methodology Selection and Feasibility
+- **Improvement**: Technology & Refinement Optimization
+
+Picking Methodologies:
+- Cluster Picking (Discrete Orders)
+  picking one or multiple orders at a time directly to individual orders
+  does not require an extra-touch process to created the order
+- Batch Picking
+  picking multiple SKUs at a time without regrad to order integrity
+  requires an extra-touch process coordinated over multiple areas to create the order
+  优点: larger picking density, higher productivity
+
+Extra-Touch Methodologies
+- Manual
+- Automated Sortation w/no buffer (Unit Sorter)
+- Automated Sortation with buffer (Pocket/Pouch Sorter) (可以减少储存后再出去的麻烦)
+
+How to compare?
+|Cluster Picking| Batch Picking
+|-|-|
+|Cluster pick cart| Batch pick cart
+|Units per hour(UPH) 60 units/ 0.75 hr = 80 UPH| 40 units/ 0.4 hr = 100 UPH
+|No extra-touch| Manual put wall @ 200 UPH
+
+Blended UPH = (1/UPH_P + 1/UPH_ET)^(-1)
+Cluster Picking is better because $1/80 > (1/100+1/200)$
+
+Solution Design
+- Tri-delima: Cycle Time, Equipment & Systems, Productivity
+- 
+
+## Picking Technologies (Goods to Person)
+### Autonomous Mobile Robotics with Movable Racks
+**Pros**: 
+- Flexibility in storage of product
+- Ease of deployment
+- Reduce walking time
+- Smaller warehouse size (save space)
+
+**Cons**:
+- Utilization of cubic space
+- No ergonomic enhancements to picking
+
+### Aisle-Based Shuttle Systems
+**Pros**:
+- Vertical Utilization
+- High throughout possible
+- Ergonomic picking
+- Produt can be stored in totes, cases or cases on trays
+
+**Cons**:
+- High capital, especially conveyor loop to network aisles to workstations
+- Cannot scale storage and throughput independently
+
+### Rack-Based Storage with Robots
+**Pros**:
+- ergonomic
+- can scale storage and throughput independently
+- eliminate need for a conveyor loop
+- product can be stored in totes or cases on trays
+
+**Cons**:
+- aisles for AMR travel decrease storage density
+
+### Top-Loading Bins with Robots
+**Pros**:
+- highest cubic density of any GTP
+- ergonomic
+- can scale storage and throughput independently
+- is often the lowest-cost solution
+
+**Cons**:
+- product must be stored in totes
+- floors must be very flat
+- workstations cannot achieve rate of some other GTPs
+- digging buried bins increases the number of required robots
+- well-publicized fire has...
+
+
+  
+

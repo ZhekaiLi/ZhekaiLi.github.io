@@ -137,6 +137,14 @@ df['c4'] = [5, 5, 5]
 |a2|1    |2    |0 | 5|
 |a3|NaN  |1    |0 | 5|
 
+
+### 1.3.2 更改行列
+> **将第一列(指定列)设置为 index**
+```py
+df.set_index('col1')
+df.reset_index(inplace=True) # 重新改回默认的数字 Index
+```
+
 > **将 Index 添加为第一列**
 ```py
 df.reset_index(inplace=True)
@@ -148,10 +156,6 @@ df.reset_index(inplace=True)
 |1|a2    |1    |2    |0 | 5|
 |2|a3    |NaN  |1    |0 | 5|
 
-> **把置顶列**
-
-
-### 1.3.2 更改行列
 ```py
 df.index = []   # 更改行名, 可以是 list or array
 df.columns = [] # 更改列名
@@ -159,9 +163,6 @@ df.columns = [] # 更改列名
 # 单独更改某个或某些行/列名
 # df.rename({'old':'new'}, axis=(1 for cols, 0 for rows), inplace=True)
 df.rename({'old1':'new1', 'old3':'new3'}, axis=1, inplace=True)
-
-df.set_index('col_1', inplace=True) # 把指定列设置为 Index
-df.reset_index(inplace=True)        # 重新改为默认的数字 Index
 ```
 
 
