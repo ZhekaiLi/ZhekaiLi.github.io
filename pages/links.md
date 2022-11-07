@@ -18,7 +18,7 @@ permalink: /links/
 {% endfor %}
 </ul>
 
-> Friends' Links
+> Outside Links
 
 <ul>
 {% for link in site.data.links %}
