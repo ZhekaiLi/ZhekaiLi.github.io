@@ -90,6 +90,7 @@ $\eta$
 
 > **其他**
 
+斜杠 $\backslash$
 无限 $\infin$
 波浪号 $\sim$
 增大括号 $[,\big[, \Big[, \bigg[, \Bigg[$

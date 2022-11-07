@@ -10,23 +10,33 @@ topmost: true
 
 <center>
 
-# Layout of piece-picking from cartons
+# Layout of piece-picking from cartons (ISYE6335)
+
 </center>
 
-Layout decisions when designing piece(each) forward pick area
-- How much of each SKU should be stored in forward pick area
-- Which SKUs to store forward?
-- How large should the forward pick area be?
+<center><img src="/images/2022-11/Snipaste_2022-11-07_15-05-48.png" width="70%"> <br>
+    <b><div style="color: #808080;">Paths of material flow in a piece-distribution center</div></b>
+</center>
+
+
+
+**Layout decisions when designing piece(each) forward pick area**
+- **How much of each SKU should be stored in forward pick area**
+  3 stocking strategies
+- **Which SKUs to store forward?**
+  Ranking the SKUs by **bang-for-buck**
+- **How large should the forward pick area be?**
 
 Easy extensions:
 - Product families
-- Multiple ...
+- Multiple forward areas
 
 ## 1. How much forward space should a SKU get
-Common stocking strategies:
-- Equal space allocation (EQS): same amount of space
-- Equal time allocation (EQT): same time supply
+### 1.1 Common stocking strategies: EQS vs. EQT
 
+<center><img src="/images/2022-11/Snipaste_2022-11-07_15-13-31.png" width="70%"></center>
+
+### 1.2 Objective Function
 
 Estimated number of restocks = (flow in cubic-ft/yr)/(volume stored in forward-pick area) $f_i/v_i$
 
@@ -47,6 +57,7 @@ EQT: (number of restocks for every SKU is identical)
 $$\frac{f_i}{v_i}=\frac{f_i}{}$$
 
 ### Optimal space allocation strategy
+
 $$\boxed{v^*_i=\frac{\sqrt{f_i}}{\sum^n_{j=1}\sqrt{f_j}}}$$
 
 Restocks of SKU_i $=\sqrt{f_i}\sum^n_{j=1}\sqrt{f_j}$
@@ -56,7 +67,7 @@ Restocks of SKU_i $=\sqrt{f_i}\sum^n_{j=1}\sqrt{f_j}$
 <center><img src="/images/2022-10/Snipaste_2022-10-26_09-48-04.png" width="100%"></center>
 
 Example:
-<center><img src="/images/2022-10/Snipaste_2022-10-26_09-49-46.png" width="100%"></center>
+<img src="/images/2022-10/Snipaste_2022-10-26_09-49-46.png" width="80%">
 
 $V = 80-40 = 40$
 $v^*_A=\sqrt{90}/(\sqrt{90}+\sqrt{250}+\sqrt{490})=0.2$
