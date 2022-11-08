@@ -8,11 +8,7 @@ mathjax: true
 topmost: true
 ---
 
-<center>
-
 # Layout of piece-picking from cartons (ISYE6335)
-
-</center>
 
 <center><img src="/images/2022-11/Snipaste_2022-11-07_15-05-48.png" width="70%"> <br>
     <b><div style="color: #808080;">Paths of material flow in a piece-distribution center</div></b>
@@ -38,7 +34,30 @@ Easy extensions:
 
 ### 1.2 Objective Function
 
-Estimated number of restocks = (flow in cubic-ft/yr)/(volume stored in forward-pick area) $f_i/v_i$
+#### Minimize laybor costs:
+- **Picking time**: Picking from forward area is more efficient, most of the time
+- **Restocking time**: Number of restocks * restocking cost per restock
+
+#### Maximize net benefit
+
+$$\max \sum_i(sp_i-c_r\frac{f_i}{v_i})x_i$$
+
+$$s.t.\begin{cases}
+\sum_i v_ix_i &\leq V\\
+v_i&\geq 0\\
+x_i&\in\{0,1\}
+\end{cases}$$
+
+$p_i$: number of picks
+$x_i$: whether or not to store SKU_i
+Estimated number of retocks (approximated restocking frequency):
+$$\frac{f_i}{v_i} = \frac{\text{flow in cubic-ft/yr}}{\text{volume stored in forward-pick area}}$$
+
+**Why say $f_i/v_i$ is an estimation/approximatiom?**
+- Ignores the need to safety stock $\to$ underestimate restock frequency
+- Ignores  possible batching in restocking when an order line for SKU_i > $v_i\to$ overestimates restock frequency
+
+### 1.3 Fraction of space allocated to each SKU
 
 If $n$ SKUs in forward area, each with flow $f_i$, suppose 
 EQS: $$
@@ -81,19 +100,7 @@ $V^*_C=17.4>15$
 therefore, $\boxed{V^*_A=10, V^*_B=12.6, V^*_C=17.4}$
 
 ### Which SKUs should go into the forward area?
-**Max net benefit**
 
-$$\max \sum_i(sp_i-c_r\frac{f_i}{V_i})x_i$$
-
-$$s.t.\begin{cases}
-\sum_i V_ix_i &\leq V\\
-V_i&\geq 0\\
-x_i&\in\{0,1\}
-\end{cases}$$
-
-$p_i$: # picks
-$f_i/V_i$: # retocks
-$x_i$: whether or not to store SKU_i
 
 more complex since **two decision variables** $v_i,x_i$
 
