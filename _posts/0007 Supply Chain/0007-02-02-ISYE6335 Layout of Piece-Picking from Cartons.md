@@ -8,7 +8,10 @@ mathjax: true
 topmost: true
 ---
 
+<center>
+
 # Layout of piece-picking from cartons (ISYE6335)
+</center>
 
 <center><img src="/images/2022-11/Snipaste_2022-11-07_15-05-48.png" width="70%"> <br>
     <b><div style="color: #808080;">Paths of material flow in a piece-distribution center</div></b>
@@ -142,6 +145,7 @@ $$\max \sum_i(sp_i-c_r\frac{f_i}{\frac{\sqrt{f_i}}{\sum\sqrt{f_i}}})x_i$$
 
 
 # Guest Lecture: FORTNA
+Fortna designs distribution operations
 **DC Design Methodology with a Focus of Picking Activity**
 
 Measure of Success
