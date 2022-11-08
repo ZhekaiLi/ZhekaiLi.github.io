@@ -27,30 +27,17 @@ Easy extensions:
 - Product families
 - Multiple forward areas
 
-## 1. How much forward space should a SKU get
+## 1. How much forward space should a SKU get?
 ### 1.1 Common stocking strategies: EQS vs. EQT
 
 <center><img src="/images/2022-11/Snipaste_2022-11-07_15-13-31.png" width="70%"></center>
 
-### 1.2 Objective Function
-
-#### Minimize laybor costs:
+### 1.2 Obj: Minimize Laybor Costs
 - **Picking time**: Picking from forward area is more efficient, most of the time
 - **Restocking time**: Number of restocks * restocking cost per restock
 
-#### Maximize net benefit
 
-$$\max \sum_i(sp_i-c_r\frac{f_i}{v_i})x_i$$
-
-$$s.t.\begin{cases}
-\sum_i v_ix_i &\leq V\\
-v_i&\geq 0\\
-x_i&\in\{0,1\}
-\end{cases}$$
-
-$p_i$: number of picks
-$x_i$: whether or not to store SKU_i
-Estimated number of retocks (approximated restocking frequency):
+Denote **estimated number of retocks** (**approximated restocking frequency**):
 $$\frac{f_i}{v_i} = \frac{\text{flow in cubic-ft/yr}}{\text{volume stored in forward-pick area}}$$
 
 **Why say $f_i/v_i$ is an estimation/approximatiom?**
@@ -59,55 +46,99 @@ $$\frac{f_i}{v_i} = \frac{\text{flow in cubic-ft/yr}}{\text{volume stored in for
 
 ### 1.3 Fraction of space allocated to each SKU
 
-If $n$ SKUs in forward area, each with flow $f_i$, suppose 
-EQS: $$
-
-
+If $n$ SKUs in forward area, each with flow $f_i$, suppose the total space is <font color='red'>normalized to be $V=1$</font>
+- EQS: $v_i=1/n$
+- EQT: we want $f_i/v_i$ identical for all SKUs
 $$v_i=\frac{f_i}{C}=\frac{f_i}{\sum^n_{j=1}f_j}$$
 
 
-### Number of restocks
-EQS: $$\frac{f_i}{v_i}=nf_i$$
+### 1.4 Number of restocks
+#### EQS
+$$\frac{f_i}{v_i}=\frac{f_i}{1/n}=nf_i$$
 
-Total restocks across all $n$ SKUs $=n\sum_{j=1}^nf_j$
+- Total restocks across all $n$ SKUs $=n\sum_{j=1}^nf_j$
+- Fraction of restocks to SKU_i $=f_i/\sum_jf_j$
 
 
-EQT: (number of restocks for every SKU is identical)
-$$\frac{f_i}{v_i}=\frac{f_i}{}$$
+#### EQT
+(number of restocks for every SKU is identical)
+$$\frac{f_i}{v_i}=\frac{f_i}{f_i/\sum f_j}=\sum_{j=1}^n f_j$$
 
-### Optimal space allocation strategy
+- Total restocks across all $n$ SKUs $=n\sum_{j=1}^nf_j$
+- Fraction of restocks to SKU_i $=1/n$
+
+到这里不难发现，对于 EQS vs. EQT
+1. section 1.3 中的 fraction of space allocated 和这里的 fraction of restocks 的公式正好相互对调
+2. 两种方式的 total restockes 一样 $\to$ <span style="background-color: yellow; color: black;">same amount of work!</span>
+
+### 1.5 Optimal space allocation strategy
+If $n$ SKUs in forward area, each with flow $f_i$, suppose the total space is <font color='red'>normalized to be $V=1$</font>
+
+$$\min\sum_{i=1}^n \frac{f_i}{v_i}$$
+
+where, $\sum_{i=1}^n v_i\leq 1$, $v_i\geq 0$
 
 $$\boxed{v^*_i=\frac{\sqrt{f_i}}{\sum^n_{j=1}\sqrt{f_j}}}$$
 
-Restocks of SKU_i $=\sqrt{f_i}\sum^n_{j=1}\sqrt{f_j}$
+- Restocks of SKU_i $=\sqrt{f_i}\sum^n_{j=1}\sqrt{f_j}$
+- Total restocks across all $n$ SKUs $=(\sum_{j=1}^n\sqrt{f_j})^2$
+- Fraction of restocks to SKU_i $=\sqrt{f_i}/\sum\sqrt{f_j}$
 
-**Variations**:
+Note that here <span style="background-color: yellow; color: black;">fraction of restocks is **equal to** location allocated $v_i$</span>
 
-<center><img src="/images/2022-10/Snipaste_2022-10-26_09-48-04.png" width="100%"></center>
+### 1.6 Comparing EQS vs. EQT vs. OPT
 
-Example:
+<img src="/images/2022-11/Snipaste_2022-11-07_22-15-25.png" width="70%">
+
+<img src="/images/2022-11/Snipaste_2022-11-07_22-16-29.png" width="70%">
+
+
+### 1.7 Example
 <img src="/images/2022-10/Snipaste_2022-10-26_09-49-46.png" width="80%">
 
-$V = 80-40 = 40$
-$v^*_A=\sqrt{90}/(\sqrt{90}+\sqrt{250}+\sqrt{490})=0.2$
-$V^*_A=0.2*40=8<10\implies V^*_A=10$
+$V = 80-40 = 40 \\
+v^*_A=\sqrt{90}/(\sqrt{90}+\sqrt{250}+\sqrt{490})=0.2 \\
+V^*_A=0.2*40=8<10\implies V^*_A=10$
 
-$V=80-40-10=30$
-$v^*_B=\sqrt{250}/(\sqrt{250}+\sqrt{490})=0.42$
-$V^*_B=0.42*30=12.6>10$
-$V^*_C=17.4>15$
+$V=80-40-10=30\\
+v^*_B=\sqrt{250}/(\sqrt{250}+\sqrt{490})=0.42\\
+V^*_B=0.42*30=12.6>10\\
+V^*_C=17.4>15$
 
 therefore, $\boxed{V^*_A=10, V^*_B=12.6, V^*_C=17.4}$
 
-### Which SKUs should go into the forward area?
+## 2. Which SKUs should go into the forward area?
+### 2.1 Obj:  Maximize Net Benefit
+If $n$ SKUs in forward area, each with flow $f_i$, suppose the total space is <font color='red'>normalized to be $V=1$</font>
 
+$$\max \sum_i(sp_i-c_r\frac{f_i}{v_i})x_i$$
 
-more complex since **two decision variables** $v_i,x_i$
+$$s.t.\begin{cases}
+\sum_i v_ix_i &\leq 1\\
+v_i&\geq 0\\
+x_i&\in\{0,1\}
+\end{cases}$$
+
+> **Bang-for-buck**
+> $$(sp_i-\frac{c_rf_i}{v_i})/v_i$$
+
+$p_i$: number of picks
+$x_i$: whether or not to store SKU_i
+
+<center><img src="/images/2022-11/Snipaste_2022-11-07_22-44-29.png" width="70%"></center>
+
+<span style="background-color: yellow; color: black;">**Knapsack**: $v_i,x_i$ are all decision variables, which make the first constraint hard to consider</span>
+
+### 2.2 Determine $v_i$
+To solve the knapsack above, we need to determine(fix) $v_i$. There are three possible ways including EQS, EQT and OPT, here we choose OPT:
 
 $$\max \sum_i(sp_i-c_r\frac{f_i}{\frac{\sqrt{f_i}}{\sum\sqrt{f_i}}})x_i$$
 
 
-sorting by $\frac{p_i}{\sqrt{f_i}}$ is
+<span style="background-color: yellow; color: black;">Sorting by $\frac{p_i}{\sqrt{f_i}}$ is equivalent	to	sorting	by	bang-for-buck =</span> (这里式子很复杂，就是把 OPT 的 $v_i$ 带入 bang-for-buck 的公式中去)
+
+
+
 
 
 # Guest Lecture: FORTNA
