@@ -155,92 +155,47 @@ improve our design
 
 improve our client's ability to operate
 
-Knowledge:
 
-SKills:
-- How to compare one picking methodology to another in terms of laber contnet
-- 
-
-## Picking Methodologies
+## 1. Picking Methodologies Design
 Three main steps of Design Methodology
 - **Inputs**: Design, Requirements
 - **Construction**: Picking, Methodology Selection and Feasibility
 - **Improvement**: Technology & Refinement Optimization
 
-Picking Methodologies:
-- Cluster Picking (Discrete Orders)
-  picking one or multiple orders at a time directly to individual orders
-  does not require an extra-touch process to created the order
-- Batch Picking
-  picking multiple SKUs at a time without regrad to order integrity
-  requires an extra-touch process coordinated over multiple areas to create the order
-  优点: larger picking density, higher productivity
+### 1.1 Picking Methodologies
 
-Extra-Touch Methodologies
+|Cluster Picking (Discrete Orders)| Batch Picking
+|-|-|
+|picking one or multiple orders at a time directly to individual orders|picking multiple SKUs at a time without regrad to order integrity
+|does not require an extra-touch process to created the order|requires an **extra-touch process** coordinated over multiple areas to create the order
+||优点: larger picking density, higher productivity
+
+**Extra-Touch Methodologies**
 - Manual
 - Automated Sortation w/no buffer (Unit Sorter)
-- Automated Sortation with buffer (Pocket/Pouch Sorter) (可以减少储存后再出去的麻烦)
+- Automated Sortation with buffer (Pocket/Pouch Sorter) (buffer 可以避免产生需要先储存再运出去的麻烦)
 
-How to compare?
+#### 1.1.2 How to compare?
 |Cluster Picking| Batch Picking
 |-|-|
 |Cluster pick cart| Batch pick cart
 |Units per hour(UPH) 60 units/ 0.75 hr = 80 UPH| 40 units/ 0.4 hr = 100 UPH
-|No extra-touch| Manual put wall @ 200 UPH
+|No extra-touch| Extra-touch: manual put wall @ 200 UPH
 
-Blended UPH = (1/UPH_P + 1/UPH_ET)^(-1)
-Cluster Picking is better because $1/80 > (1/100+1/200)$
+Blended UPH = (1/UPH$_P$ + 1/UPH$_{ET}$)$^{-1}$
+Cluster Picking is better because $1/80 < (1/100+1/200)$
 
-Solution Design
+### 1.2 Solution Design
 - Tri-delima: Cycle Time, Equipment & Systems, Productivity
-- 
 
-## Picking Technologies (Goods to Person)
-### Autonomous Mobile Robotics with Movable Racks
-**Pros**: 
-- Flexibility in storage of product
-- Ease of deployment
-- Reduce walking time
-- Smaller warehouse size (save space)
+## 2. Picking Technologies (Goods to Person)
 
-**Cons**:
-- Utilization of cubic space
-- No ergonomic enhancements to picking
-
-### Aisle-Based Shuttle Systems
-**Pros**:
-- Vertical Utilization
-- High throughout possible
-- Ergonomic picking
-- Produt can be stored in totes, cases or cases on trays
-
-**Cons**:
-- High capital, especially conveyor loop to network aisles to workstations
-- Cannot scale storage and throughput independently
-
-### Rack-Based Storage with Robots
-**Pros**:
-- ergonomic
-- can scale storage and throughput independently
-- eliminate need for a conveyor loop
-- product can be stored in totes or cases on trays
-
-**Cons**:
-- aisles for AMR travel decrease storage density
-
-### Top-Loading Bins with Robots
-**Pros**:
-- highest cubic density of any GTP
-- ergonomic
-- can scale storage and throughput independently
-- is often the lowest-cost solution
-
-**Cons**:
-- product must be stored in totes
-- floors must be very flat
-- workstations cannot achieve rate of some other GTPs
-- digging buried bins increases the number of required robots
-- well-publicized fire has...
+|Tech|Pros|Cons|
+|-|-|-|
+|**Autonomous Mobile Robotics with Movable Racks**| - Flexibility in storage of product <br> - Ease of deployment | - Utilization of cubic space <br> - No ergonomic enhancements to picking
+|**Aisle-Based Shuttle Systems**| - High throughout possible <br> - Ergonomic picking <br> - Produt can be stored in totes, cases or cases on trays | - High capital, especially conveyor loop to network aisles to workstations <br> - Cannot scale storage and throughput independently
+|**Rack-Based Storage with Robots**| - Ergonomic <br> - Can scale storage and throughput independently <br> - Eliminate need for a conveyor loop <br> - Product can be stored in totes or cases on trays| - Aisles for AMR travel decrease storage density
+|**Top-Loading Bins with Robots**| - Highest cubic density of any GTP tech <br> - Ergonomic <br> - Can scale storage and throughput independently <br> - Is often the lowest-cost solution| - Product must be stored in totes <br> - Floors must be very flat <br> - Workstations cannot achieve rate of some other GTPs <br> - Digging buried bins increases the number of required robots <br> - Well-publicized fire has led to required additional infrastructure
 
 
   

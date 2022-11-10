@@ -79,6 +79,7 @@ $\"u$, $\dot u$
 不等号 $\neq, \leq, \geq$
 累乘 $\prod$
 集合运算 $\in,\notin,\subset,\subseteq,\subsetneq$
+条件概率 $\land$
 
 > **罗马（拉丁）字符**
 
