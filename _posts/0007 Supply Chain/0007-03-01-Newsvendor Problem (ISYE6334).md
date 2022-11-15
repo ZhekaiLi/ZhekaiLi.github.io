@@ -33,7 +33,7 @@ Notations:
 
 Since $D_i$ is a r.v., we cannot solve $\max_q P(D_i,q)$.
 
-Instead, if the <u>distribution of $D_i$ does not change and we order the same quantity $q$ every period</u>, we can solve:
+Instead, if during $n$ periods ($n$ is large), the <u>distribution of $D_i$ does not change and we order the same quantity $q$ every period</u>, we can solve:
 $$\max_{q} \frac{1}{n}\sum_{i=1}^n P(D_i,q)=E[P(D,q)]$$
 
 (equality keeps because of SLLN(Strong law of large number))
@@ -42,7 +42,7 @@ Equally, minimizing cost is equal to maximizing benefit, therefore we have
 $$\boxed{\min_q E[C(D,q)]}$$
 
 ## 3. Discrete Demand
-As $E[C(D,q)]$ is a function of $q$ only, we denote $g(q)=E[C(D,q)], \Delta=g(q+1)-q(q)$
+As $E[C(D,q)]$ is a function of $q$ only, we denote $g(q)=E[C(D,q)], \Delta=g(q+1)-g(q)$
 
 From the following picture, we have
 $$\text{Find q*}\iff\text{Find first q that make }\Delta\geq 0$$
@@ -56,7 +56,7 @@ $$\text{Find q*}\iff\text{Find first q that make }\Delta\geq 0$$
 > - $c_o$ is called overage cost: how much do we **lost** when ordering one more item in overstock case
 > - $c_u$ is called underage cost: how much do we **gain** when ordering one more item in understock case
 
-Example: 报纸进货价 \$0.5, 售价 \$1.5. 每周的需求 $d$ 分布如下，剩下没卖完的报纸直接扔掉
+**<u>Example:</u>** 报纸进货价 \$0.5, 售价 \$1.5. 每周的需求 $d$ 分布如下，剩下没卖完的报纸直接扔掉
 
 |$d$|20|25|30|35
 |-|-|-|-|-|
@@ -68,6 +68,7 @@ Example: 报纸进货价 \$0.5, 售价 \$1.5. 每周的需求 $d$ 分布如下�
 Therefore we have $\boxed{c_o=0.5,c_u=1}$
 
 > **Newsvendor Ratio**
+> Accroding to the definition of $c_o,c_u$
 > $$\Delta = g(q+1)-g(q) = E[C(D,q+1)-C(D,q)]=\begin{cases}
 c_o &\text{if }q\leq d\\
 -c_u &\text{if }q>d
@@ -75,12 +76,14 @@ c_o &\text{if }q\leq d\\
 >
 > $$E[\Delta]=c_oPr(D\leq q)-c_uPr(D>q)=c_oF(q)-c_u(1-F(q))$$
 > 
-> When $E[\Delta]$ firstly reach 0, we call the accroding $F(q)$ as <span style="background-color: yellow; color: black;">**Newsvendor Ratio**</span>
+> 这里有必要说明一下，因为上图中的函数是 $E[C(D,q)]$，所以它的导数为 $E[\Delta]$ 而不是 $\Delta$
+> 
+> When $E[\Delta]$ firstly reach 0 as $q$ increasing, we call the accroding $F(q)$ as <span style="background-color: yellow; color: black;">**Newsvendor Ratio**</span>
 > $$\boxed{F(q^*)=\frac{c_u}{c_o+c_u}}$$
 > 
 > 因此第一个使 $F(q)$ 大于 Newsvendor Ratio 的 $q$ 即为 $q^*$
 
-Example continued:
+**<u>Example continous:</u>**
 |$d$|20|25|30|35
 |-|-|-|-|-|
 |$p(d)$|0.1|0.2|0.4|0.3
