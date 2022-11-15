@@ -198,5 +198,14 @@ Cluster Picking is better because $1/80 < (1/100+1/200)$
 |**Top-Loading Bins with Robots**| - Highest cubic density of any GTP tech <br> - Ergonomic <br> - Can scale storage and throughput independently <br> - Is often the lowest-cost solution| - Product must be stored in totes <br> - Floors must be very flat <br> - Workstations cannot achieve rate of some other GTPs <br> - Digging buried bins increases the number of required robots <br> - Well-publicized fire has led to required additional infrastructure
 
 
+
+# Guest Lecture
+
+What does it take to manage a warehouse in 2022?
+
+
+
+
+
   
 
