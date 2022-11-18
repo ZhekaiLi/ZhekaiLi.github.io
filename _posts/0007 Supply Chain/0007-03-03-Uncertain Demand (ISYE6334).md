@@ -22,8 +22,6 @@ and fillrate</span>
 # 1. EOQ with Uncertain Demand (Ch 16.6)
 
 The EOQ model is a continuous review poliy (inventory level can be monitored continuously in time and an order is placed as soon as the inventory level hits a reorder point)
-
-Notations:
 - $K=$ set up cost per order
 - $h=$ holding cost per item per time
 - $L=$ lead time (positive, could be constant or stochastic)
@@ -44,7 +42,7 @@ Derived Notations:
 > - If demand during each period is independent and $L$ constant
 > $$E[X]=L\cdot E[D]\text{ and }Var(X)=L\cdot Var(D)$$
 > - If demand during each period is independent, as well as $L$
-> $$E[X]=E[L]E[D]\text{ and }Var(X)=E[L]Var(D)+E[D^2]Var(L)$$
+> $$E[X]=E[L]E[D]\text{ and }Var(X)=E[L]Var(D)+E^2[D]Var(L)$$
 
 ## 1.1 Back-ordered Case
 $$TC(q,r)=\text{set up cost + holding cost + backordered cost + no-care}$$
@@ -85,6 +83,13 @@ To find the optimal $q$ and $r$, we need the expression of $E[B_r]$ and $\frac{\
 - Heuristic: approximate $q^*$ by $\text{EOQ}=\sqrt{2KE[D]/h}$, and then solve $r^*$
 - Exact: start with EOQ and solve iteratively until $(q,r)$ converges
 
+Remarks:
+1. $q^*\geq EOQ$ due to extra $c_BE[B_r]$ term
+2. $r^*\geq E[X]$ due to $c_B\geq p$ and uncertainty in $X$
+3. As $r\uparrow$, inventory $\uparrow$, $E[B_r]\downarrow$, $q\downarrow$
+4. As $q\uparrow$, total holding cost $\uparrow$, total set up cost $\downarrow$, and $r\downarrow$ (total shortage cost $\uparrow$)
+5. As $h\uparrow$, both $q^*,r^*\downarrow$ 
+
 ## 1.2 Lost Sales Case
 Lost Sale means customer will not want any late items, therefore cost of lost sales per item per time is
 $$c_{LS}=c_B+\text{(sale price - sell price)}$$
@@ -94,7 +99,15 @@ $$c_{LS}=c_B+\text{(sale price - sell price)}$$
 > $$q^*=\sqrt{\frac{2E[D](K+c_{LS}E[B_r])}{h}}\text{ and }Pr(X>r^*)=\frac{hq^*}{hq^*+c_{LS}E[D]}$$
 
 
+
+
+
+
+
+
 # 2. Service Levels for a Continuous-Review Policy (Ch 16.7)
+The problem of using total cost to find $q^*,r^*$ is that it's hard to quantify the values of $c_B,c_{LS}$ (up to the customers). 
+
 
 ## 2.1 Fillrate
 $\text{Fillrate}=1-\beta$: the expected fraction of demand met on time
@@ -111,6 +124,11 @@ $$\beta=\frac{E[\text{\# stockout items yearly}]}{E[\text{demand yearly}]}=\frac
 $\text{Stockout Probablity}=\alpha=\text{Pr}(X>r)$
 - Expected number of cycles with stockout for a year = $\alpha(E[D]/q)$
 
+**<u>Quick Approach</u>**:
+1. set $q^*=EOQ$
+2. solve $r$ for either $\alpha$ or $\beta$
+
+
 > **Useful properties of Gamma**
 > (a) If $G_1,G_2\sim\Gamma(k,\theta)$ and they are independent, then $G_1+G_2\sim\Gamma(k_1+k_2,\theta)$
 > (b) If $G\sim\Gamma(k,\theta)$, then $cG\sim\Gamma(k,c\theta)$ for a real constant c
@@ -119,32 +137,32 @@ $\text{Stockout Probablity}=\alpha=\text{Pr}(X>r)$
 # 3. Order Up To Policy // Base-stock Policy (Ch 16.8)
 This is a periodic review policy: Every $R$ periods, we order up to $S$. When we implement it, we observe the on-order inventory, and place a replenishment order every R period in the amount of
 
-- $D$ = annual demand
-- $K$ = setup cost per order
-- $J$ = cost of reviewing inventory level
-- $h$ = holding cost per item per year
-- $c_B$ = backordered cost per item
-- $L$ = lead time
-- $D_R$ = demand during $R$
-- $D_{L+R}$ = demand during $L + R$ time
-- $B_S$ = # demand not met on time during a cycle
+- $D=$ annual demand
+- $K=$ setup cost per order
+- $J=$ cost of reviewing inventory level
+- $h=$ holding cost per item per year
+- $c_B=$ backordered cost per item
+- $L=$ lead time
+- $D_R=$ demand during $R$
+- $D_{L+R}=$ demand during $L + R$ time
+- $B_S=$ # demand not met on time during a cycle
 
-Our decision variables are order-up-to **<font color=red>quantity $S$ and review period $R$</font>**
+Our decision variables are **<font color=red>order-up-to quantity $S$ and review period $R$</font>**
 
 <center>
-    <img src="/images/2022-11/pic1419.jpeg" width="65%"> <br>
-</center><br>
-
+    <img src="/images/2022-11/pic1419.jpeg" width="65%">
+</center>
 where
+
 1. Orders are placed at $R,2R,3R,...$
 2. Cycle periods are $[nR+L,(n+1)R+L],n=1,2,...$
 3. Inventory level at each:
-   - <span style="background-color: yellow; color: black;">Cycle start point $=S-D_L$</span> (In the above picture, the first cycle start at $S-D_{L1}$)
+   - <span style="background-color: yellow; color: black;">Cycle start point $=S-D_L$</span> (In picture above, the first cycle start at $S-D_{L1}$)
    - Cycle end point $=S-D_{R+L}$
    - Review period $=S-D_R$
-4. **Order quantity** $=E[D_R]=RE[D]$
+4. Expected **order quantity** $=E[D_R]=RE[D]$
 5. **Stockout** occurs when $S-D_{R+L}<0\iff S-D_R\leq D_L$
-6. The expected number of lost demand $E[B_S]$ is
+6. The expected number of lost demand is:
    $$E[B_S]=E[(D_{L+R}-S)^+]$$
 
 ## 3.1 Minimize Expected Total Cost
@@ -162,6 +180,12 @@ $$\text{Pr}(X>r)=\frac{hq}{c_BE[D]}\approx\frac{hR}{c_B}$$
 Similarly, in $(q,r)$
 $$\text{Pr}(X>r)=\frac{hq}{hq+c_{LS}E[D]}\approx\frac{hR}{hR+c_{LS}}$$
 
+**<u>Determination of $R$:</u>**
+If a company uses the $(R,S)$ policy, it is likely that $R$ is given. But if it's not given and has to be determined, then one may want to make the shape of $I(t)$ graph resembling EOQ graph
+$$\text{number of orders}=\frac{E[D]}{EOQ}=\frac{1}{R}$$
+
+then
+> $$R=\frac{EOQ}{E[D]}\text{ and }EOQ=\sqrt{\frac{2(K+J)E[D]}{h}}$$
 
 ## 3.2 Service Measures
 **<u>Fillrate:</u>**
@@ -169,7 +193,13 @@ $$\text{Pr}(X>r)=\frac{hq}{hq+c_{LS}E[D]}\approx\frac{hR}{hR+c_{LS}}$$
 
 where $E[B_S]=E[(X-S)^+]=E[(D_{L+R}-S)^+]$
 
-For normally distributed demand, $$E[B_S]=\sigma_XL(\frac{S-\mu_X}{\sigma_X})$$
+For normally distributed demand:
+||constant $L$| r.v. $L$|
+|-|-|-|
+|$X=$|$D_{L+R}$| $D_{L+R}$|
+|$\mu_X=$| $(L+R)E[D]$| $E[L+R]E[D]=(E[L]+R)E[D]$
+|$\sigma^2_X=$| $(L+R)\sigma^2_D$| $E[L+R]\sigma_D^2+Var(L+R)E^2[D]$|
+|$E[B_S]=$| $\sigma_XL(\frac{S-\mu_X}{\sigma_X})$|
 
 **<u>Stockout:</u>**
 > $$\alpha=\text{Pr(Stockout)}=\text{Pr}(X>S)=\text{Pr}(D_{L+R}>S)$$

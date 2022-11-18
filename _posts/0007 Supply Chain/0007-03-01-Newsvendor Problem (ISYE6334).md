@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ISYE6334 Newsvendor Problem
+title: Newsvendor Problem (ISYE6334)
 categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain
@@ -24,8 +24,6 @@ Consider perishable items such as fruits
 
 
 ## 2. Notation and Problem
-
-Notations:
 - $D_i=$ demand at period $i$ (r.v.)
 - $q=$ ordering quantity
 - $P(D,q)=$ profit for one period when we order q and demand is D;
