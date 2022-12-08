@@ -186,15 +186,3 @@ $$\frac{\| d\theta_{approx}-d\theta\|_2}{\| d\theta_{approx}\|_2 - \|d\theta\|_2
 
 <img src="/images/2022-07/.png"  width="100%">
 <img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">
-<img src="/images/2022-07/.png"  width="100%">

@@ -1,11 +1,12 @@
----
+<!-- ---
+追求精品，暂不发布
 layout: post
 title: Classification Basis
 categories: Machine-Learning
 description: Personal Notes
 keywords: Machine-Learning, Python, Clustering
 mathjax: true
----
+--- -->
 
 *Reference*
 1. coursera: (IBM) Machine Learning with Python

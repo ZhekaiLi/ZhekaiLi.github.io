@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clustering Algorithm:Kmeans, BIRCH, DBSCAN
+title: Clustering - Kmeans
 categories: Machine-Learning
 description: Personal Notes
 keywords: Machine-Learning, Python, Clustering
