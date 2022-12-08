@@ -1,11 +1,12 @@
----
+<!-- ---
+追求精品，暂不发布
 layout: post
 title: Regression Basis
 categories: Machine-Learning
 description:
 keywords: Machine-Learning, Regression, Python
 mathjax: true
----
+--- -->
 
 
 Regression is **the process of predicing a continuous value**, like predicting CO2 emmisions:
