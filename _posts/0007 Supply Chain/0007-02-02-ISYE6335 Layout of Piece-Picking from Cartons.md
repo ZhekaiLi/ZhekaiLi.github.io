@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Layout of Piece-Picking from Cartons
+title: ISYE6335 - Layout of Piece-Picking from Cartons
 categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain, ISYE6335, Warehouse

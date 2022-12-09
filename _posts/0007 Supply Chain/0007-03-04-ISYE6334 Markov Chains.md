@@ -1,12 +1,13 @@
----
+<!-- ---
+待完善，暂不发布
 layout: post
 title: ISYE6334 Markov Chains
 categories: Supply-Chain
 description:
-keywords: SCE, Supply-Chain
+keywords: SCE, Supply-Chain, ISYE6334
 mathjax: true
 topmost: true
----
+--- -->
 
 # Discrete-Time Markov Chains
 vs. Continuous-Time Markov Chains

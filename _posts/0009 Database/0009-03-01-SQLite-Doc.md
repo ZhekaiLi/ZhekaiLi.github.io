@@ -1,11 +1,12 @@
----
+<!-- ---
+完善中，暂不发布
 layout: post
 title: SQLite Doc
 categories: Database
 description: Personal Notes
 keywords: Database
 mathjax: true
----
+--- -->
 
 
 SQLite 是一种小型化易部署的数据库，其大部分语法都能和 MySQL 通用

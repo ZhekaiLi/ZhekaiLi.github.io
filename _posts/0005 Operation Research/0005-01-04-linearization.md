@@ -15,19 +15,21 @@ LINKs Back:
 
 # 1. Linearize Absolute Function
 ## Ex 1
+
 $$\underset{x}{\min}\sum\vert x_i\vert\;\;\;s.t.\;Ax\leq b$$
 
-**Linearization**: 对于任意的 $x_i$，都存在 $u_i, v_i>0$ 满足 $x_i = u_i − v_i, \vert x_i\vert= u_i + v_i$。因此： 
+**Linearization**: 对于任意的 $x_i$，都存在 $u_i, v_i>0$ 满足 $x_i = u_i − v_i, \vert x_i\vert= u_i + v_i$。因此:
+
 $$u_i=\frac{\vert x_i\vert+x_i}{2},v_i=\frac{\vert x_i\vert-x_i}{2}$$
 
-记 $u=[u_1,...,u_n]^T,v_i=[v_1,...,v_n]^T$，从而即可把上面的问题转换为：
+记 $u=[u_1,...,u_n]^T,v_i=[v_1,...,v_n]^T$，从而即可把上面的问题转换为:
+
 $$\underset{x}{\min}\;\sum_{i=1}^n(u_i+v_i)$$
 
 $$s.t.\begin{cases}
 A(u-v)\leq b\\
 u,v\geq 0
 \end{cases}$$
-
 
 ## Ex 2
 假设总共给两个人分¥1000，其中给第一个人分¥$x_1$，第二个¥$x_2$。问: 如何分钱最公平（答案显示是均分最公平，关键是如何给这个问题建模）
@@ -109,7 +111,6 @@ w\leq z_1 \\
 w\leq z_2 \\
 w\in\{0,1\}
 \end{cases}$$
-
 
 > **Senario 1B**
 

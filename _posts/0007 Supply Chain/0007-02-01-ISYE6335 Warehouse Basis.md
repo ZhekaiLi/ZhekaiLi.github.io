@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ISYE6335 Class Notes
+title: ISYE6335 - Warehouse Basis
 categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain

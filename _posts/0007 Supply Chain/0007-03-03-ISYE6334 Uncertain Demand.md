@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Uncertain Demand (ISYE6334)
+title: ISYE6334 - Uncertain Demand
 categories: Supply-Chain
 description:
-keywords: SCE, Supply-Chain
+keywords: SCE, Supply-Chain, ISYE6334
 mathjax: true
 topmost: true
 ---
