@@ -80,6 +80,7 @@ $\"u$, $\dot u$
 累乘 $\prod$
 集合运算 $\in,\notin,\subset,\subseteq,\subsetneq$
 条件概率 $\land$
+相互独立/垂直 $\perp$
 
 > **罗马（拉丁）字符**
 
