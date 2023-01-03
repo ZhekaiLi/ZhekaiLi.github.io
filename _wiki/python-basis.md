@@ -44,15 +44,26 @@ obj2 = MyObject()
 <img src="/images/2022-08/Snipaste_2022-08-01_11-04-12.png" width="80%">
 
 而函数传参的本质也就是传递 the copy of object address。例如，下例中 F 函数的执行过程相当于把 obj 对应的地址赋给 input
+
 ```py
 def F(input):
     input.a += 1
-
 obj = MyObject()
 obj.a = 4
 
 F(obj)
-print(obj.a) # >>> 5
+print(obj.a) >>> 5
+```
+
+再例如对于数组
+```py
+def F(lis):
+  lis.append(1)
+  lis = [2,3]
+L = [0]
+
+F(L)
+print(L) >>> [0,1]
 ```
 
 因此不管是在函数内部修改 class 的 fields 还是修改 list (list.append) 等等，都能够传递到函数外部，<span style="background-color: yellow; color: black;">因为本质上是在修改实例对象</span>
@@ -254,12 +265,12 @@ p 变量名 # 查看变量值
 ## 6.1 Big O
 $O$ usually used as Time Complexity notation. Understood as **how run time or space requirements grow as the input size grows**
 
-Big O mathematically defined as the upper bound. 对于函数 $f(x)$，如果存在 $c\in\R$，使得 $f(x)<c(g(x))$ 在其定义域内恒成立，则有 $f(x)\in O(g(x))$
+Big O mathematically defined as the upper bound. 对于函数 $f(x)$，如果存在 $c\in\R$，使得 $f(x)<c\times g(x)$ 在其定义域内恒成立，则有 $f(x)\in O(g(x))$
 
 例如，$N^3+8N+9<2(N^3)\implies O(N^3)$
 
 ## 6.2 Big Omega
-$\Omega$ mathematically defined as the lower bound. 对于函数 $f(x)$，如果存在 $c\in\R$，使得 $f(x)>c(g(x))$ 在其定义域内恒成立，则有 $f(x)\in\Omega(g(x))$
+$\Omega$ mathematically defined as the lower bound. 对于函数 $f(x)$，如果存在 $c\in\R$，使得 $f(x)>c\times g(x)$ 在其定义域内恒成立，则有 $f(x)\in\Omega(g(x))$
 
 例如，$N^3+8N+9>0.5(N^3)\implies\Omega(N^3)$
 

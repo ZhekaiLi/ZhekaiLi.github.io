@@ -125,25 +125,4 @@ Maximization Step 就是根据在 E-step 更新后的后验分布，更新参数
 
 <center><img src='/images/2022-12/Snipaste_2022-12-12_10-22-40.png' width='90%'></center>
 
-Supervised learning techniques
-Feature selection
-Mutual information
-Bayes decision rule 
-Naïve Bayes
-Linear classifier
-Logistic regression 
-Support vector machine 
-Nonlinear classifier
-K-nearest neighbors
-13
-Keys topics AFTER midterm
-Supervised learning techniques
-Neural networks
-Single neuron ≈ logistic regression
-Deep neural networks
-Regression
-Linear regression
-Polynomial regression
-Ridge regressio
-
 

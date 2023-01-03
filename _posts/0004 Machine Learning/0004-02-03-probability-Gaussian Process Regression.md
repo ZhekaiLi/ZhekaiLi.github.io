@@ -26,7 +26,7 @@ topmost: true
 *Reading Tip*
 对于希望直接应用的读者可以跳过 Section 2, 3 两部分，直接看 Section 1, 4, 5
 
-# 1 Introduction: 从高斯分布到高斯过程
+# 1. Introduction: 从高斯分布到高斯过程
 ## 1.1 多元高斯分布
 $$\tag{1} p(\bf{x})=\prod_{i=1}^n p(x_i)=\frac{1}{(2\pi)^{\frac{n}{2}}\sigma_1...\sigma_n}\exp(-\frac{1}{2}[\frac{(x_1-\mu_1)^2}{\sigma_1^2}...\frac{(x_n-\mu_n)^2}{\sigma_2^2}])$$
 进一步的，令 
@@ -65,7 +65,7 @@ $$P(y^*\vert Data,X^*)=\int_wP(y^*\vert w,Data,X^*)P(w)dw$$
 2. function-space view: 关注的是 $f(x)$
 $$P(y^*\vert Data,X^*)=\int_wP(y^*\vert f,Data,X^*)P(f)df$$
 
-# 2 Weight-space view
+# 2. Weight-space view
 回顾贝叶斯线性回归（见[参考资料 2](https://blog.csdn.net/weixin_43728138/article/details/108377184)）
 1. Inference: 求后验 $P(w\vert Data)=N(w\vert \mu_w,\Sigma_w)$
 where, $\begin{cases}
@@ -123,7 +123,8 @@ $$\begin{aligned}
 ## 2.3 总结
 weight-space view of GPR = 
 Bayesian Linear Regression + Kernel trick (Non-linear Transformation, innner product)
-# 3 From wsv to fsv
+
+# 3. From wsv to fsv
 **先回顾对高斯过程的定义**
 
 对于随机变量 $\{\zeta_t\}_{t\in T},\;\;T:\text{continuous time/ space}$
@@ -145,7 +146,7 @@ $\begin{cases}
 
 **就具体问题而言，使用 wsv 还是 fsv 没有差别**
 
-# 4 Function-space view
+# 4. Function-space view
 假设样本集 $\{f(x)\}$ 满足
 $$\{f(x)\}_{x\in \R^p}\sim GP(m(x),\kappa(x,x'))$$
 
@@ -208,7 +209,8 @@ where,
 
 因此，
 $$P(y^*\vert Y,X,X^*)\sim N(\mu^*,\Sigma^*+\sigma^2I)$$
-# 5 Example in code
+
+# 5. Example in code
 **简单高斯过程回归实现**
 (斜体部分内容来自[参考资料 4)](https://zhuanlan.zhihu.com/p/75589452)
 

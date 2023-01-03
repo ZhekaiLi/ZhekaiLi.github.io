@@ -5,7 +5,6 @@ categories: Computer-Vision
 description:
 keywords: CV, Matrix, Python
 mathjax: true
-topmost: true
 ---
 
 > This class is designed for reconstructing beam model from 3d object (or point cloud). The class mainly contains a workflow from loading data, constructing beam skeleton through step slicing, recoordinating and projecting, and finally reconstrut the model in a required coordinate.

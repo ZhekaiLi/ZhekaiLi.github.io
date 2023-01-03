@@ -5,7 +5,6 @@ cate1: Python
 cate2: -libs
 description: 
 keywords: Python
-topmost: true
 ---
 
 `DataFrame` 与 `Series` 是 pandas 中最重要的两种数据类型

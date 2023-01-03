@@ -59,4 +59,4 @@ $$R^2 = 1-RSE$$
 - Neural network regression
 - Decision forest regression
 - Boosted decision tree regression
-- KNN (K-nearest neighbors)
+- KNN (K-nearest neighbors) 既可用于 classification 也可用于 regression

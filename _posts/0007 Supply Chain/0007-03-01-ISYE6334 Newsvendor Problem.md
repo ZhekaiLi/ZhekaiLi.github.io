@@ -5,7 +5,6 @@ categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain, ISYE6334
 mathjax: true
-topmost: true
 ---
 
 <center>

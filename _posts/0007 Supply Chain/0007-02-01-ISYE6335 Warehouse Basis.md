@@ -5,7 +5,6 @@ categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain
 mathjax: true
-topmost: true
 ---
 
 # L1: Intro to Warehousing

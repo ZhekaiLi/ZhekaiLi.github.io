@@ -91,6 +91,21 @@ $$1-y^i(w^Tx^i+b)=0$$
 
 
 
+## Linear Regression Model
+
+
+<img src='/images/2022-12/Snipaste_2022-12-12_22-18-03.png' width='80%'>
+
+
+## Ridge Regression
+
+
+<img src='/images/2022-12/Snipaste_2022-12-12_22-20-34.png' width='80%'>
+
+## Nonlinear Regression
+
+<img src='/images/2022-12/Snipaste_2022-12-13_09-46-14.png' width='80%'>
+
 
 <img src='/images/2022-12/.png' width='70%'>
 <img src='/images/2022-12/.png' width='70%'>
@@ -98,46 +113,7 @@ $$1-y^i(w^Tx^i+b)=0$$
 <img src='/images/2022-12/.png' width='70%'>
 <img src='/images/2022-12/.png' width='70%'>
 
-Order time (stochastic demand, triangular distribution 4, 6, 8, uniform) 
-Production schedule 
--Daily demand from last year 
--make assumption and adjust the data  
--data demand data fitting 9 (experfit) if not normal, gamma 
-Experfit for production quantity and processing time 
-Check correlation 
-Cross-correlation 
-processing 
-Take long in A, take long in B,  
-Check auto-correlation  
-Production  +- 0.25 
-If there is not, ignore it; if there is, you have to model 
-But no 
-Or simulation by generating random numbers 
-For production line, 
--how to do with Interarrival time 
--make assumption about the job into the production line 
-- pulling system, no job waiting in the first station 
-- pull a new job whenever it is idle 
--but our queuing model is for push system 
-- fine to use approaximation 
--must state clearly we assume a push system and poisson process 
-Get parameters from dataset 
-Use queueing tool to find the total flow time 
-Only X: L=2+tria(4, 6, 8) 
-Pr(stockout) = 0.1 
-Only Y: S-(Dr+Dl)+quantity received by Y 
-Q order quantity at Y  
-Receive 8*q from Y 
-Do number of products 
-Expected order quantity  
-Expected safety stock 
-(R,S) inventory policy, draw a graph, and figure out for 1 period 
-Y is expensive, How much more  
-Don’t need to calculate the ratio, but allocate more 99.9% to X, and extremely small from Y 
-Order minimum possible quantity from Y (no more than 120) 
-Protect disruptions but a lot more expensive, so order minimum order quantity. 
-Service rate of current production time  
-Distribution different from returning  
+
 
 <center><img src='/images/2022-12/.png' width='70%'></center>
 <center><img src='/images/2022-12/.png' width='70%'></center>

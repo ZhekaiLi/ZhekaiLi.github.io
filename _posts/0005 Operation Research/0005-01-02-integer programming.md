@@ -8,6 +8,11 @@ mathjax: true
 topmost: true
 ---
 
+<center>
+
+# Integer Programming (IP)
+</center>
+
 *References*
 Coursera: Operations Research (1): Models and Applications (by National Taiwan University)
 
