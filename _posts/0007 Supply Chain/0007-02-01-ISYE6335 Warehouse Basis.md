@@ -5,6 +5,7 @@ categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain
 mathjax: true
+mermaid: true
 ---
 
 # L1: Intro to Warehousing
@@ -47,6 +48,8 @@ The time from the moment the customer places an order (the moment the supplier l
 
 
 ## 1.2 What is the Warehouse Objectve?
+
+**Objectives**:
 - Max space utlization
 - Min labor time (max labor efficiency)
 
@@ -74,9 +77,9 @@ $($OutBound$)$:
     <div style="color: #808080;">Paths of material flow through a warehouse</div>
 </center><br>
 
-<font color="blue">**Key principles: Keep product moving**</font>
+**<font color=blue>Key principles: Keep product moving</font>**
 
-Warehouse Objective
+**Warehouse Objective**: space vs. time
 - The goal is to move items fast and on the cheap
 - Operational obstacles: labor availability, variability, and low visibility
 - Accuracy and Qaulity
@@ -84,13 +87,6 @@ Warehouse Objective
 - Flexibility
 - Safety
 
-```mermaid
-graph LR
-A(Space)
-B(Time)
-
-A---B
-```
 
 ## 2.1 Picking terms and considerations
 **Order vs. Line vs. Unit** (订单, 生产线, 产品)
@@ -115,13 +111,13 @@ A---B
 
 
 ## 2.2 Batch, Cluster, Discrete, Zone Picking
+
 |Picking|Definition|
 |-|-
 |**Batch Picking**| aka multi-order picking, (<u>pick multiple orders a time in the same container</u>) **Serial Process**: multiple orders but similar SKU in a tote, therefore needs <span style="background-color: yellow; color: black;">sort & consolidation</span> into individual orders later
 |**Cluster Picking**| (<u>pick multiple orders a time in same cart, diff container without mixing</u>) **Parallel Process**: pick multiple orders individuallly but in parallel
 |**Discrete Picking**| pick one order a time (pick seperately)
 |**Zone Picking**| assign loc to workers, then consolidate together
-
 
 > **Two Primary Types of Zone Picking**
 <img src="/images/2022-08/Snipaste_2022-08-29_10-11-14.png" width="100%">
@@ -222,13 +218,10 @@ Different statistics provide different perspectives
 - Daily variation in order volume: 帮助判断 when to assign more labor
 - Affinity between SKUs or product families (亲和力高的放在一起)
 
-<table><tr>
-<td><img src="/images/2022-10/Snipaste_2022-10-01_12-22-46.png" border=0>    <center><div style="color: #808080;">lines/order</div></td>
-<td><img src="/images/2022-10/Snipaste_2022-10-01_12-25-06.png" border=0>
-<center><div style="color: #808080;">order vs. picking distribution</div></td>
-</tr></table>
-
-
+<center>
+    <img src="/images/2022-10/Snipaste_2022-10-01_12-22-46.png" width="49%"> <img src="/images/2022-10/Snipaste_2022-10-01_12-25-06.png" width="49%"> <br>
+    <div style="color: #808080;">lines/order (left); order vs. picking distribution (right)</div>
+</center><br>
 
 
 
