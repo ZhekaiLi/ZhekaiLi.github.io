@@ -76,15 +76,68 @@ A retrospective analysis or retrospective study is a **research method that is u
 <img src="/images/2022-12/Snipaste_2023-01-08_12-27-27.png" width="90%">
 
 # 2. Build Intuition
+## 2.1 Define Metrics
+<span style="background-color: yellow; color: black;">Define metrics is to turn a high-level metric to a well-defined metric</font>
+
+In previous example, we use **Click-through-probability** as the high-level metric:
+$$\text{click-through-probability}=\frac{\#\text{users who click}}{\#\text{users who visit}}$$
+
+**How to identify user?** Cookies or Pageviews
+
+### 2.1.1 Three well-defined metrics
+> **Def #1: Use cookies**, calculate
+$$\frac{\#\text{cookies that click}}{\#\text{cookies in <time interval>}}$$
+
+For example, for one cookie:
+- per minute: $2/3$, there are 3 valid minutes, two of them have click event
+  <img src="/images/2022-12/Snipaste_2023-01-09_21-08-52.png" width="90%">
+- per hour: $1/2$, there are 2 valid hours, one of them has click event
+  <img src="/images/2022-12/Snipaste_2023-01-09_21-11-54.png" width="90%">
+- per day: $1$
+
+> **Def #2: Use pageviews**, calculate
+$$\frac{\#\text{pageviews result2 click within <time interval>}}{\#\text{pageviews}}$$
+
+For example:
+<img src="/images/2022-12/Snipaste_2023-01-09_21-24-42.png" width="60%">
+
+use Def #1 in minite, we get $1/1$; use Def #2 in minute, we get $1/2$
+
+> **Def #3: click-through-rate**
+$$\frac{\#\text{clicks}}{\#\text{pageviews}}$$
+
+### 2.1.2 Problems of three metrics
+**Problem 1: double click**: def #3, click-through-rate will be greatly influcence (用户频繁随意双击)
+
+**Problem 2: back button cashes page** (通过返回键返回的界面一般是已经缓存了，不会二次刷新，因此就不会被当作 new pageview，但其实应该算) def #2 & #3 will be influenced because they are related to the number of pageviews
+
+## 2.2 Summerize Metrics
+There are different ways to summerize metrics:
+
+> **(1) Sum and counts**
+
+e.g. \#users who visited page
+
+> **(2) Means, medians, and percentiles**
+
+e.g. mean age of users who complete a course, median latency of page load
+
+> **(3) Probability and rates**
+
+probability is from [0, 1], while rates [0, infty)
+
+> **(4) Ratio**
+
+ratio = probability A / probability B
+
+e.g. P(revenue-generating click) / P(any click)
 
 # 3. Characterize
 
 
 
 
-<img src="/images/2022-12/.png" width="60%">
-<img src="/images/2022-12/.png" width="60%">
-<img src="/images/2022-12/.png" width="60%">
+
 
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
