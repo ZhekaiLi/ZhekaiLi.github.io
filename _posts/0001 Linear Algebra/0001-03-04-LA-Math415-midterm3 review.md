@@ -6,19 +6,11 @@ description: Personal Notes
 keywords: Math415，Linear-Algebra，Matrix
 mathjax: true
 ---
--
 
-Discussions sessions 7, problem 2 <br> Discussions sessions 8, problem 4 <br> Discussions sessions 9, problems  1-3 <br> Discussions sessions 10 problem 1 <br> Discussions sessions 10, problem 2 <br> Discussions sessions 8, problem 3 <br> 
-
-HW8, problems 3,5 <br> HW9, problem 3,4,6 <br> HW10 problems 2, 6 <br> HW11, problem 1 <br> 
-
-[Week-14 L25](https://zhekaili.github.io/0001/04/14/Math415-slides-week-14/#l25)
 
 
 ## D7
-
 > **D7.2**
-> 
 > ![pic](/images/2020-12/Snipaste_2020-12-10_15-18-46.jpg)
 
 - (a). $$\cos(A)x=x-\frac{1}{2!}A^2x+\frac{1}{4!}A^4x-...=x(1-\frac{1}{2!}\lambda^2x+\frac{1}{4!}\lambda^4x...)=\cos(\lambda)x$$
@@ -80,17 +72,6 @@ $$u(t)=c_1\cos(\lambda_1t)x_1+c_2\cos(\lambda_2t)x_2=3\cos(2\pi t)\begin{bmatrix
 -1
 \end{bmatrix}$$
 
-## D8
-
-> **D8.3**
->
->![pic](/images/2020-12/Snipaste_2020-12-10_22-17-01.jpg)
-
-这道题比较偏而且内容不多, 个人感觉应该不太会考
-
-> **D8.4**
-同 [Midterm 2 Review D7.2](https://zhekaili.github.io/0001/03/02/Math415-midterm-2-review/#d7)
-
 ## D9
 D9.1, 2, 3 这三题讲的都是奇异值分解 SVD, 选一道比较复杂的为例
 > **D9.3**
@@ -120,10 +101,6 @@ $$u_i=\frac{1}{\sigma_i}Av_i$$
 5. 该题的 $\sigma_3=0$, 这意味着无法使用上述公式由 $u_3$ 求得 $v_3$, 此时只能通过 $N(A^TA)$ 来计算 $v_3$ 
 
 ## D10
-
-> **D10.1**
-重复上题内容, 略
-
 > **D10.2**
 > Find the pseudoinverse of
 $$A=\begin{bmatrix}
@@ -134,19 +111,19 @@ $$A=\begin{bmatrix}
 $$U=[1], \Sigma=\begin{bmatrix}
 3 & 0 & 0
 \end{bmatrix}$$
-2. 由于 $u_i$ 只有一个, 因此我们能够计算出的 $v_i$ 也只有一个
+1. 由于 $u_i$ 只有一个, 因此我们能够计算出的 $v_i$ 也只有一个
 $$v_1=\frac{1}{\sigma_1}A^Tu_1=\begin{bmatrix}
 -\frac{1}{3}\\
 \frac{2}{3}\\
 \frac{2}{3}
 \end{bmatrix}$$
-3. 已知 $V_{3\times 3}$ orthonormal, 因此由 $v_1$ 可以推测 $v_2,v_3$, 最后求得 $V$
+1. 已知 $V_{3\times 3}$ orthonormal, 因此由 $v_1$ 可以推测 $v_2,v_3$, 最后求得 $V$
 $$V=\begin{bmatrix}
 -\frac{1}{3} & \frac{2}{3} & \frac{2}{3}\\
 \frac{2}{3} & -\frac{1}{3} & \frac{2}{3}\\
 \frac{2}{3} & \frac{2}{3} & -\frac{1}{3}
 \end{bmatrix}$$
-4. 由于 $A^\dagger=V\Sigma^\dagger U^T$, 还差一个 $\Sigma^\dagger$
+1. 由于 $A^\dagger=V\Sigma^\dagger U^T$, 还差一个 $\Sigma^\dagger$
 $$\Sigma^\dagger=\begin{bmatrix}
 \frac{1}{3}\\
 0\\
@@ -160,12 +137,6 @@ $$\Sigma^\dagger=\begin{bmatrix}
 <font color=red>注 1:</font> 作者认为该题从小推大不够严谨, 应使用大推小, 改进方法参考 [Midterm-3 Review HW11.1](https://zhekaili.github.io/0001/03/03/Math415-midterm-3-review/#hw11)
 
 <font color=red>注 2:</font> 对于 $v_i$ 的计算, 要注意各个 $v_i$ 之间是相互正交的, 例如这里先求得是 $v_1$, 那么 $v_1$ 就会对 $v_2,v_3$ 造成一个限制 (本题就出现了 $v_2,v_3$ 自由度过高的问题, 此时就需要 $v_1$ 的限制)
-
-## HW8
-
-HW8.3 略
-
-HW8.5 需要用到[欧拉公式](https://zhekaili.github.io/0001/05/02/Math415-some-math-concepts/)
 
 
 ## HW9
@@ -186,14 +157,7 @@ $$\frac{1}{9}\begin{bmatrix}
 > **HW9.6**
 Suppose $C$ is positive definite and $A$ has independent columns. Apply the energy test to $x^TA^TCAx$ to show that $S=A^TCA$ is positive definite.
 
-$A$ is positive definite $\iff$ $x^TAx>0$, when $x\neq0$, 然后根据 $C$ 和 $A$ 的性质来做
-
-## HW10
-
-HW10.2 略 (代值硬算, 没啥好写的)
-
-
-HW10.6 略 (这道题题目本身就有问题, 应该是要给出 $U,\Sigma,V$ 这些数据来做计算的
+$A$ is positive definite $\iff$ $x^TAx>0$, when $x\neq0$, 然后根据 $C$ 和 $A$ 的性质来
 
 ## HW11
 

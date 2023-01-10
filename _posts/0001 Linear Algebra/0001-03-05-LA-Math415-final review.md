@@ -6,7 +6,7 @@ description: Personal Notes
 keywords: Math415，Linear-Algebra，Matrix
 mathjax: true
 ---
--
+
 
 **其他重要的材料 for final**
 1. [Discussions and Homeworks](https://zhekaili.github.io/0001/02/01/Math415-discussions-and-homeworks/)
@@ -16,7 +16,7 @@ mathjax: true
 
 
 # P4
-> ![pic](/images/2021-01/Snipaste_2021-01-03_11-40-46.jpg)
+![pic](/images/2021-01/Snipaste_2021-01-03_11-40-46.jpg)
 
 > **(a)**
 
@@ -39,7 +39,7 @@ Since $A^{-1}q_j=\frac{1}{\lambda_j}q_j$, 注意题干里是给了 $\lambda_j$ �
 $$d_1=q_1^T\sum\frac{c_i}{\lambda_i}q_i=\frac{c_1}{\lambda_1}$$
 
 # P6
-> **Let** $$A=I-cE=\begin{bmatrix}
+**Let** $$A=I-cE=\begin{bmatrix}
 1 & & \\
 & 1 & \\
 & & 1 \\

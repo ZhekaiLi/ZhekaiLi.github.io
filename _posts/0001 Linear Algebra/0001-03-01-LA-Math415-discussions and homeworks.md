@@ -7,7 +7,6 @@ keywords: Math415，Linear-Algebra，Matrix
 mathjax: true
 ---
 
-<font color='red'>矩阵计算就一步一步小心算, 一算快还是挺容易出错的</font>
 
 # DH1
 ## 1.1 Schwarz Inequality

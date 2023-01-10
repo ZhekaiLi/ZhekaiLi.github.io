@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Math415 Some Math Concepts
+title: LA Basis - Some Math Concepts
 categories: Linear-Algebra
 description: Personal Notes
 keywords: Math415，Linear-Algebra，Matrix
