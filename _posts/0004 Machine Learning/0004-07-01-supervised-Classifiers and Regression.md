@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Supervised Learning - 
+title: Supervised Learning - Classifiers
 categories: Machine-Learning
 description: Personal Notes
 keywords: Machine-Learning, Python, Clustering
@@ -9,7 +9,7 @@ mathjax: true
 
 <center>
 
-# Supervised Learning - 
+# Supervised Learning - Classifiers
 </center>
 
 Supervised learning techniques
@@ -90,38 +90,13 @@ $$w=\sum_{i=1}^m\alpha_iy^ix^i$$
 $$1-y^i(w^Tx^i+b)=0$$
 
 
-
-## Linear Regression Model
-
-
+# 2. Regression
+## 2.1 Linear Regression Model
 <img src='/images/2022-12/Snipaste_2022-12-12_22-18-03.png' width='80%'>
 
-
-## Ridge Regression
-
-
+## 2.2 Ridge Regression
 <img src='/images/2022-12/Snipaste_2022-12-12_22-20-34.png' width='80%'>
 
-## Nonlinear Regression
-
+## 2.3 Nonlinear Regression
 <img src='/images/2022-12/Snipaste_2022-12-13_09-46-14.png' width='80%'>
-
-
-<img src='/images/2022-12/.png' width='70%'>
-<img src='/images/2022-12/.png' width='70%'>
-<img src='/images/2022-12/.png' width='70%'>
-<img src='/images/2022-12/.png' width='70%'>
-<img src='/images/2022-12/.png' width='70%'>
-
-
-
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
-
 

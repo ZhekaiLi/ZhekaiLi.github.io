@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advanced Topcis  - 
+title: Advanced Topcis - Kernel and HMM
 categories: Machine-Learning
 description: Personal Notes
 keywords: Machine-Learning, Python, Clustering
@@ -9,7 +9,7 @@ mathjax: true
 
 <center>
 
-# Advanced Topics - 
+# Advanced Topics
 </center>
 
 
@@ -27,13 +27,14 @@ Directed graphical models (HMM)
 Undirected applications (MRF)
 - Reinforcement	learning
 
-## Bias-variance trade-off
+# 1. Generalization
+## 1.1 Bias-variance trade-off
 <img src='/images/2022-12/Snipaste_2022-12-13_10-24-56.png' width='80%'>
 
-## Cross-validation
+## 1.2 Cross-validation
 <img src='/images/2022-12/Snipaste_2022-12-13_10-27-29.png' width='80%'>
 
-# Kernel
+# 2. Kernel
 Kernels are implicit nonlinear feature mapping, rather than computing the features explicitly, and then compute inner product
 
 For example:
@@ -42,11 +43,10 @@ For example:
 Typical kernels for vector data:
 <img src='/images/2022-12/Snipaste_2022-12-14_09-09-35.png' width='80%'>
 
-# Hidden Markov Model (HMM)
+# 3. Hidden Markov Model (HMM)
 <img src='/images/2022-12/Snipaste_2022-12-14_12-57-02.png' width='80%'>
 
-## 1. Generate HMM
-
+## 3.1 Generate HMM
 We have 4 boxes with different number of red balls and white ball.
 
 |Box Number|1|2|3|4|
@@ -72,7 +72,7 @@ $$\pi=[0.25\text{ }0.25\text{ }0.25\text{ }0.25]$$
 7. Pick $x_2$ from $z_2$, and repeat
    <center><img src='/images/2022-12/Snipaste_2022-12-14_11-07-57.png' width='55%'></center>
 
-## 2. Calculate Probability
+## 3.2 Calculate Probability
 > **OBJ**: Given $\lambda=(\pi,A,B)$ and observations $X=(x_1,...,x_T)$, calculate $P(X\vert\lambda)$
 
 Becuase of hidden variable $Z$, to calculate $P(X\vert\lambda)$ directly:
@@ -80,7 +80,7 @@ $$P(X\vert\lambda)=\sum_{Z}P(X,Z\vert\lambda)=\sum_{z_1}...\sum_{z_T}P(X,z\vert\
 
 such calculation is too heavy $O(N^T)$. That's why we need more effective algorithms:
 
-### 2.1 Forward Algorithm
+### 3.2.1 Forward Algorithm
 Define a **Forward Probability** $\alpha$ as the probablity of the status at time $t$ and the obvervations from time $1,2,...,t$
 $$\alpha_t(i)=P(x_1,...,x_t,z_t=q_i\vert\lambda)$$
 
@@ -106,7 +106,7 @@ $$\begin{aligned}
 therefore, for general case, we have
 $$\alpha_{t+1}(j)=\sum_{i=1}^Na_{ij}b_j(x_{t+1})\alpha_t(i)$$
 
-### 2.2 Backward Algorithm
+### 3.2.2 Backward Algorithm
 Define a **Backward Probability** $\beta_t(i)$ as the probablity of the obvervations from time $t+1,...,T$, given status $q_i$ at time $t$
 $$\beta_t(i)=P(x_T,x_{T-1},...,x_{t+1}\vert z_t=q_i,\lambda)$$
 
@@ -114,31 +114,10 @@ Set the initial value $\beta_T(i)=1\text{ }\forall i$, because we cannot express
 
 ... to be continued
 
-## 3. Decoding
+## 3.3 Decoding
 <img src='/images/2022-12/Snipaste_2022-12-14_13-01-02.png' width='80%'>
 
-## 4. Learning
+## 3.4 Learning
 <img src='/images/2022-12/Snipaste_2022-12-14_13-01-29.png' width='80%'>
-
-
-
-
-
-
-
-
-<img src='/images/2022-12/.png' width='80%'>
-<img src='/images/2022-12/.png' width='80%'>
-<img src='/images/2022-12/.png' width='80%'>
-<img src='/images/2022-12/.png' width='80%'>
-
-
-
-
-
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
-<center><img src='/images/2022-12/.png' width='70%'></center>
 
 

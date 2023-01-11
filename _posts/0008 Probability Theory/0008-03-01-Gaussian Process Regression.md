@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gaussian Process Regression
-categories: Machine-Learning
+categories: Probability-Theory
 description:
 keywords: Machine-Learning, Probability, Gaussian Process, GPR, Python
 mathjax: true

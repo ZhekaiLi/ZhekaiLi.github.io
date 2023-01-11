@@ -112,27 +112,47 @@ $$\frac{\#\text{clicks}}{\#\text{pageviews}}$$
 **Problem 2: back button cashes page** (通过返回键返回的界面一般是已经缓存了，不会二次刷新，因此就不会被当作 new pageview，但其实应该算) def #2 & #3 will be influenced because they are related to the number of pageviews
 
 ## 2.2 Summerize Metrics
+
 There are different ways to summerize metrics:
+- **(1) Sum and counts**
+  e.g. \#users who visited page
+- **(2) Means, medians, and percentiles**
+  e.g. mean age of users who complete a course, median latency of page load
+- **(3) Probability and rates**
+  probability 0 or 1
+  rates: 0 or more
+- **(4) Ratio**
+  ratio = probability A / probability B
+  e.g. P(revenue-generating click) / P(any click)
 
-> **(1) Sum and counts**
+So how to choose among them? Let's take choosing among mean, median and percentiles as an example: the following picture shows a histogram of video loading latency
+<img src="/images/2022-12/Snipaste_2023-01-10_15-41-09.png" width="90%">
 
-e.g. \#users who visited page
+Which metric? Analyze in two fields: **Robustness and Sensitivity**
 
-> **(2) Means, medians, and percentiles**
+### 2.2.1 Robustness (A/A Testing)
+Choose 5 videos with similar latency distribution:
+<img src="/images/2022-12/Snipaste_2023-01-10_16-03-14.png" width="60%">
 
-e.g. mean age of users who complete a course, median latency of page load
+Then apply 5 different metrics on these 5 videos:
+<img src="/images/2022-12/Snipaste_2023-01-10_16-07-51.png" width="70%">
 
-> **(3) Probability and rates**
+Since these 5 videos are similar, according to robustness, it's expected that the value of their applied metrics should also similar. However, in the above chart, **99th and 90th percentile occillate too much, not robust enough**
 
-probability is from [0, 1], while rates [0, infty)
+Robustness test is also called <span style="background-color: yellow; color: black;">A/A testing</span>. Because compared to A/B testing, we chane nothing in robustness test.
 
-> **(4) Ratio**
+### 2.2.2 Sensitivity
+Choose the same video with 5 different resolutions, (1 to 5 from highest resolution to lowest).
+<img src="/images/2022-12/Snipaste_2023-01-10_16-12-03.png" width="60%">
 
-ratio = probability A / probability B
+Then apply 5 different metrics on these 5 resolutions:
+<img src="/images/2022-12/Snipaste_2023-01-10_16-12-28.png" width="70%">
 
-e.g. P(revenue-generating click) / P(any click)
+Since resolutions from high to low, according to sensitivity, it's expected that the value of latency should have obvious decrease. However, in the above chart, **Median and 80th percentile don't decrease, not sensitive enough**
+
 
 # 3. Characterize
+## 3.1 Variability
 
 
 
@@ -143,4 +163,7 @@ e.g. P(revenue-generating click) / P(any click)
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
-
+<img src="/images/2022-12/.png" width="60%">
+<img src="/images/2022-12/.png" width="60%">
+<img src="/images/2022-12/.png" width="60%">
+<img src="/images/2022-12/.png" width="60%">
