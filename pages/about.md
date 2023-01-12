@@ -17,24 +17,30 @@ Hi, I'm Zeka(Zhekai) Li, a graduate student in <b>MS Supply Chain Engineering</b
 
 **CONTACT**: <a href="https://www.linkedin.com/in/zeka-li-a949a2236/" target="_blank" title="Go to LinkedIn"><b>[LinkedIn]</b></a> [zli3125@gatech.edu] [zhekai18@163.com]
 
+
+
+### Education
 ---
+<center><img src="/images/2022-12/Snipaste_2023-01-12_12-18-25.png" width="100%">
+</center>
+
 
 ### Technical Skills
-<center><img src="/images/2022-11/Snipaste_2022-11-05_19-07-52.png" width="100%">
+---
+<center><img src="/images/2022-12/Snipaste_2023-01-12_12-18-49.png" width="100%">
 </center>
 
----
 
 ### Projects
-<center><img src="/images/2022-11/Snipaste_2022-11-05_19-09-37.png" width="100%">
+---
+<center><img src="/images/2022-12/Snipaste_2023-01-12_12-20-08.png" width="100%">
 </center>
 
----
 
 ### Work Experience
-<center><img src="/images/2022-11/Snipaste_2022-11-05_19-10-22.png" width="100%">
+---
+<center><img src="/images/2022-12/Snipaste_2023-01-12_12-20-51.png" width="100%">
 </center>
-
 
 
 <!-- ## Contact:

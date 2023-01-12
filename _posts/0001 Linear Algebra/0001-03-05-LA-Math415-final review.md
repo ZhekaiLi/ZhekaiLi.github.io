@@ -8,13 +8,6 @@ mathjax: true
 ---
 
 
-**其他重要的材料 for final**
-1. [Discussions and Homeworks](https://zhekaili.github.io/0001/02/01/Math415-discussions-and-homeworks/)
-2. [Math415 Midterm-1 Review](https://zhekaili.github.io/0001/03/01/Math415-midterm-1-review/)
-3. [Math415 Midterm-2 Review](https://zhekaili.github.io/0001/03/02/Math415-midterm-2-review/)
-4. [Math415 Midterm-3 Review](https://zhekaili.github.io/0001/03/03/Math415-midterm-3-review/)
-
-
 # P4
 ![pic](/images/2021-01/Snipaste_2021-01-03_11-40-46.jpg)
 

@@ -3,7 +3,7 @@ layout: post
 title: ISYE6338 Supply Chain Strategy Basis
 categories: Supply-Chain
 description:
-keywords: SCE, Supply-Chain, ISYE6336
+keywords: SCE, Supply-Chain, ISYE6338
 mathjax: true
 mermaid: true
 ---

@@ -38,17 +38,12 @@ cid         name        type        notnull     dflt_value  pk
 
 
 # 5. Function
-## 5.1 Case
-
-## 5.3 Aggregation
-
 ## 5.5 String
 **(1) Length**
 
 ```sql
 length(str)
 ```
-
 
 # 10. C.R.U.D Methods
 - Create - INSERT
