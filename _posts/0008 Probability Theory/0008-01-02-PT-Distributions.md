@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Probability Basis
+title: Probability - Distributions
 categories: Probability-Theory
 description: Personal Notes
 keywords: Risk-Analysis，Probability, Decision
@@ -9,7 +9,7 @@ mathjax: true
 
 <center>
 
-# Probability Basis
+# Probability Distributions
 </center>
 
 # 1. PMF, PDF, CDF

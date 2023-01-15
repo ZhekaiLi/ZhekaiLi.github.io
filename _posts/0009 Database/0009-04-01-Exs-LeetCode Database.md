@@ -7,6 +7,27 @@ keywords:
 mathjax: false
 ---
 
+## Methods
+
+可以使用 `with` 语句来创建临时表单。这样会清楚明白很多
+```sql
+with T1 as (
+    select ...
+)
+select ... from T1
+...
+```
+
+创建多个临时表单
+```sql
+with T1 as (
+    select ...
+), T2 as (
+    select ...
+)
+```
+
+
 ## 176. Second Highest Salary
 如果遇到以下需求：若查询不到匹配选项，则返回 `NULL`。可以使用嵌套 select 的方式：
 ```sql

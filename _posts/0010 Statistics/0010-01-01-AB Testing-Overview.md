@@ -74,15 +74,16 @@ Then do the same thing for "pink group" (experiment group), and also get a click
 To answer this, **we need to find the 95% confidence interval**. Since the results of the experiments are click or not click, it's a typical **binomial distribution**:
 - sample size $N=1000$
 - mean $p=\frac{100}{N}=0.1$
-- std $\sigma=\sqrt\frac{p(1-p)}{N}=0.0095$
+- **standard error** (standard deviation of sample means) $SE=\sqrt\frac{p(1-p)}{N}=0.0095$
 
 <img src="/images/2022-12/Snipaste_2023-01-07_10-39-00.png" width="50%">
 
-When $N$ is large enough, or both of the equations $Np>5$, $N(1-p)>5$ hold, we could **consider binomial as normal distribution**, and therefore its **95% confidence interval**:
+When $N$ is large enough, or both of the equations $N(p)>5$, $N(1-p)>5$ hold, we could **consider binomial as normal distribution**, and therefore its **margin of error**:
+$$m=z^*\times SE$$
 
-$$I = [p-z\sigma,p+z\sigma]$$
-
-where $z=1.96$ is the value of 95% confidence interval of the standard normal distribution, therefore the 95% confidence interval is $[0.081,0.119]$
+its **95% confidence interval**: $I = [p-m,p+m]$
+- $z^*=1.96$ is the value of 95% confidence interval of the **standard normal distribution**
+- then its 95% confidence interval is $[0.081,0.119]$
 
 Therefore, <span style="background-color: yellow; color: black;">if the probability of "pink group" > 0.12, it will be considered effective</span>
 

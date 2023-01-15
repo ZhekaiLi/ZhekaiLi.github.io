@@ -153,13 +153,51 @@ Since resolutions from high to low, according to sensitivity, it's expected that
 
 # 3. Characterize
 ## 3.1 Variability
+To calculate a **confidence interval**, you need:
+- **Standard Error** (Standard deviation of samples' mean)
+- Distribution
+
+For example, for binomial, we have
+- $SE=\sqrt{\hat{p}(1-\hat{p})/N}$
+- $m = z^*\times SE=1.96\times SE$
+
+|type of metric| distribution| estimated variance
+|-|-|-|
+|probability| binomial (normal)| $\frac{\hat{p}(1-\hat{p})}{N}$
+|mean| normal| $\frac{\hat\sigma^2}{N}$
+|median/percentile| depends cuz they will be non-normal if data is non-normal| depends
+|count/difference| normal (maybe)| $Var(X)+Var(Y)$
+|rates| poisson| $\bar{x}$
+|ratios| depends| depends
+
+$$SE=\sqrt{\text{estimated variance}}$$
+
+**Example: Confidence interval for a mean**
+$X = [87029, 113407, 84843, 104994, 99327, 92052, 60684]$ then
+- $\bar x=\text{sum}(X)/7$
+- $\sigma =\text{std}(X)$
+- $SE=\sigma/7$
+- $I=[\bar x-1.96SE,\bar x+1.96SE]$
+
+## 3.2 Empirical Variablility (Nonparametric)
+对于一些比较复杂(分布很抽象)，使用 empirical viaraiblity 的好处是不需要知晓或假设概率分布
+
+> **Empirical Confidence Interval**
+> 例如对于一个样本数为40的采样，想计算其 95% 置信区间，只需将他们升序排序后取第二个为左边界，倒数第二个为右边界
+> <img src="/images/2022-12/Snipaste_2023-01-13_09-58-39.png" width="60%">
+
+
+To calculate a **confidence interval empirically**. For each experiment, calculate the difference in click-through-probability between the two groups (<u>A/A Testing</u>):
+1. Calculate the std of the difference and then confidence interval, assuming it's normally distributed
+2. Calculate an **empirical confidence interval**, making no assumptions about the distribution
+
+例如对于一个大的数据集，我们随机采样两个样本数均为40的 Group:
+1. 逐一相减后计算 difference 的 $\sigma$，$I=[\mu-1.96\sigma,\mu+1.96\sigma]$
+2. 将 difference 升序排序后取第二个为左边界，倒数第二个为右边界
 
 
 
 
-
-
-<img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
