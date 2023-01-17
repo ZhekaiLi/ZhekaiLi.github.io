@@ -17,7 +17,7 @@
 
 {% for category in site.categories %}
   {% assign temp = category[1].size | minus: min | times: 36 | divided_by: diff %}
-  {% assign base = temp | divided_by: 2 %}
+  {% assign base = temp | divided_by: 3 %}
   {% assign remain = temp | modulo: 4 %}
   {% if remain == 0 %}
     {% assign size = base | plus: 9 %}

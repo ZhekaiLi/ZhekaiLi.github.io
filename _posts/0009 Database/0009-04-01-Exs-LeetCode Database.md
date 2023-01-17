@@ -9,6 +9,7 @@ mathjax: false
 
 ## Methods
 
+### with
 可以使用 `with` 语句来创建临时表单。这样会清楚明白很多
 ```sql
 with T1 as (
@@ -25,6 +26,21 @@ with T1 as (
 ), T2 as (
     select ...
 )
+```
+
+### select without from
+|N|id|
+|-|-|
+|A|0|
+|B|1|
+|C|2|
+
+```sql
+select 'A' as N, 0 as id
+union
+select 'B' as N, 1 as id
+union
+select 'C' as N, 0 as id
 ```
 
 

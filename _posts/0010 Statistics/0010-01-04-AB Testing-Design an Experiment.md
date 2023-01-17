@@ -102,15 +102,45 @@ However, users registered in different times, as shown in the blue points in the
 
 # 3. Size
 ## 3.1 Variability Affect Size
+According to different unit of diversion, the varaibility($SE$) is different.
+
+To prove significance, we need to compare $d$ and $m=1.96SE$, and for **binomial** $SE$:
+$$SE=\sqrt\frac{\hat p(1-\hat p)}{N} \sim 1/\sqrt{N}$$
+
+For example, we determine a $d_{min}=0.02$, to reach that minimum, for different unit of diversion (cookie and query):
+- sample size of query should be large
+- sample size of cookie could be relatively small
+
+<img src="/images/2022-12/Snipaste_2023-01-14_10-35-01.png" width="50%">
 
 
 # 4. Duration
+## 4.1 Duration
+For example, we require:
+- Size of an experiment: 1 million pageviews
+- Average traffic per day: 0.5 million pageviews
+
+**Does that means we have to run experiments for 2 days? No!**
+- From the pic below, pageviews different in weekdays and weekends
+- Selecting Sat and Sun cannot meet the size requirement
+- We can:
+  (1) run a mix of weekend and weekday days for 3 days
+  (2) run longer(7 days) with less traffic
+
+<img src="/images/2022-12/Snipaste_2023-01-15_17-23-11.png" width="60%">
+
+## 4.2 Exposure
+<u>**When to limit exposure**</u>
+
+Which experiments are risky enough that we might have to limit the number of users exposed?
+- $\checkmark$ Change database
+  If this goes wrong, effects will be huge
+- $\times$ Chnage color of a button
+  Low risk
+- $\checkmark$ Allows facebook login
+  New function might not be well prepared
 
 
-
-
-
-<img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
