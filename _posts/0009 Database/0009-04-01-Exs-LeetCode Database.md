@@ -44,6 +44,39 @@ select 'C' as N, 0 as id
 ```
 
 
+### window function
+
+可以在 window function 中基于 partition 来 group by
+
+例如，查看每个顾客买的最多的商品（<span style="background-color: yellow; color: black;">如果在 window function 里边加了 aggregation, 就必须在外面套一层 group by，不然会出现很奇怪的现象</span>(e.g. 只返回一行数据)）
+```sql
+select * from (
+    select *,
+        rank() over(
+            partition by customer_id
+            order by count(product_id)
+        ) as rk
+    from table
+    group by customer_id, product_id
+) temp
+where rk = 1
+```
+
+### window function in case
+在 case 内部，可以使用 window function 作为判断条件
+
+例如，在购物时(user_id, prod_id):
+- 同时购买\$100以下的商品，打9折
+- 同时购买\$100以下的商品，打8折
+
+```sql
+(case
+    when sum(price) over(partition by user_id) > 100 then price*0.9
+    else price*0.8
+end)
+```
+
+
 ## 176. Second Highest Salary
 如果遇到以下需求：若查询不到匹配选项，则返回 `NULL`。可以使用嵌套 select 的方式：
 ```sql
