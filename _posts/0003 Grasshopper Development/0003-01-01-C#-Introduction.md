@@ -133,8 +133,11 @@ Point3d targetPoint = curve.PointAt(tMid);
 # 3. Data Structure
 DataTree 见[文档]((https://developer.rhino3d.com/api/grasshopper/html/T_Grasshopper_DataTree_1.htm#!))
 dt.AllData() 将树中的内容合并到一个 list 中
+
+
+
 # Examples
-### .1 将曲线分割成线段
+## Ex.1 将曲线分割成线段
 根据已知曲线以及设定的 tolerance，将曲线分割成一个线段 list
 tolerance > max{ 最短距离 between 分割后各线段的中点 & 已知曲线) } 
 ```csharp
@@ -180,7 +183,48 @@ tolerance = 0.9 & 0.2
 <img src="https://img-blog.csdnimg.cn/20200805174901295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70" width="20%" alt=""> <img src="https://img-blog.csdnimg.cn/2020080517500847.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70" width="20%" alt="">
 
 
+## Ex.2 画一条随机游动的小蛇
 
+效果如图
+<img src="https://img-blog.csdnimg.cn/2020080523253616.gif" width="40%" alt="">
+
+### 1.1 涉及内容
+1. Random 语句：见 [C# 学习笔记](https://blog.csdn.net/weixin_43728138/article/details/107802603) Section 1.4
+2. toggle & timer 模块：见 [Rhino (Grasshopper) 二次开发 (C#) Part 1](https://editor.csdn.net/md/?articleId=107799933) Section 1.1.2 & 1.1.3
+
+### 1.2 具体电池组与代码
+<img src="https://img-blog.csdnimg.cn/20200805233409682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70" width="30%" alt="">
+
+```csharp
+private void RunScript(bool ifRenew, ref object A, ref object B) {
+    if (ifRenew) { // 初始化点和线
+        p = new Point3d(0, 0, 0);
+        ps = new List<Point3d>();
+        ls = new List<LineCurve>();
+
+        for (int i = 0; i < 10; i++) {
+	        ps.Add(p);
+	        ls.Add(new LineCurve(p, p));
+        }
+    }
+    else {
+        double x = randomGenerator.NextDouble() - 0.5;
+        double y = randomGenerator.NextDouble() - 0.5;
+
+        ls.Add(new LineCurve(p, p += new Vector3d(x, y, 0)));
+        ps.Add(p);
+        ls.RemoveAt(0);
+        ps.RemoveAt(0);
+    }
+    A = ps;
+    B = ls;
+}
+
+Point3d p = new Point3d(0, 0, 0);
+Random randomGenerator = new Random();
+List<Point3d> ps = new List<Point3d>();
+List<LineCurve> ls = new List<LineCurve> ();
+```
 
 
 
