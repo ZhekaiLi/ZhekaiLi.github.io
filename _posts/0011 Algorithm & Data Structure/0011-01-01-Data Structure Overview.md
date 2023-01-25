@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Structure Overview
+title: Data Structure Overview 
 categories: Data-Structures-and-Algorithm
 description: Personal Notes
 keywords: Data Structure
@@ -33,3 +33,10 @@ $O(n)$ 线形阶：一个for循环
 $O(\log_2n)$ 对数阶
 $O(n\log_2n)$ 线形对数阶
 $O(n^k)$ 指数阶：for循环的嵌套
+
+**Tuple 元组**
+元组是有序且不可更改的集合
+
+```py
+t1 = (1,) # 创建只有单个元素的 tuple 必须要加个逗号
+```

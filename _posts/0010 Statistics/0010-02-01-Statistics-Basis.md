@@ -84,7 +84,54 @@ False Positive (假阳性): actually negative but tested positive
 
 False Negative (假阴性): actually positive but tested nagative
 
-<img src="/images/2022-12/.png" width="60%">
+# 3. Sampling
+## 3.1 Simple random sample
+Each individual in the population has the same probability of being chosen for inclusion in the sample as any other individual. Two key **characteristics**:
+- <u>unbiased sample</u>
+- <u>independant data points</u> (selection of one participant must not influence the selection of other participants)
+
+Simple random sample is the **<font color=orange>gold stardard</font>** 
+
+<span style="background-color: yellow; color: black;">However, simple random sample could be hard to achieve</span>. Examples:
+- Phone surveys: Multiple phones, ability to screen calls, time of the call
+- Online surveys: Avoidable, easily duplicated, too attractive to one group
+
+## 3.2 Alternatives to simple random sample
+> **Systematic Sample**
+> One unit is chosen and then every $k$ unit thereafter
+
+例如在餐馆门口，对于每五个出来的人，询问其中的第一个人
+
+> **Opportunity Sample**
+> Sampling the first $n$ units that come along
+
+> **Stratified Sample**
+> The total population is broken up into homogenous groups
+
+> **Cluster Sample**
+> Similar to stratified sample, but groups are likely to have a mix of characteristics
+
+## 3.3 Standard Error
+> **(1) The standard deviation of the proportion distribution $\hat p$**
+
+(proportion distribution 指的是例如正确率、得奖率这种比例式的数据)
+
+$$\sigma_{\hat p} = \sqrt{\frac{p(1-p)}{n}}$$
+
+For example, for a true value $p=0.9$, we expect that $68\%$ (one sigma) of samples with size $n=25$ to have the $\hat p$ between $[0.9\pm\sqrt{0.9*0.1/25}]$
+
+The larger the $n$ is, the narrower the $68\%$ area will be
+
+<center><img src="/images/2022-12/Snipaste_2023-01-22_11-11-31.png" width="50%"></center>
+
+
+
+> **(2) The standard deviation of the sample mean $\bar x$**
+
+$$\sigma_{\bar x}=\frac{\sigma}{\sqrt{n}}$$
+
+Mainly used to estimate the population standard deviation $\sigma$ through sample error $\sigma_{\bar x}$
+
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">

@@ -27,7 +27,7 @@ The EOQ model is a continuous review poliy (inventory level can be monitored con
 - $L=$ lead time (positive, could be constant or stochastic)
 - $D=$ demand (annually, stochastic) 
 - $c_B=$ backorder cost per item
-- $OHI(t)=$ on-had inventory at time $t$
+- $OHI(t)=$ on-hand (on hand) inventory at time $t$
 - $B(t)=$ # backordered items at time $t$
 - $I(t)=OHI(t)-B(t)$
 - $B_r=$ # backordered items during the lead time with reorder point $r$ 
@@ -45,15 +45,16 @@ Derived Notations:
 > $$E[X]=E[L]E[D]\text{ and }Var(X)=E[L]Var(D)+E^2[D]Var(L)$$
 
 ## 1.1 Back-ordered Case
+Back-ordered means that the customer still want the late items, but we need to pay some compensate (back-ordered cost). Equation of total cost:
 $$TC(q,r)=\text{set up cost + holding cost + backordered cost + no-care}$$
 
 - "$\text{no-care}$" indicates the costs that have nothing to do with $q,r$, including **purchasing cost** ($E[D]p$), **in-transit cost** ($E[D]Lh$)
+
 <center>
-    <img src="/images/2022-11/pic0314.jpeg" width="45%"> <br>
-</center><br>
+    <img src="/images/2022-11/pic0314.jpeg" width="55%"> <br>
+</center>
 
 > $$\begin{aligned}
-\text{Pr}(\text{stockout})&= \text{Pr}(X>r)\\
 TC(q,r)
 &=K\frac{E[D]}{q}+h\cdot\frac{1}{2}[(r-E[X]+q)+(r-E[X])]+c_BE[B_r]\frac{E[D]}{q} \\
 &=K\frac{E[D]}{q}+h(r-E[X]+\frac{q}{2})+c_BE[B_r]\frac{E[D]}{q} \\
@@ -80,8 +81,8 @@ To find the optimal $q$ and $r$, we need the expression of $E[B_r]$ and $\frac{\
 > $$q^*=\sqrt{\frac{2E[D](K+c_BE[B_r])}{h}}\text{ and Pr}(X>r^*)=\frac{hq^*}{c_BE[D]}$$
 
 **<font color=red>Note: there is a bug that $q^*,r^*$ are dependent to each other</font>. Two approaches:**
-- Heuristic: approximate $q^*$ by $\text{EOQ}=\sqrt{2KE[D]/h}$, and then solve $r^*$
-- Exact: start with EOQ and solve iteratively until $(q,r)$ converges
+- **Heuristic** (启发式的): approximate $q^*$ by $\text{EOQ}=\sqrt{2KE[D]/h}$, then solve $r^*$
+- **Exact**: start with EOQ and solve iteratively until $(q,r)$ converges
 
 Remarks:
 1. $q^*\geq EOQ$ due to extra $c_BE[B_r]$ term
@@ -91,7 +92,7 @@ Remarks:
 5. As $h\uparrow$, both $q^*,r^*\downarrow$ 
 
 ## 1.2 Lost Sales Case
-Lost Sale means customer will not want any late items, therefore cost of lost sales per item per time is
+Lost Sales means customer <u>**will not want any late items**</u>, therefore cost of lost sales per item per time is:
 $$c_{LS}=c_B+\text{(sale price - sell price)}$$
 
 > $$TC(q,r)= K\frac{E[D]}{q}+h(r-E[X]+E[B_r]+\frac{q}{2})+c_{LS}E[B_r]\frac{E[D]}{q}$$

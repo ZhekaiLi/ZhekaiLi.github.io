@@ -9,48 +9,63 @@ mathjax: true
 mermaid: true
 ---
 
+<center>
+
+# Python Basis
+</center>
+
+
 # 1. Python 的数据储存方式
-**Reference - Stack Memory 栈**（特点是后进先出，空间有限）
-储存所有对象名。执行方式类似于执行嵌套函数:
+> **Reference - Stack Memory 栈**（特点是后进先出，空间有限）
+
+储存所有<span style="background-color: yellow; color: black;">对象名</span>。执行方式类似于执行嵌套函数:
 - 首先外部函数进入栈，然后内部函数入栈
 - 内部函数执行完后先出栈，然后外部函数出栈
 
-**Objects - Heap Memory 堆**（特点是无序杂乱，空间大）
-储存所有创建的对象
+> **Objects - Heap Memory 堆**（特点是无序杂乱，空间大）
 
+储存所有创建的<span style="background-color: yellow; color: black;">对象本身</span>
+
+## 1.1 Illustration
 ```py
 obj1 = MyObject()
+id(obj1) >>> addr1
 ```
 
-- obj1: 对象名(实例的reference)
-- MyObject(): 实例(instance)，储存在 heap memory 中
-- 等号: 相当于创建了一个指针地址 address,，将对象名指向实例。该地址和对象名一起储存在 stack memory 中
+- `obj1` 对象名(实例的reference)，储存在 stack memeory 中
+- `MyObject()` 实例(instance)，储存在 heap memory 中
+- `=` 等号相当于创建了一个指针地址 address，将对象名指向实例。该地址和对象名一起储存在 stack memory 中
+- `id(obj1)` 读取对象名所储存的地址
+
 <img src="/images/2022-08/Snipaste_2022-08-01_10-37-05.png" width="80%">
 
 ```py
 obj2 = obj1
+obj1 is obj2 >>> True
+id(obj1) == id(obj2) >>> True
 ```
-- 把 obj1 对应的地址赋给 obj2，因此这两个对象名指向同一实例对象
-- 此时 `obj1 is obj2 >>> True` 因为指向同一个实例对象
+- 把 `obj1` 对应的地址(`addr1`)赋给了 `obj2`，此时这两个对象名储存了同一个地址，因此指向同一实例对象
+
 <img src="/images/2022-08/Snipaste_2022-08-01_10-49-21.png" width="80%">
 
 ```py
 obj2 = MyObject()
 ```
 
-- 又创建了一个新的实例对象，将其地址赋给 obj2
-- 此时 `obj1 is obj2 >>> False` 因为只想不同实例对象
+- 又创建了一个新的实例对象，将其地址赋给 `obj2`
+- 此时 `obj1 is obj2 >>> False` 因为指向不同实例对象
 - 但是 `obj1 == obj2 >>> True` 因为他们指向的实例对象在属性值上相同
 <img src="/images/2022-08/Snipaste_2022-08-01_11-04-12.png" width="80%">
 
-而函数传参的本质也就是传递 the copy of object address。例如，下例中 F 函数的执行过程相当于把 obj 对应的地址赋给 input
+## 1.2 Examples
+**函数传参的本质是传递 object address**。例如，下例中 `F()` 的执行过程相当于把 obj 对应的地址赋给 input
 
 ```py
 def F(input):
     input.a += 1
+
 obj = MyObject()
 obj.a = 4
-
 F(obj)
 print(obj.a) >>> 5
 ```
@@ -60,8 +75,8 @@ print(obj.a) >>> 5
 def F(lis):
   lis.append(1)
   lis = [2,3]
-L = [0]
 
+L = [0]
 F(L)
 print(L) >>> [0,1]
 ```
@@ -121,21 +136,24 @@ f.close()
 
 # 3. 函数
 ## 3.1 常用函数
-**eval()**
+> **eval()**
 执行并返回一个字符串表达式的值
+
 ```py
 a = eval("1 + 4")
 b = eval("a * 6")
 ```
 
-**map(参数1, 参数2)**
+> **map(参数1, 参数2)**
 将参数1的方法作用于参数2得每一个元素
+
 ```py
 list(map(eval, ["1+1", "2*2"])) >>> [2, 4]
 ```
 
-**max(iterable, key=func)**
+> **max(iterable, key=func)**
 使用 max + key 来发掘更多可用性
+
 ```py
 # 1. 统计列表中出现频率最高的元素
 a = [1,2,3,1,2,3,2,2,4,5,1]
@@ -147,12 +165,14 @@ max(lst, key=lambda x: x[0]) >>> (4, 'e')
 ```
 
 
-## 3.1 lambda
+## 3.2 lambda function
+
 ```py
 func = lambda [arg1, arg2, ...]: expression
 ```
 
-示例
+Examples:
+
 ```py
 power = lambda a, b: a**b
 power(2, 3) >>> 8
@@ -163,7 +183,7 @@ power(2, 3) >>> 8
 
 
 
-# 4. 库
+# 4. Libraries
 可以在 pypi.org 上根据关键字搜索第三方库
 ```py
 pip install <库名>
@@ -174,43 +194,32 @@ pip show <库名> # 查看库的详细信息
 pip search <库名> # 检索与该库相关的信息
 ```
 
-> **常用库**
 
+## 4.1 Famous Libraries
 **1. 数据处理**
-- **数据分析**
-numpy, pandas, scipy
+- **数据分析**: numpy, pandas, scipy
 - **数据可视化**
-matplotlib (matplotlib.pyplot)
-seaborn (统计类数据)
-Mayavi (三维数据可视化)
+  - matplotlib (matplotlib.pyplot)
+  - seaborn (统计类数据)
+  - Mayavi (三维数据可视化)
 - **文本处理**
-PyPDF2 (处理pdf文件)
-NLTK (自然语言文本处理)
-Python-docx (Word文件)
-wordcloud (绘制词云)
+  - PyPDF2 (处理pdf文件)
+  - NLTK (自然语言文本处理)
+  - Python-docx (Word文件)
+  - wordcloud (绘制词云)
 
-**2. 机器学习**
-- Sickit-learn
-- TensorFlow
-- MXNet (基于神经网络的深度学习计算框架)
+**2. 机器学习**: Sickit-learn, TensorFlow, MXNet (基于神经网络的深度学习计算框架)
 
 **3. web**
-- **网络爬虫**
-Requests, Scrapy, pysipder
-- **Web信息提取**
-Beautiful Soup, Re (正则表达式), Python-Goose
-- **Web网站开发**
-Django (大型网站), Pyramid (中型), Flask (简易)
-- **网络应用开发**
-WeRobot (微信小程序), aip (百度AI框架), MyQR (定制二维码)
+- **网络爬虫**: Requests, Scrapy, pysipder
+- **Web信息提取**: Beautiful Soup, Re (正则表达式), Python-Goose
+- **Web网站开发**: Django (大型网站), Pyramid (中型), Flask (简易)
+- **网络应用开发**: WeRobot (微信小程序), aip (百度AI框架), MyQR (定制二维码)
 
 **4. 人机交互与设计**
-- **图形用户界面 GUI**
-PyQt5, wxPython, PyGObject
-- **游戏开发**
-PyGame (简单)
-Panda3D (3D渲染和游戏开发)
-cocos2d (专业级2D游戏)
+- **图形用户界面 GUI**: PyQt5, wxPython, PyGObject
+- **游戏开发**: PyGame (简单), Panda3D (3D渲染和游戏开发), cocos2d (专业级2D游戏)
+
 
 # 5. ipython (with Jupyter)
 ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便的魔法命令：
@@ -232,7 +241,7 @@ ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便�
 **6. 运行python程序** `%run` + `文件名.py`
 
 **7. 使用前面代码块的输出结果** `_` 前面第一个, `__` 前面第二个, `_n` 序号为n的代码块：
-<img src="/images/2022-01/Screenshot 2022-01-22 at 8.35.57 PM.png" width="70%">
+<img src="/images/2022-01/Screenshot 2022-01-22 at 8.35.57 PM.png" width="60%">
 
 ## 5.1 为地址设置书签
 设置书签 `%bookmark 书签名 地址`
@@ -240,8 +249,6 @@ ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便�
 删除所有书签 `%bookmark -r`
 显示所有书签 `%bookmark -l`
 跳转地址 `cd 书签名`
-
-示例：
 
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.49.22 PM.png" width="90%">
 
@@ -372,8 +379,8 @@ www.bigocheatsheet.com
 
 
 
-# 7. 其他操作
-## 7.1 *星号的使用
+# Others
+## .1 *星号的使用
 星号的作用为 unpacking
 ```py
 values = (1, 2)

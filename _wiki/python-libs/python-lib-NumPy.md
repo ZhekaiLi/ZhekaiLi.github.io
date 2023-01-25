@@ -8,6 +8,14 @@ keywords: Python
 mathjax: true
 ---
 
+
+## axis = 0 or 1?
+- axis = 0 表示纵轴，说明函数导致的变化是从上到下的
+- axis = 1 表示横轴，说明函数导致的变化是从左到右的
+
+
+
+
 # 1. numpy.array
 **Define**
 

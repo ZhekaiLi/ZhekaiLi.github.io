@@ -402,55 +402,7 @@ where $x>0$
 
 
 
-
-# L10
-$$P(E)=\sum_{\forall x}P(E\vert x)p(x)$$
-
-$$P(E)=\int P(E\vert x)f(x)dx$$
-
-## 10.1 Conditional Distribution
-$f(x\vert E)$:
-$$\begin{split}
-f(x\vert E)dx &= P(x\leq X\leq x+dx\vert E) \\
-&= \frac{P(x\leq X\leq x+dx\cap E)}{P(E)}
-\end{split}$$
-
-And for $E_1,E_2,...,E_m$ mutually exclusive & collectively exhausted
-$$f(x)=\sum_{i=1}^m f(x\vert E_i)P(E_i)$$
-
-Applying Baye's rule:
-$$f(x\vert E)=\frac{P(E\vert x)}{P(E)}f(x)$$
-
-## 10.2 Joint PMF
-$$p_{XY}(x,y)=P(X=x\cap Y=y)$$
-
-(1) $0\leq p(x,y)\leq 1$
-
-(2) $\sum_{\forall x}p(x,y)=p(y)$ **consistency rule**
-
-(2) $\sum_{\forall x}\sum_{\forall y}p(x,y)=1$
-
-## 10.3 Conditional PDF
-$$p_{X\vert Y}(x\vert y)=P(X=x\vert Y=y)=\frac{p_{XY}(x,y)}{p_Y(y)}$$
-
-
-
-## 13.2 Sample Space
-$X=[x_1, x_2, ..., x_M], Y=[y_1, y_2, ..., y_M]$
-
-(1) Sample mean: $E[X]=\bar{x}=\sum x_i/M$
-
-(2) Sample variance: $S_x^2=\frac{1}{M}\sum(x-\bar{x})^2$
-
-(3) $E[XY]=\frac{1}{M}\sum x_iy_i$
-
-(4) $Cov[XY]=E[XY]-\bar{x}\bar{y}$
-
-(5) $\rho=Cov[XY]/S_xS_y$
-
-对于样本 $X,Y$ 在坐标系中的图像，如果是比较细的直线（点分布密集）则 $\rho=1$ or $-1$；如果比较粗（点分布稀疏），则 $\rho\in(-1,0)\cup(0,1)$；如果是分散的团状分布，则 $\rho=0$
-
-# L14 Multinormal Distribution
+# 5. Multinormal Distribution
 $$f(\bf{x})=(2\pi)^{-\frac{n}{2}}\vert\bf\Sigma\vert^{-\frac{1}{2}} \exp\Big[-\frac{1}{2}(\bf{x}-\bf{\mu})^T\vert\bf\Sigma\vert^{-1}(\bf{x}-\bf{\mu})\Big]$$
 
 where

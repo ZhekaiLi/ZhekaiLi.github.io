@@ -75,6 +75,14 @@ L.sort()    # 升序排序
 解决方法: deep copy
 ```py
 l2 = l1.copy()
+l2 = l1[:]
+l2 = l1[::]
+```
+
+<span style="background-color: yellow; color: black;">但如果 L 是一个多维数组，以上方法全部失效，需要使用 deepcopy</span>
+```py
+from copy import deepcopy
+L1 = deepcopy(L)
 ```
 
 
@@ -87,7 +95,7 @@ L[0:-1:2] # 表示在第一个至最后一个元素之间，隔1个元素取值
 >>> [1, 3, 5]
 ```
 
-`L[::c]` 表示从左至右隔 \|c-1\| 个元素取值
+`L[::c]` 表示从左至右(+)/从右至左(-)，每隔 \|c\|-1 个元素取值
 ```py
 L[::2] >>> [1, 3, 5]
 L[::-2] >>> [6, 4, 2]
@@ -96,19 +104,6 @@ L[::-2] >>> [6, 4, 2]
 L[::-1] >>> [6, 5, 4, 3, 2, 1]
 ```
 
-### 2.1.1 深度复制 List
-列表名储存的是列表地址而不是其本身，因此 `L1 = L` 会是他们指向同一个列表，从而出现修改 L 也会导致 L1 被修改的情况。因此需要深度复制
-```py
-L1 = L[:]
-L1 = L[::]
-L1 = L.copy()
-```
-
-<span style="background-color: yellow; color: black;">但如果 L 是一个多维数组，以上方法全部失效，需要使用 deepcopy</span>
-```py
-from copy import deepcopy
-L1 = deepcopy(L)
-```
 
 
 ## 2.2 列表推导式（内嵌复合表达式）
