@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A/B Testing - Analyze Results
-categories: Statistics, A/B Testing
+categories: Statistics
 description: Personal Notes
 keywords:
 mathjax: true
