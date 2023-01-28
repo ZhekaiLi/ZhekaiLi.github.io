@@ -27,19 +27,19 @@ Hi, I'm Zeka(Zhekai) Li, a graduate student in <b>MS Supply Chain Engineering</b
 
 ### Technical Skills
 ---
-<center><img src="/images/2022-12/Snipaste_2023-01-12_12-18-49.png" width="100%">
+<center><img src="/images/2022-12/Snipaste_2023-01-28_17-33-01.png" width="100%">
 </center>
 
 
-### Projects
+### Academic Projects
 ---
-<center><img src="/images/2022-12/Snipaste_2023-01-12_12-20-08.png" width="100%">
+<center><img src="/images/2022-12/Snipaste_2023-01-28_17-33-42.png" width="100%">
 </center>
 
 
 ### Work Experience
 ---
-<center><img src="/images/2022-12/Snipaste_2023-01-12_12-20-51.png" width="100%">
+<center><img src="/images/2022-12/Snipaste_2023-01-28_17-34-10.png" width="100%">
 </center>
 
 
