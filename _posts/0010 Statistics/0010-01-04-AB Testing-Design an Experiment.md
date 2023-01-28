@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A/B Testing - Design an Experiment
-categories: Statistics, A/B Testing
+categories: Statistics
 description: Personal Notes
 keywords:
 mathjax: true
