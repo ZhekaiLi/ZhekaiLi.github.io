@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lean Six Sigma
+title: Six Sigma - Intro
 categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain
@@ -23,10 +23,60 @@ Six Sigma represents a stretch goal of six std from the process mean to the spec
 
 <img src="/images/2022-11/Snipaste_2022-12-02_16-27-47.png" width="60%">
 
-## 1.3 DMAIC: A Six Sigma Methodology
+---
+
+# 2. Key Concepts in Six Sigma
+## 2.1 Critical to Quality Metrics
+**(1) VOC (Voice of the Customer)**: needs and expectations expressed in the customer's language
+
+**(2) CTQs (Critial-to-Quality Requirements)**: the performance characteristics of a process, product, or service critically important to customers
+
+<span style="background-color: yellow; color: black;">It's important to translate VOC to CTQs</span>
+
+For example, for a pizza store:
+|VOC|CTQs|Metrics|CTQs Target|
+|-|-|-|-|
+|"Don't want to wait too long"|On-time delivery|Order to delivery (mins)|<= 30 mins|
+|"Don't want cold pizza"|Hot pizza when delivered|Pizza temperature (degrees)|>= 32 degrees|
+
+**Six Sigma Basic Premise**:
+$$Y=f(X)$$
+
+- $Y_1=$ delivery time
+- $Y_2=$ pizza temperature
+- $X=$ factors affecting $Y_1,Y_2$
+
+## 2.2 Defect Opportunities
+(1) For a **marker**, there might be **5** defect opportunities such as leak, ink color, cap...
+
+(2) For a **PC**, there might be **1000** defect opportunies
+
+Let's assume either marker or PC have 2 defects per unit, then
+
+> **DPO (defects per opportunity)**
+- Marker: 2/5 = 0.4 DPO
+- PC: 2/1000 = 0.002 DPO
+
+> **DPMO (defects per million opportunities)**
+- Marker: 0.4 DPO * 1,000,000 = 400,000 DPMO
+- PC: 0.002 DPO * 1,000,000 = 2,00 DPMO
+
+## 2.3 Sigma Level
+A performance metric used to indicate the quality level of a product, process, or service
+
+<img src="/images/2022-12/Snipaste_2023-01-14_16-37-00.png" width="70%">
+
+
+
+
+
+
+
+
+# 2. DMAIC: A Six Sigma Methodology
 **DMAIC**: Define, Measure, Analyze, Improve, Control
 
-### (1) Define phase:
+## 2.1 Define
 
 > **(1) Develop problem and goal statements**
 
@@ -65,7 +115,7 @@ Purpose is to document and communicate overall scope of processes related to the
 <img src="/images/2022-12/Snipaste_2023-01-21_15-43-14.png" width="60%">
 
 
-### (2) Measure phase
+## 2.2 Measure
 **Steps**:
 1. Develop data collection plan
 2. Map relevant processes
@@ -98,7 +148,7 @@ Requirements of a valid measurement: (using an example of weight scale 体重秤
 - <u>Repeatable</u>: if I weigh myself twice in a short time, the results should be same
 - <u>Reproducible</u>: my weight in my home should be the same as my weight in my doctor's office
 
-### (3) Analyze phase:
+## 2.3 Analyze
 **Purpose**: Determine which $X$(s) impact $Y$ in $Y=f(X)$
 
 **Steps**:
@@ -144,7 +194,7 @@ $X_2$ is proved using <u>Dotplot and Boxplot for Temp Variation by Chef</u>
 
 <img src="/images/2022-12/Snipaste_2023-01-28_09-37-39.png" width="80%">
 
-### (4) Improve phase:
+## 2.4 Improve
 **Purpose**: Address proven key $X$(s) and find solutions (best combination of key $X$(s)) to improve $Y$
 
 **Steps**:
@@ -186,7 +236,7 @@ Adding mistake proofing to projects will be helpful. Three levels of mistake pro
 3. **Detection**:
    - Ex: Spelling error detection in Word
 
-### (5) Control phase:
+### 2.4 Control phase:
 **Purpose**: Control of key $X$ factors to ensure improved $Y$ is <u>sustainable</u>
 
 **Steps**:
@@ -217,59 +267,6 @@ Control plan is the blueprint to ensure the right controls are implemented to ac
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">
-
-
-the solution was piloted and plans made for full scale implementation. The control phase conecntrates on insuring the problem stays fixed. And the new methods can be further improved over time
-
-## 1.4 Principles of Lean
-Value
-Value Chain
-Flow
-Pull
-Perfection
-
-# 2. Key Concepts in Six Sigma
-## 2.1 Critical to Quality Metrics
-**(1) VOC (Voice of the Customer)**: needs and expectations expressed in the customer's language
-
-**(2) CTQs (Critial-to-Quality Requirements)**: the performance characteristics of a process, product, or service critically important to customers
-
-<span style="background-color: yellow; color: black;">It's important to translate VOC to CTQs</span>
-
-For example, for a pizza store:
-|VOC|CTQs|Metrics|CTQs Target|
-|-|-|-|-|
-|"Don't want to wait too long"|On-time delivery|Order to delivery (mins)|<= 30 mins|
-|"Don't want cold pizza"|Hot pizza when delivered|Pizza temperature (degrees)|>= 32 degrees|
-
-**Six Sigma Basic Premise**:
-$$Y=f(X)$$
-
-- $Y_1=$ delivery time
-- $Y_2=$ pizza temperature
-- $X=$ factors affecting $Y_1,Y_2$
-
-## 2.2 Defect Opportunities
-(1) For a **marker**, there might be **5** defect opportunities such as leak, ink color, cap...
-
-(2) For a **PC**, there might be **1000** defect opportunies
-
-Let's assume either marker or PC have 2 defects per unit, then
-
-> **DPO (defects per opportunity)**
-- Marker: 2/5 = 0.4 DPO
-- PC: 2/1000 = 0.002 DPO
-
-> **DPMO (defects per million opportunities)**
-- Marker: 0.4 DPO * 1,000,000 = 400,000 DPMO
-- PC: 0.002 DPO * 1,000,000 = 2,00 DPMO
-
-## 2.3 Sigma Level
-A performance metric used to indicate the quality level of a product, process, or service
-
-<img src="/images/2022-12/Snipaste_2023-01-14_16-37-00.png" width="70%">
-
-
 
 
 

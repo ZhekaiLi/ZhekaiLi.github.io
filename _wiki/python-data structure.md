@@ -70,9 +70,8 @@ L.reverse() # 颠倒列表
 L.sort()    # 升序排序
 ```
 
-**<font color=blue>NOTEs: List 为引用类型的数据</font>(本质为地址)**，因此 `l2 = l1` 这样的操作会使得对 `l1` 的修改也相当于对 `l2` 的修改
+> **<font color=blue>NOTEs: List 为引用类型的数据</font>(本质为地址)**，因此 `l2 = l1` 这样的操作会使得对 `l1` 的修改也相当于对 `l2` 的修改。**解决方法: deep copy**
 
-解决方法: deep copy
 ```py
 l2 = l1.copy()
 l2 = l1[:]
@@ -175,19 +174,37 @@ sorted(d.items(), key=lambda x: x[1])
 
 
 # 4. String
-concact list to string
+```py
+text = "Data Science"
+
+text.upper()      >>> "DATA SCIENCE"
+text.lower()      >>> "data science"
+text.capitalize() >>> "Data science"
+```
+
+**Get index of a substring/char**: `.index()` or `.find()`
+```py
+text.index('Data')   >>> 0
+text.find('Science') >>> 5
+
+text.index('data') >>> ERROR
+text.find('data')  >>> -1
+```
+
+**(1) Concact list to string**
 ```py
 L = ["Hello", "World"]
 string = " ".join(L) >>> "Hello World"
 ```
 
-reverse string
+**(2) Reverse string**
+
 ```py
 s1 = "abc"
 s2 = s1[::-1] >>> "cba"
 ```
-
-reverse **integer** through converting it into string
+- **reverse integer through converting it into string**
+ 
 ```py
 i1 = 123
 i2 = int(str(i1)[::-1]) >>> 321
