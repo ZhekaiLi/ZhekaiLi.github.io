@@ -135,6 +135,8 @@ fig.savefig('pic1.png')
 ## 2. 几何图
 ### 2.1 画方块
 ```py
+from matplotlib import patches
+
 fig, ax = plt.subplots(figsize=(7, 7))
 # 设置坐标轴范围，否则可能因为太小而无法显示画的图
 ax.set_xlim(0, 10)

@@ -28,7 +28,7 @@ with T1 as (
 )
 ```
 
-### select without from
+### select without 'from' (直接生成简单表)
 |N|id|
 |-|-|
 |A|0|
@@ -76,6 +76,13 @@ where rk = 1
 end)
 ```
 
+### select in 'where'
+An example from <u>1045. Customers Who Bought All Products</u>
+
+```sql
+select customer_id from T
+where pSum = (select count(*) from Product)
+```
 
 ## 176. Second Highest Salary
 如果遇到以下需求：若查询不到匹配选项，则返回 `NULL`。可以使用嵌套 select 的方式：

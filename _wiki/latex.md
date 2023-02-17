@@ -8,6 +8,63 @@ keywords: Latex
 mathjax: true
 ---
 
+The derivative of $-\frac{1}{2}\Bigg(np\log2\pi+n\log\vert\Sigma\vert+\sum_{i=1}^n(x_i-\mu)^T\Sigma^{-1}(x_i-\mu)\Bigg)$ with respect to $\Sigma$ can be found as follows:
+
+First, calculate the derivative of the log determinant of $\Sigma$:
+$$\frac{\partial}{\partial \Sigma} \log\vert\Sigma\vert = \frac{\partial}{\partial \Sigma} \text{tr}(\log\Sigma) = \text{tr}(\Sigma^{-1})$$
+
+Next, calculate the derivative of the quadratic term:
+$$\frac{\partial}{\partial \Sigma} (x_i-\mu)^T\Sigma^{-1}(x_i-\mu) = -\Sigma^{-1}(x_i-\mu)(x_i-\mu)^T\Sigma^{-1}$$
+
+Finally, sum over all data points to get the derivative of the total objective:
+$$\frac{\partial}{\partial \Sigma}-\frac{1}{2}\Bigg(np\log2\pi+n\log\vert\Sigma\vert+\sum_{i=1}^n(x_i-\mu)^T\Sigma^{-1}(x_i-\mu)\Bigg) = -\frac{n}{2}\Sigma^{-1} + \frac{1}{2}\sum_{i=1}^n\Sigma^{-1}(x_i-\mu)(x_i-\mu)^T\Sigma^{-1}$$
+
+So, the derivative of the negative log-likelihood function with respect to $\Sigma$ is:
+$$\frac{\partial}{\partial \Sigma}-\frac{1}{2}\Bigg(np\log2\pi+n\log\vert\Sigma\vert+\sum_{i=1}^n(x_i-\mu)^T\Sigma^{-1}(x_i-\mu)\Bigg) = -\frac{n}{2}\Sigma^{-1} + \frac{1}{2}\sum_{i=1}^n\Sigma^{-1}(x_i-\mu)(x_i-\mu)^T\Sigma^{-1}$$
+The derivative of $\log \vert\Sigma\vert$ with respect to $\Sigma$ can be found as follows:
+
+The derivative of the determinant of $\Sigma$:
+$$\frac{\partial}{\partial \Sigma} \vert\Sigma\vert = \text{adj}(\Sigma)^T$$
+
+The derivative of the logarithm of the determinant of $\Sigma$:
+$$\frac{\partial}{\partial \Sigma} \log \vert\Sigma\vert = \frac{1}{\vert\Sigma\vert} \frac{\partial}{\partial \Sigma} \vert\Sigma\vert = \frac{1}{\vert\Sigma\vert} \text{adj}(\Sigma)^T$$
+
+So, the derivative of $\log \vert\Sigma\vert$ with respect to $\Sigma$ is:
+$$\frac{\partial}{\partial \Sigma} \log \vert\Sigma\vert = \frac{1}{\vert\Sigma\vert} \text{adj}(\Sigma)^T$$
+
+The derivative of $\sum_{i=1}^n(x_i-\mu)^T\Sigma^{-1}(x_i-\mu)$ with respect to $\Sigma$ can be found as follows:
+
+The derivative of $(x_i-\mu)^T\Sigma^{-1}(x_i-\mu)$ with respect to $\Sigma$:
+$$\frac{\partial}{\partial \Sigma} (x_i-\mu)^T\Sigma^{-1}(x_i-\mu) = -\Sigma^{-1}(x_i-\mu)(x_i-\mu)^T\Sigma^{-1}$$
+
+Sum over all data points to get the derivative of the total expression:
+$$\frac{\partial}{\partial \Sigma} \sum_{i=1}^n(x_i-\mu)^T\Sigma^{-1}(x_i-\mu) = -\sum_{i=1}^n\Sigma^{-1}(x_i-\mu)(x_i-\mu)^T\Sigma^{-1}$$
+
+So, the derivative of $\sum_{i=1}^n(x_i-\mu)^T\Sigma^{-1}(x_i-\mu)$ with respect to $\Sigma$ is:
+$$\frac{\partial}{\partial \Sigma} \sum_{i=1}^n(x_i-\mu)^T\Sigma^{-1}(x_i-\mu) = -\sum_{i=1}^n\Sigma^{-1}(x_i-\mu)(x_i-\mu)^T\Sigma^{-1}$$
+
+---
+
+The expression $(x_i-\mu)^T\Sigma^{-1}(x_i-\mu)$ is the Mahalanobis distance between the $i$th data point and the mean, given the covariance matrix $\Sigma$. It measures the distance between the two points in terms of the variance and covariance of the data.
+
+The derivative of this expression with respect to $\Sigma$ gives the sensitivity of this distance to changes in the covariance matrix.
+
+The derivative can be calculated using the chain rule of differentiation. First, we calculate the derivative of $(x_i-\mu)^T\Sigma^{-1}$ with respect to $\Sigma$, which is given by:
+
+$$\frac{\partial}{\partial \Sigma} (x_i-\mu)^T\Sigma^{-1} = -\Sigma^{-1}(x_i-\mu)^T$$
+
+Next, we calculate the derivative of $(x_i-\mu)^T\Sigma^{-1}(x_i-\mu)$ with respect to $(x_i-\mu)^T\Sigma^{-1}$:
+
+$$\frac{\partial}{\partial (x_i-\mu)^T\Sigma^{-1}} (x_i-\mu)^T\Sigma^{-1}(x_i-\mu) = (x_i-\mu)$$
+
+Finally, we combine these derivatives using the chain rule to get the derivative of $(x_i-\mu)^T\Sigma^{-1}(x_i-\mu)$ with respect to $\Sigma$:
+
+$$\frac{\partial}{\partial \Sigma} (x_i-\mu)^T\Sigma^{-1}(x_i-\mu) = \frac{\partial}{\partial (x_i-\mu)^T\Sigma^{-1}} (x_i-\mu)^T\Sigma^{-1}(x_i-\mu) \cdot \frac{\partial}{\partial \Sigma} (x_i-\mu)^T\Sigma^{-1} = (x_i-\mu)(x_i-\mu)^T\Sigma^{-1}$$
+
+Multiplying both sides by $-\Sigma^{-1}$ gives the final result:
+
+$$\frac{\partial}{\partial \Sigma} (x_i-\mu)^T\Sigma^{-1}(x_i-\mu) = -\Sigma^{-1}(x_i-\mu)(x_i-\mu)^T\Sigma^{-1}$$
+
 # 一、$\LaTeX$ 的基本概念
 
 ## 1.1 第一次使用 $\LaTeX$

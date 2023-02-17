@@ -166,31 +166,46 @@ df.rename({'old1':'new1', 'old3':'new3'}, axis=1, inplace=True)
 
 
 ### 1.3.3 更改/替换元素
-**df[col1].map(func)**
+> **df[col1].map(func)**
 将 func 应用于指定列的每个元素（不会改变 DataFrame 自身）
 ```py
 df['col1'].map(str.lower)
 df['col2'].map({'A':'Aa', 'B':'Bb'}) # 修改特定元素
 ```
 
-**df.replace()**
+> **df.replace()**
 将 A 替换成 Aa, B 替换成 Bb
 ```py
 df.replace(['A','B'], ['Aa','Bb'])
 ```
 
-**df.apply(func, axis=0)**
+#### df.apply(func, aixs=0)
+
 将函数 func 应用在指定行(axis=0)或列(axis=1)
 ```py
 # 将第四列平方并以 Series 格式输出
 df.apply(lambda row:row[3]**2, axis=1)
+
+# 以 Series 格式输出是否已经成年的信息
+df.apply(lambda row:0 if row['Age'] < 18 else 1, axis=1)
+```
+
+```py
+def func(row):
+    out = {}
+    out['col_x'] = row[1] + row[2]
+    out['col_y'] = row[1] - row[2]
+    return pd.Series(out, index=['col_x','col_y'])
+
+df.apply(func, axis=1)
 ```
 
 
 
 ### 1.3.4 删除数据
 ```py
-df.drop(columns = df.columns[0], inplace=True) # 删除第一列
+df.drop(columns=df.columns[0], inplace=True) # 删除第一列
+df.drop(index=df.index[-1], inplace=True)    # 删除最后一行
 ```
 
 
@@ -243,6 +258,17 @@ df.iloc[0:2]             # 前两行
 df[0:2]  # 前两行
 ```
 
+**访问元素**
+```py
+df.loc['r1', 'c1'] # 单个元素
+
+df.iloc[[0, 1]][['c1','c2']] # 访问指定位置的四个元素
+```
+
+注意！loc[]
+
+
+
 或使用 `df.iterrows()`
 例如，将 df 中 'col1' 列的所有元素赋值为0：
 ```py
@@ -256,13 +282,16 @@ for _, row in df.iterrows():
 <img src="/images/2022-08/Snipaste_2022-09-03_15-23-48.png" width="80%">
 <img src="/images/2022-08/Snipaste_2022-09-03_15-24-31.png" width="50%">
 
-解决方式: 打空格或者为所有列名去空格
+Solution: 打空格或者为所有列名去空格
 ```py
 df.columns = df.columns.str.strip()
 ```
 
 
 ### 1.5.2 索引和切片
+如果需要对切片的数据进行修改，必须使用 `df = df.XXX.copy()`。否则在修改切片的同时也会修改原 DataFrame
+
+
 ```py
 # 推荐方式
 df.loc['rowName','columnName'] # 使用行列名索引
@@ -280,6 +309,14 @@ df.sample()                     # 随机获取一行
     df.sample(frac=1, inplace=True) # 随机打乱整个 DataFrame
 ```
 
+大部分索引方式创建的都是 view (修改切片会导致原 DataFrame 的同步改变)，但是有些索引方式却会创建 copy (修改不会导致原改变)。以下例举会创建 copy 的索引方式:
+
+```py
+df.loc['rowName']['colName']
+df.iloc[rowIndex]['colName']
+
+df[['colName_1', 'colName_2']][:] # 如果去掉后边的 [:] 就会变成 view
+```
 
 
 
@@ -477,7 +514,12 @@ products.groupby('Category').mean().sort_values(
 ```py
 df.sort_values(by='col1') # 根据指定列做升序排列
 df.sort_values(by='col1', ascending=False) # 降序
-df.sort_index() # 根据行名做升序排列
+df.sort_index()           # 根据行名做升序排列
+
+# 多列排序
+df.sort_values(by=['col1','col2'], 
+    ascending=[False,True]
+)
 ```
 
 > **Customized Sorting**
@@ -494,6 +536,8 @@ df.sort_values(by="season", inplace=True)
 df[df['col1']<n]                    # 筛选出所有满足条件的行
 df[(df['col1']<n) & (df['col2']>m)] # 多条件('|'表示或)
 ```
+
+<span style="background-color: yellow; color: black;">多条件必须要用小括号隔离</span>，且不能用 `and/or` 代替 `&/|`
 
 示例:
 ```py
@@ -527,7 +571,7 @@ on df1.col1 = df2.col1
 df = pd.merge(df1, df2, on=["col1"], how="outer")
 ```
 
-**Left Join**
+**Left Join** (or use right)
 ```sql
 df = pd.merge(df1, df2, on=["col1"], how='left')
 ```
@@ -595,7 +639,7 @@ df.pct_change()
 """
 ```
 
-### 1.10.4 Dummy Variables (Pivot)
+### 1.10.4 Pivot/ Dummy Variables/ On-hot Encoding
 通过 Pivot 将三种性别转化为三个 Dummy Vraibles（之后可应用于机器学习）
 
 students:

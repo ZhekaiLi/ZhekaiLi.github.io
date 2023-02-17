@@ -59,6 +59,74 @@ Container Terminals
   - a berthing time for each vessel
 - Such that a given objective function is optimized.
 
+# Mobile Resource Management
+
+
+Mobile resources:
+- countainers
+- chassis
+- railcar
+- trucks (tracktor)
+- ...
+
+`R`: receiving site (white triangle): receive one loaded means generate one empty
+`G`: generating site (request empties): generate one loaded means receive one empty
+
+`——>` menas loaded drayage (a "local" movement)
+`-->` menas empty drayage
+
+```mermaid
+graph RL;
+
+G((G))
+R{R}
+P[Port]
+
+G-->P
+P.->G
+P-->R
+R.->P
+```
+
+use **positive** number to denote generate empty containers, **negative** number to denote need empty containers (need)
+
+```mermaid
+graph LR;
+
+F1("Facility_1 [-1]")
+F2("Facility_2 [+1]")
+C1("Container_yard")
+P1[Port_1]
+P2[Port_2]
+
+F1-->P1-->P2-->F2
+C1.->F1
+```
+
+## FLOW
+units of FLOW (units/time, e.g. TEU/week)
+
+For example, for the following service (the number on line is the days needed for shipment), `SHA` send a vessel per Tuesday with max capacity of 10,000 TEU:
+
+```mermaid
+graph LR;
+S[SHA]
+N[NIN]
+D[DAK]
+L[LA]
+
+S--2-->N--12-->L
+L--2-->D--12-->S
+```
+
+then the max FLOW alone **any one** line is 10,000, while the sum of all lines is also 10,000
+
+Denotations:
+- `f`: frequency of dispatches along a cycle (units/time, e.g. ships/week, trucks/day)
+- `H=1/f`: headway, the time between consecutive dispatches
+- `Q`: capacity of one vessel (e.g. TEU/ship)
+  - `Q*f`: measure of capacity (e.g. TEU/week)
+
 
 <img src="/images/2022-12/.png" width="60%">
 <img src="/images/2022-12/.png" width="60%">

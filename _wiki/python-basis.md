@@ -136,6 +136,17 @@ f.close()
 
 # 3. 函数
 ## 3.1 常用函数
+> **enumerate(List)**
+
+```py
+L = [1,0]
+for i, e in enumerate(L):
+  print(i, e)
+>>> 
+0, 1
+1, 0
+```
+
 > **eval()**
 执行并返回一个字符串表达式的值
 

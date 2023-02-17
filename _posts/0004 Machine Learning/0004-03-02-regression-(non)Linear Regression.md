@@ -57,9 +57,40 @@ plt.plot(train_x, theta0 + theta1*x_train, '-r')
 
 ## 1.2 Multiple linear regression
 
-$$y=\theta_0 + \theta_1x_1 + ... + \theta_nx_n=\theta^TX$$
+$$y=X\beta$$
+
+where
+- $y_{n\times 1}=[y_1, ..., y_n]^T$
+- $X_{n\times p}=[x_1^T;...;x^T_n]$
+- $y_i=\beta_1x_{i1} + ... + \beta_px_{ip}$
 
 Python 代码类似 simple linear regression
+
+## 1.3 Ridge regression
+
+MLE for ridge regression
+
+$$
+\widehat{\beta}(\lambda)=\arg \min _{\beta}\left\{(X \beta-y)^{T}(X \beta-y)+\lambda\|\beta\|_{2}^{2}\right\}
+$$
+
+## 1.4 Locally weighted linear regression
+
+$$
+J(\beta)=\sum_{i=1}^n w_{i}(f(x_i)-y_i)^2
+$$
+
+- $f(x_i)=x_i^T\beta=\widehat{y}_i$ 是我们的预测值
+- $w_i$ 是权重，通过点 $x_i$ 与目标预测点 $x$ 的距离来决定，距离越近，权值越大。我们通常使用如下的权重函数:
+  $$w_i=\exp(-\frac{(x-x_i)^2}{2k^2})$$
+
+Matrix version:
+$$J(\beta)=(X\beta-y)^TW(X\beta-y)$$
+
+- $W=diag(w_1,...,w_n)$
+
+
+$\epsilon$
 
 
 
