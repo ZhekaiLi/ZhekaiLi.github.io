@@ -36,6 +36,7 @@ df = pd.DataFrame(colums=['col_1', 'col_2'])
 df = pd.DataFrame(np.array([[1,2], [3,4]]), colums=['col_1','col_2'], index=['a','b'])
 df = pd.DataFrame({'col_1':[1,2],'col_2':[3,4]}, index=['a','b']) # 不填index则默认为下标，从0开始
 ```
+
 | |col_1|col_2|
 |-|-----|-----|
 |a|1    |3    | 
@@ -50,6 +51,7 @@ sr1 = pd.Series([1], index=['a'])
 sr2 = pd.Series([1,2], index=['a','b'])
 df = pd.DataFrame({'col_1':sr1,'col_2':sr2})
 ```
+
 | |col_1|col_2|
 |-|-----|-----|
 |a|1    |1    | 
@@ -394,6 +396,7 @@ df.plot(x='col_x', y='col_y', kind='scatter') # col_x-col_y 散点图
 ## 1.9 Query
 ### 1.9.1 Group by
 products:
+
 | |Category |Price |Name  |Amount|
 |-|---------|------|------|------|
 |0|Drink    |4     |Cola  |100   |
@@ -433,6 +436,7 @@ grouping.indices # 获取各个组所包含的商品 Index
 # 获取某个组所有商品的信息（不包含 `Category` 列）
 grouping.get_group('Drink')
 ```
+
 | |Price |Name  |Amount|
 |-|------|------|------|
 |0|4     |Cola  |100   |
@@ -447,6 +451,7 @@ grouping['Amount'].sum()
 # 所有数值类型列的统计值（例如 Name 列就不会被返回）
 grouping.sum() # mean() min() max()
 ```
+
 |     |Price |Amount|
 |-----|------|------|
 |Drink|7     |300   |
@@ -594,6 +599,7 @@ products:
 |1|Snack    |10    |Nut   |50    |
 |2|Drink    |3     |Fenta |200   |
 |3|Drink    |2     |Water |500   |
+
 ```py
 # df.rolling(window_length).col_of_interest.apply(func)
 products.rolling(2).Price.apply(np.mean)
