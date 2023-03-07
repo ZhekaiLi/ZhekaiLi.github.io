@@ -6,6 +6,9 @@ description: some word here
 keywords: keyword1, keyword2
 ---
 
+$$\LaTeX$$
+
+## 标记
 <span style="background-color: yellow; color: black;">高亮</span>
 
 **<font color=blue>蓝色</font>**
@@ -14,8 +17,7 @@ keywords: keyword1, keyword2
 
 ~~删除线~~
 
-
----------------------------------------
+## 代码
 <details><summary><span style="background-color: lightblue; color: black;">点击查看代码</span></summary>
 
 ```python
@@ -23,15 +25,25 @@ print("Hello, World!")
 ```
 </details>
 
----------------------------------------
 ```py{.line-numbers}
 显示代码行数
 ```
 
----------------------------------------
+## Mermaid
+```mermaid
+graph LR;
+C((Cycle))
+S[Squre]
+RS(Round Squre)
+
+C-->S
+
+linkStyle 0,1,2,3,4,5 stroke:green
+```
 
 
-插入图片的两种方式
+## 图片
+插入图片的三种方式
 (1)
 <center>
     <img src="/images/2022-10/Snipaste_2022-10-01_10-24-37.png" width="50%"> <br>
@@ -48,7 +60,8 @@ print("Hello, World!")
 <center><div style="color: #808080;">Figure Right</div></td>
 </tr></table>
 
-$$\LaTeX$$
+
+## 数学符号 (公式)
 > **公式**
 
 - 任意 $\forall$ 存在 $\exists$
