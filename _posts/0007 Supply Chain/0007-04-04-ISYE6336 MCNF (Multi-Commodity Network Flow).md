@@ -12,7 +12,12 @@ mathjax: true
 # ISYE6336 - MCNF
 </center>
 
-MCNF: Multi-commodity Network Flow Optimization
+**Service Network Design**
+
+
+**MCNF**: Multi-commodity/customer Network Flow Optimization
+
+**Container-level consolidation**: shipments for multiple customers are consolidated into the same containers
 
 A directed network:
 $$G=(N,A)$$
@@ -20,7 +25,7 @@ $$G=(N,A)$$
 - $N$: nodes (decision points)
 - $A$: arcs (allow representation of decisions)
 
-**multiple "commodity" extension**: we may manage multiple TYPES of flow 
+**Multiple "commodity" extension**: we may manage multiple TYPES of flow 
 $\to$ <u>different types of flow use the same rescources!</u>
 $\to$ Decision varaibles:
 - $x_a^k$: decision flow for commodity $k$ on arc $a$
@@ -89,7 +94,7 @@ linkStyle 0,1,2,3,4,5 stroke:green
    - arc capacity for $a$: $u_a$ such that $x_a=\sum_{k\in K}x_a^k\leq u_a$
 
 
-## MC-MCF Fomulations
+## MC-MCF: Multi-commodity Min Cost Flow
 ### TYPE I: Linear Programming Version
 - **(I.a)** $c_a^k=c_a$ for common cost variant
 - **(I.b)** $c_a^k$ for commodity specific costs
