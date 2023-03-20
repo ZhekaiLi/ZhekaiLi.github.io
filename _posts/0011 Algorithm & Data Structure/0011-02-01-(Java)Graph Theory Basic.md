@@ -8,10 +8,15 @@ mathjax: true
 topmost: true
 ---
 
+<center>
+
+# Graph and Network Basic
+</center>
+
 <span style="background-color: yellow; color: black;">使用 Java 实现，Github 代码仓：[https://github.com/ZhekaiLi/Code/tree/main/Graph/src](https://github.com/ZhekaiLi/Code/tree/main/Graph/src)</span>
 
-# 1. 图的分类
-## 1.1 无向图 vs 有向图
+# 1. Classifications
+## 1.1 Undirected vs Directed
 > **无向图(undirected graph)** $G$ 是由一个非空有限集合$V(G)$ 和 $V(G)$ 中某些元素的无序对集合 $E(G)$ 构成的二元组，记为 
 $$G = (V (G),E(G))$$
 
@@ -26,14 +31,8 @@ where, <br> $A = \{a_1, a_2, ..., a_m\}$ 称为**弧集(arc set)**。对于 $a_k
 
 <font color='red'>以下若未指明“有向图”三字，“图”字皆指无向图。</font>
 
-## 1.2 (无/有)权图、环图
-故名思意，(无/有)权图根据边是否有权重来区分
 
-同样，(无/有)环图根据图中是否存在环来区分，**环**定义为一条从一个节点出发并回到同一节点的**路径(path)**
-
-树是一种典型的无环图（树 = 连通无环图）
-
-## 1.3 完全图、二分图
+## 1.2 完全图、二分图
 
 每一对不同的顶点都有一条边相连的简单图称为**完全图(complete graph)**。$n$ 个顶点的完全图记为 $K_n$。
 
@@ -46,7 +45,7 @@ where, <br> $A = \{a_1, a_2, ..., a_m\}$ 称为**弧集(arc set)**。对于 $a_k
 
 ---
 
-# 2. 图的基本概念
+# 2. Basic Concepts
 
 > **简单图**
 <center>
@@ -79,7 +78,7 @@ $G$ 的**支撑子图**(spanning subgraph，又成生成子图)是指满足 $V(H
 
 ---
 
-# 3. 图的基本表示
+# 3. Representations of Graph
 用来描述图与网络的 5 种常用表示方法：**邻接矩阵表示法、关联矩阵表示法、弧表表示法、邻接表表示法和星形表示法**。
 
 在下面数据结构的讨论中，首先假设 $G = (V, A)$ 是一个简单有向图，$\vert V\vert=n,\vert A\vert= m$，并假设 $V$ 中的顶点用自然数 $1,2,...,n$ 表示或编号，$A$ 中的弧用自然数 $1,2,...,n$ 表示或编号。
@@ -165,7 +164,7 @@ c_{ij}&=\begin{cases}
 
 ---
 
-# 4. 图的深度优先遍历 DFS
+# 4. DFS (Deep-first Search)
 
 （关于树的前、中、后、层序遍历，有一篇博客总结的挺好：https://blog.csdn.net/zl6481033/article/details/81009388）
 先来看**树的深度优先遍历**（以前序遍历为例）
@@ -281,7 +280,7 @@ boolean dfs(int v)
 
 ---
  
-# 5. 图的广度优先遍历 BFS
+# 5. BFS (Breath-first Search)
 先来看**树的广度优先遍历**，下图展示了利用队列来进行树的BFS的大致过程
 
 <center>

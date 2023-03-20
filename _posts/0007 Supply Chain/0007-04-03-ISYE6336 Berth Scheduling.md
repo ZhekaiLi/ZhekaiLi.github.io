@@ -106,7 +106,9 @@ The first constraint is the key to avoid overlapping in **both time and space** 
 
 
 ## Headway and Flows
-<img src="/images/2023-03/Snipaste_2023-03-11_16-53-05.png" width="60%">
+<img src="/images/2023-03/Snipaste_2023-03-11_16-53-05.png" width="70%">
+
+- $\lambda$: average flow rate (production rate)
 
 To find the minimum frequency, choose the maximum shipment size, i.e. let $q=Q$
 

@@ -5,7 +5,6 @@ categories: Database
 description: Personal Notes
 keywords: Database
 mathjax: true
-topmost: true
 ---
 
 Reference: [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/)

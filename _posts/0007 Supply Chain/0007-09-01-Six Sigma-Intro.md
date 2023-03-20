@@ -7,21 +7,76 @@ keywords: SCE, Supply-Chain
 mathjax: true
 ---
 
+<center>
+
+# Six Sigma - Intro
+</center>
+
 # 1. Introduction
+The goal of Lean Six Sigma is to design or improve products and processes to do what they are supposed to do with very high reliability.
+
+*Lean Six Sigma is uniquely driven by a close understanding of customer needs, disciplined use of facts, data, and statistical analysis, and diligent attention to managing, improving, and reinventing business processes.* --- The Six Sigma Way
+
 ## 1.1 Overview
+<center><img src="/images/2022-11/Snipaste_2022-12-02_16-22-23.png" width="70%"></center>
+
 > **Six Sigma**
-- a quality management philosophy and a methodology that focuses on reducing variation, measure defects, and improving the quality of products, processes and services
-- in summary, **it's a project methodology for improvement**
+- a quality management philosophy and a methodology that focuses on **reducing variability**, measure defects, and improving the **quality** and **reliability** of products, processes and services
+- **it's a project methodology for improvement**
 
 > **Lean**
 - to maximize customer value while minimizing waste
 
-<img src="/images/2022-11/Snipaste_2022-12-02_16-22-23.png" width="70%">
+Lean Methods were developed to attack the waste associated with the **flow** of material and information - the **velocity, or speed** of a process from beginning to end. Lean consists of five key principles:
+- Identify customers & specify value
+- Map the value stream
+- Improve flow
+- Respond to customer pull, or demand
+- Pursue perfection
 
-## 1.2 Purpose of Six Sigma $6\sigma$
-Six Sigma represents a stretch goal of six std from the process mean to the specification limits when the process is centered, but also allowing for a $1.5\sigma$ shift toward either specification limit. This represents a quality level of 3.4 defects per million
 
-<img src="/images/2022-11/Snipaste_2022-12-02_16-27-47.png" width="60%">
+
+## 1.2 The Cost of Poor Quality
+
+> **1:10:100 Rule**: 
+> the cost of poor quality increases exponentially as a product or service moves along the value stream from creation to consumption.
+> <img src="/images/2023-03/Snipaste_2023-03-18_14-21-20.png" width="60%">
+
+**Cost of Poor Quality** can be broken down into four categories:
+- **Prevention Cost**: The cost of investing in doing it right the first time. Training, error-proofing, pre-production pilots, design for capability (DFSS - Design For Six Sigma).
+- **Appraisal Cost** (评价): The cost of testing and inspection to detect defects internally.
+- **Internal Failure Cost**: The cost of detecting and correcting defects internally: Scrap, rework, and "Seconds" sold off-price.
+- **External Failure Cost**: The cost of defects being detected by customers, including warranties, replacements, allowances, product liability, customer dissatisfaction and lost revenue.
+
+
+## 1.3 The 5 Lean Principles
+
+(1) Identify Cusotmers and Specify Value
+
+(2) Map the Value Stream
+Identify and map the value stream
+
+A **value stream** is the complete sequence of activities an organization performs in order to produce and deliver its end product or service.
+
+A **value stream map** is 
+
+(3) Create Flow
+Create flow by eliminating waste and achieving a lot size of one
+
+(4) Respond to Pull
+
+(5) Pursue Perfection
+
+
+<img src="/images/2023-03/.png" width="70%">
+<img src="/images/2023-03/.png" width="70%">
+<img src="/images/2023-03/.png" width="70%">
+<img src="/images/2023-03/.png" width="70%">
+<img src="/images/2023-03/.png" width="70%">
+<img src="/images/2023-03/.png" width="70%">
+<img src="/images/2023-03/.png" width="70%">
+
+
 
 ---
 

@@ -28,10 +28,12 @@ topmost: true
 
 # 1. Introduction: 从高斯分布到高斯过程
 ## 1.1 多元高斯分布
+
 $$\tag{1} p(\bf{x})=\prod_{i=1}^n p(x_i)=\frac{1}{(2\pi)^{\frac{n}{2}}\sigma_1...\sigma_n}\exp(-\frac{1}{2}[\frac{(x_1-\mu_1)^2}{\sigma_1^2}...\frac{(x_n-\mu_n)^2}{\sigma_2^2}])$$
-进一步的，令 
-(1) $\bf{x-\mu}=[x_1-\mu_1,...,x_n-\mu_n]^T$
-(2) $\bf\Sigma=\begin{bmatrix}
+
+进一步的，令:
+- $\bf{x-\mu}=[x_1-\mu_1,...,x_n-\mu_n]^T$
+- $\bf\Sigma=\begin{bmatrix}
    \sigma_1^2 & 0 & ... & 0 \newline
    0 & \sigma_2^2 & ... & 0 \newline
    ... & ... & ... & .... \newline
@@ -47,13 +49,14 @@ $$\tag{2} p(\bf{x})=(2\pi)^{-\frac{n}{2}}\vert \bf\Sigma\vert ^{-\frac{1}{2}}\ex
 ## 1.2 高斯过程 Gaussain Process 
 高斯过程是定义在连续域上的无限多个高维随机变量所组成的随机过程，可以看做是一个无限维的高斯分布。在作者的理解中，<span style="background-color: yellow; color: black;">通过高斯过程，我们能够将**离散的点分布**转化为**函数的分布**</span>。（当然，这些离散点本身需要满足高斯分布）
 
-借用[参考资料 4](https://zhuanlan.zhihu.com/p/75589452) 中的插图，高斯过程在下图中的体现就是将红色的离散点变成蓝色的函数曲线（<span style="background-color: yellow; color: black;">该曲线不仅能够储存原离散数据集的部分特征，还能用于预测</span>）：
+借用[参考资料 4](https://zhuanlan.zhihu.com/p/75589452) 中的插图，高斯过程在下图中的体现就是将红色的离散点变成蓝色的函数曲线 (<span style="background-color: yellow; color: black;">该曲线不仅能够储存原离散数据集的部分特征，还能用于预测</span>):
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200929192115456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcyODEzOA==,size_16,color_FFFFFF,t_70#pic_center)
 
 
 ### GP 的数学定义
 
-对于随机变量 $\{\zeta_t\}_{t\in T}$ （$T$ 可以是连续的时间或空间），如果对于任意 $n\in \N^+,\;\;t_1,...,t_n\to \zeta_1,...,\zeta_n$, 都有 $\bf{\zeta}=(\zeta_1,...,\zeta_n)^T \sim N(\bf{\mu},\bf{\Sigma})$, 那么 $\{\zeta_t\}_{t\in T}$ 就是一个高斯过程，记做 
+对于随机变量 $\{\zeta_t\}_{t\in T}$ （$T$ 可以是连续的时间或空间），如果对于任意 $n\in \N^+,\;\;t_1,...,t_n\to \zeta_1,...,\zeta_n$, 都有 $\bf{\zeta}=(\zeta_1,...,\zeta_n)^T \sim N(\bf{\mu},\bf{\Sigma})$, 那么 $\{\zeta_t\}_{t\in T}$ 就是一个高斯过程，记做
+
 $$\tag{3}\zeta_t\sim GP(m(t),\kappa(s,t))$$
 
 1. $m(t)=E[\zeta_t]$, mean function
@@ -61,35 +64,40 @@ $$\tag{3}\zeta_t\sim GP(m(t),\kappa(s,t))$$
 
 ## 1.3 高斯过程回归 Gaussian Process Regression
 1. weight-space view: 关注的是 $w$
+
 $$P(y^*\vert Data,X^*)=\int_wP(y^*\vert w,Data,X^*)P(w)dw$$
+
 2. function-space view: 关注的是 $f(x)$
+
 $$P(y^*\vert Data,X^*)=\int_wP(y^*\vert f,Data,X^*)P(f)df$$
 
 # 2. Weight-space view
 回顾贝叶斯线性回归（见[参考资料 2](https://blog.csdn.net/weixin_43728138/article/details/108377184)）
-1. Inference: 求后验 $P(w\vert Data)=N(w\vert \mu_w,\Sigma_w)$
-where, $\begin{cases}
-\mu_w=\sigma^{-2}A^{-1}X^TY \\
-\Sigma_w=A^{-1} \\
-A=\sigma^{-2}X^TX+\Sigma_P^{-1}
-\end{cases}$
-2. Prediction: $\text{Given }x^*$
-$P(f(x^*)\vert Data,x^*)=N((x^*)^T\mu_w,(x^*)^T\Sigma_wx^*) \\
-P(y^*\vert Data,x^*)=N((x^*)^T\mu_w,(x^*)^T\Sigma_wx^*+\sigma^2)$ 
+
+**(1) Inference**: 求后验 $P(w\vert Data)=N(w\vert \mu_w,\Sigma_w)$
+- $\mu_w=\sigma^{-2}A^{-1}X^TY$
+- $\Sigma_w=A^{-1}$
+- $A=\sigma^{-2}X^TX+\Sigma_P^{-1}$
+
+**(2) Prediction**: $\text{Given }x^*$
+- $P(f(x^*)\vert Data,x^*)=N((x^*)^T\mu_w,(x^*)^T\Sigma_wx^*)$
+- $P(y^*\vert Data,x^*)=N((x^*)^T\mu_w,(x^*)^T\Sigma_wx^*+\sigma^2)$ 
 
 但如果遇到的模型是非线性的，一般的做法可以是先做一个非线性转换 $z=\phi(x),\;\;x\in\R^p,\;\;z\in\R^q$，然后再使用贝叶斯线性回归（该非线性转换一般把数据由低维转换成高维）
 
 ## 2.1 Process
-考虑不存在噪音的情况：
+考虑不存在噪音的情况:
+
 $$f(x^*)\vert X,Y,x^*\sim N(x^*(\sigma^{-2}A^{-1}X^TY),(x^*)^TA^{-1}x^*)$$
+
 where, $A=\sigma^{-2}X^TX+\Sigma_P^{-1}$
 
 If $\phi:x\mapsto z,\;\;x\in\R^p,\;\;z=\phi(x)\in\R^q,\;\;q>p$
 
 Define 
-$\Phi=\phi(X)=[(\phi(x_1),...,\phi(x_N))^T]_{N\times q}$
-$X=[(x_1,...,x_N)^T]_{N\times p}$
-$Y=(y_1,...,y_N)^T$
+- $\Phi=\phi(X)=[(\phi(x_1),...,\phi(x_N))^T]_{N\times q}$
+- $X=[(x_1,...,x_N)^T]_{N\times p}$
+- $Y=(y_1,...,y_N)^T$
 
 then $f(x)=\phi(x)^Tw$, let $\phi_*$  denotes $\phi(x^*)$, finally we have
 
@@ -98,6 +106,7 @@ $$f(x^*)\vert X,Y,x^*\sim N(\phi_*(\sigma^{-2}A^{-1}\Phi^TY),\phi_*^TA^{-1}\phi_
 where, $A=\sigma^{-2}\Phi^T\Phi+\Sigma_P^{-1}$
 
 **如何计算 $A^{-1}$? 使用：Woodbury formula**
+
 $$(A+UCV)^{-1}=A^{-1}-A^{-1}U(C^{-1}+VA^{-1}U)^{-1}VA^{-1}$$
 
 由此可得,
@@ -130,6 +139,7 @@ Bayesian Linear Regression + Kernel trick (Non-linear Transformation, innner pro
 对于随机变量 $\{\zeta_t\}_{t\in T},\;\;T:\text{continuous time/ space}$
 
 如果对于任意 $\;\forall\; n\in \N^+$, 都存在映射 $t_1,...,t_n\to \zeta_1,...,\zeta_n$ such that $\bf{\zeta}=(\zeta_1,...,\zeta_n)^T \sim N(\bf{\mu},\bf{\Sigma})$, 那么就把 $\{\zeta_t\}_{t\in T}$ 记为高斯过程, 即
+
 $$\zeta_t\sim GP(m(t),\kappa(t,s))$$
 
 
@@ -148,6 +158,7 @@ $\begin{cases}
 
 # 4. Function-space view
 假设样本集 $\{f(x)\}$ 满足
+
 $$\{f(x)\}_{x\in \R^p}\sim GP(m(x),\kappa(x,x'))$$
 
 where,
@@ -164,7 +175,6 @@ Y=f(X)+\varepsilon \sim N(\mu(X),\kappa(X,X)+\sigma ^2I)$$
 
 ## 4.2 Prediiction
 $\text{Given}\;X^*=(x_1^*,...,x_M^*)^T, \text{calculate}\;Y^*=f(X^*)+\varepsilon$
-
 
 $$\begin{pmatrix}
    Y \\
