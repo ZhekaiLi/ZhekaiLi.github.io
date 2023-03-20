@@ -207,10 +207,11 @@ $$\text{If}\;X=\begin{pmatrix}
 \text{then we have }X_b\vert X_a\sim N(\mu_{b\vert a},\Sigma_{b\vert a})$$
 
 where,
-(1) $\mu_{b\vert a}=\Sigma_{ba}\Sigma_{aa}^{-1}(X_a-\mu_a)+\mu_b$
-(2) $\Sigma_{b\vert a}=\Sigma_{bb}-\Sigma_{ba}\Sigma_{aa}^{-1}\Sigma_{ab}$
+1. $\mu_{b\vert a}=\Sigma_{ba}\Sigma_{aa}^{-1}(X_a-\mu_a)+\mu_b$
+2. $\Sigma_{b\vert a}=\Sigma_{bb}-\Sigma_{ba}\Sigma_{aa}^{-1}\Sigma_{ab}$
 
 根据该公式可得
+
 $$P(f(X^*)\vert Y,X,X^*)=P(f(X^*)\vert Y)\sim N(\mu^*,\Sigma^*)$$
 
 where,
@@ -218,6 +219,7 @@ where,
 2. $\Sigma^*=\kappa(X^*,X^*)-\kappa(X^*,X)(\kappa(X,X)+\sigma^2I)^{-1}\kappa(X,X^*)$
 
 因此，
+
 $$P(y^*\vert Y,X,X^*)\sim N(\mu^*,\Sigma^*+\sigma^2I)$$
 
 # 5. Example in code
