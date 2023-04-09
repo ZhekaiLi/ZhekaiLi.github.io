@@ -198,7 +198,7 @@ $$\begin{pmatrix}n \\ k\end{pmatrix}=C_n^k=C(n,k)=\frac{n!}{k!(n-k)!}$$
 
 (6) $\gamma=\frac{E[(x-\mu_X)^3]}{\sigma^3}=\frac{1-2p}{\sqrt{np(1-p)}}$
 
-## 3.3 Poisson
+## 3.3 Poisson 泊松分布
 当一个随机事件，例如来到某公共汽车站的乘客、显微镜下某区域中的白血球等，以固定的平均瞬时速率 $\nu$（或称密度）随机且独立地出现时，那么这个事件在单位时间（面积或体积）内出现的次数或个数就近似地服从泊松分布 $P(x)$
 
 $$P(X=x)=\frac{\nu^x}{x!}\exp(-\nu)$$
@@ -219,7 +219,9 @@ where $\nu>0, x=0,1,2,...$
 
 
 
-## 3.4 Exponential
+## 3.4 Exponential 指数分布
+表示独立随机事件发生的时间间隔的分布
+
 <center>
 <img src="/images/2022-09/Snipaste_2022-09-17_14-44-01.png" width="43%"> <img src="/images/2022-09/Snipaste_2022-09-17_14-44-27.png" width="43%">
 </center>
