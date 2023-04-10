@@ -13,6 +13,14 @@ mathjax: true
 
 </center>
 
+
+
+
+
+
+
+
+
 Three primary enemies of factory (or supply chain or organizational):
 - Complexity
 - Variability
