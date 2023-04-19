@@ -31,16 +31,89 @@ To answer this question, we must first generate the relationships(between cycle 
 - $y-$axis shows the resulting average cycle time
 - The three curves show the relationship for the cases of no overtime, 4 and 8 hours of overtime per week
 
-<img src="/images/2023-03/Snipaste_2023-04-06_13-10-36.png"  width="70%">
+<img src="/images/2023-03/Snipaste_2023-04-06_13-10-36.png"  width="60%">
 
 The curve show that if we insist on no more than 1 week for the average cycle time with no overtime, the best we can do is 2,600 units per week. If we insist on an average cycle time of less than 1 week and 3,000 units per week, we will need an additional 4 hours per week of overtime.
 
 ## 6.2 Formal Roots
 ### 6.2.1 “Formal Cause” of Manufacturing Systems
 
-# 8. Variability
-## 8.5 Flow Variability
+# 7. Basic Factory Dynamics
 
+## 7.3 Simple Relationships
+### 7.3.1 Best-Case Performance
+**Law (Little's Law)**:
+
+$$\text{WIP} = \text{TH} \times \text{CT}$$
+
+where $\text{WIP}$ (work in process), $\text{TH}$ (throughput), $\text{CT}$ (cycle time)
+
+**Law (Best-Case Performance)**:
+
+The <u>minimum cycle time</u> for a give WIP level $w$ is given by:
+
+$$\text{CT}_{\text{best}} = \begin{cases}
+T_0 & \text{if } w\leq W_0 \\
+w/r_b & \text{otherwise}
+\end{cases}$$
+
+The <u>maximum throughput</u> for a given WIP level $w$ is given by:
+
+$$\text{TH}_{\text{best}} = \begin{cases}
+r_b & \text{if } w\leq W_0 \\
+w/T_0 & \text{otherwise}
+\end{cases}$$
+
+where
+- $T_0$ min cycle time
+- $r_b$ max throughput
+- $W_0=T_0r_b$ a critial WIP
+
+<center><img src="/images/2023-03/Snipaste_2023-04-15_10-37-50.png"  width="70%"></center>
+
+### 7.3.2 Worst-Case Performance
+
+$$\text{CT}_{\text{worst}} = wT_0$$
+
+$$\text{TH}_{\text{worst}} = \frac{1}{T_0}$$
+
+## 7.3.3 
+需要继续看
+
+# 8. Variability
+## 8.1 - 8.2
+没有什么实质内容，略
+
+## 8.3 Process Time Variability
+**cov (CV)**: If we let $t$ denote the mean (we use t because the primary random variables we are considering here are times) and $\sigma$ denote the variance:
+
+$$c=\frac{\sigma}{t}$$
+
+<center><img src="/images/2023-03/Snipaste_2023-04-15_10-52-06.png"  width="85%"></center>
+
+**sqared cov (SCV)**:
+
+$$c^2=\frac{\sigma^2}{t^2}$$
+
+## 8.4 Causes of Variability
+The most prevalent sources of variability in manufacturing environments are:
+- “Natural” variability, which includes minor fluctuations in process time due to differences in operators, machines, and material.
+- Random outages.
+- Setups.
+- Operator availability.
+- Rework
+
+### 8.4.1 Natural Variability
+Natural variability is the variability inherent in **natural process time**, which <u>excludes</u> random downtimes, setups, or any other external influences.
+
+$$c_0 = \frac{\sigma_0}{t_0}$$
+
+In most systems, natural process times are LV (low variability) and so $c_0 < 0.75$
+
+### 8.4.2 Variability from Preemptive Outages (Breakdowns)
+
+
+## 8.5 Flow Variability
 All the above discussion focused solely on process time variability at <u>individual workstations</u>. But variability at one station can <u>affect</u> the behavior of <u>other stations in a line</u> by means of another type of variability, which we call **flow variability**
 
 ### 8.5.1 Characterizing Variability in Flows

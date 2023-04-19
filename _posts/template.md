@@ -11,7 +11,7 @@ $$\LaTeX$$
 ## 标记
 <span style="background-color: yellow; color: black;">高亮</span>
 
-**<font color=blue>蓝色</font>**
+**<font color=blue>蓝色加粗</font>**
 
 <u>下划线</u>
 
