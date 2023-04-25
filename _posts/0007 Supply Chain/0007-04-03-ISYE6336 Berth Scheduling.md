@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ISYE6336 Ocean Freight
+title: ISYE6336 Berth Scheduling
 categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain, ISYE6336

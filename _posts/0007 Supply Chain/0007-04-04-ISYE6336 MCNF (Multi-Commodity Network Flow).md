@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ISYE6336 Ocean Freight
+title: ISYE6336 MCNF (Multi-Commodity Network Flow)
 categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain, ISYE6336
@@ -94,7 +94,7 @@ linkStyle 0,1,2,3,4,5 stroke:green
    - arc capacity for $a$: $u_a$ such that $x_a=\sum_{k\in K}x_a^k\leq u_a$
 
 
-## MC-MCF: Multi-commodity Min Cost Flow
+## MCMCF: Multi-commodity Min Cost Flow
 ### TYPE I: Linear Programming Version
 - **(I.a)** $c_a^k=c_a$ for common cost variant
 - **(I.b)** $c_a^k$ for commodity specific costs
@@ -115,6 +115,8 @@ $x_a^k$ is integer valued, and all the other things are same to (I.a)
 Theorem: 
 1. Integer single-commodity min cost flow is efficiently solvable in poly time using LP when $b_i$ are integers
 2. Integer multi-commodity min cost flow in general is NP-hard (as hard as TSP)
+
+
 
 
 

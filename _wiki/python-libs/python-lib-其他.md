@@ -94,8 +94,10 @@ folium.Map(location=None,
 ### 2.1 folium.CircleMaker 画圆
 
 <font color=red>以下代码可能存在一些问题: 本人在使用过程中发现在 for 循环中使用以下添加代码可能导致只能画出一个标记点, 尚未查明错误原因, 但将 `popup=, fill=, fill_color` 这三行删去之后可以正常运行</font>
+
 ```py
-folium.CircleMaker(location=None,
+folium.CircleMaker(
+    location=None,
     radius=5, # 标记圆圈的半径
     # 标记圆圈的名字，在点击后出现 
     # 其中 re.sub() 利用正则表达式避免乱码
@@ -105,11 +107,13 @@ folium.CircleMaker(location=None,
     fill_color='#1787FE'   
 ).add_to(m)
 ```
+
 效果如下 (注意! 不要忘了在函数结尾括号外添加 `.add_to(m)`, 否则将无法显示标记)
 ![pic3](/images/2020-12/Snipaste_2020-12-07_18-49-25.jpg)
 
 # tqdm
 这是常用于显示程序运行进度的包, 用在 for 循环语句非常好用, 例如
+
 ```py
 from tqdm import tqdm
 
@@ -127,6 +131,7 @@ for k in tqdm(range(2, 100)):
 print('K={}'.format(best_k))
 print('Silhouette Score: {}'.format(best_score)) 
 ```
+
 这段代码用于在 [2, 99] 区间内寻找使得 KMeans 拟合效果最好的 k 值. 运行效果如下
 ![pic](/images/2020-12/GIF%202020-12-15%2018-24-56.gif)
 

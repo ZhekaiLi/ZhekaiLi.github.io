@@ -253,6 +253,7 @@ f  &= \text{factory}
 
 <center>
 
+
 ### Machine Performance
 </center>
 
@@ -431,10 +432,18 @@ $$\text{CT}_{f} = 6\times\frac{5}{60}+\sum_{p=1}^{6} \text{CT}_{ps}(p) = 0.5 + \
 
 $$\text{WIP}_{f} = \text{TH}_{f}\times\text{CT}_{f} = 1.5\times 3.5972 = 5.9358\text{ jobs}$$
 
-在这个例子中, 我们通过从 initial workstatio-centric model 到 decoupled workstation-centric model 的转变, 把 $\text{DoR}$ 降低到了 $1$. 尽管对于绝大多数 real factories, 我们无法实现 $\text{DoR}=1$, 但是我们仍可以通过尽可能的降低 $\text{DoR}$, 来简化计算复杂度
 
+
+在这个例子中, 我们通过从 initial workstatio-centric model 到 decoupled workstation-centric model 的转变, 把 $\text{DoR}$ 降低到了 $1$。尽管对于绝大多数 real factories, 我们无法实现 $\text{DoR}=1$, 但是我们仍可以通过尽可能的降低 $\text{DoR}$ 来简化问题
+
+同时也要注意, 这里最后的 cycle time 是及其理想的, 因为我们假设一个 product 可以被一个 workstation 中的多台 machines **<font color='blue'>同时处理</font>**, 遑论我们还没有考虑 variablity 的巨大影响
+
+[相关代码: Chp03-A Simple Cycle Time Simulation](../../_files/Code/Book-Optimizing%20Factory%20Performance/Chp03-A%20Simple%20Cycle%20Time%20Simulation.py)
 
 # 4. Running a Factory: In Two Dimensions
+
+
+
 
 
 
@@ -447,14 +456,35 @@ $$\text{WIP}_{f} = \text{TH}_{f}\times\text{CT}_{f} = 1.5\times 3.5972 = 5.9358\
 
 
 # 5. Variability
+## 5.1 Measuring Variability
 
-- $C_{AR}$: COV of Arrivals
-- $C_{PT}$: COV of Raw Process Times
-- $C_{EPT}$: COV of Effective Process Times
+$CoV=\sigma/\mu$: coefficient of variation
 
+$C_{AR}$: cov of ***Arrivals*** (interarrival times)
+- In general, $C_{AR}$ of batch arrivals is larger than that of continuous arrivals (因为 batch 内部的 interarrival time = 0, 这会导致 $\mu$ 变得很小, 因此 cov 变得很大)
 
+$C_{PT}$: cov of ***Raw Process Times***
+- $C_{PT}(ps)$: ... of a given process step
 
+<center>
 
+#### CoV of Effective Process Times
+</center>
+
+$$C^2_{EPT}(ps) = C^2_0 + A(1-A)\frac{MTTR}{PT} + C^2_{DE}A(1-A)\frac{MTTR}{PT}$$
+
+- $C_0$: inherent variability of the process times of the machines
+- $C_{DE}$: cov of blocked and down events
+- $A$: average availability of the machines
+- $MTTR$: mean time to recover from blocked and down events
+- $PT$: average raw process time of the machines
+
+Example:
+For process step 7:Known, (1) mean time between down events $MTBE=90$ (2) $MTTR=10$ (3) $C_0=C_{PT}(7)=0.042$ (4) $C_{DE}(7)=1.5$ (5) $PT(7)=1$ hour
+
+Then $A=90/(90+10)=0.9$, and finally:
+
+$$C^2_{EPT}(7) = 0.042^2 + 0.9(1-0.9)\frac{10}{1} + 1.5^2\times0.9(1-0.9)\frac{10}{1} = 2.93$$
 
 <center><img src="/images/2023-03/.png" width="80%"></center>
 <center><img src="/images/2023-03/.png" width="80%"></center>

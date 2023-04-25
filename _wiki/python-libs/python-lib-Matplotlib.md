@@ -60,8 +60,8 @@ ax.set_title("chart name")
 ```
 
 ```py
-ax.plot(..., lable="line1")
-ax.plot(..., lable="line2")
+ax.plot(..., label="line1")
+ax.plot(..., label="line2")
 ax.legend()
 ```
 
