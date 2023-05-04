@@ -63,7 +63,7 @@ $$\tag{2}x_{kl}+x_{lk}\geq 1$$
 $$\tag{3,4,5}t_k\geq a_k, \quad c_k=t_k+p_k, \quad x_{kl}\in\{0,1\}$$
 
 
-## 2. Linear Berth Scheduling
+## 3. Linear Berth Scheduling
 <img src="/images/2023-03/Snipaste_2023-03-11_11-43-58.png" width="80%">
 
 **Primary scheduling variable** $x_{kl}, y_{kl}\in \{0,1\}$
@@ -83,7 +83,7 @@ $$\min \sum_{k\in V}c_k$$
 
 The first constraint is the key to avoid overlapping in **both time and space** (we have no overlap or only one overlap)
 
-## 3. Multiple Berths Scheduling
+## 4. Multiple Berths Scheduling
 
 现在不仅需要分配时间 $t_k$，还需要把 vessels 分配给每个 berth。理论上我们需要引入变量 $\beta_k\in \{1,2,3,...\}$ 来表示 vessel $k$ 属于第几个 berth。
 
@@ -102,94 +102,24 @@ The first constraint is the key to avoid overlapping in **both time and space** 
 - $\sum_k w_k\leq \Beta$ (constraint of the number of berths)
 
 
-
-
-
-## Headway and Flows
+## 5. Headway and Flows
 <img src="/images/2023-03/Snipaste_2023-03-11_16-53-05.png" width="70%">
 
 - $\lambda$: average flow rate (production rate)
 
 To find the minimum frequency, choose the maximum shipment size, i.e. let $q=Q$
 
-## Cyclic dispatch fleet sizing
+### 5.1 Cyclic dispatch fleet sizing
 <img src="/images/2023-03/Snipaste_2023-03-11_19-18-58.png" width="80%">
 
 - $H$: headway
 - $\Delta_C$: time need to finish a cycle (from departure to ready-to-departure)
 - $F$: fleet size (number of vessels needed)
 
-### Waiting time
+### 5.2 Waiting time
 In the case above, every vessel wait $7.5-6=1.5$ days before it's reused
 
-To decrease the waiting time (improve the utility), we could decrease the headway to $H=2$, so that the wating time is then zero
-
-
-# Ocean Container Repositioning Modeling
-
-```mermaid
-graph LR;
-H[HK]
-S[SHA]
-B[BUSAN]
-C[SEATTLE]
-L[LA]
-
-H-->S-->B-->C-->L-->H
-```
-
-Model Basis
-- $\lambda_{od}$: loaded demand flow from node $o$ to $d$
-- $b_i$: empty demand of node $i$ ("+" means provide empty, "-" means need empty)
-
-$$b_i=\sum_{o\in N}\lambda_{oi}-\sum_{d\in N}\lambda_{id}$$
-
-- $Qf$: max flow capacity, where ($Q$: vessel capacity, $f$: frequency)
-- $y_{ij}$: loaded flow on link $(i,j)$
-- $u_{ij}$: empaty capacity on link $(i,j)$
-
-$$u_{ij}=Qf-y_{ij}$$
-
-## MCNF: Minimum Cost Network Flow
-For a network model $G=(N,A)$, instead of using $(i,j)\in A$ to represent a arc/link, we apply $a\in A$ to represent
-
-这是为了避免两条起点终点相同但是路径不同的路线共用一个名字
-
-**Decision Variables**: $x_a$
-
-**Objective**: minimize total cost
-$$\min \sum_{a\in A}c_ax_a$$
-
-**Constraints**:
-- $\sum_{i\in N}b_i=0$ (Node net supply)
-- $l_a\leq x_a\leq u_a$ (Feasible flow bounds)
-- $b_i=\sum_{a\in\delta^+(i)}x_a-\sum_{a\in\delta^-(i)}x_a$ (Feasible flow balance: net supply = demand-out - demand-in)
-<img src="/images/2023-03/Snipaste_2023-03-11_19-59-38.png" width="60%">
-
-### Multiple Service
-```mermaid
-graph LR;
-A(A)
-B(B)
-C(C)
-D(D)
-
-A-->B
-B-->C
-C-->A
-D-..->C
-C-..->B
-B-..->D
-```
-
-## MCMCF: Multi-commodity Minimum Cost Flow
-
-
-
-<img src="/images/2023-03/.png" width="60%">
-<img src="/images/2023-03/.png" width="60%">
-<img src="/images/2023-03/.png" width="60%">
-<img src="/images/2023-03/.png" width="60%">
+To decrease the waiting time (improve the utility), we could decrease the headway to $H=2$, so that the wating time is then zero.
 
 
 

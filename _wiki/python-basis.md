@@ -15,7 +15,7 @@ mermaid: true
 </center>
 
 
-# 1. Python 的数据储存方式
+## 1. 数据储存方式
 > **Reference - Stack Memory 栈**（特点是后进先出，空间有限）
 
 储存所有<span style="background-color: yellow; color: black;">对象名</span>。执行方式类似于执行嵌套函数:
@@ -26,7 +26,7 @@ mermaid: true
 
 储存所有创建的<span style="background-color: yellow; color: black;">对象本身</span>
 
-## 1.1 Illustration
+### 1.1 Illustration
 ```py
 obj1 = MyObject()
 id(obj1) >>> addr1
@@ -57,7 +57,7 @@ obj2 = MyObject()
 - 但是 `obj1 == obj2 >>> True` 因为他们指向的实例对象在属性值上相同
 <img src="/images/2022-08/Snipaste_2022-08-01_11-04-12.png" width="80%">
 
-## 1.2 Examples
+### 1.2 Examples
 **函数传参的本质是传递 object address**。例如，下例中 `F()` 的执行过程相当于把 obj 对应的地址赋给 input
 
 ```py
@@ -88,7 +88,7 @@ print(L) >>> [0,1]
 
 
 
-# 2. 文件操作
+## 2. 文件操作
 > **开关**
 ```py
 f = open(<文件名>, <打开模式>)
@@ -134,8 +134,8 @@ f.close()
 
 
 
-# 3. 函数
-## 3.1 常用函数
+## 3. 函数
+### 3.1 常用函数
 > **enumerate(List)**
 
 ```py
@@ -176,7 +176,7 @@ max(lst, key=lambda x: x[0]) >>> (4, 'e')
 ```
 
 
-## 3.2 lambda function
+### 3.2 lambda function
 
 ```py
 func = lambda [arg1, arg2, ...]: expression
@@ -194,8 +194,11 @@ power(2, 3) >>> 8
 
 
 
-# 4. Libraries
+## 4. Libraries
+
+### 4.1 pip
 可以在 pypi.org 上根据关键字搜索第三方库
+
 ```py
 pip install <库名>
 pip uninstall <库名>
@@ -206,7 +209,7 @@ pip search <库名> # 检索与该库相关的信息
 ```
 
 
-## 4.1 Famous Libraries
+### 4.2 Famous Libraries
 **1. 数据处理**
 - **数据分析**: numpy, pandas, scipy
 - **数据可视化**
@@ -232,7 +235,7 @@ pip search <库名> # 检索与该库相关的信息
 - **游戏开发**: PyGame (简单), Panda3D (3D渲染和游戏开发), cocos2d (专业级2D游戏)
 
 
-# 5. ipython (with Jupyter)
+## 5. ipython (with Jupyter)
 ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便的魔法命令：
 
 **1. 自动补全** `Tab`
@@ -254,7 +257,7 @@ ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便�
 **7. 使用前面代码块的输出结果** `_` 前面第一个, `__` 前面第二个, `_n` 序号为n的代码块：
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.35.57 PM.png" width="60%">
 
-## 5.1 为地址设置书签
+### 5.1 为地址设置书签
 设置书签 `%bookmark 书签名 地址`
 删除书签 `%bookmark -d 书签名`
 删除所有书签 `%bookmark -r`
@@ -263,7 +266,7 @@ ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便�
 
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.49.22 PM.png" width="90%">
 
-## 5.2 代码调试 
+#¥# 5.2 代码调试 
 1. 打开代码调试: `%pdb on`
 2. 之后如果运行错误代码，则会跳转到报错的前一行，并打开调试器，进入 pdb 调试模式，例如：
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.02.17 PM.png" width="80%">
@@ -279,27 +282,27 @@ p 变量名 # 查看变量值
 
 
 
-# 6. Time Complexity
-## 6.1 Big O
+## 6. Time Complexity
+### 6.1 Big O
 $O$ usually used as Time Complexity notation. Understood as **how run time or space requirements grow as the input size grows**
 
 Big O mathematically defined as the upper bound. 对于函数 $f(x)$，如果存在 $c\in\R$，使得 $f(x)<c\times g(x)$ 在其定义域内恒成立，则有 $f(x)\in O(g(x))$
 
 例如，$N^3+8N+9<2(N^3)\implies O(N^3)$
 
-## 6.2 Big Omega
+### 6.2 Big Omega
 $\Omega$ mathematically defined as the lower bound. 对于函数 $f(x)$，如果存在 $c\in\R$，使得 $f(x)>c\times g(x)$ 在其定义域内恒成立，则有 $f(x)\in\Omega(g(x))$
 
 例如，$N^3+8N+9>0.5(N^3)\implies\Omega(N^3)$
 
-## 6.3 Big Theta
+### 6.3 Big Theta
 $\theta$ uderstood as **the exact performance value of the algorithm**
 
 Big Theta mathematically defined as both of the upper and lower bound i.e. if $f(x)\in O(g(x))$ and $f(x)\in\Omega(g(x))$ then $f(x)=\theta(g(x))$
 
 <span style="background-color: yellow; color: black;">虽然已经有了这些准确的定义，但我们在平常使用时只用 Big O（相当于 Big Theta）</span>
 
-## 6.4 Three Time Complexities
+### 6.4 Three Time Complexities
 - Best Case
 - Worst Case
 - Average Case
@@ -310,7 +313,7 @@ Ex: 对于快速排序 Quick Sort
 - Average Case: $O(n\log n)$
 - Worst Case: $O(n^2)$
 
-## 6.5 How to Calculate
+### 6.5 Calculation
 - Program structure:
 How many times is basic calculation executed (e.g. for loop; while loop)
 - Master theorem:
@@ -319,7 +322,7 @@ usually useful in recursive deduction
 Permutation, Combination, etc.
 - Mermorize common algorithms & data structures
 
-### 6.5.1 Master theorem
+#### 6.5.1 Master theorem
 
 $$T(n) = aT(\frac{n}{b}) + c*n^d$$
 
@@ -358,7 +361,7 @@ B2 --> C2
 - Factorial: $T(n)=T(n-1)+c\implies O(n)$
 
 
-### 6.5.2 Permutation, Combination
+#### 6.5.2 Permutation, Combination
 **Permutation**: 从 n 个人中挑选 k 个排成一列，有多少种挑选及排列方式
 
 $$n\text{P}k=P(n,k)=\frac{n!}{(n-k)!}$$
@@ -370,28 +373,21 @@ $$n\text{C}k=C(n,k)=\frac{n!}{(n-k)!k!}$$
 $$C(n,k)=\frac{P(n,k)}{P(k,k)}$$
 
 
-### 6.5.3 Memorize common algorithms & data structures
+#### 6.5.3 Memorize common algorithms & data structures
 Binary search
 
-Insertion sort
-Binary sort
-Selection sort
-Quick sort
-Merge sort
+Insertion sort, Binary sort, Selection sort, Quick sort, Merge sort
 
-Binary tree
-Binary search tree
-Recursion
+Binary tree, Binary search tree, Recursion, Hashtable (dictionary)
 
-Hashtable (dictionary)
 www.bigocheatsheet.com
 
 
 
 
 
-# Others
-## .1 *星号的使用
+## Others
+### 1. *星号的使用
 星号的作用为 unpacking
 ```py
 values = (1, 2)
@@ -402,6 +398,13 @@ sum(*values) >>> 3
 a, *b = [1, 2, 3]
 a >>> 1
 b >>> [2, 3]
+```
+
+### 2. Eliminate Warnings
+
+```py
+import warnings
+warnings.filterwarnings('ignore')
 ```
 
 

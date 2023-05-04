@@ -28,7 +28,7 @@ Three primary enemies of factory (or supply chain or organizational):
 
 
 
-# C3: Terminology, Notation, and Definitions
+# 3. Terminology, Notation, and Definitions
 ## 3.1 Factory: Definition and Purpose
 
 A factory is a **processing network** through which jobs and information flow and within which events take place.
@@ -115,7 +115,7 @@ Why this model is also important:
 - Factories without reentrancy (i.e., DoR = 1)
 - Factories with reentrancy (i.e., DoR > 1)
 - Synchronous factories (e.g., every job flows through the factory at the same constant speed, such as bottles in a beverage bottling plant)
-- Asynchronous factories (e.g., each job—as in semi-conductor fabrication—may flow through the factory at different speeds and in addition may remain temporarily held in a queue)
+- Asynchronous factories (e.g., each job, as in semi-conductor fabrication, may flow through the factory at different speeds and in addition may remain temporarily held in a queue)
 - High-mix factories (e.g., those that process numerous job types)
 - Low-mix factories (e.g., those that process only a limited number of job types)
 - Low-volume factories (e.g., those that process only a relatively limited number of jobs per time period, such as aircraft manufacturers or research and development factories that produce only prototypes of a product)
@@ -176,10 +176,9 @@ occurs during the processing of a given job (or batch). The processing of the jo
 - Unanticipated supply outages and replenishment
 
 **<font color=blue>Nonpreemptive Events</font>**:
-one that occurs (or can be scheduled to occur) during a period in which the machine is not processing a job:
+occurs (or can be scheduled to occur) during a period in which the machine is not processing a job:
 - Scheduled maintenance
-- Unscheduled downs (i.e., those that happen to not occur
-during processing)
+- Unscheduled downs (i.e., those that happen to not occur during processing)
 - Inspections and engineering tests
 - Qualifications
 - Setups
@@ -193,6 +192,21 @@ during processing)
 </center>
 
 A given workstation consists of one or more machines, each dedicated to an identical or nearly identical processing function.
+
+
+<center>
+
+#### Machine States
+</center>
+
+- *Processing*: busy in support of job processing (i.e. those involving assembly or transformation, rework, transit, and inspection/test of a job)
+- *<span style="background-color: yellow; color: black;">Blocked</span>*: machine is up and running, 但是正在进行一项和  the support of an actual process step 无关的进程, 例如:
+  - those involving inspection/ test of the machine
+  - those involving qualification
+  - those involving setup
+  - those on hold waiting for the arrival of priority job
+- *Idle*: machine is up, running, and <u>qualified</u> but there are no jobs either in the machine or waiting for the machine
+- *Down*: machine is down due to either a sheduled or unscheduled event
 
 <center>
 
@@ -239,9 +253,9 @@ f  &= \text{factory}
 </center>
 
 - $\text{TH}_{ps}$ (jobs/ time): Process-step <u>average throughput rate</u>
-- $\text{SC}_{ps}$ (jobs/ time): Process-step <u>maximum sustainable (可持续的) capacity</u>
-- $\text{EPR}_{ps}$: Process-step <u>maximum theoretical capacity</u>
+- $\text{EPR}_{ps}$ (jobs/ time): Effective process rate or  <u>maximum theoretical capacity</u>
     the capacity of the machines supporting that step in the *absence of any variability*. (*upper bound* of the process-step capacity)
+- $\text{SC}_{ps}$ (jobs/ time): Process-step <u>maximum sustainable (可持续的) capacity</u>
 - $\text{CT}_{ps}$: Process-step <u>cycle time</u>
     the elapsed time between the arrival of the job at the queue (if one exists) in front of the process step and its departure on completion of the operation
 - $\text{AR}_{ps}$ (jobs/ time): <u>Arrival rate</u> at the process step
@@ -258,10 +272,10 @@ f  &= \text{factory}
 </center>
 
 - $\text{TH}_{m}$
+- $\text{EPR}_{m}$
 - $\text{SC}_{m}$
 - $\text{A}_{m}$: Availability
 - $\text{PR}_{m}$: Raw process rate
-- $\text{EPR}_{m}$: Effective process rate (maximum theoretical capacity)
 - $\text{B}_{m}$: Busy time rate
 - $\text{DT}_{m}$ (time per time): Machine downtime rate
 - $\rho_{m}$: Machine occupancy rate (utilization)
@@ -275,14 +289,14 @@ the <u>percenrage</u> of the time the machine is up, running, and qualified to p
 $$\text{A}_{m} = \frac{\text{MTBE}_{m}}{\text{MTBE}_{m}+\text{MTTR}_{m}}$$
 
 ***Machine Raw Process Rate***
-the maximum number of jobs per unit time the machine can process under ideal conditions.
+理想状态下机器的最大产能 (maximum number of jobs/ time)
 
 Using $\text{PT}_{m}$ to denote a machine's raw process time,
 
 $$\text{PT}_{m} = \frac{1}{\text{PR}_{m}}$$
 
 ***Machine Effective Process Rate***:
-machine maximum theoretical capacity
+machine maximum theoretical capacity (不考虑 variability)
 
 $$\text{EPR}_{m} = \text{A}_{m}\times\text{PR}_{m}$$
 
@@ -328,7 +342,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 
-需要注意的是: <span style="background-color: yellow; color: black;">$\text{SC}_{ws}$ sustainable capacity, 和 $\text{SC}_{m}$ 没有求和相等的关系, 收到多种其他情况的影响</span>
+需要注意的是: <span style="background-color: yellow; color: black;">$\text{SC}_{ws}$ sustainable capacity, 和 $\text{SC}_{m}$ 没有求和相等的关系, 而是受到多种其他情况的影响</span>
 
 <center>
 
@@ -434,7 +448,7 @@ $$\text{WIP}_{f} = \text{TH}_{f}\times\text{CT}_{f} = 1.5\times 3.5972 = 5.9358\
 
 
 
-在这个例子中, 我们通过从 initial workstatio-centric model 到 decoupled workstation-centric model 的转变, 把 $\text{DoR}$ 降低到了 $1$。尽管对于绝大多数 real factories, 我们无法实现 $\text{DoR}=1$, 但是我们仍可以通过尽可能的降低 $\text{DoR}$ 来简化问题
+在这个例子中, 我们通过从 initial workstatio-centric model 到 decoupled workstation-centric model 的转变, 把 $\text{DoR}$ 降低到了 $1$。尽管对于绝大多数 real factories, 我们无法实现降低 $\text{DoR}$ 到 $=1$ 这样的转变, 但是我们仍可以通过尽可能的减小 $\text{DoR}$ 来简化问题
 
 同时也要注意, 这里最后的 cycle time 是及其理想的, 因为我们假设一个 product 可以被一个 workstation 中的多台 machines **<font color='blue'>同时处理</font>**, 遑论我们还没有考虑 variablity 的巨大影响
 
@@ -471,22 +485,118 @@ $C_{PT}$: cov of ***Raw Process Times***
 #### CoV of Effective Process Times
 </center>
 
+For a nonreentrant ($\text{DoR} = 1$) workstation:
+
 $$C^2_{EPT}(ps) = C^2_0 + A(1-A)\frac{MTTR}{PT} + C^2_{DE}A(1-A)\frac{MTTR}{PT}$$
 
 - $C_0$: inherent variability of the process times of the machines
 - $C_{DE}$: cov of blocked and down events
 - $A$: average availability of the machines
 - $MTTR$: mean time to recover from blocked and down events
-- $PT$: average raw process time of the machines
+- $PT$: average raw process time of the machines (理想情况下, 完成一次 process 所需要的时间)
 
-Example:
-For process step 7:Known, (1) mean time between down events $MTBE=90$ (2) $MTTR=10$ (3) $C_0=C_{PT}(7)=0.042$ (4) $C_{DE}(7)=1.5$ (5) $PT(7)=1$ hour
+**Example**:
+For process step 7, we know
+- mean time between down events $MTBE=90$, $MTTR=10$
+- $C_0=C_{PT}(7)=0.042$ (approximated), $C_{DE}(7)=1.5$
+- $PT(7)=1$ hour
 
 Then $A=90/(90+10)=0.9$, and finally:
 
 $$C^2_{EPT}(7) = 0.042^2 + 0.9(1-0.9)\frac{10}{1} + 1.5^2\times0.9(1-0.9)\frac{10}{1} = 2.93$$
 
-<center><img src="/images/2023-03/.png" width="80%"></center>
+可以看到即使 the inherent variability of the process times of the machines ($C_0$) 很小, 但是由于 blocked and down events 及其 cov 很大 ($MTTR$, $C_{DE}$), 因而使得 effective process times 的 cov 变得很大
+
+不难发现, assume no blocked events, 如果我们能够 divide scheduled down events into more frequent, smaller segments, 那么在不改变 availability ($A$) 的情况下, 就能够通过减小 $MTTR/PT$ 来显著降低 cov of  effective process times
+
+## 5.2 Three Fundamental Equations
+
+<center>
+
+#### Equation 1: Little's Law
+</center>
+
+$$WIP = CT\times TH$$
+
+<center>
+
+#### Equation 2: Pollaczek Khintchine
+</center>
+
+P-K equation is used to predict the cycle time of a factory, a portion of a factory, or some individual workstation. However, here, we will focus on the cycle time at the process-step level
+
+Factors covered:
+- $CT_{ps}$: cycle time of the process step
+- $C_{AR}$: cov of arrivals at the process step (time between interarrivals)
+- $C_{EPT}$: cov of effective process times of the machines that support the process step
+- $EPR_{ps}$: effective process rate (maximum theoretical capacity) of each of the identical machines that...
+- $A$: average availability of the machines that...
+- $\rho$: average occupancy (a.k.a. utliization) of the machines that...
+- $BS$: batch size of the machines that...
+- $AR$: arrival rate of the jobs arriving at the process step
+- $m$: number of (identical) machines supporting the process step.
+
+To determine the cycle time of a process step supported by $m$ **nonreentrant and nonbatching** machines.
+
+$$CT_{ps} = \underbrace{\bigg(\frac{C^2_{AR}+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}_{\text{wait in queue time}} + \underbrace{\frac{1}{EPR_{ps}}}_{\text{effective process time}}$$
+
+so for a single machine ($m=1$):
+
+$$CT_{ps} = \underbrace{\bigg(\frac{C^2_{AR}+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho}{(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}_{\text{wait in queue time}} + \underbrace{\frac{1}{EPR_{ps}}}_{\text{effective process time}}$$
+
+For the process step supported by $m$ machines empolying **batching**:
+
+$$CT_{ps} = \underbrace{\frac{BS-1}{2AR}}_{\text{batch forming time}} + \underbrace{\bigg(\frac{C^2_{AR}/BS+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}_{\text{wait in queue time}} + \underbrace{\frac{1}{EPR_{ps}}}_{\text{effective process time}}$$
+
+
+<center>
+
+#### Equation 3: Linking (Propagation of Variability)
+</center>
+
+employed to estimate the cov of the jobs departing a given process step.
+
+Given $m$ machines and no reentrancy:
+
+$$C^2_{DR} = 1 + (1-\rho^2)(C^2_{AR}-1) + \Big(\frac{\rho^2}{\sqrt m}\Big)(C^2_{EPT}-1)$$
+
+so for a single machine ($m=1$):
+
+$$C^2_{DR} = \rho^2\times C^2_{EPT} + (1-\rho^2)\times C^2_{AR}$$
+
+**Propagation**:
+
+<center><img src="/images/2023-03/Snipaste_2023-05-04_14-57-34.png" width="80%"></center>
+
+如上图, assume all machines in the workstation B support process step 2 and only that process step, 已知 $C_{AR}(2), C_{EPT}(2), \rho_{ws}(B), m$, 即可算出 $C_{DR}(2)$.
+
+进一步的, 如果 the transit step between step 2 and 3 has negligible variability and high capactiy, 那么 $C_{AR}(3) = C_{DR}(2)$, 从而结合 step 3 的数据继续算下去
+
+By means of the three fundamental equations, we may **approximate** the cycle times of each process step, the variability propagated from one process step to another, and the average inventory at each process step.
+
+## 5.3 Capacity and Variabiliy
+
+Increasing the theorectical capacity of a workstation ($EPR$) 可能会导致整个工厂的 cycle time 增加, 尽管这与我们的直觉相违背
+
+例如, 对于前后相连的两个 process step, 3 & 4, where step 3 in workstation C, step 4 in workstation D, 增加 $EPR(C)$ 会导致 utilization ($\rho$) 的下降:
+
+$$\rho(C) = TH(C)/EPR(C)$$
+
+而根据 Equation 3: Linking (Propagation of Variability), $\rho$ 的下降**有可能**会导致 $C_{DR}(3)$ 的增加. 又因为 $C_{AR}(4) = C_{DR}(3)$, 所以 $C_{AR}(5) = C_{DR}(4)$ 也会增加, 从而导致**恶性的连锁反应**
+
+$$C^2_{DR} = 1 + (1-\rho^2)(C^2_{AR}-1) + \Big(\frac{\rho^2}{\sqrt m}\Big)(C^2_{EPT}-1)$$
+
+再根据 Equation 2: Pollaczek Khintchine, 由于 step 3 之后所有的 $C_{AR}$ 都会增加, 所以它们的 cycle time 也会增加, 最终导致整个工厂的 cycle time 大幅增加 
+
+$$CT_{ps} = \underbrace{\bigg(\frac{C^2_{AR}+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}_{\text{wait in queue time}} + \underbrace{\frac{1}{EPR_{ps}}}_{\text{effective process time}}$$
+
+<span 
+
+
+
+
+
+
 <center><img src="/images/2023-03/.png" width="80%"></center>
 <center><img src="/images/2023-03/.png" width="80%"></center>
 <center><img src="/images/2023-03/.png" width="80%"></center>
