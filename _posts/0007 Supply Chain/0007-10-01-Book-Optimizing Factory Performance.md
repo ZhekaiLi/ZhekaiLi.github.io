@@ -516,7 +516,7 @@ $$C^2_{EPT}(7) = 0.042^2 + 0.9(1-0.9)\frac{10}{1} + 1.5^2\times0.9(1-0.9)\frac{1
 #### Equation 1: Little's Law
 </center>
 
-$$WIP = CT\times TH$$
+$$\boxed{WIP = CT\times TH}$$
 
 <center>
 
@@ -529,16 +529,24 @@ Factors covered:
 - $CT_{ps}$: cycle time of the process step
 - $C_{AR}$: cov of arrivals at the process step (time between interarrivals)
 - $C_{EPT}$: cov of effective process times of the machines that support the process step
-- $EPR_{ps}$: effective process rate (maximum theoretical capacity) of each of the identical machines that...
+- $EPR_{ps}$: effective process rate (maximum theoretical capacity) of each of the <u>**identical machines**</u> that... (如果 that process-step is supported by a single machine, then $EPR_{ps}=EPR_{m}$)
 - $A$: average availability of the machines that...
-- $\rho$: average occupancy (a.k.a. utliization) of the machines that...
+- $\rho=TH/EPR$: average occupancy (a.k.a. utliization) of the machines that... (要注意辨别这里的 $TH$ 和 $EPR$, 例如对于理想工厂 with no reentrancy, 每个 workstation 串联在一起, 任意 workstation 内的 machines 完全相同且都能独立完成一个 process-step, 那么此时 $\rho=TH_f/EPR_{ws}=TH_f/(m\times EPR_m)$)
 - $BS$: batch size of the machines that...
 - $AR$: arrival rate of the jobs arriving at the process step
 - $m$: number of (identical) machines supporting the process step.
 
-To determine the cycle time of a process step supported by $m$ **nonreentrant and nonbatching** machines.
+To determine the cycle time of a process step supported by $m$ <u>**nonreentrant and nonbatching**</u> machines.
 
-$$CT_{ps} = \underbrace{\bigg(\frac{C^2_{AR}+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}_{\text{wait in queue time}} + \underbrace{\frac{1}{EPR_{ps}}}_{\text{effective process time}}$$
+$$\boxed{CT_{ps} = \underbrace{\bigg(\frac{C^2_{AR}+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}_{\text{wait in queue time}} + \underbrace{\frac{1}{EPR_{ps}}}_{\text{effective process time}}}$$
+
+```py
+rho = TH_f/EPR_ws
+
+CT_queue = ((cov_AR**2+cov_EPT**2)/2) * (rho**(np.sqrt(2*(m+1))-1) / m / (1-rho)) * (1/EPR_m)
+CT_processing = 1/EPR_m
+CT_ws = CT_processing + CT_queue
+```
 
 so for a single machine ($m=1$):
 
@@ -558,7 +566,12 @@ employed to estimate the cov of the jobs departing a given process step.
 
 Given $m$ machines and no reentrancy:
 
-$$C^2_{DR} = 1 + (1-\rho^2)(C^2_{AR}-1) + \Big(\frac{\rho^2}{\sqrt m}\Big)(C^2_{EPT}-1)$$
+$$\boxed{C^2_{DR} = 1 + (1-\rho^2)(C^2_{AR}-1) + \Big(\frac{\rho^2}{\sqrt m}\Big)(C^2_{EPT}-1)}$$
+
+```py
+rho = TH_f / EPR_ws
+cov_DR = np.sqrt(1 + (1-rho**2)*(cov_AR**2-1) + (rho**2/np.sqrt(m))*(cov_EPT**2-1))
+```
 
 so for a single machine ($m=1$):
 
@@ -574,6 +587,8 @@ $$C^2_{DR} = \rho^2\times C^2_{EPT} + (1-\rho^2)\times C^2_{AR}$$
 
 By means of the three fundamental equations, we may **approximate** the cycle times of each process step, the variability propagated from one process step to another, and the average inventory at each process step.
 
+
+
 ## 5.3 Capacity and Variabiliy
 
 Increasing the theorectical capacity of a workstation ($EPR$) 可能会导致整个工厂的 cycle time 增加, 尽管这与我们的直觉相违背
@@ -586,29 +601,173 @@ $$\rho(C) = TH(C)/EPR(C)$$
 
 $$C^2_{DR} = 1 + (1-\rho^2)(C^2_{AR}-1) + \Big(\frac{\rho^2}{\sqrt m}\Big)(C^2_{EPT}-1)$$
 
-再根据 Equation 2: Pollaczek Khintchine, 由于 step 3 之后所有的 $C_{AR}$ 都会增加, 所以它们的 cycle time 也会增加, 最终导致整个工厂的 cycle time 大幅增加 
+再根据 Equation 2: Pollaczek Khintchine, 由于 process-step 3 之后所有的 $C_{AR}$ 都会增加, 所以它们的 cycle time 也**可能**会增加, 最终导致整个工厂的 cycle time 大幅增加 
 
 $$CT_{ps} = \underbrace{\bigg(\frac{C^2_{AR}+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}_{\text{wait in queue time}} + \underbrace{\frac{1}{EPR_{ps}}}_{\text{effective process time}}$$
 
-<span 
+<span style="background-color: yellow; color: black;">需要注意的是, 以上示例仅揭示了一种可能性</span> (实际上增加 $EPR(C)$ 当然也可能会导致 overall cycle time 的下降) <span style="background-color: yellow; color: black;">我们更需要明白的是不能通过直觉来判断一项改变的好坏, 而是要 must have the data required to determine the coefficient of variability of both arrivals and departures</span>
 
 
-
-
-
+# 6. Running a Factory: In Three Dimensions
 
 <center><img src="/images/2023-03/.png" width="80%"></center>
 <center><img src="/images/2023-03/.png" width="80%"></center>
 <center><img src="/images/2023-03/.png" width="80%"></center>
 <center><img src="/images/2023-03/.png" width="80%"></center>
+
+
+# 7. Three Holistic Performance Curves
+
+In Chapters 4 and 6 we explored the 12-workstation factory. In this chapter we use that same model to **illustrate three factory performance curves** by means of which we may fairly and objectively evaluate and compare factory performance (**目的是为了比较不同的工厂**)
+
+- Operating curve (OC).
+- Factory load-adjusted cycle-time efficiency (LACTE) plot.
+- Profit curve (PC).
+
+## 7.1 Factory Operating Curve
+A plot of factory cycle time versus factory loading, where the loading could be
+1. the factory throughput rate (flow rate of jobs introduced)
+2. the ratio of factory throughput rate to the upper bound of factory capacity
+
+例如对于一个 nonreentrant 5-workstation factory, 已知以下参数, 我们可以使用 Chapter 5.2 中的公式计算出整个 factory 的 cycle time:
+- **为什么 WS_B 的 cov_AR 是横杠?**
+  因为只的 cov_AR(A) 是已知的, 而后面的 cov_AR(B) = cov_DA(A), 以此类推, 而这些都是需要计算的
+
+| Workstation         | WS_A | WS_B | WS_C | WS_D | WS_E |
+|---------------------|------|------|------|------|------|
+| $EPR_m$             | 4    | 10   | 8    | 4.1  | 9.5  | 
+| Machine Count ($m$) | 6    | 3    | 4    | 5    | 3    |
+| Cov of interarrival times ($C_{AR}$) | 3 | -| -|-|-|
+| Cov of process times ($EPT_m$) | 8 | 2 | 3 | 3 | 2|
+
+
+**代码实现**: [FabSim_1_7.py](./../../_files/Skyworks/Book-Optimizing%20Factory%20Performance/Chapter%207/FabSim_1_7.py)
+
+```py
+import matplotlib.pyplot as plt
+import numpy as np
+import sys
+sys.path.append(r"/Users/lizhekai/Desktop/git/ZhekaiLi.github.io/_files/Skyworks/Book-Optimizing Factory Performance/Chapter 7")
+from FabSim_1_7 import Factory, WorkStation
+
+CTs = []
+for TH_f in np.linspace(0.5, 20, 50):
+    ws_A = WorkStation(TH_f=TH_f, cov_AR=8, cov_EPT=8, m=6, EPR_m=4)
+    ws_B = WorkStation(TH_f=TH_f, cov_AR=ws_A.cov_DR, cov_EPT=2, m=3, EPR_m=10)
+    ws_C = WorkStation(TH_f=TH_f, cov_AR=ws_B.cov_DR, cov_EPT=3, m=4, EPR_m=8)
+    ws_D = WorkStation(TH_f=TH_f, cov_AR=ws_C.cov_DR, cov_EPT=3, m=5, EPR_m=4.1)
+    ws_E = WorkStation(TH_f=TH_f, cov_AR=ws_D.cov_DR, cov_EPT=2, m=3, EPR_m=9.5)
+
+    f = Factory(TH_f=TH_f)
+    f.add_workstations([ws_A, ws_B, ws_C, ws_D, ws_E])
+    CTs.append(f.CT_f)
+
+plt.xlabel("Factory Load (TH_f, jobs/day)")
+plt.ylabel("Cycle Time (days)")
+plt.plot(np.linspace(0.5, 20, 50), CTs)
+```
+
+
+
+
+
+<img src="/images/2023-03/Snipaste_2023-05-07_12-28-51.png" width="70%">
+
+显然, 随着 factory load 的上升, cycle time 呈现指数级的增长. 那么有什么办法可以缓解这种爆炸增长呢?
+1. 减少 variability
+2. 增加瓶颈 workstation 的 EPR_ws (capacity)
+
+例如, <u>(1) 在把 ws_A 的 cov_EPT 从 8 降低至 1 后:
+
+<img src="/images/2023-03/Snipaste_2023-05-07_12-33-51.png"  width="70%">
+
+(2) Based on (1) 在进一步把 ws_D 的 EPR_m 从 4.1 增加至 5 后:</u>
+
+<img src="/images/2023-03/Snipaste_2023-05-07_12-39-51.png"  width="70%">
+
+## 7.2 Load-Adjusted Cycle-Time Efficiency
+
+Define Cycle-Time Efficiency (CTE) as the ratio of the process time to the cycle time:
+
+$$CTE_f = \frac{\text{Process Time}_f}{CT_f}$$
+
+We define a factory’s *process time* as that which includes the time devoted to all value-added as well as non-value-added process steps. Alternative representations of factory cycle-time efficiency omit any non-value-added process step time (e.g., time consumed by transit, inspection, or test).
+
+但是, <span style="background-color: yellow; color: black;">我们无法将现在的 $CTE$ 作为一个工厂的评价标准</span>: 如下表, 不难发现 Loading 越低 CTE 就越大, 这是毫无意义的
+
+<center><img src="/images/2023-03/Snipaste_2023-05-07_16-38-19.png" width="80%"></center>
+
+因此为了使 $CTE-$metric 有意义, we have to make it adjustable to factory loading. 因此定义 load-adjusted cycle-time efficiency (LACTE) 为:
+
+$$\boxed{LACTE_{\text{loading}} = \frac{\text{Process Time}_f}{CT_f} \times \frac{TH_f}{TH_f^*}}$$
+
+- $TH_f^*$: maximum theoretical factory capacity
+- $TH_f$: actual factory throughput
+
+
+例如, 还是对于 Section 7.1 中的 nonreentrant 5-workstations factory, 我们可以画出 plot of LACTE vs. factory load:
+
+**代码实现**: [FabSim_1_7.py](./../../_files/Skyworks/Book-Optimizing%20Factory%20Performance/Chapter%207/FabSim_1_7.py)
+
+
+```py
+LACTEs = []
+TH_f_max = 0
+for TH_f in np.linspace(0.5, 20, 50):
+    ws_A = WorkStation(TH_f=TH_f, cov_AR=8, cov_EPT=8, m=6, EPR_m=4)
+    ws_B = WorkStation(TH_f=TH_f, cov_AR=ws_A.cov_DR, cov_EPT=2, m=3, EPR_m=10)
+    ws_C = WorkStation(TH_f=TH_f, cov_AR=ws_B.cov_DR, cov_EPT=3, m=4, EPR_m=8)
+    ws_D = WorkStation(TH_f=TH_f, cov_AR=ws_C.cov_DR, cov_EPT=3, m=5, EPR_m=4.1)
+    ws_E = WorkStation(TH_f=TH_f, cov_AR=ws_D.cov_DR, cov_EPT=2, m=3, EPR_m=9.5)
+
+    f = Factory(TH_f=TH_f)
+    f.add_workstations([ws_A, ws_B, ws_C, ws_D, ws_E])
+    LACTEs.append(f.calLACET())
+    TH_f_max = f.TH_f_max
+
+plt.xlabel("Factory Load (percentage of the capacity)")
+plt.ylabel("LACTE")
+plt.plot(np.linspace(0.5, 20, 50)/TH_f_max, LACTEs)
+```
+
+<img src="/images/2023-03/Snipaste_2023-05-07_18-57-44.png"  width="70%">
+
+类似 Section 7.1, 降低 variability 后的工厂有更好的表现
+
+<img src="/images/2023-03/Snipaste_2023-05-07_20-02-57.png"  width="70%">
+
+<center>
+
+#### LACTE Evnvelope
+</center>
+
+如下图黑线, 这里的 envelope 可以理解为 factory performace 的上界, 即一种 utopian (乌托邦式的) 理想状态: 该状态下 **variability = 0**
+
+<center><img src="/images/2023-03/Snipaste_2023-05-07_20-06-39.png" width="80%"></center>
+
+
+## 7.3 Profit Curve
+
+The factory profit curve serves to estimate that optimal level of loading. Derivation of the profit curve requires, as a first step, the development of estimates of profit over a given planning horizon
+
+例如现有以下两种产品 Product A, Product B, 分别由 Factory A, Factory B 生产 (这两个工厂除了生产不同的产品外, 其他参数都一样)
+
+<center><img src="/images/2023-03/Snipaste_2023-05-08_10-52-08.png" width="70%"><br>
+    <div style="color: #808080;">Figure: Profit versus time plots, products A and B</div></center>
+
+由于两个产品不同的 profit vs. time plot, 两个工厂的 profit curve 也不同:
+
+<center><img src="/images/2023-03/Snipaste_2023-05-08_10-52-28.png" width="80%"><br>
+    <div style="color: #808080;">Figure: Factory profit curves for factories A and B</div></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
 <center><img src="/images/2023-03/.png" width="80%"></center>
 <center><img src="/images/2023-03/.png" width="80%"></center>
 
 
 
 
-<img src="/images/2023-03/.png"  width="80%">
-<img src="/images/2023-03/.png"  width="80%">
+
 <img src="/images/2023-03/.png"  width="80%">
 <img src="/images/2023-03/.png"  width="80%">
 <img src="/images/2023-03/.png"  width="80%">
