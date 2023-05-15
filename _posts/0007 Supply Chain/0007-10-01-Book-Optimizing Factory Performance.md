@@ -30,19 +30,18 @@ Three primary enemies of factory (or supply chain or organizational):
 
 # 3. Terminology, Notation, and Definitions
 ## 3.1 Factory: Definition and Purpose
-
 A factory is a **processing network** through which jobs and information flow and within which events take place.
 
 From a more scientific perspective, an alternate and more revealing definition of a factory may be developed, specifically:
 - A factory is a **nonlinear, dynamic, stochastic system with feedback**.
 
-### (1) Job process
+### Job Process
 **Job process steps** (a.k.a. operations) include
 - *<font color='blue'>Assembly or transformation</font>*: an activity resulting in or directly supporting a physical and measurable change to the job
 - *<font color='blue'>Transit</font>* of the job from one machine to the next
 - *<font color='blue'>Inspection</font>* of the job
 
-### (2) Workstation events
+### Workstation events
 Concurrent with the flow of jobs through a factory are **events that occur within the factory’s workstations**. These events serve to <u>reduce the availability</u> of the machines that form the workstation and, subsequently, the overall availability of the workstation itself. The degradation imposed by such events on the workstation—and the factory—in turn, will have an impact on factory performance. (例如机器的维护和检查)
 
 **Workstation events** are:
@@ -55,6 +54,7 @@ Concurrent with the flow of jobs through a factory are **events that occur withi
 For example, a maintenance event may occur according to a schedule (e.g., perform a maintenance event every week), or according to usage (e.g., perform a maintenance event on the completion of every 500 jobs)
 
 
+
 ## 3.2 Factory Process-Flow Models
 Every factory (or supply chain or business process) supports a process flow. There are several ways to represent this flow, for example:
 - **Workstation-centric model**:
@@ -62,8 +62,7 @@ a workstation consists of one or more machines that support *identical or nearly
 - **Process-step-centric model**:
 an operation conducted *within a workstation* (and, quite possibly, by means of the support of only a subset of the machines in the workstation) or is a *transit step between workstations*.
 
-### 3.2.1 Workstation-centric Model and Reentrancy
-
+### Model 1: Workstation-centric Model and Reentrancy
 The following picture depicts a simple factory consisting of:
 - 3 **work stations** (A, B, and C) (包括 transit operations)
 - 7 **machines** (A1, A2, ...)
@@ -98,7 +97,7 @@ We next consider two other, more traditional (in that they *do not include reent
 
 - Each job that enters the factory may follow a different process flow path (J1 vs. J2)
 
-### 3.2.2 Process-step-centric Model
+### Model 2: Process-step-centric Model
 According to *Figure 3.1*, if we know which machines are capable of supporting (e.g., qualified to conduct or be assigned to) each process step, we can convert that workstation-centric model into a process-step-centric model:
 
 <center><img src="/images/2023-03/Snipaste_2023-04-04_11-34-59.png"  width="80%"></center>
@@ -107,44 +106,33 @@ Why this model is also important:
 - it indicates not only the process step flow but also <u>the precise support responsibilities of each machine</u> in the factory.
 
 
-## 3.3 Factory Definitions and Terminology
 
-**Factory Types**
-- Flowshops
-- Jobshops
-- Factories without reentrancy (i.e., DoR = 1)
-- Factories with reentrancy (i.e., DoR > 1)
-- Synchronous factories (e.g., every job flows through the factory at the same constant speed, such as bottles in a beverage bottling plant)
-- Asynchronous factories (e.g., each job, as in semi-conductor fabrication, may flow through the factory at different speeds and in addition may remain temporarily held in a queue)
-- High-mix factories (e.g., those that process numerous job types)
-- Low-mix factories (e.g., those that process only a limited number of job types)
-- Low-volume factories (e.g., those that process only a relatively limited number of jobs per time period, such as aircraft manufacturers or research and development factories that produce only prototypes of a product)
-- High-volume factories (e.g., those that process a large number of jobs per time period, such as high-volume semiconductor wafer fabrication facilities)
-- High-mix, low-volume factories
-- High-mix, high-volume factories
-- Low-mix, low-volume factories
-- Low-mix, high-volume factories
+## 3.3 Factory Definitions and Terminology
+### Factory Types
+- **Flowshops** vs. **Jobshops** (as mentioned just above)
+- Factories with (i.e., DoR > 1) and without **reentrancy** (i.e., DoR = 1)
+- **Synchronous** factories:
+  every job flows through the factory at the same constant speed, such as bottles in a beverage bottling plant
+- **Asynchronous** factories:
+  each job, as in semi-conductor fabrication, may flow through the factory at different speeds and in addition may remain temporarily held in a queue
+- **High-mix** factories (e.g., those that process numerous job types)
+- **Low-mix** factories (e.g., those that process only a limited number of job types)
+- **Low-volume** factories (e.g., those that process only a relatively limited number of jobs per time period, such as aircraft manufacturers or research and development factories that produce only prototypes of a product)
+- **High-volume** factories (e.g., those that process a large number of jobs per time period, such as high-volume semiconductor wafer fabrication facilities)
+- Combinations: (1) High-mix, low-volume factories (2) High-mix, high-volume factories (3) Low-mix, low-volume factories (4) Low-mix, high-volume factories
 - Factories involving various combinations of the preceding features
 
+
+
 ## 3.4 Jobs and Events
-
-<center>
-
-#### Job Types
-</center>
-
+### Job Types
 Jobs may require either assembly, transformation, the combination. Furthermore, a job may flow through the factory as a <u>single unit</u> (e.g., as an automobile), as a <u>lot</u> (e.g., as a “container” consisting of a number of silicon wafers), or as a <u>batch</u> (e.g., a group of either individual jobs or lots).
 
 Two primary types of **batches**:
 - *parallel batch*: batch 中的 jobs 会被同时处理 (same process time). Batch 的目的在于 reduce setup time (each batch undergoes just one setup in front of the batching machine). 例如, 陶瓷烧制机器允许同时烧制多个陶瓷坯
 - *series batching* or *cascading*: batch 中的 jobs 会被顺序处理. 同样能够 reduce setup time because each cascade undergoes just one setup prior to entry into the cascading machine or workstation.
 
-
-<center>
-
-#### Job States
-</center>
-
+### Job States
 **<font color=blue>Value-added processing</font>**:
 an actual assembly or transformation operation
 
@@ -160,13 +148,9 @@ an actual assembly or transformation operation
 
 <center><img src="/images/2023-03/Snipaste_2023-04-17_16-12-09.png"  width="100%"></center>
 
-如图所有，在很多真实工厂中, non-value-added processing 的时间占了相当大的一部分
+如图所示, 在很多真实工厂中, non-value-added processing 的时间占了相当大的一部分
 
-<center>
-
-#### Event Types
-</center>
-
+### Event Types
 Events are activities that are <u>conducted within a workstation rather than on a job</u>
 
 **<font color=blue>Preemptive Events</font>**:
@@ -184,21 +168,13 @@ occurs (or can be scheduled to occur) during a period in which the machine is no
 - Setups
 - Scheduled operator breaks (e.g., biobreaks or meetings)
 
+
+
 ## 3.5 Workstations, Machines, and Process Steps
-
-<center>
-
-#### Workstations
-</center>
-
+### Workstations
 A given workstation consists of one or more machines, each dedicated to an identical or nearly identical processing function.
 
-
-<center>
-
-#### Machine States
-</center>
-
+### Machine States
 - *Processing*: busy in support of job processing (i.e. those involving assembly or transformation, rework, transit, and inspection/test of a job)
 - *<span style="background-color: yellow; color: black;">Blocked</span>*: machine is up and running, 但是正在进行一项和  the support of an actual process step 无关的进程, 例如:
   - those involving inspection/ test of the machine
@@ -208,11 +184,7 @@ A given workstation consists of one or more machines, each dedicated to an ident
 - *Idle*: machine is up, running, and <u>qualified</u> but there are no jobs either in the machine or waiting for the machine
 - *Down*: machine is down due to either a sheduled or unscheduled event
 
-<center>
-
-#### Process Steps
-</center>
-
+### Process Steps
 The key attributes of **<font color=blue>capacity</font>** and **<font color=blue>cycle time</font>** are determined by the support provided to each individual process step rather than each functional area. 
 
 $$\text{CT}_f = \sum_{ps=1}^P \text{CT}_{ps}$$
@@ -223,13 +195,10 @@ $$\text{CT}_f = \sum_{ps=1}^P \text{CT}_{ps}$$
 
 The **<font color=blue>capacity</font>** of a factory is determined by the bottleneck (i.e., constraint or choke point) process step, not necessarily a bottleneck workstation
 
+
+
 ## 3.6 Performance Measures
-
-<center>
-
 ### Notation
-</center>
-
 Define the performance measure for an entity as the following format:
 
 $$\text{Measure}_{\text{entity}}\text{(specific entiry designation)}$$
@@ -247,11 +216,7 @@ ws &= \text{workstations, where }ws=1,...,W\\
 f  &= \text{factory}
 \end{aligned}$$
 
-<center>
-
 ### Process-Step Performance
-</center>
-
 - $\text{TH}_{ps}$ (jobs/ time): Process-step <u>average throughput rate</u>
 - $\text{EPR}_{ps}$ (jobs/ time): Effective process rate or  <u>maximum theoretical capacity</u>
     the capacity of the machines supporting that step in the *absence of any variability*. (*upper bound* of the process-step capacity)
@@ -262,15 +227,10 @@ f  &= \text{factory}
 - $\text{DR}_{ps}$: <u>Departure rate</u> from the process step
 
 
-**$\text{SC}$ (max sustainable capacity) vs. $\text{EPR}$ (max theoretical capacity)** 
+**Figure: $\text{SC}$ (max sustainable capacity) vs. $\text{EPR}$ (max theoretical capacity)** 
 <center><img src="/images/2023-03/Snipaste_2023-04-17_21-18-49.png" width="60%"></center>
 
-<center>
-
-
 ### Machine Performance
-</center>
-
 - $\text{TH}_{m}$
 - $\text{EPR}_{m}$
 - $\text{SC}_{m}$
@@ -283,19 +243,19 @@ f  &= \text{factory}
 - $\text{MTBE}_{m}$: Mean time between machine down events (但这期间 machine 不一定在运行)
 - $\text{MTTR}_{m}$: Mean time to recover from machine down events
 
-***Machine Availability***
+<span style="background-color: lightgray; color: black;">***Machine Availability***</span>
 the <u>percenrage</u> of the time the machine is up, running, and qualified to process jobs. = 可用时间 / (可用时间 + 维修时间), 注意这里的<span style="background-color: yellow; color: black;">可用时间不等于工作时间</span> (busy time)
 
 $$\text{A}_{m} = \frac{\text{MTBE}_{m}}{\text{MTBE}_{m}+\text{MTTR}_{m}}$$
 
-***Machine Raw Process Rate***
+<span style="background-color: lightgray; color: black;">***Machine Raw Process Rate***</span>
 理想状态下机器的最大产能 (maximum number of jobs/ time)
 
 Using $\text{PT}_{m}$ to denote a machine's raw process time,
 
 $$\text{PT}_{m} = \frac{1}{\text{PR}_{m}}$$
 
-***Machine Effective Process Rate***:
+<span style="background-color: lightgray; color: black;">***Machine Effective Process Rate***</span>:
 machine maximum theoretical capacity (不考虑 variability)
 
 $$\text{EPR}_{m} = \text{A}_{m}\times\text{PR}_{m}$$
@@ -304,7 +264,7 @@ Using $\text{EPT}_{m}$ to denote a machine's effective process time,
 
 $$\text{EPT}_{m} = \frac{1}{\text{EPR}_{m}}$$
 
-***Machine Busy Rate***:
+<span style="background-color: lightgray; color: black;">***Machine Busy Rate***</span>:
 the percent of time, over a given time period, spent in the busy state
 
 $$\text{B}_{m} = \frac{\text{AR}_{m}}{\text{PR}_{m}}=\text{AR}_{m}\times\text{PT}_{m}$$
@@ -313,23 +273,18 @@ $$\text{B}_{m} = \frac{\text{AR}_{m}}{\text{PR}_{m}}=\text{AR}_{m}\times\text{PT
 - $\text{PR}_{m}=$ Raw process rate of the machine
 - $\text{PT}_{m}=$ Raw process time of the machine
 
-***Machine Occupancy Rate***:
+<span style="background-color: lightgray; color: black;">***Machine Occupancy Rate***</span>:
 percentage of the available time in the busy state
 
 $$\rho_{m} = \frac{\text{B}_{m}}{\text{A}_{m}}$$
 
 $$\rho_{m} = \frac{\text{AR}_{m}}{\text{EPR}_{m}}$$
 
-***Machine Production Control Channel***
+<span style="background-color: lightgray; color: black;">***Machine Production Control Channel***</span>
 
 $$\text{PCC}_{m} = \frac{\text{A}_{m}-\text{B}_{m}}{\text{A}_{m}} = 1-\rho_{m}$$
 
-
-<center>
-
 ### Workstation Performance
-</center>
-
 A discussion of the performance measures of a workstation will make sense in general <u>only if the workstation supports a single process step</u> and every machine in the workstation is qualified to support that process step and only that process step. (对于不符合这种假设的其他 workstation, 会在之后的章节讨论到)
 
 $$\begin{aligned}
@@ -341,14 +296,9 @@ $$\begin{aligned}
 \text{PCC}_{ws} &= 1-\rho_{ws}
 \end{aligned}$$
 
-
 需要注意的是: <span style="background-color: yellow; color: black;">$\text{SC}_{ws}$ sustainable capacity, 和 $\text{SC}_{m}$ 没有求和相等的关系, 而是受到多种其他情况的影响</span>
 
-<center>
-
 ### Factory Performance
-</center>
-
 - $\text{CT}_{f}$: Factory cycle time
 - $\text{CTE}_{f}$: Factory cycle-time efficiency
 - $\text{TH}_{f}$: Factory throughput rate (rate of flow of jobs through the entire factory)
@@ -358,16 +308,15 @@ $$\begin{aligned}
 - Factory moves
 - $\text{WIP}_{f}$: Factory inventory
 
-***Factory Cycle Time***
+<span style="background-color: lightgray; color: black;">***Factory Cycle Time***</span>
 
 $$\text{CT}_{f} = \sum_{ps=1}^P \text{CT}_{ps}$$
 
-***Factory Cycle-Time Efficiency***
+<span style="background-color: lightgray; color: black;">***Factory Cycle-Time Efficiency***</span>
 
 $$\text{CTE}_{f} = \frac{\text{Process Time}_f}{\text{CT}_{f}}$$
 
-***Factory Inventory***
-Little's Law:
+<span style="background-color: lightgray; color: black;">***Factory Inventory***</span>: Little's Law
 
 $$\text{WIP}_{f} = \text{TH}_{f}\times\text{CT}_{f}$$
 
@@ -428,19 +377,17 @@ Using the above allocated process-step-centric model, a new <span style="backgro
 
 小括号里的数据表示新的的 workstation 的 $\text{EPR}_{ws}$ (基于 Section 3.7.1 的第二张 machine 表计算)
 
-Then we can calculate the workstation ***occupancy rate***:
+Then we can calculate the workstation ***occupancy rate***, and find the ***bottleneck*** is workstation $\text{B}$ and $\text{B}'$, or process steps $2$ and $5$
 
 $$\rho_{ws} = \frac{\text{TH}_{ws}}{\text{EPR}_{ws}}$$
 
-<img src="/images/2023-03/Snipaste_2023-04-18_21-25-33.png" width="55%">
-
-where the ***bottleneck*** is workstation $\text{B}$ and $\text{B}'$, or process steps $2$ and $5$
+<center><img src="/images/2023-03/Snipaste_2023-04-18_21-25-33.png" width="50%"></center>
 
 Finally, let's determine the **<font color="blue">cycle time</font>** of the factory. Assuming:
 - no varaiablity in machines, procee rates, and throughput rates
 - the time required to move from one nontransit process step to another is 5 minutes
 
-(以下公式中的 $\text{EPR}_{ps}$ 来自于本 Section 第一张图的小括号)
+(以下公式中的 $\text{EPR}_{ps}$ 来自于本 Section (3.7.3) 第一张图中 workstation 下方的小括号)
 
 $$\text{CT}_{f} = 6\times\frac{5}{60}+\sum_{p=1}^{6} \text{CT}_{ps}(p) = 0.5 + \sum_{p=1}^{6}\frac{1}{\text{EPR}_{ps}(p)}=3.5972\text{ hrs}$$
 
@@ -452,7 +399,7 @@ $$\text{WIP}_{f} = \text{TH}_{f}\times\text{CT}_{f} = 1.5\times 3.5972 = 5.9358\
 
 同时也要注意, 这里最后的 cycle time 是及其理想的, 因为我们假设一个 product 可以被一个 workstation 中的多台 machines **<font color='blue'>同时处理</font>**, 遑论我们还没有考虑 variablity 的巨大影响
 
-[相关代码: Chp03-A Simple Cycle Time Simulation](../../_files/Code/Book-Optimizing%20Factory%20Performance/Chp03-A%20Simple%20Cycle%20Time%20Simulation.py)
+**代码示例: A Simple Cylce Time Simulation** [FabSim_1_3.py](../../_files/Skyworks/Book-Optimizing%20Factory%20Performance/Chapter%203/FabSim_1_3.py)
 
 # 4. Running a Factory: In Two Dimensions
 
@@ -510,18 +457,11 @@ $$C^2_{EPT}(7) = 0.042^2 + 0.9(1-0.9)\frac{10}{1} + 1.5^2\times0.9(1-0.9)\frac{1
 不难发现, assume no blocked events, 如果我们能够 divide scheduled down events into more frequent, smaller segments, 那么在不改变 availability ($A$) 的情况下, 就能够通过减小 $MTTR/PT$ 来显著降低 cov of  effective process times
 
 ## 5.2 Three Fundamental Equations
-
-<center>
-
-#### Equation 1: Little's Law
-</center>
+### Equation 1: Little's Law
 
 $$\boxed{WIP = CT\times TH}$$
 
-<center>
-
-#### Equation 2: Pollaczek Khintchine
-</center>
+### Equation 2: Pollaczek Khintchine
 
 P-K equation is used to predict the cycle time of a factory, a portion of a factory, or some individual workstation. However, here, we will focus on the cycle time at the process-step level
 
@@ -557,11 +497,7 @@ For the process step supported by $m$ machines empolying **batching**:
 $$CT_{ps} = \underbrace{\frac{BS-1}{2AR}}_{\text{batch forming time}} + \underbrace{\bigg(\frac{C^2_{AR}/BS+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}_{\text{wait in queue time}} + \underbrace{\frac{1}{EPR_{ps}}}_{\text{effective process time}}$$
 
 
-<center>
-
-#### Equation 3: Linking (Propagation of Variability)
-</center>
-
+### Equation 3: Linking (Propagation of Variability)
 employed to estimate the cov of the jobs departing a given process step.
 
 Given $m$ machines and no reentrancy:
@@ -671,7 +607,7 @@ plt.plot(np.linspace(0.5, 20, 50), CTs)
 
 
 
-<img src="/images/2023-03/Snipaste_2023-05-07_12-28-51.png" width="70%">
+<img src="/images/2023-03/Snipaste_2023-05-07_12-28-51.png" width="60%">
 
 显然, 随着 factory load 的上升, cycle time 呈现指数级的增长. 那么有什么办法可以缓解这种爆炸增长呢?
 1. 减少 variability
@@ -679,11 +615,11 @@ plt.plot(np.linspace(0.5, 20, 50), CTs)
 
 例如, <u>(1) 在把 ws_A 的 cov_EPT 从 8 降低至 1 后:
 
-<img src="/images/2023-03/Snipaste_2023-05-07_12-33-51.png"  width="70%">
+<img src="/images/2023-03/Snipaste_2023-05-07_12-33-51.png"  width="60%">
 
 (2) Based on (1) 在进一步把 ws_D 的 EPR_m 从 4.1 增加至 5 后:</u>
 
-<img src="/images/2023-03/Snipaste_2023-05-07_12-39-51.png"  width="70%">
+<img src="/images/2023-03/Snipaste_2023-05-07_12-39-51.png"  width="60%">
 
 ## 7.2 Load-Adjusted Cycle-Time Efficiency
 
@@ -730,20 +666,19 @@ plt.ylabel("LACTE")
 plt.plot(np.linspace(0.5, 20, 50)/TH_f_max, LACTEs)
 ```
 
-<img src="/images/2023-03/Snipaste_2023-05-07_18-57-44.png"  width="70%">
+<img src="/images/2023-03/Snipaste_2023-05-07_18-57-44.png"  width="60%">
 
 类似 Section 7.1, 降低 variability 后的工厂有更好的表现
 
-<img src="/images/2023-03/Snipaste_2023-05-07_20-02-57.png"  width="70%">
+<img src="/images/2023-03/Snipaste_2023-05-07_20-02-57.png"  width="60%">
 
-<center>
 
-#### LACTE Evnvelope
-</center>
+
+### LACTE Evnvelope
 
 如下图黑线, 这里的 envelope 可以理解为 factory performace 的上界, 即一种 utopian (乌托邦式的) 理想状态: 该状态下 **variability = 0**
 
-<center><img src="/images/2023-03/Snipaste_2023-05-07_20-06-39.png" width="80%"></center>
+<center><img src="/images/2023-03/Snipaste_2023-05-07_20-06-39.png" width="65%"></center>
 
 
 ## 7.3 Profit Curve

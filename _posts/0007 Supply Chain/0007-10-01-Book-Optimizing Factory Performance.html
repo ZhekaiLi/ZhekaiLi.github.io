@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>0007-10-01-Book-Optimizing Factory Performance.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<center>
+<h1 id="optimizing-factory-performance">Optimizing Factory Performance</h1>
+</center>
+<p>Three primary enemies of factory (or supply chain or organizational):</p>
+<ul>
+<li>Complexity</li>
+<li>Variability</li>
+<li>Lackluster leadership</li>
+</ul>
+<h1 id="3-terminology-notation-and-definitions">3. Terminology, Notation, and Definitions</h1>
+<h2 id="31-factory-definition-and-purpose">3.1 Factory: Definition and Purpose</h2>
+<p>A factory is a <strong>processing network</strong> through which jobs and information flow and within which events take place.</p>
+<p>From a more scientific perspective, an alternate and more revealing definition of a factory may be developed, specifically:</p>
+<ul>
+<li>A factory is a <strong>nonlinear, dynamic, stochastic system with feedback</strong>.</li>
+</ul>
+<h3 id="job-process">Job Process</h3>
+<p><strong>Job process steps</strong> (a.k.a. operations) include</p>
+<ul>
+<li><em><font color='blue'>Assembly or transformation</font></em>: an activity resulting in or directly supporting a physical and measurable change to the job</li>
+<li><em><font color='blue'>Transit</font></em> of the job from one machine to the next</li>
+<li><em><font color='blue'>Inspection</font></em> of the job</li>
+</ul>
+<h3 id="workstation-events">Workstation events</h3>
+<p>Concurrent with the flow of jobs through a factory are <strong>events that occur within the factory’s workstations</strong>. These events serve to <u>reduce the availability</u> of the machines that form the workstation and, subsequently, the overall availability of the workstation itself. The degradation imposed by such events on the workstation—and the factory—in turn, will have an impact on factory performance. (例如机器的维护和检查)</p>
+<p><strong>Workstation events</strong> are:</p>
+<ul>
+<li>Maintenance of a machine</li>
+<li>Repair of a machine</li>
+<li>Inspection of a machine</li>
+<li>Qualification of a machine</li>
+<li>Setup of a machine</li>
+</ul>
+<p>For example, a maintenance event may occur according to a schedule (e.g., perform a maintenance event every week), or according to usage (e.g., perform a maintenance event on the completion of every 500 jobs)</p>
+<h2 id="32-factory-process-flow-models">3.2 Factory Process-Flow Models</h2>
+<p>Every factory (or supply chain or business process) supports a process flow. There are several ways to represent this flow, for example:</p>
+<ul>
+<li><strong>Workstation-centric model</strong>:
+a workstation consists of one or more machines that support <em>identical or nearly identical</em> processing functions</li>
+<li><strong>Process-step-centric model</strong>:
+an operation conducted <em>within a workstation</em> (and, quite possibly, by means of the support of only a subset of the machines in the workstation) or is a <em>transit step between workstations</em>.</li>
+</ul>
+<h3 id="model-1-workstation-centric-model-and-reentrancy">Model 1: Workstation-centric Model and Reentrancy</h3>
+<p>The following picture depicts a simple factory consisting of:</p>
+<ul>
+<li>3 <strong>work stations</strong> (A, B, and C) (包括 transit operations)</li>
+<li>7 <strong>machines</strong> (A1, A2, ...)</li>
+<li>5 <strong>operations</strong> (arrows 1, 2, ...) (这里的箭头表示的不是 intralogistics)</li>
+</ul>
+<center><img src="/images/2023-03/Snipaste_2023-04-04_10-51-58.png"  width="70%"><br>
+    <div>Figure 3.1</div></center>
+<blockquote>
+<p><strong>Def: Degree of Reentrancy (DoR)</strong>
+$$\text{DoR}=\frac{\text{# operations}}{\text{# work stations}}=\frac{5}{3}$$</p>
+</blockquote>
+<p>DoR differs a lot for different types of factory:</p>
+<ul>
+<li><strong>automobile assembly</strong> lines have little, if any, reentrancy (<u>the ideal assembly line has none</u>)</li>
+<li><strong>semiconductor wafer</strong> fabrication facilities, or “fabs”, typically have factory DoR values ranging from 3 to 5 or even more—with individual nests that may have DoRs in the double digits.</li>
+</ul>
+<p>We next consider two other, more traditional (in that they <em>do not include reentrancy</em>) workstation-centric models:</p>
+<p><strong><font color='blue'>(1) Flowshop factory</font></strong></p>
+<center><img src="/images/2023-03/Snipaste_2023-04-04_11-14-53.png"  width="80%"><br>
+    <div style="color: #808080;">Figure 3.2</div></center>
+<ul>
+<li>Each job follows precisely the same pathway</li>
+<li>Each workstation supports just one process step</li>
+<li><strong>No passing of jobs</strong>: if two jobs enter the factory in, say, the job sequence J1 and J2 they must enter and leave each workstation in that same sequence</li>
+</ul>
+<p><strong><font color='blue'>(2) Jobshop factory</font></strong></p>
+<center><img src="/images/2023-03/Snipaste_2023-04-04_11-18-56.png"  width="80%">
+<br>
+    <div style="color: #808080;">Figure 3.3</div></center>
+<ul>
+<li>Each job that enters the factory may follow a different process flow path (J1 vs. J2)</li>
+</ul>
+<h3 id="model-2-process-step-centric-model">Model 2: Process-step-centric Model</h3>
+<p>According to <em>Figure 3.1</em>, if we know which machines are capable of supporting (e.g., qualified to conduct or be assigned to) each process step, we can convert that workstation-centric model into a process-step-centric model:</p>
+<center><img src="/images/2023-03/Snipaste_2023-04-04_11-34-59.png"  width="80%"></center>
+<p>Why this model is also important:</p>
+<ul>
+<li>it indicates not only the process step flow but also <u>the precise support responsibilities of each machine</u> in the factory.</li>
+</ul>
+<h2 id="33-factory-definitions-and-terminology">3.3 Factory Definitions and Terminology</h2>
+<h3 id="factory-types">Factory Types</h3>
+<ul>
+<li><strong>Flowshops</strong> vs. <strong>Jobshops</strong> (as mentioned just above)</li>
+<li>Factories with (i.e., DoR &gt; 1) and without <strong>reentrancy</strong> (i.e., DoR = 1)</li>
+<li><strong>Synchronous</strong> factories:
+every job flows through the factory at the same constant speed, such as bottles in a beverage bottling plant</li>
+<li><strong>Asynchronous</strong> factories:
+each job, as in semi-conductor fabrication, may flow through the factory at different speeds and in addition may remain temporarily held in a queue</li>
+<li><strong>High-mix</strong> factories (e.g., those that process numerous job types)</li>
+<li><strong>Low-mix</strong> factories (e.g., those that process only a limited number of job types)</li>
+<li><strong>Low-volume</strong> factories (e.g., those that process only a relatively limited number of jobs per time period, such as aircraft manufacturers or research and development factories that produce only prototypes of a product)</li>
+<li><strong>High-volume</strong> factories (e.g., those that process a large number of jobs per time period, such as high-volume semiconductor wafer fabrication facilities)</li>
+<li>Combinations: (1) High-mix, low-volume factories (2) High-mix, high-volume factories (3) Low-mix, low-volume factories (4) Low-mix, high-volume factories</li>
+<li>Factories involving various combinations of the preceding features</li>
+</ul>
+<h2 id="34-jobs-and-events">3.4 Jobs and Events</h2>
+<h3 id="job-types">Job Types</h3>
+<p>Jobs may require either assembly, transformation, the combination. Furthermore, a job may flow through the factory as a <u>single unit</u> (e.g., as an automobile), as a <u>lot</u> (e.g., as a “container” consisting of a number of silicon wafers), or as a <u>batch</u> (e.g., a group of either individual jobs or lots).</p>
+<p>Two primary types of <strong>batches</strong>:</p>
+<ul>
+<li><em>parallel batch</em>: batch 中的 jobs 会被同时处理 (same process time). Batch 的目的在于 reduce setup time (each batch undergoes just one setup in front of the batching machine). 例如, 陶瓷烧制机器允许同时烧制多个陶瓷坯</li>
+<li><em>series batching</em> or <em>cascading</em>: batch 中的 jobs 会被顺序处理. 同样能够 reduce setup time because each cascade undergoes just one setup prior to entry into the cascading machine or workstation.</li>
+</ul>
+<h3 id="job-states">Job States</h3>
+<p><strong><font color=blue>Value-added processing</font></strong>:
+an actual assembly or transformation operation</p>
+<p><strong><font color=blue>Non-value-added processing</font></strong>:</p>
+<ul>
+<li>Rework</li>
+<li>Transit</li>
+<li>Inspection/test</li>
+<li>Waiting, including
+<ul>
+<li>Waiting as an individual job for processing at a nonbatching/noncascading process step</li>
+<li>Waiting for a batch (or cascade) to form in front of a batching/cascading process step</li>
+<li>Waiting in a batch (or cascade) as part of the queue formed in front of a batching/cascading process step</li>
+<li>Waiting in a “set aside” state (e.g., the job is removed temporarily from the production line)</li>
+</ul>
+</li>
+</ul>
+<center><img src="/images/2023-03/Snipaste_2023-04-17_16-12-09.png"  width="100%"></center>
+<p>如图所示, 在很多真实工厂中, non-value-added processing 的时间占了相当大的一部分</p>
+<h3 id="event-types">Event Types</h3>
+<p>Events are activities that are <u>conducted within a workstation rather than on a job</u></p>
+<p><strong><font color=blue>Preemptive Events</font></strong>:
+occurs during the processing of a given job (or batch). The processing of the job must stop and cannot proceed until recovery from the preemptive event:</p>
+<ul>
+<li>Unscheduled downs</li>
+<li>Power outages or voltage/current spikes</li>
+<li>Unanticipated supply outages and replenishment</li>
+</ul>
+<p><strong><font color=blue>Nonpreemptive Events</font></strong>:
+occurs (or can be scheduled to occur) during a period in which the machine is not processing a job:</p>
+<ul>
+<li>Scheduled maintenance</li>
+<li>Unscheduled downs (i.e., those that happen to not occur during processing)</li>
+<li>Inspections and engineering tests</li>
+<li>Qualifications</li>
+<li>Setups</li>
+<li>Scheduled operator breaks (e.g., biobreaks or meetings)</li>
+</ul>
+<h2 id="35-workstations-machines-and-process-steps">3.5 Workstations, Machines, and Process Steps</h2>
+<h3 id="workstations">Workstations</h3>
+<p>A given workstation consists of one or more machines, each dedicated to an identical or nearly identical processing function.</p>
+<h3 id="machine-states">Machine States</h3>
+<ul>
+<li><em>Processing</em>: busy in support of job processing (i.e. those involving assembly or transformation, rework, transit, and inspection/test of a job)</li>
+<li><em><span style="background-color: yellow; color: black;">Blocked</span></em>: machine is up and running, 但是正在进行一项和  the support of an actual process step 无关的进程, 例如:
+<ul>
+<li>those involving inspection/ test of the machine</li>
+<li>those involving qualification</li>
+<li>those involving setup</li>
+<li>those on hold waiting for the arrival of priority job</li>
+</ul>
+</li>
+<li><em>Idle</em>: machine is up, running, and <u>qualified</u> but there are no jobs either in the machine or waiting for the machine</li>
+<li><em>Down</em>: machine is down due to either a sheduled or unscheduled event</li>
+</ul>
+<h3 id="process-steps">Process Steps</h3>
+<p>The key attributes of <strong><font color=blue>capacity</font></strong> and <strong><font color=blue>cycle time</font></strong> are determined by the support provided to each individual process step rather than each functional area.</p>
+<p>$$\text{CT}<em>f = \sum</em>{ps=1}^P \text{CT}_{ps}$$</p>
+<ul>
+<li>$\text{CT}_f$: cycle time of the entire factory</li>
+<li>$\text{CT}_{ps}$: cycle time of process step $ps$</li>
+<li>$P$: total number of process steps in the factory</li>
+</ul>
+<p>The <strong><font color=blue>capacity</font></strong> of a factory is determined by the bottleneck (i.e., constraint or choke point) process step, not necessarily a bottleneck workstation</p>
+<h2 id="36-performance-measures">3.6 Performance Measures</h2>
+<h3 id="notation">Notation</h3>
+<p>Define the performance measure for an entity as the following format:</p>
+<p>$$\text{Measure}_{\text{entity}}\text{(specific entiry designation)}$$</p>
+<p>For example:</p>
+<ul>
+<li>$\text{CT}_{ps}(9)$ cycle time of process step number 9</li>
+<li>$\text{PR}_{m}(B3)$ process rate of machine 3 in workstation B (B3)</li>
+</ul>
+<p><strong><font color=blue>entity</font></strong></p>
+<p>$$\begin{aligned}
+ps &amp;= \text{process step, where }ps=1,...,P\
+m  &amp;= \text{machines, where }m=1,...,M\
+ws &amp;= \text{workstations, where }ws=1,...,W\
+f  &amp;= \text{factory}
+\end{aligned}$$</p>
+<h3 id="process-step-performance">Process-Step Performance</h3>
+<ul>
+<li>$\text{TH}_{ps}$ (jobs/ time): Process-step <u>average throughput rate</u></li>
+<li>$\text{EPR}_{ps}$ (jobs/ time): Effective process rate or  <u>maximum theoretical capacity</u>
+the capacity of the machines supporting that step in the <em>absence of any variability</em>. (<em>upper bound</em> of the process-step capacity)</li>
+<li>$\text{SC}_{ps}$ (jobs/ time): Process-step <u>maximum sustainable (可持续的) capacity</u></li>
+<li>$\text{CT}_{ps}$: Process-step <u>cycle time</u>
+the elapsed time between the arrival of the job at the queue (if one exists) in front of the process step and its departure on completion of the operation</li>
+<li>$\text{AR}_{ps}$ (jobs/ time): <u>Arrival rate</u> at the process step</li>
+<li>$\text{DR}_{ps}$: <u>Departure rate</u> from the process step</li>
+</ul>
+<p><strong>Figure: $\text{SC}$ (max sustainable capacity) vs. $\text{EPR}$ (max theoretical capacity)</strong></p>
+<center><img src="/images/2023-03/Snipaste_2023-04-17_21-18-49.png" width="60%"></center>
+<h3 id="machine-performance">Machine Performance</h3>
+<ul>
+<li>$\text{TH}_{m}$</li>
+<li>$\text{EPR}_{m}$</li>
+<li>$\text{SC}_{m}$</li>
+<li>$\text{A}_{m}$: Availability</li>
+<li>$\text{PR}_{m}$: Raw process rate</li>
+<li>$\text{B}_{m}$: Busy time rate</li>
+<li>$\text{DT}_{m}$ (time per time): Machine downtime rate</li>
+<li>$\rho_{m}$: Machine occupancy rate (utilization)</li>
+<li>$\text{PCC}_{m}$: Machine production control channel width</li>
+<li>$\text{MTBE}_{m}$: Mean time between machine down events (但这期间 machine 不一定在运行)</li>
+<li>$\text{MTTR}_{m}$: Mean time to recover from machine down events</li>
+</ul>
+<p><span style="background-color: lightgray; color: black;"><em><strong>Machine Availability</strong></em></span>
+the <u>percenrage</u> of the time the machine is up, running, and qualified to process jobs. = 可用时间 / (可用时间 + 维修时间), 注意这里的<span style="background-color: yellow; color: black;">可用时间不等于工作时间</span> (busy time)</p>
+<p>$$\text{A}<em>{m} = \frac{\text{MTBE}</em>{m}}{\text{MTBE}<em>{m}+\text{MTTR}</em>{m}}$$</p>
+<p><span style="background-color: lightgray; color: black;"><em><strong>Machine Raw Process Rate</strong></em></span>
+理想状态下机器的最大产能 (maximum number of jobs/ time)</p>
+<p>Using $\text{PT}_{m}$ to denote a machine's raw process time,</p>
+<p>$$\text{PT}<em>{m} = \frac{1}{\text{PR}</em>{m}}$$</p>
+<p><span style="background-color: lightgray; color: black;"><em><strong>Machine Effective Process Rate</strong></em></span>:
+machine maximum theoretical capacity (不考虑 variability)</p>
+<p>$$\text{EPR}<em>{m} = \text{A}</em>{m}\times\text{PR}_{m}$$</p>
+<p>Using $\text{EPT}_{m}$ to denote a machine's effective process time,</p>
+<p>$$\text{EPT}<em>{m} = \frac{1}{\text{EPR}</em>{m}}$$</p>
+<p><span style="background-color: lightgray; color: black;"><em><strong>Machine Busy Rate</strong></em></span>:
+the percent of time, over a given time period, spent in the busy state</p>
+<p>$$\text{B}<em>{m} = \frac{\text{AR}</em>{m}}{\text{PR}<em>{m}}=\text{AR}</em>{m}\times\text{PT}_{m}$$</p>
+<ul>
+<li>$\text{AR}_{m}=$ Arrival rate at the machine</li>
+<li>$\text{PR}_{m}=$ Raw process rate of the machine</li>
+<li>$\text{PT}_{m}=$ Raw process time of the machine</li>
+</ul>
+<p><span style="background-color: lightgray; color: black;"><em><strong>Machine Occupancy Rate</strong></em></span>:
+percentage of the available time in the busy state</p>
+<p>$$\rho_{m} = \frac{\text{B}<em>{m}}{\text{A}</em>{m}}$$</p>
+<p>$$\rho_{m} = \frac{\text{AR}<em>{m}}{\text{EPR}</em>{m}}$$</p>
+<p><span style="background-color: lightgray; color: black;"><em><strong>Machine Production Control Channel</strong></em></span></p>
+<p>$$\text{PCC}<em>{m} = \frac{\text{A}</em>{m}-\text{B}<em>{m}}{\text{A}</em>{m}} = 1-\rho_{m}$$</p>
+<h3 id="workstation-performance">Workstation Performance</h3>
+<p>A discussion of the performance measures of a workstation will make sense in general <u>only if the workstation supports a single process step</u> and every machine in the workstation is qualified to support that process step and only that process step. (对于不符合这种假设的其他 workstation, 会在之后的章节讨论到)</p>
+<p>$$\begin{aligned}
+\text{TH}<em>{ws} &amp;= \sum</em>{m=1}^M \text{TH}<em>{m} &amp; \text{throughput rate}\
+\text{EPR}</em>{ws} &amp;= \sum_{m=1}^M \text{EPR}<em>{m} &amp; \text{theoretical capacity}\
+\text{A}</em>{ws} &amp;= \sum_{m=1}^M \text{A}<em>{m}/M &amp; \text{availability}\
+\text{B}</em>{ws} &amp;= \frac{\text{AR}<em>{ws}}{\text{PR}</em>{ws}} &amp; \text{busy time rate}\
+\rho_{ws} &amp;= \frac{\text{B}<em>{ws}}{\text{A}</em>{ws}} = \frac{\text{AR}<em>{ws}}{\text{EPR}</em>{ws}} &amp; \text{occupancy rate}\
+\text{PCC}<em>{ws} &amp;= 1-\rho</em>{ws}
+\end{aligned}$$</p>
+<p>需要注意的是: <span style="background-color: yellow; color: black;">$\text{SC}<em>{ws}$ sustainable capacity, 和 $\text{SC}</em>{m}$ 没有求和相等的关系, 而是受到多种其他情况的影响</span></p>
+<h3 id="factory-performance">Factory Performance</h3>
+<ul>
+<li>$\text{CT}_{f}$: Factory cycle time</li>
+<li>$\text{CTE}_{f}$: Factory cycle-time efficiency</li>
+<li>$\text{TH}_{f}$: Factory throughput rate (rate of flow of jobs through the entire factory)</li>
+<li>$\text{SC}_{f}$: Factory maximum sustainable capacity, <u>determined by the maximum factory cycle time that the firm can tolerate</u></li>
+<li>$\text{EPR}_{f}$: Factory maximum theoretical capacity</li>
+<li>Product lead time</li>
+<li>Factory moves</li>
+<li>$\text{WIP}_{f}$: Factory inventory</li>
+</ul>
+<p><span style="background-color: lightgray; color: black;"><em><strong>Factory Cycle Time</strong></em></span></p>
+<p>$$\text{CT}<em>{f} = \sum</em>{ps=1}^P \text{CT}_{ps}$$</p>
+<p><span style="background-color: lightgray; color: black;"><em><strong>Factory Cycle-Time Efficiency</strong></em></span></p>
+<p>$$\text{CTE}_{f} = \frac{\text{Process Time}<em>f}{\text{CT}</em>{f}}$$</p>
+<p><span style="background-color: lightgray; color: black;"><em><strong>Factory Inventory</strong></em></span>: Little's Law</p>
+<p>$$\text{WIP}<em>{f} = \text{TH}</em>{f}\times\text{CT}_{f}$$</p>
+<h2 id="37-put-it-all-together">3.7 Put It All Together</h2>
+<p>A simple but meaningful example. 这个例子不仅展示了工厂内部各种性能指标的计算和相互关系, 更重要是, <strong>它强调了 降低 dor</strong></p>
+<h3 id="371-workstation-centric-model-initial">3.7.1 Workstation-Centric Model (Initial)</h3>
+<center><img src="/images/2023-03/Snipaste_2023-04-18_20-14-03.png" width="60%"></center>
+<p>Let's consider a factory with:</p>
+<ul>
+<li>arrival rate $\text{AR}_f=1.5$ jobs/ hr</li>
+<li>operates $168$ hrs/ week</li>
+<li>degree of reentrancy $\text{DoR}=2$</li>
+<li><strong>no variability</strong></li>
+</ul>
+<center><img src="/images/2023-03/Snipaste_2023-04-18_20-24-56.png"  width="80%"> </center>
+<p>Using the above data, we may compute the effective process rate $\text{EPR}_m$ of each machine:</p>
+<p>$$A_m = \frac{T-(\text{DT}_m + \text{BT}_m)}{T}$$</p>
+<p>$$\text{EPR}_m = A_m\times\text{PR}_m$$</p>
+<p>For example, for machine $\text{A1}$:</p>
+<ul>
+<li>$A_m(\text{A1}) = (168-16.8)/168 = 0.9$</li>
+<li>$\text{EPR}_m(\text{A1}) = 0.9\times 2 = 1.80$ jobs/ hr</li>
+</ul>
+<p>Then after calulating for each machine, we can update the table above as follows:</p>
+<center><img src="/images/2023-03/Snipaste_2023-04-18_21-02-47.png" width="80%"></center>
+<p>The throughput rate imposed on each workstation is $1.5+1.5=3$ jobs/ hr. And the maximum theoretical of each workstation can be calculated using the table above:</p>
+<ul>
+<li>$\text{EPR}_{ws}(\text{A}) = 2\times 1.8=3.6$ jobs/ hr</li>
+<li>$\text{EPR}_{ws}(\text{B}) = 4\times 0.85=3.4$ jobs/ hr</li>
+<li>$\text{EPR}_{ws}(\text{C}) = 4\times 0.855=3.42$ jobs/ hr</li>
+</ul>
+<p>All these $\text{EPR}_{ws}$ is larger than $3$, which seems to show that each workstation is capable of supporting the job flow.</p>
+<h3 id="372-proccess-step-centric-model">3.7.2 Proccess-Step-Centric Model</h3>
+<p>We have to firstly allocate machines to process steps in each workstation, for example:</p>
+<ul>
+<li>Process step 1 $\to$ machine A1</li>
+<li>Process step 2 $\to$ machines B1 and B2</li>
+<li>Process step 3 $\to$ machines C1 and C2</li>
+<li>Process step 4 $\to$ machine A2</li>
+<li>Process step 5 $\to$ machines B3 and B4</li>
+<li>Process step 6 $\to$ machines C3 and C</li>
+</ul>
+<center><img src="/images/2023-03/Snipaste_2023-04-18_21-15-28.png" width="80%"></center>
+<p>Using the above allocated process-step-centric model, a new <span style="background-color: yellow; color: black;">fully decoupled workstation-centric model</span> can be constructed.</p>
+<h3 id="373-workstation-centric-model-decoupled">3.7.3 Workstation-Centric Model (Decoupled)</h3>
+<center><img src="/images/2023-03/Snipaste_2023-04-18_21-21-17.png" width="80%"></center>
+<p>小括号里的数据表示新的的 workstation 的 $\text{EPR}_{ws}$ (基于 Section 3.7.1 的第二张 machine 表计算)</p>
+<p>Then we can calculate the workstation <em><strong>occupancy rate</strong></em>, and find the <em><strong>bottleneck</strong></em> is workstation $\text{B}$ and $\text{B}'$, or process steps $2$ and $5$</p>
+<p>$$\rho_{ws} = \frac{\text{TH}<em>{ws}}{\text{EPR}</em>{ws}}$$</p>
+<center><img src="/images/2023-03/Snipaste_2023-04-18_21-25-33.png" width="50%"></center>
+<p>Finally, let's determine the <strong><font color="blue">cycle time</font></strong> of the factory. Assuming:</p>
+<ul>
+<li>no varaiablity in machines, procee rates, and throughput rates</li>
+<li>the time required to move from one nontransit process step to another is 5 minutes</li>
+</ul>
+<p>(以下公式中的 $\text{EPR}_{ps}$ 来自于本 Section (3.7.3) 第一张图中 workstation 下方的小括号)</p>
+<p>$$\text{CT}<em>{f} = 6\times\frac{5}{60}+\sum</em>{p=1}^{6} \text{CT}<em>{ps}(p) = 0.5 + \sum</em>{p=1}^{6}\frac{1}{\text{EPR}_{ps}(p)}=3.5972\text{ hrs}$$</p>
+<p>$$\text{WIP}<em>{f} = \text{TH}</em>{f}\times\text{CT}_{f} = 1.5\times 3.5972 = 5.9358\text{ jobs}$$</p>
+<p>在这个例子中, 我们通过从 initial workstatio-centric model 到 decoupled workstation-centric model 的转变, 把 $\text{DoR}$ 降低到了 $1$。尽管对于绝大多数 real factories, 我们无法实现降低 $\text{DoR}$ 到 $=1$ 这样的转变, 但是我们仍可以通过尽可能的减小 $\text{DoR}$ 来简化问题</p>
+<p>同时也要注意, 这里最后的 cycle time 是及其理想的, 因为我们假设一个 product 可以被一个 workstation 中的多台 machines <strong><font color='blue'>同时处理</font></strong>, 遑论我们还没有考虑 variablity 的巨大影响</p>
+<p><strong>代码示例: A Simple Cylce Time Simulation</strong> <a href="../../_files/Skyworks/Book-Optimizing%20Factory%20Performance/Chapter%203/FabSim_1_3.py">FabSim_1_3.py</a></p>
+<h1 id="4-running-a-factory-in-two-dimensions">4. Running a Factory: In Two Dimensions</h1>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<h1 id="5-variability">5. Variability</h1>
+<h2 id="51-measuring-variability">5.1 Measuring Variability</h2>
+<p>$CoV=\sigma/\mu$: coefficient of variation</p>
+<p>$C_{AR}$: cov of <em><strong>Arrivals</strong></em> (interarrival times)</p>
+<ul>
+<li>In general, $C_{AR}$ of batch arrivals is larger than that of continuous arrivals (因为 batch 内部的 interarrival time = 0, 这会导致 $\mu$ 变得很小, 因此 cov 变得很大)</li>
+</ul>
+<p>$C_{PT}$: cov of <em><strong>Raw Process Times</strong></em></p>
+<ul>
+<li>$C_{PT}(ps)$: ... of a given process step</li>
+</ul>
+<center>
+<h4 id="cov-of-effective-process-times">CoV of Effective Process Times</h4>
+</center>
+<p>For a nonreentrant ($\text{DoR} = 1$) workstation:</p>
+<p>$$C^2_{EPT}(ps) = C^2_0 + A(1-A)\frac{MTTR}{PT} + C^2_{DE}A(1-A)\frac{MTTR}{PT}$$</p>
+<ul>
+<li>$C_0$: inherent variability of the process times of the machines</li>
+<li>$C_{DE}$: cov of blocked and down events</li>
+<li>$A$: average availability of the machines</li>
+<li>$MTTR$: mean time to recover from blocked and down events</li>
+<li>$PT$: average raw process time of the machines (理想情况下, 完成一次 process 所需要的时间)</li>
+</ul>
+<p><strong>Example</strong>:
+For process step 7, we know</p>
+<ul>
+<li>mean time between down events $MTBE=90$, $MTTR=10$</li>
+<li>$C_0=C_{PT}(7)=0.042$ (approximated), $C_{DE}(7)=1.5$</li>
+<li>$PT(7)=1$ hour</li>
+</ul>
+<p>Then $A=90/(90+10)=0.9$, and finally:</p>
+<p>$$C^2_{EPT}(7) = 0.042^2 + 0.9(1-0.9)\frac{10}{1} + 1.5^2\times0.9(1-0.9)\frac{10}{1} = 2.93$$</p>
+<p>可以看到即使 the inherent variability of the process times of the machines ($C_0$) 很小, 但是由于 blocked and down events 及其 cov 很大 ($MTTR$, $C_{DE}$), 因而使得 effective process times 的 cov 变得很大</p>
+<p>不难发现, assume no blocked events, 如果我们能够 divide scheduled down events into more frequent, smaller segments, 那么在不改变 availability ($A$) 的情况下, 就能够通过减小 $MTTR/PT$ 来显著降低 cov of  effective process times</p>
+<h2 id="52-three-fundamental-equations">5.2 Three Fundamental Equations</h2>
+<h3 id="equation-1-littles-law">Equation 1: Little's Law</h3>
+<p>$$\boxed{WIP = CT\times TH}$$</p>
+<h3 id="equation-2-pollaczek-khintchine">Equation 2: Pollaczek Khintchine</h3>
+<p>P-K equation is used to predict the cycle time of a factory, a portion of a factory, or some individual workstation. However, here, we will focus on the cycle time at the process-step level</p>
+<p>Factors covered:</p>
+<ul>
+<li>$CT_{ps}$: cycle time of the process step</li>
+<li>$C_{AR}$: cov of arrivals at the process step (time between interarrivals)</li>
+<li>$C_{EPT}$: cov of effective process times of the machines that support the process step</li>
+<li>$EPR_{ps}$: effective process rate (maximum theoretical capacity) of each of the <u><strong>identical machines</strong></u> that... (如果 that process-step is supported by a single machine, then $EPR_{ps}=EPR_{m}$)</li>
+<li>$A$: average availability of the machines that...</li>
+<li>$\rho=TH/EPR$: average occupancy (a.k.a. utliization) of the machines that... (要注意辨别这里的 $TH$ 和 $EPR$, 例如对于理想工厂 with no reentrancy, 每个 workstation 串联在一起, 任意 workstation 内的 machines 完全相同且都能独立完成一个 process-step, 那么此时 $\rho=TH_f/EPR_{ws}=TH_f/(m\times EPR_m)$)</li>
+<li>$BS$: batch size of the machines that...</li>
+<li>$AR$: arrival rate of the jobs arriving at the process step</li>
+<li>$m$: number of (identical) machines supporting the process step.</li>
+</ul>
+<p>To determine the cycle time of a process step supported by $m$ <u><strong>nonreentrant and nonbatching</strong></u> machines.</p>
+<p>$$\boxed{CT_{ps} = \underbrace{\bigg(\frac{C^2_{AR}+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}<em>{\text{wait in queue time}} + \underbrace{\frac{1}{EPR</em>{ps}}}_{\text{effective process time}}}$$</p>
+<pre class="hljs"><code><div>rho = TH_f/EPR_ws
+
+CT_queue = ((cov_AR**<span class="hljs-number">2</span>+cov_EPT**<span class="hljs-number">2</span>)/<span class="hljs-number">2</span>) * (rho**(np.sqrt(<span class="hljs-number">2</span>*(m+<span class="hljs-number">1</span>))<span class="hljs-number">-1</span>) / m / (<span class="hljs-number">1</span>-rho)) * (<span class="hljs-number">1</span>/EPR_m)
+CT_processing = <span class="hljs-number">1</span>/EPR_m
+CT_ws = CT_processing + CT_queue
+</div></code></pre>
+<p>so for a single machine ($m=1$):</p>
+<p>$$CT_{ps} = \underbrace{\bigg(\frac{C^2_{AR}+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho}{(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}<em>{\text{wait in queue time}} + \underbrace{\frac{1}{EPR</em>{ps}}}_{\text{effective process time}}$$</p>
+<p>For the process step supported by $m$ machines empolying <strong>batching</strong>:</p>
+<p>$$CT_{ps} = \underbrace{\frac{BS-1}{2AR}}<em>{\text{batch forming time}} + \underbrace{\bigg(\frac{C^2</em>{AR}/BS+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}<em>{\text{wait in queue time}} + \underbrace{\frac{1}{EPR</em>{ps}}}_{\text{effective process time}}$$</p>
+<h3 id="equation-3-linking-propagation-of-variability">Equation 3: Linking (Propagation of Variability)</h3>
+<p>employed to estimate the cov of the jobs departing a given process step.</p>
+<p>Given $m$ machines and no reentrancy:</p>
+<p>$$\boxed{C^2_{DR} = 1 + (1-\rho^2)(C^2_{AR}-1) + \Big(\frac{\rho^2}{\sqrt m}\Big)(C^2_{EPT}-1)}$$</p>
+<pre class="hljs"><code><div>rho = TH_f / EPR_ws
+cov_DR = np.sqrt(<span class="hljs-number">1</span> + (<span class="hljs-number">1</span>-rho**<span class="hljs-number">2</span>)*(cov_AR**<span class="hljs-number">2</span><span class="hljs-number">-1</span>) + (rho**<span class="hljs-number">2</span>/np.sqrt(m))*(cov_EPT**<span class="hljs-number">2</span><span class="hljs-number">-1</span>))
+</div></code></pre>
+<p>so for a single machine ($m=1$):</p>
+<p>$$C^2_{DR} = \rho^2\times C^2_{EPT} + (1-\rho^2)\times C^2_{AR}$$</p>
+<p><strong>Propagation</strong>:</p>
+<center><img src="/images/2023-03/Snipaste_2023-05-04_14-57-34.png" width="80%"></center>
+<p>如上图, assume all machines in the workstation B support process step 2 and only that process step, 已知 $C_{AR}(2), C_{EPT}(2), \rho_{ws}(B), m$, 即可算出 $C_{DR}(2)$.</p>
+<p>进一步的, 如果 the transit step between step 2 and 3 has negligible variability and high capactiy, 那么 $C_{AR}(3) = C_{DR}(2)$, 从而结合 step 3 的数据继续算下去</p>
+<p>By means of the three fundamental equations, we may <strong>approximate</strong> the cycle times of each process step, the variability propagated from one process step to another, and the average inventory at each process step.</p>
+<h2 id="53-capacity-and-variabiliy">5.3 Capacity and Variabiliy</h2>
+<p>Increasing the theorectical capacity of a workstation ($EPR$) 可能会导致整个工厂的 cycle time 增加, 尽管这与我们的直觉相违背</p>
+<p>例如, 对于前后相连的两个 process step, 3 &amp; 4, where step 3 in workstation C, step 4 in workstation D, 增加 $EPR(C)$ 会导致 utilization ($\rho$) 的下降:</p>
+<p>$$\rho(C) = TH(C)/EPR(C)$$</p>
+<p>而根据 Equation 3: Linking (Propagation of Variability), $\rho$ 的下降<strong>有可能</strong>会导致 $C_{DR}(3)$ 的增加. 又因为 $C_{AR}(4) = C_{DR}(3)$, 所以 $C_{AR}(5) = C_{DR}(4)$ 也会增加, 从而导致<strong>恶性的连锁反应</strong></p>
+<p>$$C^2_{DR} = 1 + (1-\rho^2)(C^2_{AR}-1) + \Big(\frac{\rho^2}{\sqrt m}\Big)(C^2_{EPT}-1)$$</p>
+<p>再根据 Equation 2: Pollaczek Khintchine, 由于 process-step 3 之后所有的 $C_{AR}$ 都会增加, 所以它们的 cycle time 也<strong>可能</strong>会增加, 最终导致整个工厂的 cycle time 大幅增加</p>
+<p>$$CT_{ps} = \underbrace{\bigg(\frac{C^2_{AR}+C^2_{EPT}}{2}\bigg)\bigg[\frac{\rho^{\sqrt{2(m+1)}-1}}{m(1-\rho)}\bigg]\bigg(\frac{1}{EPR_{ps}}\bigg)}<em>{\text{wait in queue time}} + \underbrace{\frac{1}{EPR</em>{ps}}}_{\text{effective process time}}$$</p>
+<p><span style="background-color: yellow; color: black;">需要注意的是, 以上示例仅揭示了一种可能性</span> (实际上增加 $EPR(C)$ 当然也可能会导致 overall cycle time 的下降) <span style="background-color: yellow; color: black;">我们更需要明白的是不能通过直觉来判断一项改变的好坏, 而是要 must have the data required to determine the coefficient of variability of both arrivals and departures</span></p>
+<h1 id="6-running-a-factory-in-three-dimensions">6. Running a Factory: In Three Dimensions</h1>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<h1 id="7-three-holistic-performance-curves">7. Three Holistic Performance Curves</h1>
+<p>In Chapters 4 and 6 we explored the 12-workstation factory. In this chapter we use that same model to <strong>illustrate three factory performance curves</strong> by means of which we may fairly and objectively evaluate and compare factory performance (<strong>目的是为了比较不同的工厂</strong>)</p>
+<ul>
+<li>Operating curve (OC).</li>
+<li>Factory load-adjusted cycle-time efficiency (LACTE) plot.</li>
+<li>Profit curve (PC).</li>
+</ul>
+<h2 id="71-factory-operating-curve">7.1 Factory Operating Curve</h2>
+<p>A plot of factory cycle time versus factory loading, where the loading could be</p>
+<ol>
+<li>the factory throughput rate (flow rate of jobs introduced)</li>
+<li>the ratio of factory throughput rate to the upper bound of factory capacity</li>
+</ol>
+<p>例如对于一个 nonreentrant 5-workstation factory, 已知以下参数, 我们可以使用 Chapter 5.2 中的公式计算出整个 factory 的 cycle time:</p>
+<ul>
+<li><strong>为什么 WS_B 的 cov_AR 是横杠?</strong>
+因为只的 cov_AR(A) 是已知的, 而后面的 cov_AR(B) = cov_DA(A), 以此类推, 而这些都是需要计算的</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Workstation</th>
+<th>WS_A</th>
+<th>WS_B</th>
+<th>WS_C</th>
+<th>WS_D</th>
+<th>WS_E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$EPR_m$</td>
+<td>4</td>
+<td>10</td>
+<td>8</td>
+<td>4.1</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Machine Count ($m$)</td>
+<td>6</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Cov of interarrival times ($C_{AR}$)</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Cov of process times ($EPT_m$)</td>
+<td>8</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>代码实现</strong>: <a href="./../../_files/Skyworks/Book-Optimizing%20Factory%20Performance/Chapter%207/FabSim_1_7.py">FabSim_1_7.py</a></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> sys
+sys.path.append(<span class="hljs-string">r"/Users/lizhekai/Desktop/git/ZhekaiLi.github.io/_files/Skyworks/Book-Optimizing Factory Performance/Chapter 7"</span>)
+<span class="hljs-keyword">from</span> FabSim_1_7 <span class="hljs-keyword">import</span> Factory, WorkStation
+
+CTs = []
+<span class="hljs-keyword">for</span> TH_f <span class="hljs-keyword">in</span> np.linspace(<span class="hljs-number">0.5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">50</span>):
+    ws_A = WorkStation(TH_f=TH_f, cov_AR=<span class="hljs-number">8</span>, cov_EPT=<span class="hljs-number">8</span>, m=<span class="hljs-number">6</span>, EPR_m=<span class="hljs-number">4</span>)
+    ws_B = WorkStation(TH_f=TH_f, cov_AR=ws_A.cov_DR, cov_EPT=<span class="hljs-number">2</span>, m=<span class="hljs-number">3</span>, EPR_m=<span class="hljs-number">10</span>)
+    ws_C = WorkStation(TH_f=TH_f, cov_AR=ws_B.cov_DR, cov_EPT=<span class="hljs-number">3</span>, m=<span class="hljs-number">4</span>, EPR_m=<span class="hljs-number">8</span>)
+    ws_D = WorkStation(TH_f=TH_f, cov_AR=ws_C.cov_DR, cov_EPT=<span class="hljs-number">3</span>, m=<span class="hljs-number">5</span>, EPR_m=<span class="hljs-number">4.1</span>)
+    ws_E = WorkStation(TH_f=TH_f, cov_AR=ws_D.cov_DR, cov_EPT=<span class="hljs-number">2</span>, m=<span class="hljs-number">3</span>, EPR_m=<span class="hljs-number">9.5</span>)
+
+    f = Factory(TH_f=TH_f)
+    f.add_workstations([ws_A, ws_B, ws_C, ws_D, ws_E])
+    CTs.append(f.CT_f)
+
+plt.xlabel(<span class="hljs-string">"Factory Load (TH_f, jobs/day)"</span>)
+plt.ylabel(<span class="hljs-string">"Cycle Time (days)"</span>)
+plt.plot(np.linspace(<span class="hljs-number">0.5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">50</span>), CTs)
+</div></code></pre>
+<img src="/images/2023-03/Snipaste_2023-05-07_12-28-51.png" width="60%">
+<p>显然, 随着 factory load 的上升, cycle time 呈现指数级的增长. 那么有什么办法可以缓解这种爆炸增长呢?</p>
+<ol>
+<li>减少 variability</li>
+<li>增加瓶颈 workstation 的 EPR_ws (capacity)</li>
+</ol>
+<p>例如, <u>(1) 在把 ws_A 的 cov_EPT 从 8 降低至 1 后:</p>
+<img src="/images/2023-03/Snipaste_2023-05-07_12-33-51.png"  width="60%">
+<p>(2) Based on (1) 在进一步把 ws_D 的 EPR_m 从 4.1 增加至 5 后:</u></p>
+<img src="/images/2023-03/Snipaste_2023-05-07_12-39-51.png"  width="60%">
+<h2 id="72-load-adjusted-cycle-time-efficiency">7.2 Load-Adjusted Cycle-Time Efficiency</h2>
+<p>Define Cycle-Time Efficiency (CTE) as the ratio of the process time to the cycle time:</p>
+<p>$$CTE_f = \frac{\text{Process Time}_f}{CT_f}$$</p>
+<p>We define a factory’s <em>process time</em> as that which includes the time devoted to all value-added as well as non-value-added process steps. Alternative representations of factory cycle-time efficiency omit any non-value-added process step time (e.g., time consumed by transit, inspection, or test).</p>
+<p>但是, <span style="background-color: yellow; color: black;">我们无法将现在的 $CTE$ 作为一个工厂的评价标准</span>: 如下表, 不难发现 Loading 越低 CTE 就越大, 这是毫无意义的</p>
+<center><img src="/images/2023-03/Snipaste_2023-05-07_16-38-19.png" width="80%"></center>
+<p>因此为了使 $CTE-$metric 有意义, we have to make it adjustable to factory loading. 因此定义 load-adjusted cycle-time efficiency (LACTE) 为:</p>
+<p>$$\boxed{LACTE_{\text{loading}} = \frac{\text{Process Time}_f}{CT_f} \times \frac{TH_f}{TH_f^*}}$$</p>
+<ul>
+<li>$TH_f^*$: maximum theoretical factory capacity</li>
+<li>$TH_f$: actual factory throughput</li>
+</ul>
+<p>例如, 还是对于 Section 7.1 中的 nonreentrant 5-workstations factory, 我们可以画出 plot of LACTE vs. factory load:</p>
+<p><strong>代码实现</strong>: <a href="./../../_files/Skyworks/Book-Optimizing%20Factory%20Performance/Chapter%207/FabSim_1_7.py">FabSim_1_7.py</a></p>
+<pre class="hljs"><code><div>LACTEs = []
+TH_f_max = <span class="hljs-number">0</span>
+<span class="hljs-keyword">for</span> TH_f <span class="hljs-keyword">in</span> np.linspace(<span class="hljs-number">0.5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">50</span>):
+    ws_A = WorkStation(TH_f=TH_f, cov_AR=<span class="hljs-number">8</span>, cov_EPT=<span class="hljs-number">8</span>, m=<span class="hljs-number">6</span>, EPR_m=<span class="hljs-number">4</span>)
+    ws_B = WorkStation(TH_f=TH_f, cov_AR=ws_A.cov_DR, cov_EPT=<span class="hljs-number">2</span>, m=<span class="hljs-number">3</span>, EPR_m=<span class="hljs-number">10</span>)
+    ws_C = WorkStation(TH_f=TH_f, cov_AR=ws_B.cov_DR, cov_EPT=<span class="hljs-number">3</span>, m=<span class="hljs-number">4</span>, EPR_m=<span class="hljs-number">8</span>)
+    ws_D = WorkStation(TH_f=TH_f, cov_AR=ws_C.cov_DR, cov_EPT=<span class="hljs-number">3</span>, m=<span class="hljs-number">5</span>, EPR_m=<span class="hljs-number">4.1</span>)
+    ws_E = WorkStation(TH_f=TH_f, cov_AR=ws_D.cov_DR, cov_EPT=<span class="hljs-number">2</span>, m=<span class="hljs-number">3</span>, EPR_m=<span class="hljs-number">9.5</span>)
+
+    f = Factory(TH_f=TH_f)
+    f.add_workstations([ws_A, ws_B, ws_C, ws_D, ws_E])
+    LACTEs.append(f.calLACET())
+    TH_f_max = f.TH_f_max
+
+plt.xlabel(<span class="hljs-string">"Factory Load (percentage of the capacity)"</span>)
+plt.ylabel(<span class="hljs-string">"LACTE"</span>)
+plt.plot(np.linspace(<span class="hljs-number">0.5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">50</span>)/TH_f_max, LACTEs)
+</div></code></pre>
+<img src="/images/2023-03/Snipaste_2023-05-07_18-57-44.png"  width="60%">
+<p>类似 Section 7.1, 降低 variability 后的工厂有更好的表现</p>
+<img src="/images/2023-03/Snipaste_2023-05-07_20-02-57.png"  width="60%">
+<h3 id="lacte-evnvelope">LACTE Evnvelope</h3>
+<p>如下图黑线, 这里的 envelope 可以理解为 factory performace 的上界, 即一种 utopian (乌托邦式的) 理想状态: 该状态下 <strong>variability = 0</strong></p>
+<center><img src="/images/2023-03/Snipaste_2023-05-07_20-06-39.png" width="65%"></center>
+<h2 id="73-profit-curve">7.3 Profit Curve</h2>
+<p>The factory profit curve serves to estimate that optimal level of loading. Derivation of the profit curve requires, as a first step, the development of estimates of profit over a given planning horizon</p>
+<p>例如现有以下两种产品 Product A, Product B, 分别由 Factory A, Factory B 生产 (这两个工厂除了生产不同的产品外, 其他参数都一样)</p>
+<center><img src="/images/2023-03/Snipaste_2023-05-08_10-52-08.png" width="70%"><br>
+    <div style="color: #808080;">Figure: Profit versus time plots, products A and B</div></center>
+<p>由于两个产品不同的 profit vs. time plot, 两个工厂的 profit curve 也不同:</p>
+<center><img src="/images/2023-03/Snipaste_2023-05-08_10-52-28.png" width="80%"><br>
+    <div style="color: #808080;">Figure: Factory profit curves for factories A and B</div></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<center><img src="/images/2023-03/.png" width="80%"></center>
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+<img src="/images/2023-03/.png"  width="80%">
+</body>
+</html>
