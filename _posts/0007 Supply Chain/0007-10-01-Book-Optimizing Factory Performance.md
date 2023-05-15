@@ -701,8 +701,6 @@ The factory profit curve serves to estimate that optimal level of loading. Deriv
 
 
 
-
-
 <img src="/images/2023-03/.png"  width="80%">
 <img src="/images/2023-03/.png"  width="80%">
 <img src="/images/2023-03/.png"  width="80%">
