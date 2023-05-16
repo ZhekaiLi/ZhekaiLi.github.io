@@ -701,7 +701,8 @@ The factory profit curve serves to estimate that optimal level of loading. Deriv
 # 8. Factory Performance Metrics: The Good, the Bad, and the Ugly
 
 Good Metrics:
-- Waddington e
+- Waddington effect plot
+- M-ra
 
 
 <img src="/images/2023-03/.png"  width="80%">
