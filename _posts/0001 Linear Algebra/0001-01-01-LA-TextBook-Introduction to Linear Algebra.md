@@ -6,7 +6,7 @@ description: Personal Notes
 keywords: Math415，Linear-Algebra，Matrix
 mathjax: true
 ---
-
+![[Snipaste_2023-05-17_09-37-22 1.png]]
 
 # TextBook: *Introduction to Linear Algebra*
 
