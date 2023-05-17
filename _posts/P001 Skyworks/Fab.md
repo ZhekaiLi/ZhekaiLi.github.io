@@ -10,6 +10,7 @@
 |SAW| Surface Acoustic Wave 表面声波滤波器|
 |WSPD| Wafter Starts Per Day|
 
+![[Snipaste_2023-05-17_09-37-22 2.png]]
 
 
 ```mermaid
@@ -23,7 +24,6 @@ F(Final test)
 
 A-->B-->C-->D-->E-->F
 ```
-
 
 Wafer fab > work areas > work centers (a set of machines that provide similar processing capabilities) > machines (or tools, can have a buffer to store lots)
 
@@ -52,10 +52,6 @@ Steps:
     - 曝光: 紫外线照射掩膜，穿过透镜设在光刻胶上（被紫外线照射后的光刻胶变得可溶）
 - 显影: 使用显影液冲洗可溶的光刻胶
 - 蚀刻: 把没有光刻胶覆盖的区域的氧化膜(和下方的硅一起)刻掉，形成一个突起的结构，也就是鳍式场效应晶体管的“鳍”
-
-
-![[Snipaste_2023-05-17_09-37-22.png]]
-
 <center><img src="/images/2023-05/Snipaste_2023-05-16_13-23-32.png" width="40%"></center>
 
 - 如此不断的重复
@@ -108,6 +104,21 @@ The information needed to represent a single process step includes:
 - operator requirements including skills, availability requirements, quantity of required workers 
 - rework loops 
 - alternative flows
+
+
+## Modeling of Working Objects
+Lots are the moving entities in wafer fabs:
+- name of the lot 
+- number of wafers (might influence the processing time of the lot)
+- product type (specify which process flow will be used)
+- start time 
+- due date 
+- weight (priority)
+
+In contrast to lots, batches are created only temporary in front of batch processing tools
+
+
+
 
 
 
