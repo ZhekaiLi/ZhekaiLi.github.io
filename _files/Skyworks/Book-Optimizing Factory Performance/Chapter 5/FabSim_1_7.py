@@ -1,7 +1,6 @@
 '''Edit date 2023.5.6
 '''
 
-
 import numpy as np
 
 class Factory:

@@ -7,10 +7,8 @@ keywords: Math415，Linear-Algebra，Matrix
 mathjax: true
 ---
 
-<center>
 
 # TextBook: *Introduction to Linear Algebra*
-</center>
 
 Definde $A$ is an $m\times n$ matrix
 
