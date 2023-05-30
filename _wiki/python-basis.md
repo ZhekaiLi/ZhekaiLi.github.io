@@ -401,6 +401,8 @@ b >>> [2, 3]
 ```
 
 ### 2. Eliminate Warnings
+aka
+- 取消 warning 
 
 ```py
 import warnings

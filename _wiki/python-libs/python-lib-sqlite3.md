@@ -75,8 +75,6 @@ print(rows)
 ```
 
 
-```
-
 
 
 # 2. Execute 

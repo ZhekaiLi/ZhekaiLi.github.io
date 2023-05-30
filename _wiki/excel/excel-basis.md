@@ -7,7 +7,7 @@ description:
 keywords: Excel
 ---
 
-# 1 Basic
+# 1. Basic
 **(1) 同时选择多个 cell**: 按住 `command`
 
 **(2) 显示公式**: 在等号前加一个单引号
@@ -28,7 +28,10 @@ keywords: Excel
 
 
 
-# 2 Named Ranges
+
+
+
+# 2. Named Ranges
 `Named Range` 一般用于定位一些重要数据或是定值，同时方便其调用
 ## 2.1 Define
 三种创建方式:
@@ -71,7 +74,7 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 
 
 
-### 2.4 Data Validation
+## 2.4 Data Validation
 为了实现如下效果
 
 <img src="/images/2022-06/Snipaste_2022-06-04_09-06-45.png"  width="70%">
@@ -106,11 +109,10 @@ AVERAGEIFS() MINIFS() MAXIFS()   // 同理
 
 
 
----
 
 
 
-# 3 Functions
+# 3. Functions
 ## 3.1 Text
 > **Combine**
 
@@ -322,11 +324,12 @@ XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], 
 <img src="/images/2022-06/Snipaste_2022-06-05_09-47-09.png"  width="`00%">
 
 ```cs
-INDEX(array, row_num, [col_num])
-// INDEX(Population, 2) 返回 Albania 的人口 2,880,917
+INDEX(array, index)            // 返回 array 的元素
+INDEX(table, row_num, col_num) // 返回 table 的元素
+// 如果把 row_num 设置为 0, 则返回整列; col_num 同理
 
 MATCH(lookup_value, lookup_array, [approximate_match])
-// MATCH(A2, Country, 0) 返回 3 (Algeria 在 Country(Named Range) 中的排序)
+// MATCH(A2, Country, 0) 返回 3 (Algeria 在 Country(Named Range) 中的排序, 也就是第三行)
 ```
 因此最终，在红框2中输入以下公式
 
@@ -342,11 +345,10 @@ MATCH(lookup_value, lookup_array, [approximate_match])
 
 
 
----
 
 
 
-# 4 Table
+# 4. Table
 ## 4.1 Create
 菜单栏 `Insert`$\to$`Tables`$\to$`Table` (<span style="background-color: yellow; color: black;">Shortcut `Ctrl+T`</span>)
 

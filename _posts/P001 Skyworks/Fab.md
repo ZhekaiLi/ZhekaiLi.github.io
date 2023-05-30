@@ -1,17 +1,5 @@
 
 
-|Acronym| Definition| 
-|-|-|
-|BAW| Bulk Acoustic Wave 散装声波滤波器|
-|DPS| Die (or Dice) Processing
-|GDPW| Gross Die Per Wafer (e5)|
-|IC| Integrated Circuit|
-|PM| Preemptive Maintanance
-|SAW| Surface Acoustic Wave 表面声波滤波器|
-|WSPD| Wafter Starts Per Day|
-
-![[Snipaste_2023-05-17_09-37-22 2.png]]
-
 
 ```mermaid
 graph LR
@@ -129,7 +117,77 @@ The process steps that are not related to bottleneck machines are replaced by fi
 
 <center><img src="/images/2023-05/Snipaste_2023-05-16_14-19-05.png" width="80%"></center>
 
-<center><img src="/images/2023-05/.png" width="80%"></center>
-<center><img src="/images/2023-05/.png" width="80%"></center>
-<center><img src="/images/2023-05/.png" width="80%"></center>
-<center><img src="/images/2023-05/.png" width="80%"></center>
+
+
+**Route Group**: HBT
+
+**Route Family**: N_6HBT8
+- **Route**/ **Flow_type**: N_6HBT8-M3-MC+N_6CUTE-M3-NOSTREET+N_6P07_TWV-ETC+N_6FPOUTS-NS>N_PC
+Have a process list (stages)
+    - **Stage**
+    several process families could be assigned to one stage
+        - ==**Process Family**/ **EQPTYPE**/ **Tool_type**==
+        a process family could contain several different process steps
+        <img src="/images/2023-05/Snipaste_2023-05-17_10-04-01.png" width="100%">
+            - **Tool_id**
+
+
+## Parameters
+
+- $W_l$         : Weight of lot $l$
+- $d_{l}$       : Due date of lot $l$       
+- $p_{(l,sl),i}$: Process time of $(l,sl)$ on family $i$
+- $sl\in \{1,2,...,Sl\}$: one step of lot $l$
+    - $Sl$: the final step of lot $l$
+    - for example, $S3=5$ means that there are $5$ steps total to finish lot $l=3$, and therefore $s3\in\{1,2,...,5\}$
+
+## Decision variables
+IFF the step $sl$ of the lot $l$ is assigned to be processed at family $i$:
+- $a_{(l,sl),i}=1$, otherwise zero
+
+IFF $(l,sl)$ is firstly processed at family $i$ machine $j$
+- $w_{(l,sl),i,j} = 1$, otherwise zero
+
+IFF $(sl',l')$ just precedes $(l,sl)$:
+- $x_{(l',sl'),(l,sl),i} = 1$, otherwise zero
+
+Time:
+- Start time: $t_{(l,sl)}$
+- Completion time: $C_{l}$
+- $L_{l} \geq \max(0,C_l-d_l)$
+
+## Objective
+
+$$\min \sum_l W_lL_l$$
+
+## Constraints
+1. Each $(l,sl)$ can be only assigned to one family type
+
+$$\sum_i a_{(l,sl),i} = 1\;\;\;\;\forall (l,sl)$$
+
+2. Each $(l,sl)$ must be ==proceded== by one process step or be the first, 
+at the family it assigned to
+
+$$\sum_{i,j}w_{(l,sl),i,j} + \sum_{(l',sl')\neq (l,sl)}x_{(l',sl'),(l,sl),i} = a_{(l,sl),i}\;\;\;\;\forall (l,sl),i$$
+
+3. Each $(l',sl')$ must be ==succeeded== by at most one process step (zero when as the tail), 
+at the family it assigned to
+
+$$\sum_{(l,sl)\neq (l',sl')} x_{(l',sl'),(l,sl),i} \leq a_{(l',sl'),i}\;\;\;\;\forall (l',sl'),i$$
+
+4. Atmost one $(l,sl)$ can be the first at family $i$, machine $j$
+$$\sum_{(l,sl)}w_{(l,sl),i,j}\leq 1\;\;\;\;\forall (i,j)$$
+
+5. Time constraints:
+    - relation between any two steps
+    - relation between two consective steps of one lot
+    - completion time
+
+$$\begin{aligned}
+t_{(l',sl')} + \sum_i p_{(l',sl'),i}x_{(l',sl'),(l,sl),i} + M(\sum_i x_{(l',sl'),(l,sl),i}-1) &\leq t_{(l,sl)}\\
+t_{(l,sl)} + \sum_{(l',sl'),i}p_{(l,sl),i}x_{(l',sl'),(l,sl),i} + \sum_{i,j}p_{(l,sl),i}w_{(l,sl),i,j} &\leq t_{(l,sl+1)}\\
+t_{(l,Sl)} + \sum_{(l',sl'),i}p_{(l,Sl),i}x_{(l',sl'),(l,Sl),i} + \sum_{i,j}p_{(l,Sl),i}w_{(l,Sl),i,j} &\leq C_l
+\end{aligned}$$
+
+
+

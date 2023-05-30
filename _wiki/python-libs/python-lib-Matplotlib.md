@@ -32,7 +32,11 @@ ax.scatter(x=X[:, 0], y=X[:, 1],
 
 **折线图**
 ```py
-ax.plot([x1, x2], [y1, y2], '样式', label='Name')
+ax.plot([x1, x2], [y1, y2], 
+    '样式',
+    linewidth=5,
+    label='Name'
+)
 ```
 - `样式=点形+线形+颜色`，例如 `o-r` 表示红色圆点实线
 - 分开表示样式：`linestyle` `marker` `color`

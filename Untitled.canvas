@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"bd6ebe161412cbb6","x":-160,"y":-180,"width":250,"height":60,"type":"text","text":"s"},
+		{"id":"22184336ddcfe3b8","x":-250,"y":20,"width":400,"height":210,"type":"file","file":"Snipaste_2023-05-17_09-37-22 2.png"}
+	],
+	"edges":[
+		{"id":"3e5a622492c3c310","fromNode":"bd6ebe161412cbb6","fromSide":"bottom","toNode":"22184336ddcfe3b8","toSide":"top"}
+	]
+}

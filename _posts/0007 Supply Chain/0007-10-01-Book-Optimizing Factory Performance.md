@@ -271,7 +271,7 @@ $$\text{B}_{m} = \frac{\text{AR}_{m}}{\text{PR}_{m}}=\text{AR}_{m}\times\text{PT
 - $\text{PR}_{m}=$ Raw process rate of the machine
 - $\text{PT}_{m}=$ Raw process time of the machine
 
-<span style="background-color: lightgray; color: black;">***Machine Occupancy Rate***</span>:
+<span style="background-color: lightgray; color: black;">***Machine Occupancy Rate***</span> (Utilization):
 percentage of the available time in the busy state
 
 $$\rho_{m} = \frac{\text{B}_{m}}{\text{A}_{m}}$$

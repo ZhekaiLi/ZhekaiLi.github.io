@@ -4,28 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "e500f79e8e96ffed",
-        "type": "tabs",
-        "dimension": 61.99238578680203,
-        "children": [
-          {
-            "id": "ea2a23aff3eeb56b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/P001 Skyworks/Fab.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "8b95b66fca79bdf3",
         "type": "tabs",
-        "dimension": 38.00761421319797,
         "children": [
           {
             "id": "91d6cadfc9101308",
@@ -33,7 +13,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/P001 Skyworks/Fab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -43,8 +22,17 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "761c35f79b8f131b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/P001 Skyworks/Fab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/P001 Skyworks/Fab.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_posts/P001 Skyworks/Fab.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -171,16 +155,50 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ea2a23aff3eeb56b",
+  "active": "761c35f79b8f131b",
   "lastOpenFiles": [
-    "Snipaste_2023-05-17_09-37-22 2.png",
-    "_posts/0012 ChatGPT/0012-01-01-basis.md",
-    "_posts/0001 Linear Algebra/0001-04-01-LA-Basis-Math Concepts.md",
-    "_posts/0001 Linear Algebra/0001-01-01-LA-TextBook-Introduction to Linear Algebra.md",
-    "Snipaste_2023-05-17_09-37-22 1.png",
+    "Obsidian/Skyworks/Pasted image 20230518171719.png",
+    "_wiki/git.md",
+    "_wiki/word copy.md",
+    "Obsidian/Skyworks/Pasted image 20230518140359.png",
+    "Obsidian/Skyworks/Pasted image 20230518120613.png",
+    "Obsidian/Skyworks/Pasted image 20230518120307.png",
+    "Obsidian/Skyworks/Pasted image 20230518115650.png",
+    "Obsidian/Skyworks/Pasted image 20230518115120.png",
+    "Obsidian/Skyworks/Pasted image 20230518114753.png",
+    "Obsidian/Skyworks/Pasted image 20230518112538.png",
+    "Obsidian/Skyworks/Excel - NPK Capacity Model.md",
+    "Obsidian/Skyworks/Pasted image 20230518105350.png",
+    "Obsidian/Skyworks/Pasted image 20230518105316.png",
+    "Obsidian/Skyworks/Pasted image 20230518104939.png",
+    "Obsidian/Skyworks/Untitled.md",
+    "Untitled.canvas",
+    "Obsidian/Skyworks/Untitled.canvas",
+    "Obsidian/Skyworks/Problem Centers.md",
+    "Obsidian/Skyworks/Untitled",
+    "Obsidian/Skyworks/Route Family.md",
+    "Obsidian/Skyworks/pics",
+    "Obsidian/Skyworks/Machine Recipe.md",
+    "Obsidian/Skyworks/Event.md",
+    "Obsidian/Skyworks/Entity.md",
+    "Obsidian/Skyworks/Process (steps).md",
+    "Obsidian/Skyworks/Process (steps), assigned to a [[Process Family.md",
+    "Obsidian/Skyworks/Stage.md",
+    "Obsidian/Skyworks/Module.md",
+    "Obsidian/Skyworks/Process Family.md",
+    "Obsidian/Skyworks/Process Family or Tool_Type or EQPTYPE.md",
+    "Obsidian/Skyworks/Process Family/ Tool_Type. EQPTYPE.md",
+    "Obsidian/Skyworks/Process Family",
+    "Obsidian/Skyworks/Product.md",
+    "Obsidian/Skyworks/Lot.md",
+    "Obsidian/Skyworks/Route.md",
+    "Obsidian/Skyworks/Product ZN001-J1NS.md",
+    "Obsidian/Skyworks/Lot 4354836.1.md",
+    "Obsidian/Skyworks/Hierarchy.md",
+    "Obsidian/Skyworks",
+    "Obsidian/Untitled.md",
+    "Obsidian",
     "_posts/P001 Skyworks/Fab.md",
-    "Snipaste_2023-05-17_09-37-22.png",
-    "_wiki/power bi.md",
-    "_wiki/excel/excel-power pivot.md"
+    "_posts/0001 Linear Algebra/0001-01-01-LA-TextBook-Introduction to Linear Algebra.md"
   ]
 }

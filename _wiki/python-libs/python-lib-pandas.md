@@ -140,13 +140,15 @@ df['c4'] = [5, 5, 5]
 
 
 ### 1.3.2 更改行列
-> **将第一列(指定列)设置为 index**
+**将第一列(指定列)设置为 index**
+
 ```py
 df.set_index('col1')
 df.reset_index(inplace=True) # 重新改回默认的数字 Index
 ```
 
-> **将 Index 添加为第一列**
+**将 Index 添加为第一列**
+
 ```py
 df.reset_index(inplace=True)
 ```
@@ -166,17 +168,24 @@ df.columns = [] # 更改列名
 df.rename({'old1':'new1', 'old3':'new3'}, axis=1, inplace=True)
 ```
 
+**将第二行(指定行)设置为列名**
+
+```py
+new_header = df.iloc[1] # 提取出第二行
+df = df[2:]             # 去掉前两行
+df.columns = new_header # 设置新的列名
+```
+
 
 ### 1.3.3 更改/替换元素
-> **df[col1].map(func)**
-将 func 应用于指定列的每个元素（不会改变 DataFrame 自身）
+
+**df[col1].map(func)**: 将函数应用于指定列的每个元素 (不会改变 df 自身)
 ```py
 df['col1'].map(str.lower)
 df['col2'].map({'A':'Aa', 'B':'Bb'}) # 修改特定元素
 ```
 
-> **df.replace()**
-将 A 替换成 Aa, B 替换成 Bb
+**df.replace()**: 将 A 替换成 Aa, B 替换成 Bb
 ```py
 df.replace(['A','B'], ['Aa','Bb'])
 ```
