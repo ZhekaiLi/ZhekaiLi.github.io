@@ -718,3 +718,23 @@ Good Metrics:
 <img src="/images/2023-03/.png"  width="80%">
 <img src="/images/2023-03/.png"  width="80%">
 <img src="/images/2023-03/.png"  width="80%">
+
+
+
+
+30-period 
+
+work with model team
+
+sounds good 
+
+
+有一个线上的liscense type（但是目前只用）
+
+和gurobi合作，make presentation时叫上他们
+
+service 
+
+
+
+
