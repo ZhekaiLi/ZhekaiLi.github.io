@@ -1,11 +1,11 @@
----
+<!-- ---
 layout: wiki
 title: tkinter
 cate1: Python
 cate2: -libs
 description: 
 keywords: Python
----
+--- -->
 
 # Code Framework 代码框架
 ```py

@@ -11,7 +11,7 @@ keywords: Python
 import sympy as sy
 ```
 
-## 1 sympy.solve 解方程
+## 1. sympy.solve 解方程
 ### 一元方程
 ```py
 x = sy.symbols('x')
@@ -28,14 +28,14 @@ eqs = [65000-x-y/np.sqrt(6.7e-4),
 sy.solve(eqs, [x, y])
 ```
 
-## 2 sympy.integrate 求积分
+## 2. sympy.integrate 求积分
 $$\int_1^2x^2dx$$
 ```py
 x = sy.symbols('x')
 sy.integrate(x**2, (x, 1, 2))
 ```
 
-## 3 sympy.diff 求导
+## 3. sympy.diff 求导
 ```
 x = sy.symbols('x')
 sy.diff(x**2, x)

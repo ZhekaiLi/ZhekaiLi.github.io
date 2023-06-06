@@ -1,5 +1,6 @@
 
 
+## Basic Definitions
 
 ```mermaid
 graph LR
@@ -25,24 +26,22 @@ Tools (machines):
     - **batch**: a set of lots that processed at the same time on a single tool
 - Cluster tools: 具有不同类型工艺步骤的晶圆可以同时在一个集群工具上循环，也就是说，集群工具可以被看作是一个完全自动化的机器环境。一个集群工具是一个单一的设备，它聚集了几个工艺步骤以及运输和计量
 
-Steps:
+Steps: 沉积 > 光刻 > 显影 > 蚀刻 > 重复
 1. **Oxidataion**/**Diffusion**: A layer of material is grown or deposited on the surface of a cleaned wafer. The goal of an oxidation step is to grow a dioxide layer on a single wafer, while diffusion aims at dispersing material on the wafer surface. Diffusion furnaces and rapid thermal equipment are used in the oxidation/diffusion work area. The furnaces are batch processing tools.
-2. **Film deposition** (薄膜沉积): Films are deposited onto wafers when the deposition step is carried out. Dielectric or metal layers are deposited. A dozen or even more such deposition layers can be found in advanced integrated circuits. Deposition can be executed by processes such as physical vapor deposition (PVD) or chemical vapor deposition (CVD).
-3. **Photolithography**:
-4. **Etch**: A wafer is partially covered by photoresist strip after photolithography. Material is removed from the areas of the wafer surface that are not covered by the etching step. 
-5. **Ion implantation** 离子注入: Doping material is deposited where parts of the wafer have been etched.
-6. **Planarization** 平坦化, 类似于抛光: The wafer surface is cleaned and leveled by the planarization step.
-7. **Cleaning/Inspection/Measurement**
-
-- 沉积: 在晶圆表面沉积一层 SiO2, SiN 等绝缘介质薄膜和 Al, Cu 等金属导电膜
-- 光刻:
+2. **Film deposition** (薄膜沉积): Films (dielectric or metal layer) are deposited onto wafers. Deposition can be executed by processes such as physical vapor deposition (PVD) or chemical vapor deposition (CVD).
+   在晶圆表面沉积一层 SiO2, SiN 等绝缘介质薄膜和 Al, Cu 等金属导电膜
+3. **Photolithography**: 光刻，最重要的步骤
     - 涂抹光刻胶
     - 曝光: 紫外线照射掩膜，穿过透镜设在光刻胶上（被紫外线照射后的光刻胶变得可溶）
-- 显影: 使用显影液冲洗可溶的光刻胶
-- 蚀刻: 把没有光刻胶覆盖的区域的氧化膜(和下方的硅一起)刻掉，形成一个突起的结构，也就是鳍式场效应晶体管的“鳍”
-<center><img src="/images/2023-05/Snipaste_2023-05-16_13-23-32.png" width="40%"></center>
+4. **Cleaning/Inspection/Measurement**
+    - 显影: 使用显影液冲洗可溶的光刻胶
+5. **Etch**: A wafer is partially covered by photoresist strip after photolithography. Material is removed from the areas of the wafer surface that are not covered by the etching step.
+   蚀刻: 把没有光刻胶覆盖的区域的氧化膜(和下方的硅一起)刻掉，形成一个突起的结构，也就是鳍式场效应晶体管的 "鳍" (见下图)
+6. **Ion implantation** 离子注入: Doping material is deposited where parts of the wafer have been etched.
+7. **Planarization** 平坦化, 类似于抛光: The wafer surface is cleaned and leveled by the planarization step.
 
-- 如此不断的重复
+
+<center><img src="/images/2023-05/Snipaste_2023-05-16_13-23-32.png" width="40%"></center>
 
 <center><img src="/images/2023-05/Snipaste_2023-05-16_13-46-19.png" width="90%"></center>
 
@@ -130,12 +129,20 @@ Have a process list (stages)
         a process family could contain several different process steps
         <img src="/images/2023-05/Snipaste_2023-05-17_10-04-01.png" width="100%">
             - **Tool_id**
+## Objective
+
+$$\min \sum_l W_lL_l$$
+
+- $W_l$         : Weight (pri) of lot $l$
+- $L_l=\max(0,d_l-C_l)=$ Lateness of lot $l$ 
+	- $C_{l}=$ Completion time
+	- $d_l=$ due date
+- $d_{l}$       : Due date of lot $l$   
 
 
 ## Parameters
 
-- $W_l$         : Weight of lot $l$
-- $d_{l}$       : Due date of lot $l$       
+    
 - $p_{(l,sl),i}$: Process time of $(l,sl)$ on family $i$
 - $sl\in \{1,2,...,Sl\}$: one step of lot $l$
     - $Sl$: the final step of lot $l$
@@ -155,10 +162,6 @@ Time:
 - Start time: $t_{(l,sl)}$
 - Completion time: $C_{l}$
 - $L_{l} \geq \max(0,C_l-d_l)$
-
-## Objective
-
-$$\min \sum_l W_lL_l$$
 
 ## Constraints
 1. Each $(l,sl)$ can be only assigned to one family type

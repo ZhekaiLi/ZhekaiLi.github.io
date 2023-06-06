@@ -11,17 +11,16 @@ keywords: Python
 import simpy
 ```
 
-**Environment**: 核心中的核心，是用来承载一切模拟的环境
+## Environment
+核心中的核心，是用来承载一切模拟的环境
 
 ```py
-# 创建一个环境
-env = simpy.Environment()
-
-proc1 = env.process(函数名) # 添加一个进程
+env = simpy.Environment() # 创建一个环境
+proc1 = env.process(func) # 添加一个进程
 ```
 
-
-**Container**: 容器，用于存放物品
+## Container
+容器，用于存放物品
 
 ```py
 # 创建一个容量为 1000 的容器，初始容量为 500
@@ -33,7 +32,8 @@ Con1.put(200) # 向容器中放入 200 个
 print(Con1.level) # 查看容器中的剩余量 --> 600
 ```
 
-**Resource**: 资源。可以用来表示机器、人员等。其特点在于一个资源同时只能被一个进程占用。因此更适用于表示流水线上的机器，或者是服务设施中的服务员:
+## Resource
+资源，可以用来表示机器、人员等。其特点在于一个资源同时只能被一个进程占用。因此更适用于表示流水线上的机器，或者是服务设施中的服务员:
 - 汽车生产流水线上的机器
 - 电影院中的售票员
 
@@ -50,7 +50,29 @@ with workstation.request() as req:
     yield env.process(process_function())
 ```
 
-而对于更传统的工厂 (reentrancy 较高，例如 fac), 或者那种更关注于流程而不是每个资源个体的, 可以使用如下代码来模拟 machine & workstation:
+### Mutex-Lock
+由于一个资源同时只能被一个进程占用的特性，我们可以直接拿它来作为 Mutex-Lock。例如，对于列表 `reservation = [...]`，我们希望任意时刻最多只有一个函数能够修改它:
+
+```py
+reservation = [...]
+reservation_R = simpy.Resource(env, capacity=1)
+
+def func_1(resv, resv_R):
+    with resv_R.request() as req:
+        # change resv here
+        pass
+
+def func_2(resv, resv_R):
+    with resv_R.request() as req:
+        # change resv here
+        pass
+```
+
+更多信息可以参考 [Simulating Dining Philosophers with SimPy](https://towardsdatascience.com/simulating-dining-philosophers-with-simpy-5abf5106e2ca)
+
+
+### Others
+对于更传统的工厂 (reentrancy 较高，例如 fac), 或者那种更关注于流程而不是每个资源个体的, 可以使用如下代码来模拟 machine & workstation:
 
 ```py
 # Create a machine

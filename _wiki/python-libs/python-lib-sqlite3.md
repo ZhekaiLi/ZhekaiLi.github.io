@@ -31,6 +31,10 @@ db.close()
 ```
 
 ## Ex.1: Create table, Insert rows and Read rows
+- Create table and insert rows
+- Read rows (three ways)
+- <span style="background-color: yellow; color: black;">Read into pd.DataFrame</span>
+
 ### Create table and insert rows
 ```py
 db = sqlite3.connect("test.db")
@@ -74,6 +78,13 @@ print(rows)
 [(1, 'one', 'two'), (2, 'three', 'four')]
 ```
 
+### Read into pd.DataFrame
+未经证实?
+
+```py
+query = "Select * from tb"
+df = pd.read_sql(query, db)
+```
 
 
 

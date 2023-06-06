@@ -8,10 +8,7 @@ keywords:
 mathjax: True
 ---
 
-<center>
-
 # Microsoft Word
-</center>
 
 
 ### Set Headings (设置各级标题)

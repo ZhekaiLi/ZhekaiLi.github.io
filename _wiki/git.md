@@ -8,20 +8,15 @@ keywords:
 mathjax: True
 ---
 
-
+# Git
 
 
 ## Init
-设置用户名和账号
+设置用户名和账号，并初始化
 
 ```bash
 git config --global user.name "Zeka"
 git config --global user.email "zekalee0523@gmail.com"
-```
-
-初始化
-
-```bash
 git init
 ```
 

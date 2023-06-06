@@ -1,6 +1,3 @@
-
-
-
 Abstract:
 This week I focus on realizing a simple simulation model that can be used to see ==the influence of changing the priority of different lots==
 
@@ -59,10 +56,7 @@ In the following picture, which is similar to a Gantt chart
 - each color represents one lot 
 
 
-
-
-
-![|100](pics/Pasted_image_20230524102749.png)
+![500](pics/Pasted_image_20230524102749.png)
 
 
 
@@ -75,7 +69,7 @@ In the following picture, which is similar to a Gantt chart
 - All the others are the same as in Example 1
 
 Now the cycle time of blue lot is less than 5 days because of its high priority
-![[Pasted image 20230524111126.png]]
+![|500](pics/Pasted_image_20230524111126.png)
 
 ```text
 Process time of (l,sl) = (4,1) is 1.9898323303467176 on family 1 
