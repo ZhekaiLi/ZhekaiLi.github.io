@@ -1,33 +1,3 @@
-|Acronym| Definition                         |
-|-------|------------------------------------|
-|BAW    | Bulk Acoustic Wave 散装声波滤波器   |
-|Bi-    | Bipolar- 双极的                    |
-|CTM| Capacitor Top Metal 半导体内的一种结构层|
-|DPS    | Die (or Dice) Processing           |
-|FET    | Field-Effect Transistor            |
-|GDPW   | Gross Die Per Wafer (e5)           |
-|HBT    | Heterojunction Bipolar Transistors 异质结双极晶体管   <br> e.g. AlGaAs, GaAs HBT                   |
-|HFET   | High-Electron-Mobility Transistor <br> aka. Heterostructure FET (HFET)
-|IC     | Integrated Circuit                 |
-|MRP    | Material Requirements Planning     |
-|MSO| Metrology Sampling Optimizer 计量采样优化器| 
-|PM     | Preemptive Maintanance             |
-|prd| prodcution|
-|SAW    | Surface Acoustic Wave 表面声波滤波器|
-|SOAK   | Second of a Kind                   |
-|WSPD   | Wafter Starts Per Day              |
-|WSPM   | Wafer Starts Per Month             |
-
-
-CTM
-- Capacitor Top Metal 半导体内的一种结构层
-- Cycle Time: Table [WIP_CTM_FORECAST![](https://help.inficonims.com/images/icons/linkext7.gif)](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=WIP_CTM_FORECAST&run_2=run&run_2_tablename=WIP_CTM_FORECAST) contains the forecast of total cycle time by prd for upcoming weeks, months, quarters, and/or years
-
-MSO
-- Metrology Sampling Optimizer 计量采样优化器: [MSO Database Tables - Metrology Sampling Optimizer - INFICON IMS Help Site](https://help.inficonims.com/display/MSO/MSO+Database+Tables)
-
-
-
 ## Relation Map
 
 ==Eqp_type = Process_family = Tool_group (和前两者略有不同，会更多一些，但是可以理解为相同)==
