@@ -38,15 +38,15 @@ MSO
 
 | From| To| Relation| Source|
 |--|--|--|--|
-| ***Route*** | Process | (1-n)| [RTG_ROUTE_STEPS](###RTG_ROUTE_STEPS)|
-|***Route***| Recipe | (1-n)| FPSBASE > RTG_ROUTE_STEPS_PLUS|
+| ***Route*** | Process - Recipe | (1-n)| [[#FPSINPUT#RTG_ROUTE_STEPS]]|
+|***Route***| Eqp_type - Process - Recipe | (1-n)| [[#FPSBASE#RTG_ROUTE_STEPS_PLUS]]|
 
 #### Eqp_type
 ***(Tool_group)***
 
 | | | | |
 |--|--|--|--|
-| Tool                       | ***Eqp_type*** and Bay | |  [[#EQP_TOOLS]]
+| Tool                       | ***Eqp_type*** and Bay | |  [[#FPSINPUT#EQP_TOOLS]]
 | ***Tool_group***            | Module             |   | [[#EQP_TOOL_MSO_GROUPS]] 174 rows
 | ***Eqp_type*** and Recipe| UPH                    | (1-1) | [[#CM_P_RORP_STEP_EQPTYPES]]
 |***Eqp_type***, Process, and Recipe| UPH/MPU| (1-1)| [[#FPSBASE#RTG_PROCESS_RCP_EQPTYPES]]
@@ -55,10 +55,10 @@ MSO
 
 | | | | |
 |--|--|--|--|
-| Chamber |***Tool***          |             |         [[#EQP_CHAMBERS]]
-| ***Tool***      | Eqp_type and Bay       | |  [[#EQP_TOOLS]]
-|***Tool***         | Process              |   (n-n) | [[#RTG_TOOL_ASSIGNMENTS]]
-|Recipe     | ***Tool***                   |   (n-n) | [[#RTG_PROCESS_RCP_TOOL_BASE]]
+| Chamber |***Tool***              |       | [[#EQP_CHAMBERS]]
+| ***Tool***    | Eqp_type and Bay |       | [[#FPSINPUT#EQP_TOOLS]]
+| ***Tool***    | Process          | (n-n) | [[#RTG_TOOL_ASSIGNMENTS]]
+| Recipe  | ***Tool***             | (n-n) | [[#FPSINPUT#RTG_PROCESS_RCP_TOOL_BASE]]
 
 #### Process_family
 
@@ -91,18 +91,23 @@ MSO
 | Tool | Eqp_type and ***Bay*** | | [[#EQP_TOOLS]]
 
 
-## FPSAPP
-### CM_P_RORP_STEP_EQPTYPES
-[CM_P_RORP_STEP_EQPTYPES](https://help.inficonims.com/display/SCHEMAS/FPSAPP+Schema#cmprorpstepeqptypes)
-关联 Recipe, Eqp_type 到 ==UPH==
-- 在同一个 Eqp_type 中的使用同一个 Recipe 的 Tool 的 UPH 相同
-- 同一个 Recipe 可以出现在不同的 Eqp_type 中，此时他们的 UPH 也可能不同
 
 ---
+## FPSAPP
 
+### CM_P_RORP_STEP_EQPTYPES
+[CM_P_RORP_STEP_EQPTYPES](https://help.inficonims.com/display/SCHEMAS/FPSAPP+Schema#cmprorpstepeqptypes)
+
+map ([[#Recipe]] - [[#Eqp_type]]) to ==UPH==/MPU
+- e.g. `dict_recipe2eqpTypeMUP[recp_1][eqpT_1]=5` means that for the Tools in `eqpT_1` that can process `recp_1`, their average MPU is 5 mins per unit (wafer)
+- Recipe to Eqp_type is n2n relation
+
+---
 ## FPSBASE
+
 ### RTG_PROCESS_RCP_EQPTYPES
 [RTG_PROCESS_RCP_EQPTYPES](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_PROCESS_RCP_EQPTYPES&run_2=run&run_2_tablename=RTG_PROCESS_RCP_EQPTYPES)
+
 map [[#Eqp_type]], [[#Process]], and [[#Recipe]] to UPH/MPU
 
 | |eqp_type|process|est_machine_recipe|mpu|
@@ -118,13 +123,51 @@ SELECT eqp_type, process, EST_MACHINE_RECIPE, mpu
 FROM FPSBASE.RTG_PROCESS_RCP_EQPTYPES
 ```
 
+
+
+
 ### RTG_ROUTE_STEPS_PLUS
-[RTG_ROUTE_STEPS_PLUS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_ROUTE_STEPS_PLUS&run_2=run&run_2_tablename=RTG_ROUTE_STEPS_PLUS)
-map [[#Route]] to [[#Process]] and [[#Recipe]]
+[RTG_ROUTE_STEPS_PLUS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_ROUTE_STEPS_PLUS&run_2=run&run_2_tablename=RTG_ROUTE_STEPS_PLUS), compared to [[#FPSINPUT#RTG_ROUTE_STEPS]], contain Eqp_type but with less data（17300 < 20723）
 
+map [[#Route]] to list([[#Eqp_type]] - [[#Process]] - [[#Recipe]])
+
+| |route|eqp_type|process|recipe|seq_num|
+|---|---|---|---|---|---|
+|0|N_6BIFET4-PA-P2_1+N_6TWV+N_6P07_TWV-ETC+N_6FPO...|NA|SM|SM|1.0|
+|1|N_6BIFET4-PA-P2_1+N_6TWV+N_6P07_TWV-ETC+N_6FPO...|N_SAPST|SAP LOT START|1N982|2.0|
+|2|N_6BIFET4-PA-P2_1+N_6TWV+N_6P07_TWV-ETC+N_6FPO...|N_SAPST|LOTS KITTED AND READY FOR SCRIBE|1NN02|3.0|
+|3|N_6BIFET4-PA-P2_1+N_6TWV+N_6P07_TWV-ETC+N_6FPO...|N_LASER|LS WAFER SCRIBE|2S053|4.0|
+|4|N_6BIFET4-PA-P2_1+N_6TWV+N_6P07_TWV-ETC+N_6FPO...|N_TOFAB|MOVE LOT TO FAB|2S405|5.0|
+(17300 rows)
 ```sql
-
+SELECT route, eqp_type, process, RTG_PARM1 as recipe, seq_num
+FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
+ORDER BY route, seq_num
 ```
+#Problem 这里的 RTG_PARM1 是否就指的是 recipe，有没有可能包含其他类型的数据
+#Problem 这里的 RTG_PARM1 内包含 None，是否可以直接忽略
+#Problem 去除 NULL 后还剩下 263 个 RTG_PARM1 无法在 FPSBASE > RTG_PROCESS_RCP_TOOL_BASE 中找到，代码如下
+```sql
+SELECT distinct rtg_parm1 FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
+WHERE rtg_parm1 IS NOT NULL AND rtg_parm1 NOT IN (
+    SELECT est_machine_recipe FROM FPSBASE.RTG_PROCESS_RCP_TOOL_BASE
+)
+```
+#Problem 这些 263 个无法在 RTG_PROCESS_RCP_TOOL_BASE 中找到的 RTG_PARM1 出现在了 49 个 route 中，只有另外 12 个 route 不包含这些遗失值，代码如下
+```sql
+WITH T1 AS (
+    SELECT route FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
+    WHERE rtg_parm1 IS NOT NULL AND rtg_parm1 NOT IN (
+        SELECT est_machine_recipe FROM FPSBASE.RTG_PROCESS_RCP_TOOL_BASE
+    )
+)
+SELECT DISTINCT route FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
+WHERE route IN (SELECT route FROM T1)
+```
+
+
+
+
 
 ### THP_EQPTYPE_SUMMARY
 [THP_EQPTYPE_SUMMARY](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=THP_EQPTYPE_SUMMARY&run_2=run&run_2_tablename=THP_EQPTYPE_SUMMARY)
@@ -134,11 +177,77 @@ map [[#Route]] to [[#Process]] and [[#Recipe]]
 - mpu_lcl
 - mpu_ucl
 
+
+#Problem 有时间注意以下 THP_TOOL_AUTO 和 SUMMARY
+
+```sql
+with T1 as (
+    SELECT process, count(distinct eqp_type)
+    FROM FPSBASE.THP_TOOL_AUTO
+    group by process
+    having count(distinct eqp_type) > 1
+), T2 as (
+    SELECT PROCESS, PROCESS_GROUP
+    FROM FPSINPUT.RTG_PROCESSES
+), T3 as (
+    select T.process, T.eqp_type, T2.process_group
+    from FPSBASE.THP_TOOL_AUTO T
+    left join T2
+    on T.process = T2.process
+    where T.process in (select process from T1) and T.eqp_type = T2.process_group
+), T4 as (
+    select *
+    from T1
+    where T1.process not in (select process from T3)
+)
+select process, eqp_type, tool, actual_machine_recipe
+from FPSBASE.THP_TOOL_AUTO
+where process in (select process from T4)
+order by process, eqp_type
+
+
+# 这些 process 不仅对应多个 eqp_type
+# 并且这些 eqp_type 还无法在 process --- process_family 的 process_family 那一栏找到
+# 因此需要单独指定
+df = pd.read_sql(query, engine)
+df
+```
+
+以及
+```sql
+with T1 as (
+    SELECT process, count(distinct eqp_type)
+    FROM FPSBASE.THP_TOOL_AUTO
+    group by process
+    having count(distinct eqp_type) > 1
+), T2 as (
+    SELECT PROCESS, PROCESS_GROUP
+    FROM FPSINPUT.RTG_PROCESSES
+), T3 as (
+    select T.process, T.eqp_type, T2.process_group
+    from FPSBASE.THP_TOOL_AUTO T
+    left join T2
+    on T.process = T2.process
+    where T.process in (select process from T1) and T.eqp_type = T2.process_group
+)
+from T3
+```
+
+以及 
+```sql
+SELECT process, eqp_type, count(distinct tool)
+FROM FPSBASE.THP_TOOL_AUTO
+where process <> 'DL HBTMIM PRE CLEAN' and process <> 'GL NITRIDE CLEAN'
+group by process, eqp_type
+having count(distinct tool) > 2
+```
+
 ### THP_TOOL_SUMMARY
 
----
 
+---
 ## FPSINPUT
+
 ### EQP_CHAMBERS 
 [EQP_CHAMBERS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=EQP_CHAMBERS&run_2=run&run_2_tablename=EQP_CHAMBERS)
 
@@ -162,8 +271,10 @@ ORDER BY TOOL
 
 
 ### EQP_TOOLS
-[EQP_TOOLS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=EQP_TOOLS&run_2=run&run_2_tablename=EQP_TOOLS)
-关联 tool 到 eqp_type, bay
+[EQP_TOOLS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=EQP_TOOLS&run_2=run&run_2_tablename=EQP_TOOLS), the same as FPSBASE.[EQP_TOOLS_PLUS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=EQP_TOOLS_PLUS&run_2=run&run_2_tablename=EQP_TOOLS_PLUS)
+
+map [[#Tool]] to [[#Eqp_type]] and [[#Bay]]
+
 **Empty Columns**:
 - max_carriers_to_reserve
 
@@ -187,7 +298,8 @@ ORDER BY BAY, EQP_TYPE
 
 ### EQP_TOOL_MSO_GROUPS 
 [EQP_TOOL_MSO_GROUPS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=EQP_TOOL_MSO_GROUPS&run_2=run&run_2_tablename=EQP_TOOL_MSO_GROUPS)
-关联 tool_group (eqp_type) 到 module
+
+map Tool_group ([[#Eqp_type]]) to Module
 
 | |tool_mso_group|tool_mso_module|
 |---|---|---|
@@ -207,7 +319,7 @@ FROM FPSINPUT.EQP_TOOL_MSO_GROUPS
 |TOOL_MSO_GROUP|TOOL_MSO_GROUP is the grouping of tools used for Metrology Sampling Optimizer. This grouping is used in the Sampling Dashboard and for assigning event based sampling rules for a tool group. This group is similar to process family but allows a tool grouping specific to the MSO.|||||
 |TOOL_MSO_MODULE|TOOL_MSO_MODULE is the module responsible for the tool_mso_groups used for the Metrology Sampling Optimizer. The module is used for building the tool hierarchy for the Sampling Dashboard.|
 
-Module 可以包含多个 Group:
+Module could contain several Tool_groups:
 
 | |tool_mso_module|COUNT|
 |---|---|---|
@@ -235,7 +347,8 @@ HAVING COUNT(*) > 1
 
 ### RTG_PROCESSES 
 [RTG_PROCESSES](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_PROCESSES&run_2=run&run_2_tablename=RTG_PROCESSES)
-关联 process 到 process_group (tool_group, eqp_type)
+
+map [[#Process]] to [[#Process_family]]
 
 | |process|process_group|
 |---|---|--|
@@ -256,7 +369,9 @@ FROM FPSINPUT.RTG_PROCESSES
 
 ### RTG_PROCESS_FAMILIES
 [RTG_PROCESS_FAMILIES](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_PROCESS_FAMILIES&run_2=run&run_2_tablename=RTG_PROCESS_FAMILIES)
-关联 Process_family 到 Module
+
+map [[#Process_family]] to Module
+
 **Empty Columns**:
 - default_qty_meas
 - max_step_sec
@@ -280,8 +395,9 @@ FROM FPSINPUT.RTG_PROCESS_FAMILIES
 
 
 ### RTG_PROCESS_RCP_TOOL_BASE
-[RTG_PROCESS_RCP_TOOL_BASE](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_PROCESS_RCP_TOOL_BASE&run_2=run&run_2_tablename=RTG_PROCESS_RCP_TOOL_BASE)
-关联 Recipe 到 Tool (n2n): 同一个 Recipe 可以被运行在多个 Tool，同一个 Tool 也可以运行多个 Recipe
+[RTG_PROCESS_RCP_TOOL_BASE](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_PROCESS_RCP_TOOL_BASE&run_2=run&run_2_tablename=RTG_PROCESS_RCP_TOOL_BASE), same as FPSBASE > [RTG_PROCESS_RCP_TOOL_BASE](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_PROCESS_RCP_TOOL_BASE&run_2=run&run_2_tablename=RTG_PROCESS_RCP_TOOL_BASE)
+
+map [[#Recipe]] to [[#Tool]] (n2n)
 
 | |est_machine_recipe|tool|
 |---|---|---|
@@ -300,21 +416,23 @@ FROM FPSINPUT.RTG_PROCESS_RCP_TOOL_BASE
 
 
 ### RTG_ROUTE_STEPS 
-[RTG_ROUTE_STEPS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_ROUTE_STEPS&run_2=run&run_2_tablename=RTG_ROUTE_STEPS)
-关联 Route 到 list(Process)
+[RTG_ROUTE_STEPS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_ROUTE_STEPS&run_2=run&run_2_tablename=RTG_ROUTE_STEPS), compared to [[#FPSBASE#RTG_ROUTE_STEPS_PLUS]], 不包含 Eqp_type 但数据总量更大（20723 > 17300）
+
+map [[#Route]] to list([[#Process]] - [[#Recipe]])
 
 **Empty Columns**:
 - FUTURE_WIP_STEP
 - SPEC_ID
 
-|-|route|step|process|seq_num|script_id|
-|---|---|---|---|---|---|
-|0|N_6AOI_INSPECT|001.000=2S291|AOI INSPECTION|1.0|N_6AOI_INSPECT:001.000|
-|1|N_6AOI_INSPECT|001.100=2S533|ENG REVIEW OF CL LOT|2.0|N_6AOI_INSPECT:001.100|
-|2|N_6AOI_SMPL_AA|002.000,N_6AOI_SMPL_AA:001.000=2S576|AA SAMPLE AOI|1.0|N_6AOI_SMPL_AA:001.000|
-|3|N_6AOI_SMPL_AA|002.000,N_6AOI_SMPL_AA:001.700=2S576|AA SAMPLE AOI|2.0|N_6AOI_SMPL_AA:001.700|
+| |route|step|process|recipe|seq_num|
+|---|---|---|---|---|--|
+|0|N_6AOI_INSPECT|001.000=2S291|AOI INSPECTION|2S291|1.0|
+|1|N_6AOI_INSPECT|001.100=2S533|ENG REVIEW OF CL LOT|2S533|2.0|
+|2|N_6AOI_SMPL_AA|002.000,N_6AOI_SMPL_AA:001.000=2S576|AA SAMPLE AOI|2S576|1.0|
+|3|N_6AOI_SMPL_AA|002.000,N_6AOI_SMPL_AA:001.700=2S576|AA SAMPLE AOI|2S576|2.0|
+|4|N_6AOI_SMPL_AA|002.000,N_6AOI_SMPL_AA:002.500=2S576|AA SAMPLE AOI|2S576|3.0|
 ```sql
-SELECT ROUTE, STEP, PROCESS, SEQ_NUM, SCRIPT_ID
+SELECT ROUTE, STEP, PROCESS, RTG_PARM1 as recipe, SEQ_NUM
 FROM FPSINPUT.RTG_ROUTE_STEPS
 ORDER BY ROUTE, SEQ_NUM
 ```
@@ -346,8 +464,10 @@ FROM FPSINPUT.RTG_TOOL_ASSIGNMENTS
 
 
 
+---
+## Empties
 
-### Empties
+### FPSINPUT
 EQP_BADGES
 RTG_OVR_CS_SORT_RT_FAM_SEG
 

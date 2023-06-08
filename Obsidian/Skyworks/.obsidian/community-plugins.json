@@ -4,5 +4,7 @@
   "cm-editor-syntax-highlight-obsidian",
   "marp",
   "marp-slides",
-  "obsidian-annotator"
+  "obsidian-annotator",
+  "quickadd",
+  "obsidian-memos"
 ]

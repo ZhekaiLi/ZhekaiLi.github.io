@@ -21,7 +21,7 @@ fig, ax = plt.subplots(figsize=(10, 7))
 
 ## 1. 常用功能
 ### 1.1 图类型
-**散点图**
+#### 散点图 Scatter
 ```py
 ax.scatter(x=X[:, 0], y=X[:, 1], 
     color='red',
@@ -30,7 +30,7 @@ ax.scatter(x=X[:, 0], y=X[:, 1],
 )
 ```
 
-**折线图**
+#### 折线图
 ```py
 ax.plot([x1, x2], [y1, y2], 
     '样式',
@@ -41,9 +41,15 @@ ax.plot([x1, x2], [y1, y2],
 - `样式=点形+线形+颜色`，例如 `o-r` 表示红色圆点实线
 - 分开表示样式：`linestyle` `marker` `color`
 
-**柱状图**
+#### 柱状图 + histogram
 ```py
 ax.bar(X, Y)
+```
+
+柱状统计图（统计数据的分布）
+- `bins`: 柱子的个数，默认为10，数量越多画出来的图越精细
+```py
+plt.hist(X, bins=100)
 ```
 
 

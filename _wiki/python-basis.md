@@ -9,10 +9,40 @@ mathjax: true
 mermaid: true
 ---
 
-<center>
 
 # Python Basis
-</center>
+
+<span style="background-color: yellow; color: black;">非常非常需要谨记的点！以下大部分都会容易造成很臭的 bug</span>
+
+### (1) copy() & deepcopy()
+(1.1) `X.copy()`/ `copy.copy(X)` 浅拷贝: 即只拷贝第一层，第二层及以下的嵌套对象还是指向同一个地址
+
+(1.2) `copy.deepcopy(X)` 深拷贝: 拷贝所有层级，每一层都是新的对象
+
+从而我们可以得到以下结论:
+- 对于单层且仅包含数值的 list, 使用 copy() or deepcopy()
+- 对于多层且仅包含数值的 list, 使用 deepcopy()
+- 对于单层但包含引用对象的 list, 例如，如果不想让对 `L1` 长度的修改影响到 `L` 和 `L2`；但又想让对 `L1` 中 `obj1` 的修改能够同步到 `L` 和 `L2` 中的 `obj1`，那么使用 copy()
+  ```py
+  L = [obj1, obj2]; L1 = L.copy(); L2 = L.copy()
+  ```
+
+常见的应用场景如下:
+- <span style="background-color: yellow; color: black;">经常使用于函数接收输入的过程</span>:
+  ```py
+  import copy()
+  class C1:
+    def __init__(self, L=[], LL=[[]]):
+      self.L = L.copy()
+      self.LL = copy.deepcopy(LL)
+  ```
+- <span style="background-color: yellow; color: black;">列表的赋值过程</span>: 我们希望从一个字典中读出一个列表，并在对该列表进行修改后，放进另一个字典中去
+  ```py
+  L = D1['L'].copy() # 这里是 copy or deepcopy 取决于 L 的内容，具体参考开头部分的结论
+  L = change(L)
+  D2['L'] = L
+  ```
+
 
 
 ## 1. 数据储存方式
