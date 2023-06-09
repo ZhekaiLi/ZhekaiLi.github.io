@@ -2,14 +2,21 @@
 
 ==Eqp_type = Process_family = Tool_group (和前两者略有不同，会更多一些，但是可以理解为相同)==
 
-#Problem 实际上, eqp_type 和 process_family 是不同的，详见 [[#FPSBASE#RTG_PROCESS_RCP_EQPTYPES]]。而且，一个 process 可以运行在多个 eqp_type 上（当然一个 process 肯定是只属于一个 process_family 的）
+#Problem eqp_type 和 process_family 似乎不同，详见 [[#FPSBASE#RTG_PROCESS_RCP_EQPTYPES]]。而且，一个 process 可以运行在多个 eqp_type 上（当然一个 process 肯定是只属于一个 process_family 的）
 
-#### Route
+#### Product
 
 | From| To| Relation| Source|
 |--|--|--|--|
-| ***Route*** | Process - Recipe | (1-n)| [[#FPSINPUT#RTG_ROUTE_STEPS]]|
-|***Route***| Eqp_type - Process - Recipe | (1-n)| [[#FPSBASE#RTG_ROUTE_STEPS_PLUS]]|
+| ***Product*** | Route | (1-n)| [[#FPSBASE#CTM_WEEK_HIST]]|
+
+#### Route
+
+| | | | |
+|--|--|--|--|
+| ***Route***   | Process - Recipe            | (1-n)| [[#FPSINPUT#RTG_ROUTE_STEPS]]|
+| ***Route***   | Eqp_type - Process - Recipe | (1-n)| [[#FPSBASE#RTG_ROUTE_STEPS_PLUS]]|
+| Product | ***Route***                       | (1-n)| [[#FPSBASE#CTM_WEEK_HIST]]|
 
 #### Eqp_type
 ***(Tool_group)***
@@ -75,6 +82,29 @@ map ([[#Recipe]] - [[#Eqp_type]]) to ==UPH==/MPU
 ---
 ## FPSBASE
 
+### CTM_WEEK_HIST
+[CTM_WEEK_HIST](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=CTM_WEEK_HIST&run_2=run&run_2_tablename=CTM_WEEK_HIST)
+
+map [[#Product]] to [[#Route]] (1-n)
+
+| |prd|route|
+|---|---|--|
+|0|ZG069-K1NS|N_6RHBT5_MCLIFT|
+|1|UT036-Y1-M3-FCNS|N_6RHBT8_CV_42|
+|2|ZJ008-J1NS|N_6RMXL_NCMR|
+|3|ZM086-J1NS|N_6RMXL_NCMR|
+(540 rows)
+```sql
+SELECT DISTINCT prd, route
+FROM FPSBASE.CTM_WEEK_HIST
+WHERE route IN (
+    SELECT distinct route FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
+)
+```
+#Problem 似乎不是一个好的 mapping 因为有很多在excel里的product在这张表里找不到
+![[Pasted image 20230608173758.png]]
+
+
 ### RTG_PROCESS_RCP_EQPTYPES
 [RTG_PROCESS_RCP_EQPTYPES](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_PROCESS_RCP_EQPTYPES&run_2=run&run_2_tablename=RTG_PROCESS_RCP_EQPTYPES)
 
@@ -114,16 +144,24 @@ SELECT route, eqp_type, process, RTG_PARM1 as recipe, seq_num
 FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
 ORDER BY route, seq_num
 ```
+
+
+#Problem 如何处理第一行的 NA 的 eqp_type
 #Problem 这里的 RTG_PARM1 是否就指的是 recipe，有没有可能包含其他类型的数据
-#Problem 这里的 RTG_PARM1 内包含 None，是否可以直接忽略
-#Problem 去除 NULL 后还剩下 263 个 RTG_PARM1 无法在 FPSBASE > RTG_PROCESS_RCP_TOOL_BASE 中找到，代码如下
+#Problem 为什么有些 RTG_PARM1 = NULL，这意味着什么？他们是否可以直接忽略？
+```sql
+SELECT route, process, eqp_type, rtg_parm1 as recipe
+FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
+WHERE rtg_parm1 IS NULL
+```
+#Problem 如何处理不存在 [[#FPSINPUT#RTG_PROCESS_RCP_TOOL_BASE]] 中的 recipe，比如第一行的 SM。再比如，去除 NULL 后还剩下 263 个 RTG_PARM1 无法找到
 ```sql
 SELECT distinct rtg_parm1 FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
 WHERE rtg_parm1 IS NOT NULL AND rtg_parm1 NOT IN (
     SELECT est_machine_recipe FROM FPSBASE.RTG_PROCESS_RCP_TOOL_BASE
 )
 ```
-#Problem 这些 263 个无法在 RTG_PROCESS_RCP_TOOL_BASE 中找到的 RTG_PARM1 出现在了 49 个 route 中，只有另外 12 个 route 不包含这些遗失值，代码如下
+这些 263 个无法找到的 RTG_PARM1 出现在了 49 个 route 中，只有另外 12 个 route 不包含这些遗失值
 ```sql
 WITH T1 AS (
     SELECT route FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
@@ -134,6 +172,9 @@ WITH T1 AS (
 SELECT DISTINCT route FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
 WHERE route IN (SELECT route FROM T1)
 ```
+#Problem 如何处理 recipe 对应的 eqpType 不使用于任何 recipe 对应的 tool 的情况 (同样从 [[#FPSINPUT#RTG_PROCESS_RCP_TOOL_BASE]] 提取)
+
+
 
 
 

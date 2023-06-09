@@ -14,7 +14,7 @@ Define four classes to represent the objects in manufacturing:
 	5. **priority**
 	6. **dueTime**
 	7. ==score = priority * (12 - log(expectedTime - now + 1))== when expectedTime > now
-	                                (12 + log(now - expectedTime + 1)) when expectedTime <= now
+	                                (12+ log(now - expectedTime + 1)) when expectedTime <= now
 		 For example for a lot with **10 steps** (priority=1), assume
 		 - it starts at time=0, dueTime = 100
 		 - now it's in step 5, and the currentTime=60

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "【A】FPS Database.md",
+                "file": "Weekly_Review/Weekly_Review_06_08_2023.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "【A】Dictionary (Acronym, Definition).md",
+                "file": "【A】FPS Database.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,11 +78,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 336.5004348754883
+    "width": 246.50043487548828
   },
   "right": {
     "id": "605b3eeb6ce628b0",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "【A】Dictionary (Acronym, Definition).md",
+                "file": "【A】FPS Database.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "【A】Dictionary (Acronym, Definition).md",
+                "file": "【A】FPS Database.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "【A】Dictionary (Acronym, Definition).md"
+                "file": "【A】FPS Database.md"
               }
             }
           },
@@ -155,7 +156,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -175,6 +176,11 @@
   },
   "active": "f626ac779198e6ac",
   "lastOpenFiles": [
+    "Pasted image 20230608173758.png",
+    "Weekly_Review/Weekly_Review_06_08_2023.md",
+    "【A】FPS Database.md",
+    "Pasted image 20230608173412.png",
+    "【A】Dictionary (Acronym, Definition).md",
     "Untitled.canvas",
     "Untitled.md",
     "Untitled 1.canvas",
@@ -182,13 +188,10 @@
     "Problem Centers.md",
     "Optimization Simulation.md",
     "Excel - NPK Capacity Model.md",
-    "【A】FPS Database.md",
     "Eqp_type.md",
     "Connect to Oracle Database using Python.md",
-    "【A】Dictionary (Acronym, Definition).md",
     "【A】Definition Dictionary.md",
     "Weekly_Review/Weekly_Review_06_01_2023.md",
-    "Weekly_Review/Weekly_Review_06_08_2023.md",
     "pics/Pasted image 20230608152603.png",
     "pics/Pasted image 20230608152239.png",
     "[.md",
@@ -207,7 +210,6 @@
     "pics/Pasted image 20230526140807.png",
     "pics/Pasted image 20230526140531.png",
     "Pasted.md",
-    "pics/Pasted image 20230525150426.png",
     "FPS_Scheduler/【A】Acronym Dictionary.md",
     "FPS_Scheduler/Bays.md",
     "FPS_Dashboard/Entity.md",
