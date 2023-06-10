@@ -153,7 +153,7 @@ D.keys()   # 返回所有键
 D.values() # 返回所有值
 ```
 
-> **操作函数**
+## 3.1 Functions
 
 ```py
 d.get(k, default=None) # 键 k 存在，返回相应值，不存在则返回<default>
@@ -166,12 +166,21 @@ d.has_key(k)           # 键 k 存在，返回true，否则返回false
 ```
 
 sort dictionary by its value
+
 ```py
 sorted(d.items(), key=lambda x: x[1])
 ```
 
+## 3.2 Defaultdict
 
+解决字典中键不存在的问题，当访问不存在的键时，返回一个默认值
 
+```py
+from collections import defaultdict
+d = defaultdict(lambda: 0)
+```
+
+d
 
 # 4. String
 ```py

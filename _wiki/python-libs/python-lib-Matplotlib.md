@@ -114,13 +114,26 @@ plt.savefig('figname.jpg')
 ```
 
 ### 1.7 绘制子图
-绘制两行三列共六个子图
+
+方法1: 绘制两行三列共六个子图
+
 ```py
 fig, ax = plt.subplots(2, 3, figsize=(10, 7))
 ax[0][0].plot(...)
 ax[0][1].scatter(...)
 ...
 ```
+
+方法2: 绘制大小不同的子图（效果如下）
+<img src="/images/2023-05/Snipaste_2023-06-09_13-50-58.png" width="80%">
+
+```py
+f = plt.Figure(figsize=(10, 7))
+a1 = f.add_subplot(121) # 把整个画布分成一行二列，当前画在第一个位置（第一行第一列）
+a2 = f.add_subplot(222) # 把整个画布分成二行二列，当前画在第二个位置（第一行第二列）
+a3 = f.add_subplot(224) # 把整个画布分成二行二列，当前画在第四个位置（第二行第二列）
+```
+
 
 ### 1.8 设置右侧 y 轴
 ```py
@@ -163,4 +176,7 @@ ax.add_patch(
 ```
 
 
+
+
+Sampling?
 

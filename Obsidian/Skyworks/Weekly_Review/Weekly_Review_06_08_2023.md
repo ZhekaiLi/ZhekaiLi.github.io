@@ -66,8 +66,9 @@ All others are ideal
 	4. [ ] increase number of wafers per lot
 	5. [ ] try to consider about the availbility, breakdown event
 	6. [ ] try to consider about the transition time
-	7. [ ] try to consider about the re-work process, which requires to write a function about lot (how to make, break, and reform a lot)
+	7. [ ] try to consider about the ==re-work & inspection== process, which requires to write a function about lot (how to make, break, and reform a lot)
 	8. [ ] try to consider about the bank
+	9. [ ] try to consider chambers
 
 
 ---

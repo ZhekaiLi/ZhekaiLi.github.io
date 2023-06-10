@@ -1,11 +1,11 @@
-<!-- ---
+---
 layout: wiki
 title: tkinter
 cate1: Python
 cate2: -libs
 description: 
 keywords: Python
---- -->
+---
 
 # Code Framework 代码框架
 ```py
@@ -43,11 +43,41 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-# Elements
+# Init
+
 ```py
-from tkinter import *
-tk = Tk()
+import tkinter as tk
+
+main = tk.Tk()
+main.title("Title")    # 设置窗口标题
+main.config(bg="#fff") # 设置背景色为白色
 ```
+
+# Frame
+
+添加一块框架区域，用于放置各种元素
+
+```python
+top_frame = tk.Frame(main)  # 创建一个框架区域
+top_frame.pack(side=tk.TOP) # 设置框架在顶部
+```
+
+初始化完框架区域后，需要进步设置框架区域的大小和颜色，并放置元素。例如，在蓝色背景上放置一个 logo:
+
+```python
+logo = PhotoImage(file="logo.png") # 读取图片
+tk.Label(top_frame, image=logo, bg="#1f77b4", height=85, width=1300).pack() # 在框架中添加元素
+```
+
+# Canvas
+
+添加一块画布区域
+
+```python
+canvas = tk.Canvas(main, with=1300, height=350, bg="white")
+canvas.pack(side=tk.TOP) # 设置画布在顶部（此时如果前面已经有一个 frame.pack(side=tk.TOP)，那么画布会跟在框架后面）
+```
+
 
 ## Label
 显示文字标签

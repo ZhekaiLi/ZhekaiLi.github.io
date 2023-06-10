@@ -45,7 +45,7 @@ mermaid: true
 
 
 
-## 1. 数据储存方式
+# 数据储存方式
 > **Reference - Stack Memory 栈**（特点是后进先出，空间有限）
 
 储存所有<span style="background-color: yellow; color: black;">对象名</span>。执行方式类似于执行嵌套函数:
@@ -118,7 +118,7 @@ print(L) >>> [0,1]
 
 
 
-## 2. 文件操作
+# 文件操作
 > **开关**
 ```py
 f = open(<文件名>, <打开模式>)
@@ -164,8 +164,8 @@ f.close()
 
 
 
-## 3. 函数
-### 3.1 常用函数
+# 函数
+## 3.1 常用函数
 > **enumerate(List)**
 
 ```py
@@ -206,7 +206,7 @@ max(lst, key=lambda x: x[0]) >>> (4, 'e')
 ```
 
 
-### 3.2 lambda function
+## 3.2 lambda function
 
 ```py
 func = lambda [arg1, arg2, ...]: expression
@@ -224,9 +224,8 @@ power(2, 3) >>> 8
 
 
 
-## 4. Libraries
-
-### 4.1 pip
+# 库
+## 4.1 pip: 从外部导入
 可以在 pypi.org 上根据关键字搜索第三方库
 
 ```py
@@ -237,9 +236,7 @@ pip download <库名> # 下载但不安装
 pip show <库名> # 查看库的详细信息
 pip search <库名> # 检索与该库相关的信息
 ```
-
-
-### 4.2 Famous Libraries
+### Famous Libraries
 **1. 数据处理**
 - **数据分析**: numpy, pandas, scipy
 - **数据可视化**
@@ -265,8 +262,17 @@ pip search <库名> # 检索与该库相关的信息
 - **游戏开发**: PyGame (简单), Panda3D (3D渲染和游戏开发), cocos2d (专业级2D游戏)
 
 
-## 5. ipython (with Jupyter)
-ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便的魔法命令：
+
+## 4.2 构建自己的库
+
+
+
+
+
+
+
+# ipython in Jupyter
+ipython 是一个交互式 shell，同时被应用于 Jupyter。有很多方便的魔法命令：
 
 **1. 自动补全** `Tab`
 
@@ -296,7 +302,7 @@ ipython 是一个交互式 shell，同时被应用于 jupyter。有很多方便�
 
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.49.22 PM.png" width="90%">
 
-#¥# 5.2 代码调试 
+### 5.2 代码调试 
 1. 打开代码调试: `%pdb on`
 2. 之后如果运行错误代码，则会跳转到报错的前一行，并打开调试器，进入 pdb 调试模式，例如：
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.02.17 PM.png" width="80%">
@@ -312,7 +318,7 @@ p 变量名 # 查看变量值
 
 
 
-## 6. Time Complexity
+# Time Complexity
 ### 6.1 Big O
 $O$ usually used as Time Complexity notation. Understood as **how run time or space requirements grow as the input size grows**
 
