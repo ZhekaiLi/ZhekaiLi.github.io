@@ -8,7 +8,10 @@ keywords:
 mathjax: True
 ---
 
+<center>
+
 # Microsoft Word
+</center>
 
 
 ### Set Headings (设置各级标题)
@@ -19,6 +22,8 @@ mathjax: True
 `View` $\to$ `Navigation Pane`
 
 <img src="/images/2023-03/Snipaste_2023-03-31_23-29-18.png"  width="70%">
+
+
 
 
 
