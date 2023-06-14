@@ -35,6 +35,7 @@ Steps: 沉积 > 光刻 > 显影 > 蚀刻 > 重复
     - 曝光: 紫外线照射掩膜，穿过透镜设在光刻胶上（被紫外线照射后的光刻胶变得可溶）
 4. **Cleaning/Inspection/Measurement**
     - 显影: 使用显影液冲洗可溶的光刻胶
+    - 干燥 (evaporation)
 5. **Etch**: A wafer is partially covered by photoresist strip after photolithography. Material is removed from the areas of the wafer surface that are not covered by the etching step.
    蚀刻: 把没有光刻胶覆盖的区域的氧化膜(和下方的硅一起)刻掉，形成一个突起的结构，也就是鳍式场效应晶体管的 "鳍" (见下图)
 6. **Ion implantation** 离子注入: Doping material is deposited where parts of the wafer have been etched.

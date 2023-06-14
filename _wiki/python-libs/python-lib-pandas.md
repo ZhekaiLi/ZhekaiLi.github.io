@@ -17,7 +17,10 @@ keywords: Python
 
 `DataFrame` 由多个 `Series` 组成，无论是行还是列，单独拆分出来都是一个 `Series`。因此，<span style="background-color: yellow; color: black;">对数据表的行/列操作，与对数据序列的操作是一致的
 
+
+
 # 1. pandas.DataFrame
+
 ```py
 # 以下两种方式效果相同
 df = df.func(inplace=False)
@@ -27,7 +30,23 @@ df.func(inplace=True)
 **通用参数**
 - `inplace`: 默认为 False，表示函数操作不会改变 df，而是创建了一个临时对象。True 表示函数操作会应用在 df 本身
 
+**输出设置**
+
+```py
+# 显示所有列
+pd.set_option('display.max_columns', None)
+# 显示1000列
+pd.set_option('max_columns',1000)
+# 显示所有行
+pd.set_option('display.max_rows', None)
+# 显示1000行
+pd.set_option('max_rows',1000)
+```
+
+
+
 ## 1.1 Create
+
 ```py 
 df = pd.DataFrame()
 df = pd.DataFrame(colums=['col_1', 'col_2'])

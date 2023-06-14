@@ -56,19 +56,20 @@ All others are ideal
 
 ## 4. What's NEXT?
 
-1. [ ] Keep updating the logic of the simulation to make it more close to the real-case, especailly try to update the rule of computing score for both lot and entity (tool)
+1. [-] Keep updating the logic of the simulation to make it more close to the real-case, especailly try to update the rule of computing score for both lot and entity (tool)
 2. [ ] Test the application value by comparing results from different priority
 3. [ ] Try to fix the data missing problem with other engineering
-4. [ ] Keep improving the degree of realism by adding:
-	1. [ ] different priority of differnt lot
-	2. [ ] different startTime and dueTime of different lot
+4. [-] Keep improving the degree of realism by adding:
+	2. [ ] make it available for different startTime of different lot
 	3. [ ] variance of MPU
-	4. [ ] increase number of wafers per lot
-	5. [ ] try to consider about the availbility, breakdown event
-	6. [ ] try to consider about the transition time
-	7. [ ] try to consider about the ==re-work & inspection== process, which requires to write a function about lot (how to make, break, and reform a lot)
-	8. [ ] try to consider about the bank
-	9. [ ] try to consider chambers
+	4. [-] increase number of wafers per lot
+	5. [-] include sampling rate
+       5. [ ] try to consider about the availbility, breakdown event
+	6. try to consider about the transition time
+	7. try to consider about the ==re-work & inspection== process, which requires to write a function about lot (how to make, break, and reform a lot)
+	8. try to consider about the bank
+	9. try to consider chambers
+5. [-] Try some animation
 
 
 ---
