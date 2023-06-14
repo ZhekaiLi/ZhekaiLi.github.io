@@ -13,10 +13,11 @@ permalink: /about/
 <span> 文字内容 </span>
 </div> -->
 
-Hi, I'm Zeka(Zhekai) Li, a graduate student in <b>MS Supply Chain Engineering</b> at the Georgia Institute of Technology. I'll graduate in December 2023 and I'm currently looking for a <b>2023 summer internship in supply chain analysis</b>
+Hi, I'm Zeka(Zhekai) Li, a graduate student in [<b>MS Supply Chain Engineering</b> at the Georgia Institute of Technology](https://www.isye.gatech.edu/academics/masters/degrees/ms-supply-chain-engineering). I'm now working as a Industrial Engineering Intern at [<b>Skyworks Solutions, Inc.</b>](https://www.skyworksinc.com/en/) in Irvine, CA.
 
-**CONTACT**: <a href="https://www.linkedin.com/in/zeka-li-a949a2236/" target="_blank" title="Go to LinkedIn"><b>[LinkedIn]</b></a> [zli3125@gatech.edu] [zhekai18@163.com]
+I'll graduate in December 2023 and I'm currently looking for a <b>2024 spring full-time and 2023 fall co-op in supply chain analysis</b>
 
+**CONTACT**: <a href="https://www.linkedin.com/in/zeka-li-a949a2236/" target="_blank" title="Go to LinkedIn"><b>[LinkedIn]</b></a> [zli3125@gatech.edu] [zekalee0523@gmail.com]
 
 
 ### Education
@@ -30,16 +31,14 @@ Hi, I'm Zeka(Zhekai) Li, a graduate student in <b>MS Supply Chain Engineering</b
 <center><img src="/images/2022-12/Snipaste_2023-01-28_17-33-01.png" width="100%">
 </center>
 
+### Work Experience
+---
+<center><img src="/images/2023-03/Snipaste_2023-06-10_21-40-39.png" width="100%">
+</center>
 
 ### Academic Projects
 ---
 <center><img src="/images/2022-12/Snipaste_2023-01-28_17-33-42.png" width="100%">
-</center>
-
-
-### Work Experience
----
-<center><img src="/images/2022-12/Snipaste_2023-01-28_17-34-10.png" width="100%">
 </center>
 
 
