@@ -46,24 +46,23 @@ mermaid: true
 
 
 # 数据储存方式
-> **Reference - Stack Memory 栈**（特点是后进先出，空间有限）
-
+(1) **Reference in Stack Memory 栈**（特点是后进先出，空间有限）
 储存所有<span style="background-color: yellow; color: black;">对象名</span>。执行方式类似于执行嵌套函数:
 - 首先外部函数进入栈，然后内部函数入栈
 - 内部函数执行完后先出栈，然后外部函数出栈
 
-> **Objects - Heap Memory 堆**（特点是无序杂乱，空间大）
-
+(2) **Objects in Heap Memory 堆**（特点是无序杂乱，空间大）
 储存所有创建的<span style="background-color: yellow; color: black;">对象本身</span>
 
-### 1.1 Illustration
+## 1. Illustration
+
 ```py
 obj1 = MyObject()
 id(obj1) >>> addr1
 ```
 
 - `obj1` 对象名(实例的reference)，储存在 stack memeory 中
-- `MyObject()` 实例(instance)，储存在 heap memory 中
+- `MyObject()` 实例(instance/ object)，储存在 heap memory 中
 - `=` 等号相当于创建了一个指针地址 address，将对象名指向实例。该地址和对象名一起储存在 stack memory 中
 - `id(obj1)` 读取对象名所储存的地址
 
@@ -87,7 +86,7 @@ obj2 = MyObject()
 - 但是 `obj1 == obj2 >>> True` 因为他们指向的实例对象在属性值上相同
 <img src="/images/2022-08/Snipaste_2022-08-01_11-04-12.png" width="80%">
 
-### 1.2 Examples
+## 2. Examples
 **函数传参的本质是传递 object address**。例如，下例中 `F()` 的执行过程相当于把 obj 对应的地址赋给 input
 
 ```py
@@ -225,7 +224,7 @@ power(2, 3) >>> 8
 
 
 # 库
-## 4.1 pip: 从外部导入
+## 1. pip 命令
 可以在 pypi.org 上根据关键字搜索第三方库
 
 ```py
@@ -236,34 +235,31 @@ pip download <库名> # 下载但不安装
 pip show <库名> # 查看库的详细信息
 pip search <库名> # 检索与该库相关的信息
 ```
-### Famous Libraries
-**1. 数据处理**
-- **数据分析**: numpy, pandas, scipy
-- **数据可视化**
-  - matplotlib (matplotlib.pyplot)
-  - seaborn (统计类数据)
-  - Mayavi (三维数据可视化)
-- **文本处理**
-  - PyPDF2 (处理pdf文件)
-  - NLTK (自然语言文本处理)
-  - Python-docx (Word文件)
-  - wordcloud (绘制词云)
 
-**2. 机器学习**: Sickit-learn, TensorFlow, MXNet (基于神经网络的深度学习计算框架)
+## 2. 构建自己的库
 
-**3. web**
-- **网络爬虫**: Requests, Scrapy, pysipder
-- **Web信息提取**: Beautiful Soup, Re (正则表达式), Python-Goose
-- **Web网站开发**: Django (大型网站), Pyramid (中型), Flask (简易)
-- **网络应用开发**: WeRobot (微信小程序), aip (百度AI框架), MyQR (定制二维码)
-
-**4. 人机交互与设计**
-- **图形用户界面 GUI**: PyQt5, wxPython, PyGObject
-- **游戏开发**: PyGame (简单), Panda3D (3D渲染和游戏开发), cocos2d (专业级2D游戏)
+库名一般等于文件夹名，且文件夹中必须有一个 `__init__.py` 文件，该文件可以为空
 
 
+# 类
 
-## 4.2 构建自己的库
+```py
+class CS:
+  def __init__(self, name):
+    self.name = name
+
+  # 定义 print(类对象) 时的输出值
+  def __str__(self):
+    print("Class: CS")
+    return "Name: " + self.name
+
+cs = CS("Tom")
+print(cs)
+
+>>>
+Class: CS
+Name: Tom
+```
 
 
 
@@ -293,7 +289,7 @@ ipython 是一个交互式 shell，同时被应用于 Jupyter。有很多方便�
 **7. 使用前面代码块的输出结果** `_` 前面第一个, `__` 前面第二个, `_n` 序号为n的代码块：
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.35.57 PM.png" width="60%">
 
-### 5.1 为地址设置书签
+## 1. 为地址设置书签
 设置书签 `%bookmark 书签名 地址`
 删除书签 `%bookmark -d 书签名`
 删除所有书签 `%bookmark -r`
@@ -302,7 +298,7 @@ ipython 是一个交互式 shell，同时被应用于 Jupyter。有很多方便�
 
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.49.22 PM.png" width="90%">
 
-### 5.2 代码调试 
+## 2. 代码调试 
 1. 打开代码调试: `%pdb on`
 2. 之后如果运行错误代码，则会跳转到报错的前一行，并打开调试器，进入 pdb 调试模式，例如：
 <img src="/images/2022-01/Screenshot 2022-01-22 at 8.02.17 PM.png" width="80%">
@@ -422,9 +418,10 @@ www.bigocheatsheet.com
 
 
 
-## Others
-### 1. *星号的使用
-星号的作用为 unpacking
+# Others
+## 1. 星号(*)的使用
+星号的作用为 unpacking: `*实参`，一般用于调用函数时
+
 ```py
 values = (1, 2)
 sum(*values) >>> 3
@@ -436,7 +433,21 @@ a >>> 1
 b >>> [2, 3]
 ```
 
-### 2. Eliminate Warnings
+星号作为 packing: `*形参, **形参`，一般用于定义函数时
+
+```py
+def func1(*args):
+    print(args) # args is a tuple
+
+def func2(**kwargs):
+    print(kwargs) # kwargs is a dictionary
+
+func1(1, 2, 3) >>> (1, 2, 3)
+func2(a=1, b=2, c=3) >>> {'a': 1, 'b': 2, 'c': 3}
+```
+
+
+## 2. Eliminate Warnings
 aka
 - 取消 warning 
 

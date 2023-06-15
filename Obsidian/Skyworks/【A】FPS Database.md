@@ -129,7 +129,7 @@ FROM FPSBASE.RTG_PROCESS_RCP_EQPTYPES
 ### RTG_ROUTE_STEPS_PLUS
 [RTG_ROUTE_STEPS_PLUS](https://help.inficonims.com/display/SCHEMAS/TABLES?run_1=run&run_1_tablename=RTG_ROUTE_STEPS_PLUS&run_2=run&run_2_tablename=RTG_ROUTE_STEPS_PLUS), compared to [[#FPSINPUT#RTG_ROUTE_STEPS]], contain Eqp_type but with less data（17300 < 20723）
 
-map [[#Route]] to list([[#Eqp_type]] - [[#Process]] - [[#Recipe]])
+map [[#Route]] to list([[#Eqp_type]] - [[#Process]] - [[#Recipe]] - MPU - EST_SMP_PCT)
 
 | |route|eqp_type|process|recipe|seq_num|
 |---|---|---|---|---|---|
