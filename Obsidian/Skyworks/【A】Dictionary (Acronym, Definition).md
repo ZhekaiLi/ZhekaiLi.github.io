@@ -13,6 +13,7 @@
 |IC     | Integrated Circuit                 |
 |MRP    | Material Requirements Planning     |
 |MSO    | Metrology Sampling Optimizer 计量采样优化器| 
+|OEE    | Overall Equipment Effectiveness    |
 |PM     | Preemptive Maintanance             |
 |prd    | prodcut/ production                |
 |SAW    | Surface Acoustic Wave 表面声波滤波器|

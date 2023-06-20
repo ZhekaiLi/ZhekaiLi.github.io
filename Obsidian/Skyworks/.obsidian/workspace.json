@@ -6,6 +6,7 @@
       {
         "id": "733000ef34b9160f",
         "type": "tabs",
+        "dimension": 37.279843444227005,
         "children": [
           {
             "id": "8b8fdd0fe1179b52",
@@ -13,19 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Weekly_Review/Weekly_Review_06_08_2023.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f626ac779198e6ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "【A】Scheduler.md",
+                "file": "【A】FPS Database.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,14 +26,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "【A】FPS Database.md",
+                "file": "Weekly_Review/Weekly_Review_06_16_2023.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
+      },
+      {
+        "id": "bd3ec0f91a6d7bab",
+        "type": "tabs",
+        "dimension": 62.720156555773,
+        "children": [
+          {
+            "id": "8dca95a27c00bcfb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Weekly_Review/Weekly_Review_06_22_2023.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +102,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246.50043487548828
+    "width": 246.50043487548828,
+    "collapsed": true
   },
   "right": {
     "id": "605b3eeb6ce628b0",
@@ -110,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "【A】FPS Database.md",
+                "file": "Weekly_Review/Weekly_Review_06_22_2023.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "【A】FPS Database.md",
+                "file": "Weekly_Review/Weekly_Review_06_22_2023.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "【A】FPS Database.md"
+                "file": "Weekly_Review/Weekly_Review_06_22_2023.md"
               }
             }
           },
@@ -171,7 +180,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5
+    "width": 254.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,12 +195,18 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "401a613ab200b31c",
+  "active": "8dca95a27c00bcfb",
   "lastOpenFiles": [
-    "【A】Scheduler.md",
-    "Weekly_Review/Weekly_Review_06_08_2023.md",
+    "Weekly_Review/Weekly_Review_06_16_2023.md",
     "【A】FPS Database.md",
+    "Weekly_Review/Weekly_Review_06_22_2023.md",
+    "Weekly_Review/Weekly_Review_06_08_2023.md",
+    "FPS_Dashboard/Lot.md",
     "【A】Dictionary (Acronym, Definition).md",
+    "【A】Scheduler.md",
+    "Pasted image 20230616131038.png",
+    "Weekly_Review/Weekly_Review_06_01_2023.md",
+    "Pasted image 20230616114118.png",
     "Excel - NPK Capacity Model.md",
     "Optimization Simulation.md",
     "Problem Centers.md",
@@ -198,7 +214,6 @@
     "Untitled.canvas",
     "pics/Pasted image 20230608173412.png",
     "pics/Pasted image 20230608173758.png",
-    "Weekly_Review/Weekly_Review_06_01_2023.md",
     "Untitled 1.canvas",
     "Eqp_type.md",
     "Connect to Oracle Database using Python.md",
@@ -208,7 +223,6 @@
     "[.md",
     "Weekly_Review/Weekly_Review_05_24_2023.md",
     "pics/Pasted image 20230607155059.png",
-    "FPS_Dashboard/Lot.md",
     "FPS_Scheduler/Scheduler.md",
     "[TABLES.md",
     "pics/Pasted image 20230601134556.png",
@@ -217,15 +231,12 @@
     "pdf/2014_ST_step_toward_cap_planning[11].pdf",
     "Weekly_Review",
     "pics/Pasted image 20230526143621.png",
-    "pics/Pasted image 20230526140947.png",
-    "pics/Pasted image 20230526140807.png",
     "Pasted.md",
     "FPS_Scheduler/【A】Acronym Dictionary.md",
     "FPS_Scheduler/Bays.md",
     "FPS_Dashboard/Entity.md",
     "FPS_Dashboard/【A】Structure (Overview).md",
     "FPS_Dashboard/Route Family.md",
-    "FPS_Dashboard/Stage.md",
     "FPS_Scheduler",
     "FPS_Dashboard",
     "pdf",
