@@ -10,8 +10,11 @@ topmost: true
 
 <center>
 
-# MySQL Doc
+# SQL Server Doc
 </center>
+
+<span style="background-color: yellow; color: black;">以下内容基本上都是从 MySQL Doc 复制过来的，因此需要不断地修改 SQL Server 与 MySQL 不同的地方</span>
+- table rename
 
 *Reference*: 
 [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/)
@@ -166,8 +169,9 @@ ADD
 修改表名
 
 ```sql
-alter table table1 rename to table2;
+exec sp_rename 'OldTableName', 'NewTableName'
 ```
+
 添加行 (插入数据)
 
 ```sql
@@ -317,12 +321,18 @@ select a2 from T as t2
 
 
 
-### 2.6 保存为 .csv
+### 2.6 输出为 csv
 ```sql
 select * from SKU_layersDailyPicking 
 into outfile '/tmp/SKU_layersDailyPicking.csv' -- 绝对路径
 fields terminated by ','; -- 指定分隔符(默认为 Tab)
 ```
+
+
+### 2.7 从 csv 导入
+（也可以是 txt）
+
+<img src="/images/2023-05/Snipaste_2023-06-20_11-33-45.png" width="70%">
 
 
 

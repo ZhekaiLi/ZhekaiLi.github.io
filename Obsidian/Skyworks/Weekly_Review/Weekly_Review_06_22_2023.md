@@ -89,6 +89,7 @@ All others are ideal
 	14. [ ] try to speed up simulation/ decrease memory requirements by deleting those products that is finished.
 	15. [ ] consider what to eliminate for the lots generated initially, as well the lots generated in the following weeks after the first week
 
+周末把 sql 那个 pdf 学完
 
 ---
 

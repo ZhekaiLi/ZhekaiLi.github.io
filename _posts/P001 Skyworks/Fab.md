@@ -192,3 +192,5 @@ t_{(l',sl')} + \sum_i p_{(l',sl'),i}x_{(l',sl'),(l,sl),i} + M(\sum_i x_{(l',sl')
 t_{(l,sl)} + \sum_{(l',sl'),i}p_{(l,sl),i}x_{(l',sl'),(l,sl),i} + \sum_{i,j}p_{(l,sl),i}w_{(l,sl),i,j} &\leq t_{(l,sl+1)}\\
 t_{(l,Sl)} + \sum_{(l',sl'),i}p_{(l,Sl),i}x_{(l',sl'),(l,Sl),i} + \sum_{i,j}p_{(l,Sl),i}w_{(l,Sl),i,j} &\leq C_l
 \end{aligned}$$
+
+
