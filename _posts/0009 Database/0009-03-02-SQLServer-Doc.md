@@ -1184,6 +1184,7 @@ create materialized view view_table as ...
 <!----------------------------------------------------------->
 ## 10. Procedure（函数）
 类似于Python中的自定义函数
+
 ```sql
 delimiter //
 create procedure proc_name
@@ -1262,11 +1263,5 @@ WHERE
     price = (SELECT MIN(price) FROM products);
 ```
 
-$$S(P)=\frac{aX+bY+cZ}{M}+d$$
 
-$S(P):$ Score of path 
-$X:$ Travel Distance
-$Y:$ Transfer Time
-$Z:$ Train Interval
-$M=X+Y+Z$
 

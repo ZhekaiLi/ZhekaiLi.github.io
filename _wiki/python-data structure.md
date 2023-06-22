@@ -180,9 +180,10 @@ from collections import defaultdict
 d = defaultdict(lambda: 0)
 ```
 
-d
+
 
 # 4. String
+
 ```py
 text = "Data Science"
 
@@ -192,6 +193,7 @@ text.capitalize() >>> "Data science"
 ```
 
 **Get index of a substring/char**: `.index()` or `.find()`
+
 ```py
 text.index('Data')   >>> 0
 text.find('Science') >>> 5
@@ -201,6 +203,7 @@ text.find('data')  >>> -1
 ```
 
 **(1) Concact list to string**
+
 ```py
 L = ["Hello", "World"]
 string = " ".join(L) >>> "Hello World"
@@ -218,6 +221,18 @@ s2 = s1[::-1] >>> "cba"
 i1 = 123
 i2 = int(str(i1)[::-1]) >>> 321
 ```
+
+## 4.1 字符串匹配
+
+```py
+import re
+ 
+string = "Hello World"
+pattern = r"World"
+re.search(pattern, string)
+```
+
+如果没找到，返回 None
 
 
 
