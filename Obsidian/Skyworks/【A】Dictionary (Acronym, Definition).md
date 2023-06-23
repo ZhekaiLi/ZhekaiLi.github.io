@@ -1,23 +1,43 @@
 
 |Acronym| Meaning                            |
 |-------|------------------------------------|
-|BAW    | Bulk Acoustic Wave 散装声波滤波器   |
-|Bi-    | Bipolar- 双极的                    |
-|CTM    | Capacitor Top Metal 半导体内的一种结构层|
+|AMU    | Manufactoring Availability         |
+|AOU    | Operational Availability           |
+|ATU    | Total Availability                 |
+|BAW    | Bulk Acoustic Wave                 |
+|Bi-    | Bipolar-                           |
+|CTM    | Capacitor Top Metal                |
 |DPML   | Days per Mask Level                |
 |DPS    | Die (or Dice) Processing           |
+|ENG    | [Engineering Time](https://help.inficonims.com/display/ETP/Engineering+%28ENG%29+States)                 |
+|ETP    | Enhanced Tool Performance          |
 |FET    | Field-Effect Transistor            |
 |GDPW   | Gross Die Per Wafer (e5)           |
-|HBT    | Heterojunction Bipolar Transistors 异质结双极晶体管   <br> e.g. AlGaAs, GaAs HBT                   |
-|HFET   | High-Electron-Mobility Transistor <br> aka. Heterostructure FET (HFET)
+|HBT    | Heterojunction Bipolar Transistors <br> e.g. AlGaAs, GaAs HBT                       |
+|HFET   | High-Electron-Mobility Transistor <br> aka. Heterostructure FET (HFET)             |
 |IC     | Integrated Circuit                 |
+|IT     | Impairment Time                    |
+|MFD    | Mean Failure Duration              |
 |MRP    | Material Requirements Planning     |
-|MSO    | Metrology Sampling Optimizer 计量采样优化器| 
+|MSO    | Metrology Sampling Optimizer       | 
+|MTBF   | Mean Time Between Failures         |
+|MTOL   | Mean Time Off-Line (average of SDT and UDT)
+|MTTI   | Mean Time to Interrupt             |
+|MTTR   | Mean Time to Repair                |
+|MTTQ   | Mean Time to Qualification         |
+|MTTPM  | Mean Time to Perform               |
+|NST    | Nonscheduled Time                  |
 |OEE    | Overall Equipment Effectiveness    |
 |PM     | Preemptive Maintanance             |
 |prd    | prodcut/ production                |
-|SAW    | Surface Acoustic Wave 表面声波滤波器|
+|SAW    | Surface Acoustic Wave              |
+|SBY    | Standby Time                       |
+|SDT    | Scheduled Down Time                |
 |SOAK   | Second of a Kind                   |
+|TFR    | Total Failure Rage                 |
+|UDT    | Unscheduled Down Time              |
+|UOU    | Total Utilization                  | 
+|UTU    | Operational Utilization            |
 |WSPD   | Wafter Starts Per Day              |
 |WSPM   | Wafer Starts Per Month             |
 
@@ -29,7 +49,12 @@ CTM
 MSO
 - Metrology Sampling Optimizer 计量采样优化器: [MSO Database Tables - Metrology Sampling Optimizer - INFICON IMS Help Site](https://help.inficonims.com/display/MSO/MSO+Database+Tables)
 
-**lot**
+MTBF: Mean Time Between Failures ([Equipment Metrics - Enhanced Tool Performance - INFICON IMS Help Site](https://help.inficonims.com/display/ETP/Equipment+Metrics))
+- MTBF_u: Uptime
+- MTBF_p: Production
+
+
+lot
 - the process unit in the fab, contains a set of waters (see [[Lot]])
 
 Reservation

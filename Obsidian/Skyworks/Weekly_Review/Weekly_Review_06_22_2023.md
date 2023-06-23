@@ -71,34 +71,24 @@ All others are ideal
 
 ## 4. What's NEXT?
 
-1. [ ] Keep updating the logic of the simulation to make it more close to the real-case, especailly try to update the rule of computing score for both lot and entity (tool)
+1. [-] Keep updating the logic of the simulation to make it more close to the real-case, especailly try to update the rule of computing score for both lot and entity (tool)
 2. [ ] Test the application value by comparing results from different priority
-3. [ ] Try to fix the data missing problem with other engineers
+3. [-] Try to fix the data missing problem with other engineers
 4. [-] Keep developing animation
 5. [ ] Keep improving the degree of realism by adding:
 	3. [ ] variance of MPU
-	5. [ ] validate the use sampling rate
-       5. [ ] try to consider about the ==availbility, utilization, breakdown event== (MTTF)
+       5. [ ] try to consider about the ==availbility, breakdown event== (MTTF)
 	6. [ ] try to consider about the transition time
 	7. [ ] try to consider about the ==re-work (model in Promis) & inspection== process, which requires to write a function about lot (how to make, break, and reform a lot) #TODO batch with MPU
 	8. [ ] try to consider about the bank
 	9. [ ] ==try to consider chambers== (already considered in UPH in FPS?) (batch)
 	11. [-] add function to keep dispatching wafers in the following weeks after 1st week
-	12. [ ] understand the "Start" Module
+	12. [-] understand the "Start" Module
 	13. [ ] calculate utilization of each machine per 40 hrs
-	14. [ ] try to speed up simulation/ decrease memory requirements by deleting those products that is finished.
-	15. [ ] consider what to eliminate for the lots generated initially, as well the lots generated in the following weeks after the first week
+	14. [-] speed up the simulation by using threading
+	15. 
 
 周末把 sql 那个 pdf 学完
-
----
-
-
-## 5. Questions
-
-1. ==What is "On-hold" means? How to simulate that==
-![[Pasted image 20230616114118.png]]
-8. 
 
 
 ---
@@ -116,13 +106,56 @@ e.g.:
 
 
 
+1. Chambers & Batching: 
+	1. now the lowest level we could find in FPS database about the UPH is the recipe-to-tool level. How could we know any infomation about chambers?
+	2. From FPS table: ETP_ENTITY_E10_PW_HIST, we have lots of tool-to-entity pairs. For are these entities include chambers? If so how could we know their UPH value?
+	3. 
+	
+
+#Problem  way to model sampling rate (now just multiply)
+	
+#Problem  chambers? how to model the chamber, any data and suggestions
+#Problem  Start
+#Problem  how to model availability (breakdown schedule down time frequency),
+unscheduler schedular, (vary variable)
+decide to continue, 
+batch tool
+previous step to rework, 
+	
+3% of lots of the stop twice
+
+historcial data --> E10 Table
+
+sampling:
+one sample per run, two lot per run
+depend on technology (route family)
+
+Chambers: specific to the tool
+- spt tools: some four chambers are different
+- sput: chambers different from
+
+table show how many lots can be loaded per tool (IE team)
+cascading 
+batching
+serial 
+
+#Problem change of the route, maybe rework? ()
+
+excel, change the material accord the process
+
+test-run: metrology -> check the wafer and the tool (after maintainance, to check the tool if good or not)
+(test-run maybe only 4 steps, significant for metrology tools)
+
+
+
+recipe have parameter to decide MPU based on the product
+(recipe)
 
 
 
 
-### 2. Karen's team (IE) 
-the wip on the tool level (current wip, real time)
+
+how peam find the utilization data 
 
 
-others
-ask sam to ask for the oneNote ()
+
