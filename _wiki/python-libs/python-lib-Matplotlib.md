@@ -47,19 +47,27 @@ ax.plot([x1, x2], [y1, y2],
 - `样式=点形+线形+颜色`，例如 `o-r` 表示红色圆点实线
 - 分开表示样式：`linestyle` `marker` `color`
 
-### 1.3 柱状图 + histogram
-```py
-ax.bar(X, Y)
-```
 
+
+### 1.3 柱状图 + histogram
+
+```py
+ax.bar(labels, heights
+    bottom=[0]*len(labels),  # 柱子的起始高度。默认为 0
+    width=0.5                # 柱子的宽度
+)
+```
 柱状统计图（统计数据的分布）
 - `bins`: 柱子的个数，默认为10，数量越多画出来的图越精细
+
 ```py
 plt.hist(X, bins=100)
 ```
 
 
+
 ### 1.4 画方块
+
 ```py
 from matplotlib import patches
 
@@ -90,6 +98,7 @@ ax.add_patch(
 ax.text(x, y, "content", fontsize=10)
 ```
 示例: 在图中显示各点的坐标
+
 ```py
 for i_x, i_y in zip(X, Y):
     ax.text(i_x, i_y, '({:.2f}, {:.2f})'.format(i_x, i_y))

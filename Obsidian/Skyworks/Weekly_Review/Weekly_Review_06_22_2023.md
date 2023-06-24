@@ -103,8 +103,13 @@ e.g.:
 - `route_toolsList[0]`        = the list(tool) that could be used for the first step
 - `route_samplingRates[0]` = the samplingRate of the first step
 
+POC: proof of conecpt
 
-
+**What fps means?**
+two level sampling
+- lot-level sampling
+- wafer-level sampling 10 wafers
+the number of points to measure defines the UPH
 
 1. Chambers & Batching: 
 	1. now the lowest level we could find in FPS database about the UPH is the recipe-to-tool level. How could we know any infomation about chambers?
@@ -146,16 +151,18 @@ excel, change the material accord the process
 test-run: metrology -> check the wafer and the tool (after maintainance, to check the tool if good or not)
 (test-run maybe only 4 steps, significant for metrology tools)
 
-
+FabTime -> there is chart average mtbf Suyra
 
 recipe have parameter to decide MPU based on the product
 (recipe)
 
 
-
-
-
 how peam find the utilization data 
 
+
+ETP_ENTITY_E10_PW_HIST 
+1. contains tool-to-entity
+	but we have not find any table to show the entity-to-recipe, and also entity-to-MPU relations
+2. 
 
 
