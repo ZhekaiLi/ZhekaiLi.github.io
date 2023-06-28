@@ -27,14 +27,15 @@ Define four classes to represent the objects in manufacturing:
 	1. ==score = initScore - length(queue)==
 3. ***Family*** $\to$ eqpType
 	1. **run_entities()**
-	2. **run_scheduler()**
-		 Reserve the lot with the highest score to the entity (*that could be used to run that step of lot*) with the highest score, until all the lots are reserved.
 		
 1. ***Factory***: run_families()
 2. ***Module***: collect data for animation (WIP, Avg QT)
 3. ==***Dispatcher***:==
 	1. initialize and send lots into the fab
 	2. #TODO keep dispatching in the other following weeks
+4. ***Scheduler***:
+	1. Scheduler (FIFO)
+	2. Scheduler_MySimpleScheduler
 
 ---
 
@@ -43,12 +44,9 @@ Define four classes to represent the objects in manufacturing:
 Using the real production data of Q3 2023 to generate lots with the following rows:
 - divide by 13x20 (num weeks per quater, num wafers per lot)
 	For example,  13603/260=52 lots of product ZT003-J1NS are generated for simulation ![[Pasted image 20230608152603.png]]
+Initialize the programming with the current WIP inside the fab.
 
-### 2.1 Gantt Chart
-
-omitted, no need
-
-### 2.2 Animation
+### 2.1 Animation
 
 video
 
@@ -71,10 +69,10 @@ All others are ideal
 
 ## 4. What's NEXT?
 
-1. [-] Keep updating the logic of the simulation to make it more close to the real-case, especailly try to update the rule of computing score for both lot and entity (tool)
+1. [ ] Keep updating the logic of the simulation to make it more close to the real-case, especailly try to update the rule of computing score for both lot and entity (tool)
 2. [ ] Test the application value by comparing results from different priority
-3. [-] Try to fix the data missing problem with other engineers
-4. [-] Keep developing animation
+3. [ ] Try to fix the data missing problem with other engineers
+4. [ ] Keep developing animation
 5. [ ] Keep improving the degree of realism by adding:
 	3. [ ] variance of MPU
        5. [ ] try to consider about the ==availbility, breakdown event== (MTTF)
@@ -82,11 +80,10 @@ All others are ideal
 	7. [ ] try to consider about the ==re-work (model in Promis) & inspection== process, which requires to write a function about lot (how to make, break, and reform a lot) #TODO batch with MPU
 	8. [ ] try to consider about the bank
 	9. [ ] ==try to consider chambers== (already considered in UPH in FPS?) (batch)
-	11. [-] add function to keep dispatching wafers in the following weeks after 1st week
-	12. [-] understand the "Start" Module
-	13. [-] calculate utilization of each machine per 40 hrs
-	14. [-] speed up the simulation by using threading
-	15. 
+	10. [ ] make the code structure clean
+
+周末把 sql 那个 pdf 学完
+
 
 ---
 
@@ -101,7 +98,6 @@ e.g.:
 - `route_samplingRates[0]` = the samplingRate of the first step
 
 
-
 **What fps means?**
 two level sampling
 - lot-level sampling
@@ -110,7 +106,7 @@ the number of points to measure defines the UPH
 
 1. Chambers & Batching: 
 	1. now the lowest level we could find in FPS database about the UPH is the recipe-to-tool level. How could we know any infomation about chambers?
-	2. From FPS table: ETP_ENTITY_E10_PW_HIST, we have lots of tool-to-entity pairs. Are these entities include chambers? If so how could we know their UPH value?
+	2. From FPS table: ETP_ENTITY_E10_PW_HIST, we have lots of tool-to-entity pairs. For are these entities include chambers? If so how could we know their UPH value?
 	3. 
 	
 
@@ -139,6 +135,9 @@ table show how many lots can be loaded per tool (IE team)
 cascading 
 batching
 serial 
+
+break down the queue time into transportation and wip
+
 
 #Problem change of the route, maybe rework? ()
 

@@ -45,6 +45,24 @@
           }
         ],
         "currentTab": 2
+      },
+      {
+        "id": "755bbdc75feec3c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d5577118cd2b98e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Weekly_Review/Weekly_Review_06_30_2023.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +112,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246.50043487548828
+    "width": 246.50043487548828,
+    "collapsed": true
   },
   "right": {
     "id": "605b3eeb6ce628b0",
@@ -110,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Weekly_Review/Weekly_Review_06_22_2023.md",
+                "file": "Weekly_Review/Weekly_Review_06_30_2023.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Weekly_Review/Weekly_Review_06_22_2023.md",
+                "file": "Weekly_Review/Weekly_Review_06_30_2023.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Weekly_Review/Weekly_Review_06_22_2023.md"
+                "file": "Weekly_Review/Weekly_Review_06_30_2023.md"
               }
             }
           },
@@ -171,7 +190,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 254.5
+    "width": 254.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,11 +205,12 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "b2342341a569af84",
+  "active": "8d5577118cd2b98e",
   "lastOpenFiles": [
-    "【A】Dictionary (Acronym, Definition).md",
-    "【A】FPS Database.md",
     "Weekly_Review/Weekly_Review_06_22_2023.md",
+    "【A】Dictionary (Acronym, Definition).md",
+    "Weekly_Review/Weekly_Review_06_30_2023.md",
+    "【A】FPS Database.md",
     "Weekly_Review/Weekly_Review_06_16_2023.md",
     "Weekly_Review/Weekly_Review_06_08_2023.md",
     "FPS_Dashboard/Lot.md",
@@ -226,7 +247,6 @@
     "FPS_Scheduler/Bays.md",
     "FPS_Dashboard/Entity.md",
     "FPS_Dashboard/【A】Structure (Overview).md",
-    "FPS_Dashboard/Route Family.md",
     "FPS_Scheduler",
     "FPS_Dashboard",
     "pdf",

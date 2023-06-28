@@ -29,6 +29,7 @@
 |NST    | Nonscheduled Time                  |
 |OEE    | Overall Equipment Effectiveness    |
 |PM     | Preemptive Maintanance             |
+|POC    | Proof of Conecpt                   |
 |prd    | prodcut/ production                |
 |SAW    | Surface Acoustic Wave              |
 |SBY    | Standby Time                       |

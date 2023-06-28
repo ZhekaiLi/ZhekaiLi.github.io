@@ -109,3 +109,62 @@ def Bt_function:
     pass
 ```
 
+
+# Toplevel
+创建一个新的窗口，常绑定到按钮上，从而实现 "点击按钮后弹出新窗口" 的功能
+
+```py
+def new_window():
+    toplevel = Toplevel()
+    toplevel.title("New Window")
+    toplevel.geometry(f'{300}x{300}')
+    toplevel.config(bg="#fff")
+
+    # 设置关闭按钮的功能（当点击窗口的关闭键后，销毁窗口）
+    def on_close():
+        toplevel.destroy()
+    toplevel.protocol("WM_DELETE_WINDOW", on_close)
+
+root = Tk()
+button = Button(root, text="New Window", command=new_window)
+button.pack()
+root.mainloop()
+```
+
+当 Toplevel 结合 simpy 来使用时，我们往往会希望在打开一个窗口时开始一个进程 `env.process()`，并且在关闭这个窗口时结束这个进程，从而避免资源浪费
+
+```py
+class tkUpdate:
+    def __init___(self, env, canvas):
+        self.env = env
+        self.canvas = canvas
+
+    def run(self):
+        while True:
+            if self.canvas is not None and self.canvas.winfo_exists():
+                # do something change on canvas
+         env.timeout(1)
+
+def create_toplevel():
+    toplevel = Toplevel()
+    toplevel.title("New Window")
+
+    canvas = Canvas(toplevel, width=700, height=240)
+
+    # Start the SimPy process when the Toplevel window is opened
+    tkU = tkUpdate(env, canvas)
+    process = env.process(tkU.run())
+
+    # Bind the <WM_DELETE_WINDOW> event to a function that stops the SimPy process
+    def on_close():
+        process.interrupt((simpy.events.Event("Window closed")))
+        toplevel.destroy()
+    toplevel.protocol("WM_DELETE_WINDOW", on_close)
+
+env = simpy.Environment()
+root = tk.Tk()
+button = tk.Button(root, text="Create Toplevel", command=create_toplevel)
+button.pack()
+root.mainloop()
+```
+
