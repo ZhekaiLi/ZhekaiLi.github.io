@@ -145,9 +145,17 @@ FROM FPSBASE.RTG_ROUTE_STEPS_PLUS
 ORDER BY route, seq_num
 ```
 
+Constant
+- EST_LINE_YIELD_PCT = 100
+- EST_REWORK_PCT = 0
+- IS_IGNORE_WUP = 'Y'
+- ROUTE_SCORE = 0 这两个应该是因为没有设置
+- ROUTE_FAMILY_SCORE = 0
 
-#Problem 如何处理第一行的 NA 的 eqp_type
-#Problem 这里的 RTG_PARM1 是否就指的是 recipe，有没有可能包含其他类型的数据
+Empty
+- RTG_PARM2, RTG_PARM3, RTG_PARM4
+
+
 #Problem 为什么有些 RTG_PARM1 = NULL，这意味着什么？他们是否可以直接忽略？
 ```sql
 SELECT route, process, eqp_type, rtg_parm1 as recipe

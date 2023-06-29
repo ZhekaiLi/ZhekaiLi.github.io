@@ -160,3 +160,9 @@ ETP_ENTITY_E10_PW_HIST
 	but we have not find any table to show the entity-to-recipe, and also entity-to-MPU relations
 
 
+fpsapp --> cm_p_rorp_step_eqptypes
+chamber 
+
+rorp
+
+

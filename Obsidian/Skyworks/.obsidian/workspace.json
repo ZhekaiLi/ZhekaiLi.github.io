@@ -32,25 +32,6 @@
             }
           },
           {
-            "id": "b2342341a569af84",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Weekly_Review/Weekly_Review_06_22_2023.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "755bbdc75feec3c6",
-        "type": "tabs",
-        "children": [
-          {
             "id": "8d5577118cd2b98e",
             "type": "leaf",
             "state": {
@@ -62,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -112,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246.50043487548828,
-    "collapsed": true
+    "width": 246.50043487548828
   },
   "right": {
     "id": "605b3eeb6ce628b0",
@@ -130,8 +111,8 @@
               "type": "backlink",
               "state": {
                 "file": "Weekly_Review/Weekly_Review_06_30_2023.md",
-                "collapseAll": true,
-                "extraContext": false,
+                "collapseAll": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -159,7 +140,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": false
               }
             }
           },
@@ -190,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 254.5,
-    "collapsed": true
+    "width": 287.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -207,18 +187,19 @@
   },
   "active": "8d5577118cd2b98e",
   "lastOpenFiles": [
-    "Weekly_Review/Weekly_Review_06_22_2023.md",
-    "【A】Dictionary (Acronym, Definition).md",
-    "Weekly_Review/Weekly_Review_06_30_2023.md",
     "【A】FPS Database.md",
+    "【A】Dictionary (Acronym, Definition).md",
+    "Weekly_Review/Weekly_Review_06_22_2023.md",
+    "FPS_Scheduler/Scheduler.md",
+    "Weekly_Review/Weekly_Review_06_30_2023.md",
+    "FPS_Dashboard/Lot.md",
+    "Excel - NPK Capacity Model.md",
+    "【A】Scheduler.md",
     "Weekly_Review/Weekly_Review_06_16_2023.md",
     "Weekly_Review/Weekly_Review_06_08_2023.md",
-    "FPS_Dashboard/Lot.md",
-    "【A】Scheduler.md",
     "Pasted image 20230616131038.png",
     "Weekly_Review/Weekly_Review_06_01_2023.md",
     "Pasted image 20230616114118.png",
-    "Excel - NPK Capacity Model.md",
     "Optimization Simulation.md",
     "Problem Centers.md",
     "Untitled.md",
@@ -234,7 +215,6 @@
     "[.md",
     "Weekly_Review/Weekly_Review_05_24_2023.md",
     "pics/Pasted image 20230607155059.png",
-    "FPS_Scheduler/Scheduler.md",
     "[TABLES.md",
     "pics/Pasted image 20230601134556.png",
     "pics/Pasted image 20230601134124.png",
