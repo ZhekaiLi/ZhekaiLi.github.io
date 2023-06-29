@@ -1,8 +1,0 @@
-{
-	"nodes":[
-		{"type":"text","text":"![[Pasted image 20230518171719.png]]\nUPH Matrix\n","id":"fbf9240f1ecd3494","x":-460,"y":-540,"width":250,"height":226},
-		{"type":"text","text":"Percents []\n![[Pasted image 20230517170514.png]]","id":"249ee2a8697b37e2","x":-120,"y":-400,"width":273,"height":144},
-		{"id":"2f3f56f0e20da482","x":-462,"y":-252,"width":250,"height":392,"type":"text","text":"DPML Days per mask level\nXF x-factor target for cust_1\n\nPar2\n- flow\n\n如果改变了一个东西的 priority, 其他的东西会怎么样？\n\ncycle time simulation?\n- 100 lots come together\n- if we put 30 priorty, 整体的 CT 会怎么样"}
-	],
-	"edges":[]
-}
