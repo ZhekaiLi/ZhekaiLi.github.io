@@ -467,3 +467,7 @@ warnings.filterwarnings('ignore')
 <img src="/images/2022-08/.png" width="100%">
 <img src="/images/2022-08/.png" width="100%">
 
+
+ask sam, todd, 
+different dashboard,
+actually data
