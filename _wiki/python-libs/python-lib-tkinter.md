@@ -109,6 +109,12 @@ def Bt_function:
     pass
 ```
 
+使用 `lambda` 传递参数
+
+```py
+B = Button(tk, text="Botton", command=lambda: Bt_function(arg1, arg2))
+```
+
 
 # Toplevel
 创建一个新的窗口，常绑定到按钮上，从而实现 "点击按钮后弹出新窗口" 的功能

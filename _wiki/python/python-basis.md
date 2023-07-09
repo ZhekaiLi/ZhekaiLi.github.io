@@ -310,12 +310,23 @@ pip search <库名> # 检索与该库相关的信息
 ```
 
 ```py
+import ruamel.yaml
+
 with open(config_dir, 'r') as f:
-  config = yaml.safe_load(f)
+  config = ruamel.yaml.safe_load(f)
 
 print(config['martin']['name']) >>> "Martin D'vloper"
 print(config['martin']['skills']) >>> ['python', 'java']
 print(config['tabitha']['company']) >>> "Skyworks Solutions, Inc"
+```
+
+如果想要每次运行都保存一次配置文件，可以在程序中添加如下代码：
+
+```py
+config['experiment_name'] = "new name"
+
+with open("new_location.yaml", 'w') as f:
+  ruamel.yaml.dump(config, f, Dumper=ruamel.yaml.RoundTripDumper)
 ```
 
 
