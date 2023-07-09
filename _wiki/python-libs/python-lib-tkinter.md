@@ -131,7 +131,8 @@ button.pack()
 root.mainloop()
 ```
 
-当 Toplevel 结合 simpy 来使用时，我们往往会希望在打开一个窗口时开始一个进程 `env.process()`，并且在关闭这个窗口时结束这个进程，从而避免资源浪费
+## Toplevel + SimPy
+当 Toplevel 结合 SimPy 来使用时，我们往往会希望在打开一个窗口时开始一个进程 `env.process()`，并且在关闭这个窗口时结束这个进程，从而避免资源浪费。示例如下:
 
 ```py
 class tkUpdate:

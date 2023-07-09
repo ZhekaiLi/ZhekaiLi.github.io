@@ -12,9 +12,9 @@ mermaid: true
 
 # Python Basis
 
-<span style="background-color: yellow; color: black;">非常非常需要谨记的点！以下大部分都会容易造成很臭的 bug</span>
 
-### (1) copy() & deepcopy()
+## (1) copy() & deepcopy()
+<span style="background-color: yellow; color: black;">非常非常需要谨记的点！会容易造成很臭的 bug</span>
 (1.1) `X.copy()`/ `copy.copy(X)` 浅拷贝: 即只拷贝第一层，第二层及以下的嵌套对象还是指向同一个地址
 
 (1.2) `copy.deepcopy(X)` 深拷贝: 拷贝所有层级，每一层都是新的对象
@@ -42,6 +42,30 @@ mermaid: true
   L = change(L)
   D2['L'] = L
   ```
+
+
+## (2) `eval` 函数
+`eval` 函数可以将字符串转换为 Python 代码并执行，例如:
+
+```py
+eval('print("Hello World")')
+```
+
+当和 `config.yaml` 配合使用时，可以实现自定义执行任意函数，例如:
+
+```yaml
+class_1:
+  func_1: true
+  func_2: false
+```
+
+```py
+c1 = Class_1()
+for func in config['class_1']:
+  if config['class_1'][func] == True:
+    eval(f'c1.{func}()')
+```
+
 
 
 
@@ -239,6 +263,61 @@ pip search <库名> # 检索与该库相关的信息
 ## 2. 构建自己的库
 
 库名一般等于文件夹名，且文件夹中必须有一个 `__init__.py` 文件，该文件可以为空
+
+### 2.1 库的结构
+<img src="/images/2023-05/Snipaste_2023-07-07_09-47-38.png" width="30%">
+
+- FabSim 库名文件夹
+  - `__init__.py`
+  - `FabSim` 主程序文件夹，一般同库名
+    - `__init__.py`
+    - `components` 组件程序文件夹
+    - `untils` 工具程序文件夹
+    - 以上仅为实例，实际情况可根据需要自行添加修改
+  - `data`
+  - `docs`
+  - `tests`
+  - `config.yaml` 配置文件
+  - `main.py` 主程序入口
+  - `README.md`
+  - `setup.py` 安装文件
+
+
+
+### 2.2 `config.yaml` 配置文件
+
+参考: https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html
+
+配置文件以字典的形式储存程序运行所需的参数，从而使得用户可以通过修改配置文件来改变程序的运行方式，而不需要修改程序本身。
+
+如下示例展示了如何定义和使用 .yaml 文件:
+
+```yaml
+- martin:
+    name: Martin D'vloper
+    company: &SKWS Skyworks Solutions, Inc. # 定义一个锚点
+    job: Developer
+    skills:
+      - python
+      - java
+- tabitha:
+    name: Tabitha Bitumen
+    compnay: *SKWS # 使用锚点(简单理解为引用变量)
+    job: Developer
+    skills:
+      - SQL
+      - Excel
+```
+
+```py
+with open(config_dir, 'r') as f:
+  config = yaml.safe_load(f)
+
+print(config['martin']['name']) >>> "Martin D'vloper"
+print(config['martin']['skills']) >>> ['python', 'java']
+print(config['tabitha']['company']) >>> "Skyworks Solutions, Inc"
+```
+
 
 
 # 类

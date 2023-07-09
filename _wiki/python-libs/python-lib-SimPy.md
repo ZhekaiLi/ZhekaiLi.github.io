@@ -11,7 +11,8 @@ keywords: Python
 import simpy
 ```
 
-## Environment
+# 1. Components
+## 1.1 Environment
 核心中的核心，是用来承载一切模拟的环境
 
 ```py
@@ -19,7 +20,7 @@ env = simpy.Environment() # 创建一个环境
 proc1 = env.process(func) # 添加一个进程
 ```
 
-## Container
+## 1.2 Container
 容器，用于存放物品
 
 ```py
@@ -32,7 +33,7 @@ Con1.put(200) # 向容器中放入 200 个
 print(Con1.level) # 查看容器中的剩余量 --> 600
 ```
 
-## Resource
+## 1.3 Resource
 资源，可以用来表示机器、人员等。其特点在于一个资源同时只能被一个进程占用。因此更适用于表示流水线上的机器，或者是服务设施中的服务员:
 - 汽车生产流水线上的机器
 - 电影院中的售票员
@@ -71,7 +72,8 @@ def func_2(resv, resv_R):
 更多信息可以参考 [Simulating Dining Philosophers with SimPy](https://towardsdatascience.com/simulating-dining-philosophers-with-simpy-5abf5106e2ca)
 
 
-### Others
+### Alternatives
+
 对于更传统的工厂 (reentrancy 较高，例如 fac), 或者那种更关注于流程而不是每个资源个体的, 可以使用如下代码来模拟 machine & workstation:
 
 ```py
@@ -94,8 +96,10 @@ def workstation(env, num_machines, con1, con2):
 
 
 
+# Example: Guitar Factory
+**吉他工厂**: 使用木头和电子元件作为原材料，经过加工和组装后，生产出吉他。
 
-## 1.1 One Machine
+## .1 One Machine
 最简单的工厂: 一台机器，使用一种原材料，生产一种产品。
 
 <center><img src="/images/2023-03/Snipaste_2023-04-14_23-33-39.png"  width="70%"></center>
@@ -140,9 +144,9 @@ print(f'%d products are finished!' % factory.prodCon.level)
 
 **Output**: `250 products are finished!`
 
-## 1.2 Parallel Machines (A Guitar Factory)
 
-**吉他工厂**: 使用木头和电子元件作为原材料，经过加工和组装后，生产出吉他。
+
+## .2 Parallel Machines (A Guitar Factory)
 
 <center><img src="/images/2023-03/Snipaste_2023-04-15_12-21-28.png"  width="90%"></center>
 
@@ -197,7 +201,7 @@ print(f'Post-paint Container has %d bodies ready to be assembled' % factory.post
 print(f'%d products are finished!' % factory.guitarCon.level)
 ```
 
-## 1.3 More Advanced
+## .3 More Advanced
 
 **更加完整的吉他工厂**:
 - 加工时间服从正态分布
@@ -206,7 +210,7 @@ print(f'%d products are finished!' % factory.guitarCon.level)
 
 <center><img src="/images/2023-03/Snipaste_2023-04-16_17-56-10.png"  width="95%"></center>
 
-### 1.3.1 Variable Processing Time
+### .3.1 Variable Processing Time
 
 以 `maker` 为例，之前加工一个产品的时间为 1 个时间单位。现在假设加工时间服从正态分布 $N(1, 0.2)$。
 
@@ -219,7 +223,7 @@ def maker(self):
         yield self.prePaintCon.put(1)
 ```
 
-### 1.3.2 Multiple Machines in One Workstation
+### .3.2 Multiple Machines in One Workstation
 
 以 `maker` 为例，之前只有一个机器把木材加工为琴身。现在假设有两台并行的机器同时加工木材
 
@@ -230,7 +234,7 @@ def makerGen(self): # maker Generator
         yield self.env.process(self.maker())
 ```
 
-### 1.3.3 Stock Alarm (库存报警装置)
+### .3.3 Stock Alarm (库存报警装置)
 
 以 `woodCon` 为例，当木材容器的库存量低于 100 时:
 - 触发报警装置
@@ -258,7 +262,7 @@ def wood_stock_control(self):
             yield self.env.timeout(1)
 ```
 
-### 1.3.4 完整代码
+### .3.4 完整代码
 
 ```py
 # Number of parallel machines
@@ -396,7 +400,9 @@ Post-paint Container has 0 bodies ready to be assembled
 121 products are finished!
 ```
 
-## 1.4 Dispatch Production
+
+
+## .4 Dispatch Production
 
 我们还需要监测生产完成的吉他数量。如果库存量超过 50，就联系 retailor 来取货
 
@@ -555,9 +561,26 @@ env.run(until = 500)
 print(f'%d products are produced!' % guitars_made)
 ```
 
+# SimPy + Tkinter
 
+使用 Tkinter 实现一个简单的 GUI，用于控制 SimPy 模拟的过程以及实现流程的可视化。参考: https://towardsdatascience.com/simulating-real-life-events-in-python-with-simpy-619ffcdbf81f
 
-promise: MES heart
+## .1 使用 Threading 避免 GUI 卡死
 
+当 simulation 本身比较复杂时，可以使用 threading.Thread 为 GUI 创建一个独立的线程，减少卡顿
 
+```python
+def tkinterGUI_main(name):
+    root = tk.Tk()
+    root.title(name)
+    root.geometry('800x600')
+    root.mainloop()
 
+GUI = threading.Thread(target=tkinterGUI_main, args=('SimPy_GUI'))
+GUI.start()
+env.run(until = 500)
+```
+
+## .2 SimPy + Tkinter.Toplevel
+
+我们往往会希望在打开一个窗口时开始一个进程 `env.process()`，并且在关闭这个窗口时结束这个进程，从而避免资源浪费。这部分的内容详见 [python-lib-tkinter#Toplvel#Toplevel + Tkinter]()
