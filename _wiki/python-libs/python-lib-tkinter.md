@@ -49,8 +49,11 @@ if __name__ == '__main__':
 import tkinter as tk
 
 main = tk.Tk()
-main.title("Title")    # 设置窗口标题
-main.config(bg="#fff") # 设置背景色为白色
+main.title("Title")            # 设置窗口标题
+main.geometry(f'{300}x{900}')  # 设置窗口大小
+main.config(bg="#fff")         # 设置背景色为白色
+
+main.mainloop()                # 运行窗口
 ```
 
 # Frame
@@ -59,7 +62,7 @@ main.config(bg="#fff") # 设置背景色为白色
 
 ```python
 top_frame = tk.Frame(main)  # 创建一个框架区域
-top_frame.pack(side=tk.TOP) # 设置框架在顶部
+top_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True) # 配置框架位置
 ```
 
 初始化完框架区域后，需要进步设置框架区域的大小和颜色，并放置元素。例如，在蓝色背景上放置一个 logo:
@@ -81,18 +84,22 @@ canvas.pack(side=tk.TOP) # 设置画布在顶部（此时如果前面已经有�
 
 ## Label
 显示文字标签
-```py
-lb = Label(tk, text="Text Content")
-```
 
+```python
+# main = tk.Tk()
+lb = tk.Label(main, text="Text Content")
+```
 显示图片标签
+
 ```py
 pic = PhotoImage(file="pic.png")
-lb_pic = Label(tk, image=pic)
+lb_pic = Label(main, image=pic)
 ```
+
 
 ## Entry
 输入框
+
 ```py
 # 定义一个字符串变量，用于接收输入
 v = StringVar()
@@ -100,19 +107,37 @@ v = StringVar()
 ety = Entry(tk, textvariable=v, width=10) 
 ```
 
-## Botton
-创建按钮，并绑定触发事件
-```py
-B = Button(tk, text="Botton", command=Bt_function)
 
+## Botton
+
+```py
 def Bt_function:
     pass
+
+# 创建按钮，并绑定触发事件
+btn = tk.Button(main, text="Botton", command=Bt_function)
+# 设置按钮的大小和按下去时的样式
+btn.configure(width=10, height=2, activebackground="#33B5E5", relief=tk.FLAT)
+# 设置按钮的位置
+btn_window = canvas.create_window(10, 10, anchor=tk.NW, window=btn)
+btn.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 ```
 
-使用 `lambda` 传递参数
+在创建按钮时，使用 `lambda` 传递参数
 
 ```py
-B = Button(tk, text="Botton", command=lambda: Bt_function(arg1, arg2))
+B = tk.Button(tk, text="Botton", command=lambda: Bt_function(arg1, arg2))
+```
+
+# FigureCanvasTkAgg
+在 tkinter 中显示 matplotlib 的图像
+
+```py
+fig, axs = plt.subplots(2, 2, figsize=(14, 2.4), dpi=72)
+
+figCanvas = FigureCanvasTkAgg(fig_utilization, master=main)
+figCanvas.get_tk_widget().config(height = 240)
+figCanvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 ```
 
 
