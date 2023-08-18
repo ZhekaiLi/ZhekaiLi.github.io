@@ -43,7 +43,8 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-# Init
+# Tk
+main GUI
 
 ```py
 import tkinter as tk
@@ -56,21 +57,31 @@ main.config(bg="#fff")         # 设置背景色为白色
 main.mainloop()                # 运行窗口
 ```
 
-# Frame
+---
 
-添加一块框架区域，用于放置各种元素
+# Botton
+按钮, 可以放进 Tk, Frame, 或 Canvas 中
 
-```python
-top_frame = tk.Frame(main)  # 创建一个框架区域
-top_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True) # 配置框架位置
+```py
+def Bt_function:
+    pass
+
+# 创建按钮，并绑定触发事件
+btn = tk.Button(canvas, text="Botton", command=Bt_function)
+# 设置按钮的大小和按下去时的样式
+btn.configure(width=10, height=2, activebackground="#33B5E5", relief=tk.FLAT)
+# 设置按钮的位置
+btn_window = canvas.create_window(10, 10, anchor=tk.NW, window=btn)
+btn.pack(side='top')
 ```
 
-初始化完框架区域后，需要进步设置框架区域的大小和颜色，并放置元素。例如，在蓝色背景上放置一个 logo:
+在创建按钮时，使用 `lambda` 传递参数
 
-```python
-logo = PhotoImage(file="logo.png") # 读取图片
-tk.Label(top_frame, image=logo, bg="#1f77b4", height=85, width=1300).pack() # 在框架中添加元素
+```py
+B = tk.Button(tk, text="Botton", command=lambda: Bt_function(arg1, arg2))
 ```
+
+
 
 # Canvas
 
@@ -79,55 +90,24 @@ tk.Label(top_frame, image=logo, bg="#1f77b4", height=85, width=1300).pack() # �
 ```python
 canvas = tk.Canvas(main, with=1300, height=350, bg="white")
 canvas.pack(side=tk.TOP) # 设置画布在顶部（此时如果前面已经有一个 frame.pack(side=tk.TOP)，那么画布会跟在框架后面）
+
+# OPTIONAL
+# (1) 固定画布的大小，防止元素过多时画布自动扩展，或元素过少时画布自动收缩
+canvas.pack_propagate(0)
 ```
 
 
-## Label
-显示文字标签
-
-```python
-# main = tk.Tk()
-lb = tk.Label(main, text="Text Content")
-```
-显示图片标签
-
-```py
-pic = PhotoImage(file="pic.png")
-lb_pic = Label(main, image=pic)
-```
-
-
-## Entry
-输入框
+# Entry
+输入框, 可以放进 Tk, Frame, 或 Canvas 中
 
 ```py
 # 定义一个字符串变量，用于接收输入
 v = StringVar()
 # 定义一个长度为 10 个字符的输入框
-ety = Entry(tk, textvariable=v, width=10) 
+ety = Entry(main, textvariable=v, width=10) 
 ```
 
 
-## Botton
-
-```py
-def Bt_function:
-    pass
-
-# 创建按钮，并绑定触发事件
-btn = tk.Button(main, text="Botton", command=Bt_function)
-# 设置按钮的大小和按下去时的样式
-btn.configure(width=10, height=2, activebackground="#33B5E5", relief=tk.FLAT)
-# 设置按钮的位置
-btn_window = canvas.create_window(10, 10, anchor=tk.NW, window=btn)
-btn.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
-```
-
-在创建按钮时，使用 `lambda` 传递参数
-
-```py
-B = tk.Button(tk, text="Botton", command=lambda: Bt_function(arg1, arg2))
-```
 
 # FigureCanvasTkAgg
 在 tkinter 中显示 matplotlib 的图像
@@ -139,6 +119,123 @@ figCanvas = FigureCanvasTkAgg(fig_utilization, master=main)
 figCanvas.get_tk_widget().config(height = 240)
 figCanvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 ```
+
+
+# Frame
+添加一块框架区域，用于放置各种元素
+
+```python
+top_frame = tk.Frame(main, width=1300, height=85, bg="white")
+top_frame.pack(side='top', # 设置框架在顶部 
+               fill='x',   # 在水平方向上填充窗口
+               anchor='nw',# 设置框架的锚点为左上角
+               expand=True)
+
+# OPTIONAL
+# (1) 固定框架的大小，防止元素过多时框架自动扩展，或元素过少时框架自动收缩
+top_frame.pack_propagate(0)
+```
+
+初始化完框架区域后，需要进步设置框架区域的大小和颜色，并放置元素。例如，在蓝色背景上放置一个 logo:
+
+```python
+logo = PhotoImage(file="logo.png") # 读取图片
+tk.Label(top_frame, image=logo, bg="#1f77b4", height=85, width=1300).pack() # 在框架中添加元素
+```
+
+## Frame + Scrollbar
+<span style="background-color: yellow; color: black;">为 frame 创建 scrollbar 的过程十分的复杂</span>，需要在目标 frame 外部先套一层 canvas，再套一层 frame。以下每一步的顺序都不能出错：
+1. 创建最外层的 frame，记作 `frame_canvas`
+2. 创建 scrollbar，绑定与 `frame_canvas`
+3. 创建外层 canvas，绑定与 `frame_canvas` + scrollbar
+4. 配置 scrollbar，绑定与 canvas
+5. 创建目标 frame，绑定与 canvas，记作 `frame_target`
+6. 往 `frame_target` 中添加元素
+7. 根据添加元素后 `frame_target` 的大小，设置 scrollbar 的滑动范围
+
+```py
+# (1) 创建最外层的 frame 
+frame_canvas = tk.Frame(main, width=500, height=500)
+frame_canvas.pack(side='top', fill='x', anchor='nw')
+
+# (2) 创建 scrollbars，绑定与 frame
+sby = tk.Scrollbar(self.frame_canvas, orient='vertical')
+sby.pack(side='right', fill='y')
+sbx = tk.Scrollbar(self.frame_canvas, orient='horizontal')
+sbx.pack(side='bottom', fill='x')
+
+# (3) 创建外层 canvas，绑定与 frame + scrollbars
+canvas = tk.Canvas(frame_canvas, yscrollcommand=sby.set, xscrollcommand=sbx.set)
+canvas.pack(side='left', fill='both')
+
+# (4) 配置 scrollbars，绑定与 canvas
+sby.config(command=canvas.yview)
+sbx.config(command=canvas.xview)
+
+# (5) 创建目标 frame，绑定与 canvas
+frame_target = tk.Frame(canvas)
+canvas.create_window((0, 0), window=self.frame_target, anchor='nw')
+
+# (6) 往目标 frame 中添加元素
+# ...
+
+# (7) 根据添加元素后目标 frame 的大小，设置 scrollbar 的滑动范围
+frame_target.update_idletasks()
+frame_target.update()
+canvas.config(scrollregion=(0, 0, self.frame.winfo_width(), self.frame.winfo_height()))
+```
+
+实现效果如下
+
+
+<img src="/images/2023-05/Snipaste_2023-08-08_15-45-31.png" width="80%">
+
+
+# Label
+显示文字标签, 可以放进 Tk, Frame, 或 Canvas 中
+
+```python
+lb = tk.Label(main, text="Text Content")
+     tk.Label(frame, text="Text Content")
+     tk.Label(canvas, text="Text Content")
+```
+显示图片标签
+
+```py
+pic = PhotoImage(file="pic.png")
+lb_pic = Label(main, image=pic)
+```
+
+
+
+# Listbox
+列表，可以逐行显示文字
+
+```py
+loglist = tk.Listbox(frame, height=10, bg="white")
+# 需要注意的是这里的 height 是指显示的行数，而不是列表的高度
+loglist.pack(side='left')
+
+loglist.insert(tk.END, "Text Content")
+```
+
+## Listbox + Scrollbar
+<span style="background-color: yellow; color: black;">
+注意！</spam>
+
+- <span style="background-color: yellow; color: black;">Scrollbar 必须声明在 Listbox 之前，不然可能会导致无法显示</spam>
+
+
+
+```py
+sby = tk.Scrollbar(frame, orient=tk.VERTICAL)
+sby.pack(side='right', fill='y')
+
+loglist = tk.Listbox(frame, ..., yscrollcommand=sby.set)
+loglist.pack(side='left')
+sby.config(command=loglist.yview)
+```
+
 
 
 # Toplevel

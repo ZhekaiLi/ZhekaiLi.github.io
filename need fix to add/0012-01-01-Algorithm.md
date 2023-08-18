@@ -76,7 +76,7 @@ def mergeSort(arr):
 ## 2. Asymptotic Analysis
 Suppress constant factors and lower-order terms (used to get **time complexity**)
 
-e.g. $6n\log_2n+5n\to O(n\log_2)$
+e.g. $6n\log_2n+5n\to O(n\log n)$
 1. $6$ is a constant factor
 2. $5n$ is a lower-order term
 

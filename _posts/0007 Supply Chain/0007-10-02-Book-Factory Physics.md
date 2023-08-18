@@ -85,7 +85,7 @@ $$\text{TH}_{\text{worst}} = \frac{1}{T_0}$$
 没有什么实质内容，略
 
 ## 8.3 Process Time Variability
-**cov (CV)**: If we let $t$ denote the mean (we use t because the primary random variables we are considering here are times) and $\sigma$ denote the variance:
+**cov (CV)**: If we let $t$ denote the mean (we use t because the primary random variables we are considering here are times) and $\sigma$ denote the std:
 
 $$c=\frac{\sigma}{t}$$
 

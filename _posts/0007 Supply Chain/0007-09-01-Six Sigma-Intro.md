@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Six Sigma - Intro
+title: Lean Six Sigma - Intro
 categories: Supply-Chain
 description:
 keywords: SCE, Supply-Chain
@@ -17,17 +17,20 @@ The goal of Lean Six Sigma is to design or improve products and processes to do 
 
 *Lean Six Sigma is uniquely driven by a close understanding of customer needs, disciplined use of facts, data, and statistical analysis, and diligent attention to managing, improving, and reinventing business processes.* --- The Six Sigma Way
 
-## 1.1 Overview
+## 1.1 Lean vs. Six Sigma
 <center><img src="/images/2022-11/Snipaste_2022-12-02_16-22-23.png" width="70%"></center>
 
 > **Six Sigma**
-- a quality management philosophy and a methodology that focuses on **reducing variability**, measure defects, and improving the **quality** and **reliability** of products, processes and services
+
+Object: a quality management philosophy and a methodology that focuses on improving the **quality** and **reliability** of process by **reducing variability** - the **velocity**, or **speed** of a process from beginning to end
+
 - **it's a project methodology for improvement**
 
 > **Lean**
-- to maximize customer value while minimizing waste
 
-Lean Methods were developed to attack the waste associated with the **flow** of material and information - the **velocity, or speed** of a process from beginning to end. Lean consists of five key principles:
+Object: maximize customer value while ***minimizing waste*** associated with the **flow** of material and information
+
+Lean consists of five key principles:
 - Identify customers & specify value
 - Map the value stream
 - Improve flow
