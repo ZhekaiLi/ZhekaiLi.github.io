@@ -10,28 +10,33 @@ keywords: Excel
 # Excel - Basis
 
 # 1. Basic
+## Cell
 **(1) 同时选择多个 cell**: 按住 `command`
+**(2) 选取整列**: 例如当我们想要对整列 Amount 求和，可以先点击 Q2(不能是打字输入)，再点击 `Shift`+`Control`+`Down`
+<img src="/images/2022-06/Snipaste_2022-06-03_09-28-52.png"  width="30%">
 
-**(2) 显示公式**: 在等号前加一个单引号
-<img src="/images/2022-06/Snipaste_2022-06-02_15-32-08.png"  width="40%">
+**(3) 将公式自动应用到整列**: 双击单元格右下角的小加号
+**(4) 插入新列**: 选中一列，然后 `Ctrl/Cmd`+`Shift`+`+`
+**(5) 批量调整到合适的列宽**: 选中所有目标列名后，
+`Home` $\to$ `Cells` $\to$ `Format` $\to$ `AutoFit Column Width`
+**(6) 给 cell 添加下拉列表**: 选中目标 cell 后，
+ `Data` $\to$ `Data Tools` $\to$ `Data Validation` $\to$ `Data Validation` $\to$ 在下图 `Source` 中指定选择范围
 
-**(3) 查看所有表单** (查看所有 Sheets)
+<img src="/images/2023-05/Snipaste_2023-08-21_21-58-00.png"  width="70%">
+
+## Sheet
+**(1) 查看所有表单** (查看所有 Sheets)
 右键单击左下角的小箭头
 <img src="/images/2023-05/Snipaste_2023-06-01_15-27-10.png"  width="30%">
-
 就会弹出如下窗口，包含了所有的 Sheet Name
 <img src="/images/2023-05/Snipaste_2023-06-01_15-27-36.png"  width="40%">
 
-**(3) 将公式自动应用到整列**: 双击单元格右下角
+## Formulation
+**(1) 显示公式**: 在等号前加一个单引号
+<img src="/images/2022-06/Snipaste_2022-06-02_15-32-08.png"  width="40%">
 
-**(4) 选取整列**: 例如当我们想要对整列 Amount 求和，可以先点击 Q2(不能是打字输入)，再点击 `Shift`+`Control`+`Down`
-<img src="/images/2022-06/Snipaste_2022-06-03_09-28-52.png"  width="30%">
-
-**(5) 插入新列**: 选中一列，然后 `Ctrl/Cmd`+`Shift`+`+`
-
-**(6) 函数补全**: `TAB`
+**(2) 函数补全**: `TAB`
 <img src="/images/2022-06/Snipaste_2022-06-03_14-57-49.png"  width="30%">
-
 
 
 

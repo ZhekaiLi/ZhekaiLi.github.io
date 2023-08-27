@@ -12,12 +12,12 @@ mathjax: true
 # Six Sigma - Intro
 </center>
 
-# 1. Introduction
+## 1. Introduction
 The goal of Lean Six Sigma is to design or improve products and processes to do what they are supposed to do with very high reliability.
 
 *Lean Six Sigma is uniquely driven by a close understanding of customer needs, disciplined use of facts, data, and statistical analysis, and diligent attention to managing, improving, and reinventing business processes.* --- The Six Sigma Way
 
-## 1.1 Lean vs. Six Sigma
+### 1.1 Lean vs. Six Sigma
 <center><img src="/images/2022-11/Snipaste_2022-12-02_16-22-23.png" width="70%"></center>
 
 > **Six Sigma**
@@ -39,7 +39,7 @@ Lean consists of five key principles:
 
 
 
-## 1.2 The Cost of Poor Quality
+### 1.2 The Cost of Poor Quality
 
 > **1:10:100 Rule**: 
 > the cost of poor quality increases exponentially as a product or service moves along the value stream from creation to consumption.
@@ -51,25 +51,40 @@ Lean consists of five key principles:
 - **Internal Failure Cost**: The cost of detecting and correcting defects internally: Scrap, rework, and "Seconds" sold off-price.
 - **External Failure Cost**: The cost of defects being detected by customers, including warranties, replacements, allowances, product liability, customer dissatisfaction and lost revenue.
 
+<img src="/images/2023-05/Snipaste_2023-08-17_18-10-42.png" width="60%">
 
-## 1.3 The 5 Lean Principles
+### 1.3 Output: A Function of Inputs
 
-(1) Identify Cusotmers and Specify Value
+The basic philosophy behind Lean Six Sigma is the idea that **removing variability from upstream operations that are inputs to a process will yield defect-free outputs**
 
-(2) Map the Value Stream
-Identify and map the value stream
+$$y=f(x)$$
 
-A **value stream** is the complete sequence of activities an organization performs in order to produce and deliver its end product or service.
+- $y$ outputs
+- $x$ inputs
+- $f$ process
 
-A **value stream map** is 
 
-(3) Create Flow
-Create flow by eliminating waste and achieving a lot size of one
+### 1.4 The 5 Lean Principles
+1. Identify cusotmers and specify value
+2. Identify and map the value stream
+   - A **value stream** is the complete sequence of activities an organization performs in order to produce and deliver its end product or service.
+   - A **value stream map** is graphical representation of the series of activities the organzation follows in producing and delivering its end product or service
+3. Create flow by eliminating waste and achieving a lot size of one
+4. Respond to customer pull:
+   - no upstream step in a process produces a component of a prod or service until a downstream step requests it
+5. Pursue Perfection
 
-(4) Respond to Pull
+### 1.5 8 Forms of Waste
 
-(5) Pursue Perfection
-
+DOWNTIME:
+- **Defects** - failure to meet the requirements of internal or external customers.
+- **Overproduction**
+- **Waiting** - time spent in queues between steps in a process.
+- **Non-utilized Resources**
+- **Transportation**
+- **Inventory**
+- **Motion** - time spent in queues between steps in a process.
+- **Extra-Processing**
 
 <img src="/images/2023-03/.png" width="70%">
 <img src="/images/2023-03/.png" width="70%">

@@ -174,6 +174,7 @@ Covariance $\hat{cov}(x,y)=\frac{1}{n}x_iy_i-\bar x\bar y$
 
 # 3. Discrete Probability Function
 ## 3.1 Bernoulli Distribution
+(Binary Distribution)
 $$P(x)=\begin{cases}
 1-p & \text{for }x=0\\
 p & \text{for }x=1
@@ -219,8 +220,8 @@ where $\nu>0, x=0,1,2,...$
 
 
 
-## 3.4 Exponential 指数分布
-表示独立随机事件发生的时间间隔的分布
+## 3.4 Exponential Distribution
+指数分布。表示独立随机事件发生的时间间隔的分布
 
 <center>
 <img src="/images/2022-09/Snipaste_2022-09-17_14-44-01.png" width="43%"> <img src="/images/2022-09/Snipaste_2022-09-17_14-44-27.png" width="43%">
