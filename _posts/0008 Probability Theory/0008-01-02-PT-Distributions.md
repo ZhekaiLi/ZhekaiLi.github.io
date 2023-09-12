@@ -72,7 +72,7 @@ $$Pr(X\leq\gamma)=F(\gamma)=p$$
 
 **Standard Deviation (std):** $\sigma=\sqrt{Var(X)}$
 
-**Coefficient of Variance (c.o.v.):** $\delta=\sigma/\mu$
+**Variance (c.o.v.):** $\delta=\sigma/\mu$
 
 **Skewness Coefficient:** $\gamma=\frac{E[(X-\mu_X)^3]}{\sigma^3}$
 
@@ -423,4 +423,3 @@ $$f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\Big[-\frac{1}{2}(x-\mu)\sigma^{-2}(x-\mu)
 
 ### 14.2 (m=2) Bi-variate Normal Distribution
 $$f(x_1,x_2)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}\exp\Big\{-\frac{1}{2(1-\rho^2)}\Big[(\frac{x_1-\mu_1}{\sigma_1})^2-2\rho(\frac{x_1-\mu_1}{\sigma_1})(\frac{x_2-\mu_2}{\sigma_2})-(\frac{x_2-\mu_2}{\sigma_2})^2\Big]\Big\}$$
-

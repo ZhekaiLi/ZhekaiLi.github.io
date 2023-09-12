@@ -94,6 +94,7 @@ $\"u$, $\dot u$
 集合运算 $\in,\notin,\subset,\subseteq,\subsetneq$
 条件概率 $\land$
 相互独立/垂直 $\perp$
+ceiling $\lceil x \rceil$, floor $\lfloor x \rfloor$
 
 > **罗马（拉丁）字符**
 
