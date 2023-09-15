@@ -402,7 +402,7 @@ $$\text{WIP}_{f} = \text{TH}_{f}\times\text{CT}_{f} = 1.5\times 3.5972 = 5.9358\
 # 4. Running a Factory: In Two Dimensions
 
 
-
+http://nbpfabtime01/FabTime717/ChartPage.html? starttime=2022-8-31%205%3A30%3A0& endtime=2023-9-1%205%3A30%3A0& toolslike=N_ACID16& basicstateslike=Unsch& timeumid=4& chartsortfield1=Tool& chartsortfield2=TranTime& stripecolor=Black& stripeaxis=Y& width=644& height=400& grid=None& datavalues=None& horizontal=0& pagemode=2& activemode=Javascript& chart=TOOLSTATETRANLIST& chartview=0& tableview=0& factoryid=1& goaluserid=951& editchart=0& uid=2023123128551694028416
 
 
 
