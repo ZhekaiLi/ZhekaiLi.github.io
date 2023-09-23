@@ -105,15 +105,16 @@ Var(X+b)=Var(X)
 
 > **For Joint Distributions**
 
-(1) $\begin{cases} 
+
+$$\begin{cases} 
 E[X+Y]=E[X]+ E[Y]\\
 E\big[\sum a_iX_i\big] = \sum a_iE[X_i]
-\end{cases}$ 
+\end{cases}\tag{1}$$
 
-(2) $\begin{cases} 
+$$\begin{cases} 
 Var(aX+bY)=a^2Var(X)+b^2Var(Y)+2ab\times Cov[X,Y]\\
 Var\big(\sum a_iX_i\big) = \sum a_i^2Var(X_i) + 2\sum_{i<j}a_ia_jCov[X_i,X_j]
-\end{cases}$ 
+\end{cases}\tag{2}$$
 
 ## 2.2 Conditional Discripter
 (1) $E[X\vert Y]=\int xf(x\vert y)dx$
@@ -124,7 +125,9 @@ Var\big(\sum a_iX_i\big) = \sum a_i^2Var(X_i) + 2\sum_{i<j}a_ia_jCov[X_i,X_j]
 
 
 ## 2.3 Joint Case Descriptor
-**Expectation (mean)**: $E[XY]=\begin{cases}\sum_x\sum_yxyp(x,y) \\ \int\int xyf(x,y)dxdy\end{cases}$
+**Expectation (mean)**: 
+
+$E[XY]=\begin{cases}\sum_x\sum_yxyp(x,y) \\ \int\int xyf(x,y)dxdy\end{cases}$
 
 **Covariance:** $Cov[X,Y]=\begin{cases}\sum_x\sum_y(x-\mu_X)(y-\mu_Y)p(x,y) \\ \int\int(x-\mu_X)(y-\mu_Y)f(x,y)dxdy\end{cases}$
 
