@@ -1,16 +1,13 @@
 ---
 layout: post
-title: Probability - Distributions
+title: Probability - Rules and Distributions
 categories: Probability-Theory
 description: Personal Notes
 keywords: Risk-Analysis，Probability, Decision
 mathjax: true
 ---
 
-<center>
-
 # Probability Distributions
-</center>
 
 # 1. PMF, PDF, CDF
 
@@ -178,29 +175,34 @@ Covariance $\hat{cov}(x,y)=\frac{1}{n}x_iy_i-\bar x\bar y$
 # 3. Discrete Probability Function
 ## 3.1 Bernoulli Distribution
 (Binary Distribution)
-$$P(x)=\begin{cases}
-1-p & \text{for }x=0\\
+
+$$P(X=x)=f(x)=\begin{cases}
+1-p\;(=q) & \text{for }x=0\\
 p & \text{for }x=1
 \end{cases}$$
 
-In Bernoulli, just a **single** trial is conducted
+(1) $E[X]=p$
+
+(2) $Var(X)=pq$
 
 ## 3.2 Binomial
-$$P(X=k)=\begin{pmatrix}n \\ k\end{pmatrix}p^k(1-p)^{n-k}$$
+$$P(Y=y)=f(y)=\begin{pmatrix}n \\ y\end{pmatrix}p^k(1-p)^{n-y}$$
 
-$$\begin{pmatrix}n \\ k\end{pmatrix}=C_n^k=C(n,k)=\frac{n!}{k!(n-k)!}$$
+$$\begin{pmatrix}n \\ y\end{pmatrix}=C_n^y=C(n,y)=\frac{n!}{y!(n-y)!}$$
 
-(1) $\mu_X=np$
+$Y\sim\text{Binomial}(n,p)$ if it counts **the number of successes** in $n$ independent $\text{Bernouli}(p)$ trials. Alternatively, $Y=\sum_{i=1}^nX_i$, where $X_i\sim\text{Bernouli}(p)$
 
-(2) $V[X]=np(1-p)$
+(1) $E[X]=np$
 
-(3) $\sigma=\sqrt{np(1-p)}$
+(2) $Var(X)=np(1-p)=npq$
 
-(4) $\delta=\frac{\sigma}{\mu} = \sqrt{\frac{1-p}{np}}$
+(3) 
+$$\delta=\frac{\sigma}{\mu} = \sqrt{\frac{1-p}{np}}$$
 
-(5) $E[(x-\mu_X)^3]=np(2p^3-3p+1)$
+(4) $E[(x-\mu_X)^3]=np(2p^3-3p+1)$
 
-(6) $\gamma=\frac{E[(x-\mu_X)^3]}{\sigma^3}=\frac{1-2p}{\sqrt{np(1-p)}}$
+(5) 
+$$\gamma=\frac{E[(x-\mu_X)^3]}{\sigma^3}=\frac{1-2p}{\sqrt{np(1-p)}}$$
 
 ## 3.3 Poisson 泊松分布
 当一个随机事件，例如来到某公共汽车站的乘客、显微镜下某区域中的白血球等，以固定的平均瞬时速率 $\nu$（或称密度）随机且独立地出现时，那么这个事件在单位时间（面积或体积）内出现的次数或个数就近似地服从泊松分布 $P(x)$
