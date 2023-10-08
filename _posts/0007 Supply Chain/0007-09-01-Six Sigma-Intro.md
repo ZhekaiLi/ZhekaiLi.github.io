@@ -742,6 +742,272 @@ Taking the right measurements is crucial to finding the right solutions to pract
 
 <img src="/images/2023-05/Snipaste_2023-09-30_12-31-41.png" width="60%">
 
+## 5.4 Descriptive and Inferential Statistics
+**Descriptive statistics** aim to <u>describe and summarize the important features of a population or process</u>. Graphs such as pie, bar and line graphs, histograms, boxplots, scatterplots, etc. and numerical summaries like means, variances, etc. are examples of descriptive statistics.
+
+**Inferential statistics** use sample data to help <u>make comparisons among, or draw inferences about the effects</u> of different solutions or treatments on the overall population. When the entire population cannot be measured, a smaller sample of data is used to infer, or estimate, the characteristics of the wider population. Regression analysis, hypothesis tests and experimental design fall into this category. Some tools can be used to both describe and infer: control charts (highlighted below) observe the process over time to establish stability (describe) and signal the effect of a special cause as soon as the process displays instability (inference).
+
+<img src="/images/2023-05/Snipaste_2023-09-30_14-36-00.png" width="80%">
+
+Descriptive statistics are typically used in **Enumerative Studies**, which aim to answer questions about the current population like "how many?" or "in what proportion?". The focus is historical rather than predictive
+
+In contrast, **Analytical Studies** seek to answer questions like "why?" or "what are the causes of?" and aim to generalize the results to future states of the population. Analytical studies are conducted to understand the behavior of a process over time with the intention of identifying relationships between cause and effect which could impact future performance (predictive as well as historical perspective)
+
+<img src="/images/2023-05/Snipaste_2023-09-30_14-37-42.png" width="80%">
+
+## 5.5 Measurements
+### What to Measure?
+Analysis of existing voice of the customer (VOC) data using tools such as Affinity diagrams, CTQC trees and Pareto charts helps identify the key process characteristics that need to be measured in order to judge progress toward achieving the goal.
+
+### Data Hierarchy
+<img src="/images/2023-05/Snipaste_2023-09-30_14-47-19.png" width="60%">
+
+- **Level 1 - Discrete Nominal**: groups are labels or names, <span style="background-color: yellow; color: black;">no order</span>. Such as colors, yes/no, pass/fail, profession
+- **Level 2 - Discrete Ordinal**: <span style="background-color: yellow; color: black;">groups are logical orders</span>. Such as small/medium/large, low/medium/high, first/second/third
+- **Level 3 - Discrete Counts**: number of items or events
+- **Level 4 - Continuous**: measurements are made along a continuum
+
+### Discrete and Continuous Measurements
+Once the key characteristics are identified, the next question is how to measure them. This depends to a large extent on the nature of the thing being measured. Broadly speaking, there are two types of measurement with very distinct properties – **Discrete and Continuous**
+
+Discrete measurements are often termed as **Attribute data**, because they sort or count items based on attributes, such as the presence/absence of defects, quality perceptions, occurrence of an event, etc. Continuous measurements on the other hand, are often termed as **Variable data**, since they can take on infinite values within any two fixed points.
+
+A little bit of thought and innovation can help make good data decisions. For instance, many factors that appear to be discrete characteristics can be measured on a continuous scale. Color used to be judged using master color chips, creating endless debates about classification. With the advent of relatively cheap and portable digital equipment, color values are now read on a continuous scale, eliminating opinions from the equation.
+
+In summary, we highly recommend taking the trouble (and sometimes extra cost) to collect continuous, or variable, data when possible. **To reach optimal performance, an organization must be able to react quickly to process shifts, and the higher the resolution of the data, the faster this is achieved.**
+
+## 5.7 Measurement Subjects: Select Best
+Selection of the best measurement may be a function of whether you are measuring **Results** (outputs of the process), or **Indicators and Predictors** (inputs and process transformations). Example: for a manufacturer of automobile transmissions, field failures are the results measurement and the dimensions of the internal gears and parts would be Indicator or Predictor measurements.
+
+<img src="/images/2023-05/Snipaste_2023-09-30_14-54-08.png" width="70%">
+
+Results metrics are also called **dependent or response** variables, whereas inputs are called **independent or explanatory** variables.
+
+<img src="/images/2023-05/Snipaste_2023-09-30_14-56-11.png" width="70%">
+
+## 5.10 Pareto Chart Toolset
+The first step to solving any problem is to decide what to work on - **prioritizing**. Every organization has limited resources, so setting priorities correctly to align actions with intentions is a necessary foundation for success.
+
+One of the simplest ways to establish priorities is to construct a Pareto chart showing relative values. The Pareto Chart shows the relative frequency of defects in rank-order, and thus provides a prioritization tool so that process improvement activities can be organized to "get the most bang for the buck", or "pick the low-hanging fruit".
+
+### Example: medication errors at hospital
+
+<img src="/images/2023-05/Snipaste_2023-09-30_15-07-34.png" width="90%">
+
+After reviewing the chart above, there is no question as to which errors should be tackled first, because patient weight-related problems occupy the top two positions
+
+However, this Pareto chart is constructed using one dimension only - error frequency. If you learned that the severity of misrouted medications (medications switched between patients) is much greater, then misrouted medications would probably be the highest priority. A chart which takes into account the **severity ratings** in addition to the frequencies is called a **weighted Pareto chart**.
+
+After identifying the highest-priority areas for corrective action, it may be useful to stratify the data - break them down further into a **sub-Pareto**. In the case of misrouted medications, it could be useful to stratify by shift, type of medication, or area of the hospital.
+
+## 5.11 Histogram
+**Skewed histogram**: right skewed means tail is in the right side
+<img src="/images/2023-05/Snipaste_2023-09-30_16-33-00.png" width="60%">
+
+### Central Tendency
+Mean, Median, Mode
+
+**For a skewed distribution, the mean is not a good measure of central tendency. The median is a better measure of central tendency for a skewed distribution.**
+
+### Process Variability
+Range ([Min, Max]), Variance and std
+
+## 5.15 Box Plots Toolset
+The **Box Plot**, which is also known as a **Box and Whiskers Plot**, is a graphical analysis tool used to investigate the effect of **discrete** inputs on **continuous** outputs
+
+<img src="/images/2023-05/Snipaste_2023-09-30_16-38-57.png" width="90%">
+
+### When to Use
+Box Plots are a powerful graphical tool that can be used to explore potential Xs identified by the team, compare inputs (Xs) side-by-side to identify potential significant factors that require further statistical analysis, or graphically represent a process change that is the result of an improvement the team has made. The box plot is also useful when it is desired to summarize the variation, skewness and center of a large dataset, while also **identifying potential outliers** (能够处理异常值是箱型图的一个非常重要的价值)
+
+The box plot can be used to answer the following questions:
+- Is there a difference in the median​ between inputs (factors)?
+- Is there a difference in the range (Q3 - Q1) between inputs?
+Are the data skewed?
+- Is an input potentially significant?
+
+## 5.16 Normal Distribution
+The distribution of sample means from any distribution is well approximated by the normal distribution, due to the **Central Limit Theorem (CLT)**, which states that as the sample size increases, the distribution of the sample mean tends toward the normal, irrespective of the shape of the original (parent) population. In addition, the distribution of the sample mean has a smaller spread, or variance, compared to the original distribution (due to the effects of averaging).
+
+### The Empirical Rule
+Also called the 68-95-99.7% rule, the empirical rule states: **68% of the values under the normal curve fall within one standard deviation of the mean, 95% within two standard deviations and 99.7% within three standard deviations of the mean**.
+
+<img src="/images/2023-05/Snipaste_2023-09-30_19-06-09.png" width="50%">
+
+## 5.17 Distribution Identification
+If you conduct an analysis that assumes the data follow a normal distribution when, in fact, the data are non-normal, your results may be inaccurate. **To avoid this error, it is important to determine the distribution of your data before planning a course of analysis.**
+
+Here are some common distribution types:
+
+<img src="/images/2023-05/Snipaste_2023-09-30_19-09-38.png" width="90%">
+
+<img src="/images/2023-05/Snipaste_2023-09-30_19-10-33.png" width="90%">
+
+### p-value
+For a given distribution (in this case, normal), the **higher** the **Anderson-Darling test $p$-value**, the **better** the fit, with the minimum $p$-value for "good fit" generally being 0.05.
+
+### Q-Q (Quantile-Quantile) plots
+Points falling generally in a straight line along the diagonal indicate a good fit.
+
+The normal distribution is not a good fit for the following data, because the $p$-value is less than 0.05, and the Q-Q plot is not really linear
+<img src="/images/2023-05/Snipaste_2023-09-30_19-15-12.png" width="70%">
+
+
+## 5.18 Data Cleansing
+### 1. Start by Scanning the Data
+Here's a checklist for scanning your data:
+- Is the dataset free of cells with missing data?
+- Are data and variable names spelled, capitalized, and formatted correctly and consistently?
+- Is the dataset free of any sums or aggregations of data? (For example: "Total Sales" at the bottom of a column of sales figures - including these in datasheets used for analysis can seriously skew results.)
+- Is the dataset free of any obvious outliers or obviously incorrect data?
+- Do the data appear valid and complete?
+- Are you aware of the types of data variables you are working with? Note which data variables are continuous, categorical, or date/time. This will factor into the types of visualizations and analysis you engage in.
+
+### 2. Next, Visualize the Data
+Use appropriate graphs, like histograms, to show the distribution of the data to further investigate any underlying issues in the data. 
+- Create bar graphs of categorical data
+   - Simple bar graphs: do the levels of the categorical data have counts/frequencies as expected? Are all the level names spelled correctly?
+   - Clustered/stacked bar graphs with another variable: do the levels of one categorical variable appear as often as expected across levels of the other categorical variable?
+- Create histograms for continuous data
+   - Does the distribution of the continuous data make sense?
+   - Is the distribution free from unexpected skews or patterns?
+- Create run charts for time-ordered data
+   - Does the trend make sense / is it what you might expect?
+
+
+
+
+
+
+# 6. Measure II - Measurement System Analysis
+## 6.2 Measurement Process
+The simplified flow chart below displays the typical steps in a measurement process:
+1. **Identify what to measure**
+   This screening process can be based on experience later confirmed by experimentation. The Cause & Effect Matrix is a useful method to refine information from brainstorming and identify those process inputs which may have the greatest impact on the output of interest (Y).
+2. **Determine how to measure the characteristic**
+   - Establish operational definition.
+   - Identify data source.
+   - Develop and document data collection method.
+   - Train operators/technicians.
+3. **Develop Sampling Plan and Reaction Plan**
+   - Sampling Plan: When and where to collect data, what to do with the data.
+   - Reaction Plan for out-of-spec. or out-of-control conditions.
+4. **Validate measurement system**
+   - Measurement System Analysis (Gauge R&R) to quantify error. This includes analysis of stability, bias, linearity, repeatability & reproducibility.
+   - Adjust as required.
+5. **Add to Overall Control Plan**
+   Verify Inclusion in Calibration Program and Add to Control Plan (Master Plan For All Measurement Activity).
+
+
+
+## 6.3 Cause & Effect Matrix Toolset
+The **Cause and Effect Matrix** is used to **prioritize the process inputs** (causes, or X's) that have been identified as potentially contributing to an Effect (Y). This action usually leads to the selection of inputs for data collection and subsequent analysis.
+
+Advantages of the Cause and Effect Matrix:
+- The C & E Matrix provides a way to prioritize potential causes based on the number of CTQC's affected and the strength of the relationship between potential causes (X's) and effects (Y's).
+- It appeals to team members who are more comfortable with ranking techniques than visual tools.
+- The matrix also brings together the CTQC's from the Tree Diagram​ and the process steps identified during process mapping. This promotes "process thinking" and provides a logical linkage between the tools.
+
+### Example
+A team at a Medical Center is working on reducing the patient accounts receivable that must be turned over to a collections agency. Using a CTQC Tree Diagram​, the team has identified 10 CTQC's that, if satisfied, would result in more timely payments and reduced collection agency placements. They placed the Y's along the left side of the matrix. The process steps (X) that could contribute to the problem are placed along the top of the matrix.
+
+<img src="/images/2023-05/Snipaste_2023-10-02_15-37-08.png" width="100%">
+
+The team should do a "reality check" at this point and make sure the results make sense
+
+### How
+- Step 1: Place the CTQC's (from a Tree Diagram) along the left side of the cause and effect matrix. These are the Effects.
+- Step 2: Rank the importance of each of the Effects, or CTQC's, from the customer's point of view.
+- Step 3: Place the Process Inputs (X's) along the top of the matrix. These are the Causes, and they will have been identified through process mapping and brainstorming, possibly with help from a Fishbone Diagram.
+- Step 4: Assign a correlation factor between the Causes and the Effects based on experience and process knowledge.
+- Step 5: Evaluate the output and check for consistency.
+- Step 6: Choose which factors you wish to analyze further. (Note: Overall Input Importance Score is the product of the Importance Ranking x the Correlation Factor).
+
+
+
+## 6.4 Measurement Systems Analysis
+If measurements are used to guide decisions, then it follows logically that the more error there is in the measurements, the more error there will be in the decisions based on those measurements. The purpose of Measurement System Analysis is to qualify a measurement system for use by quantifying its accuracy, precision, and stability.
+
+Measurement System Analysis is a critical first step that should precede any data-based decision making, including Statistical Process Control, Correlation and Regression Analysis, and Design of Experiments.
+
+A measurement system can be characterized, or described, in five ways:
+**Location (Average Measurement Value vs. Actual Value)**:
+- **Stability** refers to the capacity of a measurement system to produce the same values over time when measuring the same sample. As with statistical process control charts, stability means the absence of "Special Cause Variation", leaving only "Common Cause Variation" (random variation).
+- **Bias**, also referred to as Accuracy (see diagram below), is a measure of the distance between the average value of the measurements and the "True" or "Actual" value of the sample or part. See the illustration below for further explanation.
+- **Linearity** is a measure of the consistency of Bias over the range of the measurement device. For example, if a bathroom scale is under by 1.0 pound when measuring a 150 pound person, but is off by 5.0 pounds when measuring a 200 pound person, then the scale Bias is not constant and it will be important to understand if this Bias changes in a linear fashion or not. Linearity may be expressed as an index, or as a percentage of the process variation.
+
+**Variation (Spread of Measurement Values - Precision)**:
+- **Repeatability** assesses whether the same appraiser can measure the same part/sample multiple times with the same measurement device and get the same value.
+- **Reproducibility** assesses whether different appraisers can measure the same part/sample with the same measurement device and get the same value.
+
+The diagram below illustrates the difference between the terms **"Accuracy" and "Precision"**:
+
+<img src="/images/2023-05/Snipaste_2023-10-02_21-56-17.png" width="70%">
+
+
+
+### Measurement System Requirements
+Following are general requirements of all capable measurement systems:
+- Statistical stability over time.
+- Variability small compared to the process variability.
+- Variability small compared to the specification limits (tolerance).
+- The resolution, or discrimination, of the measurement device must be small relative to the smaller of either the specification tolerance or the process spread (variation). As a rule of thumb, the measurement system should have resolution of at least 1/10th the smaller of either the specification tolerance or the process spread. If the resolution is not fine enough, process variability will not be recognized by the measurement system, thus blunting its effectiveness.
+
+### Methods
+We will present both the **Gauge R & R** and graphical methods, and we suggest that they be used together. 
+
+<img src="/images/2023-05/Snipaste_2023-10-02_22-01-51.png" width="80%">
+
+- **Stability** is the total variation in measurements obtained using the same measurement instrument, measuring the same characteristic, on the same master part, over an extended period of time.
+- **Bias** is the difference between the observed average of measurements and the reference value.
+
+$$\text{Bias}=\bar{\bar{X}} - \text{Reference Value}$$
+
+$$\text{Process Variantion} = 6\sigma$$
+
+$$\text{Bias Percentage} = \frac{\text{Bias}}{\text{Process Variation}}$$
+
+- **Linearity** is a measure of the <u>consistency of Bias throughout the expected operating range</u> of the gauge. The purpose of determining the linearity of a measuring instrument is to understand whether the bias (systematic error) in the instrument has a linear relationship with the reference values.
+
+
+
+## 6.6 Variable MSA - Gauge R & R
+After taking steps to ensure that the measurement system is: 1) stable, 2) injects a minimum of bias into the results and 3) that any bias present is consistent over the expected range of the gauge (linearity), the **next step is to assess acceptability** of the measurement system by conducting a **Gauge R & R study**. Gauge R & R stands for Gauge Repeatability​ and Reproducibility​ - an assessment that compares the variation in measurement from three components:
+- **APPRAISERS** (评估师) - the variation that exists between two or more appraisers due to differences in experience, training, ability, etc. This type of variation, also called **reproducibility**, is not desirable and is characterized as a **component of measurement error**.
+- **GAUGE** (also spelled "gage") - the variation in repeated measurements of a given dimension of the same part or unit by the same appraiser, using the same measuring device. This type of variation, also called **repeatability**, is often the result of poor gauge design or poor calibration practices. This type of variation is also characterized as a **component of measurement error**.
+- **PARTS or UNITS** - the variation in any given dimension of units or parts produced from the same process. This variation is a natural part of any process. As long as the process is stable and in control, this type of variation is expected and acceptable.
+
+### How to Perform a Gauge R & R Study
+#### Step 1 - Satisfy the Prerequisites
+It is critical to assess the stability, linearity and bias of the measurement device (gauge) and make any necessary corrections <u>before proceeding with the Gauge R & R Study</u>
+
+#### Step 2 - Prepare
+Determine how many units or parts will be measured. Typically at least 10 parts are selected for the study. Next, decide how many times each part will be measured. This is called the number of Trials. You should have at least 2, or preferably 3 trials to measure repeatability. Finally, decide how many appraisers will be measuring the parts. You should select at least 3 appraisers to measure the parts, unless there are fewer than 3 appraisers who use the measuring device. The appraisers should be chosen from among those who operate the gauge or measuring device on a day-to-day basis.
+
+#### Step 3 - Collect the Samples
+When collecting samples, you should ensure the sampled parts represent <u>the total possible variation that exists in the process</u> (collect samples from the entire production process)
+
+#### Step 4 - Measure the Samples
+The gauge must have a measurement discrimination that is 1/10th or a smaller fraction of either the expected process variation or the specified tolerance, whichever is smaller. In other words, if the expected process variation is 0.01, the gauge should be able to detect a change of 0.001 or an even smaller increment.
+
+#### Step 5 - Analyze the Data
+<img src="/images/2023-05/Snipaste_2023-10-02_22-26-55.png" width="50%">
+
+#### Step 6 - ANOVA Results
+The first piece of numeric output is the <u>Analysis of Variance (ANOVA) table</u>
+<img src="/images/2023-05/Snipaste_2023-10-02_22-29-07.png" width="50%">
+
+- **Parts**: the variation that exists across the sampled parts. This variation is fine and expected. 10 个 parts 中以其中的一个为 reference，因此 DF = 9
+- **Appraiser** or Operator: the variation that exists across the appraisers (or operators) in your study. 3 个 appraisers 中以其中的一个为 reference，因此 DF = 2
+- **Appraiser*Part**: this interaction term represents the variation that exists between operators and parts (it highlights, for example, if one appraiser is consistently measuring some parts differently than others). 2\*9 = 18
+- **Repeatability**: all the variation that cannot be assigned to the parts, operator and operator*part interaction. Repeatability variation is attributed to the gauge. 以第一个人做的 3\*10 = 30 次为标准，另外两个人需要做同样的 30 次并一一于第一个人做的比较，因此 30 + 30 = 60
+
+For the purposes of a Gauge R & R analysis, the $p$-value is the most important parameter. If the $p$-value for a source is less than your specified alpha (say 0.05), that source of variation contributes significantly to the variation in the data. Ideally you only want the Part effect to be significant (i.e. $p$-value < 0.05) in this table.
+
+You can see in this example that the Part and Appraiser*Part interaction effects are significant, since they both have $p$-values lower than 0.05. From this you should conclude that 'Parts' is a significant contributor and some appraisers are measuring some parts differently than other appraisers.
+
+(6.2) 
+
 
 <img src="/images/2023-05/.png" width="70%">
 <img src="/images/2023-05/.png" width="70%">
