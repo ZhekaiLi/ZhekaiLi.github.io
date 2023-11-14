@@ -180,6 +180,50 @@ from collections import defaultdict
 d = defaultdict(lambda: 0)
 ```
 
+## 3.3 Tricks
+### 1. 为不存在的键赋值
+
+我们无法对一个不存在的键直接赋值，例如 `d['a']['b'] = 1`，因为 `d['a']` 不存在，但我们可以通过以下方法实现：
+
+```py
+def add_to_dict(d, key_list, value):
+    for i in range(len(key_list)):
+        key = key_list[i]
+        if i == 0:
+            if key not in d:
+                d[key] = {}
+        else:
+            prev_key_list = key_list[:i]
+            d_temp = deep_access(d, prev_key_list)
+            if i == len(key_list)-1:
+                d_temp[key] = value
+            else:
+                if key not in d_temp:
+                    d_temp[key] = {}
+
+def deep_access(d, key_list):
+    i = 0
+    d_temp = d
+    while i < len(key_list):
+        d_temp = d_temp[key_list[i]]
+        i += 1
+    return d_temp
+```
+
+Test:
+```py
+d = {}
+
+add_to_dict(d, ["a", "b"], 1)
+add_to_dict(d, ["a", "c"], 2)
+add_to_dict(d, ["e", "f", "c"], 1)
+
+print(d)
+>>>
+
+{'a': {'b': 1, 'c': 2}, 'e': {'f': {'c': 1}}}
+```
+
 
 
 # 4. String
