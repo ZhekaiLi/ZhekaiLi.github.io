@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js & plugin-->
+<script src="https://d3js.org/d3.v4.js"></script>
+<!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script> -->
+
+<!-- Create a div where the graph will take place -->
+<!-- <div id="div_template"></div> -->
+
+<div id="div_customContent"></div>
+
+<!-- <script>
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#dataviz_basicZoom")
+      .append("svg")
+        .attr("width",  460)
+        .attr("height",  460)
+        .call(d3.zoom().on("zoom", function () {
+           svg.attr("transform", d3.event.transform)
+        }))
+      .append("g")
+    
+    svg
+      .append("circle")
+        .attr("cx", 300)
+        .attr("cy", 300)
+        .attr("r", 40)
+        .style("fill", "#68b2a1")
+    
+    </script> -->
+
+
+    <script>
+
+        // Start by creating the svg area
+        var svg = d3.select("#div_customContent")
+            .append("svg")
+                .attr("width", 600)
+                .attr("height", 600)
+                .call(d3.zoom().on("zoom", function () {
+                    svg.attr("transform", d3.event.transform)
+                }))
+            .append("g")
+        
+        var data = [
+            {id: 'C1', type: 'normal', x: 100, y: 100},
+            {id: 'C2', type: 'normal', x: 200, y: 200},
+        ];
+
+        // create circles
+        svg.selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) { return d.x; } )
+            .attr("cy", function (d) { return d.y; } )
+            .attr("r", 40)
+            .attr("fill", "#69b3a2")
+            // .attr("stroke", "black")
+            .style("opacity", 0.6)
+            // .on("mouseover", function(){return tooltip2.style("visibility", "visible");})
+            // .on("mousemove", function(){return tooltip2.style("top", (event.pageY-100)+"px").style("left",(event.pageX-100)+"px");})
+            // .on("mouseout", function(){return tooltip2.style("visibility", "hidden");});
+
+        // Append a circle
+        // svg_customContent.append("circle")
+        //   .attr("id", "circleCustomTooltip")
+        //   .attr("cx", 200)
+        //   .attr("cy", 200)
+        //   .attr("r", 40)
+        //   .attr("fill", "#69b3a2")
+
+        // svg_customContent.append("circle")
+        //   .attr("id", "c2")
+        //   .attr("cx", 300)
+        //   .attr("cy", 300)
+        //   .attr("r", 40)
+        //   .attr("fill", "#69b3a2")
+        
+        // create a tooltip
+        var tooltip2 = d3.select("#div_customContent")
+          .append("div")
+            // .style("position", "absolute")
+            // .style("visibility", "hidden")
+            // .style("background-color", "white")
+            // .style("border", "solid")
+            // .style("border-width", "1px")
+            // .style("border-radius", "5px")
+            // .style("padding", "10px")
+            .style("opacity", 0)
+            // .style("position", "absolute")
+            .attr("class", "tooltip")
+            .style("background-color", "white")
+            .style("border", "solid")
+            .style("border-width", "2px")
+            .style("border-radius", "5px")
+            .style("padding", "5px");
+        
+        var mouseover = function(d) {
+            tooltip2
+            .style("opacity", 1)
+            d3.select(this)
+            .style("stroke", "black")
+            .style("opacity", 1)
+        }
+        var mousemove = function(d) {
+            tooltip2
+            .html("I'm a tooltip written in " + d.id)
+            .style("position", "absolute")
+            // .style("left", (d3.mouse(this)[0]+70) + "px")
+            // .style("top", (d3.mouse(this)[1]) + "px")
+        }
+        var mouseleave = function(d) {
+            tooltip2
+            .style("opacity", 0)
+            d3.select(this)
+            .style("stroke", "none")
+            .style("opacity", 0.6)
+        }
+        
+        
+        d3.selectAll('circle')
+            .on("mouseover", mouseover)
+            .on("mousemove", mousemove)
+            .on("mouseleave", mouseleave)
+        //   .on("mouseover", function(){return tooltip2.style("visibility", "visible");})
+        //   .on("mousemove", function(){return tooltip2.style("top", (event.pageY-100)+"px").style("left",(event.pageX-100)+"px");})
+        //   .on("mouseout", function(){return tooltip2.style("visibility", "hidden");});
+        
+        </script>
+
+<!-- <script>
+
+    // set the dimensions and margins of the graph
+    var margin = {top: 20, right: 25, bottom: 30, left: 40},
+      width = 1000 - margin.left - margin.right,
+      height = 1000 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#dataviz_basicZoom")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .call(d3.zoom().on("zoom", function () {
+           svg.attr("transform", d3.event.transform)
+        }))
+    .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+    
+
+    // 示例数据 - 您将需要从数据库获取实际的生产流程数据
+    var nodes = [
+        {id: 'A', type: 'normal'},
+        {id: 'B', type: 'normal'},
+        {id: 'C', type: 'normal'},
+        {id: 'R1', type: 'rework'},
+        // ... 其他节点
+    ];
+
+    var links = [
+        {source: 'A', target: 'B'},
+        {source: 'B', target: 'C'},
+        {source: 'B', target: 'R1'},
+        {source: 'R1', target: 'B'},
+        // ... 其他链接
+    ];
+
+    var simulation = d3.forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id).distance(100))
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2));
+
+
+    var link = svg.append("g")
+        .attr("stroke", "#000")
+        .attr("stroke-width", 1.5)
+        .selectAll("line")
+        .data(links)
+        .enter().append("line");
+
+    var node = svg.append("g")
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 1.5)
+        .selectAll("circle")
+        .data(nodes)
+        .enter().append("circle")
+        .attr("r", 5)
+        .attr("fill", d => d.type === 'rework' ? 'red' : 'green')
+        .call(drag(simulation));
+
+    node.append("title")
+        .text(d => d.id);
+
+    simulation.on("tick", () => {
+        link
+            .attr("x1", d => d.source.x)
+            .attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x)
+            .attr("y2", d => d.target.y);
+
+        node
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y);
+    });
+
+    var tooltip2 = d3.select("#dataviz_basicZoom")
+  .append("div")
+    .style("position", "absolute")
+    .style("visibility", "hidden")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .html("<p>I'm a tooltip written in HTML</p><img src='https://github.com/holtzy/D3-graph-gallery/blob/master/img/section/ArcSmal.png?raw=true'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>");
+
+
+
+    function drag(simulation) {
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+        
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+        
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+        
+        return d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended);
+    }
+</script> -->

@@ -994,21 +994,168 @@ The gauge must have a measurement discrimination that is 1/10th or a smaller fra
 <img src="/images/2023-05/Snipaste_2023-10-02_22-26-55.png" width="50%">
 
 #### Step 6 - ANOVA Results
-The first piece of numeric output is the <u>Analysis of Variance (ANOVA) table</u>
+***(6.1) Analysis of Variance (ANOVA) table***
+
 <img src="/images/2023-05/Snipaste_2023-10-02_22-29-07.png" width="50%">
 
+Rows:
 - **Parts**: the variation that exists across the sampled parts. This variation is fine and expected. 10 个 parts 中以其中的一个为 reference，因此 DF = 9
 - **Appraiser** or Operator: the variation that exists across the appraisers (or operators) in your study. 3 个 appraisers 中以其中的一个为 reference，因此 DF = 2
 - **Appraiser*Part**: this interaction term represents the variation that exists between operators and parts (it highlights, for example, if one appraiser is consistently measuring some parts differently than others). 2\*9 = 18
 - **Repeatability**: all the variation that cannot be assigned to the parts, operator and operator*part interaction. Repeatability variation is attributed to the gauge. 以第一个人做的 3\*10 = 30 次为标准，另外两个人需要做同样的 30 次并一一于第一个人做的比较，因此 30 + 30 = 60
 
-For the purposes of a Gauge R & R analysis, the $p$-value is the most important parameter. If the $p$-value for a source is less than your specified alpha (say 0.05), that source of variation contributes significantly to the variation in the data. Ideally you only want the Part effect to be significant (i.e. $p$-value < 0.05) in this table.
+Columns:
+- **DF**: degree of freedom
+- **Sum Sq**: sum of squares
+- **Mean Sq**:= Sum Sq / DF
+- **F-Value**:
+   - Part F-Value = Part Mean Sq / Appraiser\*Part Mean Sq (这个 Sq 位于第三行第三列)
+   - Appraiser F-Value = Appraiser Mean Sq / Appraiser\*Part Mean Sq
+   - Appraiser\*Part F-Value = Appraiser\*Part   Sq / Repeatability Mean Sq
+- **p-value**: A p-value < 0.05 (our chosen significance level) indicates that the corresponding source of variation is <u>statistically significant</u>. In this example the Part and Appraiser*Part interaction effects are significant
 
-You can see in this example that the Part and Appraiser*Part interaction effects are significant, since they both have $p$-values lower than 0.05. From this you should conclude that 'Parts' is a significant contributor and some appraisers are measuring some parts differently than other appraisers.
 
-(6.2) 
+***(6.2) Variance Components***
+
+<img src="/images/2023-05/Snipaste_2023-10-08_09-29-35.png" width="50%">
+
+- **Total Gauge R&R**:= Repeatability + Reproducibility (the total variation in the measurement system)
+- **Repeatability** (also called Equipment Variation, or EV) - the variability seen when the same operator measures the same part more than once using the same measuring device.
+- **Reproducibility** (also called Appraiser Variation, or AV) - the variability seen when the same part is measured by different appraisers using the same measuring device.
+   - = Var Appraiser + Var Appraiser\*Part
+- **Part-to-Part Variation** (also called Part Variation, or PV) - the variability seen when the same part is measured by the same appraiser using the same measuring device.
+
+For this table, focus on the '% Total Variance' column. The Part-to-Part component accounts for 87% of the total variation while the Total Gauge R & R contributes the remaining 13% (which is greater than our 9% cut-off). This is not an acceptable result; when the variation due to the measurement system makes up a large component of the total, you cannot be confident that the system is able to distinguish between parts. Repeatability is contributing most of this variation (8.9%), but there is also a significant appraiser by part interaction (shown in the ANOVA table above), pointing to some problems with the way that appraisers are measuring the parts.
+
+#### Step 7 - Characterize the Gauge
+
+<img src="/images/2023-05/Snipaste_2023-10-08_09-39-42.png" width="90%">
+
+### Gauge R & R Graphical Evaluation
+
+<img src="/images/2023-05/Snipaste_2023-10-08_09-41-06.png" width="90%">
+
+- **Measurement by Part** graph shows the average part measurements are fairly spread apart, so the differences among parts is clear.
+
+## 6.7 Attribute Measurement System Analysis
+
+An attribute measurement system categorizes one or more characteristics based upon comparison to a specific set of limits or criteria, as defined by the **Operational Definition**​. As with measurement systems using variable data, attribute measurement systems should also be qualified before they are used to make decisions by applying a Repeatability​ and Reproducibility​ (R & R) evaluation.
+
+One common type of attribute system is a **Go/No-Go gauge** that either accepts or rejects a part. Unlike variable measurement systems, an attribute gauge does not provide any information about HOW good or HOW bad a part is. A part marginally within the specification limit is judged equal to a part that is exactly at the target value.
+
+Another type of attribute measurement system is a **Rating Scale**, where three or more categories are established by the Operational Definition, such as movie ratings, grades of lumber, or a credit scoring process.
+
+The method of attribute measurement system analysis shown in this toolset is called the **short method** by industry practitioners. In the next section we present an example of attribute measurement system analysis used on data from the hotel industry.
+
+### How To Evaluate An Attribute Measurement System
+Using at least 20 trials and two appraisers. Appraisers should evaluate an output using an binary (T/F), ordinal, or "ranked" scale.
+
+To determine how the study will be conducted, the criteria for what constitutes an acceptable gauge or measurement system should be laid down in advance, as well as the required confidence level of the analysis (such as a target of 95% agreement)
+
+After selecting the units and criteria, the appraisers assess all units in random order, repeating the process for each new trial. This process must be randomized to prevent appraiser bias. In the case of ordinal data, all rating categories should be represented in the study.
+
+Next, the results from the appraiser assessments are recorded in a table so that all results can be compared. If the **repeatability and reproducibility** is high, then the measurement system is acceptable. If not, then the measurement system must be improved - usually by **clarifying the Operational Definition** or providing better training to appraisers to reduce variation in application of the standard.
+
+<img src="/images/2023-05/Snipaste_2023-10-08_10-35-33.png" width="90%">
+
+In the example above, the **65% Agreement in reproducibility** falls short of the 95% goal. This indicates a significant inconsistency between appraisers, undermining the joint reliability of their assessments. Evidently, the two appraisers are following different standards, or different interpretations of the standard, in their assessments.
 
 
+
+## 6.8 Calibration of Measurement Systems
+**Calibration** is the process of checking the measurement output of an instrument using a known standard, and adjusting the instrument as required to read-out the proper value. For example, putting a known standard weight of 10 lbs. on a scale and adjusting the scale to read 10 lbs. is an example of calibration.
+
+## 6.9 Data Collection
+Data collection errors can be introduced by any one of several factors:
+
+<img src="/images/2023-05/Snipaste_2023-10-08_10-45-20.png" width="90%">
+
+As you may have noticed, many of the error sources listed above are human in origin. The best way to eliminate those errors is to eliminate their potential entirely by **automating** the data collection process
+
+Nevertheless, many situations will require manual data collection, either for a short term study, or a long term application that can't be automated. In those situations, a Check Sheet should be constructed for recording data. The check sheet can be constructed in many ways to fit the task at hand, but should satisfy five requirements:
+- Show what is being measured.
+- Show who is collecting the data.
+- Show what time period is associated with the data.
+- Clearly marked space to record the data.
+- Stratification of the data into useful categories (raw totals don't - usually render useful information for problem-solving)
+
+### Data Sampling Plan
+Completely random sampling is difficult to execute in a production environment. What is practical is to specify a plan based on **random sampling**, where the entire range of output is reasonably represented.
+
+***Types of Random Sampling***
+- **Simple random sampling**: This is a method of selecting n units from a population such that every possible sample of size $n$ has an equal chance of being drawn.
+- **Stratified random sampling** (分层随机抽样): If the population consists of naturally different segments (strata) such as different machines, groups, shifts, product variations, etc., consider using a stratified sampling plan. For example, a pizza delivery chain might want to collect data on average delivery time and stratify the sampling to look at different times (weekdays vs. weekends, hour by hour in the evening) or different geography (different neighborhoods served). In this case, units would be randomly sampled from within each stratum to form the sample, and all units in a stratum would have an equal chance of being selected. Be sure to associate the data with the stratum it came from so you can connect the dots to possible root causes when you see a pattern.
+- **Systematic random sampling**: Involves selecting one unit randomly and choosing consecutive units at evenly spaced intervals until the desired number of units is obtained. This plan could be useful when selecting manufactured units moving along a production line. (例如每隔 20 个客人就发一张满意度调查表)
+- **Cluster or multi-stage random sampling**: Used when a list of the population units themselves is not available, but a list of clusters of units such as households, cities, departments, etc. is. In this case, a sample of clusters is selected randomly, and all units belonging to the selected clusters are included in the sample. If units from each cluster are further selected by random sampling, this becomes a two (multi) stage sampling plan.
+
+
+
+## 6.11 Baseline Performance
+Effective process improvement initiatives depend on utilizing "before" data to assess the impact of any implemented changes. This "before" data is also known as baseline data. In this lesson, we will cover **two methods for measuring defects** to develop insight into your process and lay the groundwork for further process capability analysis and improvements.
+
+At this point in the improvement process, you should know:
+- What you want to accomplish (Project Charter​)
+- What to measure (CTQCs​ with Operational Definition​s)
+- Whether the measurement system is valid (Measurement System Analysis)
+
+The next step is to use your measurement system to establish baseline data that is representative of your current process. Starting from that baseline, you can measure the difference between current and desired performance, and then formulate strategies to bridge that gap. By collecting and analyzing defect data throughout your process, you can get a clearer picture of its current state and potential for improvement. Key metrics include:
+- **Yield** (良率): The proportion of products that meet quality standards.
+- **DPMO**​ (Defects Per Million Opportunities): Quantifies the number of defects in a process for every one million opportunities.
+- **Sigma Level**​: Indicates process capability in terms of standard deviations. Higher sigma levels indicate lower defect rates.
+
+### How to Measure Defects
+To establish a baseline for performance, begin by measuring defects in the final output. As your initial defect data is collected, shift your focus "upstream" to earlier stages of the process. This allows you to identify and quantify defects at each step, providing insights into the root causes of issues rather than merely their symptoms. By continually measuring defects and refining the process based on these metrics, you create a system that becomes increasingly stable and predictable. Over time, as the process matures and defect metrics stabilize, you can shift your focus from constantly measuring defects in the output to closely monitoring the quality of process inputs. In doing so, you ensure that a well-tuned process consistently produces high-quality output.
+To work toward this, defect metrics can be counted in two ways:
+- **Defective​ units** (called "defectives"): Every unit with one or more defects is counted as a single entity, irrespective of the number of defects present on it.
+- **Defects Per Unit** (DPU): Counts the individual defects on each unit, highlighting the multiple opportunities for defects that can occur on a single item.
+
+Defects per unit (DPU) tends to offer a more comprehensive view of product quality. Instead of solely focusing on defects identified at the end of the process or upon service consumption, DPU emphasizes capturing defect data at every stage of production. This depth can reveal significant inefficiencies; rework, for instance, can sometimes contribute to 10-20% (or even more) of the total cost and cycle time​. It might be necessary to undertake a study to uncover the hidden waste in the process, reinforcing the importance of more granular in-process data collection.
+
+### Throughput Yield
+**Throughput Yield (YTP)** is a measurement taken at a single process step based on
+
+$$\text{YTP} = \frac{\text{Number of defect-free units}}{\text{Total number of units}}$$
+
+Calculating Throughput Yield relies on counting **defective units**. However, this approach can overlook the fact that some units may contain multiple defects, some of which may be more serious than others. The more direct metric of Defects Per Unit (DPU) evaluates the number and nature of defects at each individual step. The DPU method is straightforward, demands no intricate mathematical adjustments, and directly reflects the primary concern of improvement efforts: the defects themselves.
+
+### Rolled Throughput Yield
+Rolled Throughput Yield takes the previously discussed throughput yield and expands it into a process-wide metric to express **the probability that a given unit will make it through the whole system without a defect**.
+
+<img src="/images/2023-05/Snipaste_2023-10-08_11-04-36.png" width="80%">
+
+### Sigma Level
+When calculating the Sigma performance level for a product or process, the metric **Defects Per Million Opportunities (DPMO)** is generally used
+
+Yield, DPMO, and Sigma Level
+<img src="/images/2023-05/Snipaste_2023-10-08_11-31-13.png" width="40%">
+
+For example: 35 possible defects that could occur during each loan approval and documentation process. Company records indicate that 2,500 loans were processed during the last year, and out of those 2,500 loans, 3,500 defects were identified.
+
+$\text{DPMO} = 3500/(35*2500) * (10^6) = 40,000$
+
+So based on the table above, Sigma Level is between 3.0 and 3.5.
+
+***When to Use?***
+The Sigma Level​ metric is calculated early in a Lean Six Sigma​ project. The Sigma Level provides a high level baseline metric to understand the capability of a process (or entire organization) to meet customer requirements. It can be used to answer the following questions:
+- How does the overall organization compare to other organizations?
+- How does a specific process compare to other processes, even if they have different levels of complexity?
+- What is the baseline performance of an organization or specific process prior to improvement actions?
+- Did the improvement actions have an impact on performance?
+
+
+
+
+
+
+# 7. Measure III - Charting Process Behavior
+Information does not automatically become knowledge. Measuring and collecting information is necessary, but not sufficient without supplying the proper context. With most process data, that context is **time**.
+
+In this session, you will learn effective methods to evaluate process behavior over time.
+
+
+<img src="/images/2023-05/.png" width="70%">
+<img src="/images/2023-05/.png" width="70%">
+<img src="/images/2023-05/.png" width="70%">
 <img src="/images/2023-05/.png" width="70%">
 <img src="/images/2023-05/.png" width="70%">
 <img src="/images/2023-05/.png" width="70%">

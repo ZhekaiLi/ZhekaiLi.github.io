@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<body>
+<div id="div_customContent"></div>
+
+<script>
+    // 数据集 - 5个固定圆，10个非固定圆
+    // var data = [
+    //     // 固定圆
+    //     {id: 'C1', x: 100, y: 100, fixed: true},
+    //     {id: 'C2', x: 200, y: 100, fixed: true},
+    //     {id: 'C3', x: 300, y: 100, fixed: true},
+    //     {id: 'C4', x: 400, y: 100, fixed: true},
+    //     {id: 'C5', x: 500, y: 100, fixed: true},
+    //     // 非固定圆
+    //     {id: 'C6'}, {id: 'C7'}, {id: 'C8'}, {id: 'C9'}, {id: 'C10'},
+    //     {id: 'C11'}, {id: 'C12'}, {id: 'C13'}, {id: 'C14'}, {id: 'C15'}
+    // ];
+
+    var data_nodes = [
+        {id: 'F1', fx: 100, fy: 200, fixed: true},
+        {id: 'F2', fx: 200, fy: 200, fixed: true},
+        {id: 'F3', fx: 300, fy: 200, fixed: true},
+        {id: 'F4', fx: 400, fy: 200, fixed: true},
+        {id: 'F5', fx: 500, fy: 200, fixed: true},
+        {id: 'C1'}, {id: 'C2'}, {id: 'C3'}, {id: 'C4'},
+        {id: 'C5'}, {id: 'C6'}, {id: 'C7'}, {id: 'C8'}
+    ];
+
+    var links = [
+        {source: 'F1', target: 'F2'},
+        {source: 'F2', target: 'F3'},
+        {source: 'F3', target: 'F4'},
+        {source: 'F4', target: 'F5'},
+        {source: 'F3', target: 'C1'},
+        {source: 'C1', target: 'C2'},
+        {source: 'C2', target: 'C3'},
+        {source: 'C3', target: 'C4'},
+        {source: 'C4', target: 'C5'},
+        {source: 'C5', target: 'F3'},
+        {source: 'F2', target: 'C6'},
+        {source: 'C6', target: 'C7'},
+        {source: 'C7', target: 'C8'},
+        {source: 'C8', target: 'F2'}
+    ];
+
+    // 创建SVG元素
+    var svg = d3.select("#div_customContent")
+    .append("svg")
+        .attr("width", 1000)
+        .attr("height", 600)
+        .call(d3.zoom().on("zoom", function () {
+                svg.attr("transform", d3.event.transform)
+            }))
+        .append("g");
+
+
+    // 添加箭头定义
+    svg.append("defs").append("marker")
+        .attr("id", "arrow") // 标记的唯一标识符
+        .attr("viewBox", "0 -5 10 10") // 坐标系统的区域
+        .attr("refX", 25) // 箭头坐标
+        .attr("refY", 0)
+        .attr("markerWidth", 6) // 标记的尺寸
+        .attr("markerHeight", 6)
+        .attr("orient", "auto") // 确保箭头根据线的方向正确定位
+        .append("path") // 绘制一个三角形
+        .attr("d", "M0,-5L10,0L0,5")
+        .attr("class","arrowHead")
+        .style("fill", "#999"); // 箭头的颜色
+
+    // 创建力学模拟
+    var simulation = d3.forceSimulation(data_nodes)
+        .force("charge", d3.forceManyBody().strength(-32))
+        .force("link", d3.forceLink(links).id(function(d) { return d.id; }))
+        //.force("link", d3.forceLink().distance(50).strength(0.5))
+        .force("gravity", d3.forceManyBody().strength(16).distanceMax(200))
+        .force("collision", d3.forceCollide().radius(40)) // 防止碰撞
+        //.force("center", d3.forceCenter(400, 300)); // 使节点聚集在视图的中心
+    //     .force("charge", d3.forceManyBody().strength(-15))  // 负数表示互相排斥的力
+    //     .force("center", d3.forceCenter(400, 300))  // SVG的中心(400, 300)
+    //     .force("collision", d3.forceCollide().radius(20)); // 防止碰撞
+
+    // //simulation.force("center", d3.forceCenter(400, 300).strength(0.05));
+    // //simulation.force("link", d3.forceLink().id(function(d) { return d.id; }));
+    // simulation.force("link", d3.forceLink().distance(50).strength(0.5));
+    // simulation.force("gravity", d3.forceManyBody().strength(0.1).distanceMax(400));
+
+    // 设置固定节点
+
+    var link = svg.append("g")
+        .attr("class", "links")
+        .selectAll("line")
+        .data(links)
+        .enter().append("line")
+        .attr("stroke", "#aaa")
+        .attr("stroke-width", "2px")
+        .style("marker-end", "url(#arrow)"); // 使用定义的箭头
+
+    data_nodes.forEach(function(d) {
+        if (d.fixed) {
+            d.x = d.fx;
+            d.y = d.fy;
+        }
+    });
+
+    // 创建圆并绑定数据
+    var node = svg.append("g")
+        .attr("class", "nodes")
+        .selectAll("circle")
+        .data(data_nodes)
+        .enter().append("circle")
+            .attr("r", 20)  // 半径为20
+            .attr("fill", function(d) { return d.fixed ? "#ff0000" : "#0000ff"; }) // 固定圆为红色，非固定圆为蓝色
+            .style("opacity", 0.5)
+            .call(d3.drag()  // 允许拖拽
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
+
+    // 每次 "tick" 时更新圆的位置
+    simulation.on("tick", function() {
+        node
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+    });
+
+    // 拖拽开始时设置固定位置
+    function dragstarted(d) {
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+    }
+
+    // 拖拽过程中更新位置
+    function dragged(d) {
+        d.fx = d3.event.x;
+        d.fy = d3.event.y;
+    }
+
+    // 拖拽结束时如果圆不是固定的则解除固定
+    function dragended(d) {
+        if (!d3.event.active) simulation.alphaTarget(0);
+        if (!d.fixed) {
+            d.fx = null;
+            d.fy = null;
+        }
+    }
+
+    var dragHandler = d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended);
+
+    dragHandler(svg.selectAll("circle"));
+
+    function ticked() {
+        link
+            .attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+
+        node
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+        }
+
+    simulation.on("tick", ticked);
+
+
+
+    var tooltip2 = d3.select("#div_customContent")
+        .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "2px")
+        .style("border-radius", "5px")
+        .style("padding", "5px");
+    
+    var mouseover = function(d) {
+        tooltip2
+        .style("opacity", 1)
+        d3.select(this)
+        .style("stroke", "black")
+        .style("opacity", 1)
+    }
+    var mousemove = function(d) {
+        tooltip2
+        .html("I'm a tooltip written in " + d.id)
+        .style("position", "absolute")
+    }
+    var mouseleave = function(d) {
+        tooltip2
+        .style("opacity", 1)
+        d3.select(this)
+        // .style("stroke", "none")
+        .style("opacity", 0.5)
+    }
+    
+    
+    d3.selectAll('circle')
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
+
+
+</script>
+</body>
+</html>
