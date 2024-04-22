@@ -25,6 +25,8 @@ jupyter notebook
 ```py
 conda env list # 查看所有虚拟环境
 conda list     # 查看当前环境下安装的包
+
+conda rename -n oldEnvName newEnvName # 重命名环境
 ```
 
 导出当前环境下安装的所有包的版本信息
