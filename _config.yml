@@ -4,11 +4,11 @@
 baseurl:
 url: https://zhekaili.github.io
 date_format: "ordinal"
-title: Zeka's Blog
-subtitle: "Keep Shining"
-description: "Zeka's Blog"
-keywords: Zeka Lee, Zhekai Li
-timezone: Asia/Shanghai
+title: Zhekai Li
+subtitle: "Simulation & Capacity Platform Engineering"
+description: "Zhekai Li — internal platforms, data pipelines and decision-support systems for semiconductor capacity planning and fab simulation."
+keywords: Zhekai Li, simulation, capacity planning, semiconductor, data platform
+timezone: America/Los_Angeles
 encoding: "utf-8"
 # 页面左下角显示的年份
 since: 2019
@@ -54,11 +54,11 @@ highlight_theme: github
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zeka Lee
+author: Zhekai Li
 organization: 
 organization_url: 
 github_username: ZhekaiLi
-location: Zhoushan, China
+location: Thousand Oaks, CA
 email: zekalee0523@gmail.com
 
 # ---------------- #
@@ -105,7 +105,7 @@ markdown: kramdown
 kramdown:
     input: GFM
 highlighter: rouge
-paginate: 10
+paginate:
 lsi: false
 quiet: false
 excerpt_separator: "\n\n"
@@ -114,7 +114,6 @@ plugins:
     - jekyll-github-metadata
     - rouge
 #     - jekyll-html-pipeline
-    - jekyll-paginate
     - jekyll-sitemap
     - jekyll-feed
     - jemoji
@@ -169,10 +168,10 @@ simple_jekyll_search:
 #      Google      #
 # ---------------- #
 google:
-    analytics_id: UA-80669434-1
+    analytics_id:
     adsense:
-        footer: true
-        sidebar: true 
-        sidebar-detail: true 
+        footer: false
+        sidebar: false 
+        sidebar-detail: false 
         content_header: false
         content_footer: false

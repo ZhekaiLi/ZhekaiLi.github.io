@@ -1,169 +1,318 @@
----
-layout: default
-class: home
-css: ['pages/index.css']
-comments: false
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zhekai Li — Simulation &amp; Capacity Platform Engineering</title>
+<meta name="description" content="Zhekai Li builds internal platforms, data pipelines, and decision-support systems for semiconductor capacity planning and fab simulation.">
+<meta name="author" content="Zhekai Li">
+<meta property="og:title" content="Zhekai Li — Simulation &amp; Capacity Platform Engineering">
+<meta property="og:description" content="Internal platforms, data pipelines, and decision-support systems for semiconductor capacity planning and fab simulation.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/portfolio/site.css">
+</head>
+<body>
 
-{% assign assets_base_url = site.url %}
-{% if site.cdn.jsdelivr.enabled %}
-{% assign assets_base_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
-{% endif %}
-<section class="banner">
-    <div class="collection-head">
-      <div class="container">
-        <div class="columns">
-          <div class="column two-thirds">
-            <div class="collection-title">
-              <h1 class="collection-header" id="sub-title"><span>{{ site.subtitle }}</span></h1>
-              <div class="collection-info">
-                <span class="meta-info mobile-hidden">
-                  <span class="octicon octicon-location"></span>
-                  {{ site.location }}
-                </span>
-                {% if site.organization %}
-                <span class="meta-info">
-                  <span class="octicon octicon-organization"></span>
-                  <a href="{{ site.organization_url }}" target="_blank">{{ site.organization }}</a>
-                </span>
-                {% endif %}
-                <span class="meta-info">
-                  <span class="octicon octicon-mark-github"></span>
-                  <a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username }}</a>
-                </span>
-              </div>
-            </div>
+<div class="statusbar">
+  <span class="dot"></span>
+  <span>Z. LI</span>
+  <span class="hide-sm">SIMULATION &amp; CAPACITY SYSTEMS</span>
+  <span class="spacer"></span>
+  <span class="hide-sm">THOUSAND OAKS, CA</span>
+  <span>REV 2026.08</span>
+</div>
+
+<div class="shell">
+
+  <nav class="rail">
+    <a href="#systems"><span class="num">01</span> Systems</a>
+    <a href="#analysis"><span class="num">02</span> Analysis</a>
+    <a href="#profile"><span class="num">03</span> Profile</a>
+    <a href="#contact"><span class="num">04</span> Contact</a>
+    <a href="/notes/"><span class="num">05</span> Notes</a>
+    <div class="rail-meta">
+      FILE — PORTFOLIO<br>
+      CLASS — PUBLIC / REDACTED<br>
+      SRC — 6 SITES · 3 COUNTRIES
+    </div>
+  </nav>
+
+  <div class="body-col">
+
+    <!-- ================= HERO ================= -->
+    <header class="hero">
+      <div class="eyebrow rise d1"><span class="label">Portfolio — Rev 2026.08</span></div>
+
+      <h1 class="rise d1">Zhekai&nbsp;Li<br><span class="thin">Platform Engineering</span></h1>
+      <div class="role rise d2">Simulation · Capacity Planning · Data Systems</div>
+
+      <p class="lede rise d2">
+        I build the internal software that decides where a semiconductor fab puts its money and its
+        machines. Over the last three years that has meant replacing spreadsheet-driven planning with
+        <strong>production systems</strong> — a multi-scenario capacity engine, an ETL framework, a
+        protocol server unifying twenty production databases, and five web applications now used daily
+        across <strong>six manufacturing sites in three countries</strong>. The common thread is turning
+        fragmented operational data into decisions people actually trust.
+      </p>
+
+      <div class="metrics rise d3">
+        <div class="metric"><div class="v">20</div><div class="k">Databases integrated</div></div>
+        <div class="metric"><div class="v">33</div><div class="k">MCP tools shipped</div></div>
+        <div class="metric"><div class="v">965</div><div class="k">Curated findings</div></div>
+        <div class="metric"><div class="v">54</div><div class="k">Analysis reports</div></div>
+        <div class="metric"><div class="v">5</div><div class="k">Web applications</div></div>
+        <div class="metric"><div class="v">6</div><div class="k">Fab sites served</div></div>
+      </div>
+    </header>
+
+    <!-- ================= SYSTEMS ================= -->
+    <section class="block" id="systems">
+      <div class="sec-head">
+        <span class="no">§01</span>
+        <h2>Systems Built</h2>
+        <span class="tail"></span>
+        <span class="count">05 entries</span>
+      </div>
+
+      <div class="systems">
+
+        <article class="sys rise d1">
+          <div>
+            <div class="sys-id">SYS-01 · PLANNING</div>
+            <h3 class="sys-name">Capacity Planning &amp; Scenario Engine</h3>
+            <p>
+              The calculation engine and web application that replaced a legacy Excel capacity planning
+              process. Routes demand through product-family-specific paths to derive tool requirements,
+              inter-site equipment transfers, purchase recommendations and annual CapEx. Versioned
+              scenarios, side-by-side comparison, and Excel round-tripping so planners keep their
+              existing workflow. <span class="hl">A multi-hour manual process now runs in under 15 minutes.</span>
+            </p>
           </div>
-          <div class="column one-third mobile-hidden">
-            <div class="collection-title">
-              {% include sidebar-qrcode.html %}
-            </div>
+          <div class="sys-side">
+            <div class="stack"><span>Python</span><span>FastAPI</span><span>React</span><span>Oracle</span></div>
+            <div class="sys-figure">▸ Hours → &lt;15 min</div>
           </div>
+        </article>
+
+        <article class="sys rise d2">
+          <div>
+            <div class="sys-id">SYS-02 · DATA PLATFORM</div>
+            <h3 class="sys-name">Unified Data Access &amp; Knowledge Platform</h3>
+            <p>
+              A 33-tool Model Context Protocol server giving programmatic, read-only access to
+              <span class="hl">20 production databases across six sites</span> — MES, data warehouse,
+              simulation platforms and capacity systems. Server-side SELECT-only enforcement, connection
+              lifecycle management, a vector-search store holding 965 curated engineering findings, and a
+              multi-user review pipeline that separates personal notes from published knowledge.
+            </p>
+          </div>
+          <div class="sys-side">
+            <div class="stack"><span>Python</span><span>MCP</span><span>Oracle</span><span>SQL Server</span><span>ChromaDB</span></div>
+            <div class="sys-figure">▸ 20 DBs · 33 tools</div>
+          </div>
+        </article>
+
+        <article class="sys rise d3">
+          <div>
+            <div class="sys-id">SYS-03 · PIPELINES</div>
+            <h3 class="sys-name">ETL Framework</h3>
+            <p>
+              A deliberately small orchestration layer: YAML job configs, a generic source-to-target
+              runner, stage-and-swap refresh for zero-downtime table updates, run-history logged to a
+              database table, and CLI tooling for manual runs and inspection.
+              <span class="hl">New pipelines require a config file, not code</span> — so people who did not
+              write it can still extend it.
+            </p>
+          </div>
+          <div class="sys-side">
+            <div class="stack"><span>Python</span><span>YAML</span><span>Oracle</span><span>Scheduler</span></div>
+            <div class="sys-figure">▸ Config-driven</div>
+          </div>
+        </article>
+
+        <article class="sys rise d4">
+          <div>
+            <div class="sys-id">SYS-04 · APPLICATIONS</div>
+            <h3 class="sys-name">Internal Web Application Suite</h3>
+            <p>
+              Five production applications on a shared component design system, serving manufacturing,
+              planning and supply chain teams: fab-level Gantt and scheduling visualisation, multi-site
+              shipment forecasting, lot cycle-time exploration with simulation deep-links, simulation
+              delivery-accuracy scoring, and strategic capacity planning.
+              <span class="hl">Full stack on each</span> — extraction, API, frontend, deployment, adoption.
+            </p>
+          </div>
+          <div class="sys-side">
+            <div class="stack"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>Oracle</span></div>
+            <div class="sys-figure">▸ 5 apps in daily use</div>
+          </div>
+        </article>
+
+        <article class="sys rise d5">
+          <div>
+            <div class="sys-id">SYS-05 · VALIDATION</div>
+            <h3 class="sys-name">Simulation Accuracy &amp; Validation Pipeline</h3>
+            <p>
+              Automated comparison pipelines that reconcile simulation output against historical
+              production data across multiple granularities, separate systematic bias from noise, and
+              triage every discrepancy into input-data issue, known model gap, or real-world change.
+              <span class="hl">The red-flag list is the vendor's model-correction backlog.</span>
+            </p>
+          </div>
+          <div class="sys-side">
+            <div class="stack"><span>Python</span><span>Oracle</span><span>Statistics</span></div>
+            <div class="sys-figure">▸ +30% CT forecast accuracy</div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= ANALYSIS ================= -->
+    <section class="block" id="analysis">
+      <div class="sec-head">
+        <span class="no">§02</span>
+        <h2>Analysis Work</h2>
+        <span class="tail"></span>
+        <span class="count">7 of 54</span>
+      </div>
+
+      <div class="gallery">
+
+        <figure class="shot rise d1" style="margin:0">
+          <span class="flag">Redacted</span>
+          <div class="frame"><img src="/assets/portfolio/img/oee-fleet.jpg" alt="Fleet OEE decomposition report" loading="lazy"></div>
+          <figcaption class="cap">
+            <span class="t">FLEET OEE DECOMPOSITION</span>
+            <span class="d">23-tool inspection fleet; availability 96.5% but rate 32% — the loss is rate, not downtime</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot rise d2" style="margin:0">
+          <span class="flag">Redacted</span>
+          <div class="frame"><img src="/assets/portfolio/img/real-vs-sim.jpg" alt="Real versus simulation comparison report" loading="lazy"></div>
+          <figcaption class="cap">
+            <span class="t">REAL VS SIMULATION</span>
+            <span class="d">Throughput matched within 9% while tool loading was inverted — retracted an earlier conclusion</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot rise d3" style="margin:0">
+          <span class="flag">Redacted</span>
+          <div class="frame"><img src="/assets/portfolio/img/chamber.jpg" alt="Chamber-level throughput analysis" loading="lazy"></div>
+          <figcaption class="cap">
+            <span class="t">CHAMBER-LEVEL ANALYSIS</span>
+            <span class="d">Per-chamber throughput and idle decomposition across an etch fleet</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot rise d4" style="margin:0">
+          <span class="flag">Redacted</span>
+          <div class="frame"><img src="/assets/portfolio/img/area-flow.jpg" alt="Cross-area WIP flow player" loading="lazy"></div>
+          <figcaption class="cap">
+            <span class="t">CROSS-AREA WIP FLOW</span>
+            <span class="d">Animated flow player, real and simulated on one clock — structure agreed, distribution did not</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot rise d5" style="margin:0">
+          <span class="flag">Redacted</span>
+          <div class="frame"><img src="/assets/portfolio/img/downtime.jpg" alt="Downtime lot impact analysis" loading="lazy"></div>
+          <figcaption class="cap">
+            <span class="t">DOWNTIME LOT IMPACT</span>
+            <span class="d">Tracing individual lots through an outage to quantify queue-time cost</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot rise d6" style="margin:0">
+          <span class="flag">Redacted</span>
+          <div class="frame"><img src="/assets/portfolio/img/setup-penalty.jpg" alt="Setup penalty analysis" loading="lazy"></div>
+          <figcaption class="cap">
+            <span class="t">SETUP PENALTY</span>
+            <span class="d">Changeover cost by sequence, and what dispatch rules would recover</span>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <p class="redaction-note">
+        <strong>On redaction.</strong> Every screenshot above is machine-de-identified before publication.
+        Because these reports draw their charts on <code>&lt;canvas&gt;</code> from embedded data, blurring
+        the page would leave identifiers baked into the chart labels — so equipment IDs, routes, lot
+        numbers, site names and internal system names are substituted at the source with a consistent
+        pseudonym map, then re-rendered. Same tool keeps the same alias in every chart, so the analysis
+        still reads correctly. The audit across all 54 reports returns zero residual matches.
+      </p>
+    </section>
+
+    <!-- ================= PROFILE ================= -->
+    <section class="block" id="profile">
+      <div class="sec-head">
+        <span class="no">§03</span>
+        <h2>Profile</h2>
+        <span class="tail"></span>
+      </div>
+
+      <div class="profile">
+        <div>
+          <p class="rise d1">
+            I am a senior industrial engineer at <strong>Skyworks Solutions</strong>, where my title says
+            industrial engineering and my work reads as platform engineering. I own the software and data
+            systems behind capacity planning and fab simulation — database integration, pipeline design,
+            API, frontend, deployment — for wafer fabs in the United States, Japan and Singapore.
+          </p>
+          <p class="rise d2">
+            The work I care about sits where operations research meets systems engineering: discrete-event
+            simulation that is actually trusted because its error is measured every week; capacity models
+            that survive contact with a real CapEx cycle; internal tools that people open on their own
+            without being told to. I built a protocol server and a knowledge base so that analysis is
+            reproducible rather than re-derived, and I am usually the one arguing that a finding is not
+            finished until someone else can reproduce it.
+          </p>
+          <p class="rise d3">
+            Before this I built a fab discrete-event simulation engine from scratch as an intern, which
+            became the technical foundation for the company's enterprise simulation program.
+          </p>
+        </div>
+
+        <div class="spec rise d2">
+          <div class="row"><div class="k">Role</div><div class="v">Senior Industrial Engineer, Skyworks Solutions</div></div>
+          <div class="row"><div class="k">Focus</div><div class="v">Capacity systems · simulation validation · internal platforms</div></div>
+          <div class="row"><div class="k">Languages</div><div class="v">Python, TypeScript, SQL</div></div>
+          <div class="row"><div class="k">Stack</div><div class="v">FastAPI, React, Oracle, SQL Server, MCP, ChromaDB</div></div>
+          <div class="row"><div class="k">Methods</div><div class="v">Discrete-event simulation, LP/IP, queueing theory, forecasting</div></div>
+          <div class="row"><div class="k">Education</div><div class="v">MS Supply Chain Engineering, Georgia Tech<br>BS Civil &amp; Environmental Eng., UIUC + Zhejiang University</div></div>
+          <div class="row"><div class="k">Based</div><div class="v">Thousand Oaks, California</div></div>
         </div>
       </div>
-    </div>
-</section>
-<!-- /.banner -->
-<section class="container content">
-    <div class="columns">
-        <div class="column two-thirds" >
-            <ol class="repo-list">
-              {% for post in site.posts %}
-              {% if paginator.page == 1 %}
-              {% if post.topmost == true %}
-              <li class="repo-list-item">
-                <h3 class="repo-list-name">
-                  <a href="{{ site.url }}{{ post.url }}"><span class="top-most-flag">[Sticked]</span>{{ post.title }}</a>
-                </h3>
-                <p class="repo-list-description">
-                {{ post.excerpt | strip_html | strip }}
-                </p>
-                <p class="repo-list-meta">
-                <span class="meta-info">
-                  <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
-                </span>
-                {% for cat in post.categories %}
-                <span class="meta-info">
-                  <span class="octicon octicon-file-directory"></span>
-                  <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
-                </span>
-                {% endfor %}
-                </p>
-              </li>
-              {% endif %}
-              {% endif %}
-              {% endfor %}
+    </section>
 
-              {% for post in paginator.posts %}
-              {% if post.topmost != true %}
-              <li class="repo-list-item">
-                <h3 class="repo-list-name">
-                  <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                </h3>
-                <p class="repo-list-description">
-                {{ post.excerpt | strip_html | strip }}
-                </p>
-                <p class="repo-list-meta">
-                <span class="meta-info">
-                  <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
-                </span>
-                {% for cat in post.categories %}
-                <span class="meta-info">
-                  <span class="octicon octicon-file-directory"></span>
-                  <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
-                </span>
-                {% endfor %}
-                </p>
-              </li>
-              {% endif %}
-              {% endfor %}
-            </ol>
-        </div>
-        <div class="column one-third">
-            {% include sidebar-search.html %}
-            {% include sidebar-categories-cloud.html %}
-            {% include sidebar-ad.html %}
-            {% include sidebar-popular-repo.html %}
-        </div>
-    </div>
-    <div class="pagination text-align">
-      <div class="btn-group">
-        {% if paginator.previous_page %}
-          {% if paginator.previous_page == 1 %}
-              <a href="{{ site.url }}/" class="btn btn-outline">&laquo;</a>
-          {% else %}
-              <a href="{{ site.url }}/page{{paginator.previous_page}}"  class="btn btn-outline">&laquo;</a>
-          {% endif %}
-        {% else %}
-            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&laquo;</button>
-        {% endif %}
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+      <div class="sec-head">
+        <span class="no">§04</span>
+        <h2 style="font-size:inherit;margin:0">Contact</h2>
+        <span class="tail"></span>
+      </div>
+      <h2 class="rise d1">Let's talk about<br>systems that plan.</h2>
+      <div class="links rise d2">
+        <a href="mailto:zekalee0523@gmail.com">Email</a>
+        <a href="https://github.com/ZhekaiLi" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/zeka-li-a949a2236/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/notes/">Notes &amp; Wiki</a>
+      </div>
+    </section>
 
-        {% if paginator.page == 1 %}
-            <a href="javascript:;" class="active btn btn-outline">1</a>
-        {% else %}
-            <a href="{{ site.url }}/"  class="btn btn-outline">1</a>
-        {% endif %}
+    <footer>
+      <span>© 2026 Zhekai Li</span>
+      <span>Screenshots de-identified</span>
+      <span class="spacer"></span>
+      <span>Built by hand</span>
+    </footer>
 
-        {% assign aroundSize = 2 %}
-        {% assign midStartPage = paginator.page | minus: aroundSize %}
-        {% if 2 > midStartPage %}
-            {% assign midStartPage = 2 %}
-        {% endif %}
-        {% assign midEndPage = paginator.page | plus: aroundSize %}
-        {% if midEndPage >= paginator.total_pages %}
-            {% assign midEndPage = paginator.total_pages | minus:1 %}
-        {% endif %}
-        {% assign tmpPage = aroundSize | plus: 2 %}
-        {% if paginator.page > tmpPage %}
-          <button disabled="disabled" href="javascript:;" class="btn btn-outline">...</button>
-        {% endif %}
+  </div>
+</div>
 
-        {% for count in (midStartPage..midEndPage) %}
-          {% if count == paginator.page %}
-            <a href="jaavascript:;" class="active btn btn-outline">{{count}}</a>
-          {% else %}
-            <a href="{{ site.url }}/page{{count}}"  class="btn btn-outline">{{count}}</a>
-          {% endif %}
-        {% endfor %}
-
-        {% assign tmpPage = paginator.page | plus: aroundSize | plus: 1 %}
-        {% if paginator.total_pages > tmpPage %}
-          <button disabled="disabled" href="javascript:;" class="btn btn-outline">...</button>
-        {% endif %}
-
-        {% if paginator.page == paginator.total_pages %}
-            <a href="jaavascript:;" class="active btn btn-outline">{{paginator.total_pages}}</a>
-        {% else %}
-            <a href="{{ site.url }}/page{{paginator.total_pages}}"  class="btn btn-outline">{{paginator.total_pages}}</a>
-        {% endif %}
-
-        {% if paginator.next_page %}
-            <a href="{{ site.url }}/page{{paginator.next_page}}"  class="btn btn-outline">&raquo;</a>
-        {% else %}
-            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&raquo;</button>
-        {% endif %}
-        </div>
-    </div>
-    <!-- /pagination -->
-</section>
-<!-- /section.content -->
+</body>
+</html>

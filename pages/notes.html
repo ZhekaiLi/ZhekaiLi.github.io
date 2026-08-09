@@ -1,0 +1,46 @@
+---
+layout: default
+title: Notes
+description: Working notes, study logs and a personal wiki.
+permalink: /notes/
+comments: false
+---
+
+<section class="container content" style="padding-top:32px">
+  <div class="columns">
+    <div class="column two-thirds">
+      <h1 style="margin-top:0">Notes</h1>
+      <p style="color:#666">
+        Long-running study notes and working logs — kept for my own reference, not curated for an
+        audience. Engineering work lives on the <a href="{{ site.url }}/">main page</a>.
+      </p>
+
+      <ol class="repo-list">
+        {% for post in site.posts %}
+        <li class="repo-list-item">
+          <h3 class="repo-list-name">
+            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+          </h3>
+          <p class="repo-list-description">{{ post.excerpt | strip_html | strip | truncate: 220 }}</p>
+          <p class="repo-list-meta">
+            <span class="meta-info">
+              <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+            </span>
+            {% for cat in post.categories %}
+            <span class="meta-info">
+              <span class="octicon octicon-file-directory"></span>
+              <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
+            </span>
+            {% endfor %}
+          </p>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+
+    <div class="column one-third">
+      {% include sidebar-search.html %}
+      {% include sidebar-categories-cloud.html %}
+    </div>
+  </div>
+</section>
