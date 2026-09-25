@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zhekai Li — Simulation &amp; Capacity Platform Engineering</title>
-<meta name="description" content="Zhekai Li builds internal platforms, data pipelines, and decision-support systems for semiconductor capacity planning and fab simulation.">
+<title>Zhekai Li — Capacity &amp; Demand Planning</title>
+<meta name="description" content="Zhekai Li plans where a manufacturing fleet puts its machines and capital, and builds the forecasting, optimization, and planning systems behind those plans.">
 <meta name="author" content="Zhekai Li">
-<meta property="og:title" content="Zhekai Li — Simulation &amp; Capacity Platform Engineering">
-<meta property="og:description" content="Internal platforms, data pipelines, and decision-support systems for semiconductor capacity planning and fab simulation.">
+<meta property="og:title" content="Zhekai Li — Capacity &amp; Demand Planning">
+<meta property="og:description" content="Capacity and demand planning: forecasting, optimization, and the systems that make plans hold up.">
 <meta property="og:type" content="website">
 <link rel="icon" href="/favicon.ico">
 <link rel="stylesheet" href="/assets/portfolio/site.css">
@@ -17,23 +17,24 @@
 <div class="statusbar">
   <span class="dot"></span>
   <span>Z. LI</span>
-  <span class="hide-sm">SIMULATION &amp; CAPACITY SYSTEMS</span>
+  <span class="hide-sm">CAPACITY &amp; DEMAND PLANNING</span>
   <span class="spacer"></span>
   <span class="hide-sm">THOUSAND OAKS, CA</span>
-  <span>REV 2026.08</span>
+  <span>REV 2026.09</span>
 </div>
 
 <div class="shell">
 
   <nav class="rail">
-    <a href="#systems"><span class="num">01</span> Systems</a>
-    <a href="#analysis"><span class="num">02</span> Analysis</a>
-    <a href="#profile"><span class="num">03</span> Profile</a>
-    <a href="#contact"><span class="num">04</span> Contact</a>
-    <a href="/notes/"><span class="num">05</span> Notes</a>
+    <a href="#method"><span class="num">01</span> How I plan</a>
+    <a href="#cases"><span class="num">02</span> Cases</a>
+    <a href="#evidence"><span class="num">03</span> Evidence</a>
+    <a href="#profile"><span class="num">04</span> Profile</a>
+    <a href="#contact"><span class="num">05</span> Contact</a>
+    <a href="/notes/"><span class="num">06</span> Notes</a>
     <div class="rail-meta">
       FILE — PORTFOLIO<br>
-      CLASS — PUBLIC / REDACTED<br>
+      CLASS — PUBLIC / MASKED<br>
       SRC — 6 SITES · 3 COUNTRIES
     </div>
   </nav>
@@ -42,214 +43,284 @@
 
     <!-- ================= HERO ================= -->
     <header class="hero">
-      <div class="eyebrow rise d1"><span class="label">Portfolio — Rev 2026.08</span></div>
+      <div class="eyebrow rise d1"><span class="label">Portfolio — Rev 2026.09</span></div>
 
-      <h1 class="rise d1">Zhekai&nbsp;Li<br><span class="thin">Platform Engineering</span></h1>
-      <div class="role rise d2">Simulation · Capacity Planning · Data Systems</div>
+      <h1 class="rise d1">Zhekai&nbsp;Li<br><span class="thin">Capacity &amp; Demand Planning</span></h1>
+      <div class="role rise d2">Forecasting · Optimization · Planning Systems</div>
 
       <p class="lede rise d2">
-        I build the internal software that decides where a semiconductor fab puts its money and its
-        machines. Over the last three years that has meant replacing spreadsheet-driven planning with
-        <strong>production systems</strong> — a multi-scenario capacity engine, an ETL framework, a
-        protocol server unifying twenty production databases, and five web applications now used daily
-        across <strong>six manufacturing sites in three countries</strong>. The common thread is turning
-        fragmented operational data into decisions people actually trust.
+        I plan where a manufacturing fleet puts its machines and capital — and build the models and software
+        that make those plans hold up. For three years that has meant capacity planning for semiconductor fabs
+        in the US, Japan, and Singapore: turning <strong>demand into equipment and CapEx</strong>, allocating
+        capacity with <strong>optimization</strong>, and running the <strong>plan-vs-reality loop</strong>
+        that shows exactly where a plan and the floor disagree.
       </p>
 
       <div class="metrics rise d3">
         <div class="metric"><div class="v">20</div><div class="k">Databases integrated</div></div>
-        <div class="metric"><div class="v">33</div><div class="k">MCP tools shipped</div></div>
-        <div class="metric"><div class="v">965</div><div class="k">Curated findings</div></div>
-        <div class="metric"><div class="v">54</div><div class="k">Analysis reports</div></div>
-        <div class="metric"><div class="v">5</div><div class="k">Web applications</div></div>
-        <div class="metric"><div class="v">6</div><div class="k">Fab sites served</div></div>
+        <div class="metric"><div class="v">41</div><div class="k">MCP tools shipped</div></div>
+        <div class="metric"><div class="v">1,312</div><div class="k">Curated findings</div></div>
+        <div class="metric"><div class="v">70</div><div class="k">Analyses written</div></div>
+        <div class="metric"><div class="v">7</div><div class="k">Internal apps</div></div>
+        <div class="metric"><div class="v">+30%</div><div class="k">Cycle-time forecast accuracy</div></div>
       </div>
     </header>
 
-    <!-- ================= SYSTEMS ================= -->
-    <section class="block" id="systems">
+    <!-- ================= §01 HOW I PLAN ================= -->
+    <section class="block" id="method">
       <div class="sec-head">
         <span class="no">§01</span>
-        <h2>Systems Built</h2>
+        <h2>How I Plan</h2>
         <span class="tail"></span>
-        <span class="count">05 entries</span>
+        <span class="count">4 habits</span>
       </div>
+      <p class="intro-line">Four habits I bring to any capacity problem.</p>
 
-      <div class="systems">
+      <div class="methods">
 
-        <article class="sys rise d1">
-          <div>
-            <div class="sys-id">SYS-01 · PLANNING</div>
-            <h3 class="sys-name">Capacity Planning &amp; Scenario Engine</h3>
-            <p>
-              The calculation engine and web application that replaced a legacy Excel capacity planning
-              process. Routes demand through product-family-specific paths to derive tool requirements,
-              inter-site equipment transfers, purchase recommendations and annual CapEx. Versioned
-              scenarios, side-by-side comparison, and Excel round-tripping so planners keep their
-              existing workflow. <span class="hl">A multi-hour manual process now runs in under 15 minutes.</span>
-            </p>
-          </div>
-          <div class="sys-side">
-            <div class="stack"><span>Python</span><span>FastAPI</span><span>React</span><span>Oracle</span></div>
-            <div class="sys-figure">▸ Hours → &lt;15 min</div>
-          </div>
+        <article class="method rise d1">
+          <div class="mid">M-01</div>
+          <h3>Forecast, plan, allocation — three different objects</h3>
+          <svg viewBox="0 0 330 150" role="img" aria-label="Forecast, plan and allocation as three boxes, reconciled against what actually ran">
+            <defs><marker id="ah1" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-dim"/></marker>
+                  <marker id="ah1s" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-fill"/></marker></defs>
+            <rect class="dg-box" x="4" y="18" width="100" height="62" rx="2"/>
+            <rect class="dg-box" x="115" y="18" width="100" height="62" rx="2"/>
+            <rect class="dg-box" x="226" y="18" width="100" height="62" rx="2"/>
+            <text class="dg-hi" x="54" y="40" text-anchor="middle">FORECAST</text>
+            <text class="dg-txt" x="54" y="56" text-anchor="middle">what demand</text>
+            <text class="dg-txt" x="54" y="68" text-anchor="middle">will need</text>
+            <text class="dg-hi" x="165" y="40" text-anchor="middle">PLAN</text>
+            <text class="dg-txt" x="165" y="56" text-anchor="middle">what to build</text>
+            <text class="dg-txt" x="165" y="68" text-anchor="middle">or buy</text>
+            <text class="dg-hi" x="276" y="40" text-anchor="middle">ALLOCATION</text>
+            <text class="dg-txt" x="276" y="56" text-anchor="middle">which tool runs</text>
+            <text class="dg-txt" x="276" y="68" text-anchor="middle">which product</text>
+            <line class="dg-line" x1="104" y1="49" x2="113" y2="49" marker-end="url(#ah1)"/>
+            <line class="dg-line" x1="215" y1="49" x2="224" y2="49" marker-end="url(#ah1)"/>
+            <path class="dg-accent" d="M276 80 V110 H54 V83" stroke-dasharray="4 3" marker-end="url(#ah1s)"/>
+            <text class="dg-sig" x="165" y="132" text-anchor="middle">reconcile against what actually ran</text>
+          </svg>
+          <p>Keep what demand will need, what capacity to build or buy, and which tools serve which products as
+             <b>separate, reconciled objects</b>. Most planning arguments are two of these being mistaken for each other.</p>
         </article>
 
-        <article class="sys rise d2">
-          <div>
-            <div class="sys-id">SYS-02 · DATA PLATFORM</div>
-            <h3 class="sys-name">Unified Data Access &amp; Knowledge Platform</h3>
-            <p>
-              A 33-tool Model Context Protocol server giving programmatic, read-only access to
-              <span class="hl">20 production databases across six sites</span> — MES, data warehouse,
-              simulation platforms and capacity systems. Server-side SELECT-only enforcement, connection
-              lifecycle management, a vector-search store holding 965 curated engineering findings, and a
-              multi-user review pipeline that separates personal notes from published knowledge.
-            </p>
-          </div>
-          <div class="sys-side">
-            <div class="stack"><span>Python</span><span>MCP</span><span>Oracle</span><span>SQL Server</span><span>ChromaDB</span></div>
-            <div class="sys-figure">▸ 20 DBs · 33 tools</div>
-          </div>
+        <article class="method rise d2">
+          <div class="mid">M-02</div>
+          <h3>Close the plan-vs-reality loop</h3>
+          <svg viewBox="0 0 330 150" role="img" aria-label="A loop from plan to actual to variance to triage and back to plan">
+            <defs><marker id="ah2" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-dim"/></marker>
+                  <marker id="ah2s" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-fill"/></marker></defs>
+            <rect class="dg-box" x="10" y="14" width="84" height="30" rx="2"/>
+            <rect class="dg-box" x="236" y="14" width="84" height="30" rx="2"/>
+            <rect class="dg-box" x="236" y="96" width="84" height="30" rx="2"/>
+            <rect class="dg-box" x="10" y="96" width="84" height="30" rx="2"/>
+            <text class="dg-hi" x="52" y="33" text-anchor="middle">PLAN</text>
+            <text class="dg-hi" x="278" y="33" text-anchor="middle">ACTUAL</text>
+            <text class="dg-hi" x="278" y="115" text-anchor="middle">VARIANCE</text>
+            <text class="dg-hi" x="52" y="115" text-anchor="middle">TRIAGE</text>
+            <line class="dg-line" x1="94" y1="29" x2="234" y2="29" marker-end="url(#ah2)"/>
+            <line class="dg-line" x1="278" y1="44" x2="278" y2="94" marker-end="url(#ah2)"/>
+            <line class="dg-line" x1="236" y1="111" x2="96" y2="111" marker-end="url(#ah2)"/>
+            <line class="dg-accent" x1="52" y1="96" x2="52" y2="47" marker-end="url(#ah2s)"/>
+            <text class="dg-txt" x="165" y="62" text-anchor="middle">score every projection</text>
+            <text class="dg-txt" x="165" y="76" text-anchor="middle">against what happened</text>
+            <text class="dg-sig" x="10" y="143">triage: input · model · real change</text>
+          </svg>
+          <p>Score every projection against what happened, then <b>triage each variance</b>: bad input data, a known
+             model gap, or a real change on the floor. <b>Each goes to a different owner</b>: a data fix, a model change
+             request, or a process problem the floor has to solve.</p>
         </article>
 
-        <article class="sys rise d3">
-          <div>
-            <div class="sys-id">SYS-03 · PIPELINES</div>
-            <h3 class="sys-name">ETL Framework</h3>
-            <p>
-              A deliberately small orchestration layer: YAML job configs, a generic source-to-target
-              runner, stage-and-swap refresh for zero-downtime table updates, run-history logged to a
-              database table, and CLI tooling for manual runs and inspection.
-              <span class="hl">New pipelines require a config file, not code</span> — so people who did not
-              write it can still extend it.
-            </p>
-          </div>
-          <div class="sys-side">
-            <div class="stack"><span>Python</span><span>YAML</span><span>Oracle</span><span>Scheduler</span></div>
-            <div class="sys-figure">▸ Config-driven</div>
-          </div>
+        <article class="method rise d3">
+          <div class="mid">M-03</div>
+          <h3>Headline capacity is rarely the binding constraint</h3>
+          <svg viewBox="0 0 330 150" role="img" aria-label="Three shrinking bars: available, occupied, at standard rate">
+            <text class="dg-txt" x="10" y="16">AVAILABLE</text>
+            <rect class="dg-dim" x="10" y="21" width="300" height="14"/>
+            <text class="dg-txt" x="10" y="56">OCCUPIED BY WORK</text>
+            <rect class="dg-dim" x="10" y="61" width="185" height="14" opacity=".75"/>
+            <text class="dg-txt" x="10" y="96">AT STANDARD RATE</text>
+            <rect class="dg-fill" x="10" y="101" width="72" height="14"/>
+            <line class="dg-line" x1="310" y1="38" x2="310" y2="112" stroke-dasharray="3 3"/>
+            <line class="dg-line" x1="82" y1="112" x2="310" y2="112" stroke-dasharray="3 3"/>
+            <text class="dg-sig" x="310" y="134" text-anchor="end">headline ≠ usable</text>
+          </svg>
+          <p>A tool that is up is not a tool that is producing. Decompose output into <b>availability, occupancy, and
+             rate</b> before planning against it — the loss is often rate, not downtime, and a tool count on paper
+             hides all three.</p>
         </article>
 
-        <article class="sys rise d4">
-          <div>
-            <div class="sys-id">SYS-04 · APPLICATIONS</div>
-            <h3 class="sys-name">Internal Web Application Suite</h3>
-            <p>
-              Five production applications on a shared component design system, serving manufacturing,
-              planning and supply chain teams: fab-level Gantt and scheduling visualisation, multi-site
-              shipment forecasting, lot cycle-time exploration with simulation deep-links, simulation
-              delivery-accuracy scoring, and strategic capacity planning.
-              <span class="hl">Full stack on each</span> — extraction, API, frontend, deployment, adoption.
-            </p>
-          </div>
-          <div class="sys-side">
-            <div class="stack"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>Oracle</span></div>
-            <div class="sys-figure">▸ 5 apps in daily use</div>
-          </div>
-        </article>
-
-        <article class="sys rise d5">
-          <div>
-            <div class="sys-id">SYS-05 · VALIDATION</div>
-            <h3 class="sys-name">Simulation Accuracy &amp; Validation Pipeline</h3>
-            <p>
-              Automated comparison pipelines that reconcile simulation output against historical
-              production data across multiple granularities, separate systematic bias from noise, and
-              triage every discrepancy into input-data issue, known model gap, or real-world change.
-              <span class="hl">The red-flag list is the vendor's model-correction backlog.</span>
-            </p>
-          </div>
-          <div class="sys-side">
-            <div class="stack"><span>Python</span><span>Oracle</span><span>Statistics</span></div>
-            <div class="sys-figure">▸ +30% CT forecast accuracy</div>
-          </div>
+        <article class="method rise d4">
+          <div class="mid">M-04</div>
+          <h3>A forecast has to beat the naive baseline</h3>
+          <svg viewBox="0 0 330 150" role="img" aria-label="An actual series, a model forecast, and a flat naive baseline">
+            <line class="dg-line" x1="16" y1="8" x2="16" y2="112"/>
+            <line class="dg-line" x1="16" y1="112" x2="322" y2="112"/>
+            <line x1="16" y1="62" x2="322" y2="62" stroke="var(--rule-lit)" stroke-width="1.2" stroke-dasharray="5 4"/>
+            <polyline fill="none" stroke="var(--text-dim)" stroke-width="1.2" points="16,70 36,46 56,80 76,50 96,92 116,56 136,78 156,38 176,86 196,58 216,74 236,44 256,90 276,54 296,72 316,60"/>
+            <polyline class="dg-accent" points="16,66 56,70 96,78 136,64 176,72 216,62 256,76 296,64 316,62"/>
+            <text class="dg-txt" x="22" y="134">— actual</text>
+            <text class="dg-sig" x="104" y="134">— model</text>
+            <text class="dg-txt" x="178" y="134">- - naive baseline</text>
+          </svg>
+          <p>If a forecast cannot beat a flat line at last week's average, its daily numbers carry no information.
+             <b>Measure the error, keep the baseline in view</b>, and prefer simple models you can inspect over clever
+             ones you cannot.</p>
         </article>
 
       </div>
     </section>
 
-    <!-- ================= ANALYSIS ================= -->
-    <section class="block" id="analysis">
+    <!-- ================= §02 CASES ================= -->
+    <section class="block" id="cases">
       <div class="sec-head">
         <span class="no">§02</span>
-        <h2>Analysis Work</h2>
+        <h2>Case Studies</h2>
         <span class="tail"></span>
-        <span class="count">7 of 54</span>
+        <span class="count">05 cases</span>
       </div>
 
-      <div class="gallery">
+      <div class="cases">
 
+        <article class="case rise d1">
+          <div>
+            <div class="cid">CASE-01 · CAPACITY &amp; CAPEX</div>
+            <h3>Capacity &amp; CapEx scenario engine</h3>
+            <div class="stack"><span>Python</span><span>FastAPI</span><span>JavaScript</span><span>Excel I/O</span></div>
+          </div>
+          <dl>
+            <div><dt>Problem</dt><dd>Planners need to see how a change in demand flows into equipment requirements,
+              cross-site transfers, purchases, and capital spend — quarter by quarter, across scenarios.</dd></div>
+            <div><dt>Method</dt><dd>A Python engine that reads the existing planning spreadsheets and computes
+              requirements per tool group, transfers, purchases, and annual CapEx for each scenario, with versioned
+              scenarios, side-by-side comparison, and export back to the spreadsheets planners already use.</dd></div>
+            <div><dt>Result</dt><dd>A full scenario recomputes in <b>well under a second</b>, so a planner can change
+              one assumption and see the equipment and CapEx consequence at once. Next: a governed platform with
+              parameter lineage and cost data.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case rise d2">
+          <div>
+            <div class="cid">CASE-02 · ALLOCATION</div>
+            <h3>Daily allocation optimizer</h3>
+            <div class="stack"><span>Python</span><span>PuLP / HiGHS</span><span>FastAPI</span><span>React</span><span>TypeScript</span></div>
+          </div>
+          <dl>
+            <div><dt>Problem</dt><dd>Each day, decide which part numbers every inspection tool should run, when
+              changeovers cost capacity and demand arrives unevenly from week to week.</dd></div>
+            <div><dt>Method</dt><dd>A tool-level mixed-integer model: per-tool-day capacity, unmet demand carried
+              across weeks, and a lexicographic objective — unmet demand, then late demand, then idle capacity, then
+              changeovers. Every recommended change is explained by pricing the plan without it, and a daily
+              look-back diffs yesterday's plan against what each tool actually ran.</dd></div>
+            <div><dt>Result</dt><dd>A daily plan with <b>a reason attached to every change</b> and a standing
+              plan-vs-actual record. Runs on a schedule, covered by 246 automated tests.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case rise d3">
+          <div>
+            <div class="cid">CASE-03 · PLAN VS REALITY</div>
+            <h3>Measuring the model's own error</h3>
+            <div class="stack"><span>Python</span><span>SQL</span><span>React</span><span>TypeScript</span></div>
+          </div>
+          <dl>
+            <div><dt>Problem</dt><dd>A fab simulation program with no standing measure of its own error — gaps were
+              explained by guesswork, and the dispatch scheduler was trusted or ignored by feel.</dd></div>
+            <div><dt>Method</dt><dd>Score every projection against actual output (WAPE) and against a naive
+              last-week-average baseline; triage each variance into input error, model gap, or real change; audit the
+              scheduler's plan against the floor.</dd></div>
+            <div><dt>Result</dt><dd>Gaps now come with quantified causes. Real tool-level variability ran about
+              <b>twice the model's</b> — traced to an unmodeled eligibility rule and filed as a vendor change request
+              with acceptance criteria. The scheduler audit surfaced long-stale reservations and unrecorded same-type
+              tool swaps; where changeover rules existed, following the plan cut changeovers <b>about 5×</b>.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case rise d4">
+          <div>
+            <div class="cid">CASE-04 · CAPACITY LOSS</div>
+            <h3>Where the capacity actually goes</h3>
+            <div class="stack"><span>Python</span><span>Statistics</span><span>FastAPI</span><span>React</span></div>
+          </div>
+          <dl>
+            <div><dt>Problem</dt><dd>Tools looked available, yet output fell short — and the standard equipment-state
+              view could not say where the capacity went.</dd></div>
+            <div><dt>Method</dt><dd>Decompose OEE into availability, occupancy, and rate; build a mix-adjusted
+              throughput index; date speed changes with change-point detection (PELT) and group them by clustering;
+              attribute lost tool-hours to speed, downtime, and product mix.</dd></div>
+            <div><dt>Result</dt><dd>On one inspection fleet with near-full availability, <b>most theoretical output
+              was lost to rate, not downtime</b>, and idle time outweighed changeover loss by about an order of
+              magnitude — so optimization was aimed at idle capacity, not fewer changeovers.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case rise d5">
+          <div>
+            <div class="cid">CASE-05 · DATA &amp; AI TOOLING</div>
+            <h3>Planning data layer for people and AI agents</h3>
+            <div class="stack"><span>Python</span><span>MCP</span><span>Oracle</span><span>SQL Server</span></div>
+          </div>
+          <dl>
+            <div><dt>Problem</dt><dd>Planning data sat in 20 databases across six sites, and the same metric was too
+              often re-derived from raw history instead of read from its maintained source.</dd></div>
+            <div><dt>Method</dt><dd>A read-only MCP server (41 tools) that lets AI agents query those databases; an
+              ontology mapping each metric to its authoritative table; hybrid retrieval — field-weighted BM25 plus
+              entity linking — over 1,312 curated findings, with a human review step before anything is published to
+              the team.</dd></div>
+            <div><dt>Result</dt><dd>On a 115-question retrieval benchmark, <b>hit@5 rose from 0.37 to 0.94</b> and
+              median search latency fell from 48 ms to 11 ms.</dd></div>
+          </dl>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= §03 EVIDENCE ================= -->
+    <section class="block" id="evidence">
+      <div class="sec-head">
+        <span class="no">§03</span>
+        <h2>Evidence</h2>
+        <span class="tail"></span>
+        <span class="count">4 of 70 · masked</span>
+      </div>
+
+      <div class="evidence">
         <figure class="shot rise d1" style="margin:0">
-          <span class="flag">Redacted</span>
-          <div class="frame"><img src="/assets/portfolio/img/oee-fleet.jpg" alt="Fleet OEE decomposition report" loading="lazy"></div>
-          <figcaption class="cap">
-            <span class="t">FLEET OEE DECOMPOSITION</span>
-            <span class="d">23-tool inspection fleet; availability 96.5% but rate 32% — the loss is rate, not downtime</span>
-          </figcaption>
+          <span class="flag">Masked</span>
+          <div class="frame"><img src="/assets/portfolio/img/ev-oee-decomposition.jpg" alt="Fleet OEE decomposition report, numbers masked" loading="lazy"></div>
+          <figcaption class="cap"><span class="t">OEE DECOMPOSITION</span><span class="d">Availability, occupancy, and rate — where a fleet's output goes</span></figcaption>
         </figure>
-
         <figure class="shot rise d2" style="margin:0">
-          <span class="flag">Redacted</span>
-          <div class="frame"><img src="/assets/portfolio/img/real-vs-sim.jpg" alt="Real versus simulation comparison report" loading="lazy"></div>
-          <figcaption class="cap">
-            <span class="t">REAL VS SIMULATION</span>
-            <span class="d">Throughput matched within 9% while tool loading was inverted — retracted an earlier conclusion</span>
-          </figcaption>
+          <span class="flag">Masked</span>
+          <div class="frame"><img src="/assets/portfolio/img/ev-sim-vs-real-variability.jpg" alt="Simulation versus reality variability study, numbers masked" loading="lazy"></div>
+          <figcaption class="cap"><span class="t">SIMULATION VS REALITY</span><span class="d">Why real tools swing day to day and the model does not</span></figcaption>
         </figure>
-
         <figure class="shot rise d3" style="margin:0">
-          <span class="flag">Redacted</span>
-          <div class="frame"><img src="/assets/portfolio/img/chamber.jpg" alt="Chamber-level throughput analysis" loading="lazy"></div>
-          <figcaption class="cap">
-            <span class="t">CHAMBER-LEVEL ANALYSIS</span>
-            <span class="d">Per-chamber throughput and idle decomposition across an etch fleet</span>
-          </figcaption>
+          <span class="flag">Masked</span>
+          <div class="frame"><img src="/assets/portfolio/img/ev-bottlenecks.jpg" alt="Fab constraint ranking report, numbers masked" loading="lazy"></div>
+          <figcaption class="cap"><span class="t">CONSTRAINT RANKING</span><span class="d">Which toolsets hold the queue, and whether the lever is repair or load</span></figcaption>
         </figure>
-
         <figure class="shot rise d4" style="margin:0">
-          <span class="flag">Redacted</span>
-          <div class="frame"><img src="/assets/portfolio/img/area-flow.jpg" alt="Cross-area WIP flow player" loading="lazy"></div>
-          <figcaption class="cap">
-            <span class="t">CROSS-AREA WIP FLOW</span>
-            <span class="d">Animated flow player, real and simulated on one clock — structure agreed, distribution did not</span>
-          </figcaption>
+          <span class="flag">Masked</span>
+          <div class="frame"><img src="/assets/portfolio/img/ev-setup-penalty.jpg" alt="Setup penalty analysis, numbers masked" loading="lazy"></div>
+          <figcaption class="cap"><span class="t">SETUP PENALTY</span><span class="d">What triggers a requalification, and what it costs in capacity</span></figcaption>
         </figure>
-
-        <figure class="shot rise d5" style="margin:0">
-          <span class="flag">Redacted</span>
-          <div class="frame"><img src="/assets/portfolio/img/downtime.jpg" alt="Downtime lot impact analysis" loading="lazy"></div>
-          <figcaption class="cap">
-            <span class="t">DOWNTIME LOT IMPACT</span>
-            <span class="d">Tracing individual lots through an outage to quantify queue-time cost</span>
-          </figcaption>
-        </figure>
-
-        <figure class="shot rise d6" style="margin:0">
-          <span class="flag">Redacted</span>
-          <div class="frame"><img src="/assets/portfolio/img/setup-penalty.jpg" alt="Setup penalty analysis" loading="lazy"></div>
-          <figcaption class="cap">
-            <span class="t">SETUP PENALTY</span>
-            <span class="d">Changeover cost by sequence, and what dispatch rules would recover</span>
-          </figcaption>
-        </figure>
-
       </div>
 
       <p class="redaction-note">
-        <strong>On redaction.</strong> Every screenshot above is machine-de-identified before publication.
-        Because these reports draw their charts on <code>&lt;canvas&gt;</code> from embedded data, blurring
-        the page would leave identifiers baked into the chart labels — so equipment IDs, routes, lot
-        numbers, site names and internal system names are substituted at the source with a consistent
-        pseudonym map, then re-rendered. Same tool keeps the same alias in every chart, so the analysis
-        still reads correctly. The audit across all 54 reports returns zero residual matches.
+        <strong>How these are masked.</strong> Each screenshot is de-identified at the source — tools, sites, lots,
+        suppliers, and internal systems become aliases — and <strong>every number is masked after rendering</strong>;
+        chart labels are drawn as pixels, so charts are blurred. A screenshot is refused if any digit or protected name
+        is still visible on the page. Results in the case studies are stated as ratios, not operating figures.
       </p>
     </section>
 
-    <!-- ================= PROFILE ================= -->
+    <!-- ================= §04 PROFILE ================= -->
     <section class="block" id="profile">
       <div class="sec-head">
-        <span class="no">§03</span>
+        <span class="no">§04</span>
         <h2>Profile</h2>
         <span class="tail"></span>
       </div>
@@ -257,56 +328,52 @@
       <div class="profile">
         <div>
           <p class="rise d1">
-            I am a senior industrial engineer at <strong>Skyworks Solutions</strong>, where my title says
-            industrial engineering and my work reads as platform engineering. I own the software and data
-            systems behind capacity planning and fab simulation — database integration, pipeline design,
-            API, frontend, deployment — for wafer fabs in the United States, Japan and Singapore.
+            I am a senior industrial engineer at <strong>Skyworks Solutions</strong>, where I own capacity planning and
+            fab simulation for wafer fabs in the United States, Japan, and Singapore — the models, the data behind them,
+            and the software people use to act on them.
           </p>
           <p class="rise d2">
-            The work I care about sits where operations research meets systems engineering: discrete-event
-            simulation that is actually trusted because its error is measured every week; capacity models
-            that survive contact with a real CapEx cycle; internal tools that people open on their own
-            without being told to. I built a protocol server and a knowledge base so that analysis is
-            reproducible rather than re-derived, and I am usually the one arguing that a finding is not
-            finished until someone else can reproduce it.
+            What I care about is plans that survive contact with reality: forecasts scored against a naive baseline,
+            simulation whose error is measured instead of assumed, and capacity models that keep what demand needs
+            apart from what we choose to build and what each tool actually runs. I write the SQL and Python myself, and
+            I would rather retract a finding than let a wrong number steer a decision.
           </p>
           <p class="rise d3">
-            Before this I built a fab discrete-event simulation engine from scratch as an intern, which
-            became the technical foundation for the company's enterprise simulation program.
+            Before this I built a fab discrete-event simulation engine from scratch as an intern; it became the
+            foundation of the company's simulation program.
           </p>
         </div>
 
         <div class="spec rise d2">
           <div class="row"><div class="k">Role</div><div class="v">Senior Industrial Engineer, Skyworks Solutions</div></div>
-          <div class="row"><div class="k">Focus</div><div class="v">Capacity systems · simulation validation · internal platforms</div></div>
-          <div class="row"><div class="k">Languages</div><div class="v">Python, TypeScript, SQL</div></div>
-          <div class="row"><div class="k">Stack</div><div class="v">FastAPI, React, Oracle, SQL Server, MCP, ChromaDB</div></div>
-          <div class="row"><div class="k">Methods</div><div class="v">Discrete-event simulation, LP/IP, queueing theory, forecasting</div></div>
+          <div class="row"><div class="k">Focus</div><div class="v">Capacity &amp; demand planning · forecast error · optimization · planning systems</div></div>
+          <div class="row"><div class="k">Methods</div><div class="v">Discrete-event simulation, LP / MILP, queueing theory, forecasting, change-point detection</div></div>
+          <div class="row"><div class="k">Stack</div><div class="v">Python, SQL, PuLP / HiGHS, FastAPI, React / TypeScript, Prefect, Oracle, SQL Server, MCP</div></div>
           <div class="row"><div class="k">Education</div><div class="v">MS Supply Chain Engineering, Georgia Tech<br>BS Civil &amp; Environmental Eng., UIUC + Zhejiang University</div></div>
           <div class="row"><div class="k">Based</div><div class="v">Thousand Oaks, California</div></div>
         </div>
       </div>
     </section>
 
-    <!-- ================= CONTACT ================= -->
+    <!-- ================= §05 CONTACT ================= -->
     <section class="contact" id="contact">
       <div class="sec-head">
-        <span class="no">§04</span>
+        <span class="no">§05</span>
         <h2 style="font-size:inherit;margin:0">Contact</h2>
         <span class="tail"></span>
       </div>
-      <h2 class="rise d1">Let's talk about<br>systems that plan.</h2>
+      <h2 class="rise d1">Let's talk about<br>plans that hold up.</h2>
       <div class="links rise d2">
         <a href="mailto:zekalee0523@gmail.com">Email</a>
-        <a href="https://github.com/ZhekaiLi" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/zhekai-li-a949a2236/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ZhekaiLi" target="_blank" rel="noopener">GitHub</a>
         <a href="/notes/">Notes &amp; Wiki</a>
       </div>
     </section>
 
     <footer>
       <span>© 2026 Zhekai Li</span>
-      <span>Screenshots de-identified</span>
+      <span>Screenshots de-identified · numbers masked</span>
       <span class="spacer"></span>
       <span>Built by hand</span>
     </footer>
